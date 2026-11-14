@@ -1,0 +1,116 @@
+# Dinh dang: kanji|HAN VIET|nghia|cau chuyen lien tuong|tu=cach doc=nghia;...
+# Dong "@hv" khai bao am Han-Viet cho cac chu ngoai N5 xuat hien trong tu vung.
+@hv 筆=BÚT 去=KHỨ 曜=DIỆU 明=MINH 計=KẾ 自=TỰ 昼=TRÚ 合=HỢP 事=SỰ 着=TRƯỚC 持=TRÌ 料=LIỆU 地=ĐỊA 産=SẢN 末=MẠT 朝=TRIÊU 晩=VÃN 正=CHÍNH 最=TỐI 富=PHÚ 士=SĨ 才=TÀI 元=NGUYÊN 梅=MAI 港=CẢNG 屋=ỐC 性=TÍNH 彼=BỈ 供=CUNG 菓=QUẢ 祖=TỔ 親=THÂN 達=ĐẠT 好=HẢO 有=HỮU 氏=THỊ 窓=SONG 的=ĐÍCH 注=CHÚ 鼻=TỴ 科=KHOA 早=TẢO 紙=CHỈ 歌=CA 切=THIẾT 遠=VIỄN 不=BẤT 誕=ĐẢN 活=HOẠT 留=LƯU 当=ĐƯƠNG 英=ANH 単=ĐƠN 葉=DIỆP 方=PHƯƠNG 世=THẾ 者=GIẢ 音=ÂM 辞=TỪ 図=ĐỒ 館=QUÁN 教=GIÁO 意=Ý 物=VẬT 堂=ĐƯỜNG 売=MẠI 銀=NGÂN 旅=LỮ 飛=PHI 機=CƠ 将=TƯƠNG 発=PHÁT 院=VIỆN 派=PHÁI 独=ĐỘC 夏=HẠ 議=NGHỊ 神=THẦN 員=VIÊN 喫=KHIẾT 茶=TRÀ 転=CHUYỂN 動=ĐỘNG 駐=TRÚ 場=TRƯỜNG 路=LỘ 海=HẢI 池=TRÌ 内=NỘI 以=DĨ 鉄=THIẾT 側=TRẮC 心=TÂM 京=KINH 関=QUAN 洋=DƯƠNG 米=MỄ 変=BIẾN 説=THUYẾT 鳥=ĐIỂU 数=SỐ 全=TOÀN 幹=CÁN 線=TUYẾN 代=ĐẠI 都=ĐÔ 部=BỘ 身=THÂN 面=DIỆN
+
+# Buổi 1
+一|NHẤT|một|Một nét ngang duy nhất, như một ngón tay đặt nằm.|一=いち=số một;一つ=ひとつ=một cái;一人=ひとり=một người;一日=いちにち=một ngày;一月=いちがつ=tháng một
+二|NHỊ|hai|Hai nét ngang như hai chiếc đũa xếp song song.|二=に=số hai;二つ=ふたつ=hai cái;二人=ふたり=hai người;二月=にがつ=tháng hai;二日=ふつか=ngày mồng hai
+三|TAM|ba|Ba nét ngang chồng lên nhau như chiếc bánh ba tầng.|三=さん=số ba;三つ=みっつ=ba cái;三人=さんにん=ba người;三月=さんがつ=tháng ba;三日=みっか=ngày mồng ba
+四|TỨ|bốn|Ô cửa sổ có bốn góc, bên trong là tấm rèm vén sang hai bên.|四=よん=số bốn;四つ=よっつ=bốn cái;四月=しがつ=tháng tư;四日=よっか=ngày mồng bốn;四人=よにん=bốn người
+五|NGŨ|năm|Chiếc kệ sách xiêu vẹo đóng bằng năm thanh gỗ.|五=ご=số năm;五つ=いつつ=năm cái;五月=ごがつ=tháng năm;五日=いつか=ngày mồng năm;五人=ごにん=năm người
+六|LỤC|sáu|Người đội mũ dang hai chân, trông như con côn trùng sáu chân đang đứng.|六=ろく=số sáu;六つ=むっつ=sáu cái;六月=ろくがつ=tháng sáu;六日=むいか=ngày mồng sáu;六百=ろっぴゃく=sáu trăm
+七|THẤT|bảy|Số 7 viết lộn ngược rồi gạch thêm một nét ngang.|七=なな=số bảy;七つ=ななつ=bảy cái;七月=しちがつ=tháng bảy;七日=なのか=ngày mồng bảy;七時=しちじ=bảy giờ
+八|BÁT|tám|Hai nét xoè ra như hàng ria mép của ông chú tám mươi tuổi.|八=はち=số tám;八つ=やっつ=tám cái;八月=はちがつ=tháng tám;八日=ようか=ngày mồng tám;八百=はっぴゃく=tám trăm
+九|CỬU|chín|Người gập mình chống đẩy đến cái thứ chín thì khuỵu tay.|九=きゅう=số chín;九つ=ここのつ=chín cái;九月=くがつ=tháng chín;九日=ここのか=ngày mồng chín;九時=くじ=chín giờ
+十|THẬP|mười|Dấu cộng: cộng đủ hai bàn tay là mười ngón.|十=じゅう=số mười;十日=とおか=ngày mồng mười;十月=じゅうがつ=tháng mười;十分=じゅうぶん=đầy đủ;二十日=はつか=ngày hai mươi
+百|BÁCH|trăm|Số một (一) đặt trên chữ trắng (白): một trăm tờ giấy trắng.|百=ひゃく=một trăm;三百=さんびゃく=ba trăm;百円=ひゃくえん=một trăm yên;百年=ひゃくねん=một trăm năm
+千|THIÊN|nghìn|Chữ mười (十) đội thêm một nét phẩy: mười nhân lên thành nghìn.|千=せん=một nghìn;三千=さんぜん=ba nghìn;千円=せんえん=một nghìn yên;八千=はっせん=tám nghìn;千年=せんねん=một nghìn năm
+万|VẠN|vạn, mười nghìn|Người cúi gập lưng vì vác trên vai cả vạn thứ đồ.|万=まん=mười nghìn;一万=いちまん=mười nghìn;百万=ひゃくまん=một triệu;万年筆=まんねんひつ=bút máy
+円|VIÊN|yên, tròn|Quầy thu ngân có ô cửa để đưa tiền yên qua.|円=えん=đồng yên;百円=ひゃくえん=một trăm yên;千円=せんえん=một nghìn yên;円い=まるい=tròn;円高=えんだか=đồng yên tăng giá
+年|NIÊN|năm|Người nông dân gánh lúa về sau một năm làm lụng.|年=とし=năm, tuổi;今年=ことし=năm nay;来年=らいねん=năm sau;去年=きょねん=năm ngoái;毎年=まいとし=hằng năm;一年=いちねん=một năm
+月|NGUYỆT|trăng, tháng|Vầng trăng khuyết có hai vệt mây vắt ngang.|月=つき=mặt trăng;今月=こんげつ=tháng này;来月=らいげつ=tháng sau;月曜日=げつようび=thứ hai;毎月=まいつき=hằng tháng
+日|NHẬT|mặt trời, ngày|Mặt trời vẽ thành ô vuông, nét giữa là tia nắng.|日=ひ=ngày, mặt trời;今日=きょう=hôm nay;毎日=まいにち=mỗi ngày;日本=にほん=Nhật Bản;日曜日=にちようび=chủ nhật;明日=あした=ngày mai
+時|THỜI|giờ, lúc|Mặt trời (日) chiếu lên ngôi chùa (寺), nơi tiếng chuông báo giờ.|時=とき=lúc, khi;時間=じかん=thời gian;時計=とけい=đồng hồ;時々=ときどき=thỉnh thoảng;何時=なんじ=mấy giờ
+分|PHÂN|phút, chia, hiểu|Con dao (刀) bổ đôi (八) quả dưa để chia phần.|分かる=わかる=hiểu;五分=ごふん=năm phút;半分=はんぶん=một nửa;自分=じぶん=bản thân;十分=じゅうぶん=đầy đủ
+半|BÁN|một nửa|Nhát chém dọc chẻ con bò có hai sừng thành hai nửa.|半=はん=rưỡi, nửa;半分=はんぶん=một nửa;半年=はんとし=nửa năm;前半=ぜんはん=nửa đầu;半日=はんにち=nửa ngày
+間|GIAN|khoảng giữa|Mặt trời (日) ló qua khe giữa hai cánh cổng (門).|間=あいだ=khoảng giữa;時間=じかん=thời gian;一週間=いっしゅうかん=một tuần;人間=にんげん=con người;昼間=ひるま=ban ngày;間に合う=まにあう=kịp giờ
+
+# Buổi 2
+火|HỎA|lửa|Đống lửa ở giữa, hai tàn lửa bắn sang hai bên.|火=ひ=lửa;火曜日=かようび=thứ ba;火事=かじ=hoả hoạn;花火=はなび=pháo hoa;火山=かざん=núi lửa
+水|THỦY|nước|Dòng nước chảy giữa, nước bắn toé ra hai bên bờ.|水=みず=nước;水曜日=すいようび=thứ tư;水道=すいどう=nước máy;水着=みずぎ=đồ bơi;大水=おおみず=lũ lụt
+木|MỘC|cây|Cái cây có thân, cành ngang và rễ toả ra hai bên.|木=き=cây;木曜日=もくようび=thứ năm;大木=たいぼく=cây cổ thụ;木々=きぎ=cây cối
+金|KIM|vàng, tiền|Dưới mái nhà là kho báu, hai chấm nhỏ là hai thỏi vàng lấp lánh.|お金=おかね=tiền;金曜日=きんようび=thứ sáu;金=きん=vàng;お金持ち=おかねもち=người giàu;料金=りょうきん=tiền phí
+土|THỔ|đất|Mầm cây (十) nhú lên khỏi mặt đất (一).|土=つち=đất;土曜日=どようび=thứ bảy;土地=とち=đất đai;お土産=おみやげ=quà lưu niệm;国土=こくど=lãnh thổ
+週|CHU|tuần|Đi hết một vòng (周) trên đường (⻌) thì trọn một tuần.|週=しゅう=tuần;今週=こんしゅう=tuần này;来週=らいしゅう=tuần sau;先週=せんしゅう=tuần trước;毎週=まいしゅう=hằng tuần;週末=しゅうまつ=cuối tuần
+毎|MỖI|mỗi, hằng|Người mẹ (母) đội nón ra đồng mỗi ngày.|毎日=まいにち=mỗi ngày;毎週=まいしゅう=hằng tuần;毎月=まいつき=hằng tháng;毎年=まいとし=hằng năm;毎朝=まいあさ=mỗi sáng;毎晩=まいばん=mỗi tối
+今|KIM|bây giờ|Dưới mái nhà, kim đồng hồ đang chỉ đúng lúc này.|今=いま=bây giờ;今日=きょう=hôm nay;今月=こんげつ=tháng này;今週=こんしゅう=tuần này;今年=ことし=năm nay;今晩=こんばん=tối nay
+午|NGỌ|giữa trưa|Chiếc cột đo bóng nắng, đúng trưa thì bóng ngắn nhất.|午前=ごぜん=buổi sáng;午後=ごご=buổi chiều;正午=しょうご=giữa trưa;午前中=ごぜんちゅう=trong buổi sáng
+前|TIỀN|trước|Trước khi ăn, cầm dao (刂) cắt miếng thịt (月) bày lên bàn.|前=まえ=phía trước;午前=ごぜん=buổi sáng;名前=なまえ=tên;駅前=えきまえ=trước nhà ga;前日=ぜんじつ=ngày hôm trước
+後|HẬU|sau|Người đi đường (彳) lê bước chậm nên bị tụt lại phía sau.|後ろ=うしろ=phía sau;後=あと=sau đó;午後=ごご=buổi chiều;最後=さいご=cuối cùng;後半=こうはん=nửa sau
+先|TIÊN|trước, đầu tiên|Người chạy bằng hai chân (儿) vượt lên dẫn trước.|先=さき=phía trước, trước;先生=せんせい=thầy cô giáo;先週=せんしゅう=tuần trước;先月=せんげつ=tháng trước;先に=さきに=trước
+何|HÀ|cái gì|Một người (亻) đứng trước cái hộp và hỏi: trong đó có cái gì?|何=なに=cái gì;何時=なんじ=mấy giờ;何人=なんにん=mấy người;何日=なんにち=ngày mấy;何か=なにか=cái gì đó
+山|SƠN|núi|Ba đỉnh núi, đỉnh ở giữa cao nhất.|山=やま=núi;火山=かざん=núi lửa;山道=やまみち=đường núi;富士山=ふじさん=núi Phú Sĩ;山々=やまやま=núi non
+川|XUYÊN|sông|Ba dòng nước cùng chảy xuôi.|川=かわ=sông;小川=おがわ=suối nhỏ;川上=かわかみ=thượng nguồn;川下=かわしも=hạ nguồn;川口=かわぐち=cửa sông
+天|THIÊN|trời|Người to lớn (大) dang tay, phía trên đầu là bầu trời (一).|天気=てんき=thời tiết;天=てん=trời;天国=てんごく=thiên đường;雨天=うてん=trời mưa;天才=てんさい=thiên tài
+気|KHÍ|khí, tinh thần|Hơi nước bốc lên từ nồi cơm đang sôi.|気=き=tinh thần, khí;天気=てんき=thời tiết;元気=げんき=khoẻ mạnh;電気=でんき=điện;空気=くうき=không khí;人気=にんき=được yêu thích
+雨|VŨ|mưa|Nhìn qua ô cửa sổ thấy bốn giọt mưa đang rơi.|雨=あめ=mưa;大雨=おおあめ=mưa to;雨天=うてん=trời mưa;梅雨=つゆ=mùa mưa;雨水=あまみず=nước mưa
+空|KHÔNG|bầu trời, trống|Khoét một lỗ (穴) trên mái nhà để ngắm bầu trời.|空=そら=bầu trời;空気=くうき=không khí;空港=くうこう=sân bay;空く=あく=trống;空手=からて=võ karate
+花|HOA|hoa|Cây cỏ (艹) biến hoá (化) rồi nở thành bông hoa.|花=はな=hoa;花火=はなび=pháo hoa;花見=はなみ=ngắm hoa;生け花=いけばな=nghệ thuật cắm hoa;花屋=はなや=tiệm hoa
+魚|NGƯ|cá|Con cá có đầu, thân đầy vảy (田) và cái đuôi bốn chấm.|魚=さかな=cá;金魚=きんぎょ=cá vàng;魚屋=さかなや=tiệm cá;小魚=こざかな=cá nhỏ;人魚=にんぎょ=nàng tiên cá
+
+# Buổi 3
+人|NHÂN|người|Một người đang sải hai chân bước đi.|人=ひと=người;日本人=にほんじん=người Nhật;大人=おとな=người lớn;一人=ひとり=một người;人口=じんこう=dân số;外国人=がいこくじん=người nước ngoài
+男|NAM|đàn ông|Người dùng sức lực (力) làm việc ngoài ruộng (田).|男=おとこ=đàn ông;男の子=おとこのこ=bé trai;男性=だんせい=nam giới;長男=ちょうなん=con trai cả;男子=だんし=nam sinh
+女|NỮ|phụ nữ|Người phụ nữ ngồi bắt chéo chân, hai tay dang ra.|女=おんな=phụ nữ;女の子=おんなのこ=bé gái;女性=じょせい=nữ giới;彼女=かのじょ=cô ấy, bạn gái;女子=じょし=nữ sinh
+子|TỬ|con, đứa trẻ|Em bé quấn tã dang hai tay đòi bế.|子=こ=đứa trẻ;子供=こども=trẻ con;女の子=おんなのこ=bé gái;男の子=おとこのこ=bé trai;電子=でんし=điện tử;お菓子=おかし=bánh kẹo
+父|PHỤ|bố|Khuôn mặt người bố có hàng ria mép vểnh lên.|父=ちち=bố tôi;お父さん=おとうさん=bố;父母=ふぼ=bố mẹ;祖父=そふ=ông;父親=ちちおや=người bố
+母|MẪU|mẹ|Người mẹ ôm con vào lòng, hai chấm là bầu sữa.|母=はは=mẹ tôi;お母さん=おかあさん=mẹ;祖母=そぼ=bà;母親=ははおや=người mẹ;母国=ぼこく=tổ quốc
+友|HỮU|bạn|Hai bàn tay nắm lấy nhau của đôi bạn thân.|友=とも=bạn;友達=ともだち=bạn bè;友人=ゆうじん=bạn;親友=しんゆう=bạn thân;友好=ゆうこう=hữu nghị
+名|DANH|tên|Trời tối (夕) không thấy mặt nên phải mở miệng (口) xưng tên.|名前=なまえ=tên;名=な=tên;有名=ゆうめい=nổi tiếng;名人=めいじん=bậc thầy;氏名=しめい=họ tên
+口|KHẨU|miệng|Cái miệng đang há to thành hình vuông.|口=くち=miệng;入口=いりぐち=lối vào;出口=でぐち=lối ra;人口=じんこう=dân số;窓口=まどぐち=quầy giao dịch
+目|MỤC|mắt|Con mắt dựng đứng, hai nét giữa là con ngươi.|目=め=mắt;目的=もくてき=mục đích;目上=めうえ=bề trên;目下=めした=bề dưới;注目=ちゅうもく=chú ý
+耳|NHĨ|tai|Vành tai nhìn nghiêng với dái tai kéo dài xuống.|耳=みみ=tai;耳鼻科=じびか=khoa tai mũi;早耳=はやみみ=thính tai, nhanh tin;空耳=そらみみ=nghe nhầm
+手|THỦ|tay|Bàn tay xoè ra với các ngón và cổ tay.|手=て=tay;手紙=てがみ=lá thư;上手=じょうず=giỏi;下手=へた=kém;歌手=かしゅ=ca sĩ;切手=きって=tem thư
+足|TÚC|chân, đủ|Cái đầu gối (口) ở trên, bàn chân đang bước ở dưới.|足=あし=chân;足りる=たりる=đủ;遠足=えんそく=dã ngoại;不足=ふそく=thiếu;一足=いっそく=một đôi (giày, tất)
+生|SINH|sống, sinh ra|Mầm cây nhú lên từ đất (土) và lớn dần.|生まれる=うまれる=được sinh ra;先生=せんせい=thầy cô giáo;学生=がくせい=học sinh;生きる=いきる=sống;誕生日=たんじょうび=sinh nhật;生活=せいかつ=sinh hoạt
+学|HỌC|học|Đứa trẻ (子) ngồi dưới mái trường tiếp thu ba tia sáng tri thức.|学ぶ=まなぶ=học;学生=がくせい=học sinh;学校=がっこう=trường học;大学=だいがく=đại học;留学=りゅうがく=du học
+校|HIỆU|trường học|Bên gốc cây (木), thầy trò giao lưu (交) với nhau.|学校=がっこう=trường học;高校=こうこう=trường cấp ba;校長=こうちょう=hiệu trưởng;小学校=しょうがっこう=trường tiểu học;中学校=ちゅうがっこう=trường cấp hai
+本|BẢN|sách, gốc|Cái cây (木) được đánh dấu ở gốc: gốc rễ của tri thức là sách.|本=ほん=sách;日本=にほん=Nhật Bản;本屋=ほんや=hiệu sách;本当=ほんとう=sự thật;一本=いっぽん=một cái (vật dài)
+語|NGỮ|ngôn ngữ, từ|Năm (五) cái miệng (口) cùng nói (言) thành một ngôn ngữ.|日本語=にほんご=tiếng Nhật;英語=えいご=tiếng Anh;語る=かたる=kể chuyện;単語=たんご=từ vựng;外国語=がいこくご=ngoại ngữ
+言|NGÔN|nói|Những làn sóng âm thanh phát ra từ cái miệng (口).|言う=いう=nói;言葉=ことば=từ ngữ, lời nói;言語=げんご=ngôn ngữ;一言=ひとこと=một lời;方言=ほうげん=tiếng địa phương
+話|THOẠI|nói chuyện|Lời nói (言) phát ra từ cái lưỡi (舌).|話す=はなす=nói chuyện;話=はなし=câu chuyện;電話=でんわ=điện thoại;会話=かいわ=hội thoại;世話=せわ=chăm sóc
+読|ĐỘC|đọc|Đọc to thành lời (言) những cuốn sách vừa mua về (売).|読む=よむ=đọc;読書=どくしょ=đọc sách;読者=どくしゃ=độc giả;読み方=よみかた=cách đọc;音読=おんどく=đọc thành tiếng
+
+# Buổi 4
+書|THƯ|viết|Bàn tay cầm bút lông viết lên trang giấy đặt dưới ánh mặt trời (日).|書く=かく=viết;辞書=じしょ=từ điển;図書館=としょかん=thư viện;読書=どくしょ=đọc sách;書道=しょどう=thư pháp;教科書=きょうかしょ=sách giáo khoa
+見|KIẾN|nhìn|Con mắt (目) mọc chân (儿) chạy đi nhìn ngắm khắp nơi.|見る=みる=nhìn, xem;見せる=みせる=cho xem;見える=みえる=nhìn thấy;花見=はなみ=ngắm hoa;意見=いけん=ý kiến;見学=けんがく=tham quan học hỏi
+聞|VĂN|nghe, hỏi|Ghé tai (耳) vào cổng (門) để nghe ngóng.|聞く=きく=nghe, hỏi;新聞=しんぶん=báo;聞こえる=きこえる=nghe thấy;見聞=けんぶん=hiểu biết, trải nghiệm
+食|THỰC|ăn|Dưới mái nhà có bát cơm ngon (良) đang chờ.|食べる=たべる=ăn;食べ物=たべもの=đồ ăn;食事=しょくじ=bữa ăn;食堂=しょくどう=nhà ăn;朝食=ちょうしょく=bữa sáng
+飲|ẨM|uống|Ăn (食) xong thì há miệng (欠) ra uống nước.|飲む=のむ=uống;飲み物=のみもの=đồ uống;飲食=いんしょく=ăn uống;飲み会=のみかい=tiệc rượu;飲料=いんりょう=đồ uống
+買|MÃI|mua|Xách cái giỏ lưới (罒) đầy vỏ sò (貝), thứ tiền ngày xưa, đi mua đồ.|買う=かう=mua;買い物=かいもの=mua sắm;売買=ばいばい=mua bán;買い手=かいて=người mua
+行|HÀNH|đi|Ngã tư đường, nơi người ta đi về mọi hướng.|行く=いく=đi;行う=おこなう=tiến hành;銀行=ぎんこう=ngân hàng;旅行=りょこう=du lịch;飛行機=ひこうき=máy bay
+来|LAI|đến|Lúa chín (米) trên cây (木), mùa gặt đã đến.|来る=くる=đến;来年=らいねん=năm sau;来週=らいしゅう=tuần sau;来月=らいげつ=tháng sau;将来=しょうらい=tương lai;来日=らいにち=đến Nhật
+出|XUẤT|ra|Hai ngọn núi (山) chồng lên nhau, măng mọc trồi ra khỏi mặt đất.|出る=でる=đi ra;出す=だす=lấy ra, nộp;出口=でぐち=lối ra;出かける=でかける=ra ngoài;外出=がいしゅつ=đi ra ngoài;出発=しゅっぱつ=xuất phát
+入|NHẬP|vào|Người cúi đầu vén tấm rèm để bước vào nhà.|入る=はいる=đi vào;入れる=いれる=cho vào;入口=いりぐち=lối vào;入学=にゅうがく=nhập học;入院=にゅういん=nhập viện
+立|LẬP|đứng|Một người đứng thẳng trên mặt đất.|立つ=たつ=đứng;立てる=たてる=dựng lên;国立=こくりつ=quốc lập;立派=りっぱ=tuyệt vời, đàng hoàng;独立=どくりつ=độc lập
+休|HƯU|nghỉ|Một người (亻) tựa lưng vào gốc cây (木) nghỉ ngơi.|休む=やすむ=nghỉ;休み=やすみ=kỳ nghỉ;休日=きゅうじつ=ngày nghỉ;夏休み=なつやすみ=nghỉ hè;昼休み=ひるやすみ=nghỉ trưa
+会|HỘI|gặp|Mọi người tụ họp dưới một mái nhà để nói (云) chuyện.|会う=あう=gặp;会社=かいしゃ=công ty;会話=かいわ=hội thoại;会議=かいぎ=cuộc họp;社会=しゃかい=xã hội
+社|XÃ|công ty, đền|Bàn thờ thần (礻) dựng trên mảnh đất (土) của làng.|会社=かいしゃ=công ty;社長=しゃちょう=giám đốc;社会=しゃかい=xã hội;神社=じんじゃ=đền thần đạo;社員=しゃいん=nhân viên công ty
+店|ĐIẾM|cửa hàng|Dưới mái hiên (广) có ông thầy bói (占) mở quán.|店=みせ=cửa hàng;喫茶店=きっさてん=quán cà phê;店員=てんいん=nhân viên cửa hàng;書店=しょてん=hiệu sách;店長=てんちょう=cửa hàng trưởng
+駅|DỊCH|nhà ga|Ngày xưa nhà ga là trạm đổi ngựa (馬) cho người đưa thư.|駅=えき=nhà ga;駅前=えきまえ=trước nhà ga;駅員=えきいん=nhân viên nhà ga;駅長=えきちょう=trưởng ga
+車|XA|xe|Chiếc xe nhìn từ trên xuống: thùng xe ở giữa, trục và hai bánh.|車=くるま=xe ô tô;電車=でんしゃ=tàu điện;自転車=じてんしゃ=xe đạp;自動車=じどうしゃ=xe ô tô;駐車場=ちゅうしゃじょう=bãi đỗ xe
+道|ĐẠO|con đường|Cái đầu (首) dẫn lối, đôi chân bước theo trên đường (⻌).|道=みち=con đường;水道=すいどう=nước máy;道路=どうろ=đường sá;書道=しょどう=thư pháp;北海道=ほっかいどう=Hokkaido
+電|ĐIỆN|điện|Mưa (雨) giông kéo đến, tia sét đánh xuống cánh đồng (田).|電気=でんき=điện;電話=でんわ=điện thoại;電車=でんしゃ=tàu điện;電子=でんし=điện tử;電池=でんち=pin
+国|QUỐC|đất nước|Viên ngọc quý (玉) được tường thành bao quanh bảo vệ.|国=くに=đất nước;外国=がいこく=nước ngoài;中国=ちゅうごく=Trung Quốc;国語=こくご=quốc ngữ;国内=こくない=trong nước
+
+# Buổi 5
+上|THƯỢNG|trên|Một vật nhô lên phía trên vạch ngang.|上=うえ=phía trên;上手=じょうず=giỏi;上がる=あがる=đi lên, tăng;上げる=あげる=nâng lên;年上=としうえ=lớn tuổi hơn;以上=いじょう=trở lên
+下|HẠ|dưới|Một vật treo lủng lẳng phía dưới vạch ngang.|下=した=phía dưới;下手=へた=kém;地下鉄=ちかてつ=tàu điện ngầm;下がる=さがる=đi xuống, giảm;年下=としした=nhỏ tuổi hơn;以下=いか=trở xuống
+左|TẢ|bên trái|Tay trái giữ cây thước thợ (工) cho thẳng.|左=ひだり=bên trái;左手=ひだりて=tay trái;左右=さゆう=trái phải;左足=ひだりあし=chân trái;左側=ひだりがわ=phía bên trái
+右|HỮU|bên phải|Tay phải đưa thức ăn lên miệng (口).|右=みぎ=bên phải;右手=みぎて=tay phải;左右=さゆう=trái phải;右足=みぎあし=chân phải;右側=みぎがわ=phía bên phải
+中|TRUNG|giữa, bên trong|Mũi tên cắm xuyên đúng giữa tấm bia.|中=なか=bên trong;中国=ちゅうごく=Trung Quốc;一日中=いちにちじゅう=suốt cả ngày;中学校=ちゅうがっこう=trường cấp hai;午前中=ごぜんちゅう=trong buổi sáng;中心=ちゅうしん=trung tâm
+外|NGOẠI|bên ngoài|Buổi tối (夕) ông thầy bói (卜) phải ra ngoài hành nghề.|外=そと=bên ngoài;外国=がいこく=nước ngoài;外国人=がいこくじん=người nước ngoài;海外=かいがい=hải ngoại;外出=がいしゅつ=đi ra ngoài;外す=はずす=tháo ra
+東|ĐÔNG|phía đông|Mặt trời (日) mọc lên sau thân cây (木) ở phía đông.|東=ひがし=phía đông;東京=とうきょう=Tokyo;東口=ひがしぐち=cửa đông;東北=とうほく=đông bắc;中東=ちゅうとう=Trung Đông
+西|TÂY|phía tây|Mặt trời lặn về tây, chim bay về đậu trên tổ.|西=にし=phía tây;西口=にしぐち=cửa tây;関西=かんさい=vùng Kansai;東西=とうざい=đông tây;西洋=せいよう=phương Tây
+南|NAM|phía nam|Căn nhà kính trồng cây hướng về phía nam ấm áp.|南=みなみ=phía nam;南口=みなみぐち=cửa nam;東南=とうなん=đông nam;南北=なんぼく=nam bắc;南米=なんべい=Nam Mỹ
+北|BẮC|phía bắc|Hai người ngồi quay lưng vào nhau vì gió bắc lạnh.|北=きた=phía bắc;北口=きたぐち=cửa bắc;北海道=ほっかいどう=Hokkaido;東北=とうほく=đông bắc;南北=なんぼく=nam bắc
+大|ĐẠI|to, lớn|Một người dang rộng hai tay: to thế này cơ!|大きい=おおきい=to, lớn;大学=だいがく=đại học;大人=おとな=người lớn;大好き=だいすき=rất thích;大変=たいへん=vất vả, rất;大切=たいせつ=quan trọng
+小|TIỂU|nhỏ|Một người khép hai tay sát người cho nhỏ lại.|小さい=ちいさい=nhỏ;小学校=しょうがっこう=trường tiểu học;小説=しょうせつ=tiểu thuyết;小川=おがわ=suối nhỏ;小鳥=ことり=chim nhỏ
+多|ĐA|nhiều|Hai buổi tối (夕) chồng lên nhau: nhiều đêm liền.|多い=おおい=nhiều;多分=たぶん=có lẽ;多少=たしょう=ít nhiều;多数=たすう=số đông
+少|THIẾU|ít|Đã nhỏ (小) lại còn bị cắt bớt một nhát nên còn rất ít.|少ない=すくない=ít;少し=すこし=một chút;少年=しょうねん=thiếu niên;少女=しょうじょ=thiếu nữ;多少=たしょう=ít nhiều
+高|CAO|cao, đắt|Toà tháp cao nhiều tầng có mái và cửa.|高い=たかい=cao, đắt;高校=こうこう=trường cấp ba;高校生=こうこうせい=học sinh cấp ba;最高=さいこう=tuyệt nhất;円高=えんだか=đồng yên tăng giá
+安|AN|rẻ, yên ổn|Người phụ nữ (女) ở dưới mái nhà (宀) thì yên tâm.|安い=やすい=rẻ;安心=あんしん=yên tâm;安全=あんぜん=an toàn;不安=ふあん=bất an;円安=えんやす=đồng yên mất giá
+新|TÂN|mới|Đứng (立) bên cây (木), cầm rìu (斤) đẽo ra món đồ mới.|新しい=あたらしい=mới;新聞=しんぶん=báo;新年=しんねん=năm mới;新幹線=しんかんせん=tàu Shinkansen;新入生=しんにゅうせい=học sinh mới
+古|CỔ|cũ|Chuyện truyền qua mười (十) đời miệng (口) kể thì đã cũ lắm rồi.|古い=ふるい=cũ;中古=ちゅうこ=đồ cũ;古本=ふるほん=sách cũ;古代=こだい=cổ đại;古都=こと=cố đô
+長|TRƯỜNG|dài, trưởng|Cụ già có mái tóc dài bay trong gió.|長い=ながい=dài;社長=しゃちょう=giám đốc;校長=こうちょう=hiệu trưởng;部長=ぶちょう=trưởng phòng;長男=ちょうなん=con trai cả;身長=しんちょう=chiều cao
+白|BẠCH|trắng|Mặt trời (日) loé lên một tia nắng trắng xoá.|白い=しろい=trắng;白=しろ=màu trắng;白紙=はくし=giấy trắng;面白い=おもしろい=thú vị;白人=はくじん=người da trắng;白鳥=はくちょう=thiên nga

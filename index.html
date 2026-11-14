@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f0e6">
+<title>When The King Learns</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="icons/logo.svg">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script>
+(function () {
+  var theme = null;
+  try { theme = localStorage.getItem('wtkl.theme'); } catch (e) {}
+  if (!theme) theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+<link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+<header id="header"></header>
+<main id="app"></main>
+<nav id="tabbar"></nav>
+<noscript>Trang này cần bật JavaScript.</noscript>
+<script src="data/n5.js?v=8"></script>
+<script src="js/core.js?v=8"></script>
+<script src="data/audio.js?v=8"></script>
+<script src="js/bgm.js?v=8"></script>
+<script src="js/speech.js?v=8"></script>
+<script src="js/kanji.js?v=8"></script>
+<script src="js/sections.js?v=8"></script>
+<script>App.start();</script>
+</body>
+</html>

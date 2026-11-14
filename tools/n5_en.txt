@@ -1,0 +1,189 @@
+# Format: kanji|KEYWORD|meaning|mnemonic story
+# Lines starting with "@v" override the JMdict gloss: @v word=reading=english
+一|ONE|one|A single horizontal stroke, like one finger lying flat.
+二|TWO|two|Two strokes, like a pair of chopsticks laid side by side.
+三|THREE|three|Three strokes stacked up like a three-layer cake.
+四|FOUR|four|A window with four corners and a curtain drawn to both sides.
+五|FIVE|five|A wobbly bookshelf nailed together from five planks.
+六|SIX|six|A figure in a hat with legs spread, standing like a six-legged insect.
+七|SEVEN|seven|The digit 7 flipped upside down with a bar across it.
+八|EIGHT|eight|Two strokes fanning out like the moustache of an eighty-year-old man.
+九|NINE|nine|Someone doing push-ups whose arm buckles on the ninth one.
+十|TEN|ten|A plus sign: add up both hands and you get ten fingers.
+百|HUNDRED|hundred|One (一) on top of white (白): one hundred sheets of white paper.
+千|THOUSAND|thousand|Ten (十) wearing an extra stroke on top: ten multiplied up to a thousand.
+万|TEN THOUSAND|ten thousand|A person bent double under ten thousand things on their back.
+円|YEN|yen, round|A cashier's counter with a little window for passing yen through.
+年|YEAR|year|A farmer carrying home the rice after a year of work.
+月|MOON|moon, month|A crescent moon with two wisps of cloud across it.
+日|SUN|sun, day|The sun drawn as a box, with a ray of light across the middle.
+時|TIME|time, hour|The sun (日) shining on a temple (寺), where the bell tells the time.
+分|MINUTE|minute, to divide, to understand|A knife (刀) splitting (八) a melon into shares.
+半|HALF|half|A vertical cut slicing a two-horned ox into halves.
+間|BETWEEN|between, interval|The sun (日) peeking through the gap between two gate doors (門).
+火|FIRE|fire|A campfire in the middle with sparks flying off to both sides.
+水|WATER|water|A stream running down the middle, splashing onto both banks.
+木|TREE|tree, wood|A tree with a trunk, a branch across, and roots spreading out.
+金|GOLD|gold, money|Treasure under a roof; the two dots are glittering gold nuggets.
+土|EARTH|earth, soil|A sprout (十) pushing up out of the ground (一).
+週|WEEK|week|Walk one full lap (周) of the road (⻌) and a week has gone by.
+毎|EVERY|every|A mother (母) in a hat going out to the fields every single day.
+今|NOW|now|Under a roof, the clock hand points to this very moment.
+午|NOON|noon|A sundial post: at noon its shadow is at its shortest.
+前|BEFORE|before, front|Before eating, you take a knife (刂) and carve the meat (月) at the table.
+後|AFTER|after, behind|A walker on the road (彳) drags their feet and falls behind.
+先|AHEAD|ahead, previous|A runner on two legs (儿) pulling out ahead of the rest.
+何|WHAT|what|A person (亻) standing by a box asking: what is in there?
+山|MOUNTAIN|mountain|Three peaks, with the tallest in the middle.
+川|RIVER|river|Three streams of water flowing downhill together.
+天|HEAVEN|sky, heaven|A big person (大) with arms out, and the sky (一) above their head.
+気|SPIRIT|spirit, air, mood|Steam rising from a pot of boiling rice.
+雨|RAIN|rain|Four raindrops seen falling outside a window.
+空|SKY|sky, empty|A hole (穴) cut in the roof for gazing at the sky.
+花|FLOWER|flower|A plant (艹) transforms (化) and bursts into flower.
+魚|FISH|fish|A fish with a head, a scaly body (田) and a four-dot tail.
+人|PERSON|person|A person striding along on two legs.
+男|MAN|man, male|The one using strength (力) to work the rice field (田).
+女|WOMAN|woman, female|A woman sitting with crossed legs and arms outstretched.
+子|CHILD|child|A swaddled baby stretching out both arms to be picked up.
+父|FATHER|father|A father's face with a moustache curling upward.
+母|MOTHER|mother|A mother holding her child close; the two dots are her breasts.
+友|FRIEND|friend|Two hands clasping each other, like close friends.
+名|NAME|name|In the dark of evening (夕) you can't see faces, so you open your mouth (口) and say your name.
+口|MOUTH|mouth|A mouth opened wide into a square.
+目|EYE|eye|An eye turned on its side; the two inner lines are the pupil.
+耳|EAR|ear|An ear seen from the side, with a long earlobe hanging down.
+手|HAND|hand|An open hand with its fingers and wrist.
+足|FOOT|foot, leg, to be enough|A kneecap (口) on top and a foot stepping forward below.
+生|LIFE|life, to be born|A sprout rising from the soil (土) and growing.
+学|STUDY|study, learning|A child (子) under the school roof, taking in three rays of knowledge.
+校|SCHOOL|school|Beside a tree (木), teacher and pupils mingle (交).
+本|BOOK|book, origin|A tree (木) marked at its root: the root of knowledge is the book.
+語|LANGUAGE|language, word|Five (五) mouths (口) speaking (言) together make a language.
+言|SAY|to say, word|Sound waves coming out of a mouth (口).
+話|TALK|to talk, story|Words (言) rolling off the tongue (舌).
+読|READ|to read|Reading aloud (言) the books you just bought (売).
+書|WRITE|to write|A hand holding a brush, writing on paper laid out in the sunlight (日).
+見|SEE|to see, to look|An eye (目) that grew legs (儿) and runs around looking at everything.
+聞|HEAR|to hear, to ask|An ear (耳) pressed to the gate (門) to listen in.
+食|EAT|to eat, food|Under the roof, a bowl of good (良) rice is waiting.
+飲|DRINK|to drink|After eating (食), you open your mouth wide (欠) for a drink.
+買|BUY|to buy|Carrying a net (罒) full of shells (貝), the money of old, off to buy things.
+行|GO|to go, to carry out|A crossroads, where people go off in every direction.
+来|COME|to come|Rice (米) ripening on the stalk (木): harvest time has come.
+出|EXIT|to go out, to take out|Two mountains (山) stacked up, like shoots pushing out of the ground.
+入|ENTER|to enter, to put in|A person ducking their head to lift a curtain and enter.
+立|STAND|to stand|A person standing upright on the ground.
+休|REST|to rest|A person (亻) leaning against a tree (木) for a rest.
+会|MEET|to meet, meeting|People gathered under one roof to talk (云).
+社|COMPANY|company, shrine|An altar (礻) standing on the village's plot of land (土).
+店|SHOP|shop|Under the awning (广), a fortune-teller (占) has set up shop.
+駅|STATION|station|Long ago a station was a post for changing the messenger's horse (馬).
+車|CAR|car, vehicle|A cart seen from above: the body in the middle, the axle and two wheels.
+道|ROAD|road, way|The head (首) leads the way and the feet follow along the road (⻌).
+電|ELECTRICITY|electricity|A rainstorm (雨) rolls in and lightning strikes the field (田).
+国|COUNTRY|country|A precious jewel (玉) guarded on all sides by city walls.
+上|ABOVE|above, up|Something poking up above the line.
+下|BELOW|below, down|Something dangling below the line.
+左|LEFT|left|The left hand holds the carpenter's square (工) steady.
+右|RIGHT|right|The right hand brings food to the mouth (口).
+中|MIDDLE|middle, inside|An arrow straight through the middle of the target.
+外|OUTSIDE|outside|In the evening (夕) the fortune-teller (卜) has to work outside.
+東|EAST|east|The sun (日) rising behind a tree (木) in the east.
+西|WEST|west|The sun sets in the west and a bird settles on its nest.
+南|SOUTH|south|A greenhouse facing the warm south.
+北|NORTH|north|Two people sitting back to back against the cold north wind.
+大|BIG|big, large|A person with arms flung wide: it was this big!
+小|SMALL|small, little|A person pulling their arms in tight to look small.
+多|MANY|many|Two evenings (夕) stacked up: many nights in a row.
+少|FEW|few, a little|Already small (小), and then a slice is cut away, so very little is left.
+高|TALL|tall, high, expensive|A tall tower with a roof, many floors and a door.
+安|CHEAP|cheap, safe|A woman (女) under a roof (宀) feels at ease.
+新|NEW|new|Standing (立) by a tree (木) with an axe (斤), carving something new.
+古|OLD|old|A story passed through ten (十) mouths (口) is very old indeed.
+長|LONG|long, chief|An elder with long hair streaming in the wind.
+白|WHITE|white|The sun (日) giving off one ray of dazzling white light.
+
+@v 水=みず=water
+@v お土産=おみやげ=souvenir
+@v 梅雨=つゆ=rainy season
+@v 一本=いっぽん=one (long object)
+@v 来る=くる=to come
+@v 出かける=でかける=to go out
+@v 北海道=ほっかいどう=Hokkaido
+@v 関西=かんさい=Kansai region
+@v 前=まえ=front; before
+@v 後=あと=after; later
+@v 先=さき=ahead; before
+@v 先に=さきに=first; ahead
+@v 空く=あく=to become empty
+@v 部長=ぶちょう=department head
+@v 元気=げんき=healthy; energetic
+@v 言葉=ことば=word; language
+@v 時=とき=time; when
+@v 間=あいだ=between; interval
+@v 休む=やすむ=to rest; to take a day off
+@v 休み=やすみ=holiday; break
+@v 白紙=はくし=blank paper
+@v 月=つき=moon
+@v 日=ひ=day; sun
+@v 年=とし=year; age
+@v 話=はなし=story; talk
+@v 電話=でんわ=telephone
+@v 電子=でんし=electronic; electron
+@v 国立=こくりつ=national
+@v 見学=けんがく=study tour
+@v 大変=たいへん=tough; very
+@v 聞く=きく=to listen; to ask
+@v 高い=たかい=high; expensive
+@v 一年=いちねん=one year
+@v 国内=こくない=domestic; within the country
+@v 彼女=かのじょ=she; girlfriend
+@v 多少=たしょう=more or less
+@v 以上=いじょう=... or more
+@v 以下=いか=... or less
+@v 足=あし=foot; leg
+@v 東北=とうほく=northeast
+@v 東南=とうなん=southeast
+@v 円高=えんだか=strong yen
+@v 円安=えんやす=weak yen
+@v 国語=こくご=national language
+@v 最後=さいご=last; end
+@v 生活=せいかつ=daily life
+@v 水道=すいどう=water supply; tap water
+@v 上手=じょうず=skillful; good at
+@v 下手=へた=unskillful; poor at
+@v 中=なか=inside; middle
+@v 面白い=おもしろい=interesting; funny
+@v 学生=がくせい=student
+@v 長い=ながい=long
+@v 少女=しょうじょ=girl
+@v 金=きん=gold
+@v 金魚=きんぎょ=goldfish
+@v 長男=ちょうなん=eldest son
+@v 書道=しょどう=calligraphy
+@v 飲み会=のみかい=drinking party
+@v 入学=にゅうがく=entering a school
+@v 白鳥=はくちょう=swan
+@v 一足=いっそく=a pair (of shoes)
+@v 切手=きって=postage stamp
+@v 食事=しょくじ=meal
+@v 国土=こくど=national territory
+@v 読み方=よみかた=way of reading
+@v 生け花=いけばな=flower arrangement
+@v 見聞=けんぶん=knowledge; experience
+@v 早耳=はやみみ=quick to hear news
+@v 天=てん=sky; heaven
+@v 火事=かじ=fire (disaster)
+@v 四つ=よっつ=four
+@v 耳鼻科=じびか=ear, nose and throat clinic
+@v 店員=てんいん=shop assistant
+@v 駅員=えきいん=station staff
+@v 立てる=たてる=to stand up; to set up
+@v 氏名=しめい=full name
+@v 木々=きぎ=trees
+@v 山々=やまやま=mountains
+@v 立つ=たつ=to stand
+@v 読書=どくしょ=reading
+@v 英語=えいご=English
+@v 日本語=にほんご=Japanese
