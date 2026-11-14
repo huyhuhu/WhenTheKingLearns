@@ -134,11 +134,11 @@
         ? '<a class="btn" href="' + link(L, n, 'list/' + encodeURIComponent(s[j])) + '">' + label + '</a>'
         : '<span class="btn" disabled>' + label + '</span>';
     }
-    return '<div class="card detail"><div class="strokebox">' + strokeSvg(k) + '<button class="replay" data-act="replay" title="' + T('Viết lại', 'Replay') + '">↻</button></div>' +
+    return '<div class="card detail"><div class="strokecol"><div class="strokebox" data-act="replay">' + strokeSvg(k) + '</div></div>' +
       '<div class="detail-info"><p class="eyebrow">JLPT ' + d.level + ' · ' + k.strokes + T(' nét', ' strokes') + '</p><h2>' + h(kw(k)) + '</h2><p class="vi">' + h(mean(k)) + '</p>' +
       '<div class="readings"><div class="reading"><small>' + T('ÂM ON', 'ON READING') + '</small>' + sayList(k.on) + '</div>' +
       '<div class="reading"><small>' + T('ÂM KUN', 'KUN READING') + '</small>' + sayList(k.kun) + '</div></div>' +
-      '<p class="note">' + T('Bấm vào cách đọc hoặc từ vựng để nghe.', 'Tap a reading or a word to hear it.') + '</p>' +
+      '<p class="note">' + T('Bấm vào chữ để xem lại nét viết, bấm vào cách đọc hoặc từ vựng để nghe.', 'Tap the kanji to replay its strokes; tap a reading or a word to hear it.') + '</p>' +
       '<button class="btn' + (known ? ' good' : '') + '" data-act="toggleKnown" data-k="' + h(ch) + '">' + (known ? T('✓ Đã thuộc', '✓ Learned') : T('Đánh dấu đã thuộc', 'Mark as learned')) + '</button>' +
       '</div></div>' +
       '<div class="card story"><h3>' + T('CÂU CHUYỆN LIÊN TƯỞNG', 'MNEMONIC') + '</h3><p>' + h(story(k)) + '</p></div>' +

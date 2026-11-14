@@ -194,41 +194,73 @@
       '<div class="row"><a class="btn primary" href="#/kanji">' + T('Học Kanji trước', 'Study Kanji first') + '</a></div>';
   }
 
-  function viewSettings() {
-    var B = window.BGM, styles = '';
+  var modalEl = null;
+  var settingsOpen = false;
+  var settingsTab = 'general';
+
+  function setRow(label, control) {
+    return '<div class="setrow"><span>' + label + '</span>' + control + '</div>';
+  }
+  function seg(items) {
+    var out = '<div class="seg">';
+    for (var i = 0; i < items.length; i++) {
+      out += '<button class="' + (items[i][2] ? 'on' : '') + '" data-act="' + items[i][1] + '">' + items[i][0] + '</button>';
+    }
+    return out + '</div>';
+  }
+  function settingsBody() {
+    if (settingsTab === 'sync') {
+      return '<p class="note">' + T('Tạo Personal Access Token (classic) tại github.com → Settings → Developer settings, chỉ tick quyền <b>gist</b>, rồi dán vào đây trên từng thiết bị. Token chỉ lưu trong trình duyệt này và chỉ gửi tới api.github.com.', 'Create a Personal Access Token (classic) at github.com → Settings → Developer settings with only the <b>gist</b> scope, then paste it here on each device. The token is stored only in this browser and sent only to api.github.com.') + '</p>' +
+        '<input class="field" id="token" type="password" autocomplete="off" placeholder="ghp_…" value="' + h(sync.token || '') + '">' +
+        '<button class="btn primary" data-act="saveToken">' + T('Lưu và đồng bộ', 'Save and sync') + '</button>' +
+        '<button class="btn" data-act="clearToken">' + T('Xoá token', 'Remove token') + '</button>' +
+        '<p class="status" id="syncStatus">' + h(syncStatus || (sync.token ? T('Đã cài token.', 'Token saved.') : T('Chưa cài đồng bộ.', 'Sync is not set up.'))) + '</p>';
+    }
+    if (settingsTab === 'backup') {
+      return '<h3>' + T('SAO LƯU RA FILE', 'BACK UP TO A FILE') + '</h3>' +
+        '<textarea class="field" id="exportBox" readonly>' + h(JSON.stringify(progress)) + '</textarea>' +
+        '<button class="btn" data-act="download">' + T('Tải file sao lưu', 'Download backup') + '</button>' +
+        '<p class="note">' + T('Nếu trình duyệt không tải được file, hãy chép nội dung trong ô trên.', 'If the download does not start, copy the text in the box above.') + '</p>' +
+        '<h3>' + T('NHẬP TỪ BẢN SAO LƯU', 'RESTORE FROM A BACKUP') + '</h3>' +
+        '<textarea class="field" id="importBox" placeholder="' + T('Dán nội dung bản sao lưu vào đây', 'Paste the backup text here') + '"></textarea>' +
+        '<input class="field" id="importFile" type="file" accept=".json,application/json">' +
+        '<button class="btn" data-act="import">' + T('Nhập và gộp vào tiến độ hiện tại', 'Import and merge into current progress') + '</button>' +
+        '<p class="status" id="importStatus"></p>' +
+        '<h3>' + T('XOÁ TIẾN ĐỘ', 'RESET PROGRESS') + '</h3>' +
+        '<button class="btn danger" data-act="reset">' + T('Xoá toàn bộ tiến độ trên thiết bị này', 'Erase all progress on this device') + '</button>';
+    }
+    if (settingsTab === 'about') {
+      return '<h3>' + T('NGUỒN DỮ LIỆU', 'DATA SOURCES') + '</h3><p class="note">' + T('Âm On/Kun: KANJIDIC2. Từ vựng và nghĩa tiếng Anh: JMdict. Cả hai thuộc Electronic Dictionary Research and Development Group, giấy phép CC BY-SA 4.0. Thứ tự nét: KanjiVG © Ulrich Apel, giấy phép CC BY-SA 3.0.', 'On/Kun readings: KANJIDIC2. Vocabulary and English glosses: JMdict. Both are the property of the Electronic Dictionary Research and Development Group, licensed CC BY-SA 4.0. Stroke order: KanjiVG © Ulrich Apel, licensed CC BY-SA 3.0.') + '</p>';
+    }
+    var B = window.BGM, dark = currentTheme() === 'dark', styles = '';
     for (var id in B.styles) styles += '<option value="' + id + '"' + (B.settings.style === id ? ' selected' : '') + '>' + h(B.styles[id].name) + '</option>';
-    var dark = currentTheme() === 'dark';
-    return '<div class="hero"><h1>' + T('Cài đặt', 'Settings') + '</h1></div><div class="narrow">' +
-      '<div class="card block"><h3>' + T('NGÔN NGỮ', 'LANGUAGE') + '</h3><div class="seg">' +
-      '<button class="' + (lang === 'vi' ? 'on' : '') + '" data-act="langVi">Tiếng Việt</button>' +
-      '<button class="' + (lang === 'en' ? 'on' : '') + '" data-act="langEn">English</button></div></div>' +
-      '<div class="card block"><h3>' + T('GIAO DIỆN', 'APPEARANCE') + '</h3><div class="seg">' +
-      '<button class="' + (dark ? '' : 'on') + '" data-act="themeLight">☀ ' + T('Sáng', 'Light') + '</button>' +
-      '<button class="' + (dark ? 'on' : '') + '" data-act="themeDark">☾ ' + T('Tối', 'Dark') + '</button></div></div>' +
-      '<div class="card block"><h3>' + T('NHẠC NỀN', 'BACKGROUND MUSIC') + '</h3>' +
-      '<div class="seg"><button class="' + (B.settings.enabled ? 'on' : '') + '" data-act="bgmOn">♪ ' + T('Bật', 'On') + '</button>' +
-      '<button class="' + (B.settings.enabled ? '' : 'on') + '" data-act="bgmOff">' + T('Tắt', 'Off') + '</button></div>' +
-      '<label class="lbl">' + T('Phong cách', 'Style') + '</label><select class="field" data-change="bgmStyle">' + styles + '</select>' +
-      '<label class="lbl">' + T('Âm lượng', 'Volume') + '</label><input class="range" type="range" min="0" max="100" step="5" value="' + B.settings.volume + '" data-input="bgmVolume" data-change="bgmVolume">' +
-      '<p class="note">' + T('Nhạc được tạo trực tiếp trên máy, không cần tải file.', 'The music is generated on your device; nothing is downloaded.') + '</p></div>' +
-      '<div class="card block"><h3>' + T('ĐỒNG BỘ QUA GITHUB GIST', 'SYNC VIA GITHUB GIST') + '</h3>' +
-      '<p class="note">' + T('Tạo Personal Access Token (classic) tại github.com → Settings → Developer settings, chỉ tick quyền <b>gist</b>, rồi dán vào đây trên từng thiết bị. Token chỉ lưu trong trình duyệt này và chỉ gửi tới api.github.com.', 'Create a Personal Access Token (classic) at github.com → Settings → Developer settings with only the <b>gist</b> scope, then paste it here on each device. The token is stored only in this browser and sent only to api.github.com.') + '</p>' +
-      '<input class="field" id="token" type="password" autocomplete="off" placeholder="ghp_…" value="' + h(sync.token || '') + '">' +
-      '<button class="btn primary" data-act="saveToken">' + T('Lưu và đồng bộ', 'Save and sync') + '</button>' +
-      '<button class="btn" data-act="clearToken">' + T('Xoá token', 'Remove token') + '</button>' +
-      '<p class="status" id="syncStatus">' + h(syncStatus || (sync.token ? T('Đã cài token.', 'Token saved.') : T('Chưa cài đồng bộ.', 'Sync is not set up.'))) + '</p></div>' +
-      '<div class="card block"><h3>' + T('SAO LƯU RA FILE', 'BACK UP TO A FILE') + '</h3>' +
-      '<textarea class="field" id="exportBox" readonly>' + h(JSON.stringify(progress)) + '</textarea>' +
-      '<button class="btn" data-act="download">' + T('Tải file sao lưu', 'Download backup') + '</button>' +
-      '<p class="note">' + T('Nếu trình duyệt không tải được file, hãy chép nội dung trong ô trên.', 'If the download does not start, copy the text in the box above.') + '</p></div>' +
-      '<div class="card block"><h3>' + T('NHẬP TỪ BẢN SAO LƯU', 'RESTORE FROM A BACKUP') + '</h3>' +
-      '<textarea class="field" id="importBox" placeholder="' + T('Dán nội dung bản sao lưu vào đây', 'Paste the backup text here') + '"></textarea>' +
-      '<input class="field" id="importFile" type="file" accept=".json,application/json">' +
-      '<button class="btn" data-act="import">' + T('Nhập và gộp vào tiến độ hiện tại', 'Import and merge into current progress') + '</button>' +
-      '<p class="status" id="importStatus"></p></div>' +
-      '<div class="card block"><h3>' + T('XOÁ TIẾN ĐỘ', 'RESET PROGRESS') + '</h3>' +
-      '<button class="btn danger" data-act="reset">' + T('Xoá toàn bộ tiến độ trên thiết bị này', 'Erase all progress on this device') + '</button></div>' +
-      '<div class="card block"><h3>' + T('NGUỒN DỮ LIỆU', 'DATA SOURCES') + '</h3><p class="note">' + T('Âm On/Kun: KANJIDIC2. Từ vựng và nghĩa tiếng Anh: JMdict. Cả hai thuộc Electronic Dictionary Research and Development Group, giấy phép CC BY-SA 4.0. Thứ tự nét: KanjiVG © Ulrich Apel, giấy phép CC BY-SA 3.0.', 'On/Kun readings: KANJIDIC2. Vocabulary and English glosses: JMdict. Both are the property of the Electronic Dictionary Research and Development Group, licensed CC BY-SA 4.0. Stroke order: KanjiVG © Ulrich Apel, licensed CC BY-SA 3.0.') + '</p></div></div>';
+    return setRow(T('Ngôn ngữ', 'Language'), seg([['Tiếng Việt', 'langVi', lang === 'vi'], ['English', 'langEn', lang === 'en']])) +
+      setRow(T('Giao diện', 'Appearance'), seg([['☀ ' + T('Sáng', 'Light'), 'themeLight', !dark], ['☾ ' + T('Tối', 'Dark'), 'themeDark', dark]])) +
+      setRow(T('Nhạc nền', 'Background music'), seg([['♪ ' + T('Bật', 'On'), 'bgmOn', B.settings.enabled], [T('Tắt', 'Off'), 'bgmOff', !B.settings.enabled]])) +
+      setRow(T('Phong cách nhạc', 'Music style'), '<select class="field" data-change="bgmStyle">' + styles + '</select>') +
+      setRow(T('Âm lượng', 'Volume'), '<input class="range" type="range" min="0" max="100" step="5" value="' + B.settings.volume + '" data-input="bgmVolume" data-change="bgmVolume">');
+  }
+  function renderModal() {
+    if (!modalEl) {
+      modalEl = document.createElement('div');
+      modalEl.id = 'modal';
+      document.body.appendChild(modalEl);
+    }
+    document.documentElement.className = settingsOpen ? 'modal-open' : '';
+    if (!settingsOpen) { modalEl.innerHTML = ''; return; }
+    var names = [['general', T('Chung', 'General')], ['sync', T('Đồng bộ', 'Sync')], ['backup', T('Sao lưu', 'Backup')], ['about', T('Thông tin', 'About')]];
+    var tabs = '';
+    for (var i = 0; i < names.length; i++) {
+      tabs += '<button class="' + (settingsTab === names[i][0] ? 'on' : '') + '" data-act="settingsTab" data-tab="' + names[i][0] + '">' + names[i][1] + '</button>';
+    }
+    modalEl.innerHTML = '<div class="backdrop" data-act="closeSettings"></div><div class="dialog" role="dialog">' +
+      '<div class="dialog-head"><b>' + T('Cài đặt', 'Settings') + '</b><button class="icon-btn" data-act="closeSettings" title="' + T('Đóng', 'Close') + '">✕</button></div>' +
+      '<div class="tabs">' + tabs + '</div><div class="dialog-body">' + settingsBody() + '</div></div>';
+  }
+  // Chi ve lai thanh dau trang va popup, giu nguyen trang dang mo.
+  function refreshChrome() {
+    renderChrome(parseRoute());
+    renderModal();
   }
 
   function notFound() {
@@ -257,16 +289,16 @@
       '<button class="icon-btn' + (B.settings.enabled ? ' on' : '') + '" data-act="bgmToggle" title="' + T('Nhạc nền', 'Music') + '">♪</button>' +
       '<button class="icon-btn lang-btn" data-act="langToggle" title="' + T('Đổi ngôn ngữ', 'Switch language') + '">' + (lang === 'en' ? 'EN' : 'VI') + '</button>' +
       '<button class="icon-btn" data-act="themeToggle" title="' + T('Sáng / tối', 'Light / dark') + '">' + (dark ? '☀' : '☾') + '</button>' +
-      '<a class="icon-btn' + (parts[0] === 'settings' ? ' on' : '') + '" href="#/settings" title="' + T('Cài đặt', 'Settings') + '">⚙</a></span></div>';
+      '<button class="icon-btn' + (settingsOpen ? ' on' : '') + '" data-act="openSettings" title="' + T('Cài đặt', 'Settings') + '">⚙</button></span></div>';
     navEl.innerHTML = tabs;
   }
   function render() {
     var parts = parseRoute(), key = parts.join('/');
+    if (key === 'settings') { settingsOpen = true; location.hash = '#/'; return; }
     var changed = key !== lastRoute;
     lastRoute = key;
     var view = null, sec = sectionById[parts[0]];
     if (!parts.length) view = { html: viewHome(), title: '' };
-    else if (parts[0] === 'settings' && parts.length === 1) view = { html: viewSettings(), title: T('Cài đặt', 'Settings') };
     else if (sec && sec.ready) view = sec.route(parts.slice(1), changed);
     else if (sec && parts.length === 1) view = { html: viewSoon(sec), title: L(sec.name) };
     if (!view) view = { html: notFound(), title: '' };
@@ -283,6 +315,7 @@
     if (view.remember) writeJson(LAST_KEY, { path: key, title: view.remember });
     if (changed) window.scrollTo(0, 0);
     for (var j = 0; j < sections.length; j++) if (sections[j].afterRender) sections[j].afterRender(sections[j] === sec && view.after);
+    renderModal();
   }
 
   // ---------- hanh dong chung ----------
@@ -295,12 +328,15 @@
   actions.langToggle = function () { setLang(lang === 'en' ? 'vi' : 'en'); };
   actions.langVi = function () { setLang('vi'); };
   actions.langEn = function () { setLang('en'); };
-  actions.themeToggle = function () { setTheme(currentTheme() === 'dark' ? 'light' : 'dark'); render(); };
-  actions.themeLight = function () { setTheme('light'); render(); };
-  actions.themeDark = function () { setTheme('dark'); render(); };
-  actions.bgmToggle = function () { window.BGM.toggle(); render(); };
-  actions.bgmOn = function () { window.BGM.setEnabled(true); render(); };
-  actions.bgmOff = function () { window.BGM.setEnabled(false); render(); };
+  actions.openSettings = function () { settingsOpen = true; refreshChrome(); };
+  actions.closeSettings = function () { settingsOpen = false; refreshChrome(); };
+  actions.settingsTab = function (el) { settingsTab = el.getAttribute('data-tab'); renderModal(); };
+  actions.themeToggle = function () { setTheme(currentTheme() === 'dark' ? 'light' : 'dark'); refreshChrome(); };
+  actions.themeLight = function () { setTheme('light'); refreshChrome(); };
+  actions.themeDark = function () { setTheme('dark'); refreshChrome(); };
+  actions.bgmToggle = function () { window.BGM.toggle(); refreshChrome(); };
+  actions.bgmOn = function () { window.BGM.setEnabled(true); refreshChrome(); };
+  actions.bgmOff = function () { window.BGM.setEnabled(false); refreshChrome(); };
   actions.bgmStyle = function (el) { window.BGM.setStyle(el.value); };
   actions.bgmVolume = function (el) { window.BGM.setVolume(el.value); };
   actions.saveToken = function () {
@@ -310,7 +346,7 @@
     writeJson(SYNC_KEY, sync);
     doSync();
   };
-  actions.clearToken = function () { sync = {}; writeJson(SYNC_KEY, sync); syncStatus = ''; render(); };
+  actions.clearToken = function () { sync = {}; writeJson(SYNC_KEY, sync); syncStatus = ''; renderModal(); };
   actions.download = function () {
     try {
       var a = document.createElement('a');
@@ -376,6 +412,9 @@
       document.addEventListener('change', dispatch('data-change'));
       document.addEventListener('input', dispatch('data-input'));
       window.addEventListener('hashchange', render);
+      document.addEventListener('keydown', function (e) {
+        if (settingsOpen && (e.key === 'Escape' || e.keyCode === 27)) actions.closeSettings();
+      });
       render();
       doSync();
     }
