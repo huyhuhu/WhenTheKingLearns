@@ -18,6 +18,8 @@
   var quiz = null;
   var quizKey = '';
   var hideAnswers = false;
+  var curMode = '';
+  var animChar = '';
 
   function findLevel(id) {
     for (var i = 0; i < LEVELS.length; i++) if (LEVELS[i].id === id) return LEVELS[i];
@@ -49,8 +51,10 @@
       paths[i].style.strokeDasharray = len + ' ' + len;
       paths[i].style.strokeDashoffset = len;
     }
+    var ch = animChar;
     function step(n) {
-      if (token !== animToken || n >= paths.length) return;
+      if (token !== animToken) return;
+      if (n >= paths.length) { App.emit('stroke:done', { k: ch }); return; }
       var p = paths[n];
       var ms = Math.max(280, Math.round(p.getTotalLength() * 7));
       p.getBoundingClientRect();
@@ -129,6 +133,7 @@
     if (!k || idx < 0) return null;
     for (var i = 0; i < k.vocab.length; i++) words += wordCard(k.vocab[i]);
     var known = isKnown(ch);
+    animChar = ch;
     function nav(j, label) {
       return j >= 0 && j < s.length
         ? '<a class="btn" href="' + link(L, n, 'list/' + encodeURIComponent(s[j])) + '">' + label + '</a>'
@@ -162,7 +167,7 @@
       '<div class="grid vocab' + (hideAnswers ? ' hide-answers' : '') + '">' + cards + '</div>';
   }
 
-  function startFlash(list) { flash = { order: shuffle(list), i: 0, flipped: false, again: [] }; }
+  function startFlash(list, isAgain) { flash = { order: shuffle(list), i: 0, flipped: false, again: [], isAgain: !!isAgain }; }
   function viewFlash(L, d, n) {
     var s = d.sessions[n - 1];
     if (!flash) startFlash(s);
@@ -228,7 +233,7 @@
       q.after = q.after || (jp(ch) + ' · ' + h(kw(k) + ' · ' + mean(k)) + ' · ' + sayList(k.on.slice(0, 1).concat(k.kun.slice(0, 1))));
       qs.push(q);
     }
-    quiz = { qs: qs, i: 0, picked: -1, right: 0, wrong: [] };
+    quiz = { qs: qs, i: 0, picked: -1, right: 0, wrong: [], t0: Date.now() };
     quizKey = L.id + '-' + n;
   }
   function viewQuiz(L, d, n) {
@@ -259,6 +264,7 @@
   // ---------- dieu huong trong muc ----------
   function route(parts, changed) {
     if (changed) { flash = null; quiz = null; }
+    curMode = parts[2] || '';
     var L = findLevel(parts[0] || 'n5');
     if (!L) return null;
     if (parts.length <= 1) return { html: viewLevel(L), title: 'Kanji ' + L.name, back: '', backLabel: T('Trang chủ', 'Home') };
@@ -272,19 +278,46 @@
     else if (parts[2] === 'quiz' && parts.length === 3) html = viewQuiz(L, d, n);
     else if (parts[2] === 'vocab' && parts.length === 3) html = viewVocab(L, d, n);
     if (!html) return null;
+    if (changed && parts.length >= 3) {
+      var sk = L.id + '-' + n;
+      App.emit('mode:open', { sess: sk, mode: parts[2] });
+      if (parts.length === 4) App.emit('kanji:view', { k: parts[3], sess: sk });
+    }
     return { html: html, title: title, after: after, backLabel: label, remember: ['Kanji ' + L.name + ' · Buổi ' + n, 'Kanji ' + L.name + ' · Session ' + n] };
   }
 
   // ---------- hanh dong ----------
   var A = App.actions;
-  A.replay = function () { animateStrokes(); };
-  A.toggleKnown = function (el) { var k = el.getAttribute('data-k'); setKnown(k, !isKnown(k)); App.render(); };
-  A.reveal = function (el) { el.className = el.className.indexOf(' show') < 0 ? el.className + ' show' : el.className.replace(' show', ''); };
+  function curSess() { var p = App.route(); return p[1] + '-' + p[2]; }
+  function sessList() { var p = App.route(), d = DATA[p[1]]; return d ? d.sessions[parseInt(p[2], 10) - 1] : []; }
+  function learned(k) { setKnown(k, true); App.emit('kanji:known', { k: k }); }
+  A.replay = function () { App.emit('stroke:replay', { k: animChar }); animateStrokes(); };
+  A.toggleKnown = function (el) {
+    var k = el.getAttribute('data-k');
+    App.emit('kanji:toggle', { k: k });
+    if (isKnown(k)) setKnown(k, false); else learned(k);
+    App.render();
+  };
+  A.reveal = function (el) {
+    var showing = el.className.indexOf(' show') < 0;
+    el.className = showing ? el.className + ' show' : el.className.replace(' show', '');
+    if (showing && el.parentNode && el.parentNode.className.indexOf('hide-answers') >= 0) App.emit('vocab:reveal');
+  };
   A.toggleHide = function () { hideAnswers = !hideAnswers; App.render(); };
   A.flip = function () { flash.flipped = !flash.flipped; App.render(); };
-  A.flashYes = function () { setKnown(flash.order[flash.i], true); flash.i++; flash.flipped = false; App.render(); };
-  A.flashNo = function () { var k = flash.order[flash.i]; setKnown(k, false); flash.again.push(k); flash.i++; flash.flipped = false; App.render(); };
-  A.flashAgain = function () { startFlash(flash.again); App.render(); };
+  function flashGrade(ok) {
+    var k = flash.order[flash.i];
+    if (ok) learned(k); else { setKnown(k, false); flash.again.push(k); }
+    App.emit('flash:grade', { k: k, ok: ok });
+    flash.i++; flash.flipped = false;
+    if (flash.i >= flash.order.length) {
+      App.emit('flash:roundEnd', { sess: curSess(), list: sessList(), full: !flash.isAgain, again: flash.isAgain, misses: flash.again.length });
+    }
+    App.render();
+  }
+  A.flashYes = function () { flashGrade(true); };
+  A.flashNo = function () { flashGrade(false); };
+  A.flashAgain = function () { startFlash(flash.again, true); App.render(); };
   A.flashAll = function () { flash = null; App.render(); };
   A.answer = function (el) {
     if (quiz.picked >= 0) return;
@@ -292,12 +325,14 @@
     quiz.picked = parseInt(el.getAttribute('data-i'), 10);
     if (quiz.picked === q.ans) quiz.right++;
     else if (quiz.wrong.indexOf(q.ch) < 0) quiz.wrong.push(q.ch);
+    App.emit('quiz:answer', { ok: quiz.picked === q.ans, type: q.type, en: App.isEn() });
     App.render();
   };
   A.quizNext = function () {
     quiz.i++; quiz.picked = -1;
     if (quiz.i >= quiz.qs.length) {
       var p = App.progress(), best = p.quiz[quizKey];
+      App.emit('quiz:end', { sess: quizKey, right: quiz.right, total: quiz.qs.length, ms: Date.now() - quiz.t0, prev: best ? best[0] / best[1] : null, en: App.isEn() });
       if (!best || quiz.right > best[0]) { p.quiz[quizKey] = [quiz.right, quiz.qs.length, Date.now()]; App.saveProgress(); }
     }
     App.render();
@@ -312,6 +347,9 @@
     desc: ['Hán tự theo buổi: danh sách, flashcard, trắc nghiệm, từ vựng', 'Kanji by session: list, flashcards, quiz, vocabulary'],
     ready: true,
     route: route,
+    busy: function () {
+      return (curMode === 'quiz' && quiz && quiz.i < quiz.qs.length) || (curMode === 'flash' && flash && flash.i < flash.order.length);
+    },
     afterRender: function (animate) { if (animate) animateStrokes(); else animToken++; },
     stat: function () {
       var total = 0, known = 0;

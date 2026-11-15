@@ -15,6 +15,10 @@
   var sections = [];
   var sectionById = {};
   var actions = {};
+  var listeners = [];
+  var mergers = {};
+  var settingsRows = [];
+  var hankoFn = null;
   var progress = readJson(STORE_KEY) || {};
   var sync = readJson(SYNC_KEY) || {};
   var syncStatus = '';
@@ -27,6 +31,13 @@
 
   progress.known = progress.known || {};
   progress.quiz = progress.quiz || {};
+
+  // ---------- su kien ----------
+  function emit(type, data) {
+    for (var i = 0; i < listeners.length; i++) {
+      try { listeners[i](type, data || {}); } catch (e) { if (window.console) console.error(e); }
+    }
+  }
 
   // ---------- tien ich ----------
   function T(vi, en) { return lang === 'en' ? en : vi; }
@@ -56,6 +67,23 @@
   }
   function bar(n, total) {
     return '<div class="bar"><i style="width:' + (total ? Math.round(n * 100 / total) : 0) + '%"></i></div>';
+  }
+
+  // Ky tu nhu ♪ ☀ ⚙ lay tu phong khac nhau tren moi may nen lech tam; dung SVG cho dong deu.
+  var ICONS = {
+    music: '<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
+    sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+    moon: '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',
+    gear: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>',
+    close: '<path d="M6 6l12 12M18 6L6 18"/>'
+  };
+  function icon(name) {
+    return '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">' + ICONS[name] + '</svg>';
+  }
+  function logoSvg(cls) {
+    var c = hankoFn ? hankoFn() : { bg: '#c2452d', fg: '#fffdf8' };
+    return '<svg class="' + cls + '" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="' + c.bg + '"/>' +
+      '<g fill="none" stroke="' + c.fg + '" stroke-width="6" stroke-linecap="round"><path d="M17 18H47M20 32H44M14 46H50M32 18V46"/></g></svg>';
   }
 
   // ---------- giao dien sang / toi ----------
@@ -94,6 +122,7 @@
     var aq = (a && a.quiz) || {}, bq = (b && b.quiz) || {};
     for (k in aq) out.quiz[k] = aq[k];
     for (k in bq) if (!out.quiz[k] || bq[k][0] > out.quiz[k][0]) out.quiz[k] = bq[k];
+    for (k in mergers) out[k] = mergers[k](a && a[k], b && b[k]);
     return out;
   }
 
@@ -129,6 +158,7 @@
       syncBusy = false;
       sync.last = Date.now();
       writeJson(SYNC_KEY, sync);
+      emit('sync:ok');
       setSyncStatus(T('Đã đồng bộ lúc ', 'Synced at ') + new Date(sync.last).toLocaleTimeString());
     }
     function pullAndPush() {
@@ -176,9 +206,11 @@
     if (last && last.path) {
       html += '<a class="resume" href="#/' + h(last.path) + '"><span>' + T('Học tiếp', 'Continue') + '</span><b>' + h(L(last.title)) + '</b><i>→</i></a>';
     }
+    for (var j = 0; j < sections.length; j++) if (sections[j].home) html += sections[j].home();
     html += '<div class="grid sections">';
     for (var i = 0; i < sections.length; i++) {
       var s = sections[i];
+      if (s.grid === false) continue;
       html += '<a class="card section-card' + (s.ready ? '' : ' soon') + '" href="#/' + s.id + '">' +
         jp(s.glyph, 'glyph') + '<span class="body"><b>' + h(L(s.name)) + '</b><small>' + h(L(s.desc)) + '</small>' +
         '<em>' + h(s.ready && s.stat ? s.stat() : T('Sắp có', 'Coming soon')) + '</em></span></a>';
@@ -238,7 +270,8 @@
       setRow(T('Giao diện', 'Appearance'), seg([['☀ ' + T('Sáng', 'Light'), 'themeLight', !dark], ['☾ ' + T('Tối', 'Dark'), 'themeDark', dark]])) +
       setRow(T('Nhạc nền', 'Background music'), seg([['♪ ' + T('Bật', 'On'), 'bgmOn', B.settings.enabled], [T('Tắt', 'Off'), 'bgmOff', !B.settings.enabled]])) +
       setRow(T('Phong cách nhạc', 'Music style'), '<select class="field" data-change="bgmStyle">' + styles + '</select>') +
-      setRow(T('Âm lượng', 'Volume'), '<input class="range" type="range" min="0" max="100" step="5" value="' + B.settings.volume + '" data-input="bgmVolume" data-change="bgmVolume">');
+      setRow(T('Âm lượng', 'Volume'), '<input class="range" type="range" min="0" max="100" step="5" value="' + B.settings.volume + '" data-input="bgmVolume" data-change="bgmVolume">') +
+      settingsRows.map(function (fn) { return fn(setRow, seg); }).join('');
   }
   function renderModal() {
     if (!modalEl) {
@@ -254,7 +287,7 @@
       tabs += '<button class="' + (settingsTab === names[i][0] ? 'on' : '') + '" data-act="settingsTab" data-tab="' + names[i][0] + '">' + names[i][1] + '</button>';
     }
     modalEl.innerHTML = '<div class="backdrop" data-act="closeSettings"></div><div class="dialog" role="dialog">' +
-      '<div class="dialog-head"><b>' + T('Cài đặt', 'Settings') + '</b><button class="icon-btn" data-act="closeSettings" title="' + T('Đóng', 'Close') + '">✕</button></div>' +
+      '<div class="dialog-head"><b>' + T('Cài đặt', 'Settings') + '</b><button class="icon-btn" data-act="closeSettings" title="' + T('Đóng', 'Close') + '">' + icon('close') + '</button></div>' +
       '<div class="tabs">' + tabs + '</div><div class="dialog-body">' + settingsBody() + '</div></div>';
   }
   // Chi ve lai thanh dau trang va popup, giu nguyen trang dang mo.
@@ -281,15 +314,16 @@
     tabs += '<a class="' + (parts.length ? '' : 'on') + '" href="#/"><span class="jp" lang="ja">家</span>' + T('Trang chủ', 'Home') + '</a>';
     for (i = 0; i < sections.length; i++) {
       var s = sections[i], on = parts[0] === s.id ? 'on' : '';
-      links += '<a class="' + on + '" href="#/' + s.id + '">' + h(L(s.name)) + '</a>';
-      tabs += '<a class="' + on + '" href="#/' + s.id + '">' + jp(s.glyph) + h(L(s.name)) + '</a>';
+      var dot = s.badge && s.badge() ? '<i class="dot"></i>' : '';
+      links += '<a class="' + on + '" href="#/' + s.id + '">' + h(L(s.name)) + dot + '</a>';
+      tabs += '<a class="' + on + '" href="#/' + s.id + '">' + jp(s.glyph) + h(L(s.name)) + dot + '</a>';
     }
-    headerEl.innerHTML = '<div class="inner"><a class="brand" href="#/"><img class="hanko" src="icons/logo.svg" alt=""><span class="brand-name">When The King Learns</span></a>' +
+    headerEl.innerHTML = '<div class="inner"><a class="brand" href="#/" data-act="logo">' + logoSvg('hanko') + '<span class="brand-name">When The King Learns</span></a>' +
       '<nav class="topnav">' + links + '</nav><span class="tools">' +
-      '<button class="icon-btn' + (B.settings.enabled ? ' on' : '') + '" data-act="bgmToggle" title="' + T('Nhạc nền', 'Music') + '">♪</button>' +
+      '<button class="icon-btn' + (B.settings.enabled ? ' on' : '') + '" data-act="bgmToggle" title="' + T('Nhạc nền', 'Music') + '">' + icon('music') + '</button>' +
       '<button class="icon-btn lang-btn" data-act="langToggle" title="' + T('Đổi ngôn ngữ', 'Switch language') + '">' + (lang === 'en' ? 'EN' : 'VI') + '</button>' +
-      '<button class="icon-btn" data-act="themeToggle" title="' + T('Sáng / tối', 'Light / dark') + '">' + (dark ? '☀' : '☾') + '</button>' +
-      '<button class="icon-btn' + (settingsOpen ? ' on' : '') + '" data-act="openSettings" title="' + T('Cài đặt', 'Settings') + '">⚙</button></span></div>';
+      '<button class="icon-btn" data-act="themeToggle" title="' + T('Sáng / tối', 'Light / dark') + '">' + icon(dark ? 'sun' : 'moon') + '</button>' +
+      '<button class="icon-btn' + (settingsOpen ? ' on' : '') + '" data-act="openSettings" title="' + T('Cài đặt', 'Settings') + '">' + icon('gear') + '</button></span></div>';
     navEl.innerHTML = tabs;
   }
   function render() {
@@ -323,6 +357,7 @@
     lang = value;
     document.documentElement.lang = lang;
     try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* che do an danh */ }
+    emit('setting', { name: 'lang', value: lang });
     render();
   }
   actions.langToggle = function () { setLang(lang === 'en' ? 'vi' : 'en'); };
@@ -331,13 +366,16 @@
   actions.openSettings = function () { settingsOpen = true; refreshChrome(); };
   actions.closeSettings = function () { settingsOpen = false; refreshChrome(); };
   actions.settingsTab = function (el) { settingsTab = el.getAttribute('data-tab'); renderModal(); };
-  actions.themeToggle = function () { setTheme(currentTheme() === 'dark' ? 'light' : 'dark'); refreshChrome(); };
-  actions.themeLight = function () { setTheme('light'); refreshChrome(); };
-  actions.themeDark = function () { setTheme('dark'); refreshChrome(); };
-  actions.bgmToggle = function () { window.BGM.toggle(); refreshChrome(); };
-  actions.bgmOn = function () { window.BGM.setEnabled(true); refreshChrome(); };
-  actions.bgmOff = function () { window.BGM.setEnabled(false); refreshChrome(); };
-  actions.bgmStyle = function (el) { window.BGM.setStyle(el.value); };
+  function themeTo(t) { setTheme(t); emit('setting', { name: 'theme', value: t }); refreshChrome(); }
+  function bgmTo(on) { window.BGM.setEnabled(on); emit('setting', { name: 'bgm', value: on, style: window.BGM.settings.style }); refreshChrome(); }
+  actions.logo = function () { emit('logo'); };
+  actions.themeToggle = function () { themeTo(currentTheme() === 'dark' ? 'light' : 'dark'); };
+  actions.themeLight = function () { themeTo('light'); };
+  actions.themeDark = function () { themeTo('dark'); };
+  actions.bgmToggle = function () { bgmTo(!window.BGM.settings.enabled); };
+  actions.bgmOn = function () { bgmTo(true); };
+  actions.bgmOff = function () { bgmTo(false); };
+  actions.bgmStyle = function (el) { window.BGM.setStyle(el.value); emit('setting', { name: 'style', value: el.value, on: window.BGM.settings.enabled }); };
   actions.bgmVolume = function (el) { window.BGM.setVolume(el.value); };
   actions.saveToken = function () {
     var token = document.getElementById('token').value.replace(/\s/g, '');
@@ -353,6 +391,7 @@
       a.href = URL.createObjectURL(new Blob([JSON.stringify(progress)], { type: 'application/json' }));
       a.download = 'wtkl-progress.json';
       document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      emit('backup');
     } catch (e) {
       document.getElementById('exportBox').select();
     }
@@ -399,6 +438,18 @@
 
   window.App = {
     T: T, L: L, isEn: function () { return lang === 'en'; },
+    emit: emit,
+    on: function (fn) { listeners.push(fn); },
+    addMerger: function (key, fn) { mergers[key] = fn; },
+    addSettingsRow: function (fn) { settingsRows.push(fn); },
+    setHanko: function (fn) { hankoFn = fn; },
+    refreshChrome: refreshChrome,
+    route: parseRoute,
+    isBusy: function () {
+      for (var i = 0; i < sections.length; i++) if (sections[i].busy && sections[i].busy()) return true;
+      return false;
+    },
+    icon: icon,
     h: h, jp: jp, say: say, shuffle: shuffle, bar: bar,
     actions: actions,
     render: render,
@@ -415,6 +466,7 @@
       document.addEventListener('keydown', function (e) {
         if (settingsOpen && (e.key === 'Escape' || e.keyCode === 27)) actions.closeSettings();
       });
+      emit('start');
       render();
       doSync();
     }

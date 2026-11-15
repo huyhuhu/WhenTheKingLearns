@@ -1,13 +1,18 @@
 """Tao file doc tieng Nhat cho moi cach doc trong data/*.js bang edge-tts.
 
-Cach dung: python tools/build_audio.py
-Chi tao cac file con thieu, roi ghi lai data/audio.js (danh sach file da co).
+Cach dung: python tools/build_audio.py [kana can tao lai ...]
+Chi tao cac file con thieu (va cac kana truyen vao), roi ghi lai data/audio.js.
 """
 import asyncio, glob, json, os, re, sys
 
 import edge_tts
 
 VOICE = "ja-JP-NanamiNeural"
+# Kana tran de bi doc thanh than tu; them dau cau de may doc nhu mot tu.
+# Doi van ban o day thi tang so phien ban de trinh duyet tai lai file.
+OVERRIDES = {
+    "うお": ("うお。", 2),
+}
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 out_dir = os.path.join(root, "audio", "ja")
 
@@ -37,14 +42,15 @@ def collect():
     return sorted(keys)
 
 
-async def make(key, sem, failed):
+async def make(key, sem, failed, force):
     path = os.path.join(out_dir, file_name(key))
-    if os.path.exists(path) and os.path.getsize(path) > 0:
+    if not force and os.path.exists(path) and os.path.getsize(path) > 0:
         return
+    text = OVERRIDES.get(key, (key, 1))[0]
     async with sem:
         for attempt in range(3):
             try:
-                await edge_tts.Communicate(key, VOICE).save(path)
+                await edge_tts.Communicate(text, VOICE).save(path)
                 if os.path.getsize(path) > 0:
                     return
             except Exception:
@@ -59,11 +65,12 @@ async def main():
     keys = collect()
     failed = []
     sem = asyncio.Semaphore(6)
-    await asyncio.gather(*(make(k, sem, failed) for k in keys))
+    force = set(sys.argv[1:])
+    await asyncio.gather(*(make(k, sem, failed, k in force) for k in keys))
     done = [k for k in keys if os.path.exists(os.path.join(out_dir, file_name(k)))]
     with open(os.path.join(root, "data", "audio.js"), "w", encoding="utf-8") as f:
         f.write("window.AUDIO_SET = ")
-        json.dump({k: 1 for k in done}, f, ensure_ascii=False, separators=(",", ":"))
+        json.dump({k: OVERRIDES.get(k, (k, 1))[1] for k in done}, f, ensure_ascii=False, separators=(",", ":"))
         f.write(";\n")
     print("%d/%d file, %d loi" % (len(done), len(keys), len(failed)))
     if failed:

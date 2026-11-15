@@ -72,11 +72,12 @@
   function say(text, el) {
     var key = norm(text);
     if (!key) return;
+    if (window.App) window.App.emit('audio:play', { key: key });
     if (player) { player.onended = player.onerror = null; player.pause(); }
     if (window.speechSynthesis) window.speechSynthesis.cancel();
     if (!(window.AUDIO_SET && window.AUDIO_SET[key])) return speakWithBrowser(key, el);
     begin(el);
-    player = new Audio('audio/ja/' + fileName(key));
+    player = new Audio('audio/ja/' + fileName(key) + '?v=' + window.AUDIO_SET[key]);
     player.onended = function () { if (current === el) finish(); };
     player.onerror = function () { speakWithBrowser(key, el); };
     var started = player.play();
