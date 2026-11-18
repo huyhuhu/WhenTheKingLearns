@@ -70,14 +70,14 @@
     {"spk": "thaipho", "text": "Lý do là: thức ăn cho gà phải nhập khẩu, đồng yên yếu nên càng đắt. Người ta còn lo dịch cúm gia cầm vào mùa đông, đúng lúc dịp Giáng sinh cần nhiều trứng."},
 
     {"sec": "Ở siêu thị"},
-    {"spk": "thaipho", "text": "Còn ở khu phố của Yuki, bà chủ nhà Sato đang rủ Yuki đi siêu thị. Bệ hạ nghe nhé."},
+    {"spk": "thaipho", "text": "Còn ở khu phố của 「ユキ」, bà chủ nhà 「{佐藤|さとう}」 đang rủ 「ユキ」 đi siêu thị. Bệ hạ nghe nhé."},
     {"d": 6},
     {"d": 7},
     {"d": 8},
     {"d": 9},
     {"d": 10},
     {"d": 11},
-    {"spk": "thaipho", "text": "Bệ hạ đoán xem, vì sao bà Sato kêu lên như vậy?"},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, vì sao bà 「{佐藤|さとう}」 kêu lên như vậy?"},
     {"pause": 4, "cue": "think"},
     {"spk": "thaipho", "text": "Ha ha, vừa mừng vì gạo rẻ, ra tới quầy trứng thì giật mình!"},
     {"d": 6},
@@ -85,15 +85,15 @@
     {"d": 7},
     {"spk": "thaipho", "text": "「{去年|きょねん}」, là năm ngoái. 「{高|たか}かった」, là: đã đắt."},
     {"d": 8},
-    {"spk": "thaipho", "text": "「{買|か}いましょう」, nghĩa là: mình mua đi. Đây là cách rủ làm gì cùng nhau. Bệ hạ nói theo bà Sato nhé."},
+    {"spk": "thaipho", "text": "「{買|か}いましょう」, nghĩa là: mình mua đi. Đây là cách rủ làm gì cùng nhau. Bệ hạ nói theo bà 「{佐藤|さとう}」 nhé."},
     {"spk": "sato", "ja": "{卵|たまご}も{買|か}いましょう。", "ro": "Tamago mo kaimashō.", "vi": "Mua cả trứng nữa nhé."},
     {"pause": "auto", "cue": "repeat"},
     {"d": 9},
-    {"spk": "thaipho", "text": "Bà Sato nhìn giá trứng, và kêu lên: đắt quá!"},
+    {"spk": "thaipho", "text": "Bà 「{佐藤|さとう}」 nhìn giá trứng, và kêu lên: đắt quá!"},
     {"d": 10},
     {"spk": "thaipho", "text": "「ごめんね」, là: xin lỗi nhé, nói với người thân. 「ありません」, là: không có."},
     {"d": 11},
-    {"spk": "thaipho", "text": "Mèo Tama buồn thiu. Hôm nay không có trứng rồi."},
+    {"spk": "thaipho", "text": "Mèo 「タマ」 buồn thiu. Hôm nay không có trứng rồi."},
 
     {"sec": "Nghe lại"},
     {"spk": "thaipho", "text": "Bây giờ, Bệ hạ nghe lại cả bản tin và chuyện ở siêu thị một lần nữa. Lần này chắc chắn Bệ hạ hiểu hết."},
@@ -113,6 +113,6 @@
 
     {"sec": "Kết"},
     {"spk": "thaipho", "text": "Hôm nay Bệ hạ đã học: rẻ là 「{安|やす}い」, còn đắt là 「{高|たか}い」. Đi chợ ở Nhật, hai từ này dùng mỗi ngày."},
-    {"spk": "thaipho", "text": "Mong là giá trứng sớm hạ, để mèo Tama lại có trứng ăn. Thần xin cáo lui!"}
+    {"spk": "thaipho", "text": "Mong là giá trứng sớm hạ, để mèo 「タマ」 lại có trứng ăn. Thần xin cáo lui!"}
   ]
 }

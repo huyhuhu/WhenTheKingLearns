@@ -1,0 +1,73 @@
+{
+  "id": "n5-0043",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Cửa hàng mang tên giờ mở cửa", "ja": "{店|みせ}とコンビニ"},
+  "summary": "Cái tên Seven Eleven thật ra là một khung giờ, và cửa hàng sinh ra ở Mỹ ấy nay lại thuộc về người Nhật.",
+  "topics": ["kinh tế", "đời sống"],
+  "sources": [
+    "https://en.wikipedia.org/wiki/7-Eleven",
+    "https://www.nippon.com/en/japan-data/h01982/",
+    "https://nippon.com/en/news/yjj2025012000863",
+    "https://thenightly.com.au/from/the-new-york-times/the-new-york-times-why-7-eleven-and-convenience-stores-in-japan-are-so-special-c-19964005"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Ở thành phố Nhật Bản, đi bộ vài phút là gặp một cửa hàng tiện lợi. Và nổi tiếng nhất trong số đó là Seven Eleven."},
+    {"spk": "thaipho", "text": "Thần hỏi Bệ hạ: Seven là bảy, Eleven là mười một. Vậy cái tên Seven Eleven có nghĩa là gì?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Đó là giờ mở cửa! Từ bảy giờ sáng đến mười một giờ đêm. Thời ấy, mở cửa đến khuya như vậy là chuyện lạ."},
+
+    {"sec": "Từ Mỹ sang Nhật"},
+    {"spk": "thaipho", "text": "Seven Eleven ra đời năm 1927 ở thành phố Dallas, nước Mỹ. Lúc đầu, đó là một công ty bán đá lạnh. Rồi quầy bán đá bán thêm sữa, trứng, bánh mì."},
+    {"spk": "thaipho", "text": "Năm 1946, chuỗi cửa hàng lấy tên Seven Eleven, theo đúng giờ mở cửa của mình."},
+    {"spk": "thaipho", "text": "Ngày mười lăm tháng năm năm 1974, cửa hàng Seven Eleven đầu tiên ở Nhật mở cửa tại khu 「{豊洲|とよす}」, 「{東京|とうきょう}」. Một công ty bán lẻ Nhật mua quyền kinh doanh từ công ty mẹ ở Mỹ."},
+    {"spk": "thaipho", "text": "Rồi chuyện lạ xảy ra. Công ty mẹ ở Mỹ làm ăn thua lỗ, năm 1990 phải xin phá sản. Năm sau, chính phía Nhật bỏ tiền mua lại bảy mươi phần trăm công ty mẹ."},
+    {"spk": "thaipho", "text": "Đến năm 2005, phía Nhật sở hữu toàn bộ. Trò mua lại cả nhà của thầy, Bệ hạ ạ."},
+
+    {"sec": "Một phần tư thế giới"},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: riêng nước Nhật có bao nhiêu cửa hàng Seven Eleven?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Khoảng hai mươi mốt nghìn rưỡi cửa hàng. Cả thế giới có hơn tám mươi nghìn, nghĩa là cứ bốn cửa hàng thì khoảng một cửa hàng nằm ở Nhật."},
+    {"spk": "thaipho", "text": "Nếu tính cả các chuỗi khác, cuối năm 2024, Nhật Bản có khoảng năm mươi lăm nghìn bảy trăm cửa hàng tiện lợi."},
+    {"spk": "thaipho", "text": "Còn ở Việt Nam, cửa hàng Seven Eleven đầu tiên mở vào tháng sáu năm 2017, ở Thành phố Hồ Chí Minh."},
+
+    {"sec": "Bán gì?"},
+    {"spk": "thaipho", "text": "Cửa hàng tiện lợi Nhật bán gì? Nổi tiếng nhất là cơm nắm. Năm 1978, Seven Eleven Nhật bắt đầu bán cơm nắm bọc trong một lớp màng đặc biệt, tách rong biển khỏi cơm, nên lúc ăn rong biển vẫn giòn."},
+    {"spk": "thaipho", "text": "Nhưng ở Nhật, cửa hàng tiện lợi không chỉ để mua đồ. Từ năm 1987, khách có thể trả tiền điện ngay tại quầy. Sau đó là tiền ga, tiền nước, tiền điện thoại."},
+    {"spk": "thaipho", "text": "Năm 2001, máy rút tiền tự động được đặt vào cửa hàng. Năm 2010, máy photocopy trong cửa hàng còn in được cả giấy xác nhận cư trú."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: ở cửa hàng tiện lợi Nhật, còn làm được những việc gì nữa?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Nộp thuế, lấy vé xem hòa nhạc, gửi bưu kiện, sạc điện thoại, uống cà phê pha tại chỗ. Lại còn mở cả ngày lẫn đêm. Gần như một ủy ban phường thu nhỏ, không bao giờ nghỉ trưa."},
+
+    {"sec": "Cửa hàng"},
+    {"spk": "thaipho", "text": "Bây giờ là từ tiếng Nhật đầu tiên của hôm nay. Cửa hàng, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{店|!みせ}", "ro": "Mise", "vi": "Cửa hàng"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "{店|!みせ}", "ro": "Mise", "vi": "Cửa hàng"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Còn cửa hàng tiện lợi, người Nhật gọi tắt là:"},
+    {"spk": "thaipho", "ja": "コンビニ", "ro": "Konbini", "vi": "Cửa hàng tiện lợi"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Từ này lấy từ tiếng Anh, convenience, nghĩa là tiện lợi. Người Nhật rất thích cắt ngắn từ tiếng Anh. Đọc đủ cả chữ thì dài quá, đọc xong cơm nắm nguội mất."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: cái tên Seven Eleven lấy từ đâu?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Từ giờ mở cửa: bảy giờ sáng đến mười một giờ đêm."},
+    {"spk": "thaipho", "text": "Câu thứ hai: cửa hàng tiện lợi, tiếng Nhật gọi là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "コンビニ", "ro": "Konbini", "vi": "Cửa hàng tiện lợi"},
+    {"spk": "thaipho", "text": "Câu cuối, khó hơn một chút: Bệ hạ đói bụng giữa phố và muốn hỏi: cửa hàng tiện lợi ở đâu? Thần gợi ý: ở đâu, tiếng Nhật là 「どこですか」."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "コンビニはどこですか。", "ro": "Konbini wa doko desu ka.", "vi": "Cửa hàng tiện lợi ở đâu?"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Thuộc câu này rồi, thì đi đâu ở Nhật Bản cũng không sợ đói."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{店|!みせ}」 là cửa hàng, và 「コンビニ」 là cửa hàng tiện lợi."},
+    {"spk": "thaipho", "text": "Lần sau bước vào Seven Eleven, Bệ hạ nhớ rằng nó sinh ra ở Mỹ, nhưng lớn lên thành người Nhật. Thần xin cáo lui."}
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "n5-0032",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Tàu đệm từ 603 km/h", "ja": "{時間|じかん}がありません"},
+  "summary": "Đoàn tàu nhanh nhất thế giới chạy lơ lửng trên đường ray, và sẽ đưa Tokyo đến Nagoya chỉ trong bốn mươi phút.",
+  "topics": ["công nghệ", "khoa học"],
+  "sources": [
+    "https://www.aa.com.tr/en/world/japanese-maglev-train-breaks-speed-record/55130",
+    "https://nippon.com/en/features/h00041",
+    "https://english.adnkronos.com/2026/07/08/focus-challenges-remain-for-japans-maglev-shinkansen-project/",
+    "https://www.jrpass.com/blog/the-chuo-shinkansen-maglev-japan-s-505-km-h-future-train"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay ta đi thử đoàn tàu nhanh nhất thế giới. Bệ hạ ngồi cho vững nhé."},
+    {"spk": "thaipho", "text": "Thần đố Bệ hạ: đoàn tàu nhanh nhất thế giới từng chạy bao nhiêu ki lô mét mỗi giờ?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Sáu trăm lẻ ba ki lô mét mỗi giờ! Kỷ lục này được lập ngày hai mươi mốt tháng tư năm 2015, trên đường thử gần núi Phú Sĩ."},
+    {"spk": "thaipho", "text": "Chỉ vài ngày trước đó, chính đoàn tàu ấy vừa chạy năm trăm chín mươi ki lô mét mỗi giờ. Tự phá kỷ lục của mình chỉ sau vài ngày!"},
+
+    {"sec": "Tàu lơ lửng"},
+    {"spk": "thaipho", "text": "Đây không phải tàu thường. Nó là tàu đệm từ: dùng nam châm rất mạnh để nâng cả đoàn tàu lên, lơ lửng cách đường ray khoảng mười xăng ti mét."},
+    {"spk": "thaipho", "text": "Khi chạy nhanh, bánh xe không còn cọ vào đường ray, nên tàu mới đạt tốc độ như vậy. Khi chở khách, tàu sẽ chạy khoảng năm trăm ki lô mét mỗi giờ."},
+    {"spk": "thaipho", "text": "Ý tưởng này không mới đâu. Từ năm 1979, tàu đệm từ thử nghiệm của Nhật đã chạy được năm trăm mười bảy ki lô mét mỗi giờ. Người Nhật đã mài giũa nó gần nửa thế kỷ."},
+
+    {"sec": "Bốn mươi phút"},
+    {"spk": "thaipho", "text": "Nhật Bản đang xây tuyến tàu đệm từ nối 「{東京|とうきょう}」 với 「{名古屋|なごや}」, dài hai trăm tám mươi sáu ki lô mét. Khoảng tám mươi sáu phần trăm tuyến đường nằm trong đường hầm, xuyên qua núi."},
+    {"spk": "thaipho", "text": "Hiện nay, đi tàu cao tốc nhanh nhất từ 「{東京|とうきょう}」 đến 「{名古屋|なごや}」 mất khoảng một tiếng rưỡi. Bệ hạ đoán xem: đi tàu đệm từ sẽ mất bao lâu?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Chỉ khoảng bốn mươi phút! Sau này nối dài đến 「{大阪|おおさか}」, thì từ 「{東京|とうきょう}」 đến 「{大阪|おおさか}」 chỉ mất khoảng một tiếng bảy phút."},
+
+    {"sec": "Chậm vì một dòng sông"},
+    {"spk": "thaipho", "text": "Theo kế hoạch ban đầu, tuyến này mở cửa năm 2027. Nhưng đường hầm phải đi qua tỉnh 「{静岡|しずおか}」, và tỉnh này lo việc đào hầm làm giảm nước của một con sông lớn."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: hai bên bàn bạc bao lâu thì tỉnh mới đồng ý cho xây?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Khoảng chín năm! Đến tháng bảy năm 2026, tỉnh 「{静岡|しずおか}」 mới đồng ý."},
+    {"spk": "thaipho", "text": "Giờ công ty đường sắt dự tính sớm nhất là năm 2036 mới mở cửa. Chính giám đốc công ty cũng nói, đoạn đường hầm qua 「{静岡|しずおか}」 có thể còn khó hơn họ nghĩ lúc đầu."},
+    {"spk": "thaipho", "text": "Chi phí cũng tăng dần: lúc đầu dự tính khoảng năm nghìn rưỡi tỷ yên, năm 2021 lên bảy nghìn tỷ, đến năm 2025 thì lên khoảng mười một nghìn tỷ yên, gấp đôi ban đầu. Tàu thì nhanh, mà xây tàu thì chậm."},
+
+    {"sec": "Thời gian"},
+    {"spk": "thaipho", "text": "Bây giờ là tiếng Nhật. Thời gian, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{時間|じかん}", "ro": "Jikan", "vi": "Thời gian"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại nhé."},
+    {"spk": "thaipho", "ja": "{時間|じかん}", "ro": "Jikan", "vi": "Thời gian"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Người Nhật bận rộn hay nói câu này: không có thời gian."},
+    {"spk": "thaipho", "ja": "{時間|じかん}がありません。", "ro": "Jikan ga arimasen.", "vi": "Không có thời gian."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Thêm một mẹo: 「{時間|じかん}」 còn dùng để đếm giờ. Một tiếng là 「{一時間|!いちじかん}」, hai tiếng là 「{二時間|!にじかん}」."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: kỷ lục của tàu đệm từ Nhật Bản là bao nhiêu ki lô mét mỗi giờ?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Sáu trăm lẻ ba ki lô mét mỗi giờ, lập năm 2015."},
+    {"spk": "thaipho", "text": "Câu thứ hai: thời gian, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{時間|じかん}", "ro": "Jikan", "vi": "Thời gian"},
+    {"spk": "thaipho", "text": "Câu cuối: Bệ hạ đang vội, muốn nói: không có thời gian. Nói thế nào nhỉ?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "{時間|じかん}がありません。", "ro": "Jikan ga arimasen.", "vi": "Không có thời gian."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{時間|じかん}」 là thời gian, và 「{時間|じかん}がありません」 là không có thời gian."},
+    {"spk": "thaipho", "text": "Khi nào tàu đệm từ chạy, 「{東京|とうきょう}」 đến 「{名古屋|なごや}」 chỉ bốn mươi phút, Bệ hạ sẽ hết lý do để nói 「{時間|じかん}がありません」. Thần xin cáo lui."}
+  ]
+}

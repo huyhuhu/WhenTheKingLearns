@@ -1,0 +1,73 @@
+{
+  "id": "n5-0048",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Người vừa ném vừa đánh", "ja": "すごい{大谷|おおたに}さん"},
+  "summary": "Trong bóng chày, người ném bóng và người đánh bóng thường là hai người khác nhau, trừ một người Nhật.",
+  "topics": ["thể thao", "con người"],
+  "sources": [
+    "https://www.cbssports.com/mlb/news/shohei-ohtani-delivers-the-best-playoff-performance-in-mlb-history-as-dodgers-clinch-pennant-vs-brewers",
+    "https://sports.yahoo.com/shohei-ohtani-finishes-just-short-of-adding-triple-crown-to-his-50-50-season-220433712.html",
+    "https://www.mlb.com/news/shohei-ohtani-finishes-second-in-nl-mvp-voting-2026",
+    "https://www.mlb.com/news/shohei-ohtani-donates-gloves-to-japanese-elementary-schools",
+    "https://www.espn.com/mlb/story/_/id/46672385"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần kể về bóng chày, môn thể thao người Nhật mê nhất. Bệ hạ chưa xem bóng chày bao giờ cũng không sao, thần giải thích thật đơn giản."},
+    {"spk": "thaipho", "text": "Trong bóng chày, một bên có người ném bóng. Bên kia có người cầm gậy đánh bóng. Ném giỏi đã khó, đánh giỏi cũng khó, nên mỗi cầu thủ thường chỉ chuyên một việc."},
+    {"spk": "thaipho", "text": "Thần hỏi Bệ hạ: ở giải bóng chày nhà nghề Mỹ ngày nay, có ai vừa ném giỏi, vừa đánh giỏi không?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Có! Đó là một người Nhật: 「{大谷翔平|おおたにしょうへい}」. Người ta gọi anh là cầu thủ hai chiều, vì anh làm được cả hai việc."},
+
+    {"sec": "Năm mươi và năm mươi"},
+    {"spk": "thaipho", "text": "「{大谷|おおたに}」 sinh năm 1994 ở tỉnh 「{岩手|いわて}」, vùng Đông Bắc Nhật Bản. Năm 2018, anh sang Mỹ thi đấu. Bây giờ anh chơi cho đội Los Angeles Dodgers."},
+    {"spk": "thaipho", "text": "Năm 2024, anh làm được một việc chưa ai từng làm. Trong một mùa giải, anh đánh hơn năm mươi cú home run, tức là đánh bóng bay ra khỏi sân. Anh còn cướp gôn hơn năm mươi lần, tức là chạy vụt sang gôn kế tiếp khi đối thủ không kịp chặn."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: chính xác là bao nhiêu cú home run, và bao nhiêu lần cướp gôn?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Năm mươi tư cú home run, và năm mươi chín lần cướp gôn! Trước đó, người tiến gần nhất cũng chỉ được bốn mươi hai và bốn mươi sáu."},
+    {"spk": "thaipho", "text": "Ngày chạm mốc năm mươi, một mình anh đánh ba cú home run, cướp hai gôn, và mang về mười điểm cho đội. Một người làm phần việc của cả đội."},
+
+    {"sec": "Một trận như phim"},
+    {"spk": "thaipho", "text": "Nhưng trận đáng nhớ nhất là ngày mười bảy tháng mười năm 2025, trận quyết định tấm vé vào chung kết."},
+    {"spk": "thaipho", "text": "Hôm đó 「{大谷|おおたに}」 vừa ném vừa đánh. Khi ném, anh loại mười người đánh bóng của đối phương. Khi cầm gậy, anh đánh ba cú home run."},
+    {"spk": "thaipho", "text": "Đội Dodgers thắng năm một, vào chung kết, rồi vô địch năm thứ hai liên tiếp. Báo Mỹ gọi đó là màn trình diễn hay nhất lịch sử các trận đấu loại trực tiếp."},
+    {"spk": "thaipho", "text": "Anh đã bốn lần được bầu là cầu thủ giá trị nhất giải, vào các năm 2021, 2023, 2024 và 2025. Năm 2026, chấn thương làm anh chậm lại, anh xếp thứ hai."},
+
+    {"sec": "Sáu mươi nghìn chiếc găng"},
+    {"spk": "thaipho", "text": "「{大谷|おおたに}」 còn nổi tiếng vì tốt bụng. Tháng mười một năm 2023, anh tặng găng tay bóng chày cho tất cả các trường tiểu học ở Nhật."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: Nhật có khoảng hai mươi nghìn trường tiểu học. Anh tặng tất cả bao nhiêu chiếc găng?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Khoảng sáu mươi nghìn chiếc, mỗi trường ba chiếc, kèm một lời nhắn viết tay: cùng chơi bóng chày nào!"},
+
+    {"sec": "Giỏi quá"},
+    {"spk": "thaipho", "text": "Nghe đến đây, chắc Bệ hạ chỉ muốn thốt lên một từ. Tiếng Nhật có một từ rất hay dùng, nghĩa là giỏi quá, tuyệt quá:"},
+    {"spk": "thaipho", "ja": "すごい", "ro": "Sugoi", "vi": "Giỏi quá, tuyệt quá"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói to hơn, như đang xem 「{大谷|おおたに}」 đánh home run nhé."},
+    {"spk": "thaipho", "ja": "すごい", "ro": "Sugoi", "vi": "Giỏi quá, tuyệt quá"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Còn bóng chày, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{野球|やきゅう}", "ro": "Yakyū", "vi": "Bóng chày"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Người Nhật mê 「{野球|やきゅう}」 đến mức mùa hè nào, giải bóng chày của học sinh trung học cũng được truyền hình trực tiếp khắp cả nước."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: năm 2024, 「{大谷|おおたに}」 đánh bao nhiêu cú home run, và cướp bao nhiêu gôn?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Năm mươi tư cú home run, và năm mươi chín lần cướp gôn."},
+    {"spk": "thaipho", "text": "Câu thứ hai: bóng chày, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{野球|やきゅう}", "ro": "Yakyū", "vi": "Bóng chày"},
+    {"spk": "thaipho", "text": "Câu cuối, khó hơn một chút: Bệ hạ muốn khen: anh 「{大谷|おおたに}」 giỏi thật. Thần gợi ý: gọi người Nhật cho lịch sự, thì thêm 「さん」 sau họ, cuối câu thêm 「です」."},
+    {"pause": 6, "cue": "think"},
+    {"spk": "thaipho", "ja": "{大谷|おおたに}さんはすごいです。", "ro": "Ōtani-san wa sugoi desu.", "vi": "Anh Ohtani giỏi thật."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Còn nếu hôm nay Bệ hạ nhớ được hết các từ này, thì thần cũng xin khen: Bệ hạ 「すごい」."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「すごい」 là giỏi quá, tuyệt quá, và 「{野球|やきゅう}」 là bóng chày."},
+    {"spk": "thaipho", "text": "Lần sau thấy 「{大谷|おおたに}」 lên sóng truyền hình, Bệ hạ nhớ hô thật to: 「すごい」! Thần xin cáo lui."}
+  ]
+}

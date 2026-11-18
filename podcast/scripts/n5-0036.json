@@ -1,0 +1,73 @@
+{
+  "id": "n5-0036",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Bạch tuộc ba trái tim", "ja": "たこと{三|!みっ}つ"},
+  "summary": "Bạch tuộc có ba trái tim, máu màu xanh, và từng tự trốn khỏi bể cá ra biển. Còn món bánh bạch tuộc ở Nhật thì có khi đến từ biển Việt Nam.",
+  "topics": ["động vật", "Việt – Nhật"],
+  "sources": [
+    "https://www.sciencefocus.com/nature/why-does-an-octopus-have-more-than-one-heart",
+    "https://www.smithsonianmag.com/science-nature/ten-curious-facts-about-octopuses-7625828/",
+    "https://www.oist.jp/news-center/news/2020/10/29/do-octopuses-arms-have-mind-their-own",
+    "https://www.livescience.com/54427-how-octopus-escapes-new-zealand-aquarium.html",
+    "https://www.cbc.ca/news/trending/finding-inky-1.3534784",
+    "https://www.fao.org/in-action/globefish/news-events/news/news-detail/strong-squid-catches-lift-trade-while-octopus-supply-remains-tight/en"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần giới thiệu một sinh vật có tám cánh tay, máu màu xanh, và rất thông minh. Không phải người ngoài hành tinh đâu, mà là con bạch tuộc."},
+    {"spk": "thaipho", "text": "Thần hỏi Bệ hạ trước: con người có một trái tim. Vậy bạch tuộc có mấy trái tim?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Ba trái tim! Hai trái tim nhỏ bơm máu qua mang để lấy dưỡng khí, còn một trái tim lớn bơm máu đi khắp cơ thể."},
+
+    {"sec": "Máu xanh"},
+    {"spk": "thaipho", "text": "Máu người màu đỏ vì dùng sắt để mang dưỡng khí. Còn máu bạch tuộc lại dùng đồng, nên có màu xanh lam."},
+    {"spk": "thaipho", "text": "Cách mang dưỡng khí bằng đồng này kém hiệu quả hơn sắt. Vì vậy bạch tuộc cần thêm tim, để bơm máu mạnh hơn."},
+    {"spk": "thaipho", "text": "Mà không chỉ bạch tuộc đâu, Bệ hạ. Một số loài nhện, bọ cạp và con sam cũng có máu chứa đồng như vậy."},
+    {"spk": "thaipho", "text": "Và đây là chi tiết thú vị: khi bạch tuộc bơi, trái tim lớn có lúc ngừng đập trong chốc lát. Có lẽ vì thế mà bạch tuộc thích bò hơn là bơi."},
+
+    {"sec": "Bạch tuộc và số ba"},
+    {"spk": "thaipho", "text": "Bây giờ là từ tiếng Nhật đầu tiên của hôm nay. Bạch tuộc, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "たこ", "ro": "Tako", "vi": "Bạch tuộc"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ chắc đã nghe tên món 「たこ{焼|や}き」 rồi, tức là bánh bạch tuộc nướng, đặc sản của 「{大阪|おおさか}」. 「たこ」 chính là bạch tuộc đấy."},
+    {"spk": "thaipho", "text": "Từ thứ hai là số ba, dùng khi đếm đồ vật. Ba trái tim, ba cái bánh, đều có thể đếm bằng:"},
+    {"spk": "thaipho", "ja": "{三|!みっ}つ", "ro": "Mittsu", "vi": "Ba cái"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "{三|!みっ}つ", "ro": "Mittsu", "vi": "Ba cái"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Cánh tay biết nghĩ"},
+    {"spk": "thaipho", "text": "Bạch tuộc còn nổi tiếng thông minh. Các nhà khoa học ở Viện Khoa học và Công nghệ 「{沖縄|おきなわ}」, Nhật Bản, cho biết bạch tuộc có hơn năm trăm triệu tế bào thần kinh, ngang với một chú chó."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: trong số đó, bao nhiêu phần nằm ở các cánh tay, chứ không phải trong đầu?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Hơn hai phần ba! Mỗi cánh tay có thể tự cảm nhận và phản ứng khá độc lập. Nên có người nói vui rằng bạch tuộc có chín bộ não: một cái trong đầu, và tám cái ở tám cánh tay."},
+    {"spk": "thaipho", "text": "Trong một thí nghiệm ở 「{沖縄|おきなわ}」, bạch tuộc học cách thò một cánh tay vào đúng ống có thức ăn, dù không nhìn thấy cánh tay mình. Học xong, cả những cánh tay chưa được tập cũng làm được."},
+    {"spk": "thaipho", "text": "Còn đây là chuyện có thật về một chú bạch tuộc tên Inky. Năm 2014, một ngư dân ở Niu Di-lân thấy nó mắc vào bẫy tôm hùm, và đưa về một thủy cung gần đó."},
+    {"spk": "thaipho", "text": "Hai năm sau, vào một đêm, Inky đã lẻn ra qua khe nắp bể bị hở, bò qua sàn nhà, rồi chui vào một ống thoát nước dài khoảng năm mươi mét để ra biển, biến mất không dấu vết."},
+
+    {"sec": "Từ biển Việt Nam"},
+    {"spk": "thaipho", "text": "Người Nhật rất thích ăn bạch tuộc. Năm 2025, Nhật Bản nhập khẩu khoảng ba mươi sáu nghìn tấn bạch tuộc. Bệ hạ đoán xem, Việt Nam bán sang bao nhiêu?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Hơn chín nghìn tấn, tức là khoảng một phần tư, theo Tổ chức Lương thực và Nông nghiệp Liên Hợp Quốc. Nên miếng bạch tuộc trong viên 「たこ{焼|や}き」 ở Nhật, biết đâu lại đến từ biển Việt Nam."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: máu bạch tuộc màu gì, và vì sao?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Màu xanh, vì máu bạch tuộc dùng đồng, chứ không dùng sắt, để mang dưỡng khí."},
+    {"spk": "thaipho", "text": "Câu thứ hai: bạch tuộc, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "たこ", "ro": "Tako", "vi": "Bạch tuộc"},
+    {"spk": "thaipho", "text": "Câu cuối: Bệ hạ vào quán ở 「{大阪|おおさか}」, muốn gọi ba phần bánh bạch tuộc. Thần gợi ý: xin cho tôi, tiếng Nhật là 「ください」. Bệ hạ thử ghép xem."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "たこ{焼|や}きを{三|!みっ}つください。", "ro": "Takoyaki o mittsu kudasai.", "vi": "Cho tôi ba phần bánh bạch tuộc."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Ba trái tim, ba phần bánh. Bệ hạ nhớ như thế là ra ngay."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「たこ」 là bạch tuộc, 「{三|!みっ}つ」 là ba cái. Bạch tuộc có ba trái tim, máu xanh, và phần lớn tế bào thần kinh nằm ở tám cánh tay."},
+    {"spk": "thaipho", "text": "Lần sau ăn bánh bạch tuộc, Bệ hạ nhớ rằng con vật này thông minh hơn ta tưởng nhiều. Thần xin cáo lui."}
+  ]
+}

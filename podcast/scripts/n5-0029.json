@@ -1,0 +1,73 @@
+{
+  "id": "n5-0029",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Mã QR và bàn cờ vây", "ja": "{白|しろ}と{黒|くろ}"},
+  "summary": "Mã QR mà Bệ hạ quét mỗi ngày ra đời ở một hãng phụ tùng ô tô, nhờ một bàn cờ vây.",
+  "topics": ["công nghệ", "khoa học"],
+  "sources": [
+    "https://www.denso-wave.com/en/technology/vol1.html",
+    "https://www.qrcode.com/en/faq.html",
+    "https://spectrum.ieee.org/how-a-board-game-and-skyscrapers-inspired-the-development-of-the-qr-code",
+    "https://www.denso-am.eu/news/20140617_qr-code-development-team-wins-european-inventor-award"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Mua ly cà phê, trả tiền gửi xe, chuyển tiền cho bạn: ở Việt Nam bây giờ cái gì cũng quét mã QR."},
+    {"spk": "thaipho", "text": "Thần đố Bệ hạ: mã QR ra đời ở đâu? Gợi ý: không phải ở ngân hàng, cũng không phải ở cửa hàng."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Ở 「デンソー」, một hãng làm phụ tùng ô tô của Nhật, trong nhóm 「トヨタ」. Năm đó là 1994."},
+
+    {"sec": "Một nghìn mã vạch"},
+    {"spk": "thaipho", "text": "Hồi ấy, nhà máy dùng mã vạch, loại sọc đen trắng Bệ hạ hay thấy trên gói bánh. Mỗi mã vạch chỉ chứa được khoảng hai mươi chữ cái."},
+    {"spk": "thaipho", "text": "Thông tin thì nhiều, nên phải dùng rất nhiều mã vạch. Có công nhân mỗi ngày phải quét khoảng một nghìn mã."},
+    {"spk": "thaipho", "text": "Năm 1992, kỹ sư 「{原|!はら}」 được giao làm ra một loại mã đọc nhanh hơn, chứa nhiều hơn, ghi được cả chữ Hán. Lúc đầu, cả đội chỉ có hai người."},
+
+    {"sec": "Bàn cờ vây"},
+    {"spk": "thaipho", "text": "Ông 「{原|!はら}」 lấy ý tưởng từ cờ vây, trò chơi với những quân cờ trắng và đen xếp trên bàn cờ ô vuông."},
+    {"spk": "thaipho", "text": "Khó nhất là làm sao để máy nhận ra mã, giữa bao nhiêu chữ và hình in xung quanh. Bệ hạ có để ý ba ô vuông lớn ở ba góc mã QR không?"},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: ba ô vuông ấy để làm gì?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Để máy tìm ra mã! Mỗi ô có các vạch đen trắng theo tỉ lệ một, một, ba, một, một. Đội của ông 「{原|!はら}」 xem rất nhiều tờ rơi, tạp chí, thùng giấy, và thấy tỉ lệ này ít gặp nhất trên đồ in."},
+    {"spk": "thaipho", "text": "Nên máy hễ thấy tỉ lệ ấy là biết ngay: mã QR đây rồi, dù quét từ góc nào. Riêng việc thử để chọn ra tỉ lệ này đã mất khoảng ba tháng."},
+
+    {"sec": "Bảy nghìn chữ số"},
+    {"spk": "thaipho", "text": "Sau một năm rưỡi, năm 1994, mã QR ra đời. Chữ QR lấy từ tiếng Anh, nghĩa là phản hồi nhanh."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: mã vạch chứa được khoảng hai mươi chữ. Còn một mã QR chứa được khoảng bao nhiêu chữ số?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Khoảng bảy nghìn chữ số! Và dù bị bẩn hay hỏng mất khoảng ba mươi phần trăm, máy vẫn đọc được."},
+    {"spk": "thaipho", "text": "Điều đáng quý nhất: ai cũng được dùng mã QR, không phải xin phép, cũng không phải trả tiền. Nhờ vậy nó mới có mặt ở khắp nơi, từ nhà máy đến quán cà phê."},
+    {"spk": "thaipho", "text": "Năm 2000, mã QR trở thành một tiêu chuẩn quốc tế. Năm 2014, đội của ông 「{原|!はら}」 nhận giải Nhà phát minh châu Âu, hạng mục do công chúng bình chọn."},
+
+    {"sec": "Trắng và đen"},
+    {"spk": "thaipho", "text": "Bây giờ là tiếng Nhật. Mã QR, cũng như cờ vây, chỉ có hai màu. Màu trắng, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{白|しろ}", "ro": "Shiro", "vi": "Màu trắng"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại nhé."},
+    {"spk": "thaipho", "ja": "{白|しろ}", "ro": "Shiro", "vi": "Màu trắng"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Màu đen, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{黒|くろ}", "ro": "Kuro", "vi": "Màu đen"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Trong cờ vây, quân đen luôn được đi trước. Vậy Bệ hạ nói 「{黒|くろ}」 thêm một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "{黒|くろ}", "ro": "Kuro", "vi": "Màu đen"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: mã QR ra đời năm nào, ở đâu?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Năm 1994, ở 「デンソー」, hãng phụ tùng ô tô của Nhật."},
+    {"spk": "thaipho", "text": "Câu thứ hai: màu trắng, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{白|しろ}", "ro": "Shiro", "vi": "Màu trắng"},
+    {"spk": "thaipho", "text": "Câu cuối: mã QR màu gì? Bệ hạ trả lời bằng tiếng Nhật: trắng và đen. Chữ và là 「と」, cuối câu thêm 「です」."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "{白|しろ}と{黒|くろ}です。", "ro": "Shiro to kuro desu.", "vi": "Trắng và đen."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{白|しろ}」 là màu trắng, và 「{黒|くろ}」 là màu đen."},
+    {"spk": "thaipho", "text": "Lần sau quét mã QR trả tiền cà phê, Bệ hạ hãy nhớ đến bàn cờ vây trắng đen của ông 「{原|!はら}」. Thần xin cáo lui."}
+  ]
+}

@@ -200,6 +200,8 @@
   }
 
   // ---------- man hinh chung ----------
+  // Muc co open() (nhu Podcast) mo bang lop phu, giu nguyen trang dang xem
+  function openAttr(s) { return s.open ? ' data-open="' + s.id + '"' : ''; }
   function viewHome() {
     var last = readJson(LAST_KEY);
     var html = '<div class="hero"><p class="eyebrow">' + jp('今日も一歩ずつ') + '</p><h1>' + T('Hôm nay học gì?', 'What will you study today?') + '</h1></div>';
@@ -211,7 +213,7 @@
     for (var i = 0; i < sections.length; i++) {
       var s = sections[i];
       if (s.grid === false) continue;
-      html += '<a class="card section-card' + (s.ready ? '' : ' soon') + '" href="#/' + s.id + '">' +
+      html += '<a class="card section-card' + (s.ready ? '' : ' soon') + '" href="#/' + s.id + '"' + openAttr(s) + '>' +
         jp(s.glyph, 'glyph') + '<span class="body"><b>' + h(L(s.name)) + '</b><small>' + h(L(s.desc)) + '</small>' +
         '<em>' + h(s.ready && s.stat ? s.stat() : T('Sắp có', 'Coming soon')) + '</em></span></a>';
     }
@@ -315,8 +317,8 @@
     for (i = 0; i < sections.length; i++) {
       var s = sections[i], on = parts[0] === s.id ? 'on' : '';
       var dot = s.badge && s.badge() ? '<i class="dot"></i>' : '';
-      links += '<a class="' + on + '" href="#/' + s.id + '">' + h(L(s.name)) + dot + '</a>';
-      tabs += '<a class="' + on + '" href="#/' + s.id + '">' + jp(s.glyph) + h(L(s.name)) + dot + '</a>';
+      links += '<a class="' + on + '" href="#/' + s.id + '"' + openAttr(s) + '>' + h(L(s.name)) + dot + '</a>';
+      tabs += '<a class="' + on + '" href="#/' + s.id + '"' + openAttr(s) + '>' + jp(s.glyph) + h(L(s.name)) + dot + '</a>';
     }
     headerEl.innerHTML = '<div class="inner"><a class="brand" href="#/" data-act="logo">' + logoSvg('hanko') + '<span class="brand-name">When The King Learns</span></a>' +
       '<nav class="topnav">' + links + '</nav><span class="tools">' +
@@ -429,6 +431,8 @@
       while (el && el !== document) {
         var text = attr === 'data-act' && el.getAttribute && el.getAttribute('data-say');
         if (text) { window.Speech.say(text, el); return; }
+        var open = attr === 'data-act' && el.getAttribute && el.getAttribute('data-open');
+        if (open && sectionById[open]) { e.preventDefault(); sectionById[open].open(); return; }
         var act = el.getAttribute && el.getAttribute(attr);
         if (act && actions[act]) { actions[act](el); return; }
         el = el.parentNode;

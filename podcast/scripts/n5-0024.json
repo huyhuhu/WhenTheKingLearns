@@ -1,0 +1,72 @@
+{
+  "id": "n5-0024",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Ông Ando và gói mì ăn liền", "ja": "ラーメンを{食|た}べます"},
+  "summary": "Gói mì ăn liền đầu tiên ra đời trong một cái lán sau nhà, nhờ món tempura của bà vợ.",
+  "topics": ["đời sống", "lịch sử"],
+  "sources": [
+    "https://www.nissin.com/en_jp/about/founder/",
+    "https://www.nippon.com/en/views/b07206/ando-momofuku-an-inventor-who-used-his-noodle-to-change-global-food-culture.html",
+    "https://e.vnexpress.net/news/travel/food-recipes/a-vietnamese-eats-81-packs-of-instant-noodles-a-year-surpassing-koreans-4959375.html",
+    "https://www.jprime.jp/articles/-/43073"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần nói về một món mà chắc chắn Bệ hạ đã ăn, có khi còn ăn lúc nửa đêm: mì ăn liền, hay như người Việt mình hay gọi là mì tôm."},
+    {"spk": "thaipho", "text": "Thần hỏi trước: tính trung bình, mỗi người Việt Nam ăn bao nhiêu gói mì ăn liền trong một năm?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Theo Hiệp hội Mì ăn liền Thế giới, năm 2024 là khoảng tám mươi mốt gói mỗi người. Nhiều nhất thế giới tính theo đầu người, hơn cả Hàn Quốc!"},
+    {"spk": "thaipho", "text": "Vậy ai đã nghĩ ra món này? Câu trả lời ở Nhật Bản."},
+
+    {"sec": "Cái lán sau nhà"},
+    {"spk": "thaipho", "text": "Đó là ông 「{安藤百福|!あんどうももふく}」, một doanh nhân ở 「{大阪|おおさか}」. Năm 1957, một hợp tác xã tín dụng mà ông làm lãnh đạo bị phá sản, và ông mất gần như toàn bộ tài sản."},
+    {"spk": "thaipho", "text": "Ông nhớ lại cảnh sau chiến tranh, người ta xếp hàng rất dài chỉ để mua một bát mì. Ông muốn làm ra loại mì chỉ cần đổ nước sôi là ăn được."},
+    {"spk": "thaipho", "text": "Trong một cái lán nhỏ sau nhà, rộng chừng mười mét vuông, ông làm một mình suốt một năm, mỗi đêm chỉ ngủ khoảng bốn tiếng."},
+    {"spk": "thaipho", "text": "Bí quyết đến từ căn bếp: nhìn vợ chiên tempura, ông nghĩ ra cách chiên sợi mì trong dầu nóng cho khô hết nước. Khi đổ nước sôi vào, sợi mì lại mềm ra."},
+    {"spk": "thaipho", "text": "Ngày hai mươi lăm tháng tám năm 1958, gói mì gà đầu tiên trên thế giới ra đời. Năm ấy ông bốn mươi tám tuổi."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: khi một vắt mì 「うどん」 chỉ có sáu yên, thì một gói mì gà giá bao nhiêu?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Ba mươi lăm yên, đắt gần gấp sáu lần! Vậy mà người ta vẫn mua, vì nó tiện quá. Lúc đầu, người ta còn gọi nó là mì phép thuật."},
+
+    {"sec": "Ly mì"},
+    {"spk": "thaipho", "text": "Năm 1966, ông 「{安藤|あんどう}」 sang Mỹ. Ông thấy người Mỹ bẻ mì vào cốc giấy, đổ nước sôi, rồi ăn bằng nĩa."},
+    {"spk": "thaipho", "text": "Thế là ông nghĩ ra mì ly. Ngày mười tám tháng chín năm 1971, ly mì đầu tiên ra đời. Giá một trăm yên, gấp bốn lần một gói mì thường."},
+    {"spk": "thaipho", "text": "Gói mì gà đầu tiên chỉ cần chờ hai phút. Còn ly mì thì Bệ hạ biết rồi: đổ nước sôi, chờ ba phút."},
+    {"spk": "thaipho", "text": "Vì sao là ba phút? Công ty giải thích: đó là lúc sợi mì ngon nhất, mà người chờ cũng chưa kịp sốt ruột."},
+
+    {"sec": "Ba phút"},
+    {"spk": "thaipho", "text": "Bây giờ là từ tiếng Nhật đầu tiên. Ba phút, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{三分|!さんぷん}", "ro": "Sanpun", "vi": "Ba phút"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ để ý: phút là 「{分|!ふん}」, nhưng ba phút lại đọc là 「さんぷん」. Tiếng Nhật hay đổi âm như vậy khi đi với con số. Nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "{三分|!さんぷん}", "ro": "Sanpun", "vi": "Ba phút"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Hết ba phút rồi thì làm gì? Dĩ nhiên là ăn. Ăn, tiếng Nhật lịch sự là:"},
+    {"spk": "thaipho", "ja": "{食|た}べます。", "ro": "Tabemasu.", "vi": "Ăn."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Lên vũ trụ"},
+    {"spk": "thaipho", "text": "Ông 「{安藤|あんどう}」 không dừng ở đó. Năm 2005, khi ông chín mươi lăm tuổi, mì ăn liền của công ty ông bay lên vũ trụ cùng tàu con thoi, để phi hành gia ăn trong không trọng lực."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: ngày nay, cả thế giới ăn bao nhiêu suất mì ăn liền mỗi năm?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Năm 2024, con số là hơn một trăm hai mươi tỷ suất. Tất cả bắt đầu từ cái lán mười mét vuông ấy."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: gói mì ăn liền đầu tiên trên thế giới ra đời năm nào?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Năm 1958, gói mì gà của ông 「{安藤|あんどう}」."},
+    {"spk": "thaipho", "text": "Câu thứ hai: ba phút, tiếng Nhật nói thế nào?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{三分|!さんぷん}", "ro": "Sanpun", "vi": "Ba phút"},
+    {"spk": "thaipho", "text": "Câu cuối: ăn mì 「ラーメン」. Mì 「ラーメン」 tiếng Nhật vẫn là 「ラーメン」, giữa hai từ thêm chữ 「を」. Bệ hạ ghép thử xem."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "ラーメンを{食|た}べます。", "ro": "Rāmen o tabemasu.", "vi": "Ăn mì ramen."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{三分|!さんぷん}」 là ba phút, và 「{食|た}べます」 là ăn."},
+    {"spk": "thaipho", "text": "Lần sau đổ nước sôi vào ly mì, Bệ hạ cứ đếm đủ ba phút, rồi nói 「{食|た}べます」. Thần xin cáo lui, thần cũng đi nấu mì đây."}
+  ]
+}

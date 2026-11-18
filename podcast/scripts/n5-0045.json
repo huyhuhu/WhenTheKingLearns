@@ -1,0 +1,71 @@
+{
+  "id": "n5-0045",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Cây cầu của người Nhật ở Hội An", "ja": "{日本|にほん}の{橋|はし}"},
+  "summary": "Bốn trăm năm trước, Hội An từng có cả một khu phố người Nhật, và họ để lại một cây cầu.",
+  "topics": ["Việt – Nhật", "lịch sử"],
+  "sources": [
+    "https://www.archives.go.jp/event/jp_vn45/english/ch02.html",
+    "https://hoianheritage.danang.gov.vn/en/specialised-exchanges/research-exchange/information-on-the-restoration-results-of-the-japanese-covered-bridge-hoi-an-12.html",
+    "https://vietnamnews.vn/sunday/1479639/hoi-an-restores-heritage-for-longer-life.html",
+    "https://www.vietnamtourism.com/vi/chua-cau-hoi-an-lich-su-ve-va-cach-tham-quan",
+    "https://vinwonders.com/vi/wonderpedia/news/ghe-tham-chua-cau-hoi-an-bieu-tuong-mien-di-san/"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Mời Bệ hạ lấy ra một tờ hai mươi nghìn đồng, lật mặt sau lên. Bệ hạ đoán xem, trên đó in hình gì?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Là Chùa Cầu ở Hội An. Cây cầu ấy còn có một cái tên khác: cầu Nhật Bản. Vì sao một cây cầu ở Việt Nam lại mang tên Nhật Bản? Hôm nay thần kể Bệ hạ nghe."},
+
+    {"sec": "Thuyền dấu đỏ"},
+    {"spk": "thaipho", "text": "Khoảng bốn trăm năm trước, Hội An là thương cảng lớn của chúa Nguyễn. Thuyền buôn từ Nhật Bản, Trung Quốc, và cả châu Âu đều ghé lại."},
+    {"spk": "thaipho", "text": "Từ năm 1604, chính quyền Nhật cấp cho thuyền buôn một loại giấy phép có đóng dấu đỏ. Người Việt gọi những con thuyền này là thuyền Châu Ấn."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: trong khoảng ba trăm năm mươi chuyến thuyền Châu Ấn ra nước ngoài, có bao nhiêu chuyến đến Việt Nam?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Khoảng một trăm ba mươi chuyến, hơn một phần ba! Người Nhật chở bạc, đồng sang, rồi mua tơ lụa mang về."},
+    {"spk": "thaipho", "text": "Thương nhân Nhật ở lại buôn bán, lập nên cả một khu phố người Nhật ở Hội An. Năm 1635, chính quyền Nhật cấm thuyền Nhật ra nước ngoài. Nhưng người Nhật ở Hội An vẫn sống ở đó thêm mấy chục năm, rồi dần hòa vào người Việt và người Hoa."},
+
+    {"sec": "Cây cầu bốn trăm tuổi"},
+    {"spk": "thaipho", "text": "Chùa Cầu được cho là do thương nhân Nhật dựng vào thế kỷ mười bảy. Cầu dài khoảng mười tám mét, có mái che, và có một ngôi miếu nhỏ gắn liền bên cầu."},
+    {"spk": "thaipho", "text": "Năm 1719, chúa Nguyễn Phúc Chu đến thăm và đặt tên cho cầu là Lai Viễn Kiều, nghĩa là cây cầu đón người từ phương xa đến."},
+    {"spk": "thaipho", "text": "Hai đầu cầu có tượng khỉ và tượng chó. Tương truyền, cầu khởi công năm Thân và xong năm Tuất. Nhưng chuyện này chưa có ghi chép nào chứng minh, Bệ hạ cứ nghe cho vui."},
+    {"spk": "thaipho", "text": "Trước đây, cây cầu đã được tu sửa ít nhất bảy lần. Lần gần nhất bắt đầu cuối năm 2022, có cả chuyên gia Nhật Bản tham gia, và cầu được khánh thành lại vào tháng tám năm 2024."},
+
+    {"sec": "Cô dâu ở Nagasaki"},
+    {"spk": "thaipho", "text": "Chuyện Việt Nhật thời ấy còn có cả chuyện cưới hỏi. Theo một sách cổ của Nhật, thương nhân 「{荒木宗太郎|!あらきそうたろう}」 ở 「{長崎|ながさき}」 đã cưới một người con gái họ Nguyễn, rồi đưa bà về Nhật."},
+    {"spk": "thaipho", "text": "Người 「{長崎|ながさき}」 gọi bà là 「アニオー」. Có người cho rằng cái tên ấy đến từ tiếng Việt: anh ơi. Đến nay, lễ hội 「{長崎|ながさき}くんち」 vẫn tái hiện đám cưới này."},
+    {"spk": "thaipho", "text": "Bệ hạ thấy chưa, từ bốn trăm năm trước, người Nhật đã được nghe người Việt gọi anh ơi rồi."},
+
+    {"sec": "Cây cầu"},
+    {"spk": "thaipho", "text": "Bây giờ là từ tiếng Nhật của hôm nay. Cây cầu, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{橋|はし}", "ro": "Hashi", "vi": "Cây cầu"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "{橋|はし}", "ro": "Hashi", "vi": "Cây cầu"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Cẩn thận nhé Bệ hạ: đôi đũa, tiếng Nhật cũng đọc là 「{箸|はし}」. Hai từ chỉ khác nhau ở giọng lên xuống. Nói nhầm thì Bệ hạ sẽ đi qua sông trên một đôi đũa."},
+    {"spk": "thaipho", "text": "Còn cầu Nhật Bản, tiếng Nhật nói là:"},
+    {"spk": "thaipho", "ja": "{日本|にほん}の{橋|はし}", "ro": "Nihon no hashi", "vi": "Cây cầu Nhật Bản"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Chữ 「の」 ở giữa giống chữ của trong tiếng Việt, nhưng thứ tự ngược lại: Nhật Bản đứng trước, cây cầu đứng sau."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: năm 1719, chúa Nguyễn Phúc Chu đặt tên cho Chùa Cầu là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Lai Viễn Kiều, cây cầu đón người từ phương xa đến."},
+    {"spk": "thaipho", "text": "Câu thứ hai: cây cầu, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{橋|はし}", "ro": "Hashi", "vi": "Cây cầu"},
+    {"spk": "thaipho", "text": "Câu cuối, khó hơn một chút: Bệ hạ dẫn bạn Nhật đến Hội An, chỉ vào Chùa Cầu và nói: đây là cây cầu Nhật Bản. Thần gợi ý: đây là, tiếng Nhật là 「これは」, cuối câu thêm 「です」."},
+    {"pause": 6, "cue": "think"},
+    {"spk": "thaipho", "ja": "これは{日本|にほん}の{橋|はし}です。", "ro": "Kore wa Nihon no hashi desu.", "vi": "Đây là cây cầu Nhật Bản."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Nói câu này ở Hội An, đảm bảo bạn Nhật sẽ trầm trồ."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{橋|はし}」 là cây cầu, và 「{日本|にほん}の{橋|はし}」 là cây cầu Nhật Bản."},
+    {"spk": "thaipho", "text": "Lần sau cầm tờ hai mươi nghìn đồng, Bệ hạ nhớ rằng trên đó có cả một câu chuyện Việt Nhật bốn trăm năm. Thần xin cáo lui."}
+  ]
+}

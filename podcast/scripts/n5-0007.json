@@ -69,17 +69,17 @@
     {"pause": "auto", "cue": "repeat"},
 
     {"sec": "Chuyện văn phòng"},
-    {"spk": "thaipho", "text": "Ở văn phòng, Yuki và Kenta cũng đang nói chuyện về lễ trao giải này."},
+    {"spk": "thaipho", "text": "Ở văn phòng, 「ユキ」 và 「ケンタ」 cũng đang nói chuyện về lễ trao giải này."},
     {"spk": "yuki", "ja": "ケンタさん、ケーポップが{好|す}きですか。", "ro": "Kenta-san, kēpoppu ga suki desu ka.", "vi": "Kenta này, anh có thích K-pop không?"},
     {"spk": "kenta", "ja": "はい、{大好|だいす}きです！ユキさんは？", "ro": "Hai, daisuki desu! Yuki-san wa?", "vi": "Có, tôi rất thích! Còn Yuki?"},
     {"spk": "yuki", "ja": "{私|わたし}も！{一番|いちばん}{好|す}きな{歌|うた}は、バンバンです。", "ro": "Watashi mo! Ichiban suki na uta wa, Ban Ban desu.", "vi": "Tôi cũng vậy! Bài tôi thích nhất là BANG BANG."},
-    {"spk": "thaipho", "text": "Kenta lấy hết can đảm. Bệ hạ đoán xem, anh ấy sẽ rủ Yuki đi đâu?"},
+    {"spk": "thaipho", "text": "「ケンタ」 lấy hết can đảm. Bệ hạ đoán xem, anh ấy sẽ rủ 「ユキ」 đi đâu?"},
     {"pause": 4, "cue": "think"},
     {"spk": "kenta", "ja": "じゃあ、{今度|こんど}{一緒|いっしょ}にカラオケに{行|い}きませんか。", "ro": "Jā, kondo issho ni karaoke ni ikimasen ka.", "vi": "Vậy lần tới mình cùng đi karaoke nhé?"},
     {"spk": "yuki", "ja": "いいですね！{部長|ぶちょう}も{一緒|いっしょ}に！", "ro": "Ii desu ne! Buchō mo issho ni!", "vi": "Hay đó! Rủ cả trưởng phòng đi cùng nữa!"},
     {"spk": "kenta", "ja": "え…{部長|ぶちょう}も…？", "ro": "E… buchō mo…?", "vi": "Hả… cả trưởng phòng nữa á…?"},
     {"spk": "tanaka", "ja": "カラオケ？いいですね！", "ro": "Karaoke? Ii desu ne!", "vi": "Karaoke à? Hay quá!"},
-    {"spk": "thaipho", "text": "Ha ha! Kenta muốn đi riêng với Yuki, thế mà giờ trưởng phòng Tanaka cũng đòi đi. Tội nghiệp Kenta!"},
+    {"spk": "thaipho", "text": "Ha ha! 「ケンタ」 muốn đi riêng với 「ユキ」, thế mà giờ trưởng phòng 「{田中|たなか}」 cũng đòi đi. Tội nghiệp 「ケンタ」!"},
     {"spk": "thaipho", "text": "「{一緒|いっしょ}に{行|い}きませんか」, nghĩa là: cùng đi nhé? Đây là cách rủ rê rất lịch sự. Bệ hạ nói theo nhé."},
     {"spk": "kenta", "ja": "{一緒|いっしょ}に{行|い}きませんか。", "ro": "Issho ni ikimasen ka.", "vi": "Cùng đi nhé?"},
     {"pause": "auto", "cue": "repeat"},
@@ -101,6 +101,6 @@
 
     {"sec": "Kết"},
     {"spk": "thaipho", "text": "Hôm nay Bệ hạ đã học: 「{音楽|おんがく}」, 「{賞|しょう}」, 「{一番|いちばん}」, và câu rủ rê 「{一緒|いっしょ}に{行|い}きませんか」."},
-    {"spk": "thaipho", "text": "Lần sau đi karaoke, Bệ hạ nhớ chọn bài BANG BANG nhé! Thần xin cáo lui."}
+    {"spk": "thaipho", "text": "Lần sau đi 「カラオケ」, Bệ hạ nhớ chọn bài BANG BANG nhé! Thần xin cáo lui."}
   ]
 }

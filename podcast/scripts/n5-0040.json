@@ -1,0 +1,70 @@
+{
+  "id": "n5-0040",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Ăn no tám phần", "ja": "{八|!はち}と{元気|げんき}"},
+  "summary": "Người Okinawa có một bí quyết ăn uống: chỉ ăn no tám phần. Nhưng vì sao vùng đất sống lâu này lại tụt hạng tuổi thọ?",
+  "topics": ["con người", "đời sống"],
+  "sources": [
+    "https://www.nationalgeographic.com/science/article/okinawa-diet-benefits-blue-zones",
+    "https://ryukyushimpo.jp/news/entry-1637337.html",
+    "https://www.nippon.com/ja/japan-data/h02902/"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần đưa Bệ hạ xuống tận cực nam nước Nhật, quần đảo 「{沖縄|おきなわ}」, nơi từng nổi tiếng là vùng đất của những cụ già sống lâu và khỏe."},
+    {"spk": "thaipho", "text": "Người 「{沖縄|おきなわ}」 có một câu nói về chuyện ăn uống. Thần hỏi Bệ hạ: theo câu nói ấy, nên ăn đến khi no bao nhiêu phần? Năm phần, tám phần, hay mười phần?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Tám phần! Câu đó là 「{腹八分目|!はらはちぶんめ}」, nghĩa là: chỉ ăn no tám phần bụng, chừa lại hai phần."},
+
+    {"sec": "Tám phần"},
+    {"spk": "thaipho", "text": "Vì sao lại dừng ở tám phần? Vì cảm giác no đến chậm. Sau khi Bệ hạ ngừng ăn, cảm giác no còn tăng thêm trong khoảng mười lăm đến hai mươi phút nữa."},
+    {"spk": "thaipho", "text": "Nếu ăn đến lúc thấy no căng, thì hai mươi phút sau là no quá mức. Còn dừng ở tám phần, lát sau sẽ vừa đủ."},
+    {"spk": "thaipho", "text": "Bữa ăn truyền thống của người 「{沖縄|おきなわ}」 cũng đặc biệt: món chính không phải cơm trắng, mà là khoai lang, ăn kèm thật nhiều rau, rất ít mỡ."},
+    {"spk": "thaipho", "text": "Theo tạp chí Địa lý Quốc gia, khẩu phần truyền thống ấy có khoảng tám mươi lăm phần trăm là tinh bột, chỉ chín phần trăm chất đạm và sáu phần trăm chất béo."},
+
+    {"sec": "Tám"},
+    {"spk": "thaipho", "text": "Bây giờ là từ tiếng Nhật đầu tiên của hôm nay. Số tám, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{八|!はち}", "ro": "Hachi", "vi": "Tám"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "{八|!はち}", "ro": "Hachi", "vi": "Tám"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Trong câu 「{腹八分目|!はらはちぶんめ}」 có chữ 「{八|!はち}」 này đấy. 「{腹|!はら}」 là bụng, còn 「{八分目|!はちぶんめ}」 là tám phần mười."},
+
+    {"sec": "Trăm tuổi"},
+    {"spk": "thaipho", "text": "Cả nước Nhật bây giờ có rất nhiều cụ trăm tuổi. Bệ hạ đoán xem: năm 1963, cả nước Nhật có bao nhiêu người từ một trăm tuổi trở lên?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Chỉ một trăm năm mươi ba người! Còn tháng chín năm 2026, con số đã là hơn một trăm linh bảy nghìn người, lần đầu tiên vượt mốc một trăm nghìn. Gần chín phần mười trong số đó là phụ nữ."},
+    {"spk": "thaipho", "text": "Người cao tuổi nhất nước Nhật lúc đó là một cụ bà một trăm mười bốn tuổi, sống ở 「{京都|きょうと}」."},
+    {"spk": "thaipho", "text": "Các cụ khỏe mạnh như thế, tiếng Nhật khen bằng một từ rất quen:"},
+    {"spk": "thaipho", "ja": "{元気|げんき}", "ro": "Genki", "vi": "Khỏe mạnh"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ chắc đã nghe câu chào 「お{元気|げんき}ですか」, nghĩa là: bạn có khỏe không? Chữ 「{元気|げんき}」 chính là khỏe, là tràn đầy sức sống."},
+
+    {"sec": "Okinawa tụt hạng"},
+    {"spk": "thaipho", "text": "Nhưng câu chuyện 「{沖縄|おきなわ}」 có một khúc rẽ. Từ năm 1975 đến 2005, phụ nữ 「{沖縄|おきなわ}」 luôn đứng số một nước Nhật về tuổi thọ."},
+    {"spk": "thaipho", "text": "Rồi thứ hạng tụt dần. Bệ hạ đoán xem, năm 2020, nam giới 「{沖縄|おきなわ}」 đứng thứ mấy trong bốn mươi bảy tỉnh?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Thứ bốn mươi ba, gần cuối bảng. Còn phụ nữ tụt xuống thứ mười sáu."},
+    {"spk": "thaipho", "text": "Nhiều người cho rằng một lý do là cách ăn đã đổi khác: từ sau chiến tranh, đồ ăn kiểu phương Tây và đồ ăn nhanh dần thay cho khoai lang và rau. Bí quyết tám phần, hóa ra cũng cần được giữ gìn."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: vì sao nên dừng ăn ở tám phần no?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Vì cảm giác no đến chậm, còn tăng thêm mười lăm đến hai mươi phút sau khi ngừng ăn."},
+    {"spk": "thaipho", "text": "Câu thứ hai: số tám, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{八|!はち}", "ro": "Hachi", "vi": "Tám"},
+    {"spk": "thaipho", "text": "Câu cuối, khó hơn một chút: trăm tuổi, tiếng Nhật là 「{百歳|!ひゃくさい}」, còn mà vẫn là 「でも」. Bệ hạ thử nói: trăm tuổi mà vẫn khỏe."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "{百歳|!ひゃくさい}でも{元気|げんき}です。", "ro": "Hyakusai demo genki desu.", "vi": "Trăm tuổi mà vẫn khỏe."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Câu này mà nói với ông bà, chắc ông bà vui cả ngày."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{八|!はち}」 là tám, 「{元気|げんき}」 là khỏe, và 「{腹八分目|!はらはちぶんめ}」 là ăn no tám phần."},
+    {"spk": "thaipho", "text": "Bữa trưa nay, Bệ hạ thử dừng đũa sớm một chút xem sao. Hai mươi phút sau mà vẫn thấy đói, thì cứ trách thần. Thần xin cáo lui."}
+  ]
+}

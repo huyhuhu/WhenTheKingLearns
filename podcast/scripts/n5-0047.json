@@ -1,0 +1,68 @@
+{
+  "id": "n5-0047",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Sáu trăm tám mươi nghìn người Việt ở Nhật", "ja": "ベトナム{人|じん}と{友達|ともだち}"},
+  "summary": "Cứ khoảng bốn lao động nước ngoài ở Nhật thì có một người Việt, Bệ hạ có tin không?",
+  "topics": ["Việt – Nhật", "con người"],
+  "sources": [
+    "https://www.sakigake.jp/news/article/20260327CO0151/",
+    "https://kumanichi.com/articles/2047152",
+    "https://www.nippon.com/ja/japan-data/h02693/",
+    "https://www.pref.ibaraki.jp/bugai/kokusai/tabunka/jpn/data/documents/zairyu-zenkoku-2712.pdf"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Đi tàu điện ở Nhật bây giờ, Bệ hạ rất dễ nghe thấy tiếng Việt ở hàng ghế bên cạnh. Vì người Việt ở Nhật đã đông lắm rồi."},
+    {"spk": "thaipho", "text": "Thần hỏi Bệ hạ: theo số liệu của chính phủ Nhật, cuối năm 2025 có khoảng bao nhiêu người Việt Nam sống ở Nhật?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Khoảng sáu trăm tám mươi mốt nghìn người! Người Việt là cộng đồng người nước ngoài đông thứ hai ở Nhật, chỉ sau người Trung Quốc."},
+
+    {"sec": "Mười năm tăng vọt"},
+    {"spk": "thaipho", "text": "Theo cơ quan quản lý xuất nhập cảnh Nhật Bản, cuối năm 2025, Nhật có hơn bốn triệu người nước ngoài. Lần đầu tiên con số vượt qua bốn triệu."},
+    {"spk": "thaipho", "text": "Đông nhất là người Trung Quốc, khoảng chín trăm ba mươi nghìn. Thứ hai là người Việt Nam. Thứ ba là người Hàn Quốc, khoảng bốn trăm nghìn."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: mười năm trước, tức cuối năm 2015, có bao nhiêu người Việt ở Nhật?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Chỉ khoảng một trăm bốn mươi bảy nghìn người. Mười năm sau, con số đã tăng gấp hơn bốn lần rưỡi."},
+    {"spk": "thaipho", "text": "Và con số vẫn tăng. Đến tháng sáu năm 2026, số người nước ngoài ở Nhật đã lên tới hơn bốn triệu hai trăm tám mươi nghìn, người Việt vẫn đứng thứ hai."},
+
+    {"sec": "Người Việt làm gì?"},
+    {"spk": "thaipho", "text": "Vậy người Việt ở Nhật làm gì? Phần lớn là đi làm. Theo Bộ Y tế, Lao động và Phúc lợi Nhật Bản, tháng mười năm 2025, có hơn sáu trăm nghìn lao động người Việt."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: trong số lao động nước ngoài ở Nhật, người Việt đứng thứ mấy?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Đứng thứ nhất! Cứ khoảng bốn lao động nước ngoài thì có một người Việt Nam, đông hơn cả người Trung Quốc và người Philippines."},
+    {"spk": "thaipho", "text": "Nhiều người sang theo diện thực tập sinh kỹ năng, hoặc lao động kỹ năng đặc định. Họ làm trong nhà máy, trên công trường, trong bếp nhà hàng, hay chăm sóc người già."},
+    {"spk": "thaipho", "text": "Cũng có nhiều kỹ sư, và rất nhiều du học sinh vừa học vừa làm thêm. Biết đâu cốc cà phê Bệ hạ mua ở cửa hàng tiện lợi sáng nay, là do một bạn sinh viên người Việt đưa tận tay."},
+
+    {"sec": "Người Việt và bạn bè"},
+    {"spk": "thaipho", "text": "Bây giờ là từ tiếng Nhật đầu tiên của hôm nay. Người Việt Nam, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "ベトナム{人|じん}", "ro": "Betonamu-jin", "vi": "Người Việt Nam"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "ベトナム{人|じん}", "ro": "Betonamu-jin", "vi": "Người Việt Nam"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Chữ 「{人|!じん}」 ở cuối nghĩa là người. Đặt sau tên một nước, là thành người nước đó. Ví dụ, người Nhật là 「{日本人|にほんじん}」."},
+    {"spk": "thaipho", "text": "Từ thứ hai: bạn bè, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{友達|ともだち}", "ro": "Tomodachi", "vi": "Bạn bè"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Sáu trăm tám mươi nghìn người Việt ở Nhật, nghĩa là có rất nhiều người Nhật có 「{友達|ともだち}」 là người Việt."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: cuối năm 2025, người Việt là cộng đồng người nước ngoài đông thứ mấy ở Nhật?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Thứ hai, chỉ sau người Trung Quốc. Còn nếu chỉ tính người lao động, thì người Việt đứng thứ nhất."},
+    {"spk": "thaipho", "text": "Câu thứ hai: bạn bè, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{友達|ともだち}", "ro": "Tomodachi", "vi": "Bạn bè"},
+    {"spk": "thaipho", "text": "Câu cuối, khó hơn một chút: Bệ hạ giới thiệu bạn mình với người Nhật: bạn tôi là người Việt Nam. Bệ hạ thử ghép hai từ vừa học xem."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "{友達|ともだち}はベトナム{人|じん}です。", "ro": "Tomodachi wa Betonamu-jin desu.", "vi": "Bạn tôi là người Việt Nam."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Còn muốn nói về chính mình, Bệ hạ chỉ cần đổi 「{友達|ともだち}」 thành 「わたし」. Dễ như ăn phở."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「ベトナム{人|じん}」 là người Việt Nam, và 「{友達|ともだち}」 là bạn bè."},
+    {"spk": "thaipho", "text": "Lần sau nghe tiếng Việt trên tàu điện ở Nhật, Bệ hạ cứ mạnh dạn chào một câu. Biết đâu lại có thêm một người bạn. Thần xin cáo lui."}
+  ]
+}

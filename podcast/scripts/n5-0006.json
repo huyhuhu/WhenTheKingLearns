@@ -67,10 +67,10 @@
     {"pause": "auto", "cue": "repeat"},
 
     {"sec": "Chuyện văn phòng"},
-    {"spk": "thaipho", "text": "Ở văn phòng, Kenta vừa đọc tin về bộ phim này, và quay sang hỏi Yuki."},
+    {"spk": "thaipho", "text": "Ở văn phòng, 「ケンタ」 vừa đọc tin về bộ phim này, và quay sang hỏi 「ユキ」."},
     {"spk": "kenta", "ja": "ユキさん、お{母|かあ}さんによく{電話|でんわ}しますか。", "ro": "Yuki-san, okāsan ni yoku denwa shimasu ka.", "vi": "Yuki này, cô có hay gọi điện cho mẹ không?"},
     {"spk": "yuki", "ja": "うーん…あまりしません。{忙|いそが}しいですから。", "ro": "Ūn… amari shimasen. Isogashii desu kara.", "vi": "Ừm… không hay lắm. Vì bận mà."},
-    {"spk": "thaipho", "text": "Bệ hạ đoán xem, Kenta sẽ nói gì với Yuki?"},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, 「ケンタ」 sẽ nói gì với 「ユキ」?"},
     {"pause": 4, "cue": "think"},
     {"spk": "kenta", "ja": "この{映画|えいが}の{名前|なまえ}は、「お{母|かあ}さんがいる{日|ひ}」です。", "ro": "Kono eiga no namae wa, Okāsan ga iru hi desu.", "vi": "Tên bộ phim này là: Ngày còn có mẹ."},
     {"spk": "yuki", "ja": "…{今日|!きょう}、お{母|かあ}さんに{電話|でんわ}します。", "ro": "… Kyō, okāsan ni denwa shimasu.", "vi": "… Hôm nay tôi sẽ gọi cho mẹ."},

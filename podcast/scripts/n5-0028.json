@@ -1,0 +1,76 @@
+{
+  "id": "n5-0028",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Karaoke: dàn nhạc trống", "ja": "カラオケで{歌|うた}います"},
+  "summary": "Karaoke có tới hai người cha, và một người làm ra máy chỉ vì bị đồng nghiệp chê hát dở.",
+  "topics": ["giải trí", "văn hóa"],
+  "sources": [
+    "https://theappendix.net/issues/2013/10/voice-hero-the-inventor-of-karaoke-speaks",
+    "https://ethw.org/Milestones:First_Karaoke_Machine%2C_1967",
+    "https://spectrum.ieee.org/karaoke-machine-ieee-milestone",
+    "https://www.npr.org/2024/03/15/1238840404/karaoke-inventor-shigeichi-negishi-dead",
+    "https://www.karaoke.or.jp/03nenpyo/",
+    "https://www.karaoke.or.jp/05hakusyo/"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Người Việt mình mê hát 「カラオケ」 lắm. Đám cưới, liên hoan, sinh nhật, chỗ nào cũng có. Mà 「カラオケ」 lại là một chữ tiếng Nhật đấy."},
+    {"spk": "thaipho", "text": "Thần đố Bệ hạ: chữ 「カラオケ」 nghĩa là gì?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "「{空|!から}」 nghĩa là trống, không có gì. 「オケ」 là dàn nhạc. 「カラオケ」 là dàn nhạc trống: có nhạc, nhưng không có ca sĩ. Ca sĩ chính là Bệ hạ!"},
+
+    {"sec": "Người nhạc công ở Kobe"},
+    {"spk": "thaipho", "text": "Người hay được gọi là cha đẻ của 「カラオケ」 là ông 「{井上大佑|!いのうえだいすけ}」. Ông chơi đàn phím trong các quán nhỏ ở thành phố 「{神戸|こうべ}」, thuộc lòng khoảng ba trăm bài hát."},
+    {"spk": "thaipho", "text": "Một hôm, một vị giám đốc nhờ ông thu băng tiếng đàn, đúng giọng của ông ta, để mang đi hát khi tiếp khách. Từ đó ông nảy ra ý tưởng: làm một cái máy, bỏ đồng xu vào là có nhạc để hát."},
+    {"spk": "thaipho", "text": "Năm 1971, ông đặt làm mười một chiếc máy hát. Bệ hạ đoán xem: bỏ một trăm yên vào máy thì được hát bao lâu?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Năm phút. Mà một bài hát dài khoảng ba phút, nên chưa đủ hai bài!"},
+    {"spk": "thaipho", "text": "Lúc đầu chẳng ai dám hát. Phải có một cô nhân viên cầm micro hát trước làm mẫu, khách mới bắt đầu hát theo. Khoảng một năm sau, máy đã có mặt ở chừng hai trăm quán ở 「{神戸|こうべ}」."},
+
+    {"sec": "Không đăng ký bằng sáng chế"},
+    {"spk": "thaipho", "text": "Ông 「{井上|いのうえ}」 không đăng ký bằng sáng chế cho cái máy. Ông kể, lúc ấy ông không nghĩ nó sẽ thành chuyện lớn."},
+    {"spk": "thaipho", "text": "Năm 1999, tạp chí Time xếp ông vào danh sách những người châu Á có ảnh hưởng nhất thế kỷ hai mươi."},
+    {"spk": "thaipho", "text": "Năm 2004, ông còn nhận một giải thưởng vui nhại theo giải Nobel, với lời khen: đã cho mọi người một cách hoàn toàn mới để học cách chịu đựng lẫn nhau. Chắc ban giám khảo từng nghe hàng xóm hát 「カラオケ」."},
+
+    {"sec": "Người cha thứ hai"},
+    {"spk": "thaipho", "text": "Nhưng chuyện chưa hết. Năm 1999, hiệp hội các doanh nghiệp 「カラオケ」 Nhật Bản bắt đầu tìm hiểu lại lịch sử, và tìm ra một chiếc máy còn sớm hơn khoảng bốn năm."},
+    {"spk": "thaipho", "text": "Năm 1967, ở 「{東京|とうきょう}」, kỹ sư 「{根岸重一|!ねぎししげいち}」 làm ra một chiếc máy có micro, băng nhạc, và hộp bỏ tiền xu."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: vì sao ông làm cái máy ấy?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Vì một đồng nghiệp chê ông hát dở! Thế là ông làm một cái máy để hát theo nhạc đệm."},
+    {"spk": "thaipho", "text": "Máy của ông bán được khoảng tám nghìn chiếc. Năm 2025, một hiệp hội kỹ sư quốc tế lớn công nhận đó là chiếc máy 「カラオケ」 đầu tiên. Tiếc là ông 「{根岸|ねぎし}」 đã mất năm 2024, thọ một trăm tuổi."},
+
+    {"sec": "Phòng hát"},
+    {"spk": "thaipho", "text": "Còn phòng 「カラオケ」 thì sao? Năm 1985, ở tỉnh 「{岡山|おかやま}」, người ta dùng những chiếc công-te-nơ chở hàng trên tàu biển để làm phòng hát. Đó là những phòng 「カラオケ」 đầu tiên."},
+    {"spk": "thaipho", "text": "Ngày nay ở Nhật, người ta chi hơn năm trăm tỷ yên mỗi năm cho 「カラオケ」. Không tệ cho một dàn nhạc trống."},
+
+    {"sec": "Hát"},
+    {"spk": "thaipho", "text": "Bây giờ là tiếng Nhật. Hát, tiếng Nhật lịch sự là:"},
+    {"spk": "thaipho", "ja": "{歌|うた}います。", "ro": "Utaimasu.", "vi": "Hát."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại, lần này to hơn một chút, như đang cầm micro."},
+    {"spk": "thaipho", "ja": "{歌|うた}います。", "ro": "Utaimasu.", "vi": "Hát."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bài hát thì là 「{歌|うた}」. Còn 「カラオケ」, người Nhật đọc như thế này:"},
+    {"spk": "thaipho", "ja": "カラオケ", "ro": "Karaoke", "vi": "Karaoke"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: chữ 「カラオケ」 nghĩa là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Dàn nhạc trống: có nhạc mà không có ca sĩ."},
+    {"spk": "thaipho", "text": "Câu thứ hai: hát, tiếng Nhật nói thế nào?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{歌|うた}います。", "ro": "Utaimasu.", "vi": "Hát."},
+    {"spk": "thaipho", "text": "Câu cuối: hát 「カラオケ」. Tiếng Nhật nói là hát ở 「カラオケ」, dùng chữ 「で」, nghĩa là ở. Bệ hạ ghép thử xem."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "カラオケで{歌|うた}います。", "ro": "Karaoke de utaimasu.", "vi": "Hát karaoke."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{歌|うた}います」 là hát, 「{歌|うた}」 là bài hát, và 「カラオケ」 là dàn nhạc trống."},
+    {"spk": "thaipho", "text": "Lần sau cầm micro, dù hát hay hay dở, Bệ hạ cứ hát cho vui. Ông 「{根岸|ねぎし}」 bị chê hát dở mà còn làm ra cả một ngành công nghiệp đấy. Thần xin cáo lui."}
+  ]
+}

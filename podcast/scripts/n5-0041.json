@@ -1,0 +1,72 @@
+{
+  "id": "n5-0041",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Tháp Eiffel cao thêm mùa hè", "ja": "{夏|なつ}は{暑|あつ}い"},
+  "summary": "Tháp Eiffel không hề đứng yên: mùa hè nó cao thêm một chút, và còn nghiêng người né nắng. Vì sao vậy?",
+  "topics": ["khoa học"],
+  "sources": [
+    "https://www.toureiffel.paris/en/news/history-and-culture/why-does-eiffel-tower-change-size",
+    "https://phys.org/news/2025-08-eiffel-tower-bigger-summer.html",
+    "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/331658-anecdote-did-you-know-the-eiffel-tower-changes-size-with-the-weather-heat-season",
+    "https://www.france.fr/en/article/9-anecdotes-revealing-all-you-need-to-know-about-the-eiffel-tower/",
+    "https://en.wikipedia.org/wiki/Tokyo_Tower"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần mời Bệ hạ sang Paris, ngắm tháp Eiffel. Một khối sắt khổng lồ, đứng yên một chỗ từ năm 1889."},
+    {"spk": "thaipho", "text": "Nhưng thật ra, tháp không hề đứng yên. Thần hỏi Bệ hạ: mùa hè, tháp Eiffel cao hơn, thấp hơn, hay vẫn y như mùa đông?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Cao hơn! Mùa hè tháp cao thêm một chút, rồi mùa đông lại thấp xuống. Chính trang web của tháp cũng xác nhận chuyện này."},
+
+    {"sec": "Bảy nghìn tấn sắt"},
+    {"spk": "thaipho", "text": "Tháp được dựng cho Hội chợ Thế giới năm 1889, mất hai năm, hai tháng và năm ngày. Lúc khánh thành, tháp cao ba trăm mười hai mét. Nay gắn thêm ăng ten, tháp cao khoảng ba trăm ba mươi mét."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, cả tháp dùng bao nhiêu tấn sắt?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Khoảng bảy nghìn ba trăm tấn sắt, ghép lại bằng hai triệu rưỡi chiếc đinh tán. Cứ khoảng bảy năm, tháp lại được sơn lại một lần, tốn chừng sáu mươi tấn sơn."},
+    {"spk": "thaipho", "text": "Hồi mới mở cửa, khách muốn lên đỉnh phải leo một nghìn bảy trăm mười bậc thang. Mà ban đầu, tháp chỉ định đứng hai mươi năm rồi tháo dỡ. Nó được giữ lại, một phần vì rất có ích cho khoa học, như làm trạm phát sóng vô tuyến."},
+
+    {"sec": "Sắt nở ra"},
+    {"spk": "thaipho", "text": "Vì sao tháp cao thêm? Vì kim loại gặp nóng thì nở ra, gặp lạnh thì co lại."},
+    {"spk": "thaipho", "text": "Một thanh sắt dài một mét, nóng thêm một độ, sẽ dài ra khoảng một phần trăm milimet. Nghe thì nhỏ xíu. Nhưng tháp Eiffel cao ba trăm mét, và sắt phơi nắng mùa hè có thể nóng hơn sáu mươi độ."},
+    {"spk": "thaipho", "text": "Cộng dồn lại, cả tháp cao thêm được một đoạn. Con số chính xác thì mỗi nguồn nói một khác, nhưng chắc chắn mắt thường không thể nhìn thấy."},
+    {"spk": "thaipho", "text": "Còn chuyện lạ hơn: nắng thường chỉ chiếu vào một mặt tháp. Mặt đó nở ra nhiều hơn các mặt kia, nên cả tháp hơi cong người, nghiêng ra xa phía mặt trời. Cứ như tháp cũng biết né nắng vậy."},
+
+    {"sec": "Mùa hè"},
+    {"spk": "thaipho", "text": "Bây giờ là từ tiếng Nhật đầu tiên của hôm nay. Mùa hè, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{夏|なつ}", "ro": "Natsu", "vi": "Mùa hè"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "{夏|なつ}", "ro": "Natsu", "vi": "Mùa hè"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Và mùa hè thì nóng. Nóng, khi nói về thời tiết, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{暑|あつ}い", "ro": "Atsui", "vi": "Nóng"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Lưu ý nhé Bệ hạ: nóng khi chạm vào, như ly trà nóng, người Nhật dùng một chữ Hán khác là 「{熱|あつ}い」. Đọc giống hệt nhau, chỉ khác chữ viết."},
+
+    {"sec": "Tháp Tokyo"},
+    {"spk": "thaipho", "text": "Ở 「{東京|とうきょう}」 cũng có một tòa tháp sắt màu đỏ trắng, lấy cảm hứng từ tháp Eiffel: tháp 「{東京|とうきょう}」, khánh thành năm 1958."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, tháp 「{東京|とうきょう}」 cao bao nhiêu mét?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Ba trăm ba mươi ba mét, cao hơn tháp Eiffel thời đó. Vậy mà tháp 「{東京|とうきょう}」 chỉ nặng khoảng bốn nghìn tấn, nhẹ hơn tháp Eiffel tới hơn ba nghìn tấn."},
+    {"spk": "thaipho", "text": "Tháp 「{東京|とうきょう}」 giữ danh hiệu công trình cao nhất nước Nhật suốt hơn năm mươi năm, cho tới năm 2010 mới bị tháp 「{東京|とうきょう}スカイツリー」 vượt qua."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: vì sao tháp Eiffel nghiêng ra xa phía mặt trời?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Vì mặt được nắng chiếu nóng hơn, nở ra nhiều hơn, làm tháp hơi cong về phía bên kia."},
+    {"spk": "thaipho", "text": "Câu thứ hai: mùa hè, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{夏|なつ}", "ro": "Natsu", "vi": "Mùa hè"},
+    {"spk": "thaipho", "text": "Câu cuối: Bệ hạ thử ghép hai từ vừa học, để nói: mùa hè thì nóng."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "{夏|なつ}は{暑|あつ}いです。", "ro": "Natsu wa atsui desu.", "vi": "Mùa hè thì nóng."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Nóng đến mức tháp sắt cũng phải cao thêm, Bệ hạ ạ."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{夏|なつ}」 là mùa hè, 「{暑|あつ}い」 là nóng. Sắt gặp nóng thì nở, nên mùa hè tháp Eiffel cao thêm một chút, và còn nghiêng người né nắng."},
+    {"spk": "thaipho", "text": "Lần sau thấy đường ray tàu nằm dưới nắng hè, Bệ hạ nhớ rằng thép cũng đang khẽ nở ra, giống hệt tháp Eiffel. Thần xin cáo lui."}
+  ]
+}

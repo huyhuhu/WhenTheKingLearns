@@ -72,26 +72,26 @@
     {"spk": "thaipho", "text": "Còn Thành Long đóng vai người đi bắt băng trộm đó."},
 
     {"sec": "Chuyện ở công ty"},
-    {"spk": "thaipho", "text": "Ở công ty của Yuki, anh Kenta mê phim cũng đang bàn về bộ phim này. Bệ hạ nghe nhé."},
+    {"spk": "thaipho", "text": "Ở công ty của 「ユキ」, anh 「ケンタ」 mê phim cũng đang bàn về bộ phim này. Bệ hạ nghe nhé."},
     {"d": 6},
     {"d": 7},
     {"d": 8},
     {"d": 9},
     {"d": 10},
-    {"spk": "thaipho", "text": "Bệ hạ đoán xem, vì sao Kenta lại lắp bắp như vậy?"},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, vì sao 「ケンタ」 lại lắp bắp như vậy?"},
     {"pause": 4, "cue": "think"},
-    {"spk": "thaipho", "text": "Ha ha, vì Kenta thầm thích Yuki mà! Yuki vừa rủ anh ấy đi xem phim cùng."},
-    {"spk": "thaipho", "text": "Kenta hỏi: 「{見|み}ましたか」, nghĩa là: đã xem chưa? Yuki đáp: 「まだです」, là: vẫn chưa."},
+    {"spk": "thaipho", "text": "Ha ha, vì 「ケンタ」 thầm thích 「ユキ」 mà! 「ユキ」 vừa rủ anh ấy đi xem phim cùng."},
+    {"spk": "thaipho", "text": "「ケンタ」 hỏi: 「{見|み}ましたか」, nghĩa là: đã xem chưa? 「ユキ」 đáp: 「まだです」, là: vẫn chưa."},
     {"d": 8},
     {"spk": "thaipho", "text": "「かっこいい」, là: ngầu, đẹp trai. Giới trẻ Nhật dùng từ này suốt. Bệ hạ nói theo nhé."},
     {"spk": "kenta", "ja": "かっこいいです。", "ro": "Kakkoii desu.", "vi": "Ngầu quá."},
     {"pause": "auto", "cue": "repeat"},
     {"d": 9},
-    {"spk": "thaipho", "text": "「{一緒|いっしょ}に」, là: cùng nhau. 「{見|み}ませんか」, là: xem không? Đây là cách rủ ai đó rất lịch sự. Bệ hạ nói theo Yuki nhé."},
+    {"spk": "thaipho", "text": "「{一緒|いっしょ}に」, là: cùng nhau. 「{見|み}ませんか」, là: xem không? Đây là cách rủ ai đó rất lịch sự. Bệ hạ nói theo 「ユキ」 nhé."},
     {"d": 9},
     {"pause": "auto", "cue": "repeat"},
     {"d": 10},
-    {"spk": "thaipho", "text": "Kenta mừng quá, nói không nên lời!"},
+    {"spk": "thaipho", "text": "「ケンタ」 mừng quá, nói không nên lời!"},
 
     {"sec": "Nghe lại"},
     {"spk": "thaipho", "text": "Bây giờ, Bệ hạ nghe lại bản tin một lần nữa. Lần này chắc chắn Bệ hạ hiểu hết."},
@@ -117,6 +117,6 @@
     {"sec": "Kết"},
     {"spk": "thaipho", "text": "Hôm nay Bệ hạ đã học: phim là 「{映画|えいが}」, diễn viên là 「{俳優|はいゆう}」."},
     {"spk": "thaipho", "text": "Và cách rủ ai đó: 「{一緒|いっしょ}に{見|み}ませんか」."},
-    {"spk": "thaipho", "text": "Biết đâu, Kenta và Yuki sẽ có một buổi hẹn xem phim thật. Thần xin cáo lui!"}
+    {"spk": "thaipho", "text": "Biết đâu, 「ケンタ」 và 「ユキ」 sẽ có một buổi hẹn xem phim thật. Thần xin cáo lui!"}
   ]
 }

@@ -1,0 +1,68 @@
+{
+  "id": "n5-0030",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Pikachu và những con số", "ja": "{電気|でんき}のポケモン"},
+  "summary": "Bản vẽ đầu tiên của Pikachu giống một món ăn Nhật. Bệ hạ đoán là món gì?",
+  "topics": ["giải trí", "văn hóa"],
+  "sources": [
+    "https://www.pokemon.com/uk/pokemon-news/creator-profile-the-creators-of-pikachu",
+    "https://www.siliconera.com/pikachu-originally-second-evolution-called-gorochu-large-fangs-two-horns/",
+    "https://scmp.com/yp/discover/entertainment/tech-gaming/article/3059725/brief-history-pokemon-red-and-green-nintendo",
+    "https://insider-gaming.com/pokemon-game-sales-surpass-515-million-worldwide/"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần giới thiệu một nhân vật còn nổi tiếng hơn nhiều ngôi sao điện ảnh: chú Pokémon màu vàng tên là 「ピカチュウ」."},
+    {"spk": "thaipho", "text": "Thần đố Bệ hạ: bản vẽ đầu tiên của 「ピカチュウ」 trông giống cái gì? Gợi ý: một món ăn của Nhật."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Một chiếc bánh 「{大福|だいふく}」, tức là bánh 「{餅|!もち}」 nhân đậu ngọt! Người vẽ hình dung nó dài dài, tròn tròn, có hai cái tai nhô lên."},
+
+    {"sec": "Từ sở thích bắt côn trùng"},
+    {"spk": "thaipho", "text": "Trò chơi Pokémon đầu tiên ra mắt ngày hai mươi bảy tháng hai năm 1996, trên máy Game Boy, gồm hai bản Đỏ và Xanh lá."},
+    {"spk": "thaipho", "text": "Người nghĩ ra Pokémon là ông 「{田尻|!たじり}」. Hồi nhỏ, ông rất mê bắt côn trùng. Bắt, sưu tầm, rồi trao đổi với bạn bè: đó chính là cách chơi Pokémon."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: hồi ấy, công ty làm game của ông 「{田尻|!たじり}」 có bao nhiêu người?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Chỉ khoảng mười người. Còn nhóm làm Pokémon lúc đầu chỉ có ba người."},
+
+    {"sec": "Pikachu"},
+    {"spk": "thaipho", "text": "「ピカチュウ」 do một nữ họa sĩ là cô 「{西田|にしだ}」 vẽ. Hồi ấy cô đang mê loài sóc. Sóc hay giữ thức ăn trong má, nên cô cho 「ピカチュウ」 hai cái má để chứa điện."},
+    {"spk": "thaipho", "text": "Cái đuôi thì có hình tia chớp, vì 「ピカチュウ」 là Pokémon hệ điện. Màu vàng được chọn sau này, khi trò chơi có thể hiện màu trên ti vi nhờ một thiết bị gắn thêm."},
+    {"spk": "thaipho", "text": "Số của 「ピカチュウ」 trong sách Pokémon là hai mươi lăm. Các họa sĩ nói con số này chẳng có ý nghĩa gì đặc biệt, chỉ gần đúng thứ tự xuất hiện trong trò chơi."},
+    {"spk": "thaipho", "text": "Trong sách hướng dẫn của trò chơi đầu tiên, 「ピカチュウ」 chỉ là một trong mười lăm Pokémon có tranh vẽ chính thức. Chưa ai ngờ nó sẽ thành gương mặt của cả Pokémon."},
+    {"spk": "thaipho", "text": "Còn cái tên: 「ピカ」 là tiếng Nhật tả ánh sáng lóe lên, chớp chớp. Chu là tiếng chuột kêu chít chít. Nhưng cô 「{西田|にしだ}」 nói, cô chọn chu vì nghe hay và hợp với dáng nhỏ, chứ không định vẽ một con chuột."},
+    {"spk": "thaipho", "text": "「ピカチュウ」 còn suýt có thêm một dạng tiến hóa, có nanh và có sừng, tên là 「ゴロチュウ」. Nhưng cuối cùng dạng này bị bỏ đi."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: đến nay, các trò chơi Pokémon đã bán được bao nhiêu bản?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Hơn năm trăm triệu bản! Còn bài Pokémon thì đã in ra hơn tám mươi tỷ lá. Tất cả bắt đầu từ một nhóm ba người và một cái bánh 「{餅|!もち}」."},
+
+    {"sec": "Điện"},
+    {"spk": "thaipho", "text": "Bây giờ là tiếng Nhật. 「ピカピカ」 là ánh điện chớp. Điện, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{電気|でんき}", "ro": "Denki", "vi": "Điện"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại nhé."},
+    {"spk": "thaipho", "ja": "{電気|でんき}", "ro": "Denki", "vi": "Điện"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Ở Nhật, 「{電気|でんき}」 còn dùng để nói cái đèn trong nhà. Bật đèn, người Nhật nói là bật 「{電気|でんき}」."},
+    {"spk": "thaipho", "text": "Từ thứ hai: màu vàng, như bộ lông của 「ピカチュウ」, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{黄色|きいろ}い", "ro": "Kiiroi", "vi": "Màu vàng"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: bản vẽ đầu tiên của 「ピカチュウ」 giống món gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Bánh 「{大福|だいふく}」, bánh 「{餅|!もち}」 nhân đậu ngọt."},
+    {"spk": "thaipho", "text": "Câu thứ hai: điện, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{電気|でんき}", "ro": "Denki", "vi": "Điện"},
+    {"spk": "thaipho", "text": "Câu cuối: 「ピカチュウ」 là Pokémon hệ điện. Pokémon tiếng Nhật đọc là 「ポケモン」. Bệ hạ thử ghép, dùng chữ 「は」, chữ 「の」, và cuối câu là 「です」."},
+    {"pause": 6, "cue": "think"},
+    {"spk": "thaipho", "ja": "ピカチュウは{電気|でんき}のポケモンです。", "ro": "Pikachū wa denki no Pokemon desu.", "vi": "Pikachu là Pokémon hệ điện."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{電気|でんき}」 là điện, và 「{黄色|きいろ}い」 là màu vàng."},
+    {"spk": "thaipho", "text": "Lần sau thấy 「ピカチュウ」, Bệ hạ hãy nhớ: nó bắt đầu từ một cái bánh, một con sóc, và tiếng chớp 「ピカ」 「ピカ」. Thần xin cáo lui."}
+  ]
+}

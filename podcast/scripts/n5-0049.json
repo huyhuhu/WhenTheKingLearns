@@ -1,0 +1,72 @@
+{
+  "id": "n5-0049",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Totoro sống trong cây gì?", "ja": "{大|おお}きい{木|き}"},
+  "summary": "Totoro sống trong một cái cây khổng lồ, và ngoài đời Nhật Bản có một cái cây còn to đến khó tin.",
+  "topics": ["giải trí", "văn hóa"],
+  "sources": [
+    "https://en.wikipedia.org/wiki/My_Neighbor_Totoro",
+    "https://en.wikipedia.org/wiki/Studio_Ghibli",
+    "https://www.news4jax.com/entertainment/2024/03/10/at-83-filmmaker-hayao-miyazaki-earns-historic-oscar-for-the-boy-and-the-heron/",
+    "https://soranews24.com/2022/09/06/receive-studio-ghibli-anime-art-in-new-crowdfunding-campaign-to-save-totoros-forest/",
+    "https://www.visit-kyushu.com/en/spots/kamo-no-okusu-camphor-tree/"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Có một con vật tròn tròn, lông xám, tai nhọn, cười rất to. Nó không có thật, nhưng trẻ em khắp thế giới đều biết. Đó là 「トトロ」."},
+    {"spk": "thaipho", "text": "Thần hỏi Bệ hạ: trong phim, 「トトロ」 sống ở đâu?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "「トトロ」 sống trong hốc của một cây long não khổng lồ, cạnh một ngôi đền nhỏ. Bé 「メイ」 lạc vào đó, và gặp 「トトロ」 đang ngủ khò khò."},
+
+    {"sec": "Xưởng phim vẽ tay"},
+    {"spk": "thaipho", "text": "Phim Hàng xóm của tôi là 「トトロ」 ra rạp ngày mười sáu tháng tư năm 1988. Phim của xưởng Ghibli, đạo diễn là ông 「{宮崎駿|みやざきはやお}」."},
+    {"spk": "thaipho", "text": "Xưởng Ghibli thành lập năm 1985, và nổi tiếng vì vẫn trung thành với lối vẽ tay."},
+    {"spk": "thaipho", "text": "Năm 2024, phim Thiếu niên và chim diệc của ông 「{宮崎|みやざき}」 đoạt giải Oscar phim hoạt hình hay nhất. Năm đó ông đã tám mươi ba tuổi."},
+    {"spk": "thaipho", "text": "Đó mới là phim vẽ tay thứ hai thắng giải này. Phim vẽ tay đầu tiên cũng là của ông: phim Vùng đất linh hồn, hai mươi mốt năm trước."},
+    {"spk": "thaipho", "text": "Quay lại 「トトロ」. Lúc ra rạp, 「トトロ」 được chiếu chung một suất với phim Mộ đom đóm. Bệ hạ đoán xem: lần đầu ra rạp ở Nhật, 「トトロ」 bán được bao nhiêu vé?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Khoảng tám trăm nghìn vé, chưa phải con số quá lớn. Nhưng về sau, 「トトロ」 trở thành gương mặt của cả xưởng phim. Bây giờ, biểu tượng của Ghibli chính là hình 「トトロ」."},
+    {"spk": "thaipho", "text": "Còn cái tên 「トトロ」? Trong phim, bé 「メイ」 nghe con vật gầm lên, liền gọi luôn nó là 「トトロ」. Bé còn tưởng nó là con quỷ khổng lồ trong cuốn truyện tranh của mình."},
+
+    {"sec": "Khu rừng có thật"},
+    {"spk": "thaipho", "text": "Ông 「{宮崎|みやざき}」 sống ở thành phố 「{所沢|ところざわ}」, gần 「{東京|とうきょう}」, đã hơn năm mươi năm. Những khu rừng trên đồi 「{狭山|さやま}」 gần nhà đã cho ông cảm hứng vẽ nên 「トトロ」."},
+    {"spk": "thaipho", "text": "Ông từng nói: nếu không sống ở 「{所沢|ところざわ}」, thì 「トトロ」 đã không ra đời. Năm 2022, ông bỏ ra ba trăm triệu yên tiền riêng để góp phần giữ lại khu rừng ấy."},
+
+    {"sec": "Cây long não khổng lồ"},
+    {"spk": "thaipho", "text": "Còn cây long não ngoài đời thì sao? Cây được xem là to nhất Nhật Bản là một cây long não ở tỉnh 「{鹿児島|かごしま}」, miền nam Nhật Bản. Cây khoảng một nghìn năm trăm tuổi, cao khoảng ba mươi mét."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: thân cây ấy to cỡ nào? Phải bao nhiêu người lớn nắm tay nhau mới ôm hết?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Chu vi thân cây khoảng hai mươi bốn mét. Phải khoảng mười lăm người lớn nắm tay nhau mới ôm hết. Trong thân cây còn có một cái hốc rộng hơn mười mét vuông, đủ chỗ cho cả một nhà 「トトロ」."},
+
+    {"sec": "Cái cây"},
+    {"spk": "thaipho", "text": "Bây giờ là từ tiếng Nhật đầu tiên của hôm nay. Cái cây, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{木|!き}", "ro": "Ki", "vi": "Cái cây"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "{木|!き}", "ro": "Ki", "vi": "Cái cây"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Chữ Hán của từ này trông giống hệt một cái cây: có thân, có cành, có rễ. Hai cái cây đứng cạnh nhau là 「{林|はやし}」, rừng nhỏ. Ba cái cây chụm lại là 「{森|もり}」, rừng rậm."},
+    {"spk": "thaipho", "text": "Từ thứ hai: to, lớn, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "{大|おお}きい", "ro": "Ōkii", "vi": "To, lớn"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: trong phim, 「トトロ」 sống trong cây gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Cây long não."},
+    {"spk": "thaipho", "text": "Câu thứ hai: cái cây, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{木|!き}", "ro": "Ki", "vi": "Cái cây"},
+    {"spk": "thaipho", "text": "Câu cuối, khó hơn một chút: Bệ hạ đứng trước cây long não ở 「{鹿児島|かごしま}」 và muốn nói: cây to quá nhỉ. Thần gợi ý: chữ to đứng trước chữ cây, ngược với tiếng Việt, và cuối câu thêm 「ですね」."},
+    {"pause": 6, "cue": "think"},
+    {"spk": "thaipho", "ja": "{大|おお}きい{木|き}ですね。", "ro": "Ōkii ki desu ne.", "vi": "Cây to quá nhỉ."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Nói xong câu này, biết đâu 「トトロ」 lại thò đầu ra chào Bệ hạ."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{木|!き}」 là cái cây, và 「{大|おお}きい」 là to, lớn."},
+    {"spk": "thaipho", "text": "Lần sau xem lại 「トトロ」, Bệ hạ nhớ ngắm thật kỹ cây long não nhé. Thần xin cáo lui."}
+  ]
+}

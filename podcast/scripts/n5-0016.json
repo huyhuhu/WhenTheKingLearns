@@ -1,0 +1,70 @@
+{
+  "id": "n5-0016",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Ở Nhật, không cần boa tiền", "ja": "ありがとうございます"},
+  "summary": "Để lại tiền boa ở Nhật, có khi nhân viên chạy theo để trả lại. Vậy người Nhật cảm ơn bằng gì?",
+  "topics": ["văn hóa", "kinh tế"],
+  "sources": [
+    "https://www.japan.travel/en/plan/tipping-in-japan/",
+    "https://www.cnn.co.jp/business/35211647.html",
+    "https://dime.jp/genre/1533780",
+    "https://japantravel.navitime.com/en/area/jp/guide/NTJhowto0127-en/",
+    "https://soranews24.com/2025/10/01/more-tip-jars-appear-at-japanese-restaurants-but-there-are-important-reasons-why-you-shouldnt-tip/"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Giả sử Bệ hạ ăn xong một bát mì ở 「{東京|とうきょう}」, thấy ngon quá, bèn để lại thêm ít tiền trên bàn rồi đi. Bệ hạ đoán xem, chuyện gì sẽ xảy ra?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Nhiều du khách kể rằng nhân viên đã chạy theo họ ra tận đường, để trả lại số tiền mà nhân viên tưởng là khách để quên."},
+    {"spk": "thaipho", "text": "Vì ở Nhật, gần như không có thói quen boa tiền."},
+
+    {"sec": "Không có tiền boa"},
+    {"spk": "thaipho", "text": "Theo Cục Du lịch Quốc gia Nhật Bản, ở quán bar, quán cà phê, nhà hàng, taxi hay khách sạn, khách thường không boa tiền. Có người Nhật còn thấy việc nhận tiền boa là hơi bất lịch sự."},
+    {"spk": "thaipho", "text": "Với họ, phục vụ chu đáo là một phần của công việc, đã nằm sẵn trong giá. Khách không cần trả thêm mới được đối xử tốt."},
+    {"spk": "thaipho", "text": "Ở nhiều khách sạn và nhà trọ kiểu Nhật, giá phòng đã tính sẵn phí phục vụ, thường khoảng mười đến mười lăm phần trăm. Đó là thay cho tiền boa, nên Bệ hạ không cần đưa thêm."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, ở Mỹ, ăn một bữa ở nhà hàng thì khách thường boa bao nhiêu?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Một khảo sát năm 2023 với khoảng mười hai nghìn người Mỹ cho thấy: hơn một nửa boa mười lăm phần trăm hoặc ít hơn, và cứ năm người thì có khoảng một người boa tới hai mươi phần trăm."},
+    {"spk": "thaipho", "text": "Ăn một bữa một triệu đồng ở Mỹ, có khi phải trả thêm hai trăm nghìn tiền boa. Còn ở Nhật, hóa đơn ghi bao nhiêu, Bệ hạ trả đúng bấy nhiêu."},
+
+    {"sec": "Phong bì từ trái tim"},
+    {"spk": "thaipho", "text": "Vậy người Nhật có bao giờ đưa tiền cảm ơn không? Có, nhưng hiếm. Họ gọi đó là 「{心付|こころづ}け」, nghĩa là món quà xuất phát từ trái tim."},
+    {"spk": "thaipho", "text": "Tiền ấy không bao giờ đưa trần tay, mà phải bỏ vào phong bì. Phong bì nhỏ có bán sẵn ở cửa hàng tiện lợi và cửa hàng đồng giá một trăm yên."},
+    {"spk": "thaipho", "text": "Nhưng cách cảm ơn phổ biến nhất thì chẳng tốn đồng nào. Đó là một câu nói."},
+
+    {"sec": "Lời cảm ơn"},
+    {"spk": "thaipho", "text": "Cảm ơn, nói lịch sự, tiếng Nhật là:"},
+    {"spk": "thaipho", "ja": "ありがとうございます。", "ro": "Arigatō gozaimasu.", "vi": "Cảm ơn ạ."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "ありがとうございます。", "ro": "Arigatō gozaimasu.", "vi": "Cảm ơn ạ."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Với bạn bè thì chỉ cần nói ngắn: 「ありがとう」. Nhưng với nhân viên hay người lạ, Bệ hạ nên nói đủ cả câu."},
+    {"spk": "thaipho", "text": "Ăn xong, trước khi rời quán, người Nhật còn một câu nữa, nghĩa là cảm ơn vì bữa ăn:"},
+    {"spk": "thaipho", "ja": "ごちそうさまでした。", "ro": "Gochisōsama deshita.", "vi": "Cảm ơn vì bữa ăn."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Nói to, rõ ràng, kèm một cái cúi đầu nhẹ. Với người nấu, đó là lời khen quý hơn tiền."},
+
+    {"sec": "Hũ tiền boa"},
+    {"spk": "thaipho", "text": "Dạo gần đây, khách du lịch đến Nhật rất đông, và ở vài quán đã xuất hiện hũ đựng tiền boa trên quầy, để khách nước ngoài muốn boa thì bỏ vào."},
+    {"spk": "thaipho", "text": "Nhưng nhiều người vẫn khuyên: đừng boa. Ở Nhật, tiền boa cũng bị tính thuế, và thường do chủ quán giữ rồi chia chung, chưa chắc đến tay người đã phục vụ Bệ hạ."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: ở Nhật, nếu muốn gửi tiền cảm ơn ai đó, Bệ hạ phải để tiền vào đâu?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Vào phong bì. Đưa tiền trần tay là không tế nhị."},
+    {"spk": "thaipho", "text": "Câu thứ hai: cảm ơn, nói lịch sự, tiếng Nhật thế nào?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "ありがとうございます。", "ro": "Arigatō gozaimasu.", "vi": "Cảm ơn ạ."},
+    {"spk": "thaipho", "text": "Câu cuối, khó hơn một chút: ăn xong một bát mì thật ngon, Bệ hạ đứng dậy rời quán. Bệ hạ nói gì với người nấu? Hai câu nhé."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "ごちそうさまでした。ありがとうございます。", "ro": "Gochisōsama deshita. Arigatō gozaimasu.", "vi": "Cảm ơn vì bữa ăn. Cảm ơn ạ."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: ở Nhật không cần boa tiền. Thay vào đó, hãy nói 「ありがとうございます」, và ăn xong thì nói 「ごちそうさまでした」."},
+    {"spk": "thaipho", "text": "Hai câu này không tốn đồng nào, mà ai nghe cũng vui. Thần cũng xin 「ありがとうございます」, vì Bệ hạ đã nghe đến cuối. Thần xin cáo lui."}
+  ]
+}

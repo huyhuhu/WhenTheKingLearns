@@ -7,10 +7,10 @@
   var EPS = DATA.episodes;
   var PREF_KEY = 'wtkl.podcast';
   var CACHE = 'wtkl-podcast-v1';
-  var RATES = [0.75, 0.9, 1, 1.25];
+  var RATES = [0.5, 0.75, 0.9, 1, 1.25, 1.5];
   var FORMATS = {
     dialogue: ['Hội thoại', 'Dialogue'], story: ['Truyện kể', 'Story'], news: ['Bản tin', 'News'],
-    shadow: ['Luyện nói', 'Speaking'], lesson: ['Bài giảng', 'Lesson']
+    shadow: ['Luyện nói', 'Speaking'], lesson: ['Bài giảng', 'Lesson'], fact: ['Kiến thức', 'Facts']
   };
   var CUES = { think: ['Bệ hạ suy nghĩ…', 'Your turn to think…'], repeat: ['Bệ hạ nói theo…', 'Say it out loud…'] };
   var SPK = { thaipho: 'var(--accent)', yuki: '#d6649a', kenta: '#2b9c8f', tanaka: '#b8902a', sato: '#8a6cc4', tama: '#e08a3c', anchor: '#4a86c8' };
@@ -21,7 +21,10 @@
     prev: '<path d="M6 5v14"/><path d="M19 5l-10 7 10 7z" fill="currentColor"/>',
     next: '<path d="M18 5v14"/><path d="M5 5l10 7-10 7z" fill="currentColor"/>',
     repeat: '<path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/><path d="M11 10.5l1.5-1v5" stroke-width="1.6"/>',
-    list: '<path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/>'
+    list: '<path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/>',
+    down: '<path d="M6 9l6 6 6-6"/>',
+    back: '<path d="M15 5l-7 7 7 7"/>',
+    close: '<path d="M6 6l12 12M18 6L6 18"/>'
   };
 
   var byId = {};
@@ -30,12 +33,14 @@
   var prefs = readPrefs();
   var audio = new Audio();
   audio.preload = 'auto';
-  var cur = null, lyric = null, nextId = null, history = [], blobUrl = null, loadToken = 0;
+  var cur = null, lyric = null, nextId = null, played = [], blobUrl = null, loadToken = 0;
+  var sheet = null, full = false, sheetView = 'player', pageY = 0;
   var onPlayer = false, els = [], curLine = -1, onCount = -1, looping = false;
   var follow = true, followTimer = null;
   var blocked = false, audioErr = false, heardMarked = false, prefetched = false;
   var lastTick = 0, listenAcc = 0, lastSave = 0, lastFrame = 0, unholdTimer = null;
-  var topic = '', dlStatus = '';
+  var JINGLE = 'audio/jingle.mp3?v=2', jingleSrc = JINGLE, jingleBusy = false, interlude = false, pendingStart = null;
+  var topic = '', dlStatus = '', rateOpen = false;
 
   // ---------- luu tru ----------
   function readPrefs() {
@@ -132,18 +137,22 @@
   }
 
   // ---------- phat ----------
-  function load(id, autoplay, startAt, fromHistory) {
+  function load(id, autoplay, startAt, fromHistory, withJingle) {
     var ep = byId[id];
     if (!ep) return;
     var token = ++loadToken;
-    if (cur && cur.id !== id && !fromHistory) history.push(cur.id);
+    if (cur && cur.id !== id && !fromHistory) played.push(cur.id);
     cur = ep;
     lyric = null;
     blocked = audioErr = heardMarked = prefetched = false;
     curLine = onCount = -1;
     nextId = pickNext(id);
+    interlude = !!withJingle;
+    pendingStart = null;
+    fetchJingle();
     function go(url) {
       if (token !== loadToken) return;
+      if (interlude) { pendingStart = function () { go(url); }; return; }
       var old = blobUrl;
       blobUrl = url.indexOf('blob:') === 0 ? url : null;
       audio.src = url;
@@ -158,6 +167,12 @@
       }
       if (autoplay) play();
     }
+    if (interlude) {
+      audio.src = jingleSrc;
+      audio.loop = false;
+      audio.defaultPlaybackRate = audio.playbackRate = 1;
+      play();
+    }
     if (isCached(id) && window.caches) {
       caches.open(CACHE).then(function (c) { return c.match(audioUrl(ep)); }).then(function (res) {
         if (!res) {
@@ -169,6 +184,22 @@
     } else go(audioUrl(ep));
     loadLyric(ep, token);
     setMedia(ep);
+  }
+  // Doan nhac ngan giua hai tap; giu ban blob de van phat duoc khi mat song
+  function fetchJingle() {
+    if (jingleSrc !== JINGLE || jingleBusy || !window.fetch) return;
+    jingleBusy = true;
+    fetch(JINGLE).then(function (r) { return r.ok ? r.blob() : null; }).then(function (b) {
+      if (b) jingleSrc = URL.createObjectURL(b);
+      else jingleBusy = false;
+    })['catch'](function () { jingleBusy = false; });
+  }
+  function endInterlude() {
+    interlude = false;
+    var start = pendingStart;
+    pendingStart = null;
+    if (start) start();
+    refresh();
   }
   function play() {
     var p = audio.play();
@@ -184,7 +215,7 @@
     if (audio.paused) play(); else audio.pause();
   }
   function seek(t) {
-    if (!cur) return;
+    if (!cur || interlude) return;
     audio.currentTime = Math.max(0, Math.min(cur.duration - 0.2, t));
     sync();
   }
@@ -195,8 +226,22 @@
   }
   function goPrev() {
     if (!cur) return;
-    if (audio.currentTime > 5 || !history.length) seek(0);
-    else { load(history.pop(), true, 0, true); refresh(); }
+    if (audio.currentTime > 5 || !played.length) seek(0);
+    else { load(played.pop(), true, 0, true); refresh(); }
+  }
+  function stopPlayer() {
+    if (!cur) return;
+    if (!interlude) savePos();
+    played.push(cur.id);
+    loadToken++;
+    cur = lyric = pendingStart = null;
+    interlude = blocked = audioErr = false;
+    audio.pause();
+    audio.removeAttribute('src');
+    audio.load();
+    if (blobUrl) { URL.revokeObjectURL(blobUrl); blobUrl = null; }
+    if (ms) { ms.metadata = null; ms.playbackState = 'none'; }
+    updateMini();
   }
   function markHeard() {
     if (heardMarked || !cur) return;
@@ -223,26 +268,31 @@
     clearTimeout(unholdTimer);
     if (window.BGM && window.BGM.hold) window.BGM.hold(true);
     updateButtons();
+    positionState();
     startLoop();
   });
   audio.addEventListener('pause', function () {
     updateButtons();
-    savePos();
+    positionState();
+    if (!interlude) savePos();
     // Doi mot chut: het bai chuyen sang bai moi thi khong bat lai nhac nen
     clearTimeout(unholdTimer);
     unholdTimer = setTimeout(function () { if (audio.paused && window.BGM && window.BGM.hold) window.BGM.hold(false); }, 1500);
   });
   audio.addEventListener('ended', function () {
+    if (interlude) return endInterlude();
     markHeard();
-    goNext();
+    load(nextId, true, 0, false, true);
+    refresh();
   });
   audio.addEventListener('error', function () {
     if (!cur || !audio.getAttribute('src')) return;
+    if (interlude) return endInterlude();
     audioErr = true;
     refresh();
   });
   audio.addEventListener('timeupdate', function () {
-    if (!cur) return;
+    if (!cur || interlude) return;
     var t = audio.currentTime, now = Date.now();
     if (!heardMarked && t >= cur.duration * 0.9) markHeard();
     if (!audio.paused && now - lastTick < 2000) {
@@ -255,10 +305,11 @@
     if (!looping || now - lastFrame > 500) sync();
   });
   audio.addEventListener('loadedmetadata', positionState);
+  audio.addEventListener('durationchange', positionState);
   audio.addEventListener('ratechange', positionState);
   audio.addEventListener('seeked', function () { positionState(); sync(); });
 
-  // ---------- man hinh khoa ----------
+  // ---------- man hinh khoa, thanh thong bao ----------
   var ms = navigator.mediaSession;
   function setMedia(ep) {
     if (!ms || !window.MediaMetadata) return;
@@ -268,7 +319,7 @@
     });
   }
   function positionState() {
-    if (!ms || !ms.setPositionState || !audio.duration || !isFinite(audio.duration)) return;
+    if (interlude || !ms || !ms.setPositionState || !audio.duration || !isFinite(audio.duration)) return;
     try { ms.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate, position: Math.min(audio.currentTime, audio.duration) }); } catch (e) { /* trinh duyet cu */ }
   }
   if (ms) {
@@ -277,8 +328,8 @@
       pause: function () { audio.pause(); },
       previoustrack: goPrev,
       nexttrack: goNext,
-      seekbackward: function () { seek(audio.currentTime - 10); },
-      seekforward: function () { seek(audio.currentTime + 10); },
+      seekbackward: function (d) { seek(audio.currentTime - ((d && d.seekOffset) || 10)); },
+      seekforward: function (d) { seek(audio.currentTime + ((d && d.seekOffset) || 10)); },
       seekto: function (d) { seek(d.seekTime); }
     };
     for (var act in handlers) {
@@ -329,7 +380,13 @@
     });
   }
 
-  // ---------- giao dien trinh phat ----------
+  // ---------- lop phu trinh phat ----------
+  function topBar(left, title, right) {
+    return '<div class="ps-top">' + left + '<span class="ps-title">' + title + '</span>' + right + '</div>';
+  }
+  function iconBtn(act, icon, title) {
+    return '<button class="pod-b" data-act="' + act + '" title="' + title + '">' + svg(icon) + '</button>';
+  }
   function chapsHtml() {
     if (!lyric) return '';
     var out = '';
@@ -366,26 +423,34 @@
     return out;
   }
   function opt(act, label, on) { return '<button class="' + (on ? 'on' : '') + '" data-act="' + act + '">' + label + '</button>'; }
+  function ratesHtml() {
+    var out = '<div class="pod-opts pod-rates"><span>' + T('Tốc độ', 'Speed') + '</span>';
+    for (var i = 0; i < RATES.length; i++) {
+      out += '<button class="' + (RATES[i] === prefs.rate ? 'on' : '') + '" data-act="podSetRate" data-r="' + RATES[i] + '">' + RATES[i] + 'x</button>';
+    }
+    return out + '</div>';
+  }
   function viewPlayer() {
-    var ep = cur, nxt = byId[nextId];
+    var ep = cur;
     var tags = '<span class="pod-lv">' + h(ep.level.toUpperCase()) + '</span>' + h(FORMATS[ep.format] ? L(FORMATS[ep.format]) : '') +
       (ep.topics && ep.topics.length ? ' · ' + h(ep.topics.join(', ')) : '') + (ep.date ? ' · ' + h(fmtDate(ep.date)) : '');
     var cls = 'pod' + (prefs.furi ? '' : ' no-furi') + (prefs.ro ? '' : ' no-ro') + (prefs.tr ? '' : ' no-tr');
-    var status = audioErr ? '<span class="pod-err">' + T('Không tải được âm thanh. Bấm ▶ để thử lại.', 'Audio failed to load. Press ▶ to retry.') + '</span>'
-      : '<span class="pod-next">' + (nxt && nxt !== ep && !prefs.repeat ? T('Tiếp: ', 'Next: ') + h(nxt.title.vi) : prefs.repeat ? T('Đang lặp lại tập này', 'Repeating this episode') : '') + '</span>';
-    return '<div class="' + cls + '" id="pod">' +
-      '<div class="pod-head"><a class="icon-btn pod-listbtn" href="#/podcast/list" title="' + T('Danh sách tập', 'Episode list') + '">' + svg('list') + '</a>' +
-      '<div class="pod-tags">' + tags + '</div>' +
+    var status = audioErr ? '<span class="pod-err">' + T('Không tải được âm thanh. Bấm ▶ để thử lại.', 'Audio failed to load. Press ▶ to retry.') + '</span>' : '';
+    return '<div class="' + cls + '">' +
+      topBar(iconBtn('podClose', 'down', T('Thu nhỏ', 'Minimize')), 'Podcast', iconBtn('podList', 'list', T('Danh sách tập', 'Episode list'))) +
+      '<div class="ps-body" id="podBody">' +
+      '<div class="pod-head"><div class="pod-tags">' + tags + '</div>' +
       '<h1 class="pod-title jp" lang="ja">' + ruby(ep.title.ja) + '</h1>' +
       '<p class="pod-sub">' + h(ep.title.vi) + '</p>' +
       '<div class="pod-chaps" id="podChaps">' + chapsHtml() + '</div></div>' +
-      '<div class="pod-lyrics" id="podLyrics">' + lyricsHtml() + '</div>' +
+      '<div class="pod-lyrics" id="podLyrics">' + lyricsHtml() + '</div></div>' +
       (blocked ? '<button class="pod-start" data-act="podToggle">' + svg('play') + T('Chạm để nghe', 'Tap to listen') + '</button>' : '') +
+      (interlude && !blocked ? '<div class="pod-inter">♪ ' + T('Nghỉ một chút, tập mới sắp bắt đầu…', 'Short break, the next episode is coming…') + '</div>' : '') +
       '<button class="pod-follow" id="podFollow" data-act="podFollow">↓ ' + T('Về câu đang phát', 'Back to current line') + '</button>' +
       '<div class="pod-dock" id="podDock"><div class="pod-dock-in">' +
       '<div class="pod-seekwrap"><div class="pod-ticks" id="podTicks">' + ticksHtml() + '</div>' +
-      '<input class="pod-seek" id="podSeek" type="range" min="0" max="' + ep.duration + '" step="0.1" value="' + audio.currentTime + '" data-input="podSeek"></div>' +
-      '<div class="pod-times"><span id="podCur">' + fmtTime(audio.currentTime) + '</span>' + status + '<span>' + fmtTime(ep.duration) + '</span></div>' +
+      '<input class="pod-seek" id="podSeek" type="range" min="0" max="' + ep.duration + '" step="0.1" value="' + (interlude ? 0 : audio.currentTime) + '" data-input="podSeek"></div>' +
+      '<div class="pod-times"><span id="podCur">' + fmtTime(interlude ? 0 : audio.currentTime) + '</span>' + status + '<span>' + fmtTime(ep.duration) + '</span></div>' +
       '<div class="pod-ctrl">' +
       '<button class="pod-b' + (prefs.repeat ? ' on' : '') + '" data-act="podRepeat" title="' + T('Lặp lại tập này', 'Repeat this episode') + '">' + svg('repeat') + '</button>' +
       '<button class="pod-b" data-act="podPrev" title="' + T('Tập trước', 'Previous') + '">' + svg('prev') + '</button>' +
@@ -393,14 +458,32 @@
       '<button class="pod-play" id="podPlay" data-act="podToggle" title="' + T('Phát / tạm dừng', 'Play / pause') + '">' + svg(audio.paused ? 'play' : 'pause') + '</button>' +
       '<button class="pod-b txt" data-act="podFwd" title="' + T('Tới 10 giây', 'Forward 10 seconds') + '">+10</button>' +
       '<button class="pod-b" data-act="podNext" title="' + T('Tập khác', 'Next episode') + '">' + svg('next') + '</button>' +
-      '<button class="pod-b txt" data-act="podRate" title="' + T('Tốc độ', 'Speed') + '">' + prefs.rate + 'x</button></div>' +
-      '<div class="pod-opts">' + opt('podFuri', 'Furigana', prefs.furi) + opt('podRo', 'Romaji', prefs.ro) + opt('podTr', T('Dịch', 'Translation'), prefs.tr) + '</div>' +
+      '<button class="pod-b txt' + (rateOpen ? ' on' : '') + '" data-act="podRate" title="' + T('Tốc độ', 'Speed') + '">' + prefs.rate + 'x</button></div>' +
+      (rateOpen ? ratesHtml() : '<div class="pod-opts">' + opt('podFuri', 'Furigana', prefs.furi) + opt('podRo', 'Romaji', prefs.ro) + opt('podTr', T('Dịch', 'Translation'), prefs.tr) + '</div>') +
       '</div></div></div>';
   }
+  function sheetEl() {
+    if (!sheet) {
+      sheet = document.createElement('div');
+      sheet.id = 'podSheet';
+      document.body.appendChild(sheet);
+    }
+    return sheet;
+  }
+  function renderSheet() {
+    var el = sheetEl(), body = document.getElementById('podBody');
+    var keep = body ? body.scrollTop : 0, sameView = el.getAttribute('data-view') === sheetView;
+    onPlayer = full && sheetView === 'player' && !!cur;
+    el.setAttribute('data-view', sheetView);
+    el.innerHTML = sheetView === 'list' || !cur ? viewList() : viewPlayer();
+    body = document.getElementById('podBody');
+    if (body && sameView) body.scrollTop = keep;
+    if (onPlayer) bind();
+    else els = [];
+  }
   function refresh() {
-    var r = App.route();
-    if (r[0] === 'podcast') App.render();
-    else updateMini();
+    if (full) renderSheet();
+    updateMini();
   }
   function refreshLyrics() {
     if (!onPlayer) return;
@@ -419,20 +502,44 @@
     startLoop();
   }
   function layout() {
-    var dock = document.getElementById('podDock'), tb = tabbarHeight();
-    if (!dock) return;
-    dock.style.bottom = tb + 'px';
-    var fb = document.getElementById('podFollow');
-    if (fb) fb.style.bottom = (dock.offsetHeight + tb + 12) + 'px';
-    document.getElementById('app').style.paddingBottom = (dock.offsetHeight + tb + 16) + 'px';
+    var dock = document.getElementById('podDock'), fb = document.getElementById('podFollow');
+    if (dock && fb) fb.style.bottom = (dock.offsetHeight + 12) + 'px';
   }
+  function openSheet(view) {
+    if (!EPS.length) return;
+    sheetView = view || 'player';
+    if (!cur) load(pickNext(null), true);
+    var el = sheetEl();
+    if (!full) {
+      full = true;
+      pageY = window.pageYOffset;
+      try { window.history.pushState({ podSheet: 1 }, ''); } catch (e) { /* trinh duyet cu */ }
+    }
+    document.body.classList.add('pod-full');
+    renderSheet();
+    void el.offsetWidth;
+    el.classList.add('open');
+    updateMini();
+  }
+  function closeSheet(fromPop) {
+    if (!full) return;
+    full = onPlayer = rateOpen = false;
+    els = [];
+    sheet.classList.remove('open');
+    document.body.classList.remove('pod-full');
+    window.scrollTo(0, pageY);
+    updateMini();
+    if (!fromPop && window.history.state && window.history.state.podSheet) window.history.back();
+  }
+  // Nut Back cua Android thu nho trinh phat thay vi roi trang
+  window.addEventListener('popstate', function () { if (full) closeSheet(true); });
   function updateButtons() {
     var b = document.getElementById('podPlay');
     if (b) b.innerHTML = svg(audio.paused ? 'play' : 'pause');
     var start = document.querySelector('.pod-start');
     if (start && !audio.paused) start.parentNode.removeChild(start);
     updateMini();
-    if (ms) ms.playbackState = audio.paused ? 'paused' : 'playing';
+    if (ms) ms.playbackState = !cur ? 'none' : audio.paused ? 'paused' : 'playing';
   }
 
   function lineAt(lines, t) {
@@ -444,20 +551,22 @@
     return ans;
   }
   function center(el) {
-    var r = el.getBoundingClientRect(), dock = document.getElementById('podDock');
-    var top = 60, bottom = window.innerHeight - (dock ? dock.offsetHeight : 0) - tabbarHeight();
-    var y = Math.max(0, window.pageYOffset + r.top + r.height / 2 - (top + (bottom - top) * 0.45));
-    try { window.scrollTo({ top: y, behavior: 'smooth' }); } catch (e) { window.scrollTo(0, y); }
+    var box = document.getElementById('podBody');
+    if (!box) return;
+    var y = Math.max(0, el.offsetTop + el.offsetHeight / 2 - box.clientHeight * 0.45);
+    if (box.scrollTo) {
+      try { box.scrollTo({ top: y, behavior: 'smooth' }); } catch (e) { box.scrollTop = y; }
+    } else box.scrollTop = y;
     // Cuon muot can trinh duyet ve khung hinh; khong ve thi nhay thang
-    setTimeout(function () { if (Math.abs(window.pageYOffset - y) > 40) window.scrollTo(0, y); }, 800);
+    setTimeout(function () { if (Math.abs(box.scrollTop - y) > 40) box.scrollTop = y; }, 800);
   }
   function sync() {
     if (!cur || !onPlayer) return;
-    var t = audio.currentTime;
+    var t = interlude ? 0 : audio.currentTime;
     var seekEl = document.getElementById('podSeek'), curEl = document.getElementById('podCur');
     if (seekEl) seekEl.value = t;
     if (curEl) curEl.textContent = fmtTime(t);
-    if (!lyric || !els.length) return;
+    if (interlude || !lyric || !els.length) return;
     var lines = lyric.lines, i = lineAt(lines, t), k;
     if (i !== curLine) {
       if (curLine >= 0 && els[curLine]) {
@@ -507,12 +616,15 @@
   }
   function pauseFollow(e) {
     if (!onPlayer) return;
-    for (var el = e && e.target; el && el !== document; el = el.parentNode) if (el.id === 'podDock') return;
-    follow = false;
-    var fb = document.getElementById('podFollow');
-    if (fb) fb.style.display = 'block';
-    clearTimeout(followTimer);
-    followTimer = setTimeout(resumeFollow, 6000);
+    for (var el = e && e.target; el && el !== document; el = el.parentNode) {
+      if (el.id !== 'podBody') continue;
+      follow = false;
+      var fb = document.getElementById('podFollow');
+      if (fb) fb.style.display = 'block';
+      clearTimeout(followTimer);
+      followTimer = setTimeout(resumeFollow, 6000);
+      return;
+    }
   }
   function resumeFollow() {
     follow = true;
@@ -523,21 +635,23 @@
   }
   window.addEventListener('wheel', pauseFollow, { passive: true });
   window.addEventListener('touchmove', pauseFollow, { passive: true });
-  window.addEventListener('resize', function () { if (onPlayer) layout(); else updateMini(); });
+  window.addEventListener('resize', function () { if (onPlayer) layout(); updateMini(); });
   document.addEventListener('visibilitychange', function () {
     if (!document.hidden && onPlayer) { curLine = -1; sync(); startLoop(); }
   });
   document.addEventListener('keydown', function (e) {
     var tag = e.target && e.target.tagName;
-    if (!onPlayer || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
-    if (e.key === ' ' || e.keyCode === 32) { e.preventDefault(); toggle(); }
+    if (!full || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    if (e.key === 'Escape' || e.keyCode === 27) closeSheet();
+    else if (onPlayer && (e.key === ' ' || e.keyCode === 32)) { e.preventDefault(); toggle(); }
   });
 
-  // ---------- thanh phat nho o cac trang khac ----------
+  // ---------- thanh phat nho o day man hinh ----------
   function updateMini() {
-    var el = document.getElementById('podMini');
-    if (onPlayer || !cur) {
+    var el = document.getElementById('podMini'), app = document.getElementById('app');
+    if (full || !cur) {
       if (el) el.style.display = 'none';
+      if (app) app.style.paddingBottom = '';
       return;
     }
     if (!el) {
@@ -548,9 +662,11 @@
     el.style.display = '';
     el.style.bottom = tabbarHeight() + 'px';
     el.innerHTML = '<button class="pod-b" data-act="podToggle" title="' + T('Phát / tạm dừng', 'Play / pause') + '">' + svg(audio.paused ? 'play' : 'pause') + '</button>' +
-      '<a class="pm-body" href="#/podcast"><b>' + h(cur.title.vi) + '</b><small>Podcast · ' + h(cur.level.toUpperCase()) + '</small></a>' +
-      '<button class="pod-b" data-act="podNext" title="' + T('Tập khác', 'Next episode') + '">' + svg('next') + '</button>';
-    document.getElementById('app').style.paddingBottom = (el.offsetHeight + tabbarHeight() + 16) + 'px';
+      '<div class="pm-body" data-act="podOpen"><b>' + h(cur.title.vi) + '</b><small>' +
+      (interlude ? '♪ ' + T('Sắp sang tập mới…', 'Next episode soon…') : 'Podcast · ' + h(cur.level.toUpperCase())) + '</small></div>' +
+      '<button class="pod-b" data-act="podNext" title="' + T('Tập khác', 'Next episode') + '">' + svg('next') + '</button>' +
+      '<button class="pod-b pm-x" data-act="podStop" title="' + T('Tắt trình phát', 'Close player') + '">' + svg('close') + '</button>';
+    if (app) app.style.paddingBottom = (el.offsetHeight + tabbarHeight() + 16) + 'px';
   }
 
   // ---------- danh sach ----------
@@ -568,8 +684,11 @@
         if (!seen[tp]) { seen[tp] = 1; topics.push(tp); }
       }
     }
-    var html = '<div class="hero slim"><h1>' + T('Danh sách podcast', 'Podcast episodes') + '</h1><p class="sub">' +
-      T('Đã nghe ', 'Heard ') + countHeard() + '/' + EPS.length + T(' tập', ' episodes') + '</p></div>';
+    var html = '<div class="pod">' +
+      topBar(cur ? iconBtn('podList', 'back', T('Về trình phát', 'Back to player')) : '<span class="pod-b"></span>',
+        T('Danh sách tập', 'Episodes'), iconBtn('podClose', 'down', T('Thu nhỏ', 'Minimize'))) +
+      '<div class="ps-body" id="podBody"><div class="pod-listwrap">' +
+      '<p class="pod-count">' + T('Đã nghe ', 'Heard ') + countHeard() + '/' + EPS.length + T(' tập', ' episodes') + '</p>';
 
     var lvList = Object.keys(levels).sort();
     if (lvList.length > 1) {
@@ -579,7 +698,7 @@
     }
 
     var off = offlineInfo();
-    html += '<div class="card narrow pod-off"><div class="body"><b>' + T('Nghe offline', 'Listen offline') + '</b><small>' +
+    html += '<div class="card pod-off"><div class="body"><b>' + T('Nghe offline', 'Listen offline') + '</b><small>' +
       (dlStatus || (off.count ? T('Đã tải ', 'Downloaded ') + off.count + T(' tập · ', ' episodes · ') + fmtSize(off.size) : T('Tải sẵn khi có Wi-Fi để nghe trên tàu, kể cả lúc mất sóng.', 'Download on Wi-Fi to listen without signal.'))) +
       '</small></div><div class="pod-off-btns">' +
       (window.caches ? '<button class="btn" data-act="podDl">' + T('Tải 5 tập chưa nghe', 'Download 5 new') + '</button>' : '') +
@@ -587,26 +706,30 @@
 
     html += '<div class="chips">' + '<button class="chip' + (topic ? '' : ' on') + '" data-act="podTopic" data-t="">' + T('Tất cả', 'All') + '</button>';
     for (i = 0; i < topics.length; i++) html += '<button class="chip' + (topic === topics[i] ? ' on' : '') + '" data-act="podTopic" data-t="' + h(topics[i]) + '">' + h(topics[i]) + '</button>';
-    html += '</div><div class="rows narrow">';
+    html += '</div><div class="rows">';
     for (i = EPS.length - 1; i >= 0; i--) {
       ep = EPS[i];
       if (prefs.level && ep.level !== prefs.level) continue;
       if (topic && (ep.topics || []).indexOf(topic) < 0) continue;
       var badges = (heard[ep.id] ? '✓ ' + T('Đã nghe', 'Heard') : prefs.pos[ep.id] ? T('Đang nghe dở', 'In progress') : '') +
         (prefs.dl[ep.id] ? (heard[ep.id] || prefs.pos[ep.id] ? ' · ' : '') + T('Đã tải', 'Saved') : '');
-      html += '<a class="card rowcard pod-row' + (cur && cur.id === ep.id ? ' playing' : '') + (heard[ep.id] ? ' heard' : '') + '" href="#/podcast" data-act="podPick" data-id="' + ep.id + '">' +
+      html += '<div class="card rowcard pod-row' + (cur && cur.id === ep.id ? ' playing' : '') + (heard[ep.id] ? ' heard' : '') + '" data-act="podPick" data-id="' + ep.id + '">' +
         '<span class="body"><small class="pod-tags">' + '<span class="pod-lv">' + h(ep.level.toUpperCase()) + '</span>' + h(FORMATS[ep.format] ? L(FORMATS[ep.format]) : '') + (ep.date ? ' · ' + h(fmtDate(ep.date)) : '') + '</small>' +
         '<b>' + h(ep.title.vi) + ' <span class="jp" lang="ja">' + h(plainJa(ep.title.ja)) + '</span></b>' +
         '<span class="preview">' + h(ep.summary || '') + '</span>' + (badges ? '<em>' + badges + '</em>' : '') + '</span>' +
-        '<span class="meta"><b>' + fmtTime(ep.duration) + '</b><small>' + fmtSize(ep.size) + '</small></span></a>';
+        '<span class="meta"><b>' + fmtTime(ep.duration) + '</b><small>' + fmtSize(ep.size) + '</small></span></div>';
     }
-    return html + '</div>';
+    return html + '</div></div></div></div>';
   }
 
   // ---------- hanh dong ----------
   var A = App.actions;
+  A.podOpen = function () { openSheet('player'); };
+  A.podClose = function () { closeSheet(); };
+  A.podList = function () { sheetView = sheetView === 'list' ? 'player' : 'list'; rateOpen = false; renderSheet(); };
   A.podToggle = toggle;
   A.podNext = goNext;
+  A.podStop = stopPlayer;
   A.podPrev = goPrev;
   A.podBack = function () { seek(audio.currentTime - 10); };
   A.podFwd = function () { seek(audio.currentTime + 10); };
@@ -624,31 +747,34 @@
     resumeFollow();
     if (audio.paused) play();
   };
-  A.podRate = function () {
-    prefs.rate = RATES[(RATES.indexOf(prefs.rate) + 1) % RATES.length];
+  A.podRate = function () { rateOpen = !rateOpen; refresh(); };
+  A.podSetRate = function (el) {
+    prefs.rate = +el.getAttribute('data-r');
     audio.defaultPlaybackRate = audio.playbackRate = prefs.rate;
     savePrefs();
-    App.render();
+    rateOpen = false;
+    refresh();
   };
   A.podRepeat = function () {
     prefs.repeat = !prefs.repeat;
-    audio.loop = prefs.repeat;
+    audio.loop = prefs.repeat && !interlude;
     savePrefs();
     App.emit('podcast:repeat', { on: prefs.repeat });
-    App.render();
+    refresh();
   };
-  function flip(key) { return function () { prefs[key] = prefs[key] ? 0 : 1; savePrefs(); App.render(); }; }
+  function flip(key) { return function () { prefs[key] = prefs[key] ? 0 : 1; savePrefs(); refresh(); }; }
   A.podFuri = flip('furi');
   A.podRo = flip('ro');
   A.podTr = flip('tr');
   A.podPick = function (el) {
     var id = el.getAttribute('data-id');
-    if (cur && cur.id === id) { if (audio.paused) play(); return; }
-    var at = prefs.pos[id] || 0;
-    load(id, true, at);
+    if (!cur || cur.id !== id) load(id, true, prefs.pos[id] || 0);
+    else if (audio.paused) play();
+    sheetView = 'player';
+    refresh();
   };
-  A.podTopic = function (el) { topic = el.getAttribute('data-t'); App.render(); };
-  A.podLevel = function (el) { prefs.level = el.getAttribute('data-lv'); savePrefs(); App.render(); };
+  A.podTopic = function (el) { topic = el.getAttribute('data-t'); refresh(); };
+  A.podLevel = function (el) { prefs.level = el.getAttribute('data-lv'); savePrefs(); refresh(); };
   A.podDl = function () {
     if (dlStatus || !window.caches) return;
     var heard = heardMap(), list = App.shuffle(pool()), want = [];
@@ -657,9 +783,9 @@
     if (navigator.storage && navigator.storage.persist) navigator.storage.persist();
     var done = 0;
     function step() {
-      if (done >= want.length) { dlStatus = ''; return App.render(); }
+      if (done >= want.length) { dlStatus = ''; return refresh(); }
       dlStatus = T('Đang tải ', 'Downloading ') + (done + 1) + '/' + want.length + '…';
-      App.render();
+      refresh();
       cacheEpisode(want[done]).then(function () {
         prefs.dl[want[done].id] = 1;
         delete prefs.pre[want[done].id];
@@ -668,7 +794,7 @@
         step();
       })['catch'](function () {
         dlStatus = '';
-        App.render();
+        refresh();
         alert(T('Tải không thành công. Kiểm tra kết nối mạng rồi thử lại.', 'Download failed. Check your connection and try again.'));
       });
     }
@@ -680,7 +806,7 @@
     prefs.dl = {};
     prefs.pre = {};
     savePrefs();
-    App.render();
+    refresh();
   };
 
   App.on(function (type) {
@@ -695,22 +821,13 @@
     desc: ['Nghe Thái phó giảng bài, có lời karaoke, nghe được cả khi tắt màn hình', 'Audio lessons with karaoke lyrics that keep playing with the screen off'],
     ready: true,
     stat: function () { return T('Đã nghe ', 'Heard ') + countHeard() + '/' + EPS.length + T(' tập', ' episodes'); },
+    open: function () { openSheet('player'); },
+    // Link cu dang #/podcast: ve trang chu roi mo lop phu
     route: function (parts) {
-      if (!EPS.length) {
-        return parts.length ? null : { html: '<div class="hero"><h1>Podcast</h1><p class="sub">' + T('Chưa có tập nào.', 'No episodes yet.') + '</p></div>', title: 'Podcast' };
-      }
-      if (parts.length === 1 && parts[0] === 'list') {
-        return { html: viewList(), title: T('Danh sách podcast', 'Podcast episodes'), back: 'podcast', backLabel: 'Podcast' };
-      }
-      if (parts.length) return null;
-      if (!cur) load(pickNext(null), true);
-      return { html: viewPlayer(), title: 'Podcast', back: '', backLabel: T('Trang chủ', 'Home'), after: true };
+      var view = parts[0] === 'list' ? 'list' : 'player';
+      setTimeout(function () { location.replace('#/'); openSheet(view); }, 0);
+      return { html: '', title: 'Podcast' };
     },
-    afterRender: function (mine) {
-      onPlayer = !!mine;
-      document.getElementById('app').style.paddingBottom = '';
-      if (mine) bind();
-      else { els = []; updateMini(); }
-    }
+    afterRender: function () { updateMini(); }
   });
 })();

@@ -1,0 +1,69 @@
+{
+  "id": "n5-0046",
+  "level": "n5",
+  "format": "fact",
+  "title": {"vi": "Hai trăm thanh niên sang Nhật học", "ja": "{学生|がくせい}と{勉強|べんきょう}"},
+  "summary": "Hơn một trăm năm trước, một nhà nho xứ Nghệ đã đưa khoảng hai trăm thanh niên Việt vượt biển sang Nhật để học.",
+  "topics": ["Việt – Nhật", "lịch sử"],
+  "sources": [
+    "https://baonghean.vn/en/phan-boi-chau-va-phong-trao-dong-du-10129551.html",
+    "https://english.vtv.vn/news/100th-year-of-memorial-stele-for-phan-boi-chau-s-supporter-marked-20181001003632385.htm",
+    "https://www.studyinjapan.go.jp/ja/statistics/enrollment/data/2605291000.html"
+  ],
+  "dialogue": [],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Ngày nay, người Việt sang Nhật du học là chuyện bình thường. Nhưng hơn một trăm năm trước, đó là một chuyến đi bí mật và đầy nguy hiểm."},
+    {"spk": "thaipho", "text": "Thần hỏi Bệ hạ: phong trào đầu tiên đưa thanh niên Việt sang Nhật học tên là gì, và ai là người khởi xướng?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Đó là phong trào Đông Du, do cụ Phan Bội Châu khởi xướng. Đông Du nghĩa là đi sang phương Đông, tức là sang Nhật Bản."},
+
+    {"sec": "Vượt biển sang Nhật"},
+    {"spk": "thaipho", "text": "Đầu thế kỷ hai mươi, Việt Nam đang bị Pháp đô hộ. Còn Nhật Bản vừa canh tân thành công, trở thành một nước mạnh ở châu Á."},
+    {"spk": "thaipho", "text": "Đầu năm 1905, cụ Phan Bội Châu bí mật sang Nhật. Cụ gặp các chính khách như ông 「{大隈|!おおくま}」 và ông 「{犬養|!いぬかい}」, hai người đều từng giữ chức Thủ tướng Nhật. Họ khuyên cụ: muốn cứu nước, trước hết phải đào tạo người tài."},
+    {"spk": "thaipho", "text": "Thế là cụ vận động thanh niên cả ba miền vượt biển sang Nhật học."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: lúc đông nhất, có bao nhiêu thanh niên Việt Nam đang học ở Nhật?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Khoảng hai trăm người, vào những năm 1907 và 1908. Họ học tiếng Nhật, học các môn hiện đại, có người học cả quân sự."},
+
+    {"sec": "Người bác sĩ tốt bụng"},
+    {"spk": "thaipho", "text": "Nhưng rồi Pháp gây sức ép với Nhật. Tháng chín năm 1908, chính quyền Nhật ra lệnh giải tán tổ chức của du học sinh Việt. Đầu năm 1909, chính cụ Phan Bội Châu cũng bị trục xuất khỏi Nhật."},
+    {"spk": "thaipho", "text": "Trong lúc khó khăn nhất, có một người Nhật đã giúp đỡ hết lòng. Đó là bác sĩ 「{浅羽佐喜太郎|!あさばさきたろう}」, quê ở thành phố 「{袋井|!ふくろい}」, tỉnh 「{静岡|しずおか}」. Ông giúp một khoản tiền lớn, để các du học sinh có tiền về nước."},
+    {"spk": "thaipho", "text": "Năm 1918, cụ Phan Bội Châu quay lại Nhật để cảm ơn, thì bác sĩ đã qua đời. Cụ cùng người dân địa phương góp tiền dựng một tấm bia đá bên mộ ông."},
+    {"spk": "thaipho", "text": "Năm 2018, người Việt và người Nhật cùng làm lễ kỷ niệm một trăm năm tấm bia ấy. Một ân tình, được giữ gìn suốt một thế kỷ."},
+
+    {"sec": "Từ hai trăm đến bốn mươi nghìn"},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem: năm 2025, có bao nhiêu du học sinh Việt Nam đang học ở Nhật?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Hơn bốn mươi ba nghìn người, đông thứ ba, chỉ sau Trung Quốc và Nepal. Gấp hơn hai trăm lần thời cụ Phan Bội Châu."},
+
+    {"sec": "Học sinh và học"},
+    {"spk": "thaipho", "text": "Bây giờ là từ tiếng Nhật đầu tiên của hôm nay. Học sinh, sinh viên, tiếng Nhật gọi chung là:"},
+    {"spk": "thaipho", "ja": "{学生|がくせい}", "ro": "Gakusei", "vi": "Học sinh, sinh viên"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Bệ hạ nói lại một lần nữa nhé."},
+    {"spk": "thaipho", "ja": "{学生|がくせい}", "ro": "Gakusei", "vi": "Học sinh, sinh viên"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Từ thứ hai là động từ: học. Tiếng Nhật nói là:"},
+    {"spk": "thaipho", "ja": "{勉強|べんきょう}します", "ro": "Benkyō shimasu", "vi": "Học"},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Chữ 「{勉強|べんきょう}」 viết bằng hai chữ Hán, đọc theo âm Hán Việt là miễn cưỡng, nghĩa là gắng sức mà làm. Người Nhật hiểu rằng, đã học là phải cố gắng."},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Giờ là câu đố. Câu thứ nhất: vị bác sĩ người Nhật giúp phong trào Đông Du quê ở đâu?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Thành phố 「{袋井|!ふくろい}」, tỉnh 「{静岡|しずおか}」. Tấm bia cụ Phan Bội Châu dựng năm 1918 vẫn còn ở đó."},
+    {"spk": "thaipho", "text": "Câu thứ hai: học sinh, sinh viên, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "ja": "{学生|がくせい}", "ro": "Gakusei", "vi": "Học sinh, sinh viên"},
+    {"spk": "thaipho", "text": "Câu cuối, khó hơn một chút: Bệ hạ muốn nói: học ở Nhật Bản. Thần gợi ý: ở Nhật Bản là 「{日本|にほん}で」."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "ja": "{日本|にほん}で{勉強|べんきょう}します。", "ro": "Nihon de benkyō shimasu.", "vi": "Học ở Nhật Bản."},
+    {"pause": "auto", "cue": "repeat"},
+    {"spk": "thaipho", "text": "Hơn một trăm năm trước, câu này là cả một giấc mơ phải giấu kín. Bây giờ, Bệ hạ chỉ cần mở miệng nói."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Tóm lại hôm nay: 「{学生|がくせい}」 là học sinh, sinh viên, và 「{勉強|べんきょう}します」 là học."},
+    {"spk": "thaipho", "text": "Mỗi lần Bệ hạ ngồi học tiếng Nhật trên tàu điện, là Bệ hạ đang đi tiếp con đường mà cụ Phan Bội Châu đã mở ra. Thần xin cáo lui."}
+  ]
+}

@@ -12,7 +12,7 @@ SR = 24000
 KBPS = 32
 GAP_PIECE, GAP_SECTION = 0.12, 2.0
 GAP = {("ja", "ja"): 1.3, ("ja", "vi"): 1.2, ("vi", "ja"): 0.8, ("vi", "vi"): 0.7}
-DEFAULT_RATE = {"ja": "-15%", "vi": "+0%"}
+DEFAULT_RATE = {"ja": "-15%", "jaInline": "-25%", "vi": "+0%"}
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 pod_dir = os.path.join(root, "podcast")
 script_dir = os.path.join(pod_dir, "scripts")
@@ -23,6 +23,12 @@ RUBY = re.compile(r"\{([^|{}]+)\|([^{}]+)\}")
 JA_SPAN = re.compile(r"「(.*?)」")
 KANJI = re.compile(r"[㐀-鿿々]")
 KANA = re.compile(r"[぀-ヿ]")
+# Tu Latin co dang romaji trong loi tieng Viet: giong Viet doc sai, phai viet bang chu Nhat trong 「」
+ROMAJI = re.compile(r"^(?:(?:kk|tt|pp|ss|tch)?(?:ky|gy|sh|ch|ny|hy|by|py|my|ry|ts|[kgsztdnhbpmrjfwy])?[aiueoāīūēō]h?"
+                    r"|n(?![aiueoyāīūēō]))+$", re.I)
+VI_PLAIN = set("hai bao cho chi sau nhi sao hoa tin nhau mua gia gian tai chu run ban chia che ngu chai ngon bia giao kia "
+               "rau toa cha dao giun hoan hon nhai reo sai ten tia mai pin con tan san son man dan ton nhu mui rao bai gai "
+               "dai tao nao boa chui sen niu home game time euro emotion hawaii indonesia mario tarantino edison missouri".split())
 INDEX_KEYS = ("id", "level", "title", "summary", "format", "topics", "date", "duration", "audio", "size")
 
 
@@ -63,6 +69,9 @@ def pieces_of(item, spk, rates, warn):
         if vi:
             if KANA.search(vi) or KANJI.search(vi):
                 warn("chu Nhat nam ngoai 「」 trong cau tieng Viet: %s" % text)
+            for w in re.findall(r"[^\W\d_]{3,}", vi):
+                if ROMAJI.match(w) and w.lower() not in VI_PLAIN:
+                    warn("tu tieng Nhat viet bang chu Latin (doi sang chu Nhat trong 「」): %s" % w)
             speak = bool(re.search(r"\w", vi))
             v, r, p = voice_of(spk, "vi", rates)
             pieces.append({"voice": v, "rate": r, "pitch": p,
@@ -71,7 +80,7 @@ def pieces_of(item, spk, rates, warn):
             break
         v, r, p = voice_of(spk, "ja", rates)
         units = [{"d": "「", "tts": ""}] + ja_units(m.group(1), warn) + [{"d": "」", "tts": ""}]
-        pieces.append({"voice": v, "rate": r, "pitch": p, "units": units})
+        pieces.append({"voice": v, "rate": rates["jaInline"], "pitch": p, "units": units})
         pos = m.end()
     return pieces
 
@@ -90,7 +99,7 @@ async def synth(job, sem):
         return
     voice, rate, pitch, text = job
     async with sem:
-        for attempt in range(5):
+        for attempt in range(8):
             try:
                 audio, words = bytearray(), []
                 comm = edge_tts.Communicate(text, voice, rate=rate, pitch=pitch, boundary="WordBoundary")
@@ -103,7 +112,7 @@ async def synth(job, sem):
                     break
             except Exception:
                 pass
-            await asyncio.sleep(1 + attempt * 2)
+            await asyncio.sleep(2 + attempt * 3)
         else:
             raise RuntimeError("TTS loi: %s %s" % (voice, text))
     with open(path + ".mp3", "wb") as f:
@@ -212,7 +221,7 @@ async def build(path, cast):
 
     jobs = {(p["voice"], p["rate"], p["pitch"], tts_text(p))
             for ln in lines for p in ln.get("pieces", []) if tts_text(p)}
-    sem = asyncio.Semaphore(4)
+    sem = asyncio.Semaphore(3)
     await asyncio.gather(*(synth(j, sem) for j in jobs))
 
     audio, t, prev_lang, last_dur, missed, total = [], 0.0, None, 0.0, 0, 0
@@ -312,9 +321,18 @@ async def main(ids):
     paths = sorted(glob.glob(os.path.join(script_dir, "*.json")))
     if ids:
         paths = [p for p in paths if os.path.splitext(os.path.basename(p))[0] in ids]
+    failed = []
     for p in paths:
-        await build(p, cast)
+        try:
+            await build(p, cast)
+        except RuntimeError as e:
+            # Dich vu TTS hay loi tam thoi; bo qua tap nay, chay lai sau (cau da doc van con trong cache)
+            failed.append(os.path.splitext(os.path.basename(p))[0])
+            out("LOI %s: %s" % (failed[-1], e))
     write_index()
+    if failed:
+        out("Chua xong (chay lai): " + " ".join(failed))
+        sys.exit(1)
 
 
 asyncio.run(main(sys.argv[1:]))

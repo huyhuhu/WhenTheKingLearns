@@ -22,11 +22,11 @@
   "flow": [
     {"sec": "Mở đầu"},
     {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần đưa Bệ hạ vào cửa hàng tiện lợi. Tiếng Nhật gọi là 「コンビニ」."},
-    {"spk": "thaipho", "text": "Yuki đi làm về, mua một hộp cơm và một cây kem. Nhưng cô ấy vừa đi vừa xem điện thoại. Bệ hạ nghe thử nhé."},
+    {"spk": "thaipho", "text": "「ユキ」 đi làm về, mua một hộp cơm và một cây kem. Nhưng cô ấy vừa đi vừa xem điện thoại. Bệ hạ nghe thử nhé."},
 
     {"sec": "Nghe lần 1"},
     {"d": "all"},
-    {"spk": "thaipho", "text": "Bệ hạ đoán xem, Yuki đã nói nhầm điều gì?"},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, 「ユキ」 đã nói nhầm điều gì?"},
     {"pause": 5, "cue": "think"},
 
     {"sec": "Giải thích"},
@@ -40,7 +40,7 @@
     {"spk": "tenin", "ja": "お{弁当|べんとう}は{温|あたた}めますか。", "ro": "Obentō wa atatamemasu ka.", "vi": "Cơm hộp có hâm nóng không ạ?"},
     {"pause": "auto", "cue": "repeat"},
     {"d": 3},
-    {"spk": "thaipho", "text": "Yuki mải xem điện thoại, trả lời: vâng, hâm hết giúp tôi. Chữ 「{全部|ぜんぶ}」 nghĩa là: tất cả."},
+    {"spk": "thaipho", "text": "「ユキ」 mải xem điện thoại, trả lời: vâng, hâm hết giúp tôi. Chữ 「{全部|ぜんぶ}」 nghĩa là: tất cả."},
     {"spk": "thaipho", "text": "Hâm hết, tức là hâm luôn cả cây kem! Bệ hạ đoán xem nhân viên sẽ nói gì?"},
     {"pause": 4, "cue": "think"},
     {"d": 4},
@@ -53,7 +53,7 @@
     {"d": 8},
     {"d": 9},
     {"d": 10},
-    {"spk": "thaipho", "text": "Ha ha, Kenta đứng ngay phía sau và nghe hết rồi. Anh ấy trêu: kem có ấm không? Còn tiếng 「もう」 ở đây là tiếng than: thôi mà!"},
+    {"spk": "thaipho", "text": "Ha ha, 「ケンタ」 đứng ngay phía sau và nghe hết rồi. Anh ấy trêu: kem có ấm không? Còn tiếng 「もう」 ở đây là tiếng than: thôi mà!"},
 
     {"sec": "Nghe lần 2"},
     {"spk": "thaipho", "text": "Bệ hạ nghe lại cả đoạn nhé."},
