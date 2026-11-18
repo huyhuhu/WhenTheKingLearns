@@ -1,0 +1,16 @@
+{
+  "thaipho": { "name": "Thái phó", "vi": "vi-VN-NamMinhNeural", "ja": "ja-JP-KeitaNeural",
+    "desc": "Người dẫn chương trình, thầy giáo của Bệ hạ. Nói tiếng Việt, gọi người nghe là Bệ hạ, xưng thần. Hài hước nhẹ, kiên nhẫn." },
+  "yuki": { "name": "Yuki", "ja": "ja-JP-NanamiNeural",
+    "desc": "25 tuổi, nhân viên văn phòng ở Tokyo. Tốt bụng, hay đãng trí (từng tưởng quên ô trên tàu). Thuê phòng nhà bà Sato." },
+  "kenta": { "name": "Kenta", "ja": "ja-JP-KeitaNeural", "pitch": "+6Hz",
+    "desc": "27 tuổi, đồng nghiệp cùng phòng với Yuki. Mê công nghệ, game, phim. Thầm thích Yuki nhưng nhút nhát." },
+  "tanaka": { "name": "Trưởng phòng Tanaka", "ja": "ja-JP-KeitaNeural", "pitch": "-10Hz", "rate": "-20%",
+    "desc": "50 tuổi, trưởng phòng của Yuki và Kenta. Nghiêm nhưng tốt bụng, hay kể chuyện cười nhạt." },
+  "sato": { "name": "Bà Sato", "ja": "ja-JP-NanamiNeural", "pitch": "-12Hz", "rate": "-22%",
+    "desc": "70 tuổi, bà chủ nhà của Yuki. Hay cho đồ ăn, biết hết chuyện trong khu phố, nuôi mèo Tama." },
+  "tama": { "name": "Mèo Tama", "ja": "ja-JP-NanamiNeural", "pitch": "+25Hz",
+    "desc": "Mèo của bà Sato. Chỉ kêu ニャー, ニャン." },
+  "anchor": { "name": "Phát thanh viên", "ja": "ja-JP-NanamiNeural",
+    "desc": "Đọc bản tin tiếng Nhật bằng câu N5 ngắn, rõ." }
+}

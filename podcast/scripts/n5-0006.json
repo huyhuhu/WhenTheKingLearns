@@ -1,0 +1,102 @@
+{
+  "id": "n5-0006",
+  "level": "n5",
+  "format": "news",
+  "title": {"vi": "Phim Việt: Ngày con còn mẹ", "ja": "お{母|かあ}さんの{映画|えいが}"},
+  "summary": "Hồng Đào và Phương Anh Đào lại đóng chung, lần này làm hai mẹ con trên màn ảnh.",
+  "topics": ["showbiz", "tin tức"],
+  "date": "2026-11-11",
+  "sources": [
+    "https://tienphong.vn/vu-ngoc-dang-dat-cuoc-tat-tay-vao-hong-dao-phuong-anh-dao-post1893087.tpo",
+    "https://tuoitre.vn/hong-dao-phuong-anh-dao-tra-het-duyen-no-cu-trong-ngay-con-con-me-20260502142229374.htm",
+    "https://znews.vn/phan-ung-voi-phim-co-phuong-anh-dao-post1695840.html",
+    "https://www.elle.vn/the-gioi-van-hoa/phim-chieu-rap-thang-11-2026/"
+  ],
+  "speakers": {},
+  "dialogue": [
+    {"spk": "anchor", "ja": "ベトナムの{映画|えいが}のニュースです。", "ro": "Betonamu no eiga no nyūsu desu.", "vi": "Đây là tin về phim Việt Nam."},
+    {"spk": "anchor", "ja": "{十一月|!じゅういちがつ}{十一日|!じゅういちにち}に、{新|あたら}しい{映画|えいが}が{始|はじ}まりました。", "ro": "Jūichigatsu jūichinichi ni, atarashii eiga ga hajimarimashita.", "vi": "Ngày 11 tháng 11, một bộ phim mới đã bắt đầu chiếu."},
+    {"spk": "anchor", "ja": "お{母|かあ}さんと{娘|むすめ}の{話|はなし}です。", "ro": "Okāsan to musume no hanashi desu.", "vi": "Đó là câu chuyện về mẹ và con gái."},
+    {"spk": "anchor", "ja": "{二人|!ふたり}の{女優|じょゆう}は、{前|まえ}も{一緒|いっしょ}に{映画|えいが}に{出|で}ました。", "ro": "Futari no joyū wa, mae mo issho ni eiga ni demashita.", "vi": "Hai nữ diễn viên trước đây cũng từng đóng phim cùng nhau."},
+    {"spk": "anchor", "ja": "{映画|えいが}は{二時間|!にじかん}ぐらいです。", "ro": "Eiga wa nijikan gurai desu.", "vi": "Phim dài khoảng hai tiếng."},
+    {"spk": "anchor", "ja": "{見|み}た{人|ひと}は、{二人|!ふたり}ともとても{上手|じょうず}だと{言|い}いました。", "ro": "Mita hito wa, futari tomo totemo jōzu da to iimashita.", "vi": "Người xem nói cả hai đều diễn rất giỏi."}
+  ],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần kể Bệ hạ nghe một tin điện ảnh Việt Nam."},
+    {"spk": "thaipho", "text": "Ngày mười một tháng mười một, bộ phim Ngày con còn mẹ của đạo diễn Vũ Ngọc Đãng chính thức ra rạp trên toàn quốc."},
+    {"spk": "thaipho", "text": "Phim có nghệ sĩ Hồng Đào và diễn viên Phương Anh Đào, đóng vai hai mẹ con. Bây giờ, Bệ hạ hãy nghe bản tin tiếng Nhật trước nhé."},
+
+    {"sec": "Bản tin"},
+    {"d": "all"},
+    {"spk": "thaipho", "text": "Bệ hạ nghe được từ nào quen không? Thần cho Bệ hạ vài giây suy nghĩ."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Rồi, bây giờ thần giải thích từng câu."},
+
+    {"sec": "Giải thích"},
+    {"d": 0},
+    {"spk": "thaipho", "text": "「ベトナム」, là Việt Nam. 「{映画|えいが}」, là phim điện ảnh."},
+    {"spk": "thaipho", "text": "Bệ hạ nói theo nhé."},
+    {"d": 0},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"d": 1},
+    {"spk": "thaipho", "text": "「{始|はじ}まりました」, nghĩa là: đã bắt đầu. Với phim, nghĩa là bắt đầu chiếu ngoài rạp."},
+    {"spk": "thaipho", "text": "Ngày mười một tiếng Nhật là 「{十一日|!じゅういちにち}」. Ngày mười một tháng mười một, hai số mười một, dễ nhớ phải không Bệ hạ?"},
+
+    {"d": 2},
+    {"spk": "thaipho", "text": "Bệ hạ thử đoán xem, bộ phim kể chuyện về ai?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "「お{母|かあ}さん」, là mẹ. 「{娘|むすめ}」, là con gái. Phim kể chuyện về mẹ và con gái."},
+    {"spk": "thaipho", "text": "Trong phim, nghệ sĩ Hồng Đào vào vai bà Tím, còn Phương Anh Đào vào vai cô con gái tên Mây."},
+
+    {"d": 3},
+    {"spk": "thaipho", "text": "「{二人|!ふたり}」, là hai người. 「{一緒|いっしょ}に」, là cùng nhau."},
+    {"spk": "thaipho", "text": "Năm hai nghìn không trăm hai mươi tư, hai người từng đóng chung phim Mai. Hồi đó, Hồng Đào suýt làm mẹ chồng của Phương Anh Đào. Lần này, bà làm mẹ ruột luôn."},
+    {"spk": "thaipho", "text": "Bệ hạ nói theo nhé."},
+    {"spk": "anchor", "ja": "{一緒|いっしょ}に", "ro": "Issho ni", "vi": "Cùng nhau"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"d": 4},
+    {"spk": "thaipho", "text": "「{二時間|!にじかん}」, là hai tiếng đồng hồ. Phim dài khoảng một trăm mười ba phút, tức là gần hai tiếng."},
+
+    {"d": 5},
+    {"spk": "thaipho", "text": "「{上手|じょうず}」, là giỏi. Khán giả khen diễn xuất của hai diễn viên. Cũng có người chê kịch bản hơi cũ và nhịp phim hơi dài. Hay hay không, Bệ hạ phải tự xem mới biết!"},
+    {"spk": "thaipho", "text": "Khi khen ai đó giỏi, Bệ hạ nói theo nhé."},
+    {"spk": "anchor", "ja": "{上手|じょうず}ですね。", "ro": "Jōzu desu ne.", "vi": "Giỏi quá nhỉ."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Chuyện văn phòng"},
+    {"spk": "thaipho", "text": "Ở văn phòng, Kenta vừa đọc tin về bộ phim này, và quay sang hỏi Yuki."},
+    {"spk": "kenta", "ja": "ユキさん、お{母|かあ}さんによく{電話|でんわ}しますか。", "ro": "Yuki-san, okāsan ni yoku denwa shimasu ka.", "vi": "Yuki này, cô có hay gọi điện cho mẹ không?"},
+    {"spk": "yuki", "ja": "うーん…あまりしません。{忙|いそが}しいですから。", "ro": "Ūn… amari shimasen. Isogashii desu kara.", "vi": "Ừm… không hay lắm. Vì bận mà."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, Kenta sẽ nói gì với Yuki?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "kenta", "ja": "この{映画|えいが}の{名前|なまえ}は、「お{母|かあ}さんがいる{日|ひ}」です。", "ro": "Kono eiga no namae wa, Okāsan ga iru hi desu.", "vi": "Tên bộ phim này là: Ngày còn có mẹ."},
+    {"spk": "yuki", "ja": "…{今日|!きょう}、お{母|かあ}さんに{電話|でんわ}します。", "ro": "… Kyō, okāsan ni denwa shimasu.", "vi": "… Hôm nay tôi sẽ gọi cho mẹ."},
+    {"spk": "thaipho", "text": "「お{母|かあ}さんに{電話|でんわ}します」, nghĩa là: tôi sẽ gọi điện cho mẹ. Tên bộ phim như nhắc mọi người: khi còn mẹ, hãy gọi cho mẹ nhiều hơn."},
+    {"spk": "thaipho", "text": "Bệ hạ nói theo nhé."},
+    {"spk": "yuki", "ja": "お{母|かあ}さんに{電話|でんわ}します。", "ro": "Okāsan ni denwa shimasu.", "vi": "Tôi sẽ gọi điện cho mẹ."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Nghe lại"},
+    {"spk": "thaipho", "text": "Bây giờ, Bệ hạ nghe lại bản tin một lần nữa. Lần này, chắc chắn Bệ hạ hiểu nhiều hơn rồi."},
+    {"d": "all"},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Bây giờ là ba câu đố nhỏ. Câu thứ nhất: phim điện ảnh, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Là 「{映画|えいが}」."},
+    {"spk": "thaipho", "text": "Câu thứ hai: mẹ, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Là 「お{母|かあ}さん」."},
+    {"spk": "thaipho", "text": "Câu cuối: cùng nhau, tiếng Nhật nói thế nào?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Là 「{一緒|いっしょ}に」."},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Ngoài phim này, tháng mười một còn có phim Bò sữa bay với hoa hậu Tiểu Vy, và phim Mẹ Mìn ra rạp cuối tháng. Rạp Việt tháng này rất nhộn nhịp."},
+    {"spk": "thaipho", "text": "Hôm nay Bệ hạ đã học: 「{映画|えいが}」, 「お{母|かあ}さん」, 「{一緒|いっしょ}に」, và 「{上手|じょうず}」."},
+    {"spk": "thaipho", "text": "Xem phim xong, Bệ hạ nhớ gọi cho mẫu hậu nhé! Thần xin cáo lui."}
+  ]
+}

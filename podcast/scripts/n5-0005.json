@@ -1,0 +1,108 @@
+{
+  "id": "n5-0005",
+  "level": "n5",
+  "format": "news",
+  "title": {"vi": "Điện thoại mới giá 1.600 euro", "ja": "{新|あたら}しいスマホ"},
+  "summary": "Chiếc điện thoại vừa ra mắt ở Paris có giá khoảng 1.600 euro. Bệ hạ có dám mua không?",
+  "topics": ["công nghệ", "tin tức"],
+  "date": "2026-11-17",
+  "sources": [
+    "https://nokiamob.net/2026/11/17/xiaomi-18-pro-series-goes-global-check-out-specs-price-and-dual-screen-features/",
+    "https://mobidevices.com/en/xiaomi-18-pro-max-global",
+    "https://gagadget.com/en/733586-xiaomi-18-pro-heads-to-europe-on-nov-17-with-smaller-batteries/",
+    "https://www.notebookcheck.net/Xiaomi-18-series-Three-of-four-Leica-camera-flagships-to-start-globally-with-some-details-and-surprises-tipped.1351670.0.html"
+  ],
+  "speakers": {},
+  "dialogue": [
+    {"spk": "anchor", "ja": "{新|あたら}しいスマホのニュースです。", "ro": "Atarashii sumaho no nyūsu desu.", "vi": "Đây là tin về điện thoại mới."},
+    {"spk": "anchor", "ja": "{中国|ちゅうごく}の{会社|かいしゃ}、シャオミが{新|あたら}しいスマホを{出|だ}しました。", "ro": "Chūgoku no kaisha, Shaomi ga atarashii sumaho o dashimashita.", "vi": "Công ty Trung Quốc Xiaomi đã ra mắt điện thoại mới."},
+    {"spk": "anchor", "ja": "{十一月|!じゅういちがつ}{十七日|!じゅうしちにち}に、パリで{発表|はっぴょう}しました。", "ro": "Jūichigatsu jūshichinichi ni, Pari de happyō shimashita.", "vi": "Ngày 17 tháng 11, họ đã công bố ở Paris."},
+    {"spk": "anchor", "ja": "ドイツのライカのカメラがあります。", "ro": "Doitsu no Raika no kamera ga arimasu.", "vi": "Máy có camera của hãng Leica nước Đức."},
+    {"spk": "anchor", "ja": "でも、{値段|ねだん}は{高|たか}いです。", "ro": "Demo, nedan wa takai desu.", "vi": "Nhưng giá thì đắt."},
+    {"spk": "anchor", "ja": "{千六百|!せんろっぴゃく}ユーロぐらいです。", "ro": "Sen roppyaku yūro gurai desu.", "vi": "Khoảng 1.600 euro."},
+    {"spk": "anchor", "ja": "ヨーロッパのスマホは、バッテリーが{少|すこ}し{小|ちい}さいです。", "ro": "Yōroppa no sumaho wa, batterī ga sukoshi chiisai desu.", "vi": "Máy bán ở châu Âu thì pin hơi nhỏ hơn."}
+  ],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần mang đến một tin công nghệ nóng hổi."},
+    {"spk": "thaipho", "text": "Ngày mười bảy tháng mười một vừa rồi, hãng điện thoại Xiaomi của Trung Quốc đã tổ chức sự kiện ở Paris, nước Pháp, để giới thiệu ra toàn thế giới hai chiếc điện thoại mới: Xiaomi 18 Pro và Xiaomi 18 Pro Max."},
+    {"spk": "thaipho", "text": "Bây giờ, Bệ hạ hãy nghe phát thanh viên đọc bản tin bằng tiếng Nhật. Câu rất ngắn thôi, Bệ hạ cứ thử đoán nhé."},
+
+    {"sec": "Bản tin"},
+    {"d": "all"},
+    {"spk": "thaipho", "text": "Bệ hạ nghe được những từ nào? Có con số nào không? Thần cho Bệ hạ vài giây suy nghĩ."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Không sao cả. Bây giờ thần giải thích từng câu."},
+
+    {"sec": "Giải thích"},
+    {"d": 0},
+    {"spk": "thaipho", "text": "「ニュース」, là tin tức. Từ này người Nhật mượn từ tiếng Anh."},
+    {"spk": "thaipho", "text": "「スマホ」, là điện thoại thông minh. Người Nhật thích nói gọn, nên điện thoại thông minh chỉ còn hai âm tiết."},
+    {"spk": "thaipho", "text": "Bệ hạ nói theo nhé."},
+    {"d": 0},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"d": 1},
+    {"spk": "thaipho", "text": "「{中国|ちゅうごく}」, là Trung Quốc. 「{会社|かいしゃ}」, là công ty."},
+    {"spk": "thaipho", "text": "「{出|だ}しました」, nghĩa là: đã cho ra, đã tung ra. Cả câu là: công ty Trung Quốc Xiaomi đã ra mắt điện thoại mới."},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, sự kiện được tổ chức ở thành phố nào?"},
+    {"pause": 4, "cue": "think"},
+
+    {"d": 2},
+    {"spk": "thaipho", "text": "「パリ」, là Paris. Còn 「{発表|はっぴょう}」, nghĩa là công bố, giới thiệu chính thức."},
+    {"spk": "thaipho", "text": "Tháng mười một là 「{十一月|!じゅういちがつ}」. Người Nhật gọi tháng rất dễ: con số, cộng với chữ 「{月|!がつ}」. Bệ hạ nói theo nhé."},
+    {"spk": "anchor", "ja": "{十一月|!じゅういちがつ}", "ro": "Jūichigatsu", "vi": "Tháng mười một"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"d": 3},
+    {"spk": "thaipho", "text": "「ドイツ」, là nước Đức. Leica là hãng máy ảnh lâu đời của Đức, và Xiaomi đã hợp tác với Leica để làm camera điện thoại từ nhiều năm nay."},
+
+    {"d": 4},
+    {"spk": "thaipho", "text": "Bệ hạ thử đoán xem, 「{高|たか}い」 nghĩa là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "「{高|たか}い」, là đắt. Còn 「{値段|ねだん}」, là giá tiền. Vậy cả câu: nhưng giá thì đắt."},
+
+    {"d": 5},
+    {"spk": "thaipho", "text": "「{千六百|!せんろっぴゃく}」, là một nghìn sáu trăm. Theo các trang tin công nghệ, bản Xiaomi 18 Pro Max loại thấp nhất bán ở châu Âu có giá khoảng một nghìn sáu trăm euro."},
+    {"spk": "thaipho", "text": "Bệ hạ nói theo nhé."},
+    {"d": 5},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"d": 6},
+    {"spk": "thaipho", "text": "「{小|ちい}さい」, là nhỏ. 「{少|すこ}し」, là một chút."},
+    {"spk": "thaipho", "text": "Pin của bản Pro Max bán ở châu Âu khoảng bảy nghìn mi li am pe giờ, trong khi bản bán ở Trung Quốc là tám nghìn rưỡi. Cùng một chiếc máy, mà pin mỗi nơi một khác, Bệ hạ ạ."},
+
+    {"sec": "Chuyện văn phòng"},
+    {"spk": "thaipho", "text": "Ở văn phòng, Kenta, anh chàng mê công nghệ, cũng vừa đọc tin này. Bệ hạ nghe xem anh ấy nói gì với Yuki."},
+    {"spk": "kenta", "ja": "ユキさん、{見|み}て！{新|あたら}しいスマホ！", "ro": "Yuki-san, mite! Atarashii sumaho!", "vi": "Yuki ơi, xem này! Điện thoại mới!"},
+    {"spk": "yuki", "ja": "わあ、きれい！いくらですか。", "ro": "Wā, kirei! Ikura desu ka.", "vi": "Oa, đẹp quá! Bao nhiêu tiền vậy?"},
+    {"spk": "kenta", "ja": "{千六百|!せんろっぴゃく}ユーロです。", "ro": "Sen roppyaku yūro desu.", "vi": "1.600 euro."},
+    {"spk": "yuki", "ja": "{高|たか}い！ケンタさん、{買|か}いますか。", "ro": "Takai! Kenta-san, kaimasu ka.", "vi": "Đắt thế! Kenta có mua không?"},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, Kenta có mua không?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "kenta", "ja": "うーん…{今|いま}のスマホで、いいです。", "ro": "Ūn… ima no sumaho de, ii desu.", "vi": "Ừm… điện thoại bây giờ là được rồi."},
+    {"spk": "thaipho", "text": "Ha ha! 「{今|いま}のスマホで、いいです」, nghĩa là: điện thoại hiện tại là được rồi. Kenta mê công nghệ thật, nhưng ví tiền thì không cho phép, Bệ hạ ạ."},
+    {"spk": "thaipho", "text": "「いくらですか」, nghĩa là: bao nhiêu tiền? Câu này cực kỳ hữu ích khi đi mua sắm. Bệ hạ nói theo nhé."},
+    {"spk": "yuki", "ja": "いくらですか。", "ro": "Ikura desu ka.", "vi": "Bao nhiêu tiền?"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Nghe lại"},
+    {"spk": "thaipho", "text": "Bây giờ, Bệ hạ nghe lại bản tin một lần nữa. Lần này, chắc chắn Bệ hạ hiểu nhiều hơn rồi."},
+    {"d": "all"},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Bây giờ là ba câu đố nhỏ. Câu thứ nhất: điện thoại thông minh, tiếng Nhật nói gọn là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Là 「スマホ」."},
+    {"spk": "thaipho", "text": "Câu thứ hai: đắt, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Là 「{高|たか}い」."},
+    {"spk": "thaipho", "text": "Câu cuối: muốn hỏi giá, Bệ hạ nói thế nào?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "yuki", "ja": "いくらですか。", "ro": "Ikura desu ka.", "vi": "Bao nhiêu tiền?"},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Hôm nay Bệ hạ đã học: 「スマホ」, 「{会社|かいしゃ}」, 「{高|たか}い」, và câu hỏi giá 「いくらですか」."},
+    {"spk": "thaipho", "text": "Lần sau thấy điện thoại mới, Bệ hạ nhớ hỏi giá trước khi mê nhé! Thần xin cáo lui."}
+  ]
+}

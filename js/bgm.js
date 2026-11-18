@@ -11,6 +11,7 @@
   var pulse = {};
   var run = null;
   var playing = false;
+  var held = false;
 
   function opt(o, key, def) { return o[key] === undefined ? def : o[key]; }
   function ext(base, extra) {
@@ -294,7 +295,7 @@
   }
 
   function start() {
-    if (playing) return;
+    if (playing || held) return;
     if (!ctx && !buildGraph()) return;
     if (ctx.resume) ctx.resume();
     playing = true;
@@ -373,6 +374,11 @@
     isPlaying: function () { return playing; },
     setEnabled: setEnabled,
     toggle: function () { setEnabled(!settings.enabled); },
+    // Tam dung khi podcast phat, khong doi cai dat bat/tat cua nguoi dung
+    hold: function (on) {
+      held = !!on;
+      if (held) stop(0.6); else if (settings.enabled) start();
+    },
     duck: function (on) {
       if (!ctx) return;
       duckNode.gain.cancelScheduledValues(ctx.currentTime);

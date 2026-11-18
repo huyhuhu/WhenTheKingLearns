@@ -1,0 +1,106 @@
+{
+  "id": "n5-0007",
+  "level": "n5",
+  "format": "news",
+  "title": {"vi": "Đêm trao giải MMA 2026", "ja": "{音楽|おんがく}の{賞|しょう}"},
+  "summary": "BTS không đến lễ trao giải mà vẫn mang về sáu giải. Chuyện gì đã xảy ra ở Seoul?",
+  "topics": ["showbiz", "tin tức"],
+  "date": "2026-11-15",
+  "sources": [
+    "https://www.soompi.com/article/1887152wpp/winners-of-melon-music-awards-2026-day-2",
+    "https://www.koreatimes.co.kr/path/A2026111509360001385",
+    "https://www.ibtimes.com.au/bts-wins-six-awards-2026-melon-music-awards-1878628",
+    "https://biz.heraldcorp.com/article/10937870"
+  ],
+  "speakers": {},
+  "dialogue": [
+    {"spk": "anchor", "ja": "{韓国|かんこく}の{音楽|おんがく}のニュースです。", "ro": "Kankoku no ongaku no nyūsu desu.", "vi": "Đây là tin âm nhạc Hàn Quốc."},
+    {"spk": "anchor", "ja": "{十一月|!じゅういちがつ}{十四日|!じゅうよっか}と{十五日|!じゅうごにち}に、ソウルで{音楽|おんがく}の{賞|しょう}がありました。", "ro": "Jūichigatsu jūyokka to jūgonichi ni, Sōru de ongaku no shō ga arimashita.", "vi": "Ngày 14 và 15 tháng 11, ở Seoul đã có lễ trao giải âm nhạc."},
+    {"spk": "anchor", "ja": "ビーティーエスは{賞|しょう}を{六|!むっ}つもらいました。", "ro": "Bītīesu wa shō o muttsu moraimashita.", "vi": "BTS đã nhận sáu giải."},
+    {"spk": "anchor", "ja": "でも、ビーティーエスは{来|き}ませんでした。", "ro": "Demo, Bītīesu wa kimasen deshita.", "vi": "Nhưng BTS đã không đến."},
+    {"spk": "anchor", "ja": "アイヴのバンバンが、{一番|いちばん}いい{歌|うた}になりました。", "ro": "Aivu no Ban Ban ga, ichiban ii uta ni narimashita.", "vi": "Bài BANG BANG của IVE trở thành bài hát hay nhất."},
+    {"spk": "anchor", "ja": "アイヴのメンバーは{泣|な}きました。", "ro": "Aivu no menbā wa nakimashita.", "vi": "Các thành viên IVE đã khóc."},
+    {"spk": "anchor", "ja": "エスパも{大|おお}きい{賞|しょう}をもらいました。", "ro": "Esupa mo ōkii shō o moraimashita.", "vi": "aespa cũng nhận một giải lớn."}
+  ],
+  "flow": [
+    {"sec": "Mở đầu"},
+    {"spk": "thaipho", "text": "Muôn tâu Bệ hạ! Hôm nay thần mang đến tin nóng từ làng nhạc K-pop Hàn Quốc."},
+    {"spk": "thaipho", "text": "Ngày mười bốn và mười lăm tháng mười một, lễ trao giải âm nhạc Melon Music Awards, gọi tắt là MMA, đã diễn ra tại sân vận động mái vòm Gocheok ở Seoul."},
+    {"spk": "thaipho", "text": "Năm nay, lễ trao giải kéo dài hai ngày, lần đầu tiên sau mười tám năm. Bệ hạ hãy nghe bản tin tiếng Nhật trước nhé."},
+
+    {"sec": "Bản tin"},
+    {"d": "all"},
+    {"spk": "thaipho", "text": "Bệ hạ nghe ra tên nhóm nhạc nào không? Thần cho Bệ hạ vài giây suy nghĩ."},
+    {"pause": 5, "cue": "think"},
+    {"spk": "thaipho", "text": "Rồi, bây giờ thần giải thích từng câu."},
+
+    {"sec": "Giải thích"},
+    {"d": 0},
+    {"spk": "thaipho", "text": "「{韓国|かんこく}」, là Hàn Quốc. 「{音楽|おんがく}」, là âm nhạc."},
+    {"spk": "thaipho", "text": "Bệ hạ nói theo nhé."},
+    {"d": 0},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"d": 1},
+    {"spk": "thaipho", "text": "「{賞|しょう}」, là giải thưởng. 「ソウル」, là Seoul."},
+    {"spk": "thaipho", "text": "Ngày mười bốn, tiếng Nhật đọc khá đặc biệt, không theo quy tắc thường: 「{十四日|!じゅうよっか}」."},
+
+    {"d": 2},
+    {"spk": "thaipho", "text": "Bệ hạ đoán xem, BTS nhận được mấy giải?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "「{六|!むっ}つ」, là sáu cái. BTS nhận sáu giải, trong đó có hai giải lớn nhất: Nghệ sĩ của năm, và Album của năm với album ARIRANG."},
+
+    {"d": 3},
+    {"spk": "thaipho", "text": "「{来|き}ませんでした」, nghĩa là: đã không đến. BTS đang bận đi lưu diễn vòng quanh thế giới, nên không thể có mặt. Không đến mà vẫn mang về sáu giải, Bệ hạ thấy có giỏi không?"},
+    {"spk": "thaipho", "text": "Bệ hạ nói theo nhé."},
+    {"spk": "anchor", "ja": "{来|き}ませんでした。", "ro": "Kimasen deshita.", "vi": "Đã không đến."},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"d": 4},
+    {"spk": "thaipho", "text": "「{一番|いちばん}」, là nhất. 「{歌|うた}」, là bài hát. Bài BANG BANG của nhóm nữ IVE đoạt giải Bài hát của năm."},
+
+    {"d": 5},
+    {"spk": "thaipho", "text": "「{泣|な}きました」, nghĩa là: đã khóc. Các cô gái IVE xúc động rơi nước mắt trên sân khấu. Tổng cộng, IVE nhận năm giải."},
+
+    {"d": 6},
+    {"spk": "thaipho", "text": "「{大|おお}きい」, là lớn. Nhóm aespa nhận một giải lớn mới có năm nay: Nghệ sĩ K-pop toàn cầu của năm. Còn nhóm nhạc nam trẻ CORTIS nhận giải Bản thu âm của năm."},
+    {"spk": "thaipho", "text": "Bệ hạ nói theo nhé: bài hát hay nhất."},
+    {"spk": "anchor", "ja": "{一番|いちばん}いい{歌|うた}", "ro": "Ichiban ii uta", "vi": "Bài hát hay nhất"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Chuyện văn phòng"},
+    {"spk": "thaipho", "text": "Ở văn phòng, Yuki và Kenta cũng đang nói chuyện về lễ trao giải này."},
+    {"spk": "yuki", "ja": "ケンタさん、ケーポップが{好|す}きですか。", "ro": "Kenta-san, kēpoppu ga suki desu ka.", "vi": "Kenta này, anh có thích K-pop không?"},
+    {"spk": "kenta", "ja": "はい、{大好|だいす}きです！ユキさんは？", "ro": "Hai, daisuki desu! Yuki-san wa?", "vi": "Có, tôi rất thích! Còn Yuki?"},
+    {"spk": "yuki", "ja": "{私|わたし}も！{一番|いちばん}{好|す}きな{歌|うた}は、バンバンです。", "ro": "Watashi mo! Ichiban suki na uta wa, Ban Ban desu.", "vi": "Tôi cũng vậy! Bài tôi thích nhất là BANG BANG."},
+    {"spk": "thaipho", "text": "Kenta lấy hết can đảm. Bệ hạ đoán xem, anh ấy sẽ rủ Yuki đi đâu?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "kenta", "ja": "じゃあ、{今度|こんど}{一緒|いっしょ}にカラオケに{行|い}きませんか。", "ro": "Jā, kondo issho ni karaoke ni ikimasen ka.", "vi": "Vậy lần tới mình cùng đi karaoke nhé?"},
+    {"spk": "yuki", "ja": "いいですね！{部長|ぶちょう}も{一緒|いっしょ}に！", "ro": "Ii desu ne! Buchō mo issho ni!", "vi": "Hay đó! Rủ cả trưởng phòng đi cùng nữa!"},
+    {"spk": "kenta", "ja": "え…{部長|ぶちょう}も…？", "ro": "E… buchō mo…?", "vi": "Hả… cả trưởng phòng nữa á…?"},
+    {"spk": "tanaka", "ja": "カラオケ？いいですね！", "ro": "Karaoke? Ii desu ne!", "vi": "Karaoke à? Hay quá!"},
+    {"spk": "thaipho", "text": "Ha ha! Kenta muốn đi riêng với Yuki, thế mà giờ trưởng phòng Tanaka cũng đòi đi. Tội nghiệp Kenta!"},
+    {"spk": "thaipho", "text": "「{一緒|いっしょ}に{行|い}きませんか」, nghĩa là: cùng đi nhé? Đây là cách rủ rê rất lịch sự. Bệ hạ nói theo nhé."},
+    {"spk": "kenta", "ja": "{一緒|いっしょ}に{行|い}きませんか。", "ro": "Issho ni ikimasen ka.", "vi": "Cùng đi nhé?"},
+    {"pause": "auto", "cue": "repeat"},
+
+    {"sec": "Nghe lại"},
+    {"spk": "thaipho", "text": "Bây giờ, Bệ hạ nghe lại bản tin một lần nữa. Lần này, chắc chắn Bệ hạ hiểu nhiều hơn rồi."},
+    {"d": "all"},
+
+    {"sec": "Câu đố"},
+    {"spk": "thaipho", "text": "Bây giờ là ba câu đố nhỏ. Câu thứ nhất: Hàn Quốc, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Là 「{韓国|かんこく}」."},
+    {"spk": "thaipho", "text": "Câu thứ hai: bài hát, tiếng Nhật là gì?"},
+    {"pause": 4, "cue": "think"},
+    {"spk": "thaipho", "text": "Là 「{歌|うた}」."},
+    {"spk": "thaipho", "text": "Câu cuối: muốn rủ ai đó cùng đi, Bệ hạ nói thế nào?"},
+    {"pause": 5, "cue": "think"},
+    {"spk": "kenta", "ja": "{一緒|いっしょ}に{行|い}きませんか。", "ro": "Issho ni ikimasen ka.", "vi": "Cùng đi nhé?"},
+
+    {"sec": "Kết"},
+    {"spk": "thaipho", "text": "Hôm nay Bệ hạ đã học: 「{音楽|おんがく}」, 「{賞|しょう}」, 「{一番|いちばん}」, và câu rủ rê 「{一緒|いっしょ}に{行|い}きませんか」."},
+    {"spk": "thaipho", "text": "Lần sau đi karaoke, Bệ hạ nhớ chọn bài BANG BANG nhé! Thần xin cáo lui."}
+  ]
+}
