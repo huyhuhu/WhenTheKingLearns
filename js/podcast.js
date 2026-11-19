@@ -270,11 +270,13 @@
     updateButtons();
     positionState();
     startLoop();
+    wakeSync();
   });
   audio.addEventListener('pause', function () {
     updateButtons();
     positionState();
     if (!interlude) savePos();
+    wakeSync();
     // Doi mot chut: het bai chuyen sang bai moi thi khong bat lai nhac nen
     clearTimeout(unholdTimer);
     unholdTimer = setTimeout(function () { if (audio.paused && window.BGM && window.BGM.hold) window.BGM.hold(false); }, 1500);
@@ -480,6 +482,7 @@
     if (body && sameView) body.scrollTop = keep;
     if (onPlayer) bind();
     else els = [];
+    wakeSync();
   }
   function refresh() {
     if (full) renderSheet();
@@ -525,6 +528,7 @@
     if (!full) return;
     full = onPlayer = rateOpen = false;
     els = [];
+    wakeSync();
     sheet.classList.remove('open');
     document.body.classList.remove('pod-full');
     window.scrollTo(0, pageY);
@@ -540,6 +544,25 @@
     if (start && !audio.paused) start.parentNode.removeChild(start);
     updateMini();
     if (ms) ms.playbackState = !cur ? 'none' : audio.paused ? 'paused' : 'playing';
+  }
+
+  var wakeLock = null, wakeBusy = false;
+  function wakeSync() {
+    var want = onPlayer && !audio.paused && !document.hidden;
+    if (!navigator.wakeLock || wakeBusy) return;
+    if (want && !wakeLock) {
+      wakeBusy = true;
+      navigator.wakeLock.request('screen').then(function (lock) {
+        wakeLock = lock;
+        wakeBusy = false;
+        lock.addEventListener('release', function () { if (wakeLock === lock) wakeLock = null; });
+        wakeSync();
+      })['catch'](function () { wakeBusy = false; });
+    } else if (!want && wakeLock) {
+      var lock = wakeLock;
+      wakeLock = null;
+      lock.release()['catch'](function () {});
+    }
   }
 
   function lineAt(lines, t) {
@@ -638,6 +661,7 @@
   window.addEventListener('resize', function () { if (onPlayer) layout(); updateMini(); });
   document.addEventListener('visibilitychange', function () {
     if (!document.hidden && onPlayer) { curLine = -1; sync(); startLoop(); }
+    wakeSync();
   });
   document.addEventListener('keydown', function (e) {
     var tag = e.target && e.target.tagName;
