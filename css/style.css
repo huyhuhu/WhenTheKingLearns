@@ -13,6 +13,7 @@
   --bad: #8c2f39;
   --bad-soft: #f4dfe1;
   --shadow: 0 1px 2px rgba(60, 45, 20, 0.08);
+  color-scheme: light;
 }
 [data-theme="dark"] {
   --bg: #16171b;
@@ -29,10 +30,11 @@
   --bad: #ee8f98;
   --bad-soft: #3b2226;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scrollbar-color: var(--line) transparent; }
 body {
   margin: 0;
   background: var(--bg);
