@@ -12,6 +12,7 @@ VOICE = "ja-JP-NanamiNeural"
 # Doi van ban o day thi tang so phien ban de trinh duyet tai lai file.
 OVERRIDES = {
     "うお": ("うお。", 2),
+    "てん": ("てん。", 2),
 }
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 out_dir = os.path.join(root, "audio", "ja")
