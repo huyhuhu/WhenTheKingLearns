@@ -15,6 +15,7 @@
   try { theme = localStorage.getItem('wtkl.theme'); } catch (e) {}
   if (!theme) theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', theme);
+  if (theme === 'dark') document.querySelector('meta[name=theme-color]').setAttribute('content', '#16171b');
 })();
 </script>
 <link rel="stylesheet" href="css/style.css?v=17">
