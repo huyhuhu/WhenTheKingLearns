@@ -1224,9 +1224,18 @@
     }
     return out;
   }
+  function ledgerCard() {
+    var k = S(), recent = [], fresh = 0, seals = '', id, i;
+    for (id in k.unlocked) if (ACH_BY_ID[id]) { recent.push(id); if (k.unlocked[id] > k.seenAch) fresh++; }
+    recent.sort(function (a, b) { return k.unlocked[b] - k.unlocked[a]; });
+    for (i = 0; i < recent.length && i < 6; i++) { var a = ACH_BY_ID[recent[i]]; seals += sealHtml(CATS[a.cat][0], a.r); }
+    return '<a class="card mode kledger" href="#/king/seals">' + jp('璽', 'glyph') + '<span class="body"><b>' + T('Sổ ấn tín', 'Seal ledger') +
+      (fresh ? ' <span class="kl-new">' + T(fresh + ' mới', fresh + ' new') + '</span>' : '') + '</b><small>' +
+      recent.length + '/' + ACH.length + T(' ấn tín · ', ' seals · ') + Math.round(recent.length * 100 / ACH.length) + '%</small>' +
+      (seals ? '<span class="kl-seals">' + seals + '</span>' : '') + '</span><i>→</i></a>';
+  }
   function viewProfile() {
     var k = S(), ctx = context(), xp = totalXp(), r = rankOf(xp), i;
-    k.seenAch = Date.now();
     var titles = '<option value="">' + T('— Không đeo danh hiệu —', '— No title —') + '</option>';
     for (i = 1; i <= r; i++) titles += '<option value="R' + i + '"' + (k.title && k.title[0] === 'R' + i ? ' selected' : '') + '>' + h(rankName(i)) + '</option>';
     for (i = 0; i < ACH.length; i++) {
@@ -1245,7 +1254,16 @@
       [ctx.v.learned, T('thần dân', 'subjects')], [ctx.v.burned, T('trung thần', 'loyal subjects')], [ctx.c.vright || 0, T('câu Triều kiến đúng', 'audience answers')]
     ], st = '';
     for (i = 0; i < stats.length; i++) st += '<div class="kstat"><b>' + fmt(stats[i][0]) + '</b><small>' + stats[i][1] + '</small></div>';
-
+    return '<div class="card kprofile">' + crownSvg(r, 'big-crown') +
+      '<div class="body"><small>' + T('Bậc ', 'Rank ') + (r + 1) + '/10 · ' + jp(RANKS[r][3]) + '</small><h1>' + h(rankName(r)) + '</h1>' +
+      (ctx.mapOpen ? '<small class="krealm">' + T('Quốc thế: ', 'Realm: ') + jp(realm().kanji) + ' ' + h(realm().name) + ' · ' + ctx.v.annexN + '/' + ctx.v.regions + T(' vùng sáp nhập', ' lands annexed') + '</small>' : '') +
+      '<label class="ktitle">' + T('Danh hiệu', 'Title') + ' <select class="field" data-change="kTitle">' + titles + '</select></label>' + xpBar(xp, r) + '</div></div>' +
+      '<div class="card"><h3>' + T('MÀU ẤN TÍN', 'SEAL COLOR') + '</h3><div class="swatches">' + sw + '</div></div>' +
+      '<div class="kstats">' + st + '</div>' + ledgerCard() + questCard() + calendar();
+  }
+  function viewSeals() {
+    var k = S(), ctx = context(), i, j;
+    k.seenAch = Date.now();
     var tabs = '<button class="' + (catTab < 0 ? 'on' : '') + '" data-act="kCat" data-c="-1">' + T('Tất cả', 'All') + '</button>';
     for (i = 0; i < CATS.length; i++) {
       var tot = 0, got = 0;
@@ -1266,20 +1284,15 @@
     var filters = [['all', T('Tất cả', 'All')], ['done', T('Đã đạt', 'Unlocked')], ['todo', T('Chưa đạt', 'Locked')], ['near', T('Sắp đạt', 'Almost')]], fs = '';
     for (i = 0; i < filters.length; i++) fs += '<button class="' + (filter === filters[i][0] ? 'on' : '') + '" data-act="kFilter" data-f="' + filters[i][0] + '">' + filters[i][1] + '</button>';
 
-    return '<div class="card kprofile">' + crownSvg(r, 'big-crown') +
-      '<div class="body"><small>' + T('Bậc ', 'Rank ') + (r + 1) + '/10 · ' + jp(RANKS[r][3]) + '</small><h1>' + h(rankName(r)) + '</h1>' +
-      (ctx.mapOpen ? '<small class="krealm">' + T('Quốc thế: ', 'Realm: ') + jp(realm().kanji) + ' ' + h(realm().name) + ' · ' + ctx.v.annexN + '/' + ctx.v.regions + T(' vùng sáp nhập', ' lands annexed') + '</small>' : '') +
-      '<label class="ktitle">' + T('Danh hiệu', 'Title') + ' <select class="field" data-change="kTitle">' + titles + '</select></label>' + xpBar(xp, r) + '</div></div>' +
-      '<div class="card"><h3>' + T('MÀU ẤN TÍN', 'SEAL COLOR') + '</h3><div class="swatches">' + sw + '</div></div>' +
-      '<div class="kstats">' + st + '</div>' + questCard() + calendar() +
-      '<h3 class="heading">' + T('SỔ ẤN TÍN', 'SEAL LEDGER') + ' · ' + total + '/' + ACH.length + ' · ' + Math.round(total * 100 / ACH.length) + '%</h3>' +
+    return '<div class="hero">' + jp('璽', 'eyebrow') + '<h1>' + T('Sổ ấn tín', 'Seal ledger') + '</h1><p class="sub">' +
+      total + '/' + ACH.length + T(' ấn tín · ', ' seals · ') + Math.round(total * 100 / ACH.length) + '%</p></div>' +
       '<div class="ktabs">' + tabs + '</div><div class="seg small kfilter">' + fs + '</div>' +
       '<div class="grid achs">' + (cards || '<p class="muted center">' + T('Không có thành tựu nào ở đây.', 'Nothing here.') + '</p>') + '</div>';
   }
 
   // ---------- hanh dong giao dien ----------
   var A = App.actions;
-  A.kToast = function () { location.hash = '#/king'; };
+  A.kToast = function (el) { location.hash = /k-(ach|retro)/.test(el.className) ? '#/king/seals' : '#/king'; };
   A.kQTab = function (el) { questTab = el.getAttribute('data-tab'); App.render(); };
   A.kReroll = function (el) { rerollDaily(el.getAttribute('data-id')); App.saveProgress(); App.render(); };
   A.kRerollW = function (el) { rerollWeekly(el.getAttribute('data-id')); App.saveProgress(); App.render(); };
@@ -1309,6 +1322,7 @@
     ready: true,
     home: function () { return kingCard() + questCard(); },
     route: function (parts) {
+      if (parts.length === 1 && parts[0] === 'seals') return { html: viewSeals(), title: T('Sổ ấn tín', 'Seal ledger'), back: 'king', backLabel: T('Hồ sơ', 'Profile') };
       if (parts.length) return null;
       return { html: viewProfile(), title: T('Hồ sơ nhà vua', "The King's Profile"), back: '', backLabel: T('Trang chủ', 'Home') };
     },

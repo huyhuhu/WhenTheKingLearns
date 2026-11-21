@@ -238,6 +238,10 @@ ul.plain { margin: 0; padding-left: 20px; }
 .seal.r1 { background: #8c96a3; }
 .seal.r2 { background: #c9a227; }
 .seal.r3 { background: #1f9e8f; box-shadow: 0 0 12px rgba(31, 158, 143, 0.6); }
+.kledger { margin-bottom: 12px; }
+.kledger .kl-seals { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.kledger .kl-seals .seal { width: 28px; height: 28px; line-height: 26px; font-size: 15px; border-radius: 7px; }
+.kl-new { display: inline-block; padding: 0 8px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 12px; font-weight: 700; vertical-align: middle; }
 .seal.locked { background: var(--raised); color: var(--muted); box-shadow: none; border-style: dashed; }
 .seal.stamp { -webkit-animation: stamp 0.45s ease-out; animation: stamp 0.45s ease-out; }
 @-webkit-keyframes stamp { 0% { -webkit-transform: scale(2.2); opacity: 0; } 70% { -webkit-transform: scale(0.92); opacity: 1; } 100% { -webkit-transform: scale(1); } }
