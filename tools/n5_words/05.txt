@@ -1,0 +1,33 @@
+# Buổi 5: Cơ thể, sức khoẻ (四国 Tứ Quốc)
+@hv 頭=ĐẦU 浴=DỤC 洗=TẨY 医=Y 痛=THỐNG 起=KHỞI 腹=PHÚC 顔=NHAN 風=PHONG 邪=TÀ 体=THỂ 薬=DƯỢC 声=THANH 死=TỬ 吸=HẤP 背=BỐI 丈=TRƯỢNG 夫=PHU 疲=BÌ 寝=TẨM 歯=XỈ 病=BỆNH 磨=MA 若=NHƯỢC
+足|あし|n|chân|foot; leg|{足|あし}が{長|なが}いですね。|Chân dài ghê nhỉ.|You have long legs.||
+頭|あたま|n|đầu|head|ケンタは{頭|あたま}がいいです。|Kenta thông minh lắm.|Kenta is smart.|song|頭がいい là "thông minh", chứ không phải "đầu đẹp".
+浴びる|あびる|v2|tắm (vòi sen), dội|to take (a shower); to bathe in|{毎朝|まいあさ}シャワーを{浴|あ}びます。|Sáng nào tôi cũng tắm vòi sen.|I take a shower every morning.||Đi với シャワー; còn tắm bồn thì nói お風呂に入る.
+洗う|あらう|v1|rửa, giặt|to wash|{食|た}べる{前|まえ}に{手|て}を{洗|あら}いましょう。|Hãy rửa tay trước khi ăn.|Let's wash our hands before eating.||
+医者|いしゃ|n|bác sĩ|doctor|{田中|たなか}さんは{医者|いしゃ}に{行|い}きました。|Ông Tanaka đã đi khám bác sĩ.|Mr. Tanaka went to the doctor.||医 y + 者 giả (người): người làm nghề y.
+痛い|いたい|adj-i|đau|painful; sore|お{腹|なか}が{痛|いた}いです。|Tôi đau bụng.|I have a stomachache.||Người Nhật đau thì kêu "Itai!", như ta kêu "Ui da!".
+生まれる|うまれる|v2|được sinh ra|to be born|タマは{三年前|さんねんまえ}に{生|う}まれました。|Tama ra đời cách đây ba năm.|Tama was born three years ago.|am=死ぬ|
+起きる|おきる|v2|thức dậy; xảy ra|to get up; to happen|ユキさんは{今日|きょう}も{遅|おそ}く{起|お}きました。|Hôm nay Yuki lại dậy muộn.|Yuki got up late again today.|am=寝る|
+お腹|おなか|n|bụng|stomach; belly|お{腹|なか}がすきました。|Tôi đói bụng rồi.|I'm hungry.||お腹がすく = đói bụng, お腹がいっぱい = no căng bụng.
+顔|かお|n|mặt, khuôn mặt|face|{顔|かお}を{洗|あら}ってください。|Hãy rửa mặt đi.|Please wash your face.||
+風邪|かぜ|n|cảm (bệnh)|cold (illness)|{風邪|かぜ}をひいて、{会社|かいしゃ}を{休|やす}みました。|Tôi bị cảm nên nghỉ làm.|I caught a cold and took the day off.|trung=風|Đồng âm với 風 (gió): trúng gió độc (邪 tà) là cảm. Bị cảm dùng động từ ひく.
+体|からだ|n|cơ thể; sức khoẻ|body; health|お{体|からだ}に{気|き}をつけてください。|Xin hãy giữ gìn sức khoẻ.|Please take care of yourself.||
+薬|くすり|n|thuốc|medicine|{寝|ね}る{前|まえ}に{薬|くすり}を{飲|の}みます。|Tôi uống thuốc trước khi ngủ.|I take medicine before bed.||Thuốc thì "uống": 薬を飲む, kể cả thuốc viên.
+口|くち|n|miệng|mouth|{口|くち}を{大|おお}きく{開|あ}けてください。|Hãy há miệng to ra.|Please open your mouth wide.||Chữ 口 trông như cái miệng há ra; còn nghĩa là "cửa", như 入口, 出口.
+元気|げんき|adj-na|khoẻ mạnh, có sức sống|healthy; energetic|お{元気|げんき}ですか。|Anh có khoẻ không?|How are you?|am=病気|元 nguyên + 気 khí: khí lực còn nguyên vẹn là khoẻ.
+声|こえ|n|giọng, tiếng (người, vật)|voice|ケンタの{声|こえ}は{小|ちい}さいです。|Giọng Kenta nhỏ lắm.|Kenta has a quiet voice.||Tiếng người, tiếng chim là 声; tiếng xe, tiếng đàn là 音.
+死ぬ|しぬ|v1|chết|to die|{金魚|きんぎょ}が{死|し}にました。|Con cá vàng chết rồi.|The goldfish died.|am=生まれる|Động từ duy nhất tận cùng ぬ: 死ぬ → 死にます, 死んで.
+吸う|すう|v1|hút, hít|to breathe in; to smoke; to suck|ここでたばこを{吸|す}わないでください。|Xin đừng hút thuốc ở đây.|Please don't smoke here.||Hút thuốc là たばこを吸う, không dùng 飲む.
+背|せい|n|chiều cao, vóc người|height; stature|ケンタは{背|せい}が{高|たか}いです。|Kenta cao.|Kenta is tall.||Người cao là 背が高い; đọc せ thì 背 còn nghĩa là cái lưng.
+大丈夫|だいじょうぶ|adj-na|không sao, ổn|all right; OK|「{大丈夫|だいじょうぶ}ですか。」「はい、{大丈夫|だいじょうぶ}です。」|"Anh có sao không?" "Vâng, tôi không sao."|"Are you OK?" "Yes, I'm fine."|gia|Hán Việt là "đại trượng phu" nhưng nghĩa là "không sao": bậc trượng phu thì gì cũng ổn.
+疲れる|つかれる|v2|mệt|to get tired|{仕事|しごと}で{疲|つか}れました。|Tôi mệt vì công việc.|I'm tired from work.||Đang mệt thì nói 疲れました (thể quá khứ), không nói 疲れます.
+手|て|n|tay|hand|{手|て}を{上|あ}げてください。|Hãy giơ tay lên.|Please raise your hand.||
+寝る|ねる|v2|ngủ, đi ngủ|to sleep; to go to bed|タマはいつも{寝|ね}ています。|Tama lúc nào cũng ngủ.|Tama is always sleeping.|am=起きる|
+歯|は|n|răng|tooth|{田中|たなか}さんは{歯|は}が{白|しろ}いです。|Răng ông Tanaka trắng.|Mr. Tanaka has white teeth.||
+鼻|はな|n|mũi|nose|{象|ぞう}は{鼻|はな}が{長|なが}いです。|Voi thì mũi dài.|Elephants have long noses.|trung=花|Đồng âm với 花 (hoa): đưa mũi はな lại gần hoa はな mà ngửi.
+病院|びょういん|n|bệnh viện|hospital|{病院|びょういん}は{駅|えき}の{近|ちか}くです。|Bệnh viện ở gần nhà ga.|The hospital is near the station.|song|Phải kéo dài びょう; nói thành びよういん là thành tiệm làm tóc!
+病気|びょうき|n|bệnh, ốm|illness; sickness|{病気|びょうき}で{学校|がっこう}を{休|やす}みました。|Tôi nghỉ học vì ốm.|I missed school because I was sick.|am=元気|
+磨く|みがく|v1|đánh (răng); đánh bóng|to brush (teeth); to polish|{寝|ね}る{前|まえ}に{歯|は}を{磨|みが}きます。|Tôi đánh răng trước khi ngủ.|I brush my teeth before bed.||歯を磨く = đánh răng, 靴を磨く = đánh giày.
+耳|みみ|n|tai|ear|タマの{耳|みみ}はかわいいです。|Tai của Tama dễ thương.|Tama's ears are cute.||
+目|め|n|mắt|eye|ユキさんは{目|め}が{大|おお}きいです。|Yuki có đôi mắt to.|Yuki has big eyes.||目が悪い là mắt kém (cận thị), không phải mắt xấu.
+若い|わかい|adj-i|trẻ|young|{佐藤|さとう}さんは{七十歳|ななじゅっさい}ですが、{若|わか}いです。|Bà Sato 70 tuổi mà vẫn trẻ.|Mrs. Sato is seventy, but she's young.||若い chỉ dùng cho người, vật sống; đồ vật mới thì là 新しい.

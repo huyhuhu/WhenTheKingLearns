@@ -1,0 +1,57 @@
+# Buổi 12: Từ katakana (長崎 Trường Kỳ)
+アパート|アパート|n|căn hộ, nhà trọ|apartment|ユキさんのアパートは{駅|えき}から{近|ちか}いです。|Căn hộ của Yuki gần ga.|Yuki's apartment is close to the station.||Cắt gọn từ "apartment"; thường là nhà thấp tầng, toà cao tầng gọi là マンション.
+エレベーター|エレベーター|n|thang máy|elevator; lift|エレベーターで{五階|ごかい}へ{行|い}きます。|Tôi đi thang máy lên tầng năm.|I take the elevator to the fifth floor.||
+カップ|カップ|n|cốc, tách (có quai)|cup|カップにコーヒーを{入|い}れます。|Tôi rót cà phê vào cốc.|I pour coffee into the cup.||Từ "cup": cốc có quai, cũng là cúp giải thưởng. Đừng nhầm với コップ (ly không quai).
+カメラ|カメラ|n|máy ảnh|camera|{新|あたら}しいカメラを{買|か}いました。|Tôi đã mua máy ảnh mới.|I bought a new camera.||
+カレー|カレー|n|cà ri (cơm cà ri)|curry; curry and rice|{今日|きょう}の{昼|ひる}ご{飯|はん}はカレーです。|Bữa trưa hôm nay là cà ri.|Today's lunch is curry.||Ở Nhật, カレー thường là cơm trắng chan cà ri sệt (カレーライス).
+カレンダー|カレンダー|n|lịch (treo tường)|calendar|カレンダーに{誕生日|たんじょうび}を{書|か}きます。|Tôi ghi ngày sinh nhật lên lịch.|I write the birthday on the calendar.||
+ギター|ギター|n|đàn ghi-ta|guitar|ケンタはギターを{弾|ひ}きます。|Kenta chơi ghi-ta.|Kenta plays the guitar.||Chơi đàn dùng động từ 弾く (ひく), không dùng する.
+クラス|クラス|n|lớp (học)|class|クラスに{学生|がくせい}が{二十人|にじゅうにん}います。|Lớp có hai mươi học sinh.|There are twenty students in the class.||
+コート|コート|n|áo khoác dài; sân (quần vợt)|coat; (tennis) court|{寒|さむ}いですから、コートを{着|き}ます。|Trời lạnh nên tôi mặc áo khoác.|It's cold, so I'll wear a coat.||"Coat" và "court" đều thành コート vì tiếng Nhật kéo dài nguyên âm o.
+コーヒー|コーヒー|n|cà phê|coffee|{毎朝|まいあさ}コーヒーを{飲|の}みます。|Sáng nào tôi cũng uống cà phê.|I drink coffee every morning.||
+コップ|コップ|n|cốc, ly (uống nước)|glass; tumbler|コップに{水|みず}を{入|い}れてください。|Rót nước vào cốc giúp tôi.|Please pour water into the glass.||Không phải tiếng Anh mà từ tiếng Hà Lan "kop": ly không quai, khác カップ.
+コピー|コピー|n|bản sao; sao chụp (コピーする)|copy; photocopy|この{紙|かみ}を{三枚|さんまい}コピーしてください。|Hãy sao chụp tờ này thành ba bản.|Please make three copies of this sheet.||
+シャツ|シャツ|n|áo sơ mi, áo thun|shirt; undershirt|{白|しろ}いシャツを{着|き}ています。|Tôi đang mặc áo sơ mi trắng.|I'm wearing a white shirt.||
+シャワー|シャワー|n|vòi sen; tắm vòi sen|shower|{朝|あさ}シャワーを{浴|あ}びます。|Buổi sáng tôi tắm vòi sen.|I take a shower in the morning.||Tắm vòi sen nói シャワーを浴びる (あびる).
+スカート|スカート|n|chân váy|skirt|ユキさんは{赤|あか}いスカートが{好|す}きです。|Yuki thích chân váy đỏ.|Yuki likes red skirts.||
+ストーブ|ストーブ|n|lò sưởi|heater|{寒|さむ}いですね。ストーブをつけましょう。|Lạnh nhỉ. Bật lò sưởi lên đi.|It's cold. Let's turn on the heater.||Từ "stove" nhưng ở Nhật là lò sưởi, không phải bếp nấu ăn.
+スプーン|スプーン|n|cái thìa|spoon|スプーンでカレーを{食|た}べます。|Tôi ăn cà ri bằng thìa.|I eat curry with a spoon.||
+スポーツ|スポーツ|n|thể thao|sport; sports|どんなスポーツが{好|す}きですか。|Bạn thích môn thể thao nào?|What sports do you like?||
+ズボン|ズボン|n|quần dài|trousers; pants|このズボンは{長|なが}いです。|Cái quần này dài.|These trousers are long.||Từ tiếng Pháp "jupon" (váy lót), sang Nhật lại thành quần dài.
+セーター|セーター|n|áo len|sweater|{母|はは}にセーターをもらいました。|Tôi được mẹ cho áo len.|I got a sweater from my mother.||
+タクシー|タクシー|n|tắc xi|taxi|{雨|あめ}ですから、タクシーで{帰|かえ}りましょう。|Trời mưa, mình về bằng tắc xi đi.|It's raining, so let's go home by taxi.||
+テープ|テープ|n|băng dính; băng (ghi âm)|tape|テープで{紙|かみ}を{貼|は}ります。|Tôi dán giấy bằng băng dính.|I stick the paper on with tape.||
+テープレコーダー|テープレコーダー|n|máy ghi âm (chạy băng)|tape recorder|{古|ふる}いテープレコーダーで{音楽|おんがく}を{聞|き}きます。|Tôi nghe nhạc bằng máy ghi âm cũ.|I listen to music on an old tape recorder.||
+テーブル|テーブル|n|bàn (ăn, tiếp khách)|table|テーブルの{上|うえ}に{猫|ねこ}のタマがいます。|Mèo Tama ở trên bàn.|Tama the cat is on the table.||Bàn ăn, bàn tiếp khách; bàn học, bàn làm việc là 机 (つくえ).
+テスト|テスト|n|bài kiểm tra|test; exam|{明日|あした}は{漢字|かんじ}のテストがあります。|Ngày mai có bài kiểm tra chữ Hán.|There's a kanji test tomorrow.||
+デパート|デパート|n|cửa hàng bách hoá|department store|デパートでネクタイを{買|か}いました。|Tôi đã mua cà vạt ở cửa hàng bách hoá.|I bought a necktie at the department store.||Cắt từ "department store", chỉ giữ "depart".
+テレビ|テレビ|n|ti vi|television; TV|{夜|よる}、テレビを{見|み}ます。|Buổi tối tôi xem ti vi.|I watch TV in the evening.||
+ドア|ドア|n|cửa (kiểu Tây)|door|ドアを{閉|し}めてください。|Hãy đóng cửa lại.|Please close the door.||
+トイレ|トイレ|n|nhà vệ sinh|toilet; restroom|トイレはあそこです。|Nhà vệ sinh ở đằng kia.|The restroom is over there.||
+ナイフ|ナイフ|n|con dao|knife|ナイフでパンを{切|き}ります。|Tôi cắt bánh mì bằng dao.|I cut the bread with a knife.||
+ニュース|ニュース|n|tin tức|news|{田中|たなか}さんは{毎朝|まいあさ}ニュースを{見|み}ます。|Ông Tanaka sáng nào cũng xem thời sự.|Mr. Tanaka watches the news every morning.||
+ネクタイ|ネクタイ|n|cà vạt|necktie; tie|ケンタは{今日|きょう}ネクタイをしています。|Hôm nay Kenta đeo cà vạt.|Kenta is wearing a tie today.||Đeo cà vạt dùng する: ネクタイをする.
+ノート|ノート|n|vở, sổ ghi chép|notebook|ノートに{名前|なまえ}を{書|か}いてください。|Hãy viết tên vào vở.|Please write your name in the notebook.||Cắt từ "notebook" nên nghĩa là cuốn vở, không phải "ghi chú".
+パーティー|パーティー|n|bữa tiệc|party|{土曜日|どようび}にパーティーをします。|Thứ bảy chúng tôi tổ chức tiệc.|We're having a party on Saturday.||
+バス|バス|n|xe buýt; bồn tắm|bus; bath|バスで{会社|かいしゃ}に{行|い}きます。|Tôi đi làm bằng xe buýt.|I go to work by bus.||"Bus" và "bath" đều thành バス vì tiếng Nhật không có âm th; thường là xe buýt.
+バター|バター|n|bơ (từ sữa)|butter|パンとバターを{買|か}いました。|Tôi đã mua bánh mì và bơ.|I bought bread and butter.||Chỉ là bơ sữa; quả bơ thì gọi là アボカド.
+パン|パン|n|bánh mì|bread|{朝|あさ}ご{飯|はん}はパンです。|Bữa sáng tôi ăn bánh mì.|I have bread for breakfast.||Từ tiếng Bồ Đào Nha "pão", vào Nhật qua Nagasaki từ thế kỷ 16.
+ハンカチ|ハンカチ|n|khăn tay|handkerchief|{佐藤|さとう}さんにハンカチをもらいました。|Tôi được bà Sato tặng khăn tay.|Mrs. Sato gave me a handkerchief.||Rút gọn "handkerchief" còn han-ka-chi.
+フィルム|フィルム|n|cuộn phim (máy ảnh)|film (roll)|カメラにフィルムを{入|い}れます。|Tôi lắp phim vào máy ảnh.|I load film into the camera.||フィ là cách ghép chữ để viết âm "fi" mà tiếng Nhật vốn không có.
+プール|プール|n|bể bơi|swimming pool|{夏|なつ}はプールで{泳|およ}ぎます。|Mùa hè tôi bơi ở bể bơi.|In summer I swim in the pool.||
+フォーク|フォーク|n|cái nĩa|fork|フォークとナイフで{食|た}べます。|Tôi ăn bằng nĩa và dao.|I eat with a knife and fork.||
+ページ|ページ|n|trang (sách)|page|{本|ほん}の{十|じゅう}ページを{読|よ}んでください。|Hãy đọc trang 10 của sách.|Please read page 10 of the book.||
+ベッド|ベッド|n|giường|bed|タマはいつもベッドの{上|うえ}で{寝|ね}ます。|Tama lúc nào cũng ngủ trên giường.|Tama always sleeps on the bed.||Giường kiểu Tây; kiểu Nhật thì trải đệm 布団 (ふとん) xuống sàn.
+ペット|ペット|n|thú cưng|pet|ユキさんのペットは{猫|ねこ}です。|Thú cưng của Yuki là mèo.|Yuki's pet is a cat.||
+ペン|ペン|n|bút|pen|ペンを{貸|か}してください。|Cho tôi mượn cái bút.|Please lend me a pen.||
+ボールペン|ボールペン|n|bút bi|ballpoint pen|このボールペンは{百円|ひゃくえん}です。|Cây bút bi này 100 yên.|This ballpoint pen is 100 yen.||"Ball" + "pen": bút có viên bi ở đầu, đúng như tên "bút bi".
+ポケット|ポケット|n|túi (quần áo)|pocket|ユキさんの{鍵|かぎ}はポケットにありました。|Chìa khoá của Yuki nằm ngay trong túi.|Yuki's key was in her pocket.||
+ポスト|ポスト|n|hòm thư, thùng thư|mailbox; postbox|この{手紙|てがみ}をポストに{入|い}れてください。|Hãy bỏ lá thư này vào hòm thư.|Please put this letter in the mailbox.||Từ "post" (bưu chính): ở Nhật là thùng thư màu đỏ ngoài đường.
+ボタン|ボタン|n|cúc áo; nút bấm|button|このボタンを{押|お}してください。|Hãy bấm nút này.|Please press this button.||Từ tiếng Bồ Đào Nha "botão": vừa là cúc áo vừa là nút bấm.
+ホテル|ホテル|n|khách sạn|hotel|{駅|えき}の{前|まえ}にホテルがあります。|Trước ga có khách sạn.|There's a hotel in front of the station.||
+マッチ|マッチ|n|que diêm; trận đấu|match|マッチで{火|ひ}をつけます。|Tôi đánh diêm châm lửa.|I light a fire with a match.||Giống tiếng Anh "match": vừa là que diêm vừa là trận đấu.
+ラジオ|ラジオ|n|đài, ra-đi-ô|radio|{車|くるま}の{中|なか}でラジオを{聞|き}きます。|Tôi nghe đài trong xe ô tô.|I listen to the radio in the car.||
+ラジカセ|ラジカセ|n|máy cát-xét có đài|radio-cassette player; boombox|ケンタはラジカセで{音楽|おんがく}を{聞|き}きます。|Kenta nghe nhạc bằng máy cát-xét.|Kenta listens to music on his boombox.||Ghép đầu "radio" + "cassette": ラジ + カセ, kiểu rút gọn rất Nhật.
+レコード|レコード|n|đĩa hát (đĩa than)|record (vinyl)|{田中|たなか}さんは{古|ふる}いレコードが{好|す}きです。|Ông Tanaka thích đĩa than cũ.|Mr. Tanaka likes old records.||
+レストラン|レストラン|n|nhà hàng|restaurant|{駅|えき}の{近|ちか}くのレストランで{食|た}べましょう。|Ăn ở nhà hàng gần ga đi.|Let's eat at the restaurant near the station.||
+ワイシャツ|ワイシャツ|n|áo sơ mi (công sở)|dress shirt|{毎日|まいにち}ワイシャツを{着|き}て{会社|かいしゃ}へ{行|い}きます。|Ngày nào tôi cũng mặc sơ mi đi làm.|I wear a dress shirt to work every day.||Từ "white shirt" nghe thành ワイシャツ; áo màu xanh vẫn gọi là ワイシャツ.

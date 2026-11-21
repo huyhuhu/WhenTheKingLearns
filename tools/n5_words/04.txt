@@ -1,0 +1,49 @@
+# Buổi 04: Gia đình, con người, đại từ nhân xưng (中国 Trung Quốc)
+@hv 兄=HUYNH 姉=TỈ 妹=MUỘI 勢=THẾ 奥=ÁO 伯=BÁ 弟=ĐỆ 家=GIA 族=TỘC 嫌=HIỀM 結=KẾT 婚=HÔN 皆=GIAI 両=LƯỠNG 私=TƯ
+あなた|あなた|pron|bạn, anh, chị (ngôi thứ hai)|you|あなたの{名前|なまえ}は{何|なん}ですか。|Tên bạn là gì?|What's your name?|am=私|Gọi người trên bằng あなた là thất lễ; hãy gọi tên + さん.
+兄|あに|n|anh trai (của mình)|(my) older brother|{兄|あに}は{銀行|ぎんこう}で{働|はたら}いています。|Anh trai tôi làm ở ngân hàng.|My older brother works at a bank.|am=弟 na|あに "anh ni" (anh này): kể về anh mình với người ngoài.
+姉|あね|n|chị gái (của mình)|(my) older sister|{姉|あね}は{料理|りょうり}が{上手|じょうず}です。|Chị gái tôi nấu ăn giỏi.|My older sister is good at cooking.|am=妹|
+妹|いもうと|n|em gái (của mình)|(my) younger sister|{妹|いもうと}は{高校生|こうこうせい}です。|Em gái tôi là học sinh cấp ba.|My younger sister is a high school student.|am=姉|
+お～|お～|pre|(tiền tố lịch sự, kính ngữ)|polite/honorific prefix|お{茶|ちゃ}をどうぞ。|Mời anh dùng trà.|Please have some tea.||Thêm trước danh từ cho lịch sự: お茶, お名前. Từ gốc Hán thường dùng ご: ご家族.
+大勢|おおぜい|n|đông người|a crowd; many people|{駅|えき}に{人|ひと}が{大勢|おおぜい}います。|Ở ga có rất đông người.|There are lots of people at the station.||Chỉ dùng cho người, không dùng cho đồ vật.
+お母さん|おかあさん|n|mẹ (gọi mẹ; mẹ người khác)|mother (polite; someone's mother)|お{母|かあ}さん、ただいま。|Mẹ ơi, con về rồi.|Mom, I'm home.|am=お父さん|
+奥さん|おくさん|n|vợ (của người khác)|(someone else's) wife|{田中|たなか}さんの{奥|おく}さんは{優|やさ}しいです。|Vợ ông Tanaka rất hiền.|Mr. Tanaka's wife is kind.||奥 = áo (gian trong): xưa người vợ ở gian trong của nhà.
+伯父さん|おじさん|n|chú, bác (trai); ông chú (đàn ông trung niên)|uncle; middle-aged man|{伯父|おじ}さんは{北海道|ほっかいどう}に{住|す}んでいます。|Bác tôi sống ở Hokkaido.|My uncle lives in Hokkaido.|am=伯母さん|おじさん (chú) khác おじいさん (ông): kéo dài "i" là già thêm một đời!
+おじいさん|おじいさん|n|ông; cụ ông|grandfather; old man|あのおじいさんは{毎朝|まいあさ}{散歩|さんぽ}します。|Ông cụ kia sáng nào cũng đi dạo.|That old man takes a walk every morning.|am=おばあさん|
+お父さん|おとうさん|n|bố (gọi bố; bố người khác)|father (polite; someone's father)|お{父|とう}さんはお{元気|げんき}ですか。|Bố anh có khoẻ không?|How is your father?|am=お母さん|
+弟|おとうと|n|em trai (của mình)|(my) younger brother|{弟|おとうと}はゲームが{好|す}きです。|Em trai tôi thích chơi game.|My younger brother likes games.|am=兄|Đừng nhầm おとうと (em trai) với おとうさん (bố)!
+男|おとこ|n|đàn ông, nam|man; male|あの{男|おとこ}の{人|ひと}は{誰|だれ}ですか。|Người đàn ông kia là ai?|Who is that man?|am=女 song|
+男の子|おとこのこ|n|bé trai, con trai|boy|{男|おとこ}の{子|こ}が{公園|こうえん}で{遊|あそ}んでいます。|Mấy bé trai đang chơi ở công viên.|Some boys are playing in the park.|am=女の子|
+大人|おとな|n|người lớn|adult|{大人|おとな}は{千円|せんえん}です。|Vé người lớn 1.000 yên.|It's 1,000 yen for adults.|am=子供 gia na|Không phải "đại nhân" (quan lớn); đọc おとな: "ô, to ra!" thành người lớn.
+お兄さん|おにいさん|n|anh trai (gọi anh; anh người khác)|older brother (polite; someone's)|ケンタのお{兄|にい}さんは{背|せ}が{高|たか}いです。|Anh trai Kenta cao.|Kenta's older brother is tall.|am=お姉さん|Kể anh mình với người ngoài dùng 兄; gọi anh hoặc nói anh người khác dùng お兄さん.
+お姉さん|おねえさん|n|chị gái (gọi chị; chị người khác)|older sister (polite; someone's)|ユキさんのお{姉|ねえ}さんは{先生|せんせい}です。|Chị gái của Yuki là giáo viên.|Yuki's older sister is a teacher.|am=お兄さん|
+伯母さん|おばさん|n|cô, dì, bác (gái); cô (phụ nữ trung niên)|aunt; middle-aged woman|{伯母|おば}さんにりんごをもらいました。|Tôi được dì cho táo.|I got some apples from my aunt.|am=伯父さん|おばさん (dì) khác おばあさん (bà): kéo dài "a" là thành bà!
+おばあさん|おばあさん|n|bà; cụ bà|grandmother; old woman|おばあさんの{家|いえ}は{田舎|いなか}にあります。|Nhà bà tôi ở quê.|My grandmother's house is in the countryside.|am=おじいさん|
+女|おんな|n|phụ nữ, nữ|woman; female|{女|おんな}の{人|ひと}が{二人|ふたり}{来|き}ました。|Có hai người phụ nữ đã đến.|Two women came.|am=男 song|
+女の子|おんなのこ|n|bé gái, con gái|girl|{女|おんな}の{子|こ}が{歌|うた}を{歌|うた}っています。|Một bé gái đang hát.|A girl is singing.|am=男の子|
+外国人|がいこくじん|n|người nước ngoài|foreigner|この{店|みせ}は{外国人|がいこくじん}が{多|おお}いです。|Quán này có nhiều người nước ngoài.|There are many foreigners at this shop.|song|
+方|かた|n|vị, người (kính ngữ); cách (làm)|person (honorific); way of doing|あの{方|かた}はどなたですか。|Vị kia là ai ạ?|Who is that person?||Lịch sự hơn 人; sau động từ thì nghĩa là "cách": 読み方 = cách đọc.
+家族|かぞく|n|gia đình|family|{家族|かぞく}の{写真|しゃしん}を{見|み}せてください。|Cho tôi xem ảnh gia đình bạn.|Please show me a photo of your family.||Hán Việt là "gia tộc", nhưng nghĩa thường ngày chỉ là gia đình.
+兄弟|きょうだい|n|anh chị em|siblings|{兄弟|きょうだい}はいますか。|Bạn có anh chị em không?|Do you have any siblings?|song|Viết "huynh đệ" nhưng dùng cho anh chị em nói chung, cả chị em gái.
+嫌い|きらい|adj-na|ghét, không thích|disliked; to dislike|ケンタは{野菜|やさい}が{嫌|きら}いです。|Kenta ghét rau.|Kenta hates vegetables.|am=好き|Đuôi い nhưng là tính từ な: 嫌いな食べ物, phủ định là 嫌いじゃない.
+結婚|けっこん|n|kết hôn|marriage|{来月|らいげつ}、{姉|あね}が{結婚|けっこん}します。|Tháng sau chị gái tôi kết hôn.|My older sister is getting married next month.|song|
+子供|こども|n|trẻ con; con cái|child; children|{子供|こども}が{二人|ふたり}います。|Tôi có hai đứa con.|I have two children.|am=大人 gia|Hán Việt đọc là "tử cung" nhưng nghĩa chỉ là trẻ con thôi, đừng hoảng!
+～さん|～さん|suf|anh/chị/ông/bà ～|Mr./Ms. ~|ユキさんはどこですか。|Chị Yuki đâu rồi?|Where is Yuki?|trung=三|Không bao giờ thêm さん vào tên của chính mình.
+自分|じぶん|n|bản thân, tự mình|oneself; myself|{自分|じぶん}で{料理|りょうり}を{作|つく}ります。|Tôi tự nấu ăn.|I cook for myself.||
+上手|じょうず|adj-na|giỏi|skillful; good at|ユキさんは{歌|うた}が{上手|じょうず}です。|Yuki hát hay.|Yuki is good at singing.|am=下手|上 (trên) + 手 (tay): tay nghề "trên cơ".
+～人|～じん|suf|người (nước) ～|person from ~ (nationality)|{私|わたし}はベトナム{人|じん}です。|Tôi là người Việt Nam.|I'm Vietnamese.||Quốc tịch đọc じん (日本人); đếm người đọc にん (三人).
+好き|すき|adj-na|thích|liked; to like|タマは{魚|さかな}が{好|す}きです。|Mèo Tama thích cá.|Tama likes fish.|am=嫌い|Đuôi き nhưng là tính từ な: 好きな人 = người mình thích.
+大好き|だいすき|adj-na|rất thích|to love; really like|{田中|たなか}さんは{冗談|じょうだん}が{大好|だいす}きです。|Ông Tanaka rất thích nói đùa.|Mr. Tanaka loves telling jokes.||
+～たち|～たち|suf|các ～, những ～ (số nhiều)|plural suffix (people)|{子供|こども}たちが{遊|あそ}んでいます。|Bọn trẻ đang chơi.|The children are playing.||Chủ yếu dùng cho người: 私たち = chúng tôi.
+誕生日|たんじょうび|n|sinh nhật|birthday|{誕生日|たんじょうび}おめでとう！|Chúc mừng sinh nhật!|Happy birthday!||誕生 = đản sinh (ra đời) + 日 nhật: ngày ra đời.
+父|ちち|n|bố (của mình)|(my) father|{父|ちち}は{会社員|かいしゃいん}です。|Bố tôi là nhân viên công ty.|My father is an office worker.|am=母|
+友達|ともだち|n|bạn bè, bạn|friend|ケンタは{友達|ともだち}が{少|すく}ないです。|Kenta có ít bạn.|Kenta doesn't have many friends.||
+名前|なまえ|n|tên|name|ここに{名前|なまえ}を{書|か}いてください。|Hãy viết tên vào đây.|Please write your name here.||
+母|はは|n|mẹ (của mình)|(my) mother|{母|はは}は{料理|りょうり}が{好|す}きです。|Mẹ tôi thích nấu ăn.|My mother likes cooking.|am=父|Kể về mẹ mình với người ngoài dùng 母; gọi mẹ hoặc nói mẹ người khác dùng お母さん.
+人|ひと|n|người|person|あの{人|ひと}は{親切|しんせつ}です。|Người kia tốt bụng.|That person is kind.||
+下手|へた|adj-na|kém, vụng|unskillful; bad at|ケンタは{歌|うた}が{下手|へた}です。|Kenta hát dở.|Kenta is bad at singing.|am=上手 gia|"Hạ thủ" tiếng Việt là ra tay, nhưng 下手 へた chỉ là vụng về thôi.
+皆さん|みなさん|n|mọi người, các bạn (lịch sự)|everyone (polite, when addressing)|{皆|みな}さん、こんにちは。|Chào mọi người.|Hello, everyone.||Dùng khi nói với cả nhóm; みんな thân mật hơn.
+みんな|みんな|n|mọi người; tất cả|everyone; all|みんなでご{飯|はん}を{食|た}べましょう。|Mọi người cùng ăn cơm nhé.|Let's all eat together.||
+両親|りょうしん|n|bố mẹ|parents|{両親|りょうしん}はベトナムに{住|す}んでいます。|Bố mẹ tôi sống ở Việt Nam.|My parents live in Vietnam.||両 = lưỡng (hai) + 親 = thân: hai đấng sinh thành, "song thân".
+私|わたし|pron|tôi|I|{私|わたし}は{学生|がくせい}です。|Tôi là sinh viên.|I'm a student.|am=あなた|
+私|わたくし|pron|tôi (rất trang trọng)|I (very formal)|{私|わたくし}、{田中|たなか}と{申|もう}します。|Tôi tên là Tanaka ạ.|My name is Tanaka.||Cùng chữ 私, đọc わたくし khi nói rất trang trọng (phát biểu, công việc).

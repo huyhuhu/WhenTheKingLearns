@@ -1,0 +1,48 @@
+# Buổi 10: Mua sắm, tiền, quần áo, màu sắc (北陸 Bắc Lục)
+@hv 青=THANH 赤=XÍCH 色=SẮC 傘=TẢN 黄=HOÀNG 靴=NGOA 黒=HẮC 財=TÀI 布=BỐ 締=ĐẾ
+@hv 背=BỐI 広=QUẢNG 脱=THOÁT 封=PHONG 筒=ĐỒNG 服=PHỤC 帽=MẠO 緑=LỤC 眼=NHÃN 鏡=KÍNH
+青|あお|n|màu xanh (lam)|blue; green (traffic light)|{信号|しんごう}が{青|あお}になりました。|Đèn giao thông đã chuyển xanh.|The traffic light turned green.||青 thanh là xanh trời, nhưng đèn xanh lá, rau xanh cũng gọi là 青!
+青い|あおい|adj-i|xanh (lam)|blue|{今日|きょう}は{空|そら}が{青|あお}いです。|Hôm nay trời xanh.|The sky is blue today.||Màu có い là tính từ (青い空); bỏ い là danh từ (青が好き).
+赤|あか|n|màu đỏ|red|{私|わたし}は{赤|あか}が{好|す}きです。|Tôi thích màu đỏ.|I like red.||
+赤い|あかい|adj-i|đỏ|red|ユキさんは{赤|あか}い{傘|かさ}を{買|か}いました。|Chị Yuki đã mua một chiếc ô màu đỏ.|Yuki bought a red umbrella.|na|あかい: "á, cay!" ăn ớt xong mặt đỏ bừng.
+いくら|いくら|n|bao nhiêu (tiền)|how much|このかばんはいくらですか。|Cái túi này bao nhiêu tiền?|How much is this bag?||Dùng để hỏi giá; hỏi bao nhiêu cái thì dùng いくつ.
+色|いろ|n|màu sắc|color|{何色|なにいろ}が{好|す}きですか。|Bạn thích màu gì?|What color do you like?||色 sắc = màu; ghép sau tên màu: 茶色, 黄色.
+売る|うる|v1|bán|to sell|あの{店|みせ}は{古|ふる}い{本|ほん}を{売|う}っています。|Cửa hàng kia bán sách cũ.|That shop sells used books.|am=買う|売 vốn là 出 (ra) + 買 (mua): đem hàng ra cho người mua, tức là bán.
+上着|うわぎ|n|áo khoác|jacket; coat|{寒|さむ}いですから、{上着|うわぎ}を{着|き}てください。|Trời lạnh nên hãy mặc áo khoác vào.|It's cold, so please put on a jacket.||上 trên + 着 mặc: áo mặc lớp ngoài cùng. Đọc うわ, không phải うえ.
+～円|～えん|ctr|~ yên (tiền Nhật)|~ yen|このパンは{百五十円|ひゃくごじゅうえん}です。|Cái bánh mì này 150 yên.|This bread is 150 yen.||円 viên = tròn, như đồng xu tròn.
+お金|おかね|n|tiền|money|{今月|こんげつ}はお{金|かね}がありません。|Tháng này tôi hết tiền rồi.|I have no money this month.||金 kim = vàng; vàng bạc là tiền. Đứng một mình 金 đọc かね.
+買い物|かいもの|n|việc mua sắm|shopping|{日曜日|にちようび}にデパートで{買|か}い{物|もの}をしました。|Chủ nhật tôi đi mua sắm ở cửa hàng bách hoá.|I went shopping at a department store on Sunday.||
+買う|かう|v1|mua|to buy|ケンタは{新|あたら}しいゲームを{買|か}いました。|Kenta đã mua trò chơi điện tử mới.|Kenta bought a new video game.|am=売る|
+傘|かさ|n|cái ô, cái dù|umbrella|ユキさんはまた{傘|かさ}を{忘|わす}れました。|Chị Yuki lại quên ô rồi.|Yuki forgot her umbrella again.||Chữ 傘 trông như chiếc ô đang mở, bên dưới có bốn người trú mưa.
+かばん|かばん|n|cặp, túi xách|bag|{新|あたら}しいかばんを{買|か}いたいです。|Tôi muốn mua túi xách mới.|I want to buy a new bag.|na|かばん: nghe như "cặp bạn", cái cặp sách của bạn.
+かぶる|かぶる|v1|đội (mũ)|to put on (a hat)|{夏|なつ}は{帽子|ぼうし}をかぶってください。|Mùa hè hãy đội mũ vào.|Please wear a hat in summer.||Mặc theo vị trí: đầu かぶる, thân trên 着る, chân はく.
+黄色|きいろ|n|màu vàng|yellow|{黄色|きいろ}のシャツを{着|き}ています。|Tôi đang mặc áo sơ mi màu vàng.|I'm wearing a yellow shirt.||黄 hoàng = vàng (như Hoàng Hà); đọc き, thêm 色 thành きいろ.
+黄色い|きいろい|adj-i|vàng|yellow|{黄色|きいろ}い{花|はな}が{咲|さ}いています。|Hoa vàng đang nở.|Yellow flowers are blooming.||Chỉ hai màu thêm い sau 色: 黄色い và 茶色い.
+切手|きって|n|tem thư|postage stamp|{郵便局|ゆうびんきょく}で{切手|きって}を{買|か}いました。|Tôi đã mua tem ở bưu điện.|I bought stamps at the post office.||切 thiết (cắt) + 手: tem là mảnh giấy "cắt" ra từ tờ lớn.
+着る|きる|v2|mặc (áo, phần thân trên)|to wear; to put on (upper body)|ユキさんは{白|しろ}いシャツを{着|き}ています。|Chị Yuki đang mặc áo sơ mi trắng.|Yuki is wearing a white shirt.|am=脱ぐ trung=切る|着る (mặc) là nhóm 2: 着ます; 切る (cắt) là nhóm 1: 切ります.
+銀行|ぎんこう|n|ngân hàng|bank|{銀行|ぎんこう}は{三時|さんじ}までです。|Ngân hàng mở cửa đến 3 giờ.|The bank is open until three.|song|
+靴|くつ|n|giày|shoes|{日本|にほん}の{家|いえ}では{靴|くつ}を{脱|ぬ}ぎます。|Vào nhà ở Nhật thì phải cởi giày.|In Japanese homes, you take off your shoes.||靴 = 革 (da) + 化 (hoá): da thuộc hoá thành đôi giày.
+靴下|くつした|n|tất, vớ|socks|{猫|ねこ}のタマが{靴下|くつした}を{持|も}っていきました。|Bé Tama tha mất chiếc tất rồi.|Tama ran off with a sock.||靴 giày + 下 dưới: thứ mang bên dưới giày là tất.
+黒|くろ|n|màu đen|black|{私|わたし}の{猫|ねこ}は{黒|くろ}と{白|しろ}です。|Mèo của tôi màu đen trắng.|My cat is black and white.|am=白|
+黒い|くろい|adj-i|đen; tối|black; dark|{田中|たなか}さんは{黒|くろ}い{背広|せびろ}を{着|き}ています。|Ông Tanaka mặc bộ com-lê đen.|Mr. Tanaka is wearing a black suit.|am=白い|
+財布|さいふ|n|ví tiền|wallet|{財布|さいふ}の{中|なか}に{千円|せんえん}しかありません。|Trong ví chỉ có một nghìn yên.|I only have a thousand yen in my wallet.||財 tài (tiền của) + 布 bố (vải): túi vải đựng tiền.
+締める|しめる|v2|thắt, buộc (cà vạt, dây lưng)|to tie; to fasten|{会社|かいしゃ}ではネクタイを{締|し}めます。|Ở công ty tôi thắt cà vạt.|I wear a tie at work.|trung=閉める|締める là thắt (cà vạt, dây an toàn); 閉める là đóng (cửa). Cùng đọc しめる.
+白|しろ|n|màu trắng|white|{白|しろ}はきれいな{色|いろ}ですね。|Màu trắng đẹp nhỉ.|White is a pretty color, isn't it?|am=黒|
+白い|しろい|adj-i|trắng|white|{冬|ふゆ}の{山|やま}は{白|しろ}いです。|Núi mùa đông trắng xoá.|The mountains are white in winter.|am=黒い|
+背広|せびろ|n|bộ com-lê (nam)|men's suit|{田中|たなか}さんの{背広|せびろ}は{古|ふる}いです。|Bộ com-lê của ông Tanaka đã cũ.|Mr. Tanaka's suit is old.||背 lưng + 広 rộng: "áo lưng rộng" của các ông chú đi làm.
+高い|たかい|adj-i|cao; đắt|high; tall; expensive|この{時計|とけい}は{高|たか}いですね。|Cái đồng hồ này đắt nhỉ.|This watch is expensive, isn't it?|am=安い am=低い na|takai: "ta cay" vì đắt quá! Đắt thì ngược với 安い, cao thì ngược với 低い.
+茶色|ちゃいろ|n|màu nâu|brown|{茶色|ちゃいろ}の{靴|くつ}を{買|か}いました。|Tôi đã mua đôi giày màu nâu.|I bought brown shoes.||茶 trà + 色 sắc: "màu nước trà", nâu như trà để lâu.
+手紙|てがみ|n|lá thư|letter|{母|はは}に{手紙|てがみ}を{書|か}きました。|Tôi đã viết thư cho mẹ.|I wrote a letter to my mother.|gia|Hán Việt "thủ chỉ" (giấy tay); tiếng Trung là giấy vệ sinh, tiếng Nhật lại là lá thư!
+脱ぐ|ぬぐ|v1|cởi (quần áo, giày, mũ)|to take off (clothes, shoes)|{部屋|へや}で{上着|うわぎ}を{脱|ぬ}ぎました。|Tôi cởi áo khoác trong phòng.|I took off my jacket in the room.|am=着る|Mặc thì chia ba từ, nhưng cởi chỉ cần một: mũ, áo, giày đều 脱ぐ.
+葉書|はがき|n|bưu thiếp|postcard|{北海道|ほっかいどう}から{葉書|はがき}を{送|おく}りました。|Tôi đã gửi bưu thiếp từ Hokkaido.|I sent a postcard from Hokkaido.||葉 lá + 書 thư: lá thư mỏng như chiếc lá.
+はく|はく|v1|mặc (quần, váy); đi (giày, tất)|to put on (shoes, trousers, socks)|{新|あたら}しい{靴|くつ}をはきました。|Tôi đã đi đôi giày mới.|I put on my new shoes.||Thứ gì xỏ chân vào thì dùng はく: quần, váy, tất, giày.
+封筒|ふうとう|n|phong bì|envelope|{手紙|てがみ}を{封筒|ふうとう}に{入|い}れました。|Tôi đã cho lá thư vào phong bì.|I put the letter in an envelope.||封 phong như "phong bì"; 筒 đồng là cái ống, cái túi.
+服|ふく|n|quần áo|clothes|{新|あたら}しい{服|ふく}を{買|か}いに{行|い}きましょう。|Đi mua quần áo mới nào.|Let's go buy some new clothes.|trung=吹く|服 phục như "y phục", "đồng phục".
+帽子|ぼうし|n|mũ, nón|hat; cap|この{帽子|ぼうし}は{父|ちち}のです。|Cái mũ này là của bố tôi.|This hat is my father's.||帽 mạo = mũ; 子 chỉ là đuôi danh từ, như trong 椅子 (ghế).
+店|みせ|n|cửa hàng, quán|shop; store|この{店|みせ}のラーメンはおいしいです。|Mì ramen của quán này ngon.|The ramen at this shop is delicious.||Đứng một mình đọc みせ; trong từ ghép đọc てん, như 喫茶店 (quán cà phê).
+緑|みどり|n|màu xanh lá; cây xanh|green; greenery|{公園|こうえん}は{緑|みどり}がきれいです。|Cây xanh trong công viên rất đẹp.|The greenery in the park is beautiful.||Người Nhật hay gọi xanh lá là 青; dùng 緑 khi muốn nói rõ là xanh lá cây.
+眼鏡|めがね|n|kính đeo mắt|glasses|{眼鏡|めがね}はどこですか。あ、{頭|あたま}の{上|うえ}です。|Kính đâu rồi? À, trên đầu.|Where are my glasses? Oh, on my head.||Đọc đặc biệt: め (mắt) + がね (kim loại), "kim loại đeo cho mắt".
+～屋|～や|suf|tiệm ~, cửa hàng ~|~ shop; ~ store|{駅|えき}の{前|まえ}にパン{屋|や}があります。|Trước nhà ga có tiệm bánh mì.|There's a bakery in front of the station.||屋 ốc = nhà: 本屋 tiệm sách, パン屋 tiệm bánh; cũng chỉ người bán hàng đó.
+八百屋|やおや|n|cửa hàng rau quả|greengrocer|{八百屋|やおや}で{野菜|やさい}を{買|か}いました。|Tôi mua rau ở cửa hàng rau quả.|I bought vegetables at the greengrocer's.||八百 "tám trăm" = vô số: tiệm bán đủ thứ rau. Đọc đặc biệt やお.
+安い|やすい|adj-i|rẻ|cheap; inexpensive|このスーパーは{野菜|やさい}が{安|やす}いです。|Siêu thị này bán rau rẻ.|Vegetables are cheap at this supermarket.|am=高い|安 an: giá rẻ thì ví tiền được "an" lòng.
+洋服|ようふく|n|quần áo kiểu Tây; quần áo|Western clothes; clothes|{佐藤|さとう}さんは{洋服|ようふく}より{着物|きもの}が{好|す}きです。|Bà Sato thích kimono hơn quần áo kiểu Tây.|Mrs. Sato prefers kimono to Western clothes.||洋 dương (Tây dương) + 服 phục: "Tây phục", ngược với 和服 (kimono).

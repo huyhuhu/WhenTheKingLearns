@@ -1,0 +1,58 @@
+# Buổi 1: Chào hỏi, đại từ chỉ định (京都 Kinh Đô)
+# Định dạng: từ|cách đọc|từ loại|nghĩa VI|nghĩa EN|câu ví dụ|dịch VI|dịch EN|thẻ|mẹo
+# Từ loại: n pron v1 v2 v3 adj-i adj-na adv conj int exp num ctr suf pre adn
+#   v1 = động từ nhóm 1, v2 = nhóm 2, v3 = nhóm 3 (する, 来る, danh từ + する)
+# Câu ví dụ: mọi chữ Hán phải có furigana dạng {漢字|かんじ}. Nhân vật: ユキさん, ケンタ, 田中さん, 佐藤さん, 猫のタマ.
+# Thẻ (cách nhau bằng dấu cách): song = song sinh Hán Việt, gia = kẻ giả mạo, na = âm na ná (bắt buộc có mẹo),
+#   am=<từ> = cặp trái nghĩa / cặp đối, trung=<từ> = đồng âm khác nghĩa. "ghep" và "su" do script tự gắn.
+# Mẹo: chỉ viết cho từ khó nhớ; có thể để trống.
+@hv 願=NGUYỆN
+おはようございます|おはようございます|exp|chào buổi sáng|good morning|{田中|たなか}さん、おはようございます。|Chào buổi sáng, ông Tanaka.|Good morning, Mr. Tanaka.||
+こんにちは|こんにちは|exp|xin chào (ban ngày)|hello; good afternoon|ユキさん、こんにちは。|Chào chị Yuki.|Hello, Yuki.||Viết は nhưng đọc "wa": vốn là 今日は, "hôm nay thì...".
+こんばんは|こんばんは|exp|chào buổi tối|good evening|こんばんは。{今日|きょう}は{寒|さむ}いですね。|Chào buổi tối. Hôm nay lạnh nhỉ.|Good evening. It's cold today, isn't it?||Vốn là 今晩は, "tối nay thì...". Chữ は cuối cũng đọc "wa".
+さようなら|さようなら|exp|tạm biệt|goodbye|{先生|せんせい}、さようなら。|Em chào thầy ạ.|Goodbye, teacher.||Dùng khi chia tay lâu. Bạn bè gặp lại ngay hôm sau thường nói じゃあね.
+おやすみなさい|おやすみなさい|exp|chúc ngủ ngon|good night|もう{十一時|じゅういちじ}です。おやすみなさい。|Đã 11 giờ rồi. Chúc ngủ ngon.|It's already eleven. Good night.||Từ 休み (nghỉ): "xin hãy nghỉ ngơi".
+ありがとうございます|ありがとうございます|exp|cảm ơn (lịch sự)|thank you|{本|ほん}をありがとうございます。|Cảm ơn anh về cuốn sách.|Thank you for the book.||
+すみません|すみません|exp|xin lỗi; xin phép (khi gọi người)|excuse me; I'm sorry|すみません、{駅|えき}はどこですか。|Xin lỗi, nhà ga ở đâu ạ?|Excuse me, where is the station?||Một từ ba việc: xin lỗi, gọi người phục vụ, và cảm ơn khi được giúp.
+ごめんなさい|ごめんなさい|exp|xin lỗi (thân mật)|I'm sorry|ごめんなさい、{遅|おそ}くなりました。|Xin lỗi, tớ đến muộn.|Sorry, I'm late.||
+いただきます|いただきます|exp|xin phép ăn (nói trước bữa)|let's eat (said before a meal)|みんなで「いただきます」と{言|い}いました。|Mọi người cùng nói "itadakimasu".|Everyone said "itadakimasu" together.|am=ごちそうさまでした|Nghĩa gốc là "xin nhận": cảm ơn người nấu và cả thức ăn.
+ごちそうさまでした|ごちそうさまでした|exp|cảm ơn vì bữa ăn (nói sau bữa)|thank you for the meal|ごちそうさまでした。とてもおいしかったです。|Cảm ơn vì bữa ăn. Ngon lắm ạ.|Thank you for the meal. It was delicious.|am=いただきます|
+はじめまして|はじめまして|exp|rất vui được gặp (lần đầu)|nice to meet you|はじめまして、ケンタです。|Rất vui được gặp, tôi là Kenta.|Nice to meet you, I'm Kenta.||Từ 初めて, "lần đầu tiên".
+よろしくお願いします|よろしくおねがいします|exp|rất mong được giúp đỡ|please treat me well; nice to meet you|どうぞよろしくお{願|ねが}いします。|Rất mong được anh giúp đỡ.|I look forward to working with you.||
+お願いします|おねがいします|exp|làm ơn, nhờ anh/chị|please (when asking)|コーヒーを{一|ひと}つお{願|ねが}いします。|Cho tôi một ly cà phê.|One coffee, please.||願 = nguyện: "xin nguyện cầu" một điều.
+いってきます|いってきます|exp|con đi đây (khi ra khỏi nhà)|I'm off (said when leaving home)|「いってきます」「いってらっしゃい」|"Con đi đây." "Đi nhé."|"I'm off." "See you."|am=いってらっしゃい|Vốn là 行って来ます: đi rồi sẽ về.
+いってらっしゃい|いってらっしゃい|exp|đi nhé (tiễn người ra khỏi nhà)|take care (said to someone leaving)|ユキさん、いってらっしゃい。|Yuki đi nhé.|Take care, Yuki.|am=いってきます|
+ただいま|ただいま|exp|con về rồi đây|I'm home|「ただいま」「おかえりなさい」|"Con về rồi." "Mừng con về."|"I'm home." "Welcome back."|am=おかえりなさい|
+おかえりなさい|おかえりなさい|exp|mừng (bạn) về nhà|welcome back|おかえりなさい。{今日|きょう}はどうでしたか。|Mừng con về. Hôm nay thế nào?|Welcome back. How was today?|am=ただいま|Từ 帰る (về nhà): "chào mừng bạn đã về".
+ああ|ああ|int|à, ồ|ah; oh|ああ、そうですか。|À, ra vậy.|Oh, I see.||
+はい|はい|int|vâng, có|yes|はい、{学生|がくせい}です。|Vâng, tôi là sinh viên.|Yes, I'm a student.|am=いいえ|
+いいえ|いいえ|int|không|no|いいえ、{日本人|にほんじん}じゃありません。|Không, tôi không phải người Nhật.|No, I'm not Japanese.|am=はい|
+ええ|ええ|int|vâng, ừ (thân mật)|yes (casual)|ええ、いいですよ。|Ừ, được thôi.|Yeah, sure.||
+そう|そう|adv|vậy, như thế|so; like that|そうですか。わかりました。|Thế à. Tôi hiểu rồi.|Is that so? I understand.||
+さあ|さあ|int|nào; ờ thì|come on; well|さあ、{行|い}きましょう。|Nào, đi thôi.|Come on, let's go.||
+どうぞ|どうぞ|adv|xin mời|please (go ahead); here you are|どうぞ、{入|はい}ってください。|Xin mời vào.|Please come in.||
+どうも|どうも|adv|cảm ơn; rất|thanks; very|どうもありがとうございます。|Cảm ơn rất nhiều.|Thank you very much.||Đứng một mình là lời cảm ơn ngắn gọn; đi trước ありがとう thì nghĩa là "rất".
+もしもし|もしもし|int|a-lô (điện thoại)|hello (on the phone)|もしもし、ケンタですか。|A-lô, Kenta đấy à?|Hello, is that Kenta?||
+下さい|ください|exp|cho tôi; xin hãy|please (give me / do for me)|{水|みず}を{下|くだ}さい。|Cho tôi nước.|Water, please.||下 = hạ: xin bề trên "hạ cố" ban cho.
+ここ|ここ|pron|chỗ này, ở đây|here|ここは{私|わたし}の{部屋|へや}です。|Đây là phòng của tôi.|This is my room.||
+そこ|そこ|pron|chỗ đó (gần người nghe)|there (near you)|{鍵|かぎ}はそこにあります。|Chìa khoá ở chỗ đó.|The key is there.||
+あそこ|あそこ|pron|chỗ kia (xa cả hai người)|over there|あそこに{猫|ねこ}がいます。|Đằng kia có con mèo.|There's a cat over there.||
+どこ|どこ|pron|ở đâu|where|トイレはどこですか。|Nhà vệ sinh ở đâu?|Where is the toilet?||
+これ|これ|pron|cái này|this (one)|これは{何|なん}ですか。|Cái này là gì?|What is this?|na|こ-そ-あ-ど là "Cạnh - Sát - Ấy - Đâu": cạnh tôi, sát bạn, ấy xa, đâu?
+それ|それ|pron|cái đó (gần người nghe)|that (one, near you)|それは{私|わたし}のかばんです。|Cái đó là túi của tôi.|That's my bag.||
+あれ|あれ|pron|cái kia (xa cả hai người)|that (one, over there)|あれは{富士山|ふじさん}です。|Kia là núi Phú Sĩ.|That's Mount Fuji.||
+どれ|どれ|pron|cái nào|which (one)|どれがいいですか。|Cái nào được?|Which one is good?||
+この|この|adn|... này|this (+ noun)|この{本|ほん}は{面白|おもしろ}いです。|Cuốn sách này hay.|This book is interesting.||
+その|その|adn|... đó|that (+ noun, near you)|その{傘|かさ}はユキさんのです。|Cái ô đó là của Yuki.|That umbrella is Yuki's.||
+あの|あの|adn|... kia; ờ...|that (+ noun, over there); um|あの{人|ひと}は{誰|だれ}ですか。|Người kia là ai?|Who is that person?||
+どの|どの|adn|... nào|which (+ noun)|どの{電車|でんしゃ}に{乗|の}りますか。|Anh đi chuyến tàu nào?|Which train do you take?||
+こちら|こちら|pron|phía này; vị này (lịch sự)|this way; this person (polite)|こちらは{田中|たなか}さんです。|Đây là ông Tanaka.|This is Mr. Tanaka.||
+そちら|そちら|pron|phía đó (lịch sự)|that way (polite)|そちらは{寒|さむ}いですか。|Bên đó có lạnh không?|Is it cold there?||
+あちら|あちら|pron|phía kia (lịch sự)|that way, over there (polite)|{出口|でぐち}はあちらです。|Lối ra ở phía kia.|The exit is that way.||
+どちら|どちら|pron|phía nào; cái nào (lịch sự)|which way; which one (polite)|コーヒーと{紅茶|こうちゃ}、どちらがいいですか。|Cà phê và hồng trà, anh chọn cái nào?|Coffee or tea, which would you like?||
+こっち|こっち|pron|bên này (thân mật)|this way (casual)|タマ、こっちに{来|き}て。|Tama, lại đây.|Tama, come here.||
+そっち|そっち|pron|bên đó (thân mật)|that way (casual)|そっちは{危|あぶ}ないよ。|Bên đó nguy hiểm đấy.|It's dangerous over there.||
+あっち|あっち|pron|bên kia (thân mật)|over there (casual)|{駅|えき}はあっちだよ。|Ga ở bên kia kìa.|The station is over there.||
+どっち|どっち|pron|bên nào (thân mật)|which one (casual)|どっちが{好|す}き？|Cậu thích cái nào?|Which one do you like?||
+こんな|こんな|adn|như thế này|such; like this|こんな{家|いえ}に{住|す}みたいです。|Tôi muốn sống trong ngôi nhà như thế này.|I want to live in a house like this.||
+どんな|どんな|adn|như thế nào|what kind of|どんな{音楽|おんがく}が{好|す}きですか。|Anh thích nhạc gì?|What kind of music do you like?||

@@ -1,0 +1,58 @@
+# Buổi 15: Tính từ (東海 Đông Hải)
+@hv 熱=NHIỆT 厚=HẬU 危=NGUY 忙=MANG 嫌=HIỀM 色=SẮC 薄=BẠC 遅=TRÌ 同=ĐỒNG 重=TRỌNG 軽=KHINH 可=KHẢ 愛=ÁI 汚=Ô 綺=Ỷ 麗=LỆ 暗=ÁM 静=TĨNH 丈=TRƯỢNG 夫=PHU 狭=HIỆP 楽=LẠC 冷=LÃNH 強=CƯỜNG 温=ÔN 速=TỐC 低=ĐÊ 暇=HẠ 広=QUẢNG 太=THÁI 便=TIỆN 利=LỢI 欲=DỤC 細=TẾ 丸=HOÀN 短=ĐOẢN 難=NAN 易=DỊ 弱=NHƯỢC 悪=ÁC
+明るい|あかるい|adj-i|sáng sủa; vui tươi|bright; cheerful|この{部屋|へや}は{明|あか}るいですね。|Căn phòng này sáng sủa nhỉ.|This room is bright, isn't it?|am=暗い|明 = minh: mặt trời 日 và mặt trăng 月 cùng chiếu thì sáng.
+新しい|あたらしい|adj-i|mới|new|ケンタは{新|あたら}しいゲームを{買|か}いました。|Kenta đã mua trò chơi mới.|Kenta bought a new game.|am=古い|
+熱い|あつい|adj-i|nóng (đồ vật)|hot (to the touch)|このお{茶|ちゃ}はとても{熱|あつ}いです。|Trà này nóng lắm.|This tea is very hot.|am=冷たい trung=暑い trung=厚い|Ba chữ あつい: 暑い trời nóng, 熱い đồ nóng (có bộ hoả 灬), 厚い dày.
+厚い|あつい|adj-i|dày|thick|{冬|ふゆ}は{厚|あつ}いコートを{着|き}ます。|Mùa đông tôi mặc áo khoác dày.|I wear a thick coat in winter.|am=薄い trung=暑い trung=熱い|厚 = hậu như "hậu hĩnh": dày dặn.
+危ない|あぶない|adj-i|nguy hiểm|dangerous|{道|みち}で{遊|あそ}ぶのは{危|あぶ}ないです。|Chơi ngoài đường thì nguy hiểm.|Playing in the street is dangerous.||Hét lên あぶない! nghĩa là "Coi chừng!".
+いい|いい|adj-i|tốt, được|good|{今日|きょう}はいい{天気|てんき}ですね。|Hôm nay trời đẹp nhỉ.|Nice weather today, isn't it?|am=悪い|Chia theo よい: quá khứ là よかった, phủ định là よくない.
+忙しい|いそがしい|adj-i|bận rộn|busy|{田中|たなか}さんは{毎日|まいにち}{忙|いそが}しいです。|Ông Tanaka ngày nào cũng bận.|Mr. Tanaka is busy every day.|am=暇|忙 = mang: tâm 忄 + vong 亡, bận đến mất cả tâm trí.
+嫌|いや|adj-na|ghét, không muốn|unpleasant; no way|{雨|あめ}の{日|ひ}は{嫌|いや}です。|Tôi ghét ngày mưa.|I hate rainy days.||Kêu いやだ! là "Không chịu đâu!", từ chối ngay tức thì.
+色々|いろいろ|adj-na|nhiều loại, đủ thứ|various|{店|みせ}に{色々|いろいろ}な{果物|くだもの}があります。|Cửa hàng có đủ loại trái cây.|The shop has all kinds of fruit.||色 = sắc, màu: "đủ màu đủ sắc" nên là đủ thứ.
+薄い|うすい|adj-i|mỏng; nhạt|thin; weak, light (taste, colour)|このコーヒーは{薄|うす}いです。|Cà phê này nhạt.|This coffee is weak.|am=厚い|Một chữ hai nghĩa: sách mỏng, cà phê nhạt, màu nhạt.
+うるさい|うるさい|adj-i|ồn ào; phiền phức|noisy; annoying|{隣|となり}の{部屋|へや}がうるさいです。|Phòng bên cạnh ồn ào quá.|The room next door is noisy.|na|うるさい urusai: "ù rồi tai", ồn quá đi!
+多い|おおい|adj-i|nhiều|many, a lot|この{町|まち}は{公園|こうえん}が{多|おお}いです。|Thị trấn này nhiều công viên.|This town has many parks.|am=少ない|Thường nói ～が多い; trước danh từ hãy dùng たくさんの, không nói 多い人.
+大きい|おおきい|adj-i|to, lớn|big|タマは{大|おお}きい{猫|ねこ}です。|Tama là con mèo to.|Tama is a big cat.|am=小さい|
+大きな|おおきな|adn|to, lớn|big (+ noun)|{駅|えき}の{前|まえ}に{大|おお}きな{木|き}があります。|Trước nhà ga có một cái cây lớn.|There's a big tree in front of the station.|am=小さな|Chỉ đứng trước danh từ: 大きな木 đúng, 木は大きなです thì sai.
+遅い|おそい|adj-i|chậm; muộn|slow; late|バスが{遅|おそ}いですね。|Xe buýt đến muộn nhỉ.|The bus is late, isn't it?|am=早い am=速い|Một chữ cho cả "chậm" lẫn "muộn", trái nghĩa với cả 速い và 早い.
+同じ|おなじ|adj-na|giống nhau, cùng|same|ユキさんと{同|おな}じ{電車|でんしゃ}に{乗|の}りました。|Tôi đi cùng chuyến tàu với Yuki.|I took the same train as Yuki.||Trước danh từ không cần な: 同じ電車, không nói 同じな電車.
+重い|おもい|adj-i|nặng; nghiêm trọng|heavy; serious|この{荷物|にもつ}は{重|おも}いです。|Hành lý này nặng.|This luggage is heavy.|am=軽い na|おもい omoi: "ôm mỏi" cả tay vì nặng quá.
+面白い|おもしろい|adj-i|thú vị, hay; buồn cười|interesting; funny|{田中|たなか}さんの{冗談|じょうだん}は{面白|おもしろ}くないです。|Câu đùa của ông Tanaka chẳng buồn cười.|Mr. Tanaka's jokes aren't funny.|am=つまらない|面 diện + 白 bạch: mặt sáng bừng lên vì thú vị.
+軽い|かるい|adj-i|nhẹ|light (weight)|このかばんは{軽|かる}いです。|Cái túi này nhẹ.|This bag is light.|am=重い|
+可愛い|かわいい|adj-i|dễ thương|cute|タマはとても{可愛|かわい}いです。|Tama rất dễ thương.|Tama is very cute.||
+汚い|きたない|adj-i|bẩn|dirty|ケンタの{部屋|へや}は{汚|きたな}いです。|Phòng của Kenta bẩn.|Kenta's room is dirty.|am=綺麗|汚 = ô như "ô uế": bẩn thỉu.
+綺麗|きれい|adj-na|đẹp; sạch sẽ|pretty; clean|{富士山|ふじさん}は{綺麗|きれい}ですね。|Núi Phú Sĩ đẹp nhỉ.|Mount Fuji is beautiful, isn't it?|am=汚い|Đuôi い nhưng là tính từ な: phủ định là きれいじゃない, không phải きれくない.
+暗い|くらい|adj-i|tối; u ám|dark; gloomy|{外|そと}はもう{暗|くら}いです。|Bên ngoài đã tối rồi.|It's already dark outside.|am=明るい|暗 = ám như "u ám", "hắc ám".
+静か|しずか|adj-na|yên tĩnh|quiet|{図書館|としょかん}は{静|しず}かです。|Thư viện yên tĩnh.|The library is quiet.|am=にぎやか|
+丈夫|じょうぶ|adj-na|bền, chắc; khoẻ mạnh|sturdy; healthy|このかばんは{丈夫|じょうぶ}です。|Cái túi này bền.|This bag is sturdy.|gia|"Trượng phu" mà chẳng phải chồng: 丈夫 là bền chắc, khoẻ mạnh.
+少ない|すくない|adj-i|ít|few, little|この{町|まち}は{人|ひと}が{少|すく}ないです。|Thị trấn này ít người.|This town has few people.|am=多い|Đừng nhầm với 少し (một chút): 少ない là tính từ "ít".
+狭い|せまい|adj-i|chật, hẹp|narrow; cramped|{私|わたし}の{部屋|へや}は{狭|せま}いです。|Phòng tôi chật.|My room is small.|am=広い|
+大切|たいせつ|adj-na|quan trọng, quý giá|important; precious|これは{大切|たいせつ}な{写真|しゃしん}です。|Đây là tấm ảnh quý giá.|This is a precious photo.||Đại thiết: thứ mình thiết tha lắm nên quý giá, phải giữ gìn.
+大変|たいへん|adj-na|vất vả, gay go; rất|hard, tough; very|{仕事|しごと}は{大変|たいへん}ですが、{楽|たの}しいです。|Công việc vất vả nhưng vui.|Work is tough, but fun.||Đại biến: gặp biến cố lớn nên mới vất vả.
+楽しい|たのしい|adj-i|vui|fun, enjoyable|{旅行|りょこう}は{楽|たの}しかったです。|Chuyến du lịch rất vui.|The trip was fun.||楽 = lạc như "lạc thú", "an lạc": vui vẻ.
+小さい|ちいさい|adj-i|nhỏ|small|この{靴|くつ}は{小|ちい}さいです。|Đôi giày này nhỏ.|These shoes are small.|am=大きい|
+小さな|ちいさな|adn|nhỏ|small (+ noun)|{小|ちい}さな{店|みせ}でパンを{買|か}いました。|Tôi mua bánh mì ở một cửa hàng nhỏ.|I bought bread at a small shop.|am=大きな|
+つまらない|つまらない|adj-i|chán, nhạt nhẽo|boring|この{映画|えいが}はつまらないです。|Bộ phim này chán.|This movie is boring.|am=面白い|Khi tặng quà, người Nhật khiêm tốn nói つまらないものですが: "chút quà mọn".
+冷たい|つめたい|adj-i|lạnh (đồ vật); lạnh lùng|cold (to the touch); cold-hearted|{冷|つめ}たい{水|みず}を{飲|の}みたいです。|Tôi muốn uống nước lạnh.|I want to drink cold water.|am=熱い|Dùng cho đồ vật và người; trời lạnh thì nói 寒い.
+強い|つよい|adj-i|mạnh|strong|{今日|きょう}は{風|かぜ}が{強|つよ}いです。|Hôm nay gió mạnh.|The wind is strong today.|am=弱い|強 = cường như "kiên cường", "cường quốc".
+長い|ながい|adj-i|dài|long|{田中|たなか}さんの{話|はなし}は{長|なが}いです。|Ông Tanaka nói chuyện dài lắm.|Mr. Tanaka's talks are long.|am=短い|
+にぎやか|にぎやか|adj-na|náo nhiệt, nhộn nhịp|lively, bustling|{駅|えき}の{前|まえ}はにぎやかです。|Trước nhà ga rất nhộn nhịp.|The area in front of the station is lively.|am=静か|
+温い|ぬるい|adj-i|âm ấm, nguội (không đủ nóng hay lạnh)|lukewarm|お{風呂|ふろ}が{温|ぬる}いです。|Nước bồn tắm chỉ âm ấm.|The bath is lukewarm.||Mang ý chê: trà đã nguội, bia không đủ lạnh đều là ぬるい.
+早い|はやい|adj-i|sớm|early|ユキさんは{朝|あさ}が{早|はや}いです。|Yuki dậy sớm.|Yuki gets up early.|am=遅い trung=速い|早 có mặt trời 日: sớm về thời gian; 速 có bộ sước ⻌: nhanh khi chạy.
+速い|はやい|adj-i|nhanh|fast|{新幹線|しんかんせん}はとても{速|はや}いです。|Tàu Shinkansen rất nhanh.|The Shinkansen is very fast.|am=遅い trung=早い|速 = tốc như "tốc độ": nhanh; còn 早 là sớm.
+低い|ひくい|adj-i|thấp|low; short (height)|ケンタは{背|せ}が{低|ひく}いです。|Kenta thấp.|Kenta is short.|am=高い|Người thấp thì nói 背が低い; trái nghĩa là 高い.
+暇|ひま|adj-na|rảnh rỗi|free (not busy); free time|{日曜日|にちようび}は{暇|ひま}です。|Chủ nhật tôi rảnh.|I'm free on Sunday.|am=忙しい|
+広い|ひろい|adj-i|rộng|wide; spacious|{佐藤|さとう}さんの{家|いえ}は{広|ひろ}いです。|Nhà bà Sato rộng.|Mrs. Sato's house is spacious.|am=狭い|
+太い|ふとい|adj-i|to, dày (vật dài)|thick (of long things)|この{木|き}は{太|ふと}いです。|Cái cây này to.|This tree is thick.|am=細い|Dùng cho vật dài như cây, chân, bút; người béo thì nói 太っている.
+古い|ふるい|adj-i|cũ|old (things)|この{車|くるま}は{古|ふる}いです。|Chiếc xe này cũ.|This car is old.|am=新しい|古 = cổ như "đồ cổ". Chỉ dùng cho đồ vật, không dùng cho người.
+便利|べんり|adj-na|tiện lợi|convenient|コンビニはとても{便利|べんり}です。|Cửa hàng tiện lợi rất tiện.|Convenience stores are very convenient.|song|
+欲しい|ほしい|adj-i|muốn có|wanted; to want (something)|{新|あたら}しいパソコンが{欲|ほ}しいです。|Tôi muốn có máy tính mới.|I want a new computer.||Muốn vật thì ～が欲しい, muốn làm thì ～たい: 水が欲しい, 水を飲みたい.
+細い|ほそい|adj-i|thon, mảnh|thin, slender|ユキさんの{指|ゆび}は{細|ほそ}いです。|Ngón tay của Yuki thon.|Yuki's fingers are slender.|am=太い|細 = tế như "tinh tế", "tế bào": nhỏ mảnh.
+丸い|まるい|adj-i|tròn|round|{今夜|こんや}の{月|つき}は{丸|まる}いです。|Trăng đêm nay tròn.|The moon is round tonight.||丸 = hoàn như "viên hoàn": viên thuốc tròn.
+短い|みじかい|adj-i|ngắn|short (length)|{夏休|なつやす}みは{短|みじか}いです。|Kỳ nghỉ hè ngắn.|Summer vacation is short.|am=長い na|みじかい mijikai: sợi "mì chị cắt" ngắn ngủn.
+難しい|むずかしい|adj-i|khó|difficult|{漢字|かんじ}は{難|むずか}しいです。|Chữ Hán khó.|Kanji is difficult.|am=易しい|難 = nan như "nan giải", "gian nan".
+易しい|やさしい|adj-i|dễ|easy|この{問題|もんだい}は{易|やさ}しいです。|Bài này dễ.|This question is easy.|am=難しい|Đồng âm với 優しい (hiền): đề dễ là 易しい, người hiền là 優しい.
+有名|ゆうめい|adj-na|nổi tiếng|famous|{富士山|ふじさん}は{有名|ゆうめい}な{山|やま}です。|Phú Sĩ là ngọn núi nổi tiếng.|Mount Fuji is a famous mountain.||Hữu danh: "có danh tiếng", tức là nổi tiếng.
+弱い|よわい|adj-i|yếu|weak|ケンタはお{酒|さけ}に{弱|よわ}いです。|Kenta uống rượu kém.|Kenta can't hold his liquor.|am=強い|
+りっぱ|りっぱ|adj-na|đáng nể, bề thế, tuyệt vời|splendid, fine|りっぱな{家|いえ}ですね。|Ngôi nhà bề thế nhỉ.|What a splendid house!||Chữ Hán là 立派; khen người đàng hoàng, nhà cửa bề thế đều dùng りっぱ.
+悪い|わるい|adj-i|xấu, tệ|bad|{今日|きょう}は{天気|てんき}が{悪|わる}いです。|Hôm nay thời tiết xấu.|The weather is bad today.|am=いい|悪 = ác như "độc ác".

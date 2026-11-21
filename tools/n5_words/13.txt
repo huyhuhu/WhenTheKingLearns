@@ -1,0 +1,52 @@
+# Buổi 13: Động từ hằng ngày (東北 Đông Bắc)
+@hv 開=KHAI 遊=DU 在=TẠI 居=CƯ 要=YẾU 置=TRÍ 押=ÁP 泳=VỊNH 終=CHUNG 掛=QUẢI 消=TIÊU 困=KHỐN 差=SAI 閉=BẾ 知=TRI 座=TỌA 違=VI 使=SỬ 作=TÁC 撮=TOÁT 始=THỦY 貼=THIẾP 引=DẪN 弾=ĐÀN 待=ĐÃI 忘=VONG
+開く|あく|v1|(tự) mở, được mở|to open (intransitive)|{窓|まど}が{開|あ}いています。|Cửa sổ đang mở.|The window is open.|am=閉まる|Tự động từ: cửa tự mở (が開く); mở cái gì thì dùng 開ける.
+開ける|あける|v2|mở (cái gì)|to open (something)|ドアを{開|あ}けてください。|Hãy mở cửa ra.|Please open the door.|am=閉める|Tha động từ (を開ける). Cặp đôi: あく là tự mở, あける là mở cái gì.
+遊ぶ|あそぶ|v1|chơi, đi chơi|to play; to hang out|{日曜日|にちようび}に{友|とも}だちと{遊|あそ}びます。|Chủ nhật tôi đi chơi với bạn.|I hang out with friends on Sunday.||遊 = du (du ngoạn). Chơi thể thao hay chơi đàn thì không dùng 遊ぶ.
+在る|ある|v1|có, ở (đồ vật)|to be; to exist (inanimate)|{机|つくえ}の{上|うえ}に{本|ほん}があります。|Trên bàn có quyển sách.|There's a book on the desk.|am=ない trung=有る|Dùng cho đồ vật, cây cối; người và con vật thì dùng いる. Thường viết bằng kana.
+有る|ある|v1|có (sở hữu)|to have|{今日|きょう}は{時間|じかん}が{有|あ}ります。|Hôm nay tôi có thời gian.|I have time today.|am=ない trung=在る|有 = hữu (sở hữu): có trong tay; 在 = tại: có mặt ở đâu đó.
+言う|いう|v1|nói|to say|{田中|たなか}さんはまた{冗談|じょうだん}を{言|い}いました。|Ông Tanaka lại nói đùa.|Mr. Tanaka told a joke again.||Viết いう nhưng đọc gần như "yuu"; thể ます là いいます.
+居る|いる|v2|có, ở (người, con vật)|to be; to exist (animate)|{部屋|へや}に{猫|ねこ}のタマがいます。|Trong phòng có mèo Tama.|Tama the cat is in the room.|trung=要る|Dùng cho người và con vật; đồ vật thì dùng ある. Thường viết bằng kana.
+要る|いる|v1|cần|to need|{傘|かさ}は{要|い}りますか。|Có cần ô không?|Do you need an umbrella?|gia trung=居る|要 đọc YẾU nhưng không phải "yếu đuối" mà là "thiết yếu", cần. Nhóm 1: いります.
+入れる|いれる|v2|cho vào, bỏ vào|to put in|コーヒーに{砂糖|さとう}を{入|い}れます。|Tôi cho đường vào cà phê.|I put sugar in my coffee.|am=出す|
+歌う|うたう|v1|hát|to sing|ケンタはカラオケで{歌|うた}いません。|Kenta không hát ở quán karaoke.|Kenta doesn't sing at karaoke.||
+置く|おく|v1|đặt, để|to put; to place|{鍵|かぎ}をどこに{置|お}きましたか。|Chị để chìa khoá ở đâu rồi?|Where did you put the key?||置 = trí (bố trí, vị trí): đặt vào một chỗ.
+押す|おす|v1|đẩy; ấn, bấm|to push; to press|このボタンを{押|お}してください。|Hãy bấm nút này.|Please press this button.|am=引く|Trên cửa ở Nhật: 押 là đẩy, 引 là kéo.
+泳ぐ|およぐ|v1|bơi|to swim|{海|うみ}で{泳|およ}ぎたいです。|Tôi muốn bơi ở biển.|I want to swim in the sea.||
+終る|おわる|v1|kết thúc, xong|to end; to finish|{仕事|しごと}は{六時|ろくじ}に{終|お}わります。|Công việc kết thúc lúc 6 giờ.|Work ends at six.|am=始まる|Thường viết 終わる. 終 = chung (chung cuộc): đến hồi kết.
+かかる|かかる|v1|mất, tốn (thời gian, tiền)|to take (time); to cost (money)|{会社|かいしゃ}まで{三十分|さんじゅっぷん}かかります。|Đến công ty mất 30 phút.|It takes thirty minutes to get to the office.||Hỏi mất bao lâu: どのくらいかかりますか.
+書く|かく|v1|viết|to write|{母|はは}に{手紙|てがみ}を{書|か}きます。|Tôi viết thư cho mẹ.|I write a letter to my mother.||
+掛ける|かける|v2|treo; đeo (kính)|to hang; to put on (glasses)|{壁|かべ}にカレンダーを{掛|か}けます。|Tôi treo lịch lên tường.|I hang a calendar on the wall.|trung=かける|Đeo kính cũng dùng động từ này: めがねをかける.
+かける|かける|v2|gọi (điện thoại); ngồi|to make (a phone call); to sit down|{夜|よる}、{母|はは}に{電話|でんわ}をかけます。|Buổi tối tôi gọi điện cho mẹ.|I call my mother in the evening.|trung=掛ける|Gọi điện: 電話をかける. Mời ngồi lịch sự: おかけください.
+消える|きえる|v2|(tự) tắt; biến mất|to go out (light); to disappear|{急|きゅう}に{電気|でんき}が{消|き}えました。|Đột nhiên đèn tắt.|Suddenly the lights went out.||Tự động từ: đèn tự tắt (が消える); tắt cái gì thì dùng 消す.
+聞く|きく|v1|nghe; hỏi|to hear; to listen; to ask|{駅|えき}の{人|ひと}に{道|みち}を{聞|き}きました。|Tôi hỏi đường nhân viên nhà ga.|I asked the station staff for directions.||Một từ hai nghĩa: nghe nhạc và hỏi người khác.
+切る|きる|v1|cắt; cúp (máy)|to cut; to hang up (a phone)|はさみで{紙|かみ}を{切|き}ります。|Tôi cắt giấy bằng kéo.|I cut paper with scissors.|trung=着る|Nhóm 1 dù đuôi -iru: きります. 着る (mặc) cùng âm nhưng nhóm 2: きます.
+消す|けす|v1|tắt; xoá|to turn off; to erase|{寝|ね}る{前|まえ}に{電気|でんき}を{消|け}します。|Trước khi ngủ tôi tắt đèn.|I turn off the light before bed.|am=つける|消 = tiêu (tiêu huỷ): làm cho mất đi. Tắt cái gì dùng を消す.
+困る|こまる|v1|khó xử, gặp rắc rối|to be in trouble; to be at a loss|{財布|さいふ}がありません。{困|こま}りました。|Không thấy ví đâu. Gay rồi.|I can't find my wallet. I'm in trouble.|na|Komaru nghe như "khổ mà rầu": gặp chuyện khó xử.
+差す|さす|v1|che, giương (ô)|to put up (an umbrella)|{雨|あめ}ですから、{傘|かさ}を{差|さ}します。|Trời mưa nên tôi che ô.|It's raining, so I put up my umbrella.||Ở N5 gần như chỉ gặp trong 傘を差す: che ô.
+閉まる|しまる|v1|(tự) đóng, được đóng|to close (intransitive)|{銀行|ぎんこう}は{三時|さんじ}に{閉|し}まります。|Ngân hàng đóng cửa lúc 3 giờ.|The bank closes at three.|am=開く|Tự động từ (が閉まる); đóng cái gì thì dùng 閉める.
+閉める|しめる|v2|đóng (cái gì)|to close; to shut (something)|{寒|さむ}いですから、{窓|まど}を{閉|し}めてください。|Lạnh quá, đóng cửa sổ giúp tôi.|It's cold, so please close the window.|am=開ける trung=締める|Tha động từ (を閉める). Thắt cà vạt 締める cũng đọc しめる.
+知る|しる|v1|biết|to know|{田中|たなか}さんの{電話番号|でんわばんごう}を{知|し}っていますか。|Bạn có biết số điện thoại của ông Tanaka không?|Do you know Mr. Tanaka's phone number?||Nhóm 1 dù đuôi -iru. "Biết" là 知っています, nhưng "không biết" là 知りません.
+する|する|v3|làm; đeo (đồ nhỏ)|to do; to wear (small items)|ケンタは{毎晩|まいばん}ゲームをします。|Tối nào Kenta cũng chơi điện tử.|Kenta plays video games every night.||Đeo cà vạt, đồng hồ cũng dùng する: ネクタイをする.
+座る|すわる|v1|ngồi|to sit|どうぞ、ここに{座|すわ}ってください。|Mời ngồi đây.|Please sit here.|am=立つ|
+立つ|たつ|v1|đứng, đứng dậy|to stand; to stand up|{先生|せんせい}が{来|き}ましたから、みんな{立|た}ちました。|Thầy đến nên mọi người đứng dậy.|The teacher came, so everyone stood up.|am=座る|
+違う|ちがう|v1|khác; sai|to differ; to be wrong|「ケンタさんですか。」「いいえ、{違|ちが}います。」|"Anh là Kenta à?" "Không, không phải."|"Are you Kenta?" "No, I'm not."||違 = vi (vi phạm): lệch khỏi cái đúng. Hay dùng để nói "không phải".
+使う|つかう|v1|dùng, sử dụng|to use|このパソコンを{使|つか}ってもいいですか。|Tôi dùng máy tính này được không?|May I use this computer?||使 = sử (sử dụng).
+作る|つくる|v1|làm, nấu, chế tạo|to make; to cook|{佐藤|さとう}さんはおいしいカレーを{作|つく}ります。|Bà Sato nấu cà ri ngon.|Mrs. Sato makes delicious curry.||作 = tác (chế tác). Nấu món ăn cũng dùng 作る.
+つける|つける|v2|bật (đèn, máy); gắn vào|to turn on; to attach|{暗|くら}いですね。{電気|でんき}をつけましょう。|Tối quá. Bật đèn lên nào.|It's dark. Let's turn on the light.|am=消す|
+できる|できる|v2|có thể, làm được; xong|to be able to; to be done|ユキさんは{英語|えいご}ができます。|Yuki nói được tiếng Anh.|Yuki can speak English.||Chỉ khả năng dùng が: 日本語ができる. Còn có nghĩa "xong", "được làm ra".
+撮る|とる|v1|chụp (ảnh)|to take (a photo)|ここで{写真|しゃしん}を{撮|と}りましょう。|Chụp ảnh ở đây đi.|Let's take a photo here.|trung=取る|撮 = tay (扌) + 最 (nhất): tay bấm lấy khoảnh khắc đẹp nhất.
+ない|ない|adj-i|không có|there is no; not have|{時間|じかん}がないです。|Tôi không có thời gian.|I don't have time.|am=有る|Thể thường của ありません. Chia như tính từ đuôi い: なかった.
+なる|なる|v1|trở thành, trở nên|to become|{春|はる}になりました。{暖|あたた}かいですね。|Xuân đến rồi. Ấm áp nhỉ.|Spring has come. It's warm, isn't it?||Danh từ + になる; tính từ い đổi い thành く: 寒くなる.
+始まる|はじまる|v1|(tự) bắt đầu|to begin (intransitive)|{映画|えいが}は{七時|しちじ}に{始|はじ}まります。|Phim bắt đầu lúc 7 giờ.|The movie begins at seven.|am=終る|始 = thủy (khởi thủy): lúc ban đầu.
+話す|はなす|v1|nói chuyện, nói|to speak; to talk|ケンタはユキさんと{話|はな}すとき、{赤|あか}くなります。|Kenta đỏ mặt mỗi khi nói chuyện với Yuki.|Kenta turns red when he talks to Yuki.||
+貼る|はる|v1|dán|to stick; to paste|{手紙|てがみ}に{切手|きって}を{貼|は}ります。|Tôi dán tem lên thư.|I put a stamp on the letter.||
+引く|ひく|v1|kéo; tra (từ điển)|to pull; to look up (in a dictionary)|ドアを{引|ひ}いて{開|あ}けてください。|Hãy kéo cửa ra.|Please pull the door open.|am=押す trung=弾く|Tra từ điển cũng là 引く: 辞書を引く. Bị cảm: 風邪を引く.
+弾く|ひく|v1|chơi, đàn (nhạc cụ)|to play (a stringed instrument or piano)|ユキさんはピアノを{弾|ひ}きます。|Yuki chơi dương cầm.|Yuki plays the piano.|song trung=引く|弾 = đàn: chơi đàn đúng như Hán Việt.
+待つ|まつ|v1|đợi, chờ|to wait|ちょっと{待|ま}ってください。|Xin đợi một chút.|Please wait a moment.||
+見る|みる|v2|nhìn, xem|to see; to look; to watch|{週末|しゅうまつ}は{映画|えいが}を{見|み}ます。|Cuối tuần tôi xem phim.|I watch movies on weekends.||
+休む|やすむ|v1|nghỉ, nghỉ ngơi|to rest; to take time off|{熱|ねつ}がありますから、{会社|かいしゃ}を{休|やす}みます。|Tôi bị sốt nên nghỉ làm.|I have a fever, so I'll take the day off work.||Nghỉ học, nghỉ làm dùng を: 学校を休む.
+やる|やる|v1|làm (suồng sã); cho (con vật, cây)|to do (casual); to give (to animals, plants)|ユキさんは{毎朝|まいあさ}タマにえさをやります。|Sáng nào Yuki cũng cho Tama ăn.|Yuki feeds Tama every morning.||Nghĩa như する nhưng suồng sã; "cho" dùng với con vật, cây cối: 花に水をやる.
+読む|よむ|v1|đọc|to read|{電車|でんしゃ}で{本|ほん}を{読|よ}みます。|Tôi đọc sách trên tàu.|I read books on the train.||
+分かる|わかる|v1|hiểu, biết|to understand|この{言葉|ことば}の{意味|いみ}が{分|わ}かりますか。|Bạn có hiểu nghĩa của từ này không?|Do you understand the meaning of this word?||Dùng が, không dùng を: 日本語が分かる. 分 = phân (phân biệt): tách bạch rõ là hiểu.
+忘れる|わすれる|v2|quên|to forget|ユキさんはまた{傘|かさ}を{忘|わす}れました。|Yuki lại quên ô.|Yuki forgot her umbrella again.|am=覚える|忘 = vong (lãng quên): trái tim (心) bị mất (亡).

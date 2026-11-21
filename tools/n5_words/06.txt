@@ -1,0 +1,39 @@
+# Buổi 6: Ăn uống (大阪 Đại Phản)
+@hv 御=NGỰ 飯=PHẠN 甘=CAM 飴=DI 美=MỸ 味=VỊ 酒=TỬU 皿=MÃNH 弁=BIỆN 辛=TÂN 牛=NGƯU 肉=NHỤC 乳=NHŨ 果=QUẢ 紅=HỒNG 砂=SA 糖=ĐƯỜNG 塩=DIÊM 醤=TƯƠNG 油=DU 卵=NOÃN 碗=OẢN 鶏=KÊ 箸=TRỨ 豚=ĐỒN 野=DÃ 菜=THÁI 夕=TỊCH 理=LÝ
+朝御飯|あさごはん|n|bữa sáng|breakfast|ユキさんは{今日|きょう}も{朝御飯|あさごはん}を{忘|わす}れました。|Hôm nay Yuki lại quên ăn sáng.|Yuki forgot to eat breakfast again today.||
+甘い|あまい|adj-i|ngọt; nuông chiều|sweet; lenient|このケーキはとても{甘|あま}いです。|Cái bánh này ngọt lắm.|This cake is very sweet.|am=辛い na|あまい amai: đồ ngọt thì "ăn mãi" không chán.
+飴|あめ|n|kẹo|candy|ケンタは{飴|あめ}が{大好|だいす}きです。|Kenta rất thích kẹo.|Kenta loves candy.|trung=雨|Đồng âm với 雨 (mưa): trời mưa あめ mà rơi toàn kẹo あめ thì vui.
+美味しい|おいしい|adj-i|ngon|delicious; tasty|このラーメンは{美味|おい}しいです。|Mì ramen này ngon.|This ramen is delicious.|am=まずい|Thường viết bằng hiragana おいしい; chữ Hán 美味 là "mỹ vị".
+お菓子|おかし|n|bánh kẹo|sweets; snacks|{子供|こども}はお{菓子|かし}が{好|す}きです。|Trẻ con thích bánh kẹo.|Children like sweets.||菓子 xưa chỉ trái cây ăn vặt, nay là bánh kẹo; luôn có お phía trước.
+お酒|おさけ|n|rượu (nói chung); rượu sake|alcohol; sake|{田中|たなか}さんはお{酒|さけ}が{好|す}きです。|Ông Tanaka thích rượu.|Mr. Tanaka likes to drink.||お酒 là đồ uống có cồn nói chung; rượu gạo Nhật gọi rõ là 日本酒.
+お皿|おさら|n|đĩa|plate; dish|お{皿|さら}を{洗|あら}ってください。|Hãy rửa đĩa đi.|Please wash the dishes.||
+お茶|おちゃ|n|trà (xanh)|tea; green tea|お{茶|ちゃ}をどうぞ。|Mời anh dùng trà.|Have some tea.|song|
+お弁当|おべんとう|n|cơm hộp|boxed lunch|ユキさんはお{弁当|べんとう}を{家|いえ}に{忘|わす}れました。|Yuki để quên hộp cơm ở nhà.|Yuki left her lunch at home.||
+辛い|からい|adj-i|cay; mặn|spicy; salty|このカレーは{辛|から}いです。|Món cà ri này cay.|This curry is spicy.|am=甘い na|からい karai: cay xè như "cà ri".
+牛肉|ぎゅうにく|n|thịt bò|beef|{牛肉|ぎゅうにく}は{高|たか}いです。|Thịt bò đắt.|Beef is expensive.||
+牛乳|ぎゅうにゅう|n|sữa bò|milk|{毎朝|まいあさ}{牛乳|ぎゅうにゅう}を{飲|の}みます。|Sáng nào tôi cũng uống sữa.|I drink milk every morning.||Đừng nhầm với 牛肉: 乳 nhũ là sữa, 肉 nhục là thịt.
+果物|くだもの|n|trái cây|fruit|{佐藤|さとう}さんに{果物|くだもの}をもらいました。|Tôi được bà Sato cho trái cây.|I got some fruit from Mrs. Sato.||Đọc đặc biệt: không ghép âm từng chữ mà đọc cả từ là くだもの.
+紅茶|こうちゃ|n|hồng trà (trà đen)|black tea|{紅茶|こうちゃ}を{二|ふた}つお{願|ねが}いします。|Cho tôi hai tách hồng trà.|Two black teas, please.|song|Nước trà màu đỏ nên Nhật gọi "trà đỏ" 紅茶, còn tiếng Anh gọi là "trà đen".
+御飯|ごはん|n|cơm; bữa ăn|cooked rice; meal|{御飯|ごはん}を{食|た}べましょう。|Mình ăn cơm thôi.|Let's eat.||Như tiếng Việt, "ăn cơm" là ăn bữa; thường viết ご飯.
+魚|さかな|n|cá|fish|タマは{魚|さかな}が{大好|だいす}きです。|Tama rất thích cá.|Tama loves fish.|na|さかな sakana: giữa từ có "ca", đọc nhanh nghe như "sa cá".
+砂糖|さとう|n|đường (ăn)|sugar|コーヒーに{砂糖|さとう}を{入|い}れますか。|Anh có cho đường vào cà phê không?|Do you take sugar in your coffee?||Đồng âm với họ 佐藤: bà chủ nhà Sato ngọt như đường.
+塩|しお|n|muối|salt|{塩|しお}を{取|と}ってください。|Lấy giùm tôi lọ muối.|Please pass the salt.||
+醤油|しょうゆ|n|xì dầu, nước tương|soy sauce|すしに{醤油|しょうゆ}をつけます。|Chấm sushi với xì dầu.|I dip sushi in soy sauce.|na|しょうゆ shōyu nghe na ná "xì dầu", mà đúng là cùng một thứ nước chấm.
+食堂|しょくどう|n|nhà ăn|cafeteria; dining hall|{昼|ひる}は{会社|かいしゃ}の{食堂|しょくどう}で{食|た}べます。|Buổi trưa tôi ăn ở nhà ăn công ty.|At lunch I eat in the company cafeteria.||
+食べ物|たべもの|n|đồ ăn|food|{好|す}きな{食|た}べ{物|もの}は{何|なん}ですか。|Món anh thích là gì?|What's your favorite food?||
+食べる|たべる|v2|ăn|to eat|ケンタは{毎日|まいにち}パンを{食|た}べます。|Ngày nào Kenta cũng ăn bánh mì.|Kenta eats bread every day.||
+卵|たまご|n|trứng|egg|{卵|たまご}を{三|みっ}つ{買|か}いました。|Tôi đã mua ba quả trứng.|I bought three eggs.||Hán Việt là "noãn" như trong "noãn bào"; đọc kiểu Nhật là たまご.
+茶碗|ちゃわん|n|bát (ăn cơm)|rice bowl|{茶碗|ちゃわん}に{御飯|ごはん}を{入|い}れます。|Tôi xới cơm vào bát.|I put rice in the bowl.||Chữ là "trà oản" (bát trà) nhưng thường dùng để chỉ bát cơm.
+鶏肉|とりにく|n|thịt gà|chicken (meat)|{鶏肉|とりにく}のカレーを{作|つく}ります。|Tôi nấu cà ri gà.|I'm making chicken curry.||鶏 (gà) đọc là とり, giống 鳥 (chim): gà cũng là một loài chim.
+肉|にく|n|thịt|meat|ケンタは{肉|にく}が{好|す}きですが、{野菜|やさい}は{嫌|きら}いです。|Kenta thích thịt nhưng ghét rau.|Kenta likes meat but hates vegetables.||
+飲み物|のみもの|n|đồ uống|drink; beverage|{飲|の}み{物|もの}は{何|なに}がいいですか。|Anh muốn uống gì?|What would you like to drink?||
+飲む|のむ|v1|uống|to drink|{田中|たなか}さんは{毎晩|まいばん}ビールを{飲|の}みます。|Tối nào ông Tanaka cũng uống bia.|Mr. Tanaka drinks beer every night.||Uống thuốc cũng dùng 飲む: 薬を飲む.
+箸|はし|n|đũa|chopsticks|お{箸|はし}で{食|た}べます。|Tôi ăn bằng đũa.|I eat with chopsticks.|trung=橋|Đồng âm với 橋 (cầu): đũa 箸 có bộ trúc ⺮ vì làm bằng tre.
+晩御飯|ばんごはん|n|bữa tối|dinner|ユキさん、{晩御飯|ばんごはん}を{一緒|いっしょ}に{食|た}べませんか。|Yuki, cùng ăn tối nhé?|Yuki, would you like to have dinner together?||
+昼御飯|ひるごはん|n|bữa trưa|lunch|もう{昼御飯|ひるごはん}を{食|た}べましたか。|Anh ăn trưa chưa?|Have you had lunch yet?||
+豚肉|ぶたにく|n|thịt lợn|pork|{豚肉|ぶたにく}を{三百|さんびゃく}グラム{下|くだ}さい。|Cho tôi 300 gam thịt lợn.|300 grams of pork, please.||Lợn ぶた, bò ぎゅう, gà とり: cứ thêm 肉 にく là ra thịt.
+まずい|まずい|adj-i|dở, khó ăn|bad-tasting|この{料理|りょうり}はまずいです。|Món này dở quá.|This dish tastes bad.|am=美味しい na|まずい mazui: "mà dở" ơi là dở!
+水|みず|n|nước (lạnh)|water|{水|みず}を{一杯|いっぱい}{下|くだ}さい。|Cho tôi một cốc nước.|A glass of water, please.||水 là nước lạnh; nước nóng có từ riêng là お湯.
+野菜|やさい|n|rau|vegetable|{毎日|まいにち}{野菜|やさい}を{食|た}べましょう。|Hãy ăn rau mỗi ngày.|Let's eat vegetables every day.||
+夕飯|ゆうはん|n|bữa tối|dinner; supper|{夕飯|ゆうはん}は{七時|しちじ}です。|Bữa tối lúc 7 giờ.|Dinner is at seven.||Cùng nghĩa với 晩御飯; 夕 tịch (chiều tối) + 飯 phạn (cơm).
+料理|りょうり|n|món ăn; việc nấu ăn|cooking; dish; cuisine|ユキさんは{料理|りょうり}が{上手|じょうず}です。|Yuki nấu ăn giỏi.|Yuki is good at cooking.||Nấu ăn là 料理する; món Nhật là 日本料理.

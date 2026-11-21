@@ -1,0 +1,57 @@
+# Buổi 16: Phó từ, liên từ, từ để hỏi (沖縄 Xung Thằng)
+@hv 余=DƯ 番=PHIÊN 緒=TỰ 結=KẾT 構=CẤU 沢=TRẠCH 誰=THÙY 段=ĐOẠN 丁=ĐINH 度=ĐỘ 次=THỨ 初=SƠ
+余り|あまり|adv|không ... lắm (đi với phủ định)|not very (with negative)|ケンタは{余|あま}り{話|はな}しません。|Kenta không nói nhiều lắm.|Kenta doesn't talk much.||Luôn đi với phủ định: あまり好きじゃない = không thích lắm.
+いかが|いかが|adv|thế nào (lịch sự)|how (polite)|コーヒーはいかがですか。|Anh dùng cà phê nhé?|How about some coffee?||Bản lịch sự của どう, hay dùng khi mời: お茶はいかがですか.
+一番|いちばん|adv|nhất; số một|most; number one|{富士山|ふじさん}は{日本|にほん}で{一番|いちばん}{高|たか}い{山|やま}です。|Phú Sĩ là ngọn núi cao nhất Nhật Bản.|Mount Fuji is the highest mountain in Japan.||一 nhất + 番 phiên (số thứ tự): đứng số một.
+いつ|いつ|pron|khi nào|when|{誕生日|たんじょうび}はいつですか。|Sinh nhật bạn khi nào?|When is your birthday?||
+一緒|いっしょ|n|cùng nhau|together|{一緒|いっしょ}に{帰|かえ}りましょう。|Cùng về nhé.|Let's go home together.||Hay dùng 一緒に + động từ: 一緒に行きましょう = cùng đi nào.
+いつも|いつも|adv|luôn luôn, lúc nào cũng|always, usually|ユキさんはいつも{鍵|かぎ}を{忘|わす}れます。|Yuki lúc nào cũng quên chìa khoá.|Yuki always forgets her keys.||
+～がる|～がる|suf|tỏ ra, có vẻ (cảm xúc của người khác)|to show signs of (feeling)|タマは{外|そと}に{出|で}たがります。|Tama cứ đòi ra ngoài.|Tama keeps wanting to go outside.||Tả cảm xúc người khác: tôi 欲しい, còn anh ấy 欲しがる.
+～くらい|～くらい|suf|khoảng, chừng|about, approximately|{駅|えき}まで{十分|じゅっぷん}くらいです。|Đến ga mất khoảng 10 phút.|It's about ten minutes to the station.||Nói くらい hay ぐらい đều được; khoảng giờ thì dùng ごろ: 三時ごろ.
+結構|けっこう|adj-na|đủ rồi; khá; tốt|fine; enough (no, thanks); quite|もう{結構|けっこう}です。ありがとう。|Tôi đủ rồi, cảm ơn.|I'm fine, thank you.|gia|"Kết cấu" mà chẳng dính gì xây dựng: 結構です = đủ rồi, không cần đâu.
+しかし|しかし|conj|tuy nhiên|however|{雨|あめ}でした。しかし、{楽|たの}しかったです。|Trời mưa. Tuy nhiên vẫn vui.|It rained. However, it was fun.||Kiểu văn viết của でも; nói chuyện hằng ngày thường dùng でも.
+じゃあ|じゃあ|conj|thế thì, vậy thì|well then|じゃあ、また{明日|あした}。|Vậy mai gặp nhé.|Well then, see you tomorrow.||Dạng nói thân mật của では; じゃあね = tạm biệt nhé.
+すぐに|すぐに|adv|ngay lập tức|immediately, right away|すぐに{行|い}きます。|Tôi đến ngay.|I'll be right there.||Cũng nói すぐ không có に: すぐ来て = đến ngay đi!
+少し|すこし|adv|một chút|a little|{日本語|にほんご}が{少|すこ}し{分|わ}かります。|Tôi hiểu tiếng Nhật một chút.|I understand a little Japanese.||Lịch sự hơn ちょっと; còn 少ない là tính từ "ít".
+全部|ぜんぶ|n|toàn bộ, tất cả|all, everything|ケーキを{全部|ぜんぶ}{食|た}べました。|Tôi đã ăn hết cả cái bánh.|I ate the whole cake.|song|
+そして|そして|conj|và, rồi|and; and then|{顔|かお}を{洗|あら}いました。そして、{寝|ね}ました。|Tôi rửa mặt, rồi đi ngủ.|I washed my face, and then went to bed.||
+それから|それから|conj|sau đó|after that, and then|{宿題|しゅくだい}をします。それから、ゲームをします。|Tôi làm bài tập. Sau đó chơi điện tử.|I do my homework. After that, I play games.||
+それでは|それでは|conj|vậy thì (trang trọng)|well then (formal)|それでは、{始|はじ}めましょう。|Vậy thì chúng ta bắt đầu nhé.|Well then, let's begin.||Độ trang trọng: それでは > では > じゃあ.
+～だけ|～だけ|suf|chỉ|only, just|{百円|ひゃくえん}だけあります。|Tôi chỉ có 100 yên.|I only have 100 yen.||
+沢山|たくさん|adv|nhiều|a lot, many|{公園|こうえん}に{人|ひと}が{沢山|たくさん}います。|Công viên có nhiều người.|There are many people in the park.|na|たくさん takusan: người "tạ cả sân", nhiều ơi là nhiều!
+多分|たぶん|adv|có lẽ|probably, maybe|{明日|あした}は{多分|たぶん}{雨|あめ}です。|Mai có lẽ sẽ mưa.|It will probably rain tomorrow.|gia|"Đa phần" nhưng nghĩa là "có lẽ": 多分雨です = chắc là mưa.
+誰|だれ|pron|ai|who|これは{誰|だれ}の{傘|かさ}ですか。|Cái ô này của ai?|Whose umbrella is this?||
+誰か|だれか|pron|ai đó|someone|{誰|だれ}かいますか。|Có ai ở đó không?|Is anyone there?||Thêm か thành "... đó": 何か cái gì đó, どこか đâu đó.
+段々|だんだん|adv|dần dần|gradually|{段々|だんだん}{寒|さむ}くなりました。|Trời lạnh dần.|It has gradually got colder.|na|だんだん dandan nghe gần như "dần dần", nghĩa cũng y hệt!
+丁度|ちょうど|adv|vừa đúng, đúng lúc|exactly, just|{今|いま}{丁度|ちょうど}{三時|さんじ}です。|Bây giờ đúng 3 giờ.|It's exactly three o'clock now.|na|ちょうど choudo: "chuẩn đó", vừa khít luôn!
+ちょっと|ちょっと|adv|một chút; hơi|a little; a moment|ちょっと{待|ま}ってください。|Đợi một chút nhé.|Please wait a moment.|na|ちょっと ≈ "chút tẹo". Nói ちょっと… rồi bỏ lửng là từ chối khéo.
+次|つぎ|n|tiếp theo|next|{次|つぎ}の{駅|えき}で{降|お}ります。|Tôi xuống ở ga tiếp theo.|I'm getting off at the next station.||
+では|では|conj|vậy thì|well then; so|では、また{来週|らいしゅう}。|Vậy hẹn tuần sau.|Well then, see you next week.||
+でも|でも|conj|nhưng|but|{高|たか}いです。でも、{買|か}いたいです。|Đắt. Nhưng tôi vẫn muốn mua.|It's expensive. But I want to buy it.||Đứng đầu câu là "nhưng"; sau danh từ là "hay gì đó": お茶でも.
+どう|どう|adv|thế nào|how|{日本|にほん}の{生活|せいかつ}はどうですか。|Cuộc sống ở Nhật thế nào?|How is life in Japan?||
+どうして|どうして|adv|tại sao|why|どうして{遅|おく}れましたか。|Sao anh đến muộn?|Why were you late?|na|どうして doushite: "do sao thế?", hỏi lý do.
+時々|ときどき|adv|thỉnh thoảng|sometimes|{時々|ときどき}{映画|えいが}を{見|み}ます。|Thỉnh thoảng tôi xem phim.|I sometimes watch movies.||々 lặp lại chữ trước: 時時 "lúc lúc", tức là thỉnh thoảng.
+とても|とても|adv|rất|very|この{本|ほん}はとても{面白|おもしろ}いです。|Cuốn sách này rất hay.|This book is very interesting.|na|とても totemo: "to thế mô!", to ơi là to, tức là rất.
+どなた|どなた|pron|vị nào, ai (lịch sự)|who (polite)|{失礼|しつれい}ですが、どなたですか。|Xin lỗi, ông là ai ạ?|Excuse me, who are you?||Bản lịch sự của 誰, dùng với khách hoặc khi nghe điện thoại.
+なぜ|なぜ|adv|tại sao|why|なぜ{日本語|にほんご}を{勉強|べんきょう}しますか。|Tại sao bạn học tiếng Nhật?|Why do you study Japanese?||Cứng hơn どうして; nói thân mật thì dùng なんで.
+～など|～など|suf|vân vân, chẳng hạn|and so on, etc.|りんごやみかんなどを{買|か}いました。|Tôi mua táo, quýt, v.v.|I bought apples, mandarins and so on.||Hay đi với や: AやBなど = A, B, vân vân.
+何|なん|pron|cái gì (trước âm t, d, n)|what|それは{何|なん}ですか。|Cái đó là gì?|What is that?||Đọc なん trước âm t, d, n và từ đếm (何ですか, 何時); còn lại đọc なに.
+何|なに|pron|cái gì|what|{何|なに}を{食|た}べますか。|Bạn ăn gì?|What will you eat?||
+何～|なん～|pre|mấy ~, bao nhiêu ~|how many ~; what ~|{家族|かぞく}は{何人|なんにん}ですか。|Gia đình bạn có mấy người?|How many people are in your family?||Ghép với từ đếm: 何時 mấy giờ, 何人 mấy người, 何歳 mấy tuổi.
+初めて|はじめて|adv|lần đầu tiên|for the first time|{初|はじ}めて{富士山|ふじさん}に{登|のぼ}りました。|Lần đầu tiên tôi leo núi Phú Sĩ.|I climbed Mount Fuji for the first time.||初 = sơ như "sơ cấp", "ban sơ": lần đầu.
+外|ほか|n|khác, cái khác|other; else|{外|ほか}に{質問|しつもん}はありますか。|Còn câu hỏi nào khác không?|Are there any other questions?||Cùng chữ với 外 そと (bên ngoài); đọc ほか là "ngoài ra, khác".
+本当|ほんとう|n|thật, sự thật|truth; real|{本当|ほんとう}ですか。|Thật không?|Really?||Thêm に thành "thật sự": 本当にありがとう.
+毎朝|まいあさ|n|mỗi sáng|every morning|{毎朝|まいあさ}コーヒーを{飲|の}みます。|Sáng nào tôi cũng uống cà phê.|I drink coffee every morning.||
+毎月|まいつき|n|hằng tháng|every month|{毎月|まいつき}{佐藤|さとう}さんに{家賃|やちん}を{払|はら}います。|Hằng tháng tôi trả tiền nhà cho bà Sato.|I pay rent to Mrs. Sato every month.||
+毎月|まいげつ|n|hằng tháng (trang trọng)|every month (formal)|{毎月|まいげつ}の{会議|かいぎ}は{月曜日|げつようび}です。|Cuộc họp hằng tháng vào thứ Hai.|The monthly meeting is on Monday.||Đọc まいげつ nghe trang trọng; nói chuyện thường đọc まいつき.
+毎週|まいしゅう|n|hằng tuần|every week|{毎週|まいしゅう}{土曜日|どようび}にテニスをします。|Thứ Bảy hằng tuần tôi chơi quần vợt.|I play tennis every Saturday.||
+毎日|まいにち|n|mỗi ngày|every day|{毎日|まいにち}{日本語|にほんご}を{勉強|べんきょう}します。|Ngày nào tôi cũng học tiếng Nhật.|I study Japanese every day.||毎 = mỗi: 毎日 mỗi ngày, 毎朝 mỗi sáng, 毎晩 mỗi tối.
+毎年|まいとし|n|hằng năm|every year|{毎年|まいとし}{夏|なつ}に{海|うみ}へ{行|い}きます。|Mùa hè năm nào tôi cũng đi biển.|I go to the beach every summer.||
+毎年|まいねん|n|hằng năm (trang trọng)|every year (formal)|この{祭|まつ}りは{毎年|まいねん}あります。|Lễ hội này năm nào cũng có.|This festival is held every year.||Đọc まいねん nghe trang trọng; まいとし thường dùng hơn.
+毎晩|まいばん|n|mỗi tối|every night|タマは{毎晩|まいばん}{私|わたし}のベッドで{寝|ね}ます。|Tối nào Tama cũng ngủ trên giường tôi.|Tama sleeps on my bed every night.||
+また|また|adv|lại; cũng|again; also|また{来|き}てください。|Lần sau lại đến chơi nhé.|Please come again.||また (ta) là "lại lần nữa"; まだ (da) là "vẫn còn, chưa".
+まだ|まだ|adv|vẫn còn; chưa|still; (not) yet|ユキさんはまだ{寝|ね}ています。|Yuki vẫn còn đang ngủ.|Yuki is still sleeping.|am=もう na|まだ mada: "mãi đà" chưa xong. Hỏi もう？ thì đáp まだです = chưa.
+もう|もう|adv|đã ... rồi; thêm nữa|already; more; again|{宿題|しゅくだい}はもう{終|お}わりました。|Bài tập tôi làm xong rồi.|I've already finished my homework.|am=まだ|もう + quá khứ = rồi; もう + số lượng = thêm: もう一つ = thêm một cái.
+もっと|もっと|adv|hơn nữa, thêm nữa|more|もっと{食|た}べてください。|Ăn thêm nữa đi.|Please eat more.|na|もっと motto: thêm "một tí" nữa đi!
+ゆっくりと|ゆっくりと|adv|chậm rãi, thong thả|slowly; leisurely|ゆっくりと{話|はな}してください。|Xin hãy nói chậm thôi.|Please speak slowly.||Thường bỏ と: ゆっくり休んでください = cứ nghỉ ngơi thong thả nhé.
+よく|よく|adv|thường; giỏi, kỹ|often; well|ケンタはよくゲームをします。|Kenta hay chơi điện tử.|Kenta often plays video games.||Hai nghĩa: よく行く = hay đi; よく分かる = hiểu rõ.

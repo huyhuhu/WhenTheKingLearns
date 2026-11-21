@@ -1,0 +1,33 @@
+# Buổi 7: Nhà cửa, đồ dùng (岐阜 Kỳ Phụ)
+@hv 家=GIA 椅=Ỷ 洗=TẨY 風=PHONG 呂=LỮ 階=GIAI 段=ĐOẠN 鍵=KIỆN 庭=ĐÌNH 瓶=BÌNH 玄=HUYỀN 住=TRÚ 石=THẠCH 鹸=KIỀM 濯=TRẠC 掃=TẢO 除=TRỪ 台=ĐÀI 所=SỞ 机=KỶ 戸=HỘ 灰=HÔI 皿=MÃNH 箱=TƯƠNG 棚=BẰNG 門=MÔN 冷=LÃNH 蔵=TÀNG 庫=KHỐ 廊=LANG
+家|いえ|n|nhà|house; home|{私|わたし}の{家|いえ}は{駅|えき}から{遠|とお}いです。|Nhà tôi xa ga.|My house is far from the station.||家 là ngôi nhà nói chung; nói "nhà mình" thân mật thì dùng うち.
+椅子|いす|n|ghế|chair|この{椅子|いす}に{座|すわ}ってください。|Mời ngồi ghế này.|Please sit on this chair.||
+うち|うち|n|nhà (mình)|home; my place|うちに{猫|ねこ}がいます。|Nhà tôi có con mèo.|We have a cat at home.||Mang sắc thái "nhà mình": うちの猫 = mèo nhà tôi.
+お手洗い|おてあらい|n|nhà vệ sinh|restroom; toilet|すみません、お{手洗|てあら}いはどこですか。|Xin lỗi, nhà vệ sinh ở đâu ạ?|Excuse me, where's the restroom?||Nghĩa đen là "chỗ rửa tay" (手 tay + 洗う rửa); lịch sự hơn トイレ.
+お風呂|おふろ|n|bồn tắm; việc tắm bồn|bath|{毎晩|まいばん}お{風呂|ふろ}に{入|はい}ります。|Tối nào tôi cũng tắm bồn.|I take a bath every night.||Tắm bồn là お風呂に入る (vào bồn), không dùng 浴びる.
+階段|かいだん|n|cầu thang|stairs|{階段|かいだん}で{三階|さんがい}まで{行|い}きます。|Tôi đi cầu thang lên tầng ba.|I take the stairs to the third floor.|gia|Hán Việt là "giai đoạn" nhưng nghĩa là cầu thang: leo từng bậc như qua từng giai đoạn.
+鍵|かぎ|n|chìa khoá; ổ khoá|key; lock|ユキさんはまた{鍵|かぎ}をなくしました。|Yuki lại làm mất chìa khoá.|Yuki lost her key again.||Chìa và ổ đều là 鍵; khoá cửa là 鍵をかける.
+家庭|かてい|n|gia đình (tổ ấm)|home; household|{家庭|かてい}の{料理|りょうり}が{好|す}きです。|Tôi thích món ăn gia đình.|I like home cooking.|song|Khác 家族 (người trong nhà): 家庭 là tổ ấm, mái nhà chung.
+花瓶|かびん|n|bình hoa|vase|テーブルの{上|うえ}に{花瓶|かびん}があります。|Trên bàn có bình hoa.|There's a vase on the table.||Hán Việt "hoa bình", đảo lại là "bình hoa"; 瓶 đọc びん.
+玄関|げんかん|n|cửa vào nhà, sảnh|entrance hall; front door|{玄関|げんかん}で{靴|くつ}を{脱|ぬ}いでください。|Xin cởi giày ở cửa vào.|Please take off your shoes at the entrance.||Khoảng thềm thấp ngay cửa nhà Nhật, nơi cởi giày trước khi bước lên.
+住む|すむ|v1|sống, cư trú|to live (reside)|{佐藤|さとう}さんは{東京|とうきょう}に{住|す}んでいます。|Bà Sato sống ở Tokyo.|Mrs. Sato lives in Tokyo.||Sống ở đâu thì nói 〜に住んでいます, dùng trợ từ に.
+石鹸|せっけん|n|xà phòng|soap|{石鹸|せっけん}で{手|て}を{洗|あら}います。|Tôi rửa tay bằng xà phòng.|I wash my hands with soap.||Thường viết bằng hiragana せっけん.
+洗濯|せんたく|n|việc giặt giũ|laundry; washing|{日曜日|にちようび}に{洗濯|せんたく}をします。|Chủ nhật tôi giặt đồ.|I do the laundry on Sundays.||洗 tẩy + 濯 trạc, đều là rửa, giặt; máy giặt là 洗濯機.
+掃除|そうじ|n|việc dọn dẹp|cleaning|{部屋|へや}を{掃除|そうじ}してください。|Hãy dọn phòng đi.|Please clean your room.||掃 tảo (quét) + 除 trừ (bỏ đi): quét cho sạch.
+台所|だいどころ|n|nhà bếp|kitchen|{母|はは}は{台所|だいどころ}にいます。|Mẹ đang ở trong bếp.|My mother is in the kitchen.||所 ところ là "chỗ", khi ghép đổi thành どころ.
+たばこ|たばこ|n|thuốc lá|tobacco; cigarettes|{田中|たなか}さんはたばこをやめました。|Ông Tanaka đã bỏ thuốc lá.|Mr. Tanaka quit smoking.||Từ gốc tiếng Bồ Đào Nha nhưng thường viết hiragana; hút thuốc là たばこを吸う.
+机|つくえ|n|bàn (học, làm việc)|desk|{机|つくえ}の{上|うえ}に{本|ほん}があります。|Trên bàn có quyển sách.|There's a book on the desk.||机 là bàn học, bàn làm việc; bàn ăn thường gọi là テーブル.
+電気|でんき|n|điện; đèn điện|electricity; (electric) light|{電気|でんき}を{消|け}してください。|Hãy tắt đèn đi.|Please turn off the light.||Ngoài "điện", 電気 còn là cái đèn: 電気をつける = bật đèn.
+電話|でんわ|n|điện thoại|telephone|{夜|よる}、{母|はは}に{電話|でんわ}をかけます。|Buổi tối tôi gọi điện cho mẹ.|I call my mother in the evening.|song|
+戸|と|n|cửa (kiểu Nhật, cửa lùa)|door (Japanese style)|{戸|と}を{閉|し}めてください。|Hãy đóng cửa lại.|Please close the door.||戸 là cửa kiểu Nhật, thường là cửa lùa; cửa kiểu Tây là ドア.
+時計|とけい|n|đồng hồ|watch; clock|この{時計|とけい}は{高|たか}いです。|Cái đồng hồ này đắt.|This watch is expensive.||Đọc đặc biệt とけい; 時 thời + 計 kế: dụng cụ đo thời gian.
+庭|にわ|n|vườn|garden; yard|{庭|にわ}でタマが{寝|ね}ています。|Tama đang ngủ ngoài vườn.|Tama is sleeping in the garden.||Hán Việt là "đình" như trong 家庭 (gia đình), nhưng đứng một mình là khu vườn.
+灰皿|はいざら|n|gạt tàn|ashtray|{灰皿|はいざら}はありますか。|Có gạt tàn không ạ?|Is there an ashtray?||灰 (tro) + 皿 (đĩa) = đĩa đựng tro; さら đổi thành ざら khi ghép.
+箱|はこ|n|hộp, thùng|box|この{箱|はこ}に{何|なに}が{入|はい}っていますか。|Trong hộp này có gì?|What's in this box?||
+部屋|へや|n|phòng|room|ケンタの{部屋|へや}はゲームでいっぱいです。|Phòng Kenta đầy trò chơi điện tử.|Kenta's room is full of games.||Đọc đặc biệt へや, không đọc theo âm từng chữ.
+本棚|ほんだな|n|giá sách|bookshelf|{本棚|ほんだな}に{辞書|じしょ}があります。|Trên giá sách có từ điển.|There's a dictionary on the bookshelf.||本 (sách) + 棚 たな (kệ); たな đổi thành だな khi ghép.
+窓|まど|n|cửa sổ|window|{窓|まど}を{開|あ}けてもいいですか。|Tôi mở cửa sổ được không?|May I open the window?||Hán Việt là "song", như trong "song cửa sổ".
+物|もの|n|đồ vật, thứ|thing; object|あの{店|みせ}は{物|もの}が{安|やす}いです。|Đồ ở tiệm kia rẻ.|Things are cheap at that store.||Gặp nhiều trong từ ghép: 食べ物, 飲み物, 買い物.
+門|もん|n|cổng|gate|{学校|がっこう}の{門|もん}は{八時|はちじ}に{開|あ}きます。|Cổng trường mở lúc 8 giờ.|The school gate opens at eight.||Chữ 門 vẽ hai cánh cổng khép lại.
+冷蔵庫|れいぞうこ|n|tủ lạnh|refrigerator|{牛乳|ぎゅうにゅう}は{冷蔵庫|れいぞうこ}に{入|い}れてください。|Hãy để sữa vào tủ lạnh.|Please put the milk in the fridge.||冷 lãnh + 蔵 tàng + 庫 khố: kho cất đồ lạnh.
+廊下|ろうか|n|hành lang|corridor; hallway|{廊下|ろうか}を{走|はし}らないでください。|Đừng chạy ngoài hành lang.|Please don't run in the hallway.||廊 lang như trong "hành lang".

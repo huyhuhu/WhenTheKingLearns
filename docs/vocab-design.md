@@ -21,25 +21,25 @@ Bốn nguyên tắc:
 
 ### 2.1 Danh sách từ
 
-- Khoảng **800 từ N5**, chia thành **16 buổi theo chủ đề**, mỗi buổi khoảng 50 từ (động từ và tính từ có thể nhiều hơn một chút).
-- **457 từ** đang gắn với 103 chữ kanji được dùng lại. Phần bổ sung chủ yếu là từ chỉ viết bằng kana (これ, ちょっと, とても), từ katakana (テレビ, コーヒー) và từ có chữ ngoài N5.
-- Danh sách gốc lấy từ danh sách N5 phổ biến (JLPT không còn công bố danh sách chính thức từ 2010), đối chiếu với từ đã có trong podcast.
+- **735 từ N5**, chia thành **16 buổi theo chủ đề**, mỗi buổi 31–60 từ.
+- Danh sách gốc: 718 từ trong `tools/n5_vocab_list.csv`, lấy từ [open-anki-jlpt-decks](https://github.com/jamsinclair/open-anki-jlpt-decks) (giấy phép MIT, xem `tools/n5_vocab_list.LICENSE`), dựa trên danh sách N5 của Jonathan Waller. JLPT không còn công bố danh sách chính thức từ 2010.
+- Thêm 17 câu chào hỏi cơ bản mà danh sách gốc không có (こんにちは, ありがとうございます, いただきます...).
 
 ### 2.2 Các buổi (vùng đất)
 
 | Buổi | Chủ đề | Vùng đất |
 |---|---|---|
-| 1 | Chào hỏi, đại từ, đại từ chỉ định | 京都 Kinh Đô |
+| 1 | Chào hỏi, đại từ chỉ định (こ・そ・あ・ど) | 京都 Kinh Đô |
 | 2 | Số đếm, đơn vị đếm | 九州 Cửu Châu |
 | 3 | Thời gian, lịch | 奈良 Nại Lương |
-| 4 | Gia đình, con người | 中国 Trung Quốc (vùng Chūgoku) |
+| 4 | Gia đình, con người, đại từ nhân xưng, sở thích | 中国 Trung Quốc (vùng Chūgoku) |
 | 5 | Cơ thể, sức khoẻ | 四国 Tứ Quốc |
 | 6 | Ăn uống | 大阪 Đại Phản |
 | 7 | Nhà cửa, đồ dùng | 岐阜 Kỳ Phụ |
 | 8 | Phố xá, giao thông | 東京 Đông Kinh |
 | 9 | Trường học, công việc | 愛知 Ái Tri |
 | 10 | Mua sắm, tiền, quần áo, màu sắc | 北陸 Bắc Lục |
-| 11 | Thiên nhiên, thời tiết, động vật | 北海道 Bắc Hải Đạo |
+| 11 | Thiên nhiên, thời tiết, mùa, các thứ trong tuần | 北海道 Bắc Hải Đạo |
 | 12 | Từ katakana | 長崎 Trường Kỳ |
 | 13 | Động từ hằng ngày | 東北 Đông Bắc |
 | 14 | Động từ di chuyển, cho nhận | 関東 Quan Đông |
@@ -57,14 +57,13 @@ Lời giải thích từng vùng ở mục 7.3. Các tỉnh không thuộc vùng
 | Hán Việt | MIỄN CƯỠNG | Bỏ trống với từ kana, katakana |
 | Nghĩa VI / EN | học / study | |
 | Từ loại | danh từ, động từ nhóm 3 | Động từ ghi nhóm 1/2/3; tính từ ghi い/な |
-| Trọng âm | 0 | Dùng cho cặp đồng âm |
 | Câu ví dụ | 毎日日本語を勉強します。 | Kèm furigana, nghĩa VI/EN; ưu tiên nhân vật podcast |
 | Loại mẹo | ghép quân / song sinh / giả mạo / sứ thần / âm na ná / âm dương / song trùng | Xem mục 3.2; một từ có thể có nhiều loại |
 | Mẹo nhớ | "Miễn cưỡng mà vẫn phải học" | Chỉ viết cho từ khó nhớ |
 | Tập podcast | n5-0012 @ 3:41 | Tự dò từ kịch bản podcast; có thể trống |
 | Âm thanh | `audio/ja/<mã>.mp3` | Tạo bằng `tools/build_audio.py` như hiện tại |
 
-Nguồn soạn là một file văn bản như `tools/n5_vi.txt`, `tools/build_data.py` sinh ra `data/vocab-n5.js`.
+Nguồn soạn là `tools/n5_words/01.txt` … `16.txt`, mỗi file một buổi; định dạng ghi ở đầu file `01.txt`. `tools/build_vocab.py n5` kiểm tra và sinh ra `data/vocab-n5.js`. Các thứ trong tuần nằm ở buổi 11 vì được đặt tên theo mặt trăng, lửa, nước, cây, vàng, đất, mặt trời.
 
 ---
 

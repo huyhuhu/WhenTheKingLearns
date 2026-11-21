@@ -1,0 +1,51 @@
+# Buổi 09: Trường học, công việc (愛知 Ái Tri)
+@hv 強=CƯỠNG 味=VỊ 絵=HỘI 映=ÁNH 画=HOẠ 鉛=DUYÊN 覚=GIÁC 楽=NHẠC 片=PHIẾN 仮=GIẢ 漢=HÁN 字=TỰ 室=THẤT 答=ĐÁP 作=TÁC 文=VĂN
+@hv 雑=TẠP 誌=CHÍ 仕=SĨ 質=CHẤT 問=VẤN 引=DẪN 写=TẢ 真=CHÂN 授=THỤ 業=NGHIỆP 宿=TÚC 題=ĐỀ 徒=ĐỒ 勤=CẦN
+@hv 習=TẬP 働=ĐỘNG 平=BÌNH 章=CHƯƠNG 勉=MIỄN 練=LUYỆN
+意味|いみ|n|ý nghĩa, nghĩa|meaning|この{言葉|ことば}の{意味|いみ}は{何|なん}ですか。|Từ này nghĩa là gì?|What does this word mean?|gia|Hán Việt "ý vị" nghe như "thú vị", nhưng 意味 chỉ là "nghĩa (của từ)".
+歌|うた|n|bài hát|song|ユキさんは{歌|うた}が{上手|じょうず}です。|Chị Yuki hát hay.|Yuki is good at singing.||
+絵|え|n|bức tranh|picture; painting; drawing|{猫|ねこ}の{絵|え}をかきました。|Tôi đã vẽ tranh con mèo.|I drew a picture of a cat.||Cả từ chỉ một âm え: "ê, đẹp như tranh!"
+映画|えいが|n|phim, điện ảnh|movie; film|{日曜日|にちようび}に{映画|えいが}を{見|み}ました。|Chủ nhật tôi đã xem phim.|I watched a movie on Sunday.||映 ánh + 画 hoạ: "bức hoạ bằng ánh sáng" chiếu lên màn.
+英語|えいご|n|tiếng Anh|English (language)|ケンタは{英語|えいご}が{少|すこ}しわかります。|Kenta hiểu một chút tiếng Anh.|Kenta understands a little English.|song|
+鉛筆|えんぴつ|n|bút chì|pencil|{鉛筆|えんぴつ}を{二本|にほん}ください。|Cho tôi hai cây bút chì.|Two pencils, please.||鉛 = chì, 筆 = bút: đúng từng chữ "bút chì".
+教える|おしえる|v2|dạy; chỉ cho, cho biết|to teach; to tell; to show|{駅|えき}への{道|みち}を{教|おし}えてください。|Làm ơn chỉ đường đến nhà ga giúp tôi.|Please tell me the way to the station.|am=習う|Không chỉ "dạy": 電話番号を教えて = cho tôi biết số điện thoại.
+覚える|おぼえる|v2|nhớ, học thuộc|to memorize; to remember|{毎日|まいにち}{漢字|かんじ}を{五|いつ}つ{覚|おぼ}えます。|Mỗi ngày tôi học thuộc năm chữ Hán.|I memorize five kanji every day.|am=忘れる|覚える là ghi nhớ vào đầu; lục lại trí nhớ thì dùng 思い出す.
+音楽|おんがく|n|âm nhạc|music|ケンタはゲームの{音楽|おんがく}が{好|す}きです。|Kenta thích nhạc trong trò chơi điện tử.|Kenta likes video game music.|song|
+会社|かいしゃ|n|công ty|company|ユキさんは{毎朝|まいあさ}{九時|くじ}に{会社|かいしゃ}へ{行|い}きます。|Sáng nào chị Yuki cũng đến công ty lúc 9 giờ.|Yuki goes to the office at nine every morning.||Hán Việt "hội xã", nhưng là "công ty" chứ không phải hội đoàn.
+学生|がくせい|n|học sinh, sinh viên|student|{私|わたし}は{大学|だいがく}の{学生|がくせい}です。|Tôi là sinh viên đại học.|I'm a university student.|song am=先生|Tiếng Nhật 学生 thường chỉ sinh viên đại học; học sinh phổ thông là 生徒.
+片仮名|かたかな|n|chữ Katakana|katakana|{外国|がいこく}の{名前|なまえ}は{片仮名|かたかな}で{書|か}きます。|Tên nước ngoài được viết bằng Katakana.|Foreign names are written in katakana.|am=平仮名|片 phiến = một mảnh: chữ Katakana là "mảnh" cắt ra từ chữ Hán.
+学校|がっこう|n|trường học|school|{学校|がっこう}まで{歩|ある}いて{十分|じゅっぷん}です。|Đi bộ đến trường mất 10 phút.|It's a ten-minute walk to school.||
+紙|かみ|n|giấy|paper|{紙|かみ}に{名前|なまえ}を{書|か}いてください。|Hãy viết tên vào giấy.|Please write your name on the paper.||紙 chỉ = giấy, nên 手紙 "thủ chỉ" là tờ giấy viết tay, tức lá thư.
+漢字|かんじ|n|chữ Hán|kanji; Chinese character|{漢字|かんじ}は{難|むずか}しいですが、おもしろいです。|Chữ Hán khó nhưng thú vị.|Kanji are difficult but interesting.|song|
+教室|きょうしつ|n|phòng học, lớp học|classroom|{教室|きょうしつ}に{学生|がくせい}が{三十人|さんじゅうにん}います。|Trong phòng học có 30 sinh viên.|There are thirty students in the classroom.||教 giáo (dạy) + 室 thất (phòng): căn phòng để dạy học.
+～語|～ご|suf|tiếng ~ (ngôn ngữ)|~ language|ベトナム{語|ご}と{日本語|にほんご}を{話|はな}します。|Tôi nói tiếng Việt và tiếng Nhật.|I speak Vietnamese and Japanese.||語 ngữ như "ngôn ngữ": 日本語 Nhật ngữ, 英語 Anh ngữ.
+答える|こたえる|v2|trả lời|to answer; to reply|{先生|せんせい}の{質問|しつもん}に{答|こた}えました。|Tôi đã trả lời câu hỏi của thầy.|I answered the teacher's question.|am=質問|Đi với に, không dùng を: 質問に答える.
+言葉|ことば|n|từ ngữ, lời nói|word; language; expression|「ありがとう」はいい{言葉|ことば}ですね。|"Arigatou" là một từ hay nhỉ.|"Arigatou" is a nice word, isn't it?||Đọc đặc biệt ことば: lời (言) mọc ra như lá (葉) trên cây.
+作文|さくぶん|n|bài văn, bài tập làm văn|essay; composition|{夏休|なつやす}みの{作文|さくぶん}を{書|か}きました。|Tôi đã viết bài văn về kỳ nghỉ hè.|I wrote an essay about my summer vacation.||作 tác (làm) + 文 văn: đúng là "làm văn".
+雑誌|ざっし|n|tạp chí|magazine|{電車|でんしゃ}で{雑誌|ざっし}を{読|よ}みます。|Tôi đọc tạp chí trên tàu.|I read magazines on the train.|song|
+仕事|しごと|n|công việc|work; job|{今日|きょう}は{仕事|しごと}が{多|おお}いです。|Hôm nay nhiều việc quá.|I have a lot of work today.|am=休み|仕 sĩ (phục vụ) + 事 sự (việc): việc phục vụ người khác là công việc.
+辞書|じしょ|n|từ điển|dictionary|{辞書|じしょ}を{貸|か}してください。|Cho tôi mượn từ điển nhé.|Please lend me your dictionary.||辞 từ + 書 thư: "sách tra từ", gần như "từ điển".
+質問|しつもん|n|câu hỏi|question|{何|なに}か{質問|しつもん}がありますか。|Có câu hỏi nào không?|Do you have any questions?|gia am=答える|Hán Việt "chất vấn" nghe căng, nhưng 質問 chỉ là câu hỏi bình thường, như hỏi thầy.
+字引|じびき|n|từ điển (cách nói cũ)|dictionary (old-fashioned)|{佐藤|さとう}さんの{字引|じびき}はとても{古|ふる}いです。|Cuốn từ điển của bà Sato rất cũ.|Mrs. Sato's dictionary is very old.||字 tự + 引 dẫn (kéo): "kéo chữ ra mà tra". Từ cũ, nay hay nói 辞書.
+写真|しゃしん|n|bức ảnh|photograph; picture|{猫|ねこ}のタマの{写真|しゃしん}をたくさん{撮|と}りました。|Tôi đã chụp rất nhiều ảnh bé Tama.|I took lots of photos of Tama.||写 tả (chép) + 真 chân (thật): "chép lại cái thật" là bức ảnh.
+授業|じゅぎょう|n|giờ học, tiết học|class; lesson|{授業|じゅぎょう}は{九時|くじ}に{始|はじ}まります。|Giờ học bắt đầu lúc 9 giờ.|Class starts at nine.||授 thụ (trao) + 業 nghiệp: giờ thầy "trao nghề" cho trò.
+宿題|しゅくだい|n|bài tập về nhà|homework|{今日|きょう}は{宿題|しゅくだい}がたくさんあります。|Hôm nay có nhiều bài tập về nhà.|I have a lot of homework today.||宿 túc (chỗ ở) + 題 đề: "đề bài mang về nhà".
+新聞|しんぶん|n|báo|newspaper|{田中|たなか}さんは{毎朝|まいあさ}{新聞|しんぶん}を{読|よ}みます。|Sáng nào ông Tanaka cũng đọc báo.|Mr. Tanaka reads the newspaper every morning.|gia|"Tân văn" nghe như áng văn mới, thật ra là tờ báo: tin (聞) mới (新) mỗi ngày.
+生徒|せいと|n|học sinh (phổ thông)|pupil; (school) student|この{学校|がっこう}には{生徒|せいと}が{五百人|ごひゃくにん}います。|Trường này có 500 học sinh.|This school has 500 pupils.||生徒 dùng cho học sinh cấp 2, cấp 3; sinh viên đại học là 学生.
+先生|せんせい|n|thầy cô giáo; bác sĩ|teacher; doctor|{先生|せんせい}、{質問|しつもん}があります。|Thưa thầy, em có câu hỏi.|Teacher, I have a question.|am=学生|"Tiên sinh" = người sinh ra trước: gọi thầy giáo, bác sĩ; không dùng để tự xưng.
+大学|だいがく|n|đại học|university; college|{兄|あに}は{東京|とうきょう}の{大学|だいがく}で{勉強|べんきょう}しています。|Anh trai tôi đang học đại học ở Tokyo.|My older brother studies at a university in Tokyo.|song|
+勤める|つとめる|v2|làm việc (cho cơ quan), công tác|to work for; to be employed at|{父|ちち}は{銀行|ぎんこう}に{勤|つと}めています。|Bố tôi làm việc ở ngân hàng.|My father works for a bank.||Đi với に: 会社に勤めています; còn 働く thì đi với で.
+図書館|としょかん|n|thư viện|library|{図書館|としょかん}で{本|ほん}を{借|か}りました。|Tôi đã mượn sách ở thư viện.|I borrowed a book from the library.||
+夏休み|なつやすみ|n|nghỉ hè|summer vacation|{夏休|なつやす}みに{北海道|ほっかいどう}へ{行|い}きます。|Kỳ nghỉ hè tôi sẽ đi Hokkaido.|I'm going to Hokkaido for summer vacation.||
+習う|ならう|v1|học (từ ai đó)|to learn; to take lessons|ケンタは{佐藤|さとう}さんにギターを{習|なら}っています。|Kenta đang học đàn ghi-ta với bà Sato.|Kenta is taking guitar lessons from Mrs. Sato.|am=教える|習う là học có người dạy (先生に習う); tự ngồi học bài thì dùng 勉強する.
+働く|はたらく|v1|làm việc, lao động|to work|ユキさんは{東京|とうきょう}の{会社|かいしゃ}で{働|はたら}いています。|Chị Yuki làm việc ở một công ty tại Tokyo.|Yuki works at a company in Tokyo.|am=休む|働 = 人 (người) + 動 (động): người chuyển động là đang làm việc.
+話|はなし|n|câu chuyện; cuộc nói chuyện|talk; story|{田中|たなか}さんの{話|はなし}はいつも{長|なが}いです。|Câu chuyện của ông Tanaka lúc nào cũng dài.|Mr. Tanaka's talks are always long.||Danh từ của 話す (nói): đổi す thành し.
+平仮名|ひらがな|n|chữ Hiragana|hiragana|{子供|こども}は{平仮名|ひらがな}から{習|なら}います。|Trẻ em học chữ Hiragana trước tiên.|Children learn hiragana first.|am=片仮名|平 bình (phẳng, dễ): nét chữ mềm mại, ai cũng viết được.
+文章|ぶんしょう|n|đoạn văn, bài viết|text; passage; writing|この{文章|ぶんしょう}を{読|よ}んでください。|Hãy đọc đoạn văn này.|Please read this passage.|gia|Hán Việt "văn chương", nhưng chỉ là đoạn văn bình thường, không phải văn học.
+勉強|べんきょう|n|việc học|study|{毎晩|まいばん}{日本語|にほんご}を{勉強|べんきょう}します。|Tối nào tôi cũng học tiếng Nhật.|I study Japanese every night.|gia|Hán Việt "miễn cưỡng" nhưng nghĩa là học: học hành đôi khi cũng phải ép mình!
+本|ほん|n|sách|book|ユキさんは{本|ほん}を{電車|でんしゃ}に{忘|わす}れました。|Chị Yuki để quên sách trên tàu.|Yuki left her book on the train.||
+万年筆|まんねんひつ|n|bút máy|fountain pen|{田中|たなか}さんは{古|ふる}い{万年筆|まんねんひつ}を{使|つか}っています。|Ông Tanaka dùng một cây bút máy cũ.|Mr. Tanaka uses an old fountain pen.||万年 vạn niên + 筆 bút: "cây bút vạn năm", dùng mãi không hỏng.
+問題|もんだい|n|vấn đề; câu hỏi (bài thi)|problem; question (on a test)|テストの{問題|もんだい}は{難|むずか}しかったです。|Câu hỏi trong bài kiểm tra khó quá.|The test questions were difficult.|song|Ngoài "vấn đề" còn là câu hỏi trong đề thi: 問題1 = câu 1.
+休み|やすみ|n|kỳ nghỉ, ngày nghỉ; sự vắng mặt|holiday; day off; absence|{明日|あした}は{会社|かいしゃ}が{休|やす}みです。|Ngày mai công ty nghỉ.|The office is closed tomorrow.|am=仕事|
+留学生|りゅうがくせい|n|du học sinh|international student|{私|わたし}はベトナムからの{留学生|りゅうがくせい}です。|Tôi là du học sinh đến từ Việt Nam.|I'm an international student from Vietnam.|song|Tiếng Việt cũng có từ "lưu học sinh", nghĩa là du học sinh.
+練習|れんしゅう|n|sự luyện tập|practice|{毎日|まいにち}{漢字|かんじ}を{書|か}く{練習|れんしゅう}をします。|Ngày nào tôi cũng luyện viết chữ Hán.|I practice writing kanji every day.|song|

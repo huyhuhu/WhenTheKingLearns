@@ -1,0 +1,62 @@
+# Buổi 03: Thời gian, lịch (奈良 Nại Lương)
+@hv 昨=TẠC 初=SƠ 夕=TỊCH 夜=DẠ
+朝|あさ|n|buổi sáng|morning|{朝|あさ}はコーヒーを{飲|の}みます。|Buổi sáng tôi uống cà phê.|I drink coffee in the morning.|am=晩|
+明後日|あさって|n|ngày kia|the day after tomorrow|{明後日|あさって}はユキさんの{誕生日|たんじょうび}です。|Ngày kia là sinh nhật Yuki.|The day after tomorrow is Yuki's birthday.|am=一昨日|Đọc đặc biệt. Thứ tự: きょう → あした → あさって.
+明日|あした|n|ngày mai|tomorrow|{明日|あした}は{休|やす}みです。|Ngày mai là ngày nghỉ.|Tomorrow is a day off.|am=昨日|Đọc đặc biệt あした; kiểu trang trọng là あす.
+後|あと|n|sau, sau đó; phần còn lại|after; later; the rest|{仕事|しごと}の{後|あと}で{飲|の}みに{行|い}きましょう。|Sau giờ làm đi uống chút nhé.|Let's go for a drink after work.|am=前|Cùng chữ 後: あと là "sau" về thời gian, うしろ là "phía sau" về chỗ.
+一日|いちにち|n|một ngày (khoảng thời gian)|one day (duration); all day|{日曜日|にちようび}は{一日|いちにち}{寝|ね}ていました。|Chủ nhật tôi ngủ cả ngày.|I slept all day on Sunday.||Đếm độ dài là いちにち; ngày mồng một là ついたち.
+五日|いつか|n|ngày mồng năm; năm ngày|the 5th (of the month); five days|{五月五日|ごがついつか}は{子供|こども}の{日|ひ}です。|Ngày 5 tháng 5 là ngày Thiếu nhi.|May 5th is Children's Day.||
+今|いま|n|bây giờ|now|{今|いま}、{何時|なんじ}ですか。|Bây giờ là mấy giờ?|What time is it now?||
+一昨日|おととい|n|hôm kia|the day before yesterday|ユキさんは{一昨日|おととい}も{傘|かさ}を{忘|わす}れました。|Hôm kia chị Yuki cũng quên ô.|Yuki forgot her umbrella the day before yesterday too.|am=明後日 na|おととい "ô tô tôi": hôm kia ô tô tôi hỏng.
+おととし|おととし|n|năm kia|the year before last|おととし、{日本|にほん}に{来|き}ました。|Tôi đến Nhật vào năm kia.|I came to Japan the year before last.|am=さ来年|おととい (hôm kia) đổi い thành し (とし = năm) là năm kia.
+～か月|～かげつ|ctr|～ tháng (khoảng thời gian)|~ months (duration)|{日本語|にほんご}を{三|さん}か{月|げつ}{勉強|べんきょう}しました。|Tôi đã học tiếng Nhật ba tháng.|I studied Japanese for three months.||～月 がつ là tháng mấy, ～か月 là mấy tháng.
+～月|～がつ|suf|tháng ～|month ~ (of the year)|{私|わたし}の{誕生日|たんじょうび}は{八月|はちがつ}です。|Sinh nhật tôi vào tháng tám.|My birthday is in August.||Nhớ cách đọc: 四月 しがつ, 七月 しちがつ, 九月 くがつ.
+昨日|きのう|n|hôm qua|yesterday|{昨日|きのう}は{雨|あめ}でした。|Hôm qua trời mưa.|It rained yesterday.|am=明日|Đọc đặc biệt きのう; kiểu trang trọng là さくじつ.
+今日|きょう|n|hôm nay|today|{今日|きょう}は{暑|あつ}いですね。|Hôm nay nóng nhỉ.|It's hot today, isn't it?||Đọc đặc biệt きょう, không phải こんにち.
+去年|きょねん|n|năm ngoái|last year|{去年|きょねん}、{結婚|けっこん}しました。|Năm ngoái tôi đã kết hôn.|I got married last year.|am=来年|
+今朝|けさ|n|sáng nay|this morning|{今朝|けさ}は{何|なに}も{食|た}べませんでした。|Sáng nay tôi chưa ăn gì.|I didn't eat anything this morning.||Đọc đặc biệt けさ, không phải こんあさ.
+午後|ごご|n|buổi chiều; giờ chiều (PM)|afternoon; p.m.|{午後|ごご}{三時|さんじ}に{会議|かいぎ}があります。|Có cuộc họp lúc 3 giờ chiều.|There's a meeting at 3 p.m.|am=午前|
+九日|ここのか|n|ngày mồng chín; chín ngày|the 9th (of the month); nine days|{九日|ここのか}に{国|くに}へ{帰|かえ}ります。|Ngày mồng chín tôi về nước.|I'm going back to my country on the 9th.||
+午前|ごぜん|n|buổi sáng; giờ sáng (AM)|morning; a.m.|{銀行|ぎんこう}は{午前|ごぜん}{九時|くじ}からです。|Ngân hàng mở cửa từ 9 giờ sáng.|The bank opens at 9 a.m.|am=午後|午 = ngọ (giữa trưa): 午前 là trước trưa, 午後 là sau trưa.
+今年|ことし|n|năm nay|this year|{今年|ことし}は{雪|ゆき}が{多|おお}いです。|Năm nay tuyết nhiều.|There's a lot of snow this year.||Đọc đặc biệt ことし, không phải こんねん.
+～ごろ|～ごろ|suf|khoảng (thời điểm)|around, about (a point in time)|{七時|しちじ}ごろ{起|お}きます。|Tôi dậy khoảng 7 giờ.|I get up around seven.||ごろ chỉ thời điểm; khoảng lượng thì dùng ぐらい: 一時間ぐらい.
+今月|こんげつ|n|tháng này|this month|{今月|こんげつ}はとても{忙|いそが}しいです。|Tháng này rất bận.|This month is very busy.||
+今週|こんしゅう|n|tuần này|this week|{今週|こんしゅう}の{土曜日|どようび}は{暇|ひま}ですか。|Thứ bảy tuần này anh rảnh không?|Are you free this Saturday?||
+今晩|こんばん|n|tối nay|tonight|{今晩|こんばん}、{電話|でんわ}します。|Tối nay tôi sẽ gọi điện.|I'll call you tonight.||
+先|さき|n|phía trước; trước (thời gian)|ahead; earlier, first|お{先|さき}に{失礼|しつれい}します。|Tôi xin phép về trước.|Excuse me for leaving before you.|am=後|お先に失礼します: câu chào khi về trước đồng nghiệp.
+さ来年|さらいねん|n|năm sau nữa|the year after next|{弟|おとうと}はさ{来年|らいねん}{大学生|だいがくせい}になります。|Năm sau nữa em trai tôi sẽ thành sinh viên.|My younger brother will start university the year after next.|am=おととし|さ (再, tái) + 来年: "năm sau" thêm một lần nữa.
+～時|～じ|suf|～ giờ|~ o'clock|{毎朝|まいあさ}{六時|ろくじ}に{起|お}きます。|Sáng nào tôi cũng dậy lúc 6 giờ.|I get up at six every morning.||Nhớ: 四時 よじ, 七時 しちじ, 九時 くじ.
+時間|じかん|n|thời gian; giờ|time|{時間|じかん}がありません。|Tôi không có thời gian.|I don't have time.|song|
+～時間|～じかん|suf|～ tiếng (đồng hồ)|~ hours|{毎日|まいにち}{八時間|はちじかん}{寝|ね}ます。|Ngày nào tôi cũng ngủ tám tiếng.|I sleep eight hours every day.||～時 là mấy giờ, ～時間 là mấy tiếng.
+～中|～じゅう|suf|suốt ～, khắp ～|throughout ~; all over ~|ケンタは{一日中|いちにちじゅう}ゲームをしています。|Kenta chơi game suốt cả ngày.|Kenta plays games all day long.|trung=十|じゅう là "suốt, khắp" (一日中, 世界中); ちゅう là "đang" (会議中).
+～週間|～しゅうかん|suf|～ tuần (khoảng thời gian)|~ weeks|{二週間|にしゅうかん}{休|やす}みます。|Tôi nghỉ hai tuần.|I'll take two weeks off.||
+～すぎ|～すぎ|suf|quá ～, hơn ～ (giờ); quá mức|past (the hour); too much|もう{十時|じゅうじ}すぎです。|Đã hơn 10 giờ rồi.|It's already past ten.||Sau giờ là "quá"; sau động từ là "quá mức": 食べすぎ = ăn quá nhiều.
+先月|せんげつ|n|tháng trước|last month|{先月|せんげつ}、{引|ひ}っ{越|こ}しました。|Tháng trước tôi đã chuyển nhà.|I moved last month.|am=来月|
+先週|せんしゅう|n|tuần trước|last week|{先週|せんしゅう}は{忙|いそが}しかったです。|Tuần trước bận lắm.|Last week was busy.|am=来週|
+～中|～ちゅう|suf|đang ～; trong lúc ～|in the middle of ~; during ~|{田中|たなか}さんは{今|いま}{会議中|かいぎちゅう}です。|Ông Tanaka đang họp.|Mr. Tanaka is in a meeting now.||
+一日|ついたち|n|ngày mồng một|the 1st (of the month)|{四月一日|しがつついたち}から{会社員|かいしゃいん}です。|Từ mồng 1 tháng 4 tôi là nhân viên công ty.|I'm a company employee from April 1st.||Đọc đặc biệt ついたち, từ 月立ち "trăng mới mọc": ngày đầu tháng.
+十日|とおか|n|ngày mồng mười; mười ngày|the 10th (of the month); ten days|{十日|とおか}に{国|くに}から{母|はは}が{来|き}ます。|Ngày mồng mười mẹ tôi từ quê sang.|My mother is coming from home on the 10th.||
+～時|～とき|n|lúc ～, khi ～|when ~; at the time of ~|{子供|こども}の{時|とき}、{犬|いぬ}がいました。|Hồi nhỏ, nhà tôi có nuôi chó.|When I was a child, we had a dog.||Cùng chữ 時: じ là giờ đồng hồ, とき là "lúc, khi".
+年|とし|n|năm; tuổi|year; age|{佐藤|さとう}さんは{年|とし}を{言|い}いません。|Bà Sato không chịu nói tuổi.|Mrs. Sato won't tell her age.||
+七日|なのか|n|ngày mồng bảy; bảy ngày|the 7th (of the month); seven days|{七月七日|しちがつなのか}は{七夕|たなばた}です。|Ngày 7 tháng 7 là lễ Thất tịch.|July 7th is Tanabata.||
+～日|～にち|suf|ngày ～; ～ ngày|day ~ (of the month); ~ days|{十五日|じゅうごにち}に{会|あ}いましょう。|Gặp nhau ngày 15 nhé.|Let's meet on the 15th.||Từ 11 trở đi là số + にち, trừ 14日 じゅうよっか, 20日 はつか, 24日 にじゅうよっか.
+～年|～ねん|suf|năm ～; ～ năm|year ~; ~ years|{日本|にほん}に{来|き}て{三年|さんねん}です。|Tôi đến Nhật được ba năm rồi.|It's been three years since I came to Japan.||
+初め|はじめ|n|lúc đầu, ban đầu|beginning, start|{初|はじ}めは{日本語|にほんご}が{難|むずか}しかったです。|Lúc đầu tiếng Nhật thật khó.|At first, Japanese was hard.||初め là lúc đầu (thời gian); 始め là sự bắt đầu (một việc).
+二十日|はつか|n|ngày hai mươi; hai mươi ngày|the 20th (of the month); twenty days|{五月二十日|ごがつはつか}はケンタの{誕生日|たんじょうび}です。|Ngày 20 tháng 5 là sinh nhật Kenta.|May 20th is Kenta's birthday.||Đọc đặc biệt はつか, cùng họ với 二十歳 はたち: "hai mươi" là はた/はつ.
+半|はん|n|rưỡi, nửa|half; half past|{三時半|さんじはん}に{会|あ}いましょう。|Gặp nhau lúc 3 giờ rưỡi nhé.|Let's meet at half past three.||
+晩|ばん|n|buổi tối|evening|{晩|ばん}ご{飯|はん}は{何|なん}ですか。|Bữa tối ăn gì thế?|What's for dinner?|am=朝 trung=～番|
+一月|ひとつき|n|một tháng (khoảng thời gian)|one month (duration)|{一月|ひとつき}に{一回|いっかい}、{映画|えいが}を{見|み}ます。|Mỗi tháng tôi xem phim một lần.|I watch a movie once a month.||Cùng viết 一月: いちがつ là tháng Giêng, ひとつき là một tháng.
+昼|ひる|n|buổi trưa; ban ngày|noon; daytime|{昼|ひる}は{会社|かいしゃ}の{近|ちか}くで{食|た}べます。|Buổi trưa tôi ăn gần công ty.|At noon I eat near the office.|am=夜|
+二日|ふつか|n|ngày mồng hai; hai ngày|the 2nd (of the month); two days|{二日|ふつか}{休|やす}みました。|Tôi đã nghỉ hai ngày.|I took two days off.||Ngày 2-10: ふつ, みっ, よっ, いつ, むい, なの, よう, ここの, とお + か.
+～分|～ふん|suf|～ phút|~ minutes|{駅|えき}まで{五分|ごふん}です。|Đến ga mất năm phút.|It's five minutes to the station.||Biến âm: 一分 いっぷん, 三分 さんぷん, 十分 じゅっぷん.
+前|まえ|n|trước; phía trước|before; in front|{寝|ね}る{前|まえ}に{歯|は}を{磨|みが}きます。|Tôi đánh răng trước khi ngủ.|I brush my teeth before bed.|am=後|
+三日|みっか|n|ngày mồng ba; ba ngày|the 3rd (of the month); three days|この{本|ほん}は{三日|みっか}で{読|よ}みました。|Cuốn sách này tôi đọc trong ba ngày.|I read this book in three days.||
+六日|むいか|n|ngày mồng sáu; sáu ngày|the 6th (of the month); six days|{六日|むいか}は{日曜日|にちようび}です。|Mồng sáu là chủ nhật.|The 6th is a Sunday.||
+夕方|ゆうがた|n|chiều tối, chạng vạng|early evening|{夕方|ゆうがた}、タマと{散歩|さんぽ}します。|Chiều tối tôi đi dạo với mèo Tama.|In the early evening I take a walk with Tama.||夕 = tịch, như "tịch dương" (nắng chiều).
+昨夜|ゆうべ|n|tối qua|last night|{昨夜|ゆうべ}はよく{寝|ね}られませんでした。|Tối qua tôi không ngủ ngon được.|I couldn't sleep well last night.|na|ゆうべ "dư bia": tối qua uống dư bia nên giờ còn mệt.
+八日|ようか|n|ngày mồng tám; tám ngày|the 8th (of the month); eight days|{八日|ようか}に{試験|しけん}があります。|Ngày mồng tám có kỳ thi.|There's an exam on the 8th.||Dễ nhầm: 八日 ようか (mồng 8) và 四日 よっか (mồng 4).
+四日|よっか|n|ngày mồng bốn; bốn ngày|the 4th (of the month); four days|{四日|よっか}は{暇|ひま}です。|Mồng bốn tôi rảnh.|I'm free on the 4th.||
+夜|よる|n|ban đêm, buổi tối|night|{夜|よる}、コンビニへ{行|い}きました。|Buổi tối tôi đã ra cửa hàng tiện lợi.|I went to the convenience store at night.|am=昼|
+来月|らいげつ|n|tháng sau|next month|{来月|らいげつ}、{国|くに}へ{帰|かえ}ります。|Tháng sau tôi về nước.|I'm going back to my country next month.|am=先月|
+来週|らいしゅう|n|tuần sau|next week|{来週|らいしゅう}、テストがあります。|Tuần sau có bài kiểm tra.|There's a test next week.|am=先週|
+来年|らいねん|n|năm sau|next year|{来年|らいねん}、{日本|にほん}へ{行|い}きたいです。|Năm sau tôi muốn đi Nhật.|I want to go to Japan next year.|am=去年|

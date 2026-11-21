@@ -1,0 +1,54 @@
+# Buổi 8: Phố xá, giao thông, phương hướng (東京 Đông Kinh)
+@hv 映=ÁNH 画=HOẠ 角=GIÁC 符=PHÙ 警=CẢNH 官=QUAN 公=CÔNG 園=VIÊN 交=GIAO 差=SAI 点=ĐIỂM 番=PHIÊN 使=SỨ 建=KIẾN 近=CẬN 所=SỞ 隣=LÂN 橋=KIỀU 辺=BIÊN 町=ĐINH 向=HƯỚNG 村=THÔN 郵=BƯU 便=TIỆN 局=CỤC 横=HOÀNH
+入口|いりぐち|n|lối vào|entrance|{入口|いりぐち}で{待|ま}っています。|Tôi đang đợi ở lối vào.|I'm waiting at the entrance.|am=出口|入 đọc là いり, 口 くち đổi thành ぐち.
+上|うえ|n|trên, phía trên|above; on top of|タマは{机|つくえ}の{上|うえ}で{寝|ね}ています。|Tama đang ngủ trên bàn.|Tama is sleeping on the desk.|am=下|
+後ろ|うしろ|n|phía sau|behind; back|{私|わたし}の{後|うし}ろに{誰|だれ}がいますか。|Ai đang ở sau lưng tôi vậy?|Who is behind me?|am=前|
+映画館|えいがかん|n|rạp chiếu phim|movie theater|{日曜日|にちようび}に{映画館|えいがかん}へ{行|い}きました。|Chủ nhật tôi đã đi rạp phim.|I went to the cinema on Sunday.||
+駅|えき|n|nhà ga|station|{駅|えき}まで{歩|ある}いて{十分|じゅっぷん}です。|Đi bộ đến ga mất 10 phút.|It's a ten-minute walk to the station.||
+おまわりさん|おまわりさん|n|chú cảnh sát (thân mật)|police officer (friendly term)|おまわりさんに{道|みち}を{聞|き}きました。|Tôi hỏi đường chú cảnh sát.|I asked a police officer for directions.||Từ お回り: người đi tuần "vòng quanh" khu phố; cách gọi thân mật của 警官.
+外国|がいこく|n|nước ngoài|foreign country|{外国|がいこく}へ{行|い}きたいです。|Tôi muốn đi nước ngoài.|I want to go abroad.|song|
+角|かど|n|góc (phố, bàn)|corner|あの{角|かど}を{右|みぎ}に{曲|ま}がってください。|Hãy rẽ phải ở góc kia.|Please turn right at that corner.||Hỏi đường hay gặp: 角を曲がる = rẽ ở góc phố.
+～側|～がわ|suf|phía ~, bên ~|~ side|{駅|えき}の{右側|みぎがわ}に{銀行|ぎんこう}があります。|Bên phải nhà ga có ngân hàng.|There's a bank on the right side of the station.||側 đọc là がわ khi ghép: 右側, 左側, 向こう側.
+北|きた|n|phía bắc|north|{北|きた}の{国|くに}は{冬|ふゆ}が{長|なが}いです。|Xứ phía bắc mùa đông dài.|In northern lands, winter is long.|song am=南|
+喫茶店|きっさてん|n|quán cà phê|café; coffee shop|あの{喫茶店|きっさてん}のコーヒーはおいしいです。|Cà phê ở quán kia ngon.|The coffee at that café is good.||喫茶 là "uống trà", nhưng 喫茶店 là quán cà phê kiểu cũ của Nhật.
+切符|きっぷ|n|vé (tàu, xe)|ticket|{駅|えき}で{切符|きっぷ}を{買|か}います。|Tôi mua vé ở nhà ga.|I buy a ticket at the station.||切 thiết (cắt) + 符 phù (thẻ): vé xưa được nhân viên bấm cắt khi soát.
+国|くに|n|đất nước; quê hương|country; home country|お{国|くに}はどちらですか。|Anh là người nước nào?|Where are you from?||
+車|くるま|n|xe hơi, xe|car; vehicle|{田中|たなか}さんは{新|あたら}しい{車|くるま}を{買|か}いました。|Ông Tanaka đã mua xe hơi mới.|Mr. Tanaka bought a new car.||Hán Việt là "xa", gốc của chữ "xe" trong tiếng Việt.
+警官|けいかん|n|cảnh sát (viên)|police officer|{交番|こうばん}に{警官|けいかん}がいます。|Ở chốt có cảnh sát.|There's a police officer at the police box.|gia|Hán Việt "cảnh quan" nhưng không phải phong cảnh: 警 cảnh (cảnh sát) + 官 quan (viên chức).
+公園|こうえん|n|công viên|park|{公園|こうえん}で{散歩|さんぽ}しましょう。|Đi dạo ở công viên nhé.|Let's take a walk in the park.|song|
+交差点|こうさてん|n|ngã tư|intersection|{次|つぎ}の{交差点|こうさてん}を{左|ひだり}に{曲|ま}がります。|Rẽ trái ở ngã tư tiếp theo.|Turn left at the next intersection.||交 giao + 差 sai (chéo) + 点 điểm: điểm các con đường giao chéo nhau.
+交番|こうばん|n|chốt cảnh sát|police box|{交番|こうばん}はあの{角|かど}にあります。|Chốt cảnh sát ở góc đường kia.|The police box is on that corner.||交 giao + 番 phiên: chốt nhỏ nơi cảnh sát thay phiên nhau trực.
+下|した|n|dưới, phía dưới|below; under|{猫|ねこ}が{椅子|いす}の{下|した}にいます。|Con mèo ở dưới ghế.|The cat is under the chair.|am=上|
+自転車|じてんしゃ|n|xe đạp|bicycle|{自転車|じてんしゃ}で{会社|かいしゃ}へ{行|い}きます。|Tôi đi làm bằng xe đạp.|I go to work by bicycle.||自 tự + 転 chuyển + 車 xa: xe "tự quay", nhưng thật ra phải tự đạp.
+自動車|じどうしゃ|n|ô tô|automobile|この{会社|かいしゃ}は{自動車|じどうしゃ}を{作|つく}っています。|Công ty này sản xuất ô tô.|This company makes cars.||自 tự + 動 động: xe tự chạy bằng máy, khác 自転車 phải đạp.
+外|そと|n|bên ngoài|outside|{外|そと}は{寒|さむ}いです。|Bên ngoài lạnh.|It's cold outside.|am=中|Cùng chữ 外 còn đọc là ほか, nghĩa là "khác".
+そば|そば|n|bên cạnh, gần|near; beside|{駅|えき}のそばにコンビニがあります。|Gần ga có cửa hàng tiện lợi.|There's a convenience store near the station.||Đồng âm với món mì そば (mì kiều mạch); nghĩa "bên cạnh" thường viết hiragana.
+大使館|たいしかん|n|đại sứ quán|embassy|ベトナム{大使館|たいしかん}はどこですか。|Đại sứ quán Việt Nam ở đâu?|Where is the Vietnamese embassy?|song|
+たて|たて|n|chiều dọc, chiều dài|length; vertical|この{紙|かみ}はたて{三十|さんじゅう}センチです。|Tờ giấy này chiều dọc 30 cm.|This paper is 30 cm long.|am=横|たて là chiều dọc (trên xuống dưới), 横 là chiều ngang.
+建物|たてもの|n|toà nhà|building|あの{高|たか}い{建物|たてもの}は{何|なん}ですか。|Toà nhà cao kia là gì?|What is that tall building?||建てる (xây) + 物 (vật): vật được xây lên.
+近い|ちかい|adj-i|gần|near; close|{会社|かいしゃ}はうちから{近|ちか}いです。|Công ty gần nhà tôi.|The office is close to my home.|am=遠い|
+近く|ちかく|n|gần đây, vùng lân cận|nearby; vicinity|この{近|ちか}くに{銀行|ぎんこう}はありますか。|Gần đây có ngân hàng không?|Is there a bank nearby?||近い đổi い thành く thành danh từ: 近くに = ở gần.
+地下鉄|ちかてつ|n|tàu điện ngầm|subway|{地下鉄|ちかてつ}で{行|い}きましょう。|Đi tàu điện ngầm nhé.|Let's take the subway.||地下 địa hạ (dưới đất) + 鉄 thiết (sắt): đường sắt dưới lòng đất.
+地図|ちず|n|bản đồ|map|{地図|ちず}を{見|み}せてください。|Cho tôi xem bản đồ.|Please show me the map.||Hán Việt "địa đồ" chính là bản đồ; 図 ở đây đọc ず.
+出口|でぐち|n|lối ra|exit|{出口|でぐち}はどこですか。|Lối ra ở đâu?|Where is the exit?|am=入口|
+電車|でんしゃ|n|tàu điện|(electric) train|ユキさんは{電車|でんしゃ}に{傘|かさ}を{忘|わす}れました。|Yuki để quên ô trên tàu điện.|Yuki left her umbrella on the train.||
+遠い|とおい|adj-i|xa|far; distant|{学校|がっこう}は{遠|とお}いですか。|Trường có xa không?|Is the school far?|am=近い|
+所|ところ|n|nơi, chỗ|place|ここは{静|しず}かな{所|ところ}ですね。|Đây là chỗ yên tĩnh nhỉ.|This is a quiet place, isn't it?||Hán Việt "sở" như "trụ sở"; trong từ ghép đọc どころ, như 台所.
+隣|となり|n|bên cạnh, sát vách|next to; next door|{佐藤|さとう}さんは{隣|となり}に{住|す}んでいます。|Bà Sato sống ở nhà bên cạnh.|Mrs. Sato lives next door.||隣 là sát bên và cùng loại (nhà bên, ghế bên); 横 chỉ là phía bên cạnh.
+中|なか|n|bên trong, giữa|inside; middle|{箱|はこ}の{中|なか}にタマがいます。|Tama ở trong hộp.|Tama is in the box.|am=外|
+西|にし|n|phía tây|west|{大阪|おおさか}は{東京|とうきょう}の{西|にし}にあります。|Osaka nằm ở phía tây Tokyo.|Osaka is west of Tokyo.|song am=東|
+橋|はし|n|cầu|bridge|この{橋|はし}を{渡|わた}ってください。|Hãy đi qua cây cầu này.|Please cross this bridge.|trung=箸|Đồng âm với 箸 (đũa): cầu 橋 có bộ mộc 木 vì xưa làm bằng gỗ.
+東|ひがし|n|phía đông|east|{駅|えき}の{東|ひがし}に{公園|こうえん}があります。|Phía đông nhà ga có công viên.|There's a park east of the station.|song am=西|
+飛行機|ひこうき|n|máy bay|airplane|{飛行機|ひこうき}でベトナムへ{帰|かえ}ります。|Tôi về Việt Nam bằng máy bay.|I'm flying back to Vietnam.||飛行 phi hành (bay) + 機 cơ (máy): như "phi cơ".
+左|ひだり|n|bên trái|left|{左|ひだり}に{曲|ま}がってください。|Hãy rẽ trái.|Please turn left.|am=右|Chữ 左 có 工 (cái thước): tay trái giữ thước; 右 có 口: tay phải đưa cơm lên miệng.
+辺|へん|n|vùng, khu vực quanh|area; vicinity|この{辺|へん}に{郵便局|ゆうびんきょく}はありますか。|Quanh đây có bưu điện không?|Is there a post office around here?||Hay dùng この辺 = quanh đây; Hán Việt "biên" như "biên giới".
+～前|～まえ|suf|trước ~ (chỗ, thời gian)|in front of ~; ~ ago|{駅前|えきまえ}に{本屋|ほんや}があります。|Trước ga có hiệu sách.|There's a bookstore in front of the station.||Sau nơi chốn: 駅前 = trước ga; sau thời gian: 三年前 = ba năm trước.
+町|まち|n|thị trấn, phố phường|town; city|この{町|まち}にはおいしい{店|みせ}が{多|おお}いです。|Thị trấn này có nhiều quán ngon.|This town has lots of good restaurants.||町 lớn hơn 村 (làng), nhỏ hơn 市 (thành phố).
+まっすぐ|まっすぐ|adv|thẳng|straight (ahead)|この{道|みち}をまっすぐ{行|い}ってください。|Hãy đi thẳng con đường này.|Please go straight down this road.||
+右|みぎ|n|bên phải|right|{右|みぎ}を{見|み}てください。|Hãy nhìn sang bên phải.|Please look to the right.|am=左|
+道|みち|n|đường; lối đi|road; way|{道|みち}がわかりません。|Tôi không biết đường.|I don't know the way.||Hán Việt "đạo": con đường, cũng là "đạo" như trong 柔道.
+南|みなみ|n|phía nam|south|{沖縄|おきなわ}は{日本|にほん}の{南|みなみ}にあります。|Okinawa ở phía nam Nhật Bản.|Okinawa is in the south of Japan.|song am=北|
+向こう|むこう|n|phía bên kia, đằng kia|beyond; the other side|{道|みち}の{向|む}こうに{公園|こうえん}があります。|Bên kia đường có công viên.|There's a park across the road.||向こう側 = phía bên kia; cũng chỉ "bên đó", nơi người kia đang ở.
+村|むら|n|làng|village|この{村|むら}には{店|みせ}が{一|ひと}つしかありません。|Làng này chỉ có một cửa hàng.|This village has only one shop.||
+郵便局|ゆうびんきょく|n|bưu điện|post office|{郵便局|ゆうびんきょく}で{切手|きって}を{買|か}います。|Tôi mua tem ở bưu điện.|I buy stamps at the post office.||郵便 bưu tiện (thư từ) + 局 cục: cục bưu chính, tức bưu điện.
+横|よこ|n|bên cạnh; chiều ngang|beside; side; width|ケンタはユキさんの{横|よこ}に{座|すわ}りました。|Kenta ngồi xuống bên cạnh Yuki.|Kenta sat down beside Yuki.|am=たて|横 là phía bên (trái hay phải đều được), cũng là chiều ngang, đối với たて.

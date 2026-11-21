@@ -1,0 +1,41 @@
+# Buổi 11: Thiên nhiên, thời tiết, động vật (北海道 Bắc Hải Đạo)
+@hv 秋=THU 暖=NOÃN 暑=THỬ 犬=KHUYỂN 風=PHONG 曇=ĐÀM 咲=TIẾU 寒=HÀN 涼=LƯƠNG
+@hv 鳴=MINH 猫=MIÊU 春=XUÂN 晴=TÌNH 吹=XUY 冬=ĐÔNG 降=GIÁNG 雪=TUYẾT
+秋|あき|n|mùa thu|autumn; fall|{秋|あき}は{涼|すず}しくて{好|す}きです。|Mùa thu mát mẻ nên tôi thích.|I like autumn because it's cool.|am=春|
+暖かい|あたたかい|adj-i|ấm áp|warm|{今日|きょう}は{暖|あたた}かいですね。|Hôm nay trời ấm nhỉ.|It's warm today, isn't it?|am=涼しい|暖 có bộ 日 (mặt trời): trời ấm; đồ vật, món ăn ấm thì viết 温かい.
+暑い|あつい|adj-i|nóng (thời tiết)|hot (weather)|{夏|なつ}の{東京|とうきょう}はとても{暑|あつ}いです。|Mùa hè Tokyo rất nóng.|Tokyo is very hot in summer.|am=寒い trung=熱い trung=厚い|暑 có 日 (mặt trời) trên đầu: nóng vì trời; đồ vật nóng là 熱い, dày là 厚い.
+雨|あめ|n|mưa|rain|{雨|あめ}ですから、{傘|かさ}を{持|も}っていきます。|Trời mưa nên tôi mang ô theo.|It's raining, so I'll take an umbrella.|trung=飴|Cùng âm với 飴 (kẹo): mưa nhấn âm đầu あ↘め, kẹo lên giọng あ↗め.
+池|いけ|n|cái ao|pond|{公園|こうえん}の{池|いけ}に{魚|さかな}がいます。|Trong ao ở công viên có cá.|There are fish in the park pond.||池 trì = ao, có bộ 氵 (nước) bên trái.
+犬|いぬ|n|con chó|dog|{佐藤|さとう}さんは{大|おお}きい{犬|いぬ}を{飼|か}っています。|Bà Sato nuôi một con chó to.|Mrs. Sato has a big dog.|am=猫|犬 = 大 thêm một chấm: con chó to có cái tai vểnh lên.
+海|うみ|n|biển|sea; beach|{夏休|なつやす}みに{家族|かぞく}と{海|うみ}へ{行|い}きました。|Kỳ nghỉ hè tôi đi biển với gia đình.|I went to the beach with my family in the summer vacation.|am=山|海 = 氵 (nước) + 毎 (mỗi): nơi mọi dòng nước đều đổ về.
+風|かぜ|n|gió|wind; breeze|{今日|きょう}は{風|かぜ}が{強|つよ}いです。|Hôm nay gió mạnh.|The wind is strong today.|trung=風邪|Gió 風 và cảm lạnh 風邪 đều đọc かぜ: gió "tà" (邪) thổi vào là bị cảm.
+火曜日|かようび|n|thứ Ba|Tuesday|{火曜日|かようび}に{日本語|にほんご}の{授業|じゅぎょう}があります。|Thứ Ba tôi có giờ học tiếng Nhật.|I have Japanese class on Tuesday.||火 hoả = lửa, sao Hoả: thứ Ba là "ngày sao Hoả" (tiếng Pháp mardi cũng vậy).
+川|かわ|n|sông|river|{子供|こども}たちが{川|かわ}で{遊|あそ}んでいます。|Bọn trẻ đang chơi ở sông.|The children are playing in the river.||Chữ 川 là ba dòng nước chảy song song.
+木|き|n|cây; gỗ|tree; wood|{庭|にわ}に{大|おお}きい{木|き}があります。|Trong vườn có một cái cây to.|There's a big tree in the garden.||Chữ 木 vẽ cái cây: cành ngang, rễ toả xuống; 木曜日 là thứ Năm.
+金曜日|きんようび|n|thứ Sáu|Friday|{金曜日|きんようび}の{夜|よる}はケンタとゲームをします。|Tối thứ Sáu tôi chơi trò chơi điện tử với Kenta.|On Friday nights I play video games with Kenta.||金 kim = vàng, sao Kim: thứ Sáu là "ngày sao Kim", sắp cuối tuần vui như được vàng!
+曇り|くもり|n|trời nhiều mây, âm u|cloudy weather|{今日|きょう}は{曇|くも}りです。|Hôm nay trời nhiều mây.|It's cloudy today.|am=晴れ|曇 = 日 + 雲 (mây): mặt trời bị mây che. くも cũng là "mây".
+曇る|くもる|v1|(trời) có mây, u ám; (kính) bị mờ|to become cloudy; to fog up|{空|そら}が{曇|くも}っています。|Trời đang u ám.|The sky is overcast.|am=晴れる|Kính bị mờ hơi nước cũng dùng 曇る: 眼鏡が曇る.
+月曜日|げつようび|n|thứ Hai|Monday|{月曜日|げつようび}の{朝|あさ}はいつも{眠|ねむ}いです。|Sáng thứ Hai lúc nào cũng buồn ngủ.|I'm always sleepy on Monday mornings.||月 nguyệt = mặt trăng: thứ Hai là "ngày mặt trăng", như Monday = Moon day.
+咲く|さく|v1|(hoa) nở|to bloom|{公園|こうえん}に{桜|さくら}が{咲|さ}いています。|Hoa anh đào đang nở ở công viên.|Cherry blossoms are blooming in the park.||Dễ nhớ: さく nằm sẵn trong さくら, loài hoa nở nổi tiếng nhất Nhật Bản.
+寒い|さむい|adj-i|lạnh (thời tiết)|cold (weather)|{北海道|ほっかいどう}の{冬|ふゆ}はとても{寒|さむ}いです。|Mùa đông ở Hokkaido rất lạnh.|Winter in Hokkaido is very cold.|am=暑い|Lạnh vì trời là 寒い; đồ vật lạnh như nước đá là 冷たい.
+水曜日|すいようび|n|thứ Tư|Wednesday|{水曜日|すいようび}は{会社|かいしゃ}が{早|はや}く{終|お}わります。|Thứ Tư công ty tan làm sớm.|Work finishes early on Wednesdays.||水 thuỷ = nước, sao Thuỷ: thứ Tư là "ngày sao Thuỷ" (mercredi = Mercury).
+涼しい|すずしい|adj-i|mát mẻ|cool; refreshing|{秋|あき}の{夜|よる}は{涼|すず}しいです。|Đêm mùa thu mát mẻ.|Autumn nights are cool.|am=暖かい|Mát dễ chịu là 涼しい; lạnh buốt là 寒い. Nghe như chuông gió すず leng keng mùa hè.
+空|そら|n|bầu trời|sky|{空|そら}に{鳥|とり}が{飛|と}んでいます。|Chim đang bay trên trời.|Birds are flying in the sky.||空 không: bầu trời "trống không"; cũng là chữ trong 空港 (sân bay).
+天気|てんき|n|thời tiết|weather|いい{天気|てんき}ですね。{散歩|さんぽ}しましょう。|Trời đẹp nhỉ. Đi dạo thôi.|Nice weather, isn't it? Let's take a walk.||天 thiên (trời) + 気 khí: "khí trời". いい天気 = trời đẹp.
+動物|どうぶつ|n|động vật|animal|{私|わたし}は{動物|どうぶつ}が{大好|だいす}きです。|Tôi rất thích động vật.|I love animals.|song|
+土曜日|どようび|n|thứ Bảy|Saturday|{土曜日|どようび}は{十時|じゅうじ}まで{寝|ね}ます。|Thứ Bảy tôi ngủ đến 10 giờ.|On Saturdays I sleep until ten.||土 thổ = đất, sao Thổ: thứ Bảy là "ngày sao Thổ", như Saturday = Saturn day.
+鳥|とり|n|con chim; thịt gà|bird; chicken|{朝|あさ}、{鳥|とり}が{鳴|な}いています。|Buổi sáng chim hót.|Birds are singing in the morning.||鳥 điểu: chim nói chung; ở quán ăn とり thường là thịt gà (焼き鳥).
+鳴く|なく|v1|(chim, thú) kêu, hót|to cry; to sing (animals)|{猫|ねこ}のタマが「ニャー」と{鳴|な}きました。|Bé Tama kêu "meo".|Tama meowed.||鳴 = 口 (miệng) + 鳥 (chim): chim mở miệng hót. Người khóc thì viết 泣く.
+夏|なつ|n|mùa hè|summer|{夏|なつ}はアイスクリームをたくさん{食|た}べます。|Mùa hè tôi ăn nhiều kem.|I eat a lot of ice cream in summer.|am=冬|
+日曜日|にちようび|n|Chủ nhật|Sunday|{日曜日|にちようび}は{何|なに}をしますか。|Chủ nhật bạn làm gì?|What do you do on Sundays?||日 nhật = mặt trời: Chủ nhật là "ngày mặt trời", như Sunday = Sun day.
+猫|ねこ|n|con mèo|cat|ユキさんの{猫|ねこ}はよく{寝|ね}ます。|Con mèo của chị Yuki ngủ suốt.|Yuki's cat sleeps a lot.|am=犬|ねこ nghe như 寝子 "đứa trẻ ngủ": mèo ngủ cả ngày!
+花|はな|n|hoa|flower|{佐藤|さとう}さんの{庭|にわ}には{花|はな}がたくさんあります。|Vườn nhà bà Sato có nhiều hoa.|Mrs. Sato's garden has lots of flowers.|trung=鼻|花 (hoa) và 鼻 (mũi) cùng đọc はな: đưa はな lại gần ngửi はな.
+春|はる|n|mùa xuân|spring|{春|はる}になりました。{暖|あたた}かいですね。|Xuân đến rồi. Ấm áp nhỉ.|Spring has come. It's warm, isn't it?|am=秋|
+晴れ|はれ|n|trời nắng, trời quang|sunny weather; clear skies|{明日|あした}は{晴|は}れです。|Ngày mai trời nắng.|It will be sunny tomorrow.|am=曇り|晴 = 日 (mặt trời) + 青 (xanh): trời xanh có nắng.
+晴れる|はれる|v2|(trời) nắng, quang đãng|to clear up; to be sunny|{今日|きょう}はよく{晴|は}れています。|Hôm nay trời nắng đẹp.|It's nice and sunny today.|am=曇る|
+吹く|ふく|v1|thổi (gió); thổi (kèn, sáo)|to blow|{強|つよ}い{風|かぜ}が{吹|ふ}いています。|Gió đang thổi mạnh.|A strong wind is blowing.|trung=服|吹 = 口 (miệng) + 欠 (há miệng): phồng má mà thổi.
+冬|ふゆ|n|mùa đông|winter|{冬|ふゆ}は{雪|ゆき}が{降|ふ}ります。|Mùa đông có tuyết rơi.|It snows in winter.|am=夏 na|ふゆ: "phù... phù" thổi vào tay cho ấm giữa mùa đông.
+降る|ふる|v1|(mưa, tuyết) rơi|to fall (rain, snow)|{朝|あさ}から{雨|あめ}が{降|ふ}っています。|Mưa từ sáng đến giờ.|It has been raining since morning.||Mưa rơi là 降る (雨が降る); xuống tàu xe là 降りる, cùng chữ 降.
+木曜日|もくようび|n|thứ Năm|Thursday|{木曜日|もくようび}に{図書館|としょかん}へ{行|い}きます。|Thứ Năm tôi đi thư viện.|I go to the library on Thursdays.||木 mộc = cây, sao Mộc: thứ Năm là "ngày sao Mộc" (jeudi = Jupiter).
+山|やま|n|núi|mountain|{富士山|ふじさん}は{日本|にほん}で{一番|いちばん}{高|たか}い{山|やま}です。|Núi Phú Sĩ là ngọn núi cao nhất Nhật Bản.|Mt. Fuji is the highest mountain in Japan.|am=海|
+雪|ゆき|n|tuyết|snow|{北海道|ほっかいどう}は{雪|ゆき}が{多|おお}いです。|Hokkaido có nhiều tuyết.|Hokkaido gets a lot of snow.||Trùng tên chị ユキ! 雪 có bộ 雨 trên đầu: thứ rơi từ trời như mưa.

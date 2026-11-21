@@ -1,0 +1,36 @@
+# Buổi 14: Động từ di chuyển, cho nhận (関東 Quan Đông)
+@hv 歩=BỘ 降=GIÁNG 返=PHẢN 帰=QUY 貸=THẢI 借=TÁ 散=TẢN 頼=LẠI 止=CHỈ 取=THỦ 無=VÔ 並=TỊNH 荷=HÀ 登=ĐĂNG 乗=THỪA 走=TẨU 曲=KHÚC 呼=HÔ 渡=ĐỘ
+会う|あう|v1|gặp|to meet; to see|{駅|えき}で{友|とも}だちに{会|あ}います。|Tôi gặp bạn ở nhà ga.|I meet a friend at the station.||Gặp ai dùng に: 友だちに会う. 会 = hội (hội ngộ).
+上げる|あげる|v2|nâng lên, giơ lên; cho, tặng|to raise; to give|{分|わ}かった{人|ひと}は{手|て}を{上|あ}げてください。|Ai hiểu rồi thì giơ tay lên.|If you understand, raise your hand.||Nghĩa "tặng" thường viết あげる: 花をあげる.
+歩く|あるく|v1|đi bộ|to walk|{毎日|まいにち}{駅|えき}まで{歩|ある}きます。|Ngày nào tôi cũng đi bộ đến ga.|I walk to the station every day.||歩 = bộ (đi bộ, bộ hành).
+行く|いく|v1|đi|to go|{来週|らいしゅう}{京都|きょうと}へ{行|い}きます。|Tuần sau tôi đi Kyoto.|I'm going to Kyoto next week.|am=来る|Nhóm 1 nhưng thể て đặc biệt: 行って, không phải 行いて.
+降りる|おりる|v2|xuống (xe, tàu)|to get off|{次|つぎ}の{駅|えき}で{電車|でんしゃ}を{降|お}ります。|Tôi xuống tàu ở ga tới.|I get off the train at the next station.|am=乗る|Xuống xe dùng を: バスを降りる; lên xe lại dùng に: バスに乗る.
+返す|かえす|v1|trả lại|to return (something)|{図書館|としょかん}に{本|ほん}を{返|かえ}します。|Tôi trả sách cho thư viện.|I return the book to the library.||返 = phản (phản hồi): đưa trở lại. Đừng nhầm với 帰る (về nhà).
+帰る|かえる|v1|về (nhà, nước)|to go home; to return|{田中|たなか}さんは{七時|しちじ}に{家|いえ}へ{帰|かえ}ります。|Ông Tanaka về nhà lúc 7 giờ.|Mr. Tanaka goes home at seven.||Nhóm 1 dù đuôi -eru: かえります. 帰 = quy (quy hương).
+貸す|かす|v1|cho mượn, cho vay|to lend|ケンタさん、ペンを{貸|か}してください。|Kenta ơi, cho tôi mượn cái bút.|Kenta, please lend me a pen.|am=借りる|貸 có 貝 (tiền) ở dưới: đưa tiền cho người khác dùng.
+借りる|かりる|v2|mượn, vay|to borrow|{佐藤|さとう}さんに{傘|かさ}を{借|か}りました。|Tôi mượn ô của bà Sato.|I borrowed an umbrella from Mrs. Sato.|am=貸す|借 = tá (tá túc): ở nhờ, mượn tạm. Mượn của ai dùng に hoặc から.
+来る|くる|v3|đến|to come|{明日|あした}、{友|とも}だちが{家|うち}に{来|き}ます。|Ngày mai bạn tôi đến nhà chơi.|A friend is coming to my house tomorrow.|am=行く|Bất quy tắc: くる, きます, こない, きて. 来 = lai (tương lai).
+散歩|さんぽ|n|đi dạo, tản bộ (散歩する)|walk; stroll|{夕方|ゆうがた}、{公園|こうえん}を{散歩|さんぽ}します。|Chiều tối tôi đi dạo trong công viên.|In the evening I take a walk in the park.|song|
+出す|だす|v1|lấy ra; nộp; gửi|to take out; to hand in; to send|{郵便局|ゆうびんきょく}で{手紙|てがみ}を{出|だ}しました。|Tôi đã gửi thư ở bưu điện.|I sent a letter at the post office.|am=入れる|Tha động từ của 出る: lấy đồ ra, nộp bài, gửi thư đều là 出す.
+頼む|たのむ|v1|nhờ; gọi (món)|to ask (a favor); to order|ユキさんはケンタに{仕事|しごと}を{頼|たの}みました。|Yuki nhờ Kenta làm giúp việc.|Yuki asked Kenta to help with some work.|gia na|Tanomu như "ta nhờ mụ". 頼 = LẠI là "ỷ lại", không phải "lại" (nữa).
+着く|つく|v1|đến nơi|to arrive|{電車|でんしゃ}は{十時|じゅうじ}に{東京|とうきょう}に{着|つ}きます。|Tàu đến Tokyo lúc 10 giờ.|The train arrives in Tokyo at ten.||Đến nơi nào dùng に: 駅に着く. Chữ 着 còn là "mặc" trong 着る.
+出かける|でかける|v2|ra ngoài, đi đâu đó|to go out|{日曜日|にちようび}は{家族|かぞく}と{出|で}かけます。|Chủ nhật tôi đi chơi với gia đình.|On Sundays I go out with my family.||
+出る|でる|v2|ra, rời khỏi; xuất hiện|to go out; to leave; to appear|{毎朝|まいあさ}{八時|はちじ}に{家|いえ}を{出|で}ます。|Sáng nào tôi cũng ra khỏi nhà lúc 8 giờ.|I leave home at eight every morning.|am=入る|Rời khỏi đâu dùng を: 家を出る. 出 = xuất (xuất phát).
+飛ぶ|とぶ|v1|bay; nhảy|to fly; to jump|{空|そら}を{鳥|とり}が{飛|と}んでいます。|Chim đang bay trên trời.|Birds are flying in the sky.||飛 = phi (phi cơ, phi hành).
+止まる|とまる|v1|(tự) dừng lại|to stop (intransitive)|バスが{駅|えき}の{前|まえ}に{止|と}まりました。|Xe buýt dừng trước ga.|The bus stopped in front of the station.||止 = chỉ (đình chỉ). Tự động từ: xe tự dừng (が止まる).
+取る|とる|v1|lấy, cầm; đạt được|to take; to get|すみません、その{塩|しお}を{取|と}ってください。|Xin lỗi, lấy giúp tôi lọ muối.|Excuse me, could you pass the salt?|trung=撮る|取 = tai (耳) + tay (又): tay nắm lấy. Nhờ đưa đồ: 取ってください.
+無くす|なくす|v1|làm mất, đánh mất|to lose (something)|ユキさんはまた{鍵|かぎ}を{無|な}くしました。|Yuki lại làm mất chìa khoá.|Yuki lost her key again.||無 = vô (hư vô): làm cho thành không có. Thường viết なくす.
+並ぶ|ならぶ|v1|(tự) xếp hàng, đứng thành hàng|to line up; to stand in a row|{店|みせ}の{前|まえ}に{人|ひと}が{並|なら}んでいます。|Người ta đang xếp hàng trước cửa hàng.|People are lined up in front of the shop.||Tự động từ (が並ぶ); xếp cái gì thành hàng là 並べる.
+並べる|ならべる|v2|xếp (cái gì) thành hàng, bày ra|to line up; to arrange (things)|テーブルにお{皿|さら}を{並|なら}べます。|Tôi bày đĩa ra bàn.|I set out the plates on the table.||Tha động từ (を並べる). 並 = tịnh: hai người đứng sóng vai.
+荷物|にもつ|n|hành lý, đồ đạc|luggage; baggage|{荷物|にもつ}が{重|おも}いですね。{持|も}ちましょうか。|Hành lý nặng nhỉ. Để tôi xách giúp nhé.|Your luggage is heavy. Shall I carry it?||荷 = hà (gánh) + 物 = vật: đồ phải gánh mang theo.
+登る|のぼる|v1|leo, trèo|to climb|{夏|なつ}に{富士山|ふじさん}に{登|のぼ}りたいです。|Mùa hè tôi muốn leo núi Phú Sĩ.|I want to climb Mount Fuji in summer.||登 = đăng (đăng cao): bước lên cao. Leo núi dùng に: 山に登る.
+乗る|のる|v1|lên (xe), đi (xe)|to ride; to get on|{毎朝|まいあさ}{七時|しちじ}のバスに{乗|の}ります。|Sáng nào tôi cũng đi chuyến xe buýt 7 giờ.|I take the seven o'clock bus every morning.|am=降りる|Lên xe dùng に: 電車に乗る. 乗 = thừa (thừa xa: cưỡi xe).
+入る|はいる|v1|vào|to enter; to go in|{猫|ねこ}のタマが{箱|はこ}に{入|はい}りました。|Mèo Tama chui vào hộp.|Tama the cat got into the box.|am=出る|Nhóm 1 dù đuôi -iru: はいります. Tắm bồn cũng dùng: お風呂に入る.
+走る|はしる|v1|chạy|to run|{遅|おく}れますから、{走|はし}りましょう。|Sắp muộn rồi, chạy thôi!|We'll be late, so let's run.||Nhóm 1 dù đuôi -iru: はしります. 走 = tẩu (tẩu thoát): chạy đi.
+曲る|まがる|v1|rẽ; cong|to turn; to bend|{次|つぎ}の{角|かど}を{右|みぎ}に{曲|ま}がってください。|Hãy rẽ phải ở góc tiếp theo.|Please turn right at the next corner.||Thường viết 曲がる. Rẽ ở đâu dùng を: 角を曲がる.
+見せる|みせる|v2|cho xem|to show|{写真|しゃしん}を{見|み}せてください。|Cho tôi xem ảnh với.|Please show me the photo.||見る (xem) → 見せる (cho người khác xem).
+持つ|もつ|v1|cầm, mang; có|to hold; to carry; to have|{傘|かさ}を{持|も}っていますか。|Bạn có mang ô không?|Do you have an umbrella with you?||Mang theo, sở hữu: 持っています. 持 = trì (cầm giữ, duy trì).
+呼ぶ|よぶ|v1|gọi; mời|to call; to invite|タクシーを{呼|よ}びましょう。|Gọi tắc xi đi.|Let's call a taxi.||呼 = hô (hô hoán): gọi to. Mời đến tiệc cũng là 呼ぶ.
+旅行|りょこう|n|du lịch, chuyến đi|travel; trip|{夏休|なつやす}みに{沖縄|おきなわ}へ{旅行|りょこう}します。|Kỳ nghỉ hè tôi đi du lịch Okinawa.|I'm traveling to Okinawa during summer vacation.|song|
+渡す|わたす|v1|đưa, trao (cho ai)|to hand over|この{手紙|てがみ}を{田中|たなか}さんに{渡|わた}してください。|Hãy đưa lá thư này cho ông Tanaka.|Please give this letter to Mr. Tanaka.||Tha động từ: trao tay (を渡す); 渡る là tự mình đi qua.
+渡る|わたる|v1|băng qua, sang (đường, cầu)|to cross; to go across|{橋|はし}を{渡|わた}って{駅|えき}へ{行|い}きます。|Tôi qua cầu để đến ga.|I cross the bridge to get to the station.||渡 = độ (độ thuyền: chở qua sông). Qua đường dùng を: 道を渡る.

@@ -1,0 +1,52 @@
+# Buổi 02: Số đếm, đơn vị đếm (九州 Cửu Châu)
+@hv 回=HỒI 階=GIAI 個=CÁ 歳=TUẾ 冊=SÁCH 台=ĐÀI 度=ĐỘ 杯=BÔI 番=PHIÊN 号=HIỆU 匹=THẤT 枚=MAI 零=LINH
+いくつ|いくつ|n|bao nhiêu (cái); mấy tuổi|how many; how old|りんごはいくつありますか。|Có mấy quả táo?|How many apples are there?||Hỏi tuổi lịch sự thì thêm お: おいくつですか.
+一|いち|num|số một|one|{一|いち}から{十|じゅう}まで{数|かぞ}えましょう。|Hãy đếm từ một đến mười.|Let's count from one to ten.||
+五つ|いつつ|num|năm cái|five (things)|{卵|たまご}を{五|いつ}つください。|Cho tôi năm quả trứng.|Five eggs, please.||
+～回|～かい|ctr|～ lần|~ times|{一日|いちにち}に{三回|さんかい}{歯|は}を{磨|みが}きます。|Tôi đánh răng ba lần một ngày.|I brush my teeth three times a day.|trung=～階|
+～階|～かい|ctr|tầng ～|~th floor|{本屋|ほんや}は{三階|さんがい}です。|Hiệu sách ở tầng ba.|The bookstore is on the third floor.|trung=～回|階 = giai (bậc thang). Chú ý: 三階 đọc là さんがい.
+九|きゅう|num|số chín|nine|{弟|おとうと}は{九歳|きゅうさい}です。|Em trai tôi chín tuổi.|My younger brother is nine.||Thường đọc きゅう; riêng 9 giờ (九時) và tháng 9 (九月) đọc く.
+キロ|キロ|n|ký, ki-lô (kg); cây số (km)|kilo (kilogram; kilometer)|タマは{五|ご}キロもあります。|Mèo Tama nặng tới năm ký.|Tama weighs a whole five kilos.||Nói tắt của キログラム (ký) hoặc キロメートル (cây số), tuỳ ngữ cảnh.
+キロメートル|キロメートル|n|ki-lô-mét, cây số|kilometer|{駅|えき}まで{二|に}キロメートルです。|Đến ga là hai cây số.|It's two kilometers to the station.||
+九|く|num|chín (cách đọc く)|nine (reading く)|{毎朝|まいあさ}{九時|くじ}に{会社|かいしゃ}へ{行|い}きます。|Sáng nào tôi cũng đến công ty lúc 9 giờ.|I go to the office at nine every morning.||Đọc く chủ yếu trong 九時 (9 giờ) và 九月 (tháng 9).
+グラム|グラム|n|gam|gram|{肉|にく}を{三百|さんびゃく}グラムください。|Cho tôi 300 gam thịt.|300 grams of meat, please.||
+～個|～こ|ctr|～ cái, ～ quả (vật nhỏ)|counter for small objects|りんごを{三個|さんこ}{買|か}いました。|Tôi đã mua ba quả táo.|I bought three apples.||
+五|ご|num|số năm|five|{五時|ごじ}に{帰|かえ}ります。|Tôi về lúc 5 giờ.|I'll go home at five.|trung=～語|
+九つ|ここのつ|num|chín cái; chín tuổi|nine (things); nine years old|{箱|はこ}にみかんが{九|ここの}つあります。|Trong hộp có chín quả quýt.|There are nine mandarins in the box.||ここ (chỗ này) + の + つ: "chỗ này có chín cái".
+～歳|～さい|ctr|～ tuổi|~ years old|ユキさんは{二十五歳|にじゅうごさい}です。|Yuki 25 tuổi.|Yuki is 25 years old.||Riêng 20 tuổi có cách đọc đặc biệt: 二十歳 はたち.
+～冊|～さつ|ctr|～ cuốn, ～ quyển|counter for books|{本|ほん}を{二冊|にさつ}{借|か}りました。|Tôi đã mượn hai cuốn sách.|I borrowed two books.||
+三|さん|num|số ba|three|{猫|ねこ}が{三匹|さんびき}います。|Có ba con mèo.|There are three cats.|trung=～さん|
+四|し|num|số bốn (cách đọc し)|four (reading し)|{四月|しがつ}に{日本|にほん}へ{行|い}きます。|Tháng 4 tôi sẽ đi Nhật.|I'm going to Japan in April.||し đồng âm với 死 (chết) nên hay đọc よん; し chủ yếu trong 四月.
+七|しち|num|số bảy (cách đọc しち)|seven (reading しち)|{七時|しちじ}に{起|お}きます。|Tôi dậy lúc 7 giờ.|I get up at seven.||しち dễ nghe nhầm với いち nên hay đọc なな; しち dùng trong 七時, 七月.
+十|じゅう|num|số mười|ten|{十時|じゅうじ}に{寝|ね}ます。|Tôi đi ngủ lúc 10 giờ.|I go to bed at ten.|trung=～中|
+～ずつ|～ずつ|suf|mỗi ～, từng ～ một|~ each; ~ at a time|{一人|ひとり}{二|ふた}つずつ{取|と}ってください。|Mỗi người lấy hai cái nhé.|Please take two each.||Đứng sau số lượng: 少しずつ = từng chút một.
+ゼロ|ゼロ|n|số không|zero|{電話番号|でんわばんごう}はゼロから{始|はじ}まります。|Số điện thoại bắt đầu bằng số 0.|The phone number starts with zero.||
+千|せん|num|một nghìn|thousand|このパンは{千円|せんえん}です。|Cái bánh mì này giá một nghìn yên.|This bread is 1,000 yen.||Biến âm: 3000 さんぜん, 8000 はっせん.
+～台|～だい|ctr|～ chiếc (xe, máy)|counter for vehicles and machines|{駐車場|ちゅうしゃじょう}に{車|くるま}が{五台|ごだい}あります。|Bãi đỗ có năm chiếc ô tô.|There are five cars in the parking lot.||
+～度|～ど|ctr|～ độ; ～ lần|~ degrees; ~ times|{今日|きょう}は{三十度|さんじゅうど}です。|Hôm nay 30 độ.|It's 30 degrees today.|song|Vừa là "độ" (nhiệt độ) vừa là "lần": もう一度 = thêm một lần nữa.
+十|とお|num|mười cái; mười tuổi|ten (things); ten years old|みかんを{十|とお}{買|か}いました。|Tôi đã mua mười quả quýt.|I bought ten mandarins.||Đếm kiểu ひとつ, ふたつ... đến 10 là とお, không có つ.
+七つ|ななつ|num|bảy cái|seven (things)|{虹|にじ}の{色|いろ}は{七|なな}つです。|Cầu vồng có bảy màu.|A rainbow has seven colors.||
+二|に|num|số hai|two|{二時|にじ}に{会|あ}いましょう。|Gặp nhau lúc 2 giờ nhé.|Let's meet at two.||
+～人|～にん|ctr|～ người|counter for people|{家族|かぞく}は{四人|よにん}です。|Gia đình tôi có bốn người.|There are four people in my family.||Riêng 1 người là ひとり, 2 người là ふたり, 4 người là よにん.
+～杯|～はい|ctr|～ cốc, ～ bát|~ cups; ~ bowls (counter)|コーヒーを{二杯|にはい}{飲|の}みました。|Tôi đã uống hai cốc cà phê.|I drank two cups of coffee.|trung=はい|Biến âm: 一杯 いっぱい, 三杯 さんばい.
+二十歳|はたち|n|hai mươi tuổi|twenty years old|ケンタの{妹|いもうと}は{二十歳|はたち}です。|Em gái Kenta 20 tuổi.|Kenta's younger sister is twenty.||Đọc đặc biệt はたち, không phải にじゅっさい; 20 là tuổi trưởng thành ở Nhật.
+八|はち|num|số tám|eight|{八時|はちじ}に{朝|あさ}ご{飯|はん}を{食|た}べます。|Tôi ăn sáng lúc 8 giờ.|I eat breakfast at eight.||
+～番|～ばん|suf|số ～; thứ ～|number ~; ~th (in order)|ケンタはクラスで{一番|いちばん}{背|せ}が{高|たか}いです。|Kenta cao nhất lớp.|Kenta is the tallest in his class.|trung=晩|一番 = "số một", tức là "nhất".
+番号|ばんごう|n|số (điện thoại, phòng...)|number (phone, room, etc.)|{電話番号|でんわばんごう}を{教|おし}えてください。|Cho tôi xin số điện thoại.|Please tell me your phone number.||Số hiệu để gọi tên (số điện thoại, số phòng) là 番号.
+半分|はんぶん|n|một nửa|half|ケーキを{半分|はんぶん}ください。|Cho tôi một nửa cái bánh.|Half the cake, please.||
+～匹|～ひき|ctr|～ con (động vật nhỏ)|counter for small animals|{家|いえ}に{猫|ねこ}が{一匹|いっぴき}います。|Nhà tôi có một con mèo.|There is one cat at my house.||Biến âm: いっぴき, さんびき, ろっぴき.
+一つ|ひとつ|num|một cái|one (thing)|りんごを{一|ひと}つください。|Cho tôi một quả táo.|One apple, please.||Đếm kiểu Nhật: ひ-ふ-み-よ-いつ-む-なな-や-ここの-とお.
+一人|ひとり|n|một người; một mình|one person; alone|{佐藤|さとう}さんは{一人|ひとり}で{住|す}んでいます。|Bà Sato sống một mình.|Mrs. Sato lives alone.||Không đọc いちにん. 一人で = một mình.
+百|ひゃく|num|một trăm|hundred|このペンは{百円|ひゃくえん}です。|Cây bút này 100 yên.|This pen is 100 yen.||Biến âm: 300 さんびゃく, 600 ろっぴゃく, 800 はっぴゃく.
+二つ|ふたつ|num|hai cái|two (things)|{卵|たまご}を{二|ふた}つ{使|つか}います。|Dùng hai quả trứng.|It uses two eggs.||
+二人|ふたり|n|hai người|two people|{二人|ふたり}で{映画|えいが}を{見|み}ました。|Hai người đã cùng xem phim.|The two of us watched a movie.||Không đọc ににん; từ 3 người trở đi mới là số + にん.
+～本|～ほん|ctr|～ cây, ～ chai (vật dài)|counter for long thin objects|{鉛筆|えんぴつ}を{三本|さんぼん}{買|か}いました。|Tôi đã mua ba cây bút chì.|I bought three pencils.|trung=本|Biến âm: いっぽん, さんぼん, ろっぽん.
+～枚|～まい|ctr|～ tờ, ～ tấm (vật mỏng)|counter for flat objects|{切手|きって}を{二枚|にまい}ください。|Cho tôi hai con tem.|Two stamps, please.||
+万|まん|num|mười nghìn, một vạn|ten thousand|このかばんは{一万円|いちまんえん}です。|Cái túi này 10.000 yên.|This bag is 10,000 yen.|song|Tiếng Nhật đếm theo vạn: 100.000 là 十万 (mười vạn).
+三つ|みっつ|num|ba cái|three (things)|{箱|はこ}が{三|みっ}つあります。|Có ba cái hộp.|There are three boxes.||
+六つ|むっつ|num|sáu cái|six (things)|コップが{六|むっ}つあります。|Có sáu cái cốc.|There are six glasses.||
+メートル|メートル|n|mét|meter|このプールは{二十五|にじゅうご}メートルです。|Bể bơi này dài 25 mét.|This pool is 25 meters long.||
+八つ|やっつ|num|tám cái|eight (things)|タマはおやつを{八|やっ}つ{食|た}べました。|Mèo Tama đã ăn tám miếng bánh.|Tama ate eight treats.||おやつ (đồ ăn xế) vốn là "giờ thứ tám" (八つ) theo cách tính giờ xưa.
+四つ|よっつ|num|bốn cái|four (things)|{椅子|いす}が{四|よっ}つあります。|Có bốn cái ghế.|There are four chairs.||
+零|れい|num|số không (trang trọng)|zero (formal)|{今朝|けさ}は{零度|れいど}でした。|Sáng nay 0 độ.|It was zero degrees this morning.|song|零 = linh, như "một trăm linh năm": linh là số không.
+六|ろく|num|số sáu|six|{六月|ろくがつ}は{雨|あめ}が{多|おお}いです。|Tháng sáu mưa nhiều.|It rains a lot in June.||
