@@ -312,7 +312,7 @@ Hai điện mới: **民 Thần dân** và **疆 Bờ cõi**. Ký hiệu độ h
 | ID | Tên | Điều kiện | Độ hiếm |
 |---|---|---|---|
 | V1–V5 | Chiêu hiền đãi sĩ I–V | Tiếp kiến 10 / 100 / 300 / 500 / toàn bộ từ N5 | 🟤 🟤 ⚪ 🟡 🟡 Danh hiệu "Minh quân" ở V5 |
-| V6–V8 | Trung thần I–III | 50 / 200 / toàn bộ từ N5 lên Trung thần | ⚪ 🟡 💎 |
+| V6–V8 | Trung thần điện I–III | 50 / 200 / toàn bộ từ N5 lên Trung thần | ⚪ 🟡 💎 |
 | V9–V11 | Lâm triều I–III | Tổng 100 / 1.000 / 5.000 câu Triều kiến đúng | 🟤 ⚪ 🟡 |
 | V12 | Thiên la địa võng | Dọn sạch Bảng truy nã khi bảng từng có ít nhất 10 từ | ⚪ |
 | V13 | Vạch mặt kẻ giả mạo | Mọi từ "Kẻ giả mạo" đạt Binh sĩ | ⚪ |

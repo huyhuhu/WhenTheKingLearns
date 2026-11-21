@@ -218,7 +218,7 @@
     { id: 'tim', rank: 8, bg: '#6b3fa0', fg: '#fffdf8', name: ['Tím hoàng bào', 'Royal purple'] },
     { id: 'den', rank: 9, bg: '#1b1b1f', fg: '#e6c35c', name: ['Mực đen viền vàng', 'Ink and gold'] }
   ];
-  var CAP = { flip: 100, right: 300, quiz: 100, perfect: 150, listen: 30 };
+  var CAP = { flip: 100, right: 300, quiz: 100, perfect: 150, listen: 30, vright: 200 };
 
   function questXp() {
     var k = S(), xp = 0, d, i;
@@ -238,6 +238,8 @@
     var k = S(), xp = 0, id, d;
     for (id in k.dev) for (d in k.dev[id].xp) xp += k.dev[id].xp[d];
     xp += 10 * size(k.seen.kn) + 2 * size(k.seen.view) + 100 * size(k.seen.perf);
+    var vs = vocabStats();
+    xp += 5 * vs.learned + 5 * vs.burned;
     return xp + achXp() + questXp();
   }
   function rankOf(xp) {
@@ -301,6 +303,21 @@
     return out;
   }
   function normReading(r) { return window.Speech ? window.Speech.norm(r) : r; }
+  function vocabWords() { var v = window.VOCAB_DATA && window.VOCAB_DATA.n5; return v ? v.words : []; }
+  function vocabRecs() { var v = App.progress().vocab; return v && v.w ? v.w : {}; }
+  // Bac 5 la Binh si, bac 9 la Trung than dien (khop voi js/vocab.js)
+  function vocabStats() {
+    var W = vocabWords(), R = vocabRecs(), out = { total: W.length, learned: 0, burned: 0, gia: 0, giaOk: 0, suOk: 0, daijoubu: 0 };
+    for (var i = 0; i < W.length; i++) {
+      var w = W[i], r = R[w[0] + '|' + w[1]], st = r ? r[0] : 0, tags = ' ' + w[9] + ' ';
+      if (r) out.learned++;
+      if (st >= 9) out.burned++;
+      if (tags.indexOf(' gia ') >= 0) { out.gia++; if (st >= 5) out.giaOk++; }
+      if (st >= 5 && tags.indexOf(' su ') >= 0) out.suOk++;
+      if (w[0] === '大丈夫') out.daijoubu = st;
+    }
+    return out;
+  }
 
   // ---------- ngu canh danh gia ----------
   function context() {
@@ -342,6 +359,7 @@
     ctx.weekRun = wbest;
     ctx.unlockedCount = size(k.unlocked);
     ctx.remainingKanji = allKanji().length - ctx.known;
+    ctx.v = vocabStats();
     return ctx;
   }
 
@@ -351,7 +369,7 @@
     ['闘', 'Đấu trường', 'Arena'], ['札', 'Thư khố', 'Archive'], ['筆', 'Thư pháp', 'Calligraphy'],
     ['音', 'Âm luật', 'Sound'], ['律', 'Kỷ luật', 'Discipline'], ['時', 'Thời khắc', 'Moments'],
     ['交', 'Ngoại giao', 'Diplomacy'], ['宮', 'Cung điện', 'Palace'], ['令', 'Chiếu chỉ', 'Decrees'],
-    ['秘', 'Bí mật', 'Secrets']
+    ['民', 'Thần dân', 'Subjects'], ['秘', 'Bí mật', 'Secrets']
   ];
   var ACH = [];
   var ACH_BY_ID = {};
@@ -505,17 +523,35 @@
     function (n) { return ['Hoàn thành đủ 3 Nghị sự trong ' + n + ' tuần', 'Complete all 3 council tasks in ' + n + ' weeks']; }, function (x) { return x.fullWeeks; });
   def('L10', 11, null, 2, ['Tứ quý thái bình', 'Four Seasons of Peace'], ['Hoàn thành đủ 3 Nghị sự 4 tuần liên tiếp', 'Complete all 3 council tasks 4 weeks in a row'], function (x) { return x.weekRun; }, 4);
 
-  def('H1', 12, null, 1, ['Ấn tín nhà vua', "The King's Seal"], ['Bấm logo 10 lần trong 5 giây', 'Tap the logo 10 times in 5 seconds'], fl('H1'), 1, ['Con dấu có điều muốn nói', 'The seal has something to say']);
-  def('H2', 12, null, 0, ['Nhà vua do dự', 'The Indecisive King'], ['Đổi sáng/tối 10 lần trong 1 phút', 'Switch light/dark 10 times in a minute'], fl('H2'), 1, ['Ngày hay đêm?', 'Day or night?']);
-  def('H3', 12, null, 0, ['Lòng vua khó đoán', 'Fickle Heart'], ['Bật tắt "Đã thuộc" cùng một chữ 5 lần', 'Toggle "Learned" on the same kanji 5 times'], fl('H3'), 1, ['Thuộc hay chưa thuộc?', 'Learned or not?']);
-  def('H4', 12, null, 0, ['Ngư phủ', 'The Fisherman'], ['Nghe âm うお 10 lần', 'Hear うお 10 times'], cnt('uo'), 10, ['Có tiếng cá dưới sông', 'Something splashes in the river']);
-  def('H5', 12, null, 0, ['Vẹt hoàng gia', 'Royal Parrot'], ['Nghe cùng một âm 20 lần liên tiếp', 'Play the same sound 20 times in a row'], fl('H5'), 1, ['Nói lại đi, nói lại đi', 'Say it again, say it again']);
-  def('H6', 12, null, 2, ['Thất bại là mẹ thành công', 'Fall Seven, Rise Eight'], ['Sai từ 10 câu trong một bài, rồi làm lại buổi đó đạt 100%', 'Miss 10+ in a quiz, then score 100% on that session'], fl('H6'), 1, ['Ngã ở đâu, đứng dậy ở đó', 'Rise where you fell']);
-  def('H7', 12, null, 2, ['Vua không ngủ', 'The Sleepless King'], ['Học cả khung 0:00–3:00 và 4:00–6:00 của cùng một đêm', 'Study at 0:00–3:00 and 4:00–6:00 of the same night'], fl('H7'), 1, ['Mặt trời đã lặn rồi mọc', 'The sun set and rose again']);
-  def('H8', 12, null, 3, ['Vạn thế chi vương', 'King for Ten Thousand Ages'], ['Mở khoá mọi thành tựu khác', 'Unlock every other achievement'],
+  function vTotal() { return vocabWords().length; }
+  tier('V', 1, 12, 'V', [0, 0, 1, 2, 2], [10, 100, 300, 500, vTotal], ['Chiêu hiền đãi sĩ', 'Welcoming the Worthy'],
+    function (n) { return typeof n === 'number' ? ['Tiếp kiến ' + n + ' thần dân', 'Meet ' + n + ' subjects'] : ['Tiếp kiến mọi thần dân N5', 'Meet every N5 subject']; },
+    function (x) { return x.v.learned; });
+  ACH_BY_ID.V5.name = ['Minh quân', 'The Enlightened King'];
+  tier('V', 6, 12, 'VB', [1, 2, 3], [50, 200, vTotal], ['Trung thần điện', 'Hall of Loyalty'],
+    function (n) { return typeof n === 'number' ? [n + ' thần dân vào Trung thần điện', n + ' subjects enter the Hall of Loyalty'] : ['Mọi thần dân N5 vào Trung thần điện', 'Every N5 subject enters the Hall of Loyalty']; },
+    function (x) { return x.v.burned; });
+  tier('V', 9, 12, 'VR', [0, 1, 2], [100, 1000, 5000], ['Lâm triều', 'Holding Court'],
+    function (n) { return ['Tổng ' + n + ' câu Triều kiến đúng', n + ' correct audience answers']; }, cnt('vright'));
+  def('V13', 12, null, 1, ['Vạch mặt kẻ giả mạo', 'Unmasking the Impostors'], ['Mọi từ "Kẻ giả mạo" đạt bậc Binh sĩ', 'Every "False friend" word reaches Soldier'],
+    function (x) { return x.v.giaOk; }, function () { return vocabStats().gia; });
+  def('V14', 12, null, 1, ['Cửa ngõ Dejima', 'Gateway of Dejima'], ['50 từ katakana đạt bậc Binh sĩ', '50 katakana words reach Soldier'], function (x) { return x.v.suOk; }, 50);
+  def('V16', 12, null, 2, ['Ngự bút như bay', 'Flying Brush'], ['30 câu gõ cách đọc đúng liên tiếp', '30 typed readings right in a row'], function (x) { return x.k.best.vchain || 0; }, 30);
+  def('V17', 12, null, 1, ['Tai rồng', 'Dragon Ears'], ['Tổng 200 câu dạng Nghe đúng', '200 correct listening answers'], cnt('vlisten'), 200);
+  def('V19', 12, null, 0, ['Đại trượng phu', 'A True Gentleman'], ['Từ 大丈夫 đạt bậc Binh sĩ', 'The word 大丈夫 reaches Soldier'],
+    function (x) { return x.v.daijoubu >= 5 ? 1 : 0; }, 1, ['Không sao, không sao', "It's fine, it's fine"]);
+
+  def('H1', 13, null, 1, ['Ấn tín nhà vua', "The King's Seal"], ['Bấm logo 10 lần trong 5 giây', 'Tap the logo 10 times in 5 seconds'], fl('H1'), 1, ['Con dấu có điều muốn nói', 'The seal has something to say']);
+  def('H2', 13, null, 0, ['Nhà vua do dự', 'The Indecisive King'], ['Đổi sáng/tối 10 lần trong 1 phút', 'Switch light/dark 10 times in a minute'], fl('H2'), 1, ['Ngày hay đêm?', 'Day or night?']);
+  def('H3', 13, null, 0, ['Lòng vua khó đoán', 'Fickle Heart'], ['Bật tắt "Đã thuộc" cùng một chữ 5 lần', 'Toggle "Learned" on the same kanji 5 times'], fl('H3'), 1, ['Thuộc hay chưa thuộc?', 'Learned or not?']);
+  def('H4', 13, null, 0, ['Ngư phủ', 'The Fisherman'], ['Nghe âm うお 10 lần', 'Hear うお 10 times'], cnt('uo'), 10, ['Có tiếng cá dưới sông', 'Something splashes in the river']);
+  def('H5', 13, null, 0, ['Vẹt hoàng gia', 'Royal Parrot'], ['Nghe cùng một âm 20 lần liên tiếp', 'Play the same sound 20 times in a row'], fl('H5'), 1, ['Nói lại đi, nói lại đi', 'Say it again, say it again']);
+  def('H6', 13, null, 2, ['Thất bại là mẹ thành công', 'Fall Seven, Rise Eight'], ['Sai từ 10 câu trong một bài, rồi làm lại buổi đó đạt 100%', 'Miss 10+ in a quiz, then score 100% on that session'], fl('H6'), 1, ['Ngã ở đâu, đứng dậy ở đó', 'Rise where you fell']);
+  def('H7', 13, null, 2, ['Vua không ngủ', 'The Sleepless King'], ['Học cả khung 0:00–3:00 và 4:00–6:00 của cùng một đêm', 'Study at 0:00–3:00 and 4:00–6:00 of the same night'], fl('H7'), 1, ['Mặt trời đã lặn rồi mọc', 'The sun set and rose again']);
+  def('H8', 13, null, 3, ['Vạn thế chi vương', 'King for Ten Thousand Ages'], ['Mở khoá mọi thành tựu khác', 'Unlock every other achievement'],
     function (x) { var n = 0; for (var id in x.k.unlocked) if (id !== 'H8' && ACH_BY_ID[id]) n++; return n; }, function () { return ACH.length - 1; }, ['Khi mọi ấn tín đã đóng', 'When every seal is stamped']);
 
-  var HIDDEN = { T1: 1, T2: 1, T4: 1, T5: 1, H1: 1, H2: 1, H3: 1, H4: 1, H5: 1, H6: 1, H7: 1, H8: 1 };
+  var HIDDEN = { V19: 1, T1: 1, T2: 1, T4: 1, T5: 1, H1: 1, H2: 1, H3: 1, H4: 1, H5: 1, H6: 1, H7: 1, H8: 1 };
 
   // ---------- Chieu chi va Nghi su ----------
   var QUESTS = [
@@ -538,7 +574,10 @@
     ['QH4', 2, 'total', 'Đạt 120 Uy vọng trong ngày (không tính thưởng nhiệm vụ)', 'Earn 120 Prestige today (excluding task rewards)', 120, function (d) { return d.xpd || 0; }],
     ['QH5', 2, 'quiz', 'Phục thù: vượt điểm cũ ở buổi có điểm trắc nghiệm thấp nhất', 'Revenge: beat your score in your weakest session', 1, function (d) { return d.beat || 0; },
       function () { return size(App.progress().quiz) > 0; }],
-    ['QH6', 2, 'quiz', 'Một bài trắc nghiệm đạt từ 90% trong dưới 2 phút', 'Score 90%+ on a quiz in under 2 minutes', 1, function (d) { return d.fast || 0; }]
+    ['QH6', 2, 'quiz', 'Một bài trắc nghiệm đạt từ 90% trong dưới 2 phút', 'Score 90%+ on a quiz in under 2 minutes', 1, function (d) { return d.fast || 0; }],
+    ['QE7', 0, 'word', 'Trả lời đúng 20 câu Triều kiến', 'Answer 20 audience questions correctly', 20, function (d) { return d.vright || 0; }, function (x) { return x.v.learned >= 5; }],
+    ['QM7', 1, 'word', 'Tiếp kiến 5 thần dân mới', 'Meet 5 new subjects', 5, function (d) { return d.vnew || 0; }, function (x) { return x.v.total - x.v.learned >= 5; }],
+    ['QH7', 2, 'word', 'Gõ đúng cách đọc 30 câu', 'Type 30 readings correctly', 30, function (d) { return d.vread || 0; }, function (x) { return x.v.learned >= 30; }]
   ];
   var WEEKLY = [
     ['W1', 'quest', 'Hoàn thành đủ 3 Chiếu chỉ trong 5 ngày', 'Complete all 3 decrees on 5 days', 5, function (w) { return w.fullDays; }],
@@ -553,7 +592,8 @@
     ['W9', 'total', 'Đạt 800 Uy vọng trong tuần (không tính thưởng nhiệm vụ)', 'Earn 800 Prestige this week (excluding task rewards)', 800, function (w) { return w.d.xpd || 0; }],
     ['W10', 'quiz', 'Tổng ôn: làm trắc nghiệm ở mọi buổi đang có', 'Grand review: take a quiz in every session', function () { return allSessions().length; }, function (w) { return size(w.d.qs); }],
     ['W11', 'ach', 'Mở khoá 3 thành tựu mới', 'Unlock 3 new achievements', 3, function (w) { return w.ach; }, function (x) { return ACH.length - x.unlockedCount >= 10; }],
-    ['W12', 'quiz', 'Chuỗi 30 câu trắc nghiệm đúng liên tiếp', '30 correct quiz answers in a row', 30, function (w) { return w.d.mxChain || 0; }]
+    ['W12', 'quiz', 'Chuỗi 30 câu trắc nghiệm đúng liên tiếp', '30 correct quiz answers in a row', 30, function (w) { return w.d.mxChain || 0; }],
+    ['W15', 'word', 'Trả lời đúng 300 câu Triều kiến', 'Answer 300 audience questions correctly', 300, function (w) { return w.d.vright || 0; }, function (x) { return x.v.learned >= 60; }]
   ];
   var QUEST_BY_ID = {};
   QUESTS.forEach(function (q) { QUEST_BY_ID[q[0]] = { id: q[0], tier: q[1], type: q[2], text: [q[3], q[4]], goal: q[5], prog: q[6], ok: q[7], xp: [15, 30, 50][q[1]] }; });
@@ -922,6 +962,28 @@
         lastSound = lastSound.key === e.key ? { key: e.key, n: lastSound.n + 1 } : { key: e.key, n: 1 };
         if (lastSound.n >= 20) flag('H5');
         break;
+      case 'word:learn':
+        learn(); dayInc('vnew'); dayXp(5);
+        break;
+      case 'word:view':
+        learn();
+        break;
+      case 'word:answer':
+        learn();
+        if (e.retry) break;
+        if (e.ok && e.mode === 'review') { inc('vright'); dayInc('vright'); addXp('vright', 2); }
+        if (e.ok && e.type === 'listen') inc('vlisten');
+        if (e.type === 'read') {
+          if (e.ok) {
+            dayInc('vread');
+            dev.run.vchain = (dev.run.vchain || 0) + 1;
+            k.best.vchain = Math.max(k.best.vchain || 0, dev.run.vchain);
+          } else dev.run.vchain = 0;
+        }
+        break;
+      case 'word:rank':
+        if (e.to >= 9) dayXp(5);
+        break;
       case 'vocab:reveal':
         learn(); inc('reveal'); dayInc('reveal');
         break;
@@ -1059,7 +1121,8 @@
     }
     var stats = [
       [ctx.known, T('chữ đã thuộc', 'kanji learned')], [ctx.streak, T('ngày liên tiếp', 'day streak')], [ctx.days.length, T('ngày đã học', 'study days')],
-      [ctx.c.right || 0, T('câu đúng', 'correct answers')], [ctx.c.flip || 0, T('thẻ đã chấm', 'cards graded')], [ctx.c.listen || 0, T('lượt nghe', 'listens')]
+      [ctx.c.right || 0, T('câu đúng', 'correct answers')], [ctx.c.flip || 0, T('thẻ đã chấm', 'cards graded')], [ctx.c.listen || 0, T('lượt nghe', 'listens')],
+      [ctx.v.learned, T('thần dân', 'subjects')], [ctx.v.burned, T('trung thần', 'loyal subjects')], [ctx.c.vright || 0, T('câu Triều kiến đúng', 'audience answers')]
     ], st = '';
     for (i = 0; i < stats.length; i++) st += '<div class="kstat"><b>' + fmt(stats[i][0]) + '</b><small>' + stats[i][1] + '</small></div>';
 

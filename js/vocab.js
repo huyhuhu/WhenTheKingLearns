@@ -496,7 +496,7 @@
     var q = activeQuiz(), item = q.qs[q.i], k = wkey(item.w);
     if (!ok) q.failed[k] = 1;
     q.total++; if (ok) q.right++;
-    App.emit('word:answer', { key: k, ok: ok, type: item.type, mode: curMode });
+    App.emit('word:answer', { key: k, ok: ok, type: item.type, mode: curMode, retry: !!item.retry });
     if (!ok) q.qs.push({ w: item.w, type: item.type, opts: item.opts ? shuffle(item.opts) : null, retry: true });
     App.render();
     var nx = document.getElementById('vNext');
