@@ -590,12 +590,14 @@ body.pod-full { overflow: hidden; }
   position: relative; overflow: hidden; border-radius: 10px;
   --paper: #efe4cb; --sea: #e2e6dc; --wave: rgba(70, 105, 120, 0.28); --ink: #3b3127; --soft: rgba(59, 49, 39, 0.35);
   --land: #efe5cf; --wild: #d9cfba; --other: #e3dac7; --water: #c9d7d6; --river: #6f93a0; --halo: #f4ebd6;
+  --label: #1f1710; --label-halo: rgba(250, 244, 228, 0.95);
   background: var(--paper) url(../data/map-paper.webp);
   box-shadow: inset 0 0 40px rgba(110, 80, 40, 0.35), inset 0 0 0 1px rgba(110, 80, 40, 0.25);
 }
 [data-theme="dark"] .vmap-box {
   --paper: #23211d; --sea: #1f2628; --wave: rgba(150, 190, 200, 0.16); --ink: #d9c58f; --soft: rgba(217, 197, 143, 0.35);
   --land: #3b362e; --wild: #2b2924; --other: #2e2c27; --water: #24343a; --river: #6f93a0; --halo: #23211d;
+  --label: #fff1c9; --label-halo: rgba(14, 13, 11, 0.92);
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(217, 197, 143, 0.2);
 }
 .vmap { display: block; width: 100%; height: auto; cursor: grab; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
@@ -619,9 +621,9 @@ body.pod-full { overflow: hidden; }
 .vmap .vinset, .vmap .vother, .vmap .vlake, .vmap .vriver, .vmap .vpref, .vmap .vborder, .vmap .vcoast, .vmap .vsel, .vmap .vpeace { vector-effect: non-scaling-stroke; }
 .vmap text { font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", "Noto Serif CJK JP", serif; text-anchor: middle; paint-order: stroke; stroke: var(--halo); stroke-linejoin: round; }
 .vmap .vlab { cursor: pointer; }
-.vmap .vk { fill: var(--ink); font-weight: 700; stroke-width: 9; }
+.vmap .vk { fill: var(--label); stroke: var(--label-halo); font-weight: 800; stroke-width: 14; }
 .vmap .vlab.on .vk { fill: var(--accent); }
-.vmap .vn { fill: var(--ink); font-size: 28px; font-family: inherit; stroke-width: 7; opacity: 0; transition: opacity 0.2s; }
+.vmap .vn { fill: var(--label); stroke: var(--label-halo); font-size: 30px; font-weight: 700; font-family: inherit; stroke-width: 10; opacity: 0; transition: opacity 0.2s; }
 .vmap.z2 .vn, .vmap .vlab.on .vn { opacity: 1; }
 .vmap .vmark rect { fill: var(--accent); stroke: var(--halo); stroke-width: 3; }
 .vmap .vmark.st-peace rect { fill: #b8860b; }
