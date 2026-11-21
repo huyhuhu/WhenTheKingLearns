@@ -144,8 +144,9 @@ Ba dạng câu, trộn ngẫu nhiên và trộn các buổi:
 ### 5.4 Bảng truy nã
 
 - Từ sai từ 4 lần trở lên bị dán lên **Bảng truy nã**, hình tấm lệnh truy nã có chữ và phẩm hàm.
-- Đúng 3 lần liên tiếp thì **bắt được**: gỡ khỏi bảng.
-- Khi dán lên bảng, từ được gắn mẹo "âm na ná" nếu chưa có (mục 3.2).
+- Đúng 3 lần liên tiếp thì **bắt được**: gỡ khỏi bảng. Mỗi từ mỗi ngày chỉ tính tối đa một lần đúng, nên cần 3 ngày; sai thì đếm lại từ đầu.
+- Lần đúng được tính từ Triều kiến hoặc từ nút **Truy bắt** trên bảng: một lượt hỏi riêng các từ bị truy nã chưa được tính hôm nay, không đổi lịch ôn.
+- Tấm lệnh truy nã hiện mẹo nhớ sẵn có của từ (nếu có). Mẹo "âm na ná" không tự sinh được nên chưa gắn thêm.
 
 ### 5.5 Trò chơi nhỏ
 
@@ -153,7 +154,7 @@ Ba dạng câu, trộn ngẫu nhiên và trộn các buổi:
 |---|---|---|
 | **Sứ thần phương Tây** | Đọc từ katakana, chọn từ tiếng Anh gốc; hoặc ngược lại | Đã tiếp kiến 10 từ buổi 12 |
 | **Quốc khố** | Chọn đơn vị đếm đúng cho đồ vật (つ, 人, 本, 枚, 匹, 台, 冊) và cách đọc biến âm (いっぽん, さんぼん) | Đã tiếp kiến buổi 2 |
-| **Ngự yến** | Lật 12 thẻ ghép từ với nghĩa, tính giờ | Đã tiếp kiến 12 từ |
+| **Ngự yến** | 12 thẻ ngửa (6 từ, 6 nghĩa), chạm từ rồi chạm nghĩa để ghép, tính giờ. Thẻ ngửa để "không ghép sai" (V18) là nhờ nhớ từ, không phải may | Đã tiếp kiến 12 từ |
 
 **Biên niên sử** (đoạn truyện chỉ dùng từ đã thuộc) để lại sau, chưa nằm trong bản này.
 
@@ -373,7 +374,7 @@ Thêm khóa `vocab` vào đối tượng `progress` đang đồng bộ qua Fireb
 vocab: {
   w: { "<mã từ>": [bậc, hạn ôn, số lần sai, chuỗi đúng, lần ôn cuối] },
   daily: 10,                      // hạn mức từ mới, kèm thời điểm chọn
-  wanted: [...],                  // Bảng truy nã
+  wanted: { "<mã từ>": [lúc dán, số lần đúng, ngày đúng cuối, lúc bắt được] },
   wave: { d, t, k: [...] },       // đợt Vong quân hiện tại: ngày, lúc đến, mã từ
   truce: [hết hạn, lúc đặt],      // hưu chiến
   annex: { "3": thời điểm }       // vùng đã sáp nhập, giữ mãi

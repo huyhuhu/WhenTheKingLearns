@@ -223,7 +223,7 @@
     { id: 'tim', rank: 8, bg: '#6b3fa0', fg: '#fffdf8', name: ['Tím hoàng bào', 'Royal purple'] },
     { id: 'den', rank: 9, bg: '#1b1b1f', fg: '#e6c35c', name: ['Mực đen viền vàng', 'Ink and gold'] }
   ];
-  var CAP = { flip: 100, right: 300, quiz: 100, perfect: 150, listen: 30, vright: 200 };
+  var CAP = { flip: 100, right: 300, quiz: 100, perfect: 150, listen: 30, vright: 200, game: 50 };
 
   function questXp() {
     var k = S(), xp = 0, d, i;
@@ -328,7 +328,7 @@
     out.annex = (App.progress().vocab || {}).annex || {};
     out.annexN = size(out.annex);
     out.regions = sess.length;
-    out.held = 0; out.war = 0; out.heldAt = []; out.first = [];
+    out.held = 0; out.war = 0; out.heldAt = []; out.first = []; out.got = [];
     for (i = 0; i < sess.length; i++) {
       var got = 0, last = 0, first = 0;
       for (j = 0; j < sess[i].length; j++) {
@@ -340,8 +340,16 @@
       }
       out.heldAt.push(got === sess[i].length ? last : 0);
       out.first.push(first);
+      out.got.push(got);
       if (got === sess[i].length) out.held++; else if (got) out.war++;
     }
+    var wb = (App.progress().vocab || {}).wanted || {};
+    out.wanted = 0; out.prodigal = 0;
+    for (var k in wb) {
+      if (!wb[k][3]) out.wanted++;
+      if (R[k] && R[k][0] >= 8) out.prodigal = 1;
+    }
+    out.gameOpen = out.learned >= 12 || (out.got[11] || 0) >= 10;
     return out;
   }
 
@@ -567,6 +575,11 @@
   def('V17', 12, null, 1, ['Tai rồng', 'Dragon Ears'], ['Tổng 200 câu dạng Nghe đúng', '200 correct listening answers'], cnt('vlisten'), 200);
   def('V19', 12, null, 0, ['Đại trượng phu', 'A True Gentleman'], ['Từ 大丈夫 đạt bậc Binh sĩ', 'The word 大丈夫 reaches Soldier'],
     function (x) { return x.v.daijoubu >= 5 ? 1 : 0; }, 1, ['Không sao, không sao', "It's fine, it's fine"]);
+  def('V12', 12, null, 1, ['Thiên la địa võng', 'No Escape'], ['Dọn sạch Bảng truy nã sau khi bảng từng có ít nhất 10 thần dân', 'Clear the wanted board after it held 10 or more'], fl('V12'), 1);
+  def('V15', 12, null, 0, ['Quan coi kho', 'Keeper of the Treasury'], ['Một lượt Quốc khố đúng hết', 'A perfect Royal Treasury round'], fl('V15'), 1);
+  def('V18', 12, null, 1, ['Yến tiệc hoàn hảo', 'A Flawless Banquet'], ['Một lượt Ngự yến không ghép sai, dưới 60 giây', 'A Royal Banquet with no misses in under 60 seconds'], fl('V18'), 1);
+  def('V20', 12, null, 2, ['Lãng tử hồi đầu', 'The Prodigal Returns'], ['Một thần dân từng bị truy nã lên bậc Trung thần', 'A once-wanted subject becomes a Loyal Minister'],
+    function (x) { return x.v.prodigal; }, 1, ['Lạc lối rồi quay về', 'Lost, then found']);
 
   def('H1', 14, null, 1, ['Ấn tín nhà vua', "The King's Seal"], ['Bấm logo 10 lần trong 5 giây', 'Tap the logo 10 times in 5 seconds'], fl('H1'), 1, ['Con dấu có điều muốn nói', 'The seal has something to say']);
   def('H2', 14, null, 0, ['Nhà vua do dự', 'The Indecisive King'], ['Đổi sáng/tối 10 lần trong 1 phút', 'Switch light/dark 10 times in a minute'], fl('H2'), 1, ['Ngày hay đêm?', 'Day or night?']);
@@ -597,7 +610,7 @@
   def('B16', 13, null, 1, ['Theo chân Bashō', "In Bashō's Footsteps"], ['Sáp nhập Đông Bắc trong 30 ngày kể từ khi đặt chân tới', 'Annex Tōhoku within 30 days of first setting foot there'],
     function (x) { var a = x.v.annex[13], f = x.v.first[12]; return a && f && a - f <= 30 * 864e5 ? 1 : 0; }, 1, ['Ngàn dặm đường thơ', 'A thousand miles of poetry']);
 
-  var HIDDEN = { V19: 1, B15: 1, B16: 1, T1: 1, T2: 1, T4: 1, T5: 1, H1: 1, H2: 1, H3: 1, H4: 1, H5: 1, H6: 1, H7: 1, H8: 1 };
+  var HIDDEN = { V19: 1, V20: 1, B15: 1, B16: 1, T1: 1, T2: 1, T4: 1, T5: 1, H1: 1, H2: 1, H3: 1, H4: 1, H5: 1, H6: 1, H7: 1, H8: 1 };
 
   // ---------- Chieu chi va Nghi su ----------
   var QUESTS = [
@@ -625,7 +638,9 @@
     ['QM7', 1, 'word', 'Tiếp kiến 5 thần dân mới', 'Meet 5 new subjects', 5, function (d) { return d.vnew || 0; }, function (x) { return x.v.total - x.v.learned >= 5; }],
     ['QH7', 2, 'word', 'Gõ đúng cách đọc 30 câu', 'Type 30 readings correctly', 30, function (d) { return d.vread || 0; }, function (x) { return x.v.learned >= 30; }],
     ['QM8', 1, 'word', 'Giải vây hôm nay: đẩy lui một đợt Vong quân', "Lift today's siege: repel an Oblivion wave", 1, function (d) { return d.repel || 0; },
-      function (x) { return x.mapOpen && x.v.due > 0; }]
+      function (x) { return x.mapOpen && x.v.due > 0; }],
+    ['QE8', 0, 'game', 'Chơi 1 lượt trò chơi nhỏ', 'Play 1 mini game round', 1, function (d) { return d.game || 0; }, function (x) { return x.v.gameOpen; }],
+    ['QH8', 2, 'word', 'Bắt 3 tội phạm trên Bảng truy nã', 'Catch 3 subjects on the wanted board', 3, function (d) { return d.caught || 0; }, function (x) { return x.v.wanted >= 3; }]
   ];
   var WEEKLY = [
     ['W1', 'quest', 'Hoàn thành đủ 3 Chiếu chỉ trong 5 ngày', 'Complete all 3 decrees on 5 days', 5, function (w) { return w.fullDays; }],
@@ -1042,7 +1057,7 @@
       case 'word:answer':
         learn();
         if (e.retry) break;
-        if (e.ok && e.mode === 'review') { inc('vright'); dayInc('vright'); dayInc('vdmg'); addXp('vright', 2); }
+        if (e.ok && e.mode === 'review') { inc('vright'); dayInc('vright'); dayInc('vdmg', e.spy ? 2 : 1); addXp('vright', 2); }
         if (e.ok && e.type === 'listen') inc('vlisten');
         if (e.type === 'read') {
           if (e.ok) {
@@ -1073,6 +1088,18 @@
         queue.push({ kind: 'bonus', glyph: annex ? '城' : '営', r: annex ? 2 : 1, label: T('Bờ cõi', 'Frontier'),
           title: (annex ? T('Sáp nhập ', 'Annexed ') : T('Chiếm đóng ', 'Occupied ')) + e.name, xp: annex ? 100 : 50 });
         if (e.all) { dayXp(500); queue.push({ kind: 'bonus', glyph: '統', r: 3, label: T('Quốc thế', 'Realm'), title: T('Thiên hạ thống nhất', 'All under heaven united'), xp: 500 }); }
+        break;
+      case 'word:wanted':
+        if (e.size >= 10) flag('V12b');
+        break;
+      case 'word:caught':
+        dayInc('caught');
+        if (!e.size && k.flags.V12b) flag('V12');
+        break;
+      case 'game:end':
+        learn(); inc('game'); dayInc('game'); addXp('game', 5);
+        if (e.g === 'treasury' && e.total && e.right === e.total) flag('V15');
+        if (e.g === 'feast' && !e.miss && e.ms < 60000) flag('V18');
         break;
       case 'map:calm':
         seenSet('calm')[today()] = 1;

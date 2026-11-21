@@ -48,6 +48,10 @@ def collect():
     for path in glob.glob(os.path.join(root, "data", "vocab-*.js")):
         for w in load(path)["words"]:
             keys.add(norm(w[1].replace("～", "")))
+    # Cach doc so dem 1-10 cua tro choi Quoc kho nam trong bang COUNTERS
+    with open(os.path.join(root, "js", "vocab.js"), encoding="utf-8") as f:
+        for row in re.findall(r"\[((?:'[ぁ-ん]+', ){9}'[ぁ-ん]+')\]", f.read()):
+            keys.update(re.findall(r"[ぁ-ん]+", row))
     keys.discard("")
     return sorted(keys)
 

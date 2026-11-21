@@ -79,7 +79,30 @@
   };
   var MAP_RANK = 3, WAVE = 20, TRUCE_WAVE = 10;
 
-  var learn = null, review = null, curMode = '', mapSel = 0, calmDay = 0, byKey = null;
+  var GAMES = [
+    ['envoy', '使', ['Sứ thần phương Tây', 'Envoys from the West'], ['Đọc từ katakana, chọn từ tiếng Anh gốc, hoặc ngược lại', 'Read a katakana word and pick its English source, or the reverse']],
+    ['treasury', '庫', ['Quốc khố', 'Royal Treasury'], ['Chọn đơn vị đếm và cách đọc đúng cho đồ vật', 'Pick the right counter and reading for each item']],
+    ['feast', '宴', ['Ngự yến', 'Royal Banquet'], ['Ghép 6 cặp từ với nghĩa, tính giờ', 'Match 6 words with their meanings against the clock']]
+  ];
+  // [goi y VI, goi y EN, cach doc 1-10, cac duoi de tao dap an nhieu]
+  var COUNTERS = {
+    '本': ['vật dài', 'long things', ['いっぽん', 'にほん', 'さんぼん', 'よんほん', 'ごほん', 'ろっぽん', 'ななほん', 'はっぽん', 'きゅうほん', 'じゅっぽん'], ['ほん', 'ぼん', 'ぽん']],
+    '枚': ['vật mỏng, phẳng', 'flat things', ['いちまい', 'にまい', 'さんまい', 'よんまい', 'ごまい', 'ろくまい', 'ななまい', 'はちまい', 'きゅうまい', 'じゅうまい'], ['まい']],
+    '匹': ['con vật nhỏ', 'small animals', ['いっぴき', 'にひき', 'さんびき', 'よんひき', 'ごひき', 'ろっぴき', 'ななひき', 'はっぴき', 'きゅうひき', 'じゅっぴき'], ['ひき', 'びき', 'ぴき']],
+    '台': ['máy móc, xe cộ', 'machines, vehicles', ['いちだい', 'にだい', 'さんだい', 'よんだい', 'ごだい', 'ろくだい', 'ななだい', 'はちだい', 'きゅうだい', 'じゅうだい'], ['だい']],
+    '冊': ['sách, vở', 'books', ['いっさつ', 'にさつ', 'さんさつ', 'よんさつ', 'ごさつ', 'ろくさつ', 'ななさつ', 'はっさつ', 'きゅうさつ', 'じゅっさつ'], ['さつ', 'ざつ']],
+    '人': ['người', 'people', ['ひとり', 'ふたり', 'さんにん', 'よにん', 'ごにん', 'ろくにん', 'ななにん', 'はちにん', 'きゅうにん', 'じゅうにん'], ['にん']],
+    'つ': ['đồ vật nói chung', 'things in general', ['ひとつ', 'ふたつ', 'みっつ', 'よっつ', 'いつつ', 'むっつ', 'ななつ', 'やっつ', 'ここのつ', 'とお'], ['つ']]
+  };
+  var COUNT_OBJ = [['鉛筆', '本'], ['傘', '本'], ['木', '本'], ['万年筆', '本'], ['ボールペン', '本'], ['ネクタイ', '本'],
+    ['紙', '枚'], ['切手', '枚'], ['写真', '枚'], ['シャツ', '枚'], ['葉書', '枚'], ['切符', '枚'],
+    ['犬', '匹'], ['猫', '匹'], ['魚', '匹'], ['車', '台'], ['自転車', '台'], ['テレビ', '台'], ['自動車', '台'],
+    ['本', '冊'], ['辞書', '冊'], ['ノート', '冊'], ['雑誌', '冊'], ['学生', '人'], ['先生', '人'], ['子供', '人'], ['友達', '人'],
+    ['卵', 'つ'], ['箱', 'つ'], ['コップ', 'つ']];
+  var NUM_K = '一二三四五六七八九十', NUM_R = ['いち', 'に', 'さん', 'よん', 'ご', 'ろく', 'なな', 'はち', 'きゅう', 'じゅう'],
+    NUM_G = ['いっ', 'に', 'さん', 'よん', 'ご', 'ろっ', 'なな', 'はっ', 'きゅう', 'じゅっ'];
+
+  var learn = null, review = null, hunt = null, game = null, curMode = '', mapSel = 0, calmDay = 0, byKey = null;
 
   // ---------- du lieu ----------
   function D() { return DATA.n5; }
@@ -135,6 +158,25 @@
   }
   function lastActive() { var m = 0, all = V().w; for (var k in all) if (all[k][4] > m) m = all[k][4]; return m; }
   function truceOn() { var t = V().truce; return !!t && Date.now() < t[0]; }
+
+  // ---------- Bang truy na: [luc dan len, so lan dung, ngay dung cuoi, luc bat duoc] ----------
+  function board() { var v = V(); if (!v.wanted) v.wanted = {}; return v.wanted; }
+  function isWanted(k) { var e = board()[k]; return !!e && !e[3]; }
+  function wantedList() { var out = [], b = board(); for (var k in b) if (!b[k][3] && wordOf(k)) out.push(wordOf(k)); return out; }
+  function post(k, silent) {
+    if (isWanted(k)) return;
+    board()[k] = [Date.now(), 0, 0, 0];
+    if (!silent) App.emit('word:wanted', { key: k, size: wantedList().length });
+  }
+  // Moi tu moi ngay chi tinh mot lan dung de khong bat duoc bang cach hoc don
+  function chase(k, ok) {
+    var e = board()[k], today = dayStart();
+    if (!e || e[3]) return;
+    if (!ok) { e[1] = 0; return; }
+    if (e[2] === today) return;
+    e[1]++; e[2] = today;
+    if (e[1] >= 3) { e[3] = Date.now(); App.emit('word:caught', { key: k, size: wantedList().length }); }
+  }
 
   // ---------- Vong quan ----------
   function waveLeft(w) {
@@ -205,6 +247,7 @@
     r[4] = now;
     App.emit('word:review', { key: k, ok: ok });
     if (r[0] !== before) App.emit('word:rank', { key: k, from: before, to: r[0] });
+    if (!ok && r[2] >= 4) post(k);
   }
   function enlist(w) {
     var now = Date.now();
@@ -228,6 +271,15 @@
     for (k in a.annex || {}) { an[k] = a.annex[k]; has = true; }
     for (k in b.annex || {}) { an[k] = an[k] ? Math.min(an[k], b.annex[k]) : b.annex[k]; has = true; }
     if (has) out.annex = an;
+    var wa = a.wanted || {}, wb = b.wanted || {}, wo = {};
+    has = false;
+    for (k in wa) { wo[k] = wa[k]; has = true; }
+    for (k in wb) {
+      var x = wo[k], y = wb[k];
+      if (!x || y[0] > x[0] || (y[0] === x[0] && (y[3] > x[3] || (!y[3] && !x[3] && y[1] > x[1])))) wo[k] = y;
+      has = true;
+    }
+    if (has) out.wanted = wo;
     return out;
   });
 
@@ -424,11 +476,196 @@
       window.VocabMap.svg(list, { sel: mapSel }) + ctl + '</div>' + info + '</div>';
   }
 
+  function extraCards() {
+    var nw = wantedList().length, open = 0;
+    for (var i = 0; i < GAMES.length; i++) if (!gameLock(GAMES[i][0])) open++;
+    return '<div class="rows vextra">' +
+      '<a class="card mode" href="' + link('wanted') + '">' + jp('捕', 'glyph') + '<span class="body"><b>' + T('Bảng truy nã', 'Wanted board') + '</b><small>' +
+      (nw ? T(nw + ' thần dân hay quên đang bị truy nã', nw + ' forgetful subjects are wanted') : T('Chưa ai bị truy nã', 'No one is wanted')) + '</small></span><i>→</i></a>' +
+      '<a class="card mode" href="' + link('games') + '">' + jp('遊', 'glyph') + '<span class="body"><b>' + T('Trò chơi nhỏ', 'Mini games') + '</b><small>' +
+      open + '/' + GAMES.length + T(' trò đã mở', ' games open') + '</small></span><i>→</i></a></div>';
+  }
+
+  // ---------- bang truy na ----------
+  function hitMarks(n) { var s = ''; for (var i = 0; i < 3; i++) s += '<i class="' + (i < n ? 'on' : '') + '">★</i>'; return '<span class="vp-hits">' + s + '</span>'; }
+  function huntable() {
+    var today = dayStart(), b = board(), all = wantedList(), out = [];
+    for (var i = 0; i < all.length; i++) if (b[wkey(all[i])][2] !== today) out.push(all[i]);
+    return out;
+  }
+  function viewBoard() {
+    var list = wantedList(), b = board(), cards = '', caught = 0, k;
+    for (k in b) if (b[k][3]) caught++;
+    list.sort(function (x, y) { return rec(y)[2] - rec(x)[2]; });
+    for (var i = 0; i < list.length; i++) {
+      var w = list[i], e = b[wkey(w)];
+      cards += '<a class="card vposter" href="' + wlink(w) + '"><span class="vp-head">' + jp('手配') + '</span><span class="vp-word' + (w[0].length > 4 ? ' long' : '') + '">' + jp(w[0]) + '</span>' +
+        (w[0] !== w[1] ? '<span class="vp-read">' + jp(w[1]) + '</span>' : '') + '<span class="vp-mean">' + h(mean(w)) + '</span>' +
+        '<span class="vp-meta">' + T('Sai ', 'Missed ') + rec(w)[2] + T(' lần · ', ' times · ') + hitMarks(e[1]) + '</span>' +
+        (w[10] && !App.isEn() ? '<span class="vp-tip">' + h(w[10]) + '</span>' : '') + '</a>';
+    }
+    var can = huntable().length;
+    return '<div class="hero">' + jp('手配', 'eyebrow') + '<h1>' + T('Bảng truy nã', 'Wanted board') + '</h1><p class="sub">' +
+      T('Thần dân sai từ 4 lần bị dán lên đây. Đúng 3 ngày liền thì bắt được.', 'Subjects missed 4 times are posted here. Get them right on 3 days in a row to catch them.') + '</p></div>' +
+      (list.length ? '<div class="row"><a class="btn primary' + (can ? '' : ' off') + '" href="' + link('wanted/hunt') + '">' + T('Truy bắt', 'Hunt them') + ' (' + can + ')</a></div>' +
+        (can ? '' : '<p class="note center">' + T('Hôm nay đã truy bắt hết, mai đuổi tiếp.', 'You have chased everyone today. More tomorrow.') + '</p>') +
+        '<p class="note center">' + T('Trong Triều kiến, kẻ bị truy nã là gián điệp của Vong quân: trả lời đúng gây gấp đôi sát thương lên Vong tướng.', 'In audiences, wanted subjects are Oblivion spies: a right answer hits the general twice as hard.') + '</p>' +
+        '<div class="grid vposters">' + cards + '</div>'
+        : '<div class="card narrow center"><p>' + T('Bảng đang trống. Thần dân nào sai từ 4 lần sẽ bị dán lên đây.', 'The board is empty. Anyone you miss 4 times will be posted here.') + '</p></div>') +
+      (caught ? '<p class="note center">' + T('Đã bắt được ' + caught + ' kẻ.', caught + ' caught so far.') + '</p>' : '');
+  }
+  function startHunt() {
+    var list = shuffle(huntable()).slice(0, 10);
+    hunt = { list: list, quiz: list.length ? makeQuestions(list) : null, result: null };
+  }
+  function viewHunt() {
+    if (!hunt) startHunt();
+    var head = '<div class="hero slim"><p class="eyebrow">' + T('Truy bắt', 'Manhunt') + '</p></div>', back = '<div class="row"><a class="btn" href="' + link('wanted') + '">' + T('Về Bảng truy nã', 'Back to the board') + '</a></div>';
+    if (!hunt.quiz) return head + '<div class="card narrow center"><p>' + (wantedList().length ? T('Hôm nay đã truy bắt hết, mai đuổi tiếp.', 'You have chased everyone today. More tomorrow.') : T('Bảng truy nã đang trống.', 'The wanted board is empty.')) + '</p></div>' + back;
+    if (hunt.result) {
+      var rows = '', got = 0;
+      for (var i = 0; i < hunt.result.length; i++) {
+        var x = hunt.result[i], e = board()[wkey(x.w)];
+        if (e[3]) got++;
+        rows += '<a class="vres-row ' + (x.ok ? 'good' : 'bad') + '" href="' + wlink(x.w) + '">' + jp(x.w[0]) + '<span>' + h(mean(x.w)) + '</span>' +
+          (e[3] ? '<span class="vcaught">' + jp('捕') + ' ' + T('Bắt được!', 'Caught!') + '</span>' : hitMarks(e[1])) + '</a>';
+      }
+      return head + '<div class="hero"><h1>' + (got ? T('Bắt được ' + got + ' kẻ!', got + ' caught!') : T('Đã truy đuổi', 'The chase is on')) + '</h1><p class="sub">' +
+        T('Mỗi kẻ cần đúng 3 ngày liền. Sai thì đếm lại từ đầu.', 'Each needs 3 right days in a row. A miss starts the count again.') + '</p></div>' +
+        '<div class="card narrow vres-list">' + rows + '</div>' + back;
+    }
+    return head + viewQuestion(hunt.quiz);
+  }
+
+  // ---------- tro choi nho ----------
+  function gameDef(id) { for (var i = 0; i < GAMES.length; i++) if (GAMES[i][0] === id) return GAMES[i]; return null; }
+  function isSu(w) { return (' ' + w[9] + ' ').indexOf(' su ') >= 0; }
+  function gameLock(id) {
+    var n;
+    if (id === 'envoy') { n = countLearned(D().sessions[11]); return n >= 10 ? '' : T('Tiếp kiến 10 thần dân ở Trường Kỳ (' + n + '/10)', 'Meet 10 subjects in Nagasaki (' + n + '/10)'); }
+    if (id === 'treasury') { var s = D().sessions[1]; n = countLearned(s); return n === s.length ? '' : T('Tiếp kiến hết thần dân Cửu Châu (' + n + '/' + s.length + ')', 'Meet everyone in Kyūshū (' + n + '/' + s.length + ')'); }
+    n = Object.keys(V().w).length;
+    return n >= 12 ? '' : T('Tiếp kiến 12 thần dân (' + n + '/12)', 'Meet 12 subjects (' + n + '/12)');
+  }
+  function viewGames() {
+    var cards = '';
+    for (var i = 0; i < GAMES.length; i++) {
+      var g = GAMES[i], lock = gameLock(g[0]);
+      cards += lock ? '<span class="card mode off">' + jp(g[1], 'glyph') + '<span class="body"><b>' + h(App.L(g[2])) + '</b><small>' + h(App.L(g[3])) + '</small><small>🔒 ' + h(lock) + '</small></span></span>'
+        : '<a class="card mode" href="' + link('games/' + g[0]) + '">' + jp(g[1], 'glyph') + '<span class="body"><b>' + h(App.L(g[2])) + '</b><small>' + h(App.L(g[3])) + '</small></span><i>→</i></a>';
+    }
+    return '<div class="hero">' + jp('遊', 'eyebrow') + '<h1>' + T('Trò chơi nhỏ', 'Mini games') + '</h1><p class="sub">' +
+      T('Mỗi lượt +5 Uy vọng, tối đa 10 lượt mỗi ngày. Không ảnh hưởng lịch ôn.', '+5 Prestige per round, up to 10 rounds a day. Your review schedule is not affected.') + '</p></div><div class="rows narrow">' + cards + '</div>';
+  }
+  function gloss(w) { return w[5].split(';')[0].replace(/\s*\([^)]*\)/g, '').trim(); }
+  function startEnvoy() {
+    var su = D().words.filter(isSu), pool = su.filter(function (w) { return !!rec(w); });
+    var qs = shuffle(pool).slice(0, 10).map(function (w) {
+      var opts = [w], used = {}, others = shuffle(su), k2e = Math.random() < 0.5;
+      used[gloss(w)] = 1;
+      for (var i = 0; i < others.length && opts.length < 4; i++) {
+        if (used[gloss(others[i])]) continue;
+        used[gloss(others[i])] = 1; opts.push(others[i]);
+      }
+      opts = shuffle(opts);
+      return {
+        prompt: k2e ? jp(w[0]) : '<span class="vgloss">' + h(gloss(w)) + '</span>',
+        ask: k2e ? T('Từ tiếng Anh gốc là gì?', 'Which English word is it from?') : T('Viết bằng katakana thế nào?', 'How is it written in katakana?'),
+        opts: opts.map(function (o) { return k2e ? h(gloss(o)) : jp(o[0]); }), ans: opts.indexOf(w), say: w[1],
+        after: say(w[0]) + ' · ' + h(gloss(w)) + (App.isEn() ? '' : ' · ' + h(w[4]))
+      };
+    });
+    game = { id: 'envoy', qs: qs, i: 0, picked: -1, right: 0, total: qs.length, miss: 0, t0: Date.now(), done: false };
+  }
+  function readingOpts(c, n) {
+    var C = COUNTERS[c], right = C[2][n], seen = {}, cand = [], i;
+    seen[right] = 1;
+    for (i = 0; i < C[3].length; i++) [NUM_R[n] + C[3][i], NUM_G[n] + C[3][i]].forEach(function (x) { if (!seen[x]) { seen[x] = 1; cand.push(x); } });
+    cand = shuffle(cand).slice(0, 3);
+    var near = shuffle([n - 1, n + 1, n + 2, n - 2]);
+    for (i = 0; i < near.length && cand.length < 3; i++) if (near[i] >= 0 && near[i] < 10 && !seen[C[2][near[i]]]) { seen[C[2][near[i]]] = 1; cand.push(C[2][near[i]]); }
+    return shuffle([right].concat(cand));
+  }
+  function startTreasury() {
+    var objs = shuffle(COUNT_OBJ).slice(0, 10), qs = [];
+    for (var i = 0; i < objs.length; i++) {
+      var w = wordOf(objs[i][0] + '|' + objs[i][0]) || D().words.filter(function (x) { return x[0] === objs[i][0]; })[0], c = objs[i][1], n = Math.floor(Math.random() * 10);
+      if (!w) continue;
+      var item = w[0] + (w[0] !== w[1] ? ' (' + w[1] + ')' : ''), num = NUM_K.charAt(n) + c, rd = COUNTERS[c][2][n];
+      var after = jp(w[0]) + ' ' + say(num, '', rd) + ' · ' + jp(rd) + ' · ' + h(App.L([COUNTERS[c][0], COUNTERS[c][1]]));
+      if (i % 2 === 0) {
+        var cs = shuffle(Object.keys(COUNTERS).filter(function (x) { return x !== c; })).slice(0, 3).concat([c]);
+        cs = shuffle(cs);
+        qs.push({ prompt: jp(item), ask: h(mean(w)) + ' · ' + T('Đếm bằng đơn vị nào?', 'Which counter?'), say: rd, after: after, ans: cs.indexOf(c),
+          opts: cs.map(function (x) { return jp(x) + '<small>' + h(App.L([COUNTERS[x][0], COUNTERS[x][1]])) + '</small>'; }) });
+      } else {
+        var ro = readingOpts(c, n);
+        qs.push({ prompt: jp(w[0]) + ' ' + jp(num), ask: h(mean(w)) + ' · ' + T('Đọc thế nào?', 'How is it read?'), say: rd, after: after, ans: ro.indexOf(rd),
+          opts: ro.map(function (x) { return jp(x); }) });
+      }
+    }
+    game = { id: 'treasury', qs: qs, i: 0, picked: -1, right: 0, total: qs.length, miss: 0, t0: Date.now(), done: false };
+  }
+  function startFeast() {
+    var learned = shuffle(D().words.filter(function (w) { return !!rec(w); })), used = {}, pick = [], cards = [], i;
+    for (i = 0; i < learned.length && pick.length < 6; i++) {
+      if (used[mean(learned[i])] || used[learned[i][0]]) continue;
+      used[mean(learned[i])] = 1; used[learned[i][0]] = 1; pick.push(learned[i]);
+    }
+    for (i = 0; i < pick.length; i++) cards.push({ p: i, t: 'w' }, { p: i, t: 'm' });
+    game = { id: 'feast', words: pick, cards: shuffle(cards), sel: -1, got: {}, bad: null, right: 0, total: pick.length, miss: 0, t0: 0, done: false };
+  }
+  function endGame() {
+    game.done = true;
+    game.ms = Date.now() - game.t0;
+    App.emit('game:end', { g: game.id, right: game.right, total: game.total, miss: game.miss, ms: game.ms });
+    App.saveProgress();
+  }
+  function viewGameEnd() {
+    var g = game, perfect = g.right === g.total && !g.miss;
+    var sub = g.id === 'feast' ? T(Math.round(g.ms / 1000) + ' giây · ghép sai ' + g.miss + ' lần', Math.round(g.ms / 1000) + ' seconds · ' + g.miss + ' misses')
+      : T('câu đúng', 'correct');
+    return '<div class="hero"><h1>' + (g.id === 'feast' ? '🍶 ' + g.right + '/' + g.total : g.right + '/' + g.total) + '</h1><p class="sub">' + sub + '</p>' +
+      (perfect ? '<p class="vrepel">' + T('Hoàn hảo!', 'Perfect!') + '</p>' : '') + '</div>' +
+      '<div class="row"><button class="btn primary" data-act="vgAgain">' + T('Chơi lại', 'Play again') + '</button><a class="btn" href="' + link('games') + '">' + T('Về trò chơi', 'All games') + '</a></div>';
+  }
+  function viewChoice() {
+    var it = game.qs[game.i], answered = game.picked >= 0, html = '';
+    html += '<p class="eyebrow center">' + T('Câu ', 'Question ') + (game.i + 1) + '/' + game.qs.length + '</p>' + bar(game.i, game.qs.length) +
+      '<div class="card prompt"><div class="mid">' + it.prompt + '</div><div class="muted">' + it.ask + '</div></div><div class="opts vgopts">';
+    for (var i = 0; i < it.opts.length; i++) {
+      var cls = 'opt';
+      if (answered && i === it.ans) cls += ' right';
+      else if (answered && i === game.picked) cls += ' wrong';
+      html += '<button class="' + cls + '" data-act="vgPick" data-i="' + i + '"' + (answered ? ' disabled' : '') + '>' + it.opts[i] + '</button>';
+    }
+    html += '</div>';
+    if (answered) html += '<p class="center">' + it.after + '</p><div class="row"><button class="btn primary" id="vNext" data-act="vgNext">' +
+      (game.i === game.qs.length - 1 ? T('Xong', 'Finish') : T('Câu tiếp', 'Next')) + '</button></div>';
+    return '<div class="quiz">' + html + '</div>';
+  }
+  function viewFeast() {
+    var html = '<p class="center muted">' + T('Chạm một từ rồi chạm nghĩa của nó. Ghép sai: ', 'Tap a word, then its meaning. Misses: ') + game.miss + '</p><div class="vfeast">';
+    for (var i = 0; i < game.cards.length; i++) {
+      var c = game.cards[i], w = game.words[c.p], label = c.t === 'w' ? jp(w[0]) : h(mean(w));
+      if (game.got[c.p]) { html += '<span class="vcard done ' + c.t + '">' + label + '</span>'; continue; }
+      html += '<button class="vcard ' + c.t + (game.sel === i ? ' sel' : '') + (game.bad && game.bad.indexOf(i) >= 0 ? ' bad' : '') + '" data-act="vfTap" data-i="' + i + '">' + label + '</button>';
+    }
+    return '<div class="narrow">' + html + '</div></div>';
+  }
+  function viewGame(id) {
+    var g = gameDef(id), lock = gameLock(id), head = '<div class="hero slim"><p class="eyebrow">' + jp(g[1]) + ' ' + h(App.L(g[2])) + '</p></div>';
+    if (lock) return head + '<div class="card narrow center"><p>🔒 ' + h(lock) + '</p></div>';
+    if (!game || game.id !== id) { if (id === 'envoy') startEnvoy(); else if (id === 'treasury') startTreasury(); else startFeast(); }
+    if (game.done) return head + viewGameEnd();
+    return head + (id === 'feast' ? viewFeast() : viewChoice());
+  }
+
   function viewLevel() {
     var d = D(), lands = [], i;
     for (i = 0; i < d.sessions.length; i++) lands.push(landState(i + 1));
     var html = '<div class="hero">' + jp('語彙', 'eyebrow') + '<h1>' + T('Từ vựng N5', 'N5 Vocabulary') + '</h1><p class="sub">' +
-      d.sessions.length + T(' vùng đất · ', ' lands · ') + d.words.length + T(' thần dân', ' subjects') + '</p></div>' + summaryCard() + mapCard(lands) + bossCard() +
+      d.sessions.length + T(' vùng đất · ', ' lands · ') + d.words.length + T(' thần dân', ' subjects') + '</p></div>' + summaryCard() + mapCard(lands) + bossCard() + extraCards() +
       '<h3 class="heading">' + T('CÁC VÙNG ĐẤT', 'THE LANDS') + '</h3><div class="rows">';
     for (i = 0; i < d.sessions.length; i++) {
       var s = d.sessions[i], n = i + 1, L = lands[i];
@@ -548,7 +785,8 @@
   }
   function viewQuestion(q) {
     var item = q.qs[q.i], w = item.w, answered = q.picked >= 0 || q.typed !== null, html = '', i;
-    var count = '<p class="eyebrow center">' + T('Câu ', 'Question ') + (q.i + 1) + '/' + q.qs.length + '</p>' + bar(q.i, q.qs.length);
+    var count = '<p class="eyebrow center">' + T('Câu ', 'Question ') + (q.i + 1) + '/' + q.qs.length + '</p>' + bar(q.i, q.qs.length) +
+      (curMode === 'review' && isWanted(wkey(w)) ? '<p class="center"><span class="vspy">' + jp('手配') + ' ' + T('Gián điệp: đúng gây gấp đôi sát thương', 'Spy: a right answer hits twice as hard') + '</span></p>' : '');
     if (item.type === 'read') {
       var ok = q.typed !== null && matches(q.typed, w);
       html = w[0] === w[1]
@@ -616,11 +854,17 @@
     if (changed) {
       if (parts[2] !== 'learn' && learn && learn.phase !== 'quiz') learn = null;
       if (parts[parts.length - 1] !== 'review') review = null;
+      hunt = null; game = null;
     }
     curMode = parts[parts.length - 1] || '';
     var home = { back: '', backLabel: T('Trang chủ', 'Home') };
     if (!parts.length) return { html: viewLevel(), title: T('Từ vựng N5', 'N5 Vocabulary'), back: home.back, backLabel: home.backLabel, after: true };
     if (parts[0] === 'review' && parts.length === 1) return { html: viewReview(0), title: T('Triều kiến', 'Audience'), back: 'vocab', backLabel: T('Từ vựng', 'Vocabulary') };
+    var toVocab = { back: 'vocab', backLabel: T('Từ vựng', 'Vocabulary') };
+    if (parts[0] === 'wanted' && parts.length === 1) return { html: viewBoard(), title: T('Bảng truy nã', 'Wanted board'), back: toVocab.back, backLabel: toVocab.backLabel };
+    if (parts[0] === 'wanted' && parts[1] === 'hunt' && parts.length === 2) return { html: viewHunt(), title: T('Truy bắt', 'Manhunt'), back: 'vocab/wanted', backLabel: T('Bảng truy nã', 'Wanted board'), after: true };
+    if (parts[0] === 'games' && parts.length === 1) return { html: viewGames(), title: T('Trò chơi nhỏ', 'Mini games'), back: toVocab.back, backLabel: toVocab.backLabel };
+    if (parts[0] === 'games' && parts.length === 2 && gameDef(parts[1])) return { html: viewGame(parts[1]), title: App.L(gameDef(parts[1])[2]), back: 'vocab/games', backLabel: T('Trò chơi', 'Games'), after: true };
     if (parts[0] !== 'n5') return null;
     var n = parseInt(parts[1], 10);
     if (!(n >= 1 && n <= D().sessions.length)) return null;
@@ -640,12 +884,12 @@
 
   // ---------- hanh dong ----------
   var A = App.actions;
-  function activeQuiz() { return curMode === 'learn' ? learn && learn.quiz : review && review.quiz; }
+  function activeQuiz() { return curMode === 'learn' ? learn && learn.quiz : curMode === 'hunt' ? hunt && hunt.quiz : curMode === 'review' ? review && review.quiz : null; }
   function answer(ok) {
     var q = activeQuiz(), item = q.qs[q.i], k = wkey(item.w);
     if (!ok) q.failed[k] = 1;
     q.total++; if (ok) q.right++;
-    App.emit('word:answer', { key: k, ok: ok, type: item.type, mode: curMode, retry: !!item.retry });
+    App.emit('word:answer', { key: k, ok: ok, type: item.type, mode: curMode, retry: !!item.retry, spy: curMode === 'review' && isWanted(k) });
     if (!ok) q.qs.push({ w: item.w, type: item.type, opts: item.opts ? shuffle(item.opts) : null, retry: true });
     App.render();
     var nx = document.getElementById('vNext');
@@ -664,11 +908,19 @@
       learn.phase = 'done';
       App.emit('word:learnEnd', { n: learn.n, count: list.length });
       if (had < ids.length && countLearned(ids) === ids.length) App.emit('map:region', { n: learn.n, st: 'held', name: landLabel(learn.n) });
+    } else if (curMode === 'hunt') {
+      hunt.result = [];
+      for (i = 0; i < list.length; i++) {
+        var hit = !q.failed[wkey(list[i])];
+        chase(wkey(list[i]), hit);
+        hunt.result.push({ w: list[i], ok: hit });
+      }
     } else {
       var w = V().wave, wasLeft = waveLeft(w).length, since = siegeSince(), now = Date.now();
       review.result = [];
       for (i = 0; i < list.length; i++) {
         var ok = !q.failed[wkey(list[i])];
+        chase(wkey(list[i]), ok);
         grade(list[i], ok);
         review.result.push({ w: list[i], ok: ok });
       }
@@ -728,6 +980,35 @@
     if (q.i >= q.qs.length) finishQuiz();
     App.render(); window.scrollTo(0, 0);
   };
+  A.vgPick = function (el) {
+    if (!game || game.picked >= 0) return;
+    var it = game.qs[game.i];
+    game.picked = parseInt(el.getAttribute('data-i'), 10);
+    if (game.picked === it.ans) game.right++; else game.miss++;
+    window.Speech.say(it.say);
+    App.render();
+    var nx = document.getElementById('vNext');
+    if (nx) nx.focus();
+  };
+  A.vgNext = function () {
+    game.i++; game.picked = -1;
+    if (game.i >= game.qs.length) endGame();
+    App.render(); window.scrollTo(0, 0);
+  };
+  A.vgAgain = function () { game = null; App.render(); window.scrollTo(0, 0); };
+  A.vfTap = function (el) {
+    var i = parseInt(el.getAttribute('data-i'), 10), c = game.cards[i];
+    if (!game.t0) game.t0 = Date.now();
+    game.bad = null;
+    if (game.sel < 0 || game.cards[game.sel].t === c.t) { game.sel = i; App.render(); return; }
+    if (game.cards[game.sel].p === c.p) {
+      game.got[c.p] = 1; game.right++;
+      window.Speech.say(game.words[c.p][1].replace(/～/g, ''));
+      if (game.right === game.total) endGame();
+    } else { game.miss++; game.bad = [game.sel, i]; }
+    game.sel = -1;
+    App.render();
+  };
   A.vSayEx = function (el) {
     var k = el.getAttribute('data-k'), w = null, all = D().words;
     for (var i = 0; i < all.length; i++) if (wkey(all[i]) === k) w = all[i];
@@ -741,7 +1022,12 @@
     if ((e.key === 'Enter' || e.keyCode === 13) && e.target && e.target.id === 'vInput') { e.preventDefault(); A.vSubmit(); }
   });
 
-  App.on(function (type) { if (type === 'start' && D()) checkLands(true); });
+  App.on(function (type) {
+    if (type !== 'start' || !D()) return;
+    checkLands(true);
+    var all = V().w;
+    for (var k in all) if (all[k][2] >= 4 && !board()[k]) post(k, true);
+  });
 
   App.addSettingsRow(function (setRow, seg) {
     var cur = dailyLimit(), items = [];
@@ -757,8 +1043,9 @@
     ready: true,
     route: route,
     busy: function () {
+      if (game && !game.done && curMode === game.id) return true;
       var q = activeQuiz();
-      return !!(q && q.i < q.qs.length && (curMode === 'learn' ? learn.phase === 'quiz' : !review.result));
+      return !!(q && q.i < q.qs.length && (curMode === 'learn' ? learn.phase === 'quiz' : curMode === 'hunt' ? !hunt.result : !review.result));
     },
     afterRender: function (mine) {
       if (!mine) return;

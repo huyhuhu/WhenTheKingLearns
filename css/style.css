@@ -676,3 +676,33 @@ body.pod-full { overflow: hidden; }
 .vtruce { color: var(--accent); }
 .krealm { display: block; margin: 2px 0 4px; }
 .vhome em { display: block; font-style: normal; font-size: 13px; color: var(--accent); }
+.vextra { margin-bottom: 14px; }
+.vspy { display: inline-block; padding: 2px 10px; border-radius: 999px; background: #1b1b1f; color: #f4f1ea; border: 1px solid #c2452d; font-size: 13px; }
+.grid.vposters { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.vposter { display: flex; flex-direction: column; align-items: center; text-align: center; color: inherit; text-decoration: none;
+  background: #f3e6c8; color: #3b2a1a; border: 2px solid #8a5a2b; border-radius: 4px; padding: 10px 10px 12px; box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.18); }
+.vposter:nth-child(odd) { transform: rotate(-1deg); }
+.vposter:nth-child(even) { transform: rotate(1deg); }
+.vp-head { font-size: 22px; font-weight: 800; letter-spacing: 6px; color: #8b1e12; border-bottom: 2px solid #8a5a2b; width: 100%; padding-bottom: 4px; }
+.vp-word { font-size: 34px; font-weight: 800; margin: 8px 0 0; line-height: 1.2; word-break: keep-all; }
+.vp-word.long { font-size: 22px; margin-top: 14px; }
+.vp-read { font-size: 14px; }
+.vp-mean { font-size: 14px; font-weight: 700; margin-top: 4px; }
+.vp-meta { font-size: 12px; margin-top: 6px; opacity: 0.85; }
+.vp-tip { font-size: 12px; margin-top: 6px; padding-top: 6px; border-top: 1px dashed #8a5a2b; text-align: left; line-height: 1.4; }
+.vp-hits i { font-style: normal; color: rgba(0, 0, 0, 0.25); }
+.vp-hits i.on { color: #c9a227; }
+.vres-row .vp-hits { margin-left: auto; }
+.vres-row .vp-hits i { color: var(--line); }
+.vres-row .vp-hits i.on { color: #c9a227; }
+.vcaught { margin-left: auto; font-weight: 700; color: var(--ok); white-space: nowrap; }
+.btn.off { opacity: 0.5; pointer-events: none; }
+.vgloss { font-size: 34px; font-weight: 800; }
+.vgopts .opt small { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
+.vfeast { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.vcard { min-height: 76px; padding: 8px; border-radius: 12px; border: 2px solid var(--line); background: var(--surface); color: var(--ink);
+  font: inherit; font-size: 14px; line-height: 1.3; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; }
+.vcard.w { font-size: 22px; font-weight: 700; }
+.vcard.sel { border-color: var(--accent); background: var(--accent-soft); }
+.vcard.bad { border-color: var(--bad); background: var(--bad-soft); }
+.vcard.done { opacity: 0.25; cursor: default; border-style: dashed; }
