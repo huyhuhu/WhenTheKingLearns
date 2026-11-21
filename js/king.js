@@ -491,7 +491,7 @@
   def('P1', 10, null, 0, ['Nhạc công hoàng gia', 'Court Musician'], ['Bật nhạc nền', 'Turn on background music'], fl('P1'), 1);
   def('P2', 10, null, 0, ['Dàn nhạc cung đình', 'Court Orchestra'], ['Thử mọi phong cách nhạc', 'Try every music style'], seenSize('styles'), function () { return size(window.BGM.styles); });
   def('P3', 10, null, 0, ['Đêm ở cung điện', 'Night at the Palace'], ['Dùng giao diện tối', 'Use the dark theme'], fl('P3'), 1);
-  def('P4', 10, null, 0, ['Sứ giả liên lạc', 'Royal Messenger'], ['Đồng bộ Gist thành công', 'Sync with Gist successfully'], fl('P4'), 1);
+  def('P4', 10, null, 0, ['Sứ giả liên lạc', 'Royal Messenger'], ['Đồng bộ đám mây thành công', 'Sync to the cloud successfully'], fl('P4'), 1);
   def('P5', 10, null, 1, ['Vương quốc rộng lớn', 'A Vast Kingdom'], ['Học trên ít nhất 2 thiết bị', 'Study on at least 2 devices'],
     function (x) { var n = 0; for (var id in x.k.dev) if (size(x.k.dev[id].xp)) n++; return n; }, 2);
   def('P6', 10, null, 0, ['Ngự sử ghi chép', 'Royal Scribe'], ['Tải file sao lưu', 'Download a backup file'], fl('P6'), 1);

@@ -9,7 +9,7 @@
 - **Lyric karaoke** sáng theo từng từ, có furigana, romaji, bản dịch (bật/tắt riêng). Chạm vào câu để tua tới câu đó. Có nút chương, chọn tốc độ 0.5x–1.5x, nút lặp 1 tập.
 - **Điều khiển từ màn hình khóa và thanh thông báo** qua Media Session API: play/pause, tua, chuyển tập, thanh tiến độ. Chạy trên Chrome Android, PWA cài từ Chrome và Safari iOS 15+. **Không** chạy trên WebView (trình duyệt Via).
 - **Tiết kiệm dữ liệu:** chỉ tải tập đang nghe; tải sẵn tập kế tiếp khi nghe được 60%. Nút "Tải 5 tập chưa nghe" lưu vào Cache Storage để nghe offline.
-- Tiến độ "đã nghe" đồng bộ qua Gist (`progress.podcast.heard`). Code phát sự kiện `podcast:done`, `podcast:minute`, `podcast:repeat`, nhưng **chưa** nối vào thành tựu và Chiếu chỉ (có đề xuất, chưa được duyệt).
+- Tiến độ "đã nghe" đồng bộ qua Firebase (`progress.podcast.heard`). Code phát sự kiện `podcast:done`, `podcast:minute`, `podcast:repeat`, nhưng **chưa** nối vào thành tựu và Chiếu chỉ (có đề xuất, chưa được duyệt).
 
 ## 2. File và thư mục
 

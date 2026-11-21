@@ -3,11 +3,13 @@
   'use strict';
 
   var STORE_KEY = 'wtkl.progress.v1';
-  var SYNC_KEY = 'wtkl.sync.v1';
+  var SYNC_KEY = 'wtkl.sync.v2';
   var THEME_KEY = 'wtkl.theme';
   var LAST_KEY = 'wtkl.last';
   var LANG_KEY = 'wtkl.lang';
-  var GIST_FILE = 'wtkl-progress.json';
+  var SYNC_EVERY = 15000;
+  var FB = { apiKey: 'AIzaSyBdHZ2dz65SGadRK0F2G06UfplrLB6bdm4', authDomain: 'wtkl-d6c24.firebaseapp.com', projectId: 'wtkl-d6c24' };
+  var FB_SDK = 'https://www.gstatic.com/firebasejs/13.4.0/';
 
   var appEl = document.getElementById('app');
   var headerEl = document.getElementById('header');
@@ -24,6 +26,10 @@
   var syncStatus = '';
   var syncBusy = false;
   var syncTimer = null;
+  var syncDirty = false;
+  var lastSyncAt = 0;
+  var fbAuth = null;
+  var fbState = '';
   var lastRoute = null;
   var lang = 'vi';
   try { if (localStorage.getItem(LANG_KEY) === 'en') lang = 'en'; } catch (e) { /* che do an danh */ }
@@ -31,6 +37,7 @@
 
   progress.known = progress.known || {};
   progress.quiz = progress.quiz || {};
+  try { localStorage.removeItem('wtkl.sync.v1'); } catch (e) { /* che do an danh */ }
 
   // ---------- su kien ----------
   function emit(type, data) {
@@ -108,10 +115,8 @@
   }
   function saveProgress() {
     writeJson(STORE_KEY, progress);
-    if (sync.token) {
-      clearTimeout(syncTimer);
-      syncTimer = setTimeout(function () { doSync(); }, 3000);
-    }
+    syncDirty = true;
+    scheduleSync();
   }
   // Moi muc co moc thoi gian, ban ghi moi hon thang; diem trac nghiem giu diem cao nhat.
   function merge(a, b) {
@@ -126,77 +131,168 @@
     return out;
   }
 
-  // ---------- dong bo GitHub Gist ----------
-  function gh(method, path, body, cb) {
+  // ---------- dong bo Firebase ----------
+  // Auth va Firestore goi qua REST de chay duoc ES5; SDK chi tai khi can popup Google.
+  function request(method, url, body, headers, cb) {
     var x = new XMLHttpRequest();
-    x.open(method, 'https://api.github.com' + path, true);
-    x.setRequestHeader('Accept', 'application/vnd.github+json');
-    x.setRequestHeader('Authorization', 'token ' + sync.token);
-    if (body) x.setRequestHeader('Content-Type', 'application/json');
+    x.open(method, url, true);
+    for (var k in headers) x.setRequestHeader(k, headers[k]);
     x.onreadystatechange = function () {
       if (x.readyState !== 4) return;
       var data = null;
       try { data = JSON.parse(x.responseText); } catch (e) { /* khong phai JSON */ }
-      if (x.status >= 200 && x.status < 300) cb(null, data);
-      else if (x.status === 401) cb(T('Token không hợp lệ hoặc đã hết hạn.', 'The token is invalid or has expired.'));
-      else if (x.status === 404) cb(T('Không tìm thấy Gist (token cần quyền "gist").', 'Gist not found (the token needs the "gist" scope).'));
-      else cb(x.status ? T('GitHub báo lỗi ', 'GitHub returned error ') + x.status + '.' : T('Không kết nối được GitHub.', 'Could not reach GitHub.'));
+      cb(x.status, data || {});
     };
-    x.send(body ? JSON.stringify(body) : null);
+    x.send(body);
+  }
+  function authApi(path, body, cb) {
+    request('POST', 'https://identitytoolkit.googleapis.com/v1/accounts:' + path + '?key=' + FB.apiKey,
+      JSON.stringify(body), { 'Content-Type': 'application/json' }, cb);
+  }
+  function authError(status, d) {
+    var code = ((d.error && d.error.message) || '').split(' ')[0];
+    var wrong = ['Sai email hoặc mật khẩu.', 'Wrong email or password.'];
+    var map = {
+      EMAIL_EXISTS: ['Email này đã có tài khoản. Nếu bạn từng dùng Google, hãy đăng nhập Google ở trình duyệt khác rồi đặt mật khẩu.', 'This email already has an account. If you used Google before, sign in with Google in another browser and set a password.'],
+      INVALID_LOGIN_CREDENTIALS: wrong, INVALID_PASSWORD: wrong, EMAIL_NOT_FOUND: wrong,
+      INVALID_EMAIL: ['Email không hợp lệ.', 'Invalid email.'],
+      MISSING_PASSWORD: ['Hãy nhập mật khẩu.', 'Enter a password.'],
+      WEAK_PASSWORD: ['Mật khẩu cần ít nhất 6 ký tự.', 'The password needs at least 6 characters.'],
+      TOO_MANY_ATTEMPTS_TRY_LATER: ['Thử quá nhiều lần, hãy đợi một lúc.', 'Too many attempts, please wait a while.'],
+      CREDENTIAL_TOO_OLD_LOGIN_AGAIN: ['Hãy đăng xuất rồi đăng nhập lại trước khi đặt mật khẩu.', 'Sign out and sign in again before setting a password.'],
+      OPERATION_NOT_ALLOWED: ['Cách đăng nhập này chưa được bật trên Firebase.', 'This sign-in method is not enabled in Firebase.']
+    };
+    if (map[code]) return T(map[code][0], map[code][1]);
+    return status ? T('Lỗi ', 'Error ') + (code || status) + '.' : T('Không kết nối được máy chủ.', 'Could not reach the server.');
+  }
+  function storeError(status) {
+    if (status === 429) return T('Đã hết hạn mức miễn phí hôm nay, sẽ thử lại sau.', "Today's free quota is used up; will retry later.");
+    if (status === 403) return T('Firestore từ chối truy cập (kiểm tra Rules).', 'Firestore denied access (check the Rules).');
+    return status ? T('Máy chủ báo lỗi ', 'Server error ') + status + '.' : T('Không kết nối được máy chủ.', 'Could not reach the server.');
+  }
+  function saveTokens(idToken, refreshToken, expiresIn) {
+    sync.idToken = idToken;
+    sync.refreshToken = refreshToken;
+    sync.exp = Date.now() + ((parseInt(expiresIn, 10) || 3600) - 60) * 1000;
+    writeJson(SYNC_KEY, sync);
+  }
+  function setSession(uid, email, idToken, refreshToken, expiresIn) {
+    sync = { uid: uid, email: email };
+    saveTokens(idToken, refreshToken, expiresIn);
+    syncStatus = '';
+    syncDirty = true;
+    renderModal();
+    doSync();
+  }
+  function signOut() {
+    clearTimeout(syncTimer);
+    syncTimer = null;
+    sync = {};
+    syncStatus = '';
+    writeJson(SYNC_KEY, sync);
+  }
+  function withToken(cb) {
+    if (sync.idToken && Date.now() < sync.exp) return cb(null, sync.idToken);
+    request('POST', 'https://securetoken.googleapis.com/v1/token?key=' + FB.apiKey,
+      'grant_type=refresh_token&refresh_token=' + encodeURIComponent(sync.refreshToken || ''),
+      { 'Content-Type': 'application/x-www-form-urlencoded' }, function (status, d) {
+        if (status === 200) { saveTokens(d.id_token, d.refresh_token, d.expires_in); return cb(null, sync.idToken); }
+        if (status === 400) { signOut(); renderModal(); return cb(T('Phiên đăng nhập đã hết, hãy đăng nhập lại.', 'Your session has ended, please sign in again.')); }
+        cb(authError(status, d));
+      });
+  }
+  function store(method, query, body, cb) {
+    withToken(function (err, token) {
+      if (err) return cb(err);
+      var url = 'https://firestore.googleapis.com/v1/projects/' + FB.projectId + '/databases/(default)/documents/progress/' + sync.uid + query;
+      request(method, url, body ? JSON.stringify(body) : null, { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' }, function (status, d) {
+        if (status === 401) sync.exp = 0;
+        cb(null, status, d);
+      });
+    });
   }
   function setSyncStatus(text) {
     syncStatus = text;
     var el = document.getElementById('syncStatus');
     if (el) el.textContent = text;
   }
-  function doSync() {
-    if (!sync.token || syncBusy) return;
+  function scheduleSync(delay) {
+    if (!sync.uid || syncTimer) return;
+    if (delay === undefined) delay = Math.max(2000, lastSyncAt + SYNC_EVERY - Date.now());
+    syncTimer = setTimeout(function () { syncTimer = null; doSync(); }, delay);
+  }
+  function doSync(retried) {
+    if (!sync.uid || syncBusy) return;
+    clearTimeout(syncTimer);
+    syncTimer = null;
     syncBusy = true;
+    syncDirty = false;
+    lastSyncAt = Date.now();
     setSyncStatus(T('Đang đồng bộ…', 'Syncing…'));
-    function fail(msg) { syncBusy = false; setSyncStatus(T('Lỗi: ', 'Error: ') + msg); }
-    function done() {
+    function finish(err) {
       syncBusy = false;
+      if (err) {
+        syncDirty = true;
+        setSyncStatus(T('Lỗi: ', 'Error: ') + err);
+        scheduleSync(60000);
+        return;
+      }
       sync.last = Date.now();
       writeJson(SYNC_KEY, sync);
       emit('sync:ok');
       setSyncStatus(T('Đã đồng bộ lúc ', 'Synced at ') + new Date(sync.last).toLocaleTimeString());
+      if (syncDirty) scheduleSync();
     }
-    function pullAndPush() {
-      gh('GET', '/gists/' + sync.gistId + '?_=' + Date.now(), null, function (err, gist) {
-        if (err) return fail(err);
-        var remoteText = gist.files && gist.files[GIST_FILE] ? gist.files[GIST_FILE].content : '{}';
-        var remote = null;
-        try { remote = JSON.parse(remoteText); } catch (e) { remote = {}; }
-        var before = JSON.stringify(progress);
-        progress = merge(progress, remote);
-        var merged = JSON.stringify(progress);
-        writeJson(STORE_KEY, progress);
-        // Khong ve lai khi dang o man hinh hoc de khong lam mat the dang lat hay cau dang lam.
-        if (merged !== before && parseRoute().length <= 2) render();
-        if (merged === JSON.stringify(merge(remote, {}))) return done();
-        var files = {};
-        files[GIST_FILE] = { content: merged };
-        gh('PATCH', '/gists/' + sync.gistId, { files: files }, function (err2) {
-          if (err2) return fail(err2);
-          done();
-        });
-      });
-    }
-    if (sync.gistId) return pullAndPush();
-    gh('GET', '/gists?per_page=100', null, function (err, list) {
-      if (err) return fail(err);
-      for (var i = 0; i < list.length; i++) {
-        if (list[i].files && list[i].files[GIST_FILE]) { sync.gistId = list[i].id; break; }
-      }
-      if (sync.gistId) { writeJson(SYNC_KEY, sync); return pullAndPush(); }
-      var files = {};
-      files[GIST_FILE] = { content: JSON.stringify(progress) };
-      gh('POST', '/gists', { description: 'Tiến độ học tiếng Nhật', 'public': false, files: files }, function (err2, gist) {
-        if (err2) return fail(err2);
-        sync.gistId = gist.id;
-        done();
+    store('GET', '', null, function (err, status, doc) {
+      if (err) return finish(err);
+      if (status !== 200 && status !== 404) return finish(storeError(status));
+      var remote = {};
+      try { if (status === 200) remote = JSON.parse(doc.fields.data.stringValue); } catch (e) { /* ban tren may chu hong */ }
+      var before = JSON.stringify(progress);
+      progress = merge(progress, remote);
+      var merged = JSON.stringify(progress);
+      writeJson(STORE_KEY, progress);
+      // Khong ve lai khi dang o man hinh hoc de khong lam mat the dang lat hay cau dang lam.
+      if (merged !== before && parseRoute().length <= 2) render();
+      if (status === 200 && merged === JSON.stringify(merge(remote, {}))) return finish();
+      // Dieu kien updateTime chan ghi de neu may khac vua ghi chen vao giua.
+      var cond = status === 200 ? '?currentDocument.updateTime=' + encodeURIComponent(doc.updateTime) : '?currentDocument.exists=false';
+      store('PATCH', cond, { fields: { data: { stringValue: merged } } }, function (err2, status2) {
+        if (err2) return finish(err2);
+        if ((status2 === 400 || status2 === 409) && !retried) { syncBusy = false; return doSync(true); }
+        finish(status2 === 200 ? null : storeError(status2));
       });
     });
+  }
+  function loadFirebase() {
+    if (fbState) return;
+    fbState = 'loading';
+    var files = ['firebase-app-compat.js', 'firebase-auth-compat.js'], n = 0;
+    function updateButton() {
+      var el = document.getElementById('gbtn');
+      if (el) el.outerHTML = googleButton();
+    }
+    function next() {
+      if (n === files.length) {
+        try {
+          window.firebase.initializeApp(FB);
+          fbAuth = window.firebase.auth();
+          fbAuth.setPersistence(window.firebase.auth.Auth.Persistence.NONE);
+          fbState = 'ready';
+        } catch (e) { fbState = 'failed'; }
+        return updateButton();
+      }
+      var s = document.createElement('script');
+      s.src = FB_SDK + files[n++];
+      s.onload = next;
+      s.onerror = function () { fbState = 'failed'; updateButton(); };
+      document.head.appendChild(s);
+    }
+    next();
+  }
+  function googleButton() {
+    if (fbState === 'failed') return '<p class="note" id="gbtn">' + T('Trình duyệt này không đăng nhập Google được, hãy dùng email bên dưới.', 'Google sign-in is unavailable in this browser; use email below.') + '</p>';
+    return '<button class="btn primary" id="gbtn" data-act="googleIn"' + (fbState === 'ready' ? '' : ' disabled') + '>' + T('Đăng nhập bằng Google', 'Sign in with Google') + '</button>';
   }
 
   // ---------- man hinh chung ----------
@@ -244,11 +340,26 @@
   }
   function settingsBody() {
     if (settingsTab === 'sync') {
-      return '<p class="note">' + T('Tạo Personal Access Token (classic) tại github.com → Settings → Developer settings, chỉ tick quyền <b>gist</b>, rồi dán vào đây trên từng thiết bị. Token chỉ lưu trong trình duyệt này và chỉ gửi tới api.github.com.', 'Create a Personal Access Token (classic) at github.com → Settings → Developer settings with only the <b>gist</b> scope, then paste it here on each device. The token is stored only in this browser and sent only to api.github.com.') + '</p>' +
-        '<input class="field" id="token" type="password" autocomplete="off" placeholder="ghp_…" value="' + h(sync.token || '') + '">' +
-        '<button class="btn primary" data-act="saveToken">' + T('Lưu và đồng bộ', 'Save and sync') + '</button>' +
-        '<button class="btn" data-act="clearToken">' + T('Xoá token', 'Remove token') + '</button>' +
-        '<p class="status" id="syncStatus">' + h(syncStatus || (sync.token ? T('Đã cài token.', 'Token saved.') : T('Chưa cài đồng bộ.', 'Sync is not set up.'))) + '</p>';
+      var status = '<p class="status" id="syncStatus">' + h(syncStatus || (sync.last ? T('Đã đồng bộ lúc ', 'Synced at ') + new Date(sync.last).toLocaleTimeString() : '')) + '</p>';
+      if (sync.uid) {
+        return '<p class="note">' + T('Đã đăng nhập: ', 'Signed in as ') + '<b>' + h(sync.email || '') + '</b></p>' +
+          '<button class="btn primary" data-act="syncNow">' + T('Đồng bộ ngay', 'Sync now') + '</button>' +
+          '<button class="btn" data-act="signOut">' + T('Đăng xuất', 'Sign out') + '</button>' + status +
+          '<h3>' + T('MẬT KHẨU CHO TRÌNH DUYỆT KHÁC', 'PASSWORD FOR OTHER BROWSERS') + '</h3>' +
+          '<p class="note">' + T('Đặt mật khẩu để đăng nhập tài khoản này bằng email ở trình duyệt không hỗ trợ Google (như Via).', 'Set a password to sign in to this account with email in browsers without Google sign-in (such as Via).') + '</p>' +
+          '<input class="field" id="fbNewPass" type="password" autocomplete="new-password" placeholder="' + T('Mật khẩu mới, ít nhất 6 ký tự', 'New password, at least 6 characters') + '">' +
+          '<button class="btn" data-act="setPassword">' + T('Đặt mật khẩu', 'Set password') + '</button>';
+      }
+      loadFirebase();
+      return '<p class="note">' + T('Đăng nhập để đồng bộ tiến độ giữa các thiết bị. Mỗi tài khoản chỉ đọc được tiến độ của chính mình.', 'Sign in to sync progress across devices. Each account can only read its own progress.') + '</p>' +
+        googleButton() +
+        '<h3>' + T('HOẶC DÙNG EMAIL', 'OR USE EMAIL') + '</h3>' +
+        '<p class="note">' + T('Dành cho trình duyệt không đăng nhập Google được. Muốn dùng chung tài khoản Google, hãy đăng nhập Google ở trình duyệt khác rồi đặt mật khẩu trong mục này.', 'For browsers without Google sign-in. To share your Google account, sign in with Google in another browser and set a password in this tab.') + '</p>' +
+        '<input class="field" id="fbEmail" type="email" autocomplete="username" placeholder="Email">' +
+        '<input class="field" id="fbPass" type="password" autocomplete="current-password" placeholder="' + T('Mật khẩu', 'Password') + '">' +
+        '<button class="btn" data-act="emailIn">' + T('Đăng nhập', 'Sign in') + '</button>' +
+        '<button class="btn" data-act="emailUp">' + T('Tạo tài khoản', 'Create account') + '</button>' +
+        '<button class="btn" data-act="emailReset">' + T('Quên mật khẩu', 'Forgot password') + '</button>' + status;
     }
     if (settingsTab === 'backup') {
       return '<h3>' + T('SAO LƯU RA FILE', 'BACK UP TO A FILE') + '</h3>' +
@@ -379,14 +490,52 @@
   actions.bgmOff = function () { bgmTo(false); };
   actions.bgmStyle = function (el) { window.BGM.setStyle(el.value); emit('setting', { name: 'style', value: el.value, on: window.BGM.settings.enabled }); };
   actions.bgmVolume = function (el) { window.BGM.setVolume(el.value); };
-  actions.saveToken = function () {
-    var token = document.getElementById('token').value.replace(/\s/g, '');
-    if (!token) return setSyncStatus(T('Hãy dán token trước.', 'Paste a token first.'));
-    if (token !== sync.token) sync = { token: token };
-    writeJson(SYNC_KEY, sync);
-    doSync();
+  actions.googleIn = function () {
+    if (!fbAuth) return;
+    setSyncStatus(T('Đang đăng nhập…', 'Signing in…'));
+    fbAuth.signInWithPopup(new window.firebase.auth.GoogleAuthProvider()).then(function (r) {
+      var u = r.user;
+      return u.getIdToken().then(function (t) { setSession(u.uid, u.email, t, u.refreshToken, 3600); });
+    })['catch'](function (e) {
+      var code = (e && e.code) || '';
+      setSyncStatus(code === 'auth/popup-closed-by-user' || code === 'auth/cancelled-popup-request' ? '' :
+        T('Đăng nhập Google không được: ', 'Google sign-in failed: ') + (code || (e && e.message)));
+    });
   };
-  actions.clearToken = function () { sync = {}; writeJson(SYNC_KEY, sync); syncStatus = ''; renderModal(); };
+  function emailField(id) { var el = document.getElementById(id); return el ? el.value : ''; }
+  function emailAuth(path) {
+    var email = emailField('fbEmail').replace(/\s/g, ''), pass = emailField('fbPass');
+    if (!email || !pass) return setSyncStatus(T('Hãy nhập email và mật khẩu.', 'Enter your email and password.'));
+    setSyncStatus(T('Đang đăng nhập…', 'Signing in…'));
+    authApi(path, { email: email, password: pass, returnSecureToken: true }, function (status, d) {
+      if (status === 200) setSession(d.localId, d.email, d.idToken, d.refreshToken, d.expiresIn);
+      else setSyncStatus(authError(status, d));
+    });
+  }
+  actions.emailIn = function () { emailAuth('signInWithPassword'); };
+  actions.emailUp = function () { emailAuth('signUp'); };
+  actions.emailReset = function () {
+    var email = emailField('fbEmail').replace(/\s/g, '');
+    if (!email) return setSyncStatus(T('Hãy nhập email trước.', 'Enter your email first.'));
+    authApi('sendOobCode', { requestType: 'PASSWORD_RESET', email: email }, function (status, d) {
+      setSyncStatus(status === 200 ? T('Đã gửi email đặt lại mật khẩu (xem cả thư mục Spam).', 'Password reset email sent (check Spam too).') : authError(status, d));
+    });
+  };
+  actions.setPassword = function () {
+    var pass = emailField('fbNewPass');
+    if (pass.length < 6) return setSyncStatus(T('Mật khẩu cần ít nhất 6 ký tự.', 'The password needs at least 6 characters.'));
+    withToken(function (err, token) {
+      if (err) return setSyncStatus(err);
+      authApi('update', { idToken: token, password: pass, returnSecureToken: true }, function (status, d) {
+        if (status !== 200) return setSyncStatus(authError(status, d));
+        saveTokens(d.idToken, d.refreshToken, d.expiresIn);
+        document.getElementById('fbNewPass').value = '';
+        setSyncStatus(T('Đã đặt mật khẩu. Ở trình duyệt khác, đăng nhập bằng ', 'Password set. In other browsers, sign in with ') + sync.email + T(' và mật khẩu này.', ' and this password.'));
+      });
+    });
+  };
+  actions.syncNow = function () { doSync(); };
+  actions.signOut = function () { signOut(); renderModal(); };
   actions.download = function () {
     try {
       var a = document.createElement('a');
@@ -419,7 +568,7 @@
     } else apply(document.getElementById('importBox').value);
   };
   actions.reset = function () {
-    if (!confirm(T('Xoá toàn bộ tiến độ trên thiết bị này? Bản trên Gist (nếu có) không bị xoá.', 'Erase all progress on this device? The copy on Gist, if any, is not erased.'))) return;
+    if (!confirm(T('Xoá toàn bộ tiến độ trên thiết bị này? Bản đã đồng bộ lên mạng (nếu có) không bị xoá.', 'Erase all progress on this device? The synced copy online, if any, is not erased.'))) return;
     progress = { known: {}, quiz: {} };
     writeJson(STORE_KEY, progress);
     render();
@@ -469,6 +618,10 @@
       window.addEventListener('hashchange', render);
       document.addEventListener('keydown', function (e) {
         if (settingsOpen && (e.key === 'Escape' || e.keyCode === 27)) actions.closeSettings();
+      });
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) { if (syncDirty) doSync(); }
+        else if (Date.now() - lastSyncAt > SYNC_EVERY) doSync();
       });
       emit('start');
       render();

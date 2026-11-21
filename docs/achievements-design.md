@@ -12,7 +12,7 @@ Ba nguyên tắc:
 
 1. **Chỉ thưởng việc học thật.** Mọi nguồn Uy vọng đều có giới hạn mỗi ngày để không "cày" được bằng cách bấm liên tục.
 2. **Không bao giờ trừ điểm.** Bỏ đánh dấu "đã thuộc" hay làm bài kém không làm mất Uy vọng hay thành tựu.
-3. **Dữ liệu đi theo người học.** Thành tựu và Uy vọng đồng bộ qua Gist như tiến độ hiện tại, gộp đúng khi học trên nhiều thiết bị.
+3. **Dữ liệu đi theo người học.** Thành tựu và Uy vọng đồng bộ qua Firebase như tiến độ hiện tại, gộp đúng khi học trên nhiều thiết bị.
 
 ---
 
@@ -195,7 +195,7 @@ Ký hiệu độ hiếm: 🟤 Thường · ⚪ Hiếm · 🟡 Sử thi · 💎 H
 | P1 | Nhạc công hoàng gia | Bật nhạc nền lần đầu | 🟤 |
 | P2 | Dàn nhạc cung đình | Thử đủ 5 phong cách nhạc | 🟤 |
 | P3 | Đêm ở cung điện | Dùng giao diện tối | 🟤 |
-| P4 | Sứ giả liên lạc | Đồng bộ Gist thành công lần đầu | 🟤 |
+| P4 | Sứ giả liên lạc | Đồng bộ đám mây thành công lần đầu | 🟤 |
 | P5 | Vương quốc rộng lớn | Tiến độ được ghi từ ít nhất 2 thiết bị | ⚪ |
 | P6 | Ngự sử ghi chép | Tải file sao lưu | 🟤 |
 | P7 | Ngai vàng riêng | Mở web từ biểu tượng trên màn hình chính | 🟤 |
@@ -244,7 +244,7 @@ Mỗi ngày triều đình ban **3 Chiếu chỉ** (詔勅). Hoàn thành thì n
 - **Làm mới lúc 0:00** theo giờ của thiết bị. Tiến độ trong ngày không chuyển sang hôm sau.
 - **Đổi Chiếu chỉ:** mỗi ngày được đổi miễn phí 1 Chiếu chỉ chưa hoàn thành sang một cái khác cùng độ khó.
 - **Luôn làm được:** chỉ rút những Chiếu chỉ còn khả thi. Ví dụ khi đã thuộc hết chữ đang có thì không rút "Thuộc 3 chữ mới" nữa.
-- **Giống nhau trên mọi thiết bị:** Chiếu chỉ được chọn từ ngày hôm đó cộng một mã ngẫu nhiên riêng của bạn (đồng bộ qua Gist). Tiến độ là tổng hoạt động của mọi thiết bị trong ngày.
+- **Giống nhau trên mọi thiết bị:** Chiếu chỉ được chọn từ ngày hôm đó cộng một mã ngẫu nhiên riêng của bạn (đồng bộ qua Firebase). Tiến độ là tổng hoạt động của mọi thiết bị trong ngày.
 - **Tính từ ngày ra mắt:** không có Chiếu chỉ hồi tố cho những ngày trước đó.
 
 ### 5.2 Danh sách Chiếu chỉ (18)
@@ -370,7 +370,7 @@ Không thêm nút tròn trên thanh đầu trang. Lối vào gồm:
 
 ## 7. Dữ liệu và đồng bộ
 
-Lưu trong cùng đối tượng `progress` đang đồng bộ qua Gist, thêm khóa `king`:
+Lưu trong cùng đối tượng `progress` đang đồng bộ qua Firebase, thêm khóa `king`:
 
 ```text
 king: {
@@ -404,7 +404,7 @@ king: {
 - **Chiếu chỉ, Nghị sự đã hoàn thành:** lấy hợp theo từng ngày, từng tuần. `seed`: giữ giá trị của thiết bị tạo trước.
 - **Uy vọng từ thành tựu và Chiếu chỉ không cộng vào bộ đếm**, mà tính lại từ danh sách đã mở và đã hoàn thành. Nhờ vậy khi hai thiết bị cùng phát hiện một thành tựu trước khi kịp đồng bộ, phần thưởng vẫn chỉ được tính một lần.
 
-**Dung lượng:** khoảng 5–15 KB sau một năm học, vẫn nhỏ so với giới hạn của Gist.
+**Dung lượng:** khoảng 5–15 KB sau một năm học, vẫn nhỏ so với giới hạn 1 MB mỗi tài liệu của Firestore.
 
 **Mở khoá hồi tố:** lần đầu chạy phiên bản mới, hệ thống quét tiến độ sẵn có và mở ngay những gì đã đạt (Kho báu, Bộ sưu tập, Tốt nghiệp, Bách phát bách trúng, Toàn thắng). Các bộ đếm chưa từng được ghi (thẻ đã lật, lượt nghe, chuỗi ngày) bắt đầu từ 0, vì không có dữ liệu cũ để tính.
 
