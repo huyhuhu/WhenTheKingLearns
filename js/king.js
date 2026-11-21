@@ -687,19 +687,61 @@
       setTimeout(function () { showing = false; flush(); }, 350);
     }, 3800);
   }
-  function crownSvg(r, cls) {
+  // Bac 1-2 bui toc, 3 phoc dau, 4-6 mu xung thien, 7-10 mu mien (5/9/12 chuoi ngoc)
+  function crownSvg(r, cls, sway) {
     var COL = ['#a8754a', '#a8754a', '#9aa4ae', '#9aa4ae', '#d4a017', '#d4a017', '#2f9e6e', '#2f9e6e', '#7b4bb8', '#1b1b1f'];
-    var n = r < 2 ? 3 : r < 5 ? 4 : r < 8 ? 5 : 6, x0 = 6, x1 = 58, w = x1 - x0, d = 'M' + x0 + ' 48L' + x0 + ' 22', gems = '';
-    for (var i = 0; i < n; i++) {
-      var px = x0 + w * (i + 0.5) / n, vx = x0 + w * (i + 1) / n;
-      d += 'L' + px.toFixed(1) + ' 10' + (i < n - 1 ? 'L' + vx.toFixed(1) + ' 28' : 'L' + x1 + ' 22');
-      if (r >= 2) gems += '<circle cx="' + px.toFixed(1) + '" cy="10" r="2.8" fill="' + (r >= 9 ? '#e6c35c' : '#e05a5a') + '"/>';
+    var LAC = '#2b2522', GOLD = '#e6c35c', RED = '#c2452d', DGOLD = '#9a7310';
+    var c = COL[r], st = ' stroke="' + (r >= 9 ? GOLD : 'rgba(0,0,0,.3)') + '" stroke-width="1.5" stroke-linejoin="round"';
+    var lac = ' class="lac" fill="' + LAC + '"' + st, s = '', i;
+    var anim = sway && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    function swing(inner, cy) {
+      return '<g>' + inner + (anim ? '<animateTransform attributeName="transform" type="rotate" values="-2.5 32 ' + cy + ';2.5 32 ' + cy + ';-2.5 32 ' + cy + '" dur="2.6s" repeatCount="indefinite"/>' : '') + '</g>';
     }
-    d += 'L' + x1 + ' 48Z';
-    var stroke = r >= 9 ? '#e6c35c' : 'rgba(0,0,0,.25)';
-    return '<svg class="' + cls + '" viewBox="0 0 64 60" aria-hidden="true"><path d="' + d + '" fill="' + COL[r] + '" stroke="' + stroke + '" stroke-width="2" stroke-linejoin="round"/>' +
-      '<rect x="6" y="44" width="52" height="10" rx="2" fill="' + COL[r] + '" stroke="' + stroke + '" stroke-width="2"/>' +
-      (r >= 4 ? '<circle cx="32" cy="49" r="3.4" fill="' + (r >= 9 ? '#e6c35c' : '#3d7fd6') + '"/>' : '') + gems + '</svg>';
+    function P(d, fill, extra) { return '<path d="' + d + '"' + (fill ? ' fill="' + fill + '"' : '') + (extra === undefined ? st : extra) + '/>'; }
+    function dot(x, y, rad, fill, extra) { return '<circle cx="' + x + '" cy="' + y + '" r="' + rad + '" fill="' + fill + '"' + (extra || '') + '/>'; }
+    function line(x1, y1, x2, y2, col, w) {
+      return '<path d="M' + x1 + ' ' + y1 + 'L' + x2 + ' ' + y2 + '" stroke="' + col + '" stroke-width="' + w + '" stroke-linecap="round"/>';
+    }
+
+    if (r <= 1) {
+      var tails = P('M25 34c-4 6-7 12-11 19l4 1.5c3.5-6.5 6.5-12.5 9.5-19Z', RED) + P('M39 34c4 6 7 12 11 19l-4 1.5c-3.5-6.5-6.5-12.5-9.5-19Z', RED);
+      s += P('M12 58C12 41 20 35 32 35S52 41 52 58Z', '', lac) + swing(tails, 34) + '<ellipse cx="32" cy="27" rx="9" ry="8"' + lac + '/>';
+      if (r === 0) s += P('M23 30.5h18v4.5H23Z', RED) + line(15, 25, 49, 25, c, 2.6) + dot(15, 25, 2.4, c) + dot(49, 25, 2.4, c);
+      else s += P('M21 37L23.5 19Q32 13.5 40.5 19L43 37Z', c) + P('M22.5 31.5h19', 'none', ' stroke="rgba(0,0,0,.25)" stroke-width="1.5"') +
+        dot(32, 25, 2.6, RED) + line(12, 24, 52, 24, GOLD, 2.4) + dot(12, 24, 2.3, GOLD) + dot(52, 24, 2.3, GOLD);
+    } else if (r === 2) {
+      s += P('M22 34Q22 11 32 11Q42 11 42 34Z', '', lac) +
+        '<rect x="1.5" y="27" width="21" height="4.5" rx="2.2"' + lac + '/><rect x="41.5" y="27" width="21" height="4.5" rx="2.2"' + lac + '/>' +
+        dot(4, 29.2, 2.6, c) + dot(60, 29.2, 2.6, c) +
+        P('M14 56V38Q14 24 32 24Q50 24 50 38V56Z', '', lac) + '<rect x="14" y="46" width="36" height="8" fill="' + c + '"' + st + '/>' + dot(32, 50, 2.4, RED);
+    } else if (r <= 5) {
+      var body = r === 3 ? lac : ' class="lacg" fill="' + LAC + '" stroke="' + c + '" stroke-width="1.5" stroke-linejoin="round"';
+      var trim = c, vein = ' stroke="' + c + '" stroke-width="1" fill="none"';
+      s += P('M24 21C18 16 11.5 10 11.5 5.5C11.5 2 16 1 18.5 3.5C22 7 26 12 28.5 17Z', '', body) + P('M40 21C46 16 52.5 10 52.5 5.5C52.5 2 48 1 45.5 3.5C42 7 38 12 35.5 17Z', '', body) +
+        P('M25.5 18.5Q17 11 15 5M38.5 18.5Q47 11 49 5', '', vein) +
+        P('M20 25Q20 9 32 9Q44 9 44 25Z', '', body) + P('M13 56V31Q13 22 22 21.5H42Q51 22 51 31V56Z', '', body) +
+        '<rect x="13" y="45" width="38" height="9" fill="' + trim + '"' + st + '/>';
+      if (r >= 4) s += dot(32, 33, 4, GOLD) + dot(32, 33, 1.8, RED) +
+        P('M15 34q2.5-4 5 0t5 0M49 34q-2.5-4-5 0t-5 0', 'none', ' stroke="' + GOLD + '" stroke-width="2" stroke-linecap="round"') +
+        dot(26, 33, 1.6, GOLD) + dot(38, 33, 1.6, GOLD);
+      if (r === 5) s += P('M16 50.5q2-3 4 0q2-3 4 0M40 50.5q2-3 4 0q2-3 4 0', 'none', ' stroke="' + DGOLD + '" stroke-width="1.4" stroke-linecap="round"') +
+        dot(32, 49.5, 3, '#3d7fd6', ' stroke="#fffdf8" stroke-width="1"') + dot(14.5, 4, 2, RED) + dot(49.5, 4, 2, RED);
+    } else {
+      var n = r === 6 ? 5 : r === 7 ? 9 : 12, trim2 = r >= 9 ? GOLD : c, strings = '';
+      var BEAD = ['#f4f1ea', '#e05a5a', '#e6c35c', '#3d7fd6', '#2f9e6e'];
+      if (r >= 9) s += dot(32, 30, 29, GOLD, ' opacity=".14"') + dot(32, 30, 22, GOLD, ' opacity=".16"');
+      if (r >= 7) s += swing(line(7, 16, 7, 33, RED, 1.2) + dot(7, 35, 2.8, GOLD) + line(57, 16, 57, 33, RED, 1.2) + dot(57, 35, 2.8, GOLD), 16);
+      s += P('M20 16H44L46.5 53H17.5Z', '', lac) + '<rect x="17.5" y="45" width="29" height="8" fill="' + trim2 + '"' + st + '/>' +
+        line(11, 28, 53, 28, GOLD, 2.2) + dot(11, 28, 2, GOLD) + dot(53, 28, 2, GOLD) +
+        P('M10 9H54L59.5 14H4.5Z', trim2) + '<rect x="4.5" y="14" width="55" height="3"' + lac + '/>';
+      for (i = 0; i < n; i++) {
+        var x = (8 + 48 * i / (n - 1)).toFixed(1), col = r === 6 ? BEAD[0] : r === 7 ? BEAD[i % 2 ? 3 : 0] : r === 8 ? BEAD[i % 5] : GOLD;
+        strings += line(x, 17, x, 38, 'rgba(0,0,0,.4)', 0.7);
+        for (var b = 0; b < 5; b++) strings += dot(x, (20 + b * 4.5).toFixed(1), 1.45, col, ' stroke="rgba(0,0,0,.45)" stroke-width=".5"');
+      }
+      s += swing(strings, 16);
+    }
+    return '<svg class="' + cls + '" viewBox="0 0 64 60" aria-hidden="true">' + s + '</svg>';
   }
   var crownEl = null;
   function showCrown(r) {
@@ -711,7 +753,7 @@
     if (hk) reward += '<p>' + T('Mở khoá màu ấn tín: ', 'New seal color: ') + '<b>' + h(L(hk.name)) + '</b></p>';
     reward += '<p>' + T('Danh hiệu mới: ', 'New title: ') + '<b>' + h(rankName(r)) + '</b></p>';
     crownEl.innerHTML = '<div class="backdrop" data-act="kCrownClose"></div><div class="dialog coronation">' +
-      '<p class="eyebrow">' + T('Lễ đăng quang', 'Coronation') + '</p>' + crownSvg(r, 'big-crown') +
+      '<p class="eyebrow">' + T('Lễ đăng quang', 'Coronation') + '</p>' + crownSvg(r, 'big-crown', true) +
       '<h2>' + jp(RANKS[r][3]) + '</h2><h3>' + h(rankName(r)) + '</h3><div class="reward">' + reward + '</div>' +
       '<div class="row">' + (hk ? '<button class="btn primary" data-act="kCrownUse" data-id="' + hk.id + '">' + T('Dùng màu này', 'Use this color') + '</button>' : '') +
       '<button class="btn" data-act="kCrownClose">' + T('Tiếp tục', 'Continue') + '</button></div></div>';

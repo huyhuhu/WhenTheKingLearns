@@ -262,6 +262,8 @@ ul.plain { margin: 0; padding-left: 20px; }
 .kcard, .kprofile { display: flex; align-items: center; margin-bottom: 12px; }
 .kcrown { width: 64px; height: 60px; margin-right: 14px; flex-shrink: 0; }
 .big-crown { display: block; width: 96px; height: 90px; margin: 0 auto; }
+[data-theme="dark"] .lac { fill: #4a4039; stroke: rgba(236, 230, 218, 0.35); }
+[data-theme="dark"] .lacg { fill: #4a4039; }
 .kprofile .big-crown { margin: 0 18px 0 0; flex-shrink: 0; }
 .kcard small, .kprofile small { color: var(--muted); font-weight: 700; }
 .kcard em { display: block; font-style: normal; font-size: 13px; color: var(--accent); }
