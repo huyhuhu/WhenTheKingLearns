@@ -519,3 +519,69 @@ body.pod-full { overflow: hidden; }
   .pline.vi .ptxt { font-size: 16px; }
   .pod-b { width: 38px; height: 38px; }
 }
+
+/* ---------- Tu vung ---------- */
+.vsum { margin-bottom: 14px; }
+.vsum-stats { display: flex; justify-content: space-around; text-align: center; margin-bottom: 4px; }
+.vsum-stats b { display: block; font-size: 28px; font-weight: 800; color: var(--accent); }
+.vsum-stats small { color: var(--muted); font-size: 12px; }
+.rowcard .no.vno { width: 60px; margin-right: 6px; white-space: nowrap; }
+.rowcard .no .vreg { font-size: 19px; letter-spacing: -1px; }
+.rowcard .no .vreg.long { font-size: 15px; }
+.rowcard .body small { display: block; }
+.mode.off { opacity: 0.5; }
+.vword { position: relative; display: block; color: inherit; text-decoration: none; }
+.vword.met { border-color: var(--accent); }
+.vrank { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; background: var(--raised); color: var(--muted); }
+.vword .vrank { position: absolute; top: -9px; right: 10px; }
+.vrank.r1, .vrank.r2 { background: #efe4d6; color: #8a6a45; }
+.vrank.r3, .vrank.r4 { background: #e3ecf2; color: #2b6f8f; }
+.vrank.r5, .vrank.r6 { background: #e1f0e6; color: #2f7d55; }
+.vrank.r7, .vrank.r8 { background: #efe5f7; color: #6b3fa0; }
+.vrank.r9 { background: #1b1b1f; color: #e6c35c; }
+[data-theme="dark"] .vrank.r1, [data-theme="dark"] .vrank.r2 { background: #3a2f24; color: #d9b38a; }
+[data-theme="dark"] .vrank.r3, [data-theme="dark"] .vrank.r4 { background: #1f3340; color: #8fc4dd; }
+[data-theme="dark"] .vrank.r5, [data-theme="dark"] .vrank.r6 { background: #1c3329; color: #63c394; }
+[data-theme="dark"] .vrank.r7, [data-theme="dark"] .vrank.r8 { background: #31253f; color: #c3a2e8; }
+.vprof { max-width: 620px; margin: 0 auto; }
+.vhead { text-align: center; }
+.vword-big { font-size: 52px; font-weight: 800; line-height: 1.3; }
+.vword-big .kj { color: inherit; text-decoration: none; border-bottom: 3px solid transparent; }
+.vword-big .kj.known { color: #b8860b; border-bottom-color: #e6c35c; }
+.vread { margin: 2px 0 6px; font-size: 22px; font-weight: 700; color: var(--accent); }
+.vread .icon-btn { width: 34px; height: 34px; vertical-align: middle; }
+.vmean { margin: 14px 0 8px; text-align: center; }
+.vmean span { display: block; font-size: 20px; font-weight: 700; }
+.vmean small { display: block; margin-top: 2px; }
+.vhv { display: block; font-size: 13px; letter-spacing: 1px; color: var(--muted); }
+.vtags { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 6px 0 12px; }
+.vtag { padding: 3px 10px; border-radius: 14px; background: var(--raised); font-size: 13px; }
+.vex-box { display: flex; align-items: flex-start; padding: 12px; border-radius: 10px; background: var(--raised); }
+.vex-box .vex { flex-shrink: 0; margin-right: 10px; }
+.vexj { font-size: 20px; line-height: 2; }
+.vexj ruby rt { font-size: 11px; color: var(--muted); }
+.vexj ruby.tw { color: var(--accent); font-weight: 700; }
+.vtip { margin-top: 12px; padding: 10px 12px; border-left: 4px solid #e6c35c; background: var(--raised); border-radius: 0 10px 10px 0; }
+.vtip b { font-size: 13px; color: #b8860b; }
+.vtype { display: flex; gap: 8px; margin: 10px 0; }
+.vtype .field { flex: 1; font-size: 22px; text-align: center; }
+.vres { font-size: 22px; font-weight: 700; }
+.vres.good { color: var(--ok); }
+.vres.bad { color: var(--bad); }
+.big-say { width: 64px; height: 64px; font-size: 28px; }
+.btn.small { padding: 6px 12px; font-size: 13px; }
+.vres-list { padding: 4px 14px; }
+.vres-row { display: flex; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+.vres-row:last-child { border-bottom: 0; }
+.vres-row .jp { width: 110px; font-size: 18px; font-weight: 700; }
+.vres-row span { flex: 1; color: var(--muted); }
+.vres-row.good .jp { color: var(--ok); }
+.vres-row.bad .jp { color: var(--bad); }
+.vhome i { margin-left: auto; color: var(--muted); font-style: normal; }
+.vhome .glyph { width: 50px; height: 50px; line-height: 48px; margin-right: 14px; flex-shrink: 0; text-align: center; font-size: 26px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); }
+@media (max-width: 480px) {
+  .vword-big { font-size: 42px; }
+  .vexj { font-size: 18px; }
+}
+.vword-big.long { font-size: 34px; }
+.vword-big .icon-btn { width: 34px; height: 34px; vertical-align: middle; }

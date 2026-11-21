@@ -4,15 +4,6 @@
   'use strict';
 
   window.App.section({
-    id: 'vocab',
-    name: ['Từ vựng', 'Vocabulary'],
-    glyph: '語',
-    desc: ['Từ vựng theo bài và theo cấp độ JLPT', 'Vocabulary by lesson and JLPT level'],
-    ready: false,
-    planned: [['Danh sách từ theo bài', 'Word lists by lesson'], 'Flashcard', ['Trắc nghiệm nghĩa và cách đọc', 'Quizzes on meaning and reading'], ['Ôn tập ngắt quãng (SRS)', 'Spaced repetition (SRS)']]
-  });
-
-  window.App.section({
     id: 'grammar',
     name: ['Ngữ pháp', 'Grammar'],
     glyph: '文',

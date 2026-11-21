@@ -84,5 +84,19 @@
     if (started && started['catch']) started['catch'](function () { if (current === el) finish(); });
   }
 
-  window.Speech = { say: say, norm: norm };
+  // Cau vi du cua tu vung: file audio/ex dat ten theo "tu|cach doc"; thieu thi doc bang giong trinh duyet.
+  function sayEx(key, text, el) {
+    if (window.App) window.App.emit('audio:play', { key: key });
+    if (player) { player.onended = player.onerror = null; player.pause(); }
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    if (!(window.AUDIO_EX && window.AUDIO_EX[key])) return speakWithBrowser(text, el);
+    begin(el);
+    player = new Audio('audio/ex/' + fileName(key) + '?v=' + window.AUDIO_EX[key]);
+    player.onended = function () { if (current === el) finish(); };
+    player.onerror = function () { speakWithBrowser(text, el); };
+    var started = player.play();
+    if (started && started['catch']) started['catch'](function () { if (current === el) finish(); });
+  }
+
+  window.Speech = { say: say, sayEx: sayEx, norm: norm };
 })();
