@@ -499,7 +499,7 @@
     list.sort(function (x, y) { return rec(y)[2] - rec(x)[2]; });
     for (var i = 0; i < list.length; i++) {
       var w = list[i], e = b[wkey(w)];
-      cards += '<a class="card vposter" href="' + wlink(w) + '"><span class="vp-head">' + jp('手配') + '</span><span class="vp-word' + (w[0].length > 4 ? ' long' : '') + '">' + jp(w[0]) + '</span>' +
+      cards += '<a class="card vposter" href="' + wlink(w) + '"><span class="vp-head">' + jp('手配') + '</span><span class="vp-word' + (w[0].length > 6 ? ' xlong' : w[0].length > 4 ? ' long' : '') + '">' + jp(w[0]) + '</span>' +
         (w[0] !== w[1] ? '<span class="vp-read">' + jp(w[1]) + '</span>' : '') + '<span class="vp-mean">' + h(mean(w)) + '</span>' +
         '<span class="vp-meta">' + T('Sai ', 'Missed ') + rec(w)[2] + T(' lần · ', ' times · ') + hitMarks(e[1]) + '</span>' +
         (w[10] && !App.isEn() ? '<span class="vp-tip">' + h(w[10]) + '</span>' : '') + '</a>';
