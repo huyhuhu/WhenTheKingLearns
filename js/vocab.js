@@ -476,10 +476,13 @@
       window.VocabMap.svg(list, { sel: mapSel }) + ctl + '</div>' + info + '</div>';
   }
 
-  function extraCards() {
-    var nw = wantedList().length, open = 0;
-    for (var i = 0; i < GAMES.length; i++) if (!gameLock(GAMES[i][0])) open++;
+  function extraCards(lands) {
+    var nw = wantedList().length, open = 0, ann = 0, sieged = 0, i;
+    for (i = 0; i < GAMES.length; i++) if (!gameLock(GAMES[i][0])) open++;
+    for (i = 0; i < lands.length; i++) { if (lands[i].st === 'annex' || lands[i].st === 'peace') ann++; if (lands[i].due) sieged++; }
     return '<div class="rows vextra">' +
+      '<a class="card mode" href="' + link('lands') + '">' + jp('疆', 'glyph') + '<span class="body"><b>' + T('Các vùng đất', 'The lands') + '</b><small>' +
+      T(lands.length + ' vùng · ' + ann + ' đã sáp nhập', lands.length + ' lands · ' + ann + ' annexed') + (sieged ? T(' · ' + sieged + ' bị vây', ' · ' + sieged + ' besieged') : '') + '</small></span><i>→</i></a>' +
       '<a class="card mode" href="' + link('wanted') + '">' + jp('捕', 'glyph') + '<span class="body"><b>' + T('Bảng truy nã', 'Wanted board') + '</b><small>' +
       (nw ? T(nw + ' thần dân hay quên đang bị truy nã', nw + ' forgetful subjects are wanted') : T('Chưa ai bị truy nã', 'No one is wanted')) + '</small></span><i>→</i></a>' +
       '<a class="card mode" href="' + link('games') + '">' + jp('遊', 'glyph') + '<span class="body"><b>' + T('Trò chơi nhỏ', 'Mini games') + '</b><small>' +
@@ -661,20 +664,28 @@
     return head + (id === 'feast' ? viewFeast() : viewChoice());
   }
 
+  function allLands() { var out = []; for (var i = 0; i < D().sessions.length; i++) out.push(landState(i + 1)); return out; }
   function viewLevel() {
-    var d = D(), lands = [], i;
-    for (i = 0; i < d.sessions.length; i++) lands.push(landState(i + 1));
-    var html = '<div class="hero">' + jp('語彙', 'eyebrow') + '<h1>' + T('Từ vựng N5', 'N5 Vocabulary') + '</h1><p class="sub">' +
-      d.sessions.length + T(' vùng đất · ', ' lands · ') + d.words.length + T(' thần dân', ' subjects') + '</p></div>' + summaryCard() + mapCard(lands) + bossCard() + extraCards() +
-      '<h3 class="heading">' + T('CÁC VÙNG ĐẤT', 'THE LANDS') + '</h3><div class="rows">';
-    for (i = 0; i < d.sessions.length; i++) {
-      var s = d.sessions[i], n = i + 1, L = lands[i];
-      html += '<a class="card rowcard vland" href="' + link('n5/' + n) + '"><span class="no vno">' + jp(region(n)[0], 'vreg' + (region(n)[0].length > 2 ? ' long' : '')) + '</span>' +
-        '<span class="body"><b>' + sess(n) + ' · ' + h(regionName(n)) + '</b><small class="muted">' + h(topic(n)) + '</small>' +
-        '<small class="vstory">' + h(region(n)[App.isEn() ? 6 : 5]) + '</small>' + bar(L.got, s.length) + '</span>' +
-        '<span class="meta"><b>' + L.got + '/' + s.length + '</b>' + stateChip(L.st) + '<small>' + (L.due ? L.due + T(' chờ ôn', ' due') : '&nbsp;') + '</small></span></a>';
+    var d = D(), lands = allLands();
+    return '<div class="hero">' + jp('語彙', 'eyebrow') + '<h1>' + T('Từ vựng N5', 'N5 Vocabulary') + '</h1><p class="sub">' +
+      d.sessions.length + T(' vùng đất · ', ' lands · ') + d.words.length + T(' thần dân', ' subjects') + '</p></div>' + summaryCard() + mapCard(lands) + bossCard() + extraCards(lands);
+  }
+  function viewLands() {
+    var lands = allLands(), count = {}, tiles = '', k, i;
+    for (i = 0; i < lands.length; i++) count[lands[i].st] = (count[lands[i].st] || 0) + 1;
+    var strip = '';
+    for (k in STATES) strip += '<span class="vstate st-' + k + '"><b>' + (count[k] || 0) + '</b> ' + h(App.L(STATES[k])) + '</span>';
+    for (i = 0; i < lands.length; i++) {
+      var n = i + 1, r = region(n), L = lands[i];
+      tiles += '<a class="card vtile st-' + L.st + '" href="' + link('n5/' + n) + '">' +
+        '<span class="vt-top">' + jp(r[0], 'vt-k' + (r[0].length > 2 ? ' long' : '')) + '<span class="vt-name"><small>' + sess(n) + '</small><b>' + h(App.isEn() ? r[7] : r[2]) + '</b>' +
+        '<small>' + jp(r[1]) + (App.isEn() ? '' : ' · ' + r[7]) + '</small></span>' + (L.due ? '<span class="vt-due">' + jp('敵') + ' ' + L.due + '</span>' : '') + '</span>' +
+        '<span class="vt-topic">' + h(topic(n)) + '</span><span class="vt-story">' + h(r[App.isEn() ? 6 : 5]) + '</span>' +
+        '<span class="vt-foot">' + stateChip(L.st) + '<small>' + L.got + '/' + L.total + '</small></span>' + bar(L.got, L.total) + '</a>';
     }
-    return html + '</div>';
+    return '<div class="hero">' + jp('疆域', 'eyebrow') + '<h1>' + T('Các vùng đất', 'The lands') + '</h1><p class="sub">' +
+      T('Mỗi vùng là một buổi học. Chạm vào vùng để vào học.', 'Each land is one session. Tap a land to study it.') + '</p></div>' +
+      '<div class="vstrip">' + strip + '</div><div class="grid vtiles">' + tiles + '</div>';
   }
 
   function viewSession(n) {
@@ -861,6 +872,7 @@
     if (!parts.length) return { html: viewLevel(), title: T('Từ vựng N5', 'N5 Vocabulary'), back: home.back, backLabel: home.backLabel, after: true };
     if (parts[0] === 'review' && parts.length === 1) return { html: viewReview(0), title: T('Triều kiến', 'Audience'), back: 'vocab', backLabel: T('Từ vựng', 'Vocabulary') };
     var toVocab = { back: 'vocab', backLabel: T('Từ vựng', 'Vocabulary') };
+    if (parts[0] === 'lands' && parts.length === 1) return { html: viewLands(), title: T('Các vùng đất', 'The lands'), back: toVocab.back, backLabel: toVocab.backLabel };
     if (parts[0] === 'wanted' && parts.length === 1) return { html: viewBoard(), title: T('Bảng truy nã', 'Wanted board'), back: toVocab.back, backLabel: toVocab.backLabel };
     if (parts[0] === 'wanted' && parts[1] === 'hunt' && parts.length === 2) return { html: viewHunt(), title: T('Truy bắt', 'Manhunt'), back: 'vocab/wanted', backLabel: T('Bảng truy nã', 'Wanted board'), after: true };
     if (parts[0] === 'games' && parts.length === 1) return { html: viewGames(), title: T('Trò chơi nhỏ', 'Mini games'), back: toVocab.back, backLabel: toVocab.backLabel };
@@ -869,7 +881,7 @@
     var n = parseInt(parts[1], 10);
     if (!(n >= 1 && n <= D().sessions.length)) return null;
     var html = null, label = sess(n), back = 'vocab/n5/' + n;
-    if (parts.length === 2) { html = viewSession(n); label = T('Từ vựng', 'Vocabulary'); back = 'vocab'; }
+    if (parts.length === 2) { html = viewSession(n); label = T('Các vùng đất', 'The lands'); back = 'vocab/lands'; }
     else if (parts[2] === 'list' && parts.length === 3) html = viewList(n);
     else if (parts[2] === 'learn' && parts.length === 3) html = viewLearn(n);
     else if (parts[2] === 'review' && parts.length === 3) html = viewReview(n);
