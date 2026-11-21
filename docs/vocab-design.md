@@ -171,12 +171,14 @@ Ba dạng câu, trộn ngẫu nhiên và trộn các buổi:
 
 | Trạng thái | Điều kiện | Hình ảnh trên bản đồ |
 |---|---|---|
-| Chưa khai phá | Chưa mở | Mờ, phủ sương |
-| Đang chinh phạt | Đã mở, chưa tiếp kiến hết từ | Cờ trận cắm ở biên giới |
-| Chiếm đóng | Đã tiếp kiến hết từ của buổi | Cờ vua phủ một phần, đồn trại |
-| Sáp nhập | 90% từ đạt Binh sĩ trở lên | Tô màu ấn tín của vua, có thành trì |
-| Thái bình | 100% từ đạt Trung thần | Viền vàng, hoa anh đào |
-| Bị vây | Có từ của vùng đang quá hạn ôn | Khói lửa, cờ giặc, thuyền giặc ngoài khơi |
+| Chưa khai phá | Chưa mở | Phủ sương (gạch xám) |
+| Đang chinh phạt | Đã mở, chưa tiếp kiến hết từ | Màu ấn tín nhạt |
+| Chiếm đóng | Đã tiếp kiến hết từ của buổi | Màu ấn tín vừa |
+| Sáp nhập | 90% từ đạt Binh sĩ trở lên | Màu ấn tín đậm |
+| Thái bình | 100% từ đạt Trung thần | Màu vàng, viền vàng |
+| Bị vây | Có từ của vùng trong đợt Vong quân | Gạch chéo đỏ phủ lên màu trạng thái |
+
+Bản đồ không có dấu phụ: trạng thái chỉ thể hiện bằng màu, chú giải màu nằm dưới bản đồ. Chữ tên vùng to dần khi phóng to đến khoảng 22px trên màn hình rồi giữ nguyên.
 
 - **Bản đồ không khoá việc học:** mọi buổi vẫn học tự do theo thứ tự buổi. Vùng chưa học phủ sương; học từ đầu tiên của buổi thì vùng chuyển sang Đang chinh phạt. (Khoá theo vùng kề bị bỏ vì buổi 2 Cửu Châu không giáp buổi 1 Kinh Đô.)
 

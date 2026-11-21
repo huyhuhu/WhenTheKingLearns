@@ -4,7 +4,8 @@
   var App = window.App, M = window.MAP_JAPAN;
   if (!M) return;
   var view = null, onTap = null, frame = 0;
-  var MARK = { war: '戦', held: '営', annex: '城', peace: '桜' };
+  var LABEL_MAX = 22, LABEL_FS = 52, GOLD = '#d4a017';
+  var TINT = { war: 0.3, held: 0.55, annex: 0.85, peace: 0.85 };
 
   function full() { return [0, 0, M.w, M.h]; }
   function zoomed() { return view && view[2] < M.w - 1; }
@@ -18,6 +19,13 @@
     svg.setAttribute('viewBox', view.join(' '));
     svg.setAttribute('class', 'vmap' + (view[2] < M.w / 1.7 ? ' z2' : ''));
     svg.style.touchAction = zoomed() ? 'none' : 'pan-y';
+    // Chu lon dan theo do phong to den LABEL_MAX px tren man hinh roi giu nguyen
+    var ppu = svg.getBoundingClientRect().width / view[2], k = Math.min(1, LABEL_MAX / (LABEL_FS * ppu));
+    var labs = svg.querySelectorAll('.vlab');
+    for (var i = 0; i < labs.length; i++) {
+      var x = labs[i].getAttribute('data-x'), y = labs[i].getAttribute('data-y');
+      labs[i].setAttribute('transform', k < 1 ? 'translate(' + x + ' ' + y + ') scale(' + k.toFixed(3) + ') translate(' + -x + ' ' + -y + ')' : '');
+    }
   }
   function schedule() {
     if (frame) return;
@@ -123,35 +131,44 @@
     return out;
   }
 
+  // Trang thai chi the hien bang mau: dam dan theo mau an tin, Thai binh mau vang
+  function fills() {
+    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    var land = dark ? '#3b362e' : '#efe5cf', seal = App.hanko().bg;
+    var out = { wild: '' };
+    for (var st in TINT) out[st] = mix(st === 'peace' ? GOLD : seal, land, TINT[st]);
+    return out;
+  }
+
   // lands[i] = { st, due, kanji, name }; opts = { sel, locked }
   function svg(lands, opts) {
-    var h = App.h, dark = document.documentElement.getAttribute('data-theme') === 'dark';
-    var land = dark ? '#3b362e' : '#efe5cf', seal = App.hanko().bg;
-    var i, s = '', regions = '', fog = '', labels = '', clips = '', peace = '';
+    var h = App.h, F = fills();
+    var i, s = '', regions = '', fog = '', labels = '', clips = '', peace = '', siege = '', tints = '', seal = App.hanko().bg;
     var r = 40, sea = '<pattern id="vSea" width="' + 2 * r + '" height="' + r + '" patternUnits="userSpaceOnUse">';
     [[0, 0], [2 * r, 0], [r, r / 2], [0, r], [2 * r, r]].forEach(function (c) {
       sea += '<g class="wave">';
       for (var k = 4; k >= 1; k--) sea += '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="' + (r * k / 4 - 1) + '"/>';
       sea += '</g>';
     });
-    sea += '</pattern><pattern id="vFog" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><path class="fogline" d="M0 0V22"/></pattern>';
+    sea += '</pattern><pattern id="vFog" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><path class="fogline" d="M0 0V22"/></pattern>' +
+      '<pattern id="vSiege" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><path class="siegeline" d="M0 0V26"/></pattern>';
 
     for (i = 0; i < M.regions.length; i++) {
       var g = M.regions[i], L = lands[i], n = i + 1, st = opts.locked ? 'wild' : L.st;
-      var fill = st === 'held' ? mix(seal, land, 0.3) : st === 'annex' ? mix(seal, land, 0.62) : st === 'peace' ? mix(seal, land, 0.85) : '';
-      regions += '<path id="vr' + n + '" class="vr st-' + st + '" data-r="' + n + '" d="' + g.d + '"' + (fill ? ' style="fill:' + fill + ';stroke:' + fill + '"' : '') + '/>';
+      var fill = F[st];
+      // Mau qua bien --f: style truc tiep se de len cac lop <use> ve chong
+      regions += '<path id="vr' + n + '" class="vr st-' + st + (fill ? ' tint' : '') + '" data-r="' + n + '" d="' + g.d + '"' + (fill ? ' style="--f:' + fill + '"' : '') + '/>';
       clips += '<use xlink:href="#vr' + n + '"/>';
       if (st === 'wild') fog += '<use xlink:href="#vr' + n + '" class="vfog"/>';
+      // Lop mau mong tren anh dia hinh, de cac muc van tach ro khi dia hinh lam toi mau
+      else if (fill) tints += '<path class="vtint" d="' + g.d + '" style="fill:' + (st === 'peace' ? GOLD : seal) + ';fill-opacity:' + (TINT[st] * 0.6).toFixed(2) + '"/>';
       if (st === 'peace') peace += '<use xlink:href="#vr' + n + '" class="vpeace"/>';
       if (opts.locked) continue;
+      if (L.due) siege += '<use xlink:href="#vr' + n + '" class="vsiegefill"/>';
       var chars = L.kanji.split(''), fs = chars.length > 2 ? 44 : 52, y0 = g.y - (chars.length - 1) * fs / 2;
-      labels += '<g class="vlab' + (opts.sel === n ? ' on' : '') + '" data-r="' + n + '">';
+      labels += '<g class="vlab' + (opts.sel === n ? ' on' : '') + '" data-r="' + n + '" data-x="' + g.x + '" data-y="' + g.y + '">';
       for (var c = 0; c < chars.length; c++) labels += '<text class="vk" x="' + g.x + '" y="' + (y0 + c * fs + fs * 0.36) + '" style="font-size:' + fs + 'px">' + chars[c] + '</text>';
-      labels += '<text class="vn" x="' + g.x + '" y="' + (y0 + chars.length * fs + 8) + '">' + h(L.name) + '</text>';
-      var mk = MARK[st], Z = 56, mx = g.x + fs * 0.6, my = y0 - fs * 0.5;
-      if (mk) labels += '<g class="vmark st-' + st + '"><rect x="' + mx + '" y="' + my + '" width="' + Z + '" height="' + Z + '" rx="8"/><text x="' + (mx + Z / 2) + '" y="' + (my + Z * 0.74) + '">' + mk + '</text></g>';
-      if (L.due) labels += '<g class="vsiege"><rect x="' + (g.x - fs * 0.6 - Z) + '" y="' + my + '" width="' + Z + '" height="' + Z + '" rx="8"/><text x="' + (g.x - fs * 0.6 - Z / 2) + '" y="' + (my + Z * 0.74) + '">敵</text></g>';
-      labels += '</g>';
+      labels += '<text class="vn" x="' + g.x + '" y="' + (y0 + chars.length * fs + 8) + '">' + h(L.name) + '</text></g>';
     }
     var sel = opts.sel && !opts.locked ? '<use xlink:href="#vr' + opts.sel + '" class="vsel"/>' : '';
     var ins = M.inset;
@@ -173,7 +190,7 @@
       '<rect class="vinset" x="' + ins[0] + '" y="' + ins[1] + '" width="' + ins[2] + '" height="' + ins[3] + '"/>' +
       '<path class="vother" d="' + M.others + '"/>' + regions + '<path class="vwild" d="' + M.wild + '"/>' +
       '<image class="vrelief" xlink:href="data/map-relief.webp?v=1" x="0" y="0" width="' + M.w + '" height="' + M.h + '" clip-path="url(#vLand)" preserveAspectRatio="none"/>' +
-      fog + '<path class="vlake" d="' + M.lakes + '"/><path class="vriver" d="' + M.rivers + '"/><path class="vpref" d="' + M.prefs + '"/>' +
+      fog + tints + siege + '<path class="vlake" d="' + M.lakes + '"/><path class="vriver" d="' + M.rivers + '"/><path class="vpref" d="' + M.prefs + '"/>' +
       '<path class="vborder" d="' + M.borders + '"/><path class="vcoast" d="' + M.coast + '"/>' + peace + sel + title + compass + labels + '</svg>';
     return s;
   }
@@ -181,6 +198,7 @@
   window.VocabMap = {
     svg: svg,
     bind: bind,
+    fills: fills,
     zoom: function (f) {
       var el = document.getElementById('vMap');
       if (!el || !view) return;

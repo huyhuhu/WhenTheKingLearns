@@ -459,8 +459,9 @@
         '<a class="btn primary" href="' + link('n5/' + mapSel) + '">' + sess(mapSel) + ' · ' + h(topic(mapSel)) + ' →</a></div>';
     } else {
       info = '<div class="vmap-info vmap-key">';
-      for (var k in STATES) info += stateChip(k);
-      info += '<span class="vstate st-siege">' + T('敵 Bị Vong quân vây', '敵 Besieged by Oblivion') + '</span><p class="muted">' + T('Chạm vào một vùng để xem.', 'Tap a land to see it.') + '</p></div>';
+      var F = window.VocabMap.fills();
+      for (var k in STATES) info += '<span class="vkey"><i class="sw-' + k + '"' + (F[k] ? ' style="background:' + F[k] + '"' : '') + '></i>' + h(App.L(STATES[k])) + '</span>';
+      info += '<span class="vkey"><i class="sw-siege"></i>' + T('Bị Vong quân vây', 'Besieged by Oblivion') + '</span><p class="muted">' + T('Chạm vào một vùng để xem.', 'Tap a land to see it.') + '</p></div>';
     }
     var ctl = '<div class="vmap-ctl"><button class="icon-btn" data-act="vZoom" data-z="1.6" title="' + T('Phóng to', 'Zoom in') + '">+</button>' +
       '<button class="icon-btn" data-act="vZoom" data-z="0.625" title="' + T('Thu nhỏ', 'Zoom out') + '">−</button>' +
