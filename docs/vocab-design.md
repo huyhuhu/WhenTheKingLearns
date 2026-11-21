@@ -182,7 +182,7 @@ Ba dạng câu, trộn ngẫu nhiên và trộn các buổi:
 ### 6.3 Vong quân
 
 - Mỗi ngày, các từ **đã quá hạn ôn** thành một **đợt giặc**, đổ bộ vào vùng chứa những từ đó.
-- **Mỗi đợt tối đa 20 từ.** Từ quá hạn còn lại xếp hàng cho đợt sau, không hiện hết cùng lúc.
+- **Mỗi đợt tối đa 20 từ**, từ quá hạn lâu nhất vào trước. Từ quá hạn còn lại xếp hàng; đợt sau chỉ đến khi đợt trước đã bị đẩy lui. Số từ chờ ôn, dấu 敵 trên bản đồ và Triều kiến chỉ tính các từ trong đợt hiện tại.
 - Triều kiến đúng các từ đó là **giải vây**. Giải vây hết đợt trong ngày được thưởng **Thủ thành** (Uy vọng, mục 9).
 - **Không bao giờ trừ điểm:** vùng bị vây chỉ đổi hình ảnh, trạng thái Sáp nhập và danh xưng Quốc thế vẫn giữ. Chiếm lại vùng đã bị vây từ 3 ngày trở lên được thêm thưởng **Quang phục**.
 - **Hưu chiến:** khi vua vắng từ 7 ngày trở lên rồi quay lại, ba ngày đầu mỗi đợt chỉ 10 từ, và Thái phó có lời chào "Bệ hạ hồi cung".
@@ -330,7 +330,7 @@ Hai điện mới: **民 Thần dân** và **疆 Bờ cõi**. Ký hiệu độ h
 | B2–B5 | Mở cõi I–IV | Sáp nhập 1 / 4 / 8 / 16 vùng | 🟤 ⚪ 🟡 💎 Danh hiệu "Thiên hạ nhân" ở B5 |
 | B6–B8 | Thủ thành I–III | Thủ thành 10 / 100 / 365 ngày | 🟤 ⚪ 🟡 |
 | B9–B11 | Phá Vong tướng I–III | Hạ 1 / 4 / 12 Vong tướng | 🟤 ⚪ 🟡 |
-| B12 | Biên cương yên bình | 30 ngày liên tiếp kết thúc ngày không vùng nào bị vây | 🟡 |
+| B12 | Biên cương yên bình | 30 ngày liên tiếp có lúc không còn từ nào quá hạn (web không chạy lúc nửa đêm nên không đo được "cuối ngày") | 🟡 |
 | B13 | Quang phục | Chiếm lại một vùng bị vây từ 3 ngày trở lên | 🟤 |
 | B14 | Nam chí Bắc | Sáp nhập cả Cửu Châu và Bắc Hải Đạo | ⚪ |
 | B15 🔒 | Vua của các vua | Gợi ý "Một vương quốc nằm ngoài khơi". Sáp nhập Xung Thằng | ⚪ |
@@ -374,9 +374,13 @@ vocab: {
   w: { "<mã từ>": [bậc, hạn ôn, số lần sai, chuỗi đúng, lần ôn cuối] },
   daily: 10,                      // hạn mức từ mới, kèm thời điểm chọn
   wanted: [...],                  // Bảng truy nã
-  boss: { "2026-W48": 37 }        // sát thương lên Vong tướng theo tuần
+  wave: { d, t, k: [...] },       // đợt Vong quân hiện tại: ngày, lúc đến, mã từ
+  truce: [hết hạn, lúc đặt],      // hưu chiến
+  annex: { "3": thời điểm }       // vùng đã sáp nhập, giữ mãi
 }
 ```
+
+- **Vong tướng, Thủ thành, Quang phục, Biên cương** lưu trong `king`: sát thương là bộ đếm ngày `vdmg` (cộng theo tuần), các ngày/tuần đã đạt nằm ở `seen.boss`, `seen.repel`, `seen.restore`, `seen.calm`.
 
 - **Gộp từng từ:** giữ bản có "lần ôn cuối" mới hơn.
 - **Bộ đếm, Uy vọng, thành tựu:** dùng cơ chế nhánh thiết bị sẵn có trong `king`.

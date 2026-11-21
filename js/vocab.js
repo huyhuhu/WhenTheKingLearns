@@ -77,9 +77,9 @@
     wild: ['Chưa khai phá', 'Unexplored'], war: ['Đang chinh phạt', 'On campaign'], held: ['Chiếm đóng', 'Occupied'],
     annex: ['Sáp nhập', 'Annexed'], peace: ['Thái bình', 'At peace']
   };
-  var MAP_RANK = 3;
+  var MAP_RANK = 3, WAVE = 20, TRUCE_WAVE = 10;
 
-  var learn = null, review = null, curMode = '', mapSel = 0;
+  var learn = null, review = null, curMode = '', mapSel = 0, calmDay = 0, byKey = null;
 
   // ---------- du lieu ----------
   function D() { return DATA.n5; }
@@ -129,6 +129,71 @@
     for (var i = 0; i < s.length; i++) if (s[i].indexOf(idx) >= 0) return i + 1;
     return 1;
   }
+  function wordOf(k) {
+    if (!byKey) { byKey = {}; for (var i = 0; i < D().words.length; i++) byKey[wkey(D().words[i])] = D().words[i]; }
+    return byKey[k];
+  }
+  function lastActive() { var m = 0, all = V().w; for (var k in all) if (all[k][4] > m) m = all[k][4]; return m; }
+  function truceOn() { var t = V().truce; return !!t && Date.now() < t[0]; }
+
+  // ---------- Vong quan ----------
+  function waveLeft(w) {
+    var out = [], now = Date.now();
+    if (!w) return out;
+    for (var i = 0; i < w.k.length; i++) {
+      var x = wordOf(w.k[i]);
+      if (x && isDue(rec(x), now)) out.push(x);
+    }
+    return out;
+  }
+  // Dot sau chi den khi dot truoc da bi day lui het
+  function wave() {
+    var v = V(), w = v.wave, today = dayStart(), now = Date.now(), fresh = !w || w.d !== today;
+    if (fresh) {
+      var last = lastActive();
+      // Tru 2 gio cho ngay doi gio mua he
+      if (last && today - new Date(last).setHours(0, 0, 0, 0) >= 7 * DAY - 2 * HOUR) v.truce = [today + 3 * DAY, now];
+    }
+    if (!fresh && waveLeft(w).length) return w;
+    var od = dueList();
+    if (!od.length && calmDay !== today && Object.keys(v.w).length) { calmDay = today; App.emit('map:calm'); }
+    if (!fresh && !od.length) return w;
+    od.sort(function (a, b) { return rec(a)[1] - rec(b)[1]; });
+    v.wave = { d: today, t: now, k: od.slice(0, truceOn() ? TRUCE_WAVE : WAVE).map(wkey) };
+    return v.wave;
+  }
+  function besieged(ids) {
+    var left = waveLeft(wave());
+    if (!ids) return left;
+    var set = {}, out = [], i;
+    for (i = 0; i < ids.length; i++) set[wkey(D().words[ids[i]])] = 1;
+    for (i = 0; i < left.length; i++) if (set[wkey(left[i])]) out.push(left[i]);
+    return out;
+  }
+  function siegeSince() {
+    var out = [], s = D().sessions, now = Date.now();
+    for (var i = 0; i < s.length; i++) {
+      var min = 0;
+      for (var j = 0; j < s[i].length; j++) {
+        var r = rec(D().words[s[i][j]]);
+        if (isDue(r, now) && (!min || r[1] < min)) min = r[1];
+      }
+      out.push(min);
+    }
+    return out;
+  }
+  function landLabel(n) { var r = region(n); return r[0] + ' ' + (App.isEn() ? r[7] : r[2]); }
+  function checkLands(silent) {
+    var v = V(), total = D().sessions.length;
+    if (!v.annex) v.annex = {};
+    for (var n = 1; n <= total; n++) {
+      if (v.annex[n]) continue;
+      var st = landState(n).st;
+      if (st !== 'annex' && st !== 'peace') continue;
+      v.annex[n] = Date.now();
+      if (!silent) App.emit('map:region', { n: n, st: 'annex', name: landLabel(n), all: Object.keys(v.annex).length === total });
+    }
+  }
 
   function grade(w, ok) {
     var k = wkey(w), r = V().w[k], now = Date.now();
@@ -155,6 +220,14 @@
     for (k in bw) if (!out.w[k] || bw[k][4] > out.w[k][4]) out.w[k] = bw[k];
     var ad = a.daily, bd = b.daily;
     if (ad || bd) out.daily = !ad ? bd : !bd ? ad : (bd[1] > ad[1] ? bd : ad);
+    var at = a.truce, bt = b.truce;
+    if (at || bt) out.truce = !at ? bt : !bt ? at : (bt[1] > at[1] ? bt : at);
+    var aw2 = a.wave, bw2 = b.wave;
+    if (aw2 || bw2) out.wave = !aw2 ? bw2 : !bw2 ? aw2 : (bw2.t > aw2.t ? bw2 : aw2);
+    var an = {}, has = false;
+    for (k in a.annex || {}) { an[k] = a.annex[k]; has = true; }
+    for (k in b.annex || {}) { an[k] = an[k] ? Math.min(an[k], b.annex[k]) : b.annex[k]; has = true; }
+    if (has) out.annex = an;
     return out;
   });
 
@@ -275,16 +348,31 @@
 
   // ---------- man hinh ----------
   function summaryCard() {
-    var due = dueList().length, left = newLeft(), open = firstOpenSession(), nd = nextDue();
+    var due = besieged().length, queued = Math.max(0, dueList().length - due), left = newLeft(), open = firstOpenSession(), nd = nextDue();
     var wait = !due && nd ? T('Lần triều kiến tới: ', 'Next audience: ') + new Date(nd).toLocaleString() : '';
+    var notes = (truceOn() ? '<p class="note center vtruce">' + T('Thái phó: "Bệ hạ hồi cung! Mấy ngày đầu, mỗi đợt Vong quân chỉ ' + TRUCE_WAVE + ' tên."',
+      'Tutor: "Welcome back, Your Majesty! For the first days, each Oblivion wave has only ' + TRUCE_WAVE + ' soldiers."') + '</p>' : '') +
+      (queued ? '<p class="note center">' + T(queued + ' thần dân khác xếp hàng chờ đợt sau', queued + ' more subjects wait for the next wave') + '</p>' : '') +
+      (wait ? '<p class="note center">' + h(wait) + '</p>' : '');
     return '<div class="card vsum"><div class="vsum-stats">' +
       '<span><b>' + Object.keys(V().w).length + '</b><small>' + T('thần dân', 'subjects') + '</small></span>' +
-      '<span><b>' + due + '</b><small>' + T('chờ triều kiến', 'awaiting audience') + '</small></span>' +
+      '<span><b>' + due + '</b><small>' + (mapOpen() ? T('bị Vong quân vây', 'besieged') : T('chờ triều kiến', 'awaiting audience')) + '</small></span>' +
       '<span><b>' + left + '</b><small>' + T('từ mới còn hôm nay', 'new words left today') + '</small></span></div>' +
       '<div class="row">' +
-      (due ? '<a class="btn primary" href="' + link('review') + '">' + T('Triều kiến', 'Hold audience') + ' (' + Math.min(due, ROUND) + ')</a>' : '') +
+      (due ? '<a class="btn primary" href="' + link('review') + '">' + T('Triều kiến', 'Hold audience') + ' (' + due + ')</a>' : '') +
       (left && open ? '<a class="btn' + (due ? '' : ' primary') + '" href="' + link('n5/' + open + '/learn') + '">' + T('Tiếp kiến thần dân mới', 'Meet new subjects') + '</a>' : '') +
-      '</div>' + (wait ? '<p class="note center">' + h(wait) + '</p>' : '') + '</div>';
+      '</div>' + notes + '</div>';
+  }
+  function bossCard() {
+    var b = App.king && App.king.boss ? App.king.boss() : null;
+    if (!b || !mapOpen()) return '';
+    var hp = Math.max(0, b.hp - b.dmg);
+    return '<div class="card vboss' + (b.down ? ' down' : '') + '">' + jp(b.kanji, 'vboss-k') + '<span class="body"><small>' + T('Vong tướng tuần này', 'This week\'s Oblivion General') + '</small>' +
+      '<b>' + h(App.L(b.name)) + '</b><div class="bar vhp"><i style="width:' + Math.round(hp * 100 / b.hp) + '%"></i></div>' +
+      '<small>' + (b.down ? T('Đã bị hạ · +100 Uy vọng', 'Defeated · +100 Prestige')
+        : T('Máu ' + hp + '/' + b.hp + ' · mỗi câu Triều kiến đúng là một đòn · còn ' + b.daysLeft + ' ngày',
+          'HP ' + hp + '/' + b.hp + ' · each correct audience answer is a blow · ' + b.daysLeft + ' days left')) + '</small></span>' +
+      (b.down ? '<span class="seal r2 vboss-stamp"><span class="jp" lang="ja">討</span></span>' : '') + '</div>';
   }
 
   // Bac 5 (Binh si) tro len tinh la vung da vung; bac 9 la Trung than dien
@@ -297,8 +385,10 @@
       if (r[0] >= 5) sol++;
       if (r[0] >= BURNED) burned++;
     }
-    var st = !got ? 'wild' : got < ids.length ? 'war' : burned === ids.length ? 'peace' : sol >= 0.9 * ids.length ? 'annex' : 'held';
-    return { st: st, got: got, total: ids.length, due: dueList(ids).length };
+    // Da sap nhap thi giu nguyen du sau nay co tu bi ha bac
+    var kept = V().annex && V().annex[n];
+    var st = !got ? 'wild' : got < ids.length ? 'war' : burned === ids.length ? 'peace' : (kept || sol >= 0.9 * ids.length) ? 'annex' : 'held';
+    return { st: st, got: got, total: ids.length, due: besieged(ids).length };
   }
   function mapOpen() { return !App.king || App.king.rankOf(App.king.totalXp()) >= MAP_RANK; }
   function stateChip(st) { return '<span class="vstate st-' + st + '">' + h(App.L(STATES[st])) + '</span>'; }
@@ -327,7 +417,10 @@
       return '<div class="card vmapcard locked"><div class="vmap-box">' + window.VocabMap.svg(list, { locked: true }) +
         '<div class="vmap-lock">' + jp('🔒') + '<b>' + T('Đăng quang Tân vương để mở bản đồ vương quốc', 'Be crowned New King to open the map of your realm') + '</b></div></div></div>';
     }
-    return '<div class="card vmapcard"><h3>' + T('BẢN ĐỒ VƯƠNG QUỐC', 'MAP OF THE REALM') + '</h3><div class="vmap-box">' +
+    var rl = App.king && App.king.realm ? App.king.realm() : null;
+    return '<div class="card vmapcard"><h3>' + T('BẢN ĐỒ VƯƠNG QUỐC', 'MAP OF THE REALM') + '</h3>' +
+      (rl ? '<p class="vrealm">' + jp(rl.kanji) + ' <b>' + h(rl.name) + '</b> <small class="muted">' + rl.n + '/' + lands.length + T(' vùng sáp nhập', ' lands annexed') +
+        (rl.next ? T(' · ' + rl.next + ' vùng để lên bậc', ' · ' + rl.next + ' for the next title') : '') + '</small></p>' : '') + '<div class="vmap-box">' +
       window.VocabMap.svg(list, { sel: mapSel }) + ctl + '</div>' + info + '</div>';
   }
 
@@ -335,7 +428,7 @@
     var d = D(), lands = [], i;
     for (i = 0; i < d.sessions.length; i++) lands.push(landState(i + 1));
     var html = '<div class="hero">' + jp('語彙', 'eyebrow') + '<h1>' + T('Từ vựng N5', 'N5 Vocabulary') + '</h1><p class="sub">' +
-      d.sessions.length + T(' vùng đất · ', ' lands · ') + d.words.length + T(' thần dân', ' subjects') + '</p></div>' + summaryCard() + mapCard(lands) +
+      d.sessions.length + T(' vùng đất · ', ' lands · ') + d.words.length + T(' thần dân', ' subjects') + '</p></div>' + summaryCard() + mapCard(lands) + bossCard() +
       '<h3 class="heading">' + T('CÁC VÙNG ĐẤT', 'THE LANDS') + '</h3><div class="rows">';
     for (i = 0; i < d.sessions.length; i++) {
       var s = d.sessions[i], n = i + 1, L = lands[i];
@@ -348,7 +441,7 @@
   }
 
   function viewSession(n) {
-    var s = D().sessions[n - 1], r = region(n), due = dueList(s).length, left = Math.min(newLeft(), unlearned(s).length);
+    var s = D().sessions[n - 1], r = region(n), due = besieged(s).length, left = Math.min(newLeft(), unlearned(s).length);
     function mode(path, glyph, name, note, off) {
       return off ? '<span class="card mode off">' + jp(glyph, 'glyph') + '<span class="body"><b>' + name + '</b><small>' + note + '</small></span></span>'
         : '<a class="card mode" href="' + link('n5/' + n + '/' + path) + '">' + jp(glyph, 'glyph') + '<span class="body"><b>' + name + '</b><small>' + note + '</small></span><i>→</i></a>';
@@ -489,8 +582,8 @@
 
   // ---------- trieu kien ----------
   function startReview(n) {
-    var list = shuffle(dueList(n ? D().sessions[n - 1] : null)).slice(0, ROUND);
-    review = { n: n || 0, list: list, quiz: list.length ? makeQuestions(list) : null, result: null };
+    var list = shuffle(besieged(n ? D().sessions[n - 1] : null)).slice(0, ROUND);
+    review = { n: n || 0, list: list, quiz: list.length ? makeQuestions(list) : null, result: null, repelled: false };
   }
   function viewReview(n) {
     if (!review || review.n !== (n || 0)) startReview(n);
@@ -506,10 +599,12 @@
         if (x.ok) up++; else down++;
         rows += '<a class="vres-row ' + (x.ok ? 'good' : 'bad') + '" href="' + wlink(x.w) + '">' + jp(x.w[0]) + '<span>' + h(mean(x.w)) + '</span>' + rankBadge(stage(x.w)) + '</a>';
       }
+      var more = besieged(n ? D().sessions[n - 1] : null).length;
       return head + '<div class="hero"><h1>' + up + '/' + review.result.length + '</h1><p class="sub">' +
-        T(up + ' thần dân được thăng hàm, ' + down + ' cần ôn lại', up + ' promoted, ' + down + ' need more practice') + '</p></div>' +
+        T(up + ' thần dân được thăng hàm, ' + down + ' cần ôn lại', up + ' promoted, ' + down + ' need more practice') + '</p>' +
+        (review.repelled ? '<p class="vrepel">' + jp('守') + ' ' + T('Đã đẩy lui đợt Vong quân!', 'The Oblivion wave is repelled!') + '</p>' : '') + '</div>' +
         '<div class="card narrow vres-list">' + rows + '</div>' +
-        '<div class="row">' + (dueList(n ? D().sessions[n - 1] : null).length ? '<button class="btn primary" data-act="vReviewMore">' + T('Triều kiến tiếp', 'Continue') + '</button>' : '') +
+        '<div class="row">' + (more ? '<button class="btn primary" data-act="vReviewMore">' + (review.repelled ? T('Đánh đợt tiếp theo', 'Fight the next wave') : T('Triều kiến tiếp', 'Continue')) + ' (' + more + ')</button>' : '') +
         '<a class="btn" href="' + link(n ? 'n5/' + n : '') + '">' + T('Quay lại', 'Back') + '</a></div>';
     }
     return head + viewQuestion(review.quiz);
@@ -564,10 +659,13 @@
       seen[k] = 1; list.push(q.qs[i].w);
     }
     if (curMode === 'learn') {
+      var ids = D().sessions[learn.n - 1], had = countLearned(ids);
       for (i = 0; i < list.length; i++) enlist(list[i]);
       learn.phase = 'done';
       App.emit('word:learnEnd', { n: learn.n, count: list.length });
+      if (had < ids.length && countLearned(ids) === ids.length) App.emit('map:region', { n: learn.n, st: 'held', name: landLabel(learn.n) });
     } else {
+      var w = V().wave, wasLeft = waveLeft(w).length, since = siegeSince(), now = Date.now();
       review.result = [];
       for (i = 0; i < list.length; i++) {
         var ok = !q.failed[wkey(list[i])];
@@ -575,6 +673,13 @@
         review.result.push({ w: list[i], ok: ok });
       }
       App.emit('word:reviewEnd', { count: list.length, right: list.length - Object.keys(q.failed).length });
+      if (wasLeft && !waveLeft(w).length) { review.repelled = true; App.emit('map:repel', { count: w.k.length }); }
+      var after = siegeSince();
+      for (i = 0; i < since.length; i++) {
+        if (since[i] && !after[i] && now - since[i] >= 3 * DAY) App.emit('map:restore', { n: i + 1, name: landLabel(i + 1) });
+      }
+      checkLands(false);
+      wave();
     }
     App.saveProgress();
   }
@@ -636,6 +741,8 @@
     if ((e.key === 'Enter' || e.keyCode === 13) && e.target && e.target.id === 'vInput') { e.preventDefault(); A.vSubmit(); }
   });
 
+  App.on(function (type) { if (type === 'start' && D()) checkLands(true); });
+
   App.addSettingsRow(function (setRow, seg) {
     var cur = dailyLimit(), items = [];
     [5, 10, 15, 20].forEach(function (n) { items.push([String(n), 'vDaily' + n, cur === n]); });
@@ -660,12 +767,15 @@
       if (el) el.focus();
     },
     home: function () {
-      var due = D() ? dueList().length : 0;
-      if (!due) return '';
+      var left = D() ? besieged() : [];
+      if (!left.length) return '';
+      var lands = {}, nl = 0;
+      for (var i = 0; i < left.length; i++) { var n = sessionOf(left[i]); if (!lands[n]) { lands[n] = 1; nl++; } }
       return '<a class="card kcard vhome" href="' + link('review') + '">' + jp('朝', 'glyph') + '<span class="body"><small>' + T('Triều kiến', 'Audience') + '</small><b>' +
-        due + T(' thần dân chờ vào chầu', ' subjects await your audience') + '</b></span><i>→</i></a>';
+        left.length + T(' thần dân chờ vào chầu', ' subjects await your audience') + '</b>' +
+        (mapOpen() ? '<em>' + T('Vong quân đang vây ' + nl + ' vùng', 'The Oblivion Army besieges ' + nl + (nl > 1 ? ' lands' : ' land')) + '</em>' : '') + '</span><i>→</i></a>';
     },
-    badge: function () { return D() ? dueList().length > 0 : false; },
+    badge: function () { return D() ? besieged().length > 0 : false; },
     stat: function () {
       if (!D()) return '';
       return T('Đã tiếp kiến ', 'Met ') + Object.keys(V().w).length + '/' + D().words.length + T(' từ', ' words');
