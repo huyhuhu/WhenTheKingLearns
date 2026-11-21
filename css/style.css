@@ -476,6 +476,11 @@ body.pod-full { overflow: hidden; }
 .pod-rates span { margin-right: 4px; font-size: 12px; font-weight: 700; color: var(--muted); }
 .pod-rates button { padding: 5px 9px; font-size: 13px; }
 .pod-rates button.on { background: var(--accent); color: var(--accent-ink); }
+.pod-opts .pico { display: inline-block; width: 13px; height: 13px; margin-right: 4px; vertical-align: -2px; }
+#podSleep span { font-variant-numeric: tabular-nums; }
+.pod-sleeps { white-space: nowrap; }
+.pod-sleeps button { margin: 0 2px; padding: 5px 8px; }
+.pod-sleeps > .pico { width: 15px; height: 15px; margin-right: 2px; color: var(--muted); }
 .pod-start, .pod-inter {
   position: absolute; top: 42%; left: 50%; z-index: 2; display: flex; align-items: center; white-space: nowrap;
   -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);

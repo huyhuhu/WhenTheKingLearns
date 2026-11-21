@@ -8,6 +8,8 @@
   var PREF_KEY = 'wtkl.podcast';
   var CACHE = 'wtkl-podcast-v1';
   var RATES = [0.5, 0.75, 0.9, 1, 1.25, 1.5];
+  var SLEEPS = [15, 30, 60, 120, 180];
+  var FADE_MS = 10000;
   var FORMATS = {
     dialogue: ['Hội thoại', 'Dialogue'], story: ['Truyện kể', 'Story'], news: ['Bản tin', 'News'],
     shadow: ['Luyện nói', 'Speaking'], lesson: ['Bài giảng', 'Lesson'], fact: ['Kiến thức', 'Facts']
@@ -24,7 +26,8 @@
     list: '<path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/>',
     down: '<path d="M6 9l6 6 6-6"/>',
     back: '<path d="M15 5l-7 7 7 7"/>',
-    close: '<path d="M6 6l12 12M18 6L6 18"/>'
+    close: '<path d="M6 6l12 12M18 6L6 18"/>',
+    moon: '<path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/>'
   };
 
   var byId = {};
@@ -40,7 +43,8 @@
   var blocked = false, audioErr = false, heardMarked = false, prefetched = false;
   var lastTick = 0, listenAcc = 0, lastSave = 0, lastFrame = 0, unholdTimer = null;
   var JINGLE = 'audio/jingle.mp3?v=2', jingleSrc = JINGLE, jingleBusy = false, interlude = false, pendingStart = null;
-  var topic = '', dlStatus = '', rateOpen = false;
+  var topic = '', dlStatus = '', rateOpen = false, sleepOpen = false;
+  var sleepPick = 0, sleepLeft = 0, sleepLast = 0, sleepTimer = null;
 
   // ---------- luu tru ----------
   function readPrefs() {
@@ -157,7 +161,7 @@
       blobUrl = url.indexOf('blob:') === 0 ? url : null;
       audio.src = url;
       if (old && old !== blobUrl) URL.revokeObjectURL(old);
-      audio.loop = prefs.repeat;
+      audio.loop = loopOn();
       audio.defaultPlaybackRate = audio.playbackRate = prefs.rate;
       if (startAt) {
         audio.addEventListener('loadedmetadata', function seekOnce() {
@@ -235,8 +239,9 @@
     played.push(cur.id);
     loadToken++;
     cur = lyric = pendingStart = null;
-    interlude = blocked = audioErr = false;
+    interlude = blocked = audioErr = sleepOpen = false;
     audio.pause();
+    setSleep(0);
     audio.removeAttribute('src');
     audio.load();
     if (blobUrl) { URL.revokeObjectURL(blobUrl); blobUrl = null; }
@@ -262,9 +267,41 @@
     savePrefs();
   }
 
+  // ---------- hen gio tat ----------
+  function loopOn() { return prefs.repeat && sleepPick !== 'end'; }
+  function setSleep(pick) {
+    sleepPick = pick;
+    sleepLeft = typeof pick === 'number' ? pick * 60000 : 0;
+    sleepLast = audio.paused ? 0 : Date.now();
+    audio.volume = 1;
+    audio.loop = loopOn() && !interlude;
+  }
+  function sleepLabel() {
+    if (sleepPick === 'end') return T('Hết tập', 'End of ep.');
+    if (!sleepLeft) return T('Hẹn giờ', 'Timer');
+    var s = Math.ceil(sleepLeft / 1000), hr = Math.floor(s / 3600);
+    return hr ? hr + ':' + ('0' + Math.floor(s % 3600 / 60)).slice(-2) + ':' + ('0' + s % 60).slice(-2) : fmtTime(s);
+  }
+  // Chi tru thoi gian khi dang phat; goi tu timeupdate nen van chay khi tat man hinh
+  function sleepTick() {
+    if (!sleepLeft) return;
+    var now = Date.now();
+    if (sleepLast && !audio.paused) sleepLeft -= now - sleepLast;
+    sleepLast = audio.paused ? 0 : now;
+    if (sleepLeft <= 0) {
+      audio.pause();
+      setSleep(0);
+      return refresh();
+    }
+    audio.volume = Math.min(1, sleepLeft / FADE_MS);
+    var lab = document.querySelector('#podSleep span');
+    if (lab) lab.textContent = sleepLabel();
+  }
+
   audio.addEventListener('play', function () {
     blocked = false;
     lastTick = Date.now();
+    if (sleepLeft) sleepLast = lastTick;
     clearTimeout(unholdTimer);
     if (window.BGM && window.BGM.hold) window.BGM.hold(true);
     updateButtons();
@@ -284,6 +321,11 @@
   audio.addEventListener('ended', function () {
     if (interlude) return endInterlude();
     markHeard();
+    if (sleepPick === 'end') {
+      setSleep(0);
+      load(nextId, false);
+      return refresh();
+    }
     load(nextId, true, 0, false, true);
     refresh();
   });
@@ -294,6 +336,7 @@
     refresh();
   });
   audio.addEventListener('timeupdate', function () {
+    sleepTick();
     if (!cur || interlude) return;
     var t = audio.currentTime, now = Date.now();
     if (!heardMarked && t >= cur.duration * 0.9) markHeard();
@@ -432,6 +475,18 @@
     }
     return out + '</div>';
   }
+  function sleepChip(v, label) {
+    return '<button class="' + (sleepPick === v ? 'on' : '') + '" data-act="podSetSleep" data-s="' + v + '">' + label + '</button>';
+  }
+  function sleepHtml() {
+    var out = '<div class="pod-opts pod-rates pod-sleeps">' + svg('moon') + sleepChip(0, T('Tắt', 'Off'));
+    for (var i = 0; i < SLEEPS.length; i++) out += sleepChip(SLEEPS[i], SLEEPS[i] < 60 ? SLEEPS[i] + T('p', 'm') : SLEEPS[i] / 60 + 'h');
+    return out + sleepChip('end', T('Hết tập', 'End of ep.')) + '</div>';
+  }
+  function sleepBtn() {
+    return '<button id="podSleep" class="' + (sleepPick ? 'on' : '') + '" data-act="podSleep" title="' + T('Hẹn giờ tắt', 'Sleep timer') + '">' +
+      svg('moon') + '<span>' + sleepLabel() + '</span></button>';
+  }
   function viewPlayer() {
     var ep = cur;
     var tags = '<span class="pod-lv">' + h(ep.level.toUpperCase()) + '</span>' + h(FORMATS[ep.format] ? L(FORMATS[ep.format]) : '') +
@@ -461,7 +516,8 @@
       '<button class="pod-b txt" data-act="podFwd" title="' + T('Tới 10 giây', 'Forward 10 seconds') + '">+10</button>' +
       '<button class="pod-b" data-act="podNext" title="' + T('Tập khác', 'Next episode') + '">' + svg('next') + '</button>' +
       '<button class="pod-b txt' + (rateOpen ? ' on' : '') + '" data-act="podRate" title="' + T('Tốc độ', 'Speed') + '">' + prefs.rate + 'x</button></div>' +
-      (rateOpen ? ratesHtml() : '<div class="pod-opts">' + opt('podFuri', 'Furigana', prefs.furi) + opt('podRo', 'Romaji', prefs.ro) + opt('podTr', T('Dịch', 'Translation'), prefs.tr) + '</div>') +
+      (rateOpen ? ratesHtml() : sleepOpen ? sleepHtml() : '<div class="pod-opts">' + opt('podFuri', 'Furigana', prefs.furi) + opt('podRo', 'Romaji', prefs.ro) +
+        opt('podTr', T('Dịch', 'Translation'), prefs.tr) + sleepBtn() + '</div>') +
       '</div></div></div>';
   }
   function sheetEl() {
@@ -526,7 +582,7 @@
   }
   function closeSheet(fromPop) {
     if (!full) return;
-    full = onPlayer = rateOpen = false;
+    full = onPlayer = rateOpen = sleepOpen = false;
     els = [];
     wakeSync();
     sheet.classList.remove('open');
@@ -750,7 +806,7 @@
   var A = App.actions;
   A.podOpen = function () { openSheet('player'); };
   A.podClose = function () { closeSheet(); };
-  A.podList = function () { sheetView = sheetView === 'list' ? 'player' : 'list'; rateOpen = false; renderSheet(); };
+  A.podList = function () { sheetView = sheetView === 'list' ? 'player' : 'list'; rateOpen = sleepOpen = false; renderSheet(); };
   A.podToggle = toggle;
   A.podNext = goNext;
   A.podStop = stopPlayer;
@@ -771,7 +827,14 @@
     resumeFollow();
     if (audio.paused) play();
   };
-  A.podRate = function () { rateOpen = !rateOpen; refresh(); };
+  A.podRate = function () { rateOpen = !rateOpen; sleepOpen = false; refresh(); };
+  A.podSleep = function () { sleepOpen = !sleepOpen; rateOpen = false; refresh(); };
+  A.podSetSleep = function (el) {
+    var v = el.getAttribute('data-s');
+    setSleep(v === 'end' ? 'end' : +v);
+    sleepOpen = false;
+    refresh();
+  };
   A.podSetRate = function (el) {
     prefs.rate = +el.getAttribute('data-r');
     audio.defaultPlaybackRate = audio.playbackRate = prefs.rate;
@@ -781,7 +844,7 @@
   };
   A.podRepeat = function () {
     prefs.repeat = !prefs.repeat;
-    audio.loop = prefs.repeat && !interlude;
+    audio.loop = loopOn() && !interlude;
     savePrefs();
     App.emit('podcast:repeat', { on: prefs.repeat });
     refresh();
