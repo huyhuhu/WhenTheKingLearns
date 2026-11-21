@@ -792,6 +792,7 @@
     for (var i = 0; i < HANKO.length; i++) if (HANKO[i].rank === r) hk = HANKO[i];
     if (hk) reward += '<p>' + T('Mở khoá màu ấn tín: ', 'New seal color: ') + '<b>' + h(L(hk.name)) + '</b></p>';
     reward += '<p>' + T('Danh hiệu mới: ', 'New title: ') + '<b>' + h(rankName(r)) + '</b></p>';
+    if (r === 3) reward += '<p>' + T('Bản đồ vương quốc đã mở trong mục Từ vựng', 'The map of your realm is now open in Vocabulary') + '</p>';
     crownEl.innerHTML = '<div class="backdrop" data-act="kCrownClose"></div><div class="dialog coronation">' +
       '<p class="eyebrow">' + T('Lễ đăng quang', 'Coronation') + '</p>' + crownSvg(r, 'big-crown', true) +
       '<h2>' + jp(RANKS[r][3]) + '</h2><h3>' + h(rankName(r)) + '</h3><div class="reward">' + reward + '</div>' +

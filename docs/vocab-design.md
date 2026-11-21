@@ -177,9 +177,7 @@ Ba dạng câu, trộn ngẫu nhiên và trộn các buổi:
 | Thái bình | 100% từ đạt Trung thần | Viền vàng, hoa anh đào |
 | Bị vây | Có từ của vùng đang quá hạn ôn | Khói lửa, cờ giặc, thuyền giặc ngoài khơi |
 
-- **Kinh Đô** (buổi 1) mở sẵn.
-- Một vùng **Chiếm đóng** thì mở các vùng **kề** với nó. Người học tự chọn đi tiếp hướng nào; vùng được gợi ý theo thứ tự buổi có dấu chỉ đường.
-- "Kề" theo địa lý thật; nối qua biển thì dùng tuyến hải trình thật (ví dụ Quan Đông và Bắc Hải Đạo nối qua Đông Bắc, Cửu Châu nối Trung Quốc qua eo Kanmon).
+- **Bản đồ không khoá việc học:** mọi buổi vẫn học tự do theo thứ tự buổi. Vùng chưa học phủ sương; học từ đầu tiên của buổi thì vùng chuyển sang Đang chinh phạt. (Khoá theo vùng kề bị bỏ vì buổi 2 Cửu Châu không giáp buổi 1 Kinh Đô.)
 
 ### 6.3 Vong quân
 

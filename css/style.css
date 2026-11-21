@@ -585,3 +585,78 @@ body.pod-full { overflow: hidden; }
 }
 .vword-big.long { font-size: 34px; }
 .vword-big .icon-btn { width: 34px; height: 34px; vertical-align: middle; }
+
+/* Ban do vuong quoc */
+.vmapcard { padding: 12px; }
+.vmapcard h3 { margin: 2px 4px 10px; }
+.vmap-box {
+  position: relative; overflow: hidden; border-radius: 10px;
+  --paper: #efe4cb; --sea: #e2e6dc; --wave: rgba(70, 105, 120, 0.28); --ink: #3b3127; --soft: rgba(59, 49, 39, 0.35);
+  --land: #efe5cf; --wild: #d9cfba; --other: #e3dac7; --water: #c9d7d6; --river: #6f93a0; --halo: #f4ebd6;
+  background: var(--paper) url(../data/map-paper.webp);
+  box-shadow: inset 0 0 40px rgba(110, 80, 40, 0.35), inset 0 0 0 1px rgba(110, 80, 40, 0.25);
+}
+[data-theme="dark"] .vmap-box {
+  --paper: #23211d; --sea: #1f2628; --wave: rgba(150, 190, 200, 0.16); --ink: #d9c58f; --soft: rgba(217, 197, 143, 0.35);
+  --land: #3b362e; --wild: #2b2924; --other: #2e2c27; --water: #24343a; --river: #6f93a0; --halo: #23211d;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(217, 197, 143, 0.2);
+}
+.vmap { display: block; width: 100%; height: auto; cursor: grab; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+.vmap .vsea { fill: var(--sea); opacity: 0.55; }
+.vmap .wave circle { fill: var(--sea); stroke: var(--wave); stroke-width: 2; }
+.vmap .vinset { fill: none; stroke: var(--ink); stroke-width: 1; stroke-dasharray: 6 4; opacity: 0.6; }
+.vmap .vother { fill: var(--other); stroke: var(--soft); stroke-width: 0.7; }
+.vmap .vr { fill: var(--land); stroke: var(--land); stroke-width: 1; cursor: pointer; }
+.vmap .vr.st-wild, .vmap .vwild { fill: var(--wild); stroke: var(--wild); }
+.vmap .vfog { fill: url(#vFog); pointer-events: none; }
+.vmap .fogline { stroke: var(--soft); stroke-width: 3; opacity: 0.5; }
+.vmap .vrelief { pointer-events: none; opacity: 0.85; }
+[data-theme="dark"] .vmap .vrelief { opacity: 0.6; }
+.vmap .vlake { fill: var(--water); stroke: var(--ink); stroke-width: 0.7; pointer-events: none; }
+.vmap .vriver { fill: none; stroke: var(--river); stroke-width: 0.9; stroke-linecap: round; opacity: 0.8; pointer-events: none; }
+.vmap .vpref { fill: none; stroke: var(--soft); stroke-width: 0.8; stroke-dasharray: 1.5 3; pointer-events: none; }
+.vmap .vborder { fill: none; stroke: var(--ink); stroke-width: 1.1; stroke-dasharray: 6 3 1.5 3; opacity: 0.75; pointer-events: none; }
+.vmap .vcoast { fill: none; stroke: var(--ink); stroke-width: 1.3; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; }
+.vmap .vsel { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; pointer-events: none; }
+.vmap .vpeace { fill: none; stroke: #e6c35c; stroke-width: 2.4; stroke-linejoin: round; pointer-events: none; }
+.vmap .vinset, .vmap .vother, .vmap .vlake, .vmap .vriver, .vmap .vpref, .vmap .vborder, .vmap .vcoast, .vmap .vsel, .vmap .vpeace { vector-effect: non-scaling-stroke; }
+.vmap text { font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", "Noto Serif CJK JP", serif; text-anchor: middle; paint-order: stroke; stroke: var(--halo); stroke-linejoin: round; }
+.vmap .vlab { cursor: pointer; }
+.vmap .vk { fill: var(--ink); font-weight: 700; stroke-width: 9; }
+.vmap .vlab.on .vk { fill: var(--accent); }
+.vmap .vn { fill: var(--ink); font-size: 28px; font-family: inherit; stroke-width: 7; opacity: 0; transition: opacity 0.2s; }
+.vmap.z2 .vn, .vmap .vlab.on .vn { opacity: 1; }
+.vmap .vmark rect { fill: var(--accent); stroke: var(--halo); stroke-width: 3; }
+.vmap .vmark.st-peace rect { fill: #b8860b; }
+.vmap .vmark text, .vmap .vsiege text { fill: #fffdf8; font-size: 40px; stroke: none; font-weight: 700; }
+.vmap .vsiege rect { fill: #1b1b1f; stroke: #c2452d; stroke-width: 3; }
+.vmap .vtitle rect { fill: var(--halo); stroke: var(--ink); stroke-width: 4; }
+.vmap .vtitle rect.in { fill: none; stroke-width: 1.5; }
+.vmap .vtitle text { fill: var(--ink); font-size: 50px; font-weight: 700; stroke: none; }
+.vmap .vcomp circle { fill: var(--halo); stroke: var(--ink); stroke-width: 3; opacity: 0.9; }
+.vmap .vcomp circle.in { fill: none; stroke-width: 1.5; stroke-dasharray: 4 6; }
+.vmap .vcomp .needle { fill: var(--ink); opacity: 0.55; }
+.vmap .vcomp .north { fill: var(--accent); }
+.vmap .vcomp text { fill: var(--ink); font-size: 40px; font-weight: 700; stroke-width: 6; }
+.vmap-ctl { position: absolute; right: 8px; top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.vmap-ctl .icon-btn { width: 34px; height: 34px; font-size: 18px; background: var(--surface); box-shadow: var(--shadow); }
+.vmapcard.locked .vmap { filter: grayscale(1) blur(1.5px); opacity: 0.55; cursor: default; }
+.vmap-lock { position: absolute; left: 0; right: 0; top: 40%; text-align: center; padding: 0 20px; }
+.vmap-lock .jp { display: block; font-size: 34px; }
+.vmap-lock b { display: inline-block; padding: 8px 14px; border-radius: 10px; background: var(--surface); box-shadow: var(--shadow); }
+.vmap-info { position: relative; margin-top: 10px; padding: 4px 4px 0; }
+.vmap-info p { margin: 6px 0; }
+.vmap-x { position: absolute; right: 0; top: 0; width: 30px; height: 30px; }
+.vmi-head b { font-size: 18px; }
+.vmi-k { font-size: 24px; font-weight: 700; margin-right: 8px; }
+.vmi-story { color: var(--muted); font-size: 14px; }
+.vmap-key { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.vmap-key p { width: 100%; font-size: 13px; }
+.vstate { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; white-space: nowrap; border: 1px solid var(--line); color: var(--muted); }
+.vstate.st-war { color: var(--accent); border-color: var(--accent); }
+.vstate.st-held { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+.vstate.st-annex { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+.vstate.st-peace { background: #b8860b; color: #fffdf8; border-color: transparent; }
+.vstate.st-siege { background: #1b1b1f; color: #f4f1ea; border-color: #c2452d; }
+.vland .meta .vstate { display: block; margin: 3px 0; }
+.vland .vstory { display: block; margin: 4px 0 2px; font-size: 13px; color: var(--muted); line-height: 1.4; }

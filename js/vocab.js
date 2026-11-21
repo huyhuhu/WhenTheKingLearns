@@ -73,7 +73,13 @@
       'Once the Ryukyu Kingdom (1429–1879) with its own king. The last land to unify the realm.', 'Okinawa']
   ];
 
-  var learn = null, review = null, curMode = '';
+  var STATES = {
+    wild: ['Chưa khai phá', 'Unexplored'], war: ['Đang chinh phạt', 'On campaign'], held: ['Chiếm đóng', 'Occupied'],
+    annex: ['Sáp nhập', 'Annexed'], peace: ['Thái bình', 'At peace']
+  };
+  var MAP_RANK = 3;
+
+  var learn = null, review = null, curMode = '', mapSel = 0;
 
   // ---------- du lieu ----------
   function D() { return DATA.n5; }
@@ -281,14 +287,62 @@
       '</div>' + (wait ? '<p class="note center">' + h(wait) + '</p>' : '') + '</div>';
   }
 
+  // Bac 5 (Binh si) tro len tinh la vung da vung; bac 9 la Trung than dien
+  function landState(n) {
+    var ids = D().sessions[n - 1], got = 0, sol = 0, burned = 0;
+    for (var i = 0; i < ids.length; i++) {
+      var r = rec(D().words[ids[i]]);
+      if (!r) continue;
+      got++;
+      if (r[0] >= 5) sol++;
+      if (r[0] >= BURNED) burned++;
+    }
+    var st = !got ? 'wild' : got < ids.length ? 'war' : burned === ids.length ? 'peace' : sol >= 0.9 * ids.length ? 'annex' : 'held';
+    return { st: st, got: got, total: ids.length, due: dueList(ids).length };
+  }
+  function mapOpen() { return !App.king || App.king.rankOf(App.king.totalXp()) >= MAP_RANK; }
+  function stateChip(st) { return '<span class="vstate st-' + st + '">' + h(App.L(STATES[st])) + '</span>'; }
+  function mapCard(lands) {
+    if (!window.VocabMap) return '';
+    var open = mapOpen(), list = [];
+    for (var i = 0; i < lands.length; i++) list.push({ st: lands[i].st, due: lands[i].due, kanji: region(i + 1)[0], name: App.isEn() ? region(i + 1)[7] : region(i + 1)[2] });
+    if (mapSel && !open) mapSel = 0;
+    var info;
+    if (mapSel) {
+      var L = lands[mapSel - 1], r = region(mapSel);
+      info = '<div class="vmap-info"><button class="icon-btn vmap-x" data-act="vMapClose" title="' + T('Đóng', 'Close') + '">✕</button>' +
+        '<p class="vmi-head">' + jp(r[0], 'vmi-k') + '<b>' + h(App.isEn() ? r[7] : r[2]) + '</b> <small>' + jp(r[1]) + ' · ' + r[7] + '</small></p>' +
+        '<p>' + stateChip(L.st) + ' <small class="muted">' + L.got + '/' + L.total + T(' thần dân', ' subjects') + (L.due ? ' · ' + L.due + T(' bị Vong quân vây', ' besieged') : '') + '</small></p>' +
+        '<p class="vmi-story">' + h(r[App.isEn() ? 6 : 5]) + '</p>' +
+        '<a class="btn primary" href="' + link('n5/' + mapSel) + '">' + sess(mapSel) + ' · ' + h(topic(mapSel)) + ' →</a></div>';
+    } else {
+      info = '<div class="vmap-info vmap-key">';
+      for (var k in STATES) info += stateChip(k);
+      info += '<span class="vstate st-siege">' + T('敵 Bị Vong quân vây', '敵 Besieged by Oblivion') + '</span><p class="muted">' + T('Chạm vào một vùng để xem.', 'Tap a land to see it.') + '</p></div>';
+    }
+    var ctl = '<div class="vmap-ctl"><button class="icon-btn" data-act="vZoom" data-z="1.6" title="' + T('Phóng to', 'Zoom in') + '">+</button>' +
+      '<button class="icon-btn" data-act="vZoom" data-z="0.625" title="' + T('Thu nhỏ', 'Zoom out') + '">−</button>' +
+      '<button class="icon-btn" data-act="vZoomReset" title="' + T('Toàn cảnh', 'Whole map') + '">⤢</button></div>';
+    if (!open) {
+      return '<div class="card vmapcard locked"><div class="vmap-box">' + window.VocabMap.svg(list, { locked: true }) +
+        '<div class="vmap-lock">' + jp('🔒') + '<b>' + T('Đăng quang Tân vương để mở bản đồ vương quốc', 'Be crowned New King to open the map of your realm') + '</b></div></div></div>';
+    }
+    return '<div class="card vmapcard"><h3>' + T('BẢN ĐỒ VƯƠNG QUỐC', 'MAP OF THE REALM') + '</h3><div class="vmap-box">' +
+      window.VocabMap.svg(list, { sel: mapSel }) + ctl + '</div>' + info + '</div>';
+  }
+
   function viewLevel() {
-    var d = D(), html = '<div class="hero">' + jp('語彙', 'eyebrow') + '<h1>' + T('Từ vựng N5', 'N5 Vocabulary') + '</h1><p class="sub">' +
-      d.sessions.length + T(' vùng đất · ', ' lands · ') + d.words.length + T(' thần dân', ' subjects') + '</p></div>' + summaryCard() + '<div class="rows">';
-    for (var i = 0; i < d.sessions.length; i++) {
-      var s = d.sessions[i], n = i + 1, got = countLearned(s), due = dueList(s).length;
-      html += '<a class="card rowcard" href="' + link('n5/' + n) + '"><span class="no vno">' + jp(region(n)[0], 'vreg' + (region(n)[0].length > 2 ? ' long' : '')) + '</span>' +
-        '<span class="body"><b>' + sess(n) + ' · ' + h(regionName(n)) + '</b><small class="muted">' + h(topic(n)) + '</small>' + bar(got, s.length) + '</span>' +
-        '<span class="meta"><b>' + got + '/' + s.length + '</b><small>' + (due ? due + T(' chờ ôn', ' due') : '&nbsp;') + '</small></span></a>';
+    var d = D(), lands = [], i;
+    for (i = 0; i < d.sessions.length; i++) lands.push(landState(i + 1));
+    var html = '<div class="hero">' + jp('語彙', 'eyebrow') + '<h1>' + T('Từ vựng N5', 'N5 Vocabulary') + '</h1><p class="sub">' +
+      d.sessions.length + T(' vùng đất · ', ' lands · ') + d.words.length + T(' thần dân', ' subjects') + '</p></div>' + summaryCard() + mapCard(lands) +
+      '<h3 class="heading">' + T('CÁC VÙNG ĐẤT', 'THE LANDS') + '</h3><div class="rows">';
+    for (i = 0; i < d.sessions.length; i++) {
+      var s = d.sessions[i], n = i + 1, L = lands[i];
+      html += '<a class="card rowcard vland" href="' + link('n5/' + n) + '"><span class="no vno">' + jp(region(n)[0], 'vreg' + (region(n)[0].length > 2 ? ' long' : '')) + '</span>' +
+        '<span class="body"><b>' + sess(n) + ' · ' + h(regionName(n)) + '</b><small class="muted">' + h(topic(n)) + '</small>' +
+        '<small class="vstory">' + h(region(n)[App.isEn() ? 6 : 5]) + '</small>' + bar(L.got, s.length) + '</span>' +
+        '<span class="meta"><b>' + L.got + '/' + s.length + '</b>' + stateChip(L.st) + '<small>' + (L.due ? L.due + T(' chờ ôn', ' due') : '&nbsp;') + '</small></span></a>';
     }
     return html + '</div>';
   }
@@ -470,7 +524,7 @@
     }
     curMode = parts[parts.length - 1] || '';
     var home = { back: '', backLabel: T('Trang chủ', 'Home') };
-    if (!parts.length) return { html: viewLevel(), title: T('Từ vựng N5', 'N5 Vocabulary'), back: home.back, backLabel: home.backLabel };
+    if (!parts.length) return { html: viewLevel(), title: T('Từ vựng N5', 'N5 Vocabulary'), back: home.back, backLabel: home.backLabel, after: true };
     if (parts[0] === 'review' && parts.length === 1) return { html: viewReview(0), title: T('Triều kiến', 'Audience'), back: 'vocab', backLabel: T('Từ vựng', 'Vocabulary') };
     if (parts[0] !== 'n5') return null;
     var n = parseInt(parts[1], 10);
@@ -530,6 +584,9 @@
     App.render(); window.scrollTo(0, 0);
   };
   A.vLearnMore = function () { learn = null; App.render(); };
+  A.vZoom = function (el) { window.VocabMap.zoom(parseFloat(el.getAttribute('data-z'))); };
+  A.vZoomReset = function () { window.VocabMap.reset(); };
+  A.vMapClose = function () { mapSel = 0; App.render(); };
   A.vReviewMore = function () { review = null; App.render(); };
   A.vPick = function (el) {
     var q = activeQuiz();
@@ -598,6 +655,7 @@
     },
     afterRender: function (mine) {
       if (!mine) return;
+      if (window.VocabMap) window.VocabMap.bind(function (n) { mapSel = mapSel === n ? 0 : n; App.render(); });
       var el = document.getElementById('vInput');
       if (el) el.focus();
     },

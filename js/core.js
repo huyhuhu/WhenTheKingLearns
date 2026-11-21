@@ -596,6 +596,7 @@
     addMerger: function (key, fn) { mergers[key] = fn; },
     addSettingsRow: function (fn) { settingsRows.push(fn); },
     setHanko: function (fn) { hankoFn = fn; },
+    hanko: function () { return hankoFn ? hankoFn() : { bg: '#c2452d', fg: '#fffdf8' }; },
     refreshChrome: refreshChrome,
     route: parseRoute,
     isBusy: function () {
