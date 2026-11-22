@@ -270,12 +270,12 @@
     if (parts.length <= 1) return { html: viewLevel(L), title: 'Kanji ' + L.name, back: '', backLabel: T('Trang chủ', 'Home') };
     var d = DATA[L.id], n = parseInt(parts[1], 10);
     if (!d || !(n >= 1 && n <= d.sessions.length)) return null;
-    var title = 'Kanji ' + L.name + ' · ' + sess(n), html = null, after = false, label = sess(n);
+    var title = 'Kanji ' + L.name + ' · ' + sess(n), html = null, after = false, label = sess(n), temp = false;
     if (parts.length === 2) { html = viewSession(L, d, n); label = 'Kanji ' + L.name; }
     else if (parts[2] === 'list' && parts.length === 3) html = viewList(L, d, n);
     else if (parts[2] === 'list' && parts.length === 4) { html = viewDetail(L, d, n, parts[3]); after = true; label = T('Danh sách', 'List'); }
-    else if (parts[2] === 'flash' && parts.length === 3) html = viewFlash(L, d, n);
-    else if (parts[2] === 'quiz' && parts.length === 3) html = viewQuiz(L, d, n);
+    else if (parts[2] === 'flash' && parts.length === 3) { html = viewFlash(L, d, n); temp = true; }
+    else if (parts[2] === 'quiz' && parts.length === 3) { html = viewQuiz(L, d, n); temp = true; }
     else if (parts[2] === 'vocab' && parts.length === 3) html = viewVocab(L, d, n);
     if (!html) return null;
     if (changed && parts.length >= 3) {
@@ -283,7 +283,7 @@
       App.emit('mode:open', { sess: sk, mode: parts[2] });
       if (parts.length === 4) App.emit('kanji:view', { k: parts[3], sess: sk });
     }
-    return { html: html, title: title, after: after, backLabel: label, remember: ['Kanji ' + L.name + ' · Buổi ' + n, 'Kanji ' + L.name + ' · Session ' + n] };
+    return { html: html, title: title, after: after, backLabel: label, transient: temp, remember: ['Kanji ' + L.name + ' · Buổi ' + n, 'Kanji ' + L.name + ' · Session ' + n] };
   }
 
   // ---------- hanh dong ----------
@@ -347,6 +347,13 @@
     desc: ['Hán tự theo buổi: danh sách, flashcard, trắc nghiệm, từ vựng', 'Kanji by session: list, flashcards, quiz, vocabulary'],
     ready: true,
     route: route,
+    label: function (parts) {
+      var L = findLevel(parts[0] || 'n5');
+      if (!L) return '';
+      if (parts.length <= 1) return 'Kanji ' + L.name;
+      if (parts.length === 2) return 'Kanji ' + L.name + ' · ' + sess(parts[1]);
+      return parts[2] === 'list' ? (parts[3] || T('Danh sách', 'List')) : '';
+    },
     busy: function () {
       return (curMode === 'quiz' && quiz && quiz.i < quiz.qs.length) || (curMode === 'flash' && flash && flash.i < flash.order.length);
     },

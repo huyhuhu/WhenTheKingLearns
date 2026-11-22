@@ -30,7 +30,7 @@
   var lastSyncAt = 0;
   var fbAuth = null;
   var fbState = '';
-  var lastRoute = null, lastTitle = '', origin = null;
+  var lastRoute = null, lastPage = null, origins = [];
   var lang = 'vi';
   try { if (localStorage.getItem(LANG_KEY) === 'en') lang = 'en'; } catch (e) { /* che do an danh */ }
   document.documentElement.lang = lang;
@@ -423,10 +423,32 @@
     return parts;
   }
   function encodeKey(key) { return key.split('/').map(encodeURIComponent).join('/'); }
-  // Back link of `target` returns to the page the user left instead of its parent
-  function markOrigin(target) {
-    if (lastRoute === null || target === lastRoute || lastRoute.indexOf(target + '/') === 0) return;
-    origin = { target: target, from: lastRoute, label: lastTitle || T('Trang chủ', 'Home') };
+  function within(key, target) { return key === target || key.indexOf(target + '/') === 0; }
+  function decodeKey(key) {
+    return key.split('/').map(function (x) { try { return decodeURIComponent(x); } catch (e) { return x; } }).join('/');
+  }
+  // Leaving a page for another branch makes the new page's back link return to it
+  function track(from, to, defaultBack) {
+    var top = origins[origins.length - 1];
+    if (top && to === top.from) origins.pop();
+    else {
+      var parent = to.split('/').slice(0, -1).join('/');
+      var jump = parent && !from.transient && from.key !== defaultBack && !within(from.key, parent);
+      if (jump) {
+        origins.push({ target: to, from: from.key });
+        if (origins.length > 10) origins.shift();
+        return;
+      }
+    }
+    while (origins.length && !within(to, origins[origins.length - 1].target)) {
+      // Returning to the page an origin came from re-exposes the origin beneath it
+      if (origins.pop().from !== to) origins = [];
+    }
+  }
+  function pageLabel(key) {
+    var parts = key ? key.split('/') : [], sec = sectionById[parts[0]];
+    if (!parts.length) return T('Trang chủ', 'Home');
+    return (sec && sec.label && sec.label(parts.slice(1))) || (sec ? L(sec.name) : T('Quay lại', 'Back'));
   }
   function renderChrome(parts) {
     var B = window.BGM, dark = currentTheme() === 'dark', links = '', tabs = '', i;
@@ -463,9 +485,10 @@
       back = parent.join('/');
     }
     var backLabel = view.backLabel;
-    if (origin && key !== origin.target && key.indexOf(origin.target + '/') !== 0) origin = null;
-    if (origin && key === origin.target) { back = encodeKey(origin.from); backLabel = origin.label; }
-    lastTitle = view.title;
+    if (changed && lastPage) track(lastPage, key, decodeKey(back || ''));
+    var origin = origins[origins.length - 1];
+    if (origin && origin.target === key) { back = encodeKey(origin.from); backLabel = pageLabel(origin.from); }
+    lastPage = { key: key, transient: !!view.transient };
     renderChrome(parts);
     appEl.innerHTML = (parts.length ? '<a class="backlink" href="#/' + (back || '') + '">‹ ' + h(backLabel || T('Quay lại', 'Back')) + '</a>' : '') + view.html;
     document.title = (view.title ? view.title + ' · ' : '') + 'When The King Learns';
@@ -614,7 +637,6 @@
     hanko: function () { return hankoFn ? hankoFn() : { bg: '#c2452d', fg: '#fffdf8' }; },
     refreshChrome: refreshChrome,
     route: parseRoute,
-    markOrigin: markOrigin,
     isBusy: function () {
       for (var i = 0; i < sections.length; i++) if (sections[i].busy && sections[i].busy()) return true;
       return false;
@@ -629,10 +651,6 @@
     isKnown: isKnown, setKnown: setKnown, countKnown: countKnown,
     section: function (def) { sections.push(def); sectionById[def.id] = def; },
     start: function () {
-      document.addEventListener('click', function (e) {
-        var a = e.target.closest && e.target.closest('a[data-from]');
-        if (a) markOrigin(decodeURIComponent(a.getAttribute('href').replace(/^#\/?/, '')));
-      }, true);
       document.addEventListener('click', dispatch('data-act'));
       document.addEventListener('change', dispatch('data-change'));
       document.addEventListener('input', dispatch('data-input'));

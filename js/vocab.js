@@ -456,7 +456,7 @@
         '<p class="vmi-head">' + jp(r[0], 'vmi-k') + '<b>' + h(App.isEn() ? r[7] : r[2]) + '</b> <small>' + jp(r[1]) + ' · ' + r[7] + '</small></p>' +
         '<p>' + stateChip(L.st) + ' <small class="muted">' + L.got + '/' + L.total + T(' thần dân', ' subjects') + (L.due ? ' · ' + L.due + T(' bị Vong quân vây', ' besieged') : '') + '</small></p>' +
         '<p class="vmi-story">' + h(r[App.isEn() ? 6 : 5]) + '</p>' +
-        '<a class="btn primary" data-from href="' + link('n5/' + mapSel) + '">' + sess(mapSel) + ' · ' + h(topic(mapSel)) + ' →</a></div>';
+        '<a class="btn primary" href="' + link('n5/' + mapSel) + '">' + sess(mapSel) + ' · ' + h(topic(mapSel)) + ' →</a></div>';
     } else {
       info = '<div class="vmap-info vmap-key">';
       var F = window.VocabMap.fills();
@@ -503,7 +503,7 @@
     list.sort(function (x, y) { return rec(y)[2] - rec(x)[2]; });
     for (var i = 0; i < list.length; i++) {
       var w = list[i], e = b[wkey(w)];
-      cards += '<a class="card vposter" data-from href="' + wlink(w) + '"><span class="vp-head">' + jp('手配') + '</span><span class="vp-word' + (w[0].length > 6 ? ' xlong' : w[0].length > 4 ? ' long' : '') + '">' + jp(w[0]) + '</span>' +
+      cards += '<a class="card vposter" href="' + wlink(w) + '"><span class="vp-head">' + jp('手配') + '</span><span class="vp-word' + (w[0].length > 6 ? ' xlong' : w[0].length > 4 ? ' long' : '') + '">' + jp(w[0]) + '</span>' +
         (w[0] !== w[1] ? '<span class="vp-read">' + jp(w[1]) + '</span>' : '') + '<span class="vp-mean">' + h(mean(w)) + '</span>' +
         '<span class="vp-meta">' + T('Sai ', 'Missed ') + rec(w)[2] + T(' lần · ', ' times · ') + hitMarks(e[1]) + '</span>' +
         (w[10] && !App.isEn() ? '<span class="vp-tip">' + h(w[10]) + '</span>' : '') + '</a>';
@@ -871,28 +871,41 @@
     curMode = parts[parts.length - 1] || '';
     var home = { back: '', backLabel: T('Trang chủ', 'Home') };
     if (!parts.length) return { html: viewLevel(), title: T('Từ vựng N5', 'N5 Vocabulary'), back: home.back, backLabel: home.backLabel, after: true };
-    if (parts[0] === 'review' && parts.length === 1) return { html: viewReview(0), title: T('Triều kiến', 'Audience'), back: 'vocab', backLabel: T('Từ vựng', 'Vocabulary') };
+    if (parts[0] === 'review' && parts.length === 1) return { html: viewReview(0), title: T('Triều kiến', 'Audience'), back: 'vocab', backLabel: T('Từ vựng', 'Vocabulary'), transient: true };
     var toVocab = { back: 'vocab', backLabel: T('Từ vựng', 'Vocabulary') };
     if (parts[0] === 'lands' && parts.length === 1) return { html: viewLands(), title: T('Các vùng đất', 'The lands'), back: toVocab.back, backLabel: toVocab.backLabel };
     if (parts[0] === 'wanted' && parts.length === 1) return { html: viewBoard(), title: T('Bảng truy nã', 'Wanted board'), back: toVocab.back, backLabel: toVocab.backLabel };
-    if (parts[0] === 'wanted' && parts[1] === 'hunt' && parts.length === 2) return { html: viewHunt(), title: T('Truy bắt', 'Manhunt'), back: 'vocab/wanted', backLabel: T('Bảng truy nã', 'Wanted board'), after: true };
+    if (parts[0] === 'wanted' && parts[1] === 'hunt' && parts.length === 2) return { html: viewHunt(), title: T('Truy bắt', 'Manhunt'), back: 'vocab/wanted', backLabel: T('Bảng truy nã', 'Wanted board'), after: true, transient: true };
     if (parts[0] === 'games' && parts.length === 1) return { html: viewGames(), title: T('Trò chơi nhỏ', 'Mini games'), back: toVocab.back, backLabel: toVocab.backLabel };
-    if (parts[0] === 'games' && parts.length === 2 && gameDef(parts[1])) return { html: viewGame(parts[1]), title: App.L(gameDef(parts[1])[2]), back: 'vocab/games', backLabel: T('Trò chơi', 'Games'), after: true };
+    if (parts[0] === 'games' && parts.length === 2 && gameDef(parts[1])) return { html: viewGame(parts[1]), title: App.L(gameDef(parts[1])[2]), back: 'vocab/games', backLabel: T('Trò chơi', 'Games'), after: true, transient: true };
     if (parts[0] !== 'n5') return null;
     var n = parseInt(parts[1], 10);
     if (!(n >= 1 && n <= D().sessions.length)) return null;
-    var html = null, label = sess(n), back = 'vocab/n5/' + n;
+    var html = null, label = sess(n), back = 'vocab/n5/' + n, temp = false;
     if (parts.length === 2) { html = viewSession(n); label = T('Các vùng đất', 'The lands'); back = 'vocab/lands'; }
     else if (parts[2] === 'list' && parts.length === 3) html = viewList(n);
-    else if (parts[2] === 'learn' && parts.length === 3) html = viewLearn(n);
-    else if (parts[2] === 'review' && parts.length === 3) html = viewReview(n);
+    else if (parts[2] === 'learn' && parts.length === 3) { html = viewLearn(n); temp = true; }
+    else if (parts[2] === 'review' && parts.length === 3) { html = viewReview(n); temp = true; }
     else if (parts[2] === 'w' && parts.length === 4) {
       html = viewWord(n, parseInt(parts[3], 10)); label = T('Danh sách', 'List'); back = 'vocab/n5/' + n + '/list';
       if (changed && html) App.emit('word:view', { key: wkey(D().words[parseInt(parts[3], 10)]) });
     }
     if (!html) return null;
-    return { html: html, title: T('Từ vựng', 'Vocabulary') + ' · ' + regionName(n), back: back, backLabel: label, after: true,
+    return { html: html, title: T('Từ vựng', 'Vocabulary') + ' · ' + regionName(n), back: back, backLabel: label, after: true, transient: temp,
       remember: ['Từ vựng · ' + REGIONS[n - 1][2], 'Vocabulary · ' + REGIONS[n - 1][0]] };
+  }
+
+  function pageLabel(parts) {
+    if (!D()) return '';
+    if (!parts.length) return T('Từ vựng N5', 'N5 Vocabulary');
+    var fixed = { lands: T('Các vùng đất', 'The lands'), wanted: T('Bảng truy nã', 'Wanted board'), games: T('Trò chơi nhỏ', 'Mini games') };
+    if (parts.length === 1) return fixed[parts[0]] || '';
+    var n = parseInt(parts[1], 10);
+    if (parts[0] !== 'n5' || !(n >= 1 && n <= D().sessions.length)) return '';
+    if (parts.length === 2) return regionName(n);
+    if (parts[2] === 'list') return T('Danh sách', 'List');
+    var w = parts[2] === 'w' && D().words[parseInt(parts[3], 10)];
+    return w ? w[0] : '';
   }
 
   // ---------- hanh dong ----------
@@ -1055,6 +1068,7 @@
     desc: ['Thần dân của nhà vua: học từ và ôn tập ngắt quãng', 'Your subjects: learn words with spaced repetition'],
     ready: true,
     route: route,
+    label: pageLabel,
     busy: function () {
       if (game && !game.done && curMode === game.id) return true;
       var q = activeQuiz();
@@ -1071,7 +1085,7 @@
       if (!left.length) return '';
       var lands = {}, nl = 0;
       for (var i = 0; i < left.length; i++) { var n = sessionOf(left[i]); if (!lands[n]) { lands[n] = 1; nl++; } }
-      return '<a class="card kcard vhome" data-from href="' + link('review') + '">' + jp('朝', 'glyph') + '<span class="body"><small>' + T('Triều kiến', 'Audience') + '</small><b>' +
+      return '<a class="card kcard vhome" href="' + link('review') + '">' + jp('朝', 'glyph') + '<span class="body"><small>' + T('Triều kiến', 'Audience') + '</small><b>' +
         left.length + T(' thần dân chờ vào chầu', ' subjects await your audience') + '</b>' +
         (mapOpen() ? '<em>' + T('Vong quân đang vây ' + nl + ' vùng', 'The Oblivion Army besieges ' + nl + (nl > 1 ? ' lands' : ' land')) + '</em>' : '') + '</span><i>→</i></a>';
     },

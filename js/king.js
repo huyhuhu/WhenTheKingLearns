@@ -1292,11 +1292,7 @@
 
   // ---------- hanh dong giao dien ----------
   var A = App.actions;
-  A.kToast = function (el) {
-    var to = /k-(ach|retro)/.test(el.className) ? 'king/seals' : 'king';
-    App.markOrigin(to);
-    location.hash = '#/' + to;
-  };
+  A.kToast = function (el) { location.hash = /k-(ach|retro)/.test(el.className) ? '#/king/seals' : '#/king'; };
   A.kQTab = function (el) { questTab = el.getAttribute('data-tab'); App.render(); };
   A.kReroll = function (el) { rerollDaily(el.getAttribute('data-id')); App.saveProgress(); App.render(); };
   A.kRerollW = function (el) { rerollWeekly(el.getAttribute('data-id')); App.saveProgress(); App.render(); };
@@ -1325,6 +1321,7 @@
     grid: false,
     ready: true,
     home: function () { return kingCard() + questCard(); },
+    label: function (parts) { return parts[0] === 'seals' ? T('Sổ ấn tín', 'Seal ledger') : T('Hồ sơ nhà vua', "The King's Profile"); },
     route: function (parts) {
       if (parts.length === 1 && parts[0] === 'seals') return { html: viewSeals(), title: T('Sổ ấn tín', 'Seal ledger'), back: 'king', backLabel: T('Hồ sơ', 'Profile') };
       if (parts.length) return null;
