@@ -4,3 +4,4 @@ __pycache__/
 tools/.cache/
 podcast/audio/
 .wrangler/
+tools/test-backups/
