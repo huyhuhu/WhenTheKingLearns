@@ -30,7 +30,7 @@
   var lastSyncAt = 0;
   var fbAuth = null;
   var fbState = '';
-  var lastRoute = null;
+  var lastRoute = null, lastTitle = '', origin = null;
   var lang = 'vi';
   try { if (localStorage.getItem(LANG_KEY) === 'en') lang = 'en'; } catch (e) { /* che do an danh */ }
   document.documentElement.lang = lang;
@@ -422,6 +422,12 @@
     }
     return parts;
   }
+  function encodeKey(key) { return key.split('/').map(encodeURIComponent).join('/'); }
+  // Back link of `target` returns to the page the user left instead of its parent
+  function markOrigin(target) {
+    if (lastRoute === null || target === lastRoute || lastRoute.indexOf(target + '/') === 0) return;
+    origin = { target: target, from: lastRoute, label: lastTitle || T('Trang chủ', 'Home') };
+  }
   function renderChrome(parts) {
     var B = window.BGM, dark = currentTheme() === 'dark', links = '', tabs = '', i;
     tabs += '<a class="' + (parts.length ? '' : 'on') + '" href="#/"><span class="jp" lang="ja">家</span>' + T('Trang chủ', 'Home') + '</a>';
@@ -456,8 +462,12 @@
       for (var i = 0; i < parent.length; i++) parent[i] = encodeURIComponent(parent[i]);
       back = parent.join('/');
     }
+    var backLabel = view.backLabel;
+    if (origin && key !== origin.target && key.indexOf(origin.target + '/') !== 0) origin = null;
+    if (origin && key === origin.target) { back = encodeKey(origin.from); backLabel = origin.label; }
+    lastTitle = view.title;
     renderChrome(parts);
-    appEl.innerHTML = (parts.length ? '<a class="backlink" href="#/' + (back || '') + '">‹ ' + h(view.backLabel || T('Quay lại', 'Back')) + '</a>' : '') + view.html;
+    appEl.innerHTML = (parts.length ? '<a class="backlink" href="#/' + (back || '') + '">‹ ' + h(backLabel || T('Quay lại', 'Back')) + '</a>' : '') + view.html;
     document.title = (view.title ? view.title + ' · ' : '') + 'When The King Learns';
     if (view.remember) writeJson(LAST_KEY, { path: key, title: view.remember });
     if (changed) {
@@ -604,6 +614,7 @@
     hanko: function () { return hankoFn ? hankoFn() : { bg: '#c2452d', fg: '#fffdf8' }; },
     refreshChrome: refreshChrome,
     route: parseRoute,
+    markOrigin: markOrigin,
     isBusy: function () {
       for (var i = 0; i < sections.length; i++) if (sections[i].busy && sections[i].busy()) return true;
       return false;
@@ -618,6 +629,10 @@
     isKnown: isKnown, setKnown: setKnown, countKnown: countKnown,
     section: function (def) { sections.push(def); sectionById[def.id] = def; },
     start: function () {
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[data-from]');
+        if (a) markOrigin(decodeURIComponent(a.getAttribute('href').replace(/^#\/?/, '')));
+      }, true);
       document.addEventListener('click', dispatch('data-act'));
       document.addEventListener('change', dispatch('data-change'));
       document.addEventListener('input', dispatch('data-input'));

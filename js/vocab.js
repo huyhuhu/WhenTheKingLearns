@@ -456,7 +456,7 @@
         '<p class="vmi-head">' + jp(r[0], 'vmi-k') + '<b>' + h(App.isEn() ? r[7] : r[2]) + '</b> <small>' + jp(r[1]) + ' · ' + r[7] + '</small></p>' +
         '<p>' + stateChip(L.st) + ' <small class="muted">' + L.got + '/' + L.total + T(' thần dân', ' subjects') + (L.due ? ' · ' + L.due + T(' bị Vong quân vây', ' besieged') : '') + '</small></p>' +
         '<p class="vmi-story">' + h(r[App.isEn() ? 6 : 5]) + '</p>' +
-        '<a class="btn primary" href="' + link('n5/' + mapSel) + '">' + sess(mapSel) + ' · ' + h(topic(mapSel)) + ' →</a></div>';
+        '<a class="btn primary" data-from href="' + link('n5/' + mapSel) + '">' + sess(mapSel) + ' · ' + h(topic(mapSel)) + ' →</a></div>';
     } else {
       info = '<div class="vmap-info vmap-key">';
       var F = window.VocabMap.fills();
@@ -503,7 +503,7 @@
     list.sort(function (x, y) { return rec(y)[2] - rec(x)[2]; });
     for (var i = 0; i < list.length; i++) {
       var w = list[i], e = b[wkey(w)];
-      cards += '<a class="card vposter" href="' + wlink(w) + '"><span class="vp-head">' + jp('手配') + '</span><span class="vp-word' + (w[0].length > 6 ? ' xlong' : w[0].length > 4 ? ' long' : '') + '">' + jp(w[0]) + '</span>' +
+      cards += '<a class="card vposter" data-from href="' + wlink(w) + '"><span class="vp-head">' + jp('手配') + '</span><span class="vp-word' + (w[0].length > 6 ? ' xlong' : w[0].length > 4 ? ' long' : '') + '">' + jp(w[0]) + '</span>' +
         (w[0] !== w[1] ? '<span class="vp-read">' + jp(w[1]) + '</span>' : '') + '<span class="vp-mean">' + h(mean(w)) + '</span>' +
         '<span class="vp-meta">' + T('Sai ', 'Missed ') + rec(w)[2] + T(' lần · ', ' times · ') + hitMarks(e[1]) + '</span>' +
         (w[10] && !App.isEn() ? '<span class="vp-tip">' + h(w[10]) + '</span>' : '') + '</a>';
@@ -1071,7 +1071,7 @@
       if (!left.length) return '';
       var lands = {}, nl = 0;
       for (var i = 0; i < left.length; i++) { var n = sessionOf(left[i]); if (!lands[n]) { lands[n] = 1; nl++; } }
-      return '<a class="card kcard vhome" href="' + link('review') + '">' + jp('朝', 'glyph') + '<span class="body"><small>' + T('Triều kiến', 'Audience') + '</small><b>' +
+      return '<a class="card kcard vhome" data-from href="' + link('review') + '">' + jp('朝', 'glyph') + '<span class="body"><small>' + T('Triều kiến', 'Audience') + '</small><b>' +
         left.length + T(' thần dân chờ vào chầu', ' subjects await your audience') + '</b>' +
         (mapOpen() ? '<em>' + T('Vong quân đang vây ' + nl + ' vùng', 'The Oblivion Army besieges ' + nl + (nl > 1 ? ' lands' : ' land')) + '</em>' : '') + '</span><i>→</i></a>';
     },

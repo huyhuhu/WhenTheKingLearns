@@ -1292,7 +1292,11 @@
 
   // ---------- hanh dong giao dien ----------
   var A = App.actions;
-  A.kToast = function (el) { location.hash = /k-(ach|retro)/.test(el.className) ? '#/king/seals' : '#/king'; };
+  A.kToast = function (el) {
+    var to = /k-(ach|retro)/.test(el.className) ? 'king/seals' : 'king';
+    App.markOrigin(to);
+    location.hash = '#/' + to;
+  };
   A.kQTab = function (el) { questTab = el.getAttribute('data-tab'); App.render(); };
   A.kReroll = function (el) { rerollDaily(el.getAttribute('data-id')); App.saveProgress(); App.render(); };
   A.kRerollW = function (el) { rerollWeekly(el.getAttribute('data-id')); App.saveProgress(); App.render(); };
