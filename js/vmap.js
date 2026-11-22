@@ -143,7 +143,7 @@
   // lands[i] = { st, due, kanji, name }; opts = { sel, locked }
   function svg(lands, opts) {
     var h = App.h, F = fills();
-    var i, s = '', regions = '', fog = '', labels = '', clips = '', peace = '', siege = '', tints = '', seal = App.hanko().bg;
+    var i, s = '', regions = '', fog = '', labels = '', selLab = '', clips = '', peace = '', siege = '', tints = '', seal = App.hanko().bg;
     var r = 40, sea = '<pattern id="vSea" width="' + 2 * r + '" height="' + r + '" patternUnits="userSpaceOnUse">';
     [[0, 0], [2 * r, 0], [r, r / 2], [0, r], [2 * r, r]].forEach(function (c) {
       sea += '<g class="wave">';
@@ -166,11 +166,18 @@
       if (opts.locked) continue;
       if (L.due) siege += '<path class="vsiegefill" d="' + g.d + '"/>';
       var chars = L.kanji.split(''), fs = chars.length > 2 ? 44 : 52, y0 = g.y - (chars.length - 1) * fs / 2;
-      labels += '<g class="vlab' + (opts.sel === n ? ' on' : '') + '" data-r="' + n + '" data-x="' + g.x + '" data-y="' + g.y + '">';
-      for (var c = 0; c < chars.length; c++) labels += '<text class="vk" x="' + g.x + '" y="' + (y0 + c * fs + fs * 0.36) + '" style="font-size:' + fs + 'px">' + chars[c] + '</text>';
-      labels += '<text class="vn" x="' + g.x + '" y="' + (y0 + chars.length * fs + 8) + '">' + h(L.name) + '</text></g>';
+      var lab = '<g class="vlab' + (opts.sel === n ? ' on' : opts.sel ? ' dim' : '') + '" data-r="' + n + '" data-x="' + g.x + '" data-y="' + g.y + '">';
+      for (var c = 0; c < chars.length; c++) lab += '<text class="vk" x="' + g.x + '" y="' + (y0 + c * fs + fs * 0.36) + '" style="font-size:' + fs + 'px">' + chars[c] + '</text>';
+      lab += '<text class="vn" x="' + g.x + '" y="' + (y0 + chars.length * fs + 8) + '">' + h(L.name) + '</text></g>';
+      if (opts.sel === n) selLab = lab; else labels += lab;
     }
-    var sel = opts.sel && !opts.locked ? '<path class="vsel" d="' + M.regions[opts.sel - 1].d + '"/>' : '';
+    labels += selLab;
+    var sel = '';
+    if (opts.sel && !opts.locked) {
+      // Lop phu khoet lo dung vung dang chon (evenodd) de lam mo moi vung khac
+      sel = '<path class="vdim" fill-rule="evenodd" d="M0 0H' + M.w + 'V' + M.h + 'H0Z' + M.regions[opts.sel - 1].d + '"/>' +
+        '<path class="vsel" d="' + M.regions[opts.sel - 1].d + '"/>';
+    }
     var ins = M.inset;
     var tx = 520, ty = 470;
     var title = '<g class="vtitle"><rect x="' + (tx - 46) + '" y="' + (ty - 50) + '" width="92" height="420" rx="4"/><rect class="in" x="' + (tx - 38) + '" y="' + (ty - 42) + '" width="76" height="404" rx="2"/>';
