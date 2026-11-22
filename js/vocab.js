@@ -411,7 +411,7 @@
       '<span><b>' + due + '</b><small>' + (mapOpen() ? T('bị Vong quân vây', 'besieged') : T('chờ triều kiến', 'awaiting audience')) + '</small></span>' +
       '<span><b>' + left + '</b><small>' + T('từ mới còn hôm nay', 'new words left today') + '</small></span></div>' +
       '<div class="row">' +
-      (due ? '<a class="btn primary" href="' + link('review') + '">' + T('Triều kiến', 'Hold audience') + ' (' + due + ')</a>' : '') +
+      (due ? '<a class="btn primary attn" href="' + link('review') + '">' + T('Triều kiến', 'Hold audience') + ' (' + due + ')</a>' : '') +
       (left && open ? '<a class="btn' + (due ? '' : ' primary') + '" href="' + link('n5/' + open + '/learn') + '">' + T('Tiếp kiến thần dân mới', 'Meet new subjects') + '</a>' : '') +
       '</div>' + notes + '</div>';
   }
@@ -1089,7 +1089,7 @@
         left.length + T(' thần dân chờ vào chầu', ' subjects await your audience') + '</b>' +
         (mapOpen() ? '<em>' + T('Vong quân đang vây ' + nl + ' vùng', 'The Oblivion Army besieges ' + nl + (nl > 1 ? ' lands' : ' land')) + '</em>' : '') + '</span><i>→</i></a>';
     },
-    badge: function () { return D() ? besieged().length > 0 : false; },
+    badge: function () { return D() ? besieged().length : 0; },
     stat: function () {
       if (!D()) return '';
       return T('Đã tiếp kiến ', 'Met ') + Object.keys(V().w).length + '/' + D().words.length + T(' từ', ' words');

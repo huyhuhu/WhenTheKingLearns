@@ -1131,7 +1131,8 @@
   });
 
   // ---------- giao dien ----------
-  var catTab = -1, filter = 'all', questTab = 'day';
+  var catTab = -1, filter = 'all', questTab = 'day', newCut = null;
+  window.addEventListener('hashchange', function () { if (location.hash !== '#/king/seals') newCut = null; });
 
   function xpBar(xp, r) {
     var lo = RANKS[r][0], hi = r + 1 < RANKS.length ? RANKS[r + 1][0] : lo;
@@ -1179,7 +1180,7 @@
       html += '<p class="qfoot">' + (dd.length >= 3 ? T('Đã nhận Ân thưởng +50', 'Royal favor +50 received') : T('Xong cả 3: Ân thưởng +50', 'All 3: royal favor +50')) +
         ' · ' + T('làm mới lúc 0:00', 'resets at 0:00') + '</p>';
     }
-    return '<div class="card qcard"><div class="qhead"><b>' + jp('令') + ' ' + T('Chiếu chỉ', 'Decrees') + '</b><div class="seg small">' +
+    return '<div class="card qcard' + (questsLeftTonight() ? ' attn' : '') + '"><div class="qhead"><b>' + jp('令') + ' ' + T('Chiếu chỉ', 'Decrees') + '</b><div class="seg small">' +
       '<button class="' + (questTab === 'day' ? 'on' : '') + '" data-act="kQTab" data-tab="day">' + T('Hôm nay', 'Today') + '</button>' +
       '<button class="' + (questTab === 'week' ? 'on' : '') + '" data-act="kQTab" data-tab="week">' + T('Tuần này', 'This week') + '</button></div></div>' + html + '</div>';
   }
@@ -1206,13 +1207,20 @@
     var shown = done ? last : a;
     var name = hidden ? '？？？' : L(shown.name);
     var desc = hidden ? L(a.hint || ['Bí mật', 'Secret']) : L(shown.desc);
-    var date = done ? new Date(k.unlocked[last.id]) : null;
-    return '<div class="card ach' + (done ? ' done' : '') + (hidden ? ' secret' : '') + '">' +
+    var date = done ? new Date(k.unlocked[last.id]) : null, fresh = newestNew(group);
+    var freshNote = fresh && fresh !== shown ? '<em class="ach-fresh">' + T('Vừa đạt: ', 'Just earned: ') + h(L(fresh.name)) + '</em>' : '';
+    return '<div class="card ach' + (done ? ' done' : '') + (hidden ? ' secret' : '') + (fresh ? ' attn' : '') + '">' +
       sealHtml(hidden ? '？' : CATS[a.cat][0], (done ? last : a).r, done ? '' : ' locked') +
-      '<span class="body"><b>' + h(name) + '</b>' + stars + '<small>' + h(desc) + '</small>' +
+      '<span class="body"><b>' + h(name) + (fresh ? ' <span class="kl-new">' + T('Mới', 'New') + '</span>' : '') + '</b>' + stars + freshNote + '<small>' + h(desc) + '</small>' +
       (done ? '<em>' + T('Đạt ngày ', 'Unlocked ') + dkey(date) + '</em>' :
         hidden ? '' : '<div class="bar"><i style="width:' + Math.round(val * 100 / goal) + '%"></i></div><em>' + val + '/' + goal + ' · ' + L(RARITY[a.r]) + '</em>') +
       '</span></div>';
+  }
+  function newestNew(group) {
+    var k = S(), best = null;
+    if (newCut === null) return null;
+    for (var i = 0; i < group.length; i++) if (k.unlocked[group[i].id] > newCut) best = group[i];
+    return best;
   }
   function groupsOf(cat) {
     var out = [], byG = {};
@@ -1224,12 +1232,20 @@
     }
     return out;
   }
+  function freshAch() {
+    var k = S(), n = 0;
+    for (var id in k.unlocked) if (ACH_BY_ID[id] && k.unlocked[id] > k.seenAch) n++;
+    return n;
+  }
+  function questsLeftTonight() {
+    return new Date().getHours() >= 20 ? Math.max(0, 3 - (S().quests[today()] || []).length) : 0;
+  }
   function ledgerCard() {
-    var k = S(), recent = [], fresh = 0, seals = '', id, i;
-    for (id in k.unlocked) if (ACH_BY_ID[id]) { recent.push(id); if (k.unlocked[id] > k.seenAch) fresh++; }
+    var k = S(), recent = [], fresh = freshAch(), seals = '', id, i;
+    for (id in k.unlocked) if (ACH_BY_ID[id]) recent.push(id);
     recent.sort(function (a, b) { return k.unlocked[b] - k.unlocked[a]; });
     for (i = 0; i < recent.length && i < 6; i++) { var a = ACH_BY_ID[recent[i]]; seals += sealHtml(CATS[a.cat][0], a.r); }
-    return '<a class="card mode kledger" href="#/king/seals">' + jp('璽', 'glyph') + '<span class="body"><b>' + T('Sổ ấn tín', 'Seal ledger') +
+    return '<a class="card mode kledger' + (fresh ? ' attn' : '') + '" href="#/king/seals">' + jp('璽', 'glyph') + '<span class="body"><b>' + T('Sổ ấn tín', 'Seal ledger') +
       (fresh ? ' <span class="kl-new">' + T(fresh + ' mới', fresh + ' new') + '</span>' : '') + '</b><small>' +
       recent.length + '/' + ACH.length + T(' ấn tín · ', ' seals · ') + Math.round(recent.length * 100 / ACH.length) + '%</small>' +
       (seals ? '<span class="kl-seals">' + seals + '</span>' : '') + '</span><i>→</i></a>';
@@ -1263,6 +1279,7 @@
   }
   function viewSeals() {
     var k = S(), ctx = context(), i, j;
+    if (freshAch()) { newCut = k.seenAch; catTab = -1; filter = 'all'; }
     k.seenAch = Date.now();
     var tabs = '<button class="' + (catTab < 0 ? 'on' : '') + '" data-act="kCat" data-c="-1">' + T('Tất cả', 'All') + '</button>';
     for (i = 0; i < CATS.length; i++) {
@@ -1271,6 +1288,7 @@
       tabs += '<button class="' + (catTab === i ? 'on' : '') + '" data-act="kCat" data-c="' + i + '">' + jp(CATS[i][0]) + ' ' + h(L([CATS[i][1], CATS[i][2]])) + ' <small>' + got + '/' + tot + '</small></button>';
     }
     var cards = '', groups = groupsOf(catTab);
+    groups.sort(function (a, b) { return (newestNew(b) ? 1 : 0) - (newestNew(a) ? 1 : 0); });
     for (i = 0; i < groups.length; i++) {
       var g = groups[i], allDone = true, next = null;
       for (j = 0; j < g.length; j++) if (!k.unlocked[g[j].id]) { allDone = false; next = next || g[j]; }
@@ -1327,11 +1345,7 @@
       if (parts.length) return null;
       return { html: viewProfile(), title: T('Hồ sơ nhà vua', "The King's Profile"), back: '', backLabel: T('Trang chủ', 'Home') };
     },
-    badge: function () {
-      var k = S(), t = today();
-      for (var id in k.unlocked) if (k.unlocked[id] > k.seenAch) return true;
-      return new Date().getHours() >= 20 && (k.quests[t] || []).length < 3;
-    },
+    badge: function () { return freshAch() + questsLeftTonight(); },
     afterRender: function () { setTimeout(flush, 300); }
   });
 

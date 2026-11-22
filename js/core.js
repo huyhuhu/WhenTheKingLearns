@@ -455,7 +455,8 @@
     tabs += '<a class="' + (parts.length ? '' : 'on') + '" href="#/"><span class="jp" lang="ja">家</span>' + T('Trang chủ', 'Home') + '</a>';
     for (i = 0; i < sections.length; i++) {
       var s = sections[i], on = parts[0] === s.id ? 'on' : '';
-      var dot = s.badge && s.badge() ? '<i class="dot"></i>' : '';
+      var b = s.badge && s.badge();
+      var dot = typeof b === 'number' && b > 0 ? '<i class="dot num">' + (b > 99 ? '99+' : b) + '</i>' : b === true ? '<i class="dot"></i>' : '';
       links += '<a class="' + on + '" href="#/' + s.id + '"' + openAttr(s) + '>' + h(L(s.name)) + dot + '</a>';
       tabs += '<a class="' + on + '" href="#/' + s.id + '"' + openAttr(s) + '>' + jp(s.glyph) + h(L(s.name)) + dot + '</a>';
     }
