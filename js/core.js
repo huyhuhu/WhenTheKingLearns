@@ -460,7 +460,12 @@
     appEl.innerHTML = (parts.length ? '<a class="backlink" href="#/' + (back || '') + '">‹ ' + h(view.backLabel || T('Quay lại', 'Back')) + '</a>' : '') + view.html;
     document.title = (view.title ? view.title + ' · ' : '') + 'When The King Learns';
     if (view.remember) writeJson(LAST_KEY, { path: key, title: view.remember });
-    if (changed) window.scrollTo(0, 0);
+    if (changed) {
+      window.scrollTo(0, 0);
+      appEl.classList.remove('page-in');
+      void appEl.offsetWidth; // reflow so the animation restarts
+      appEl.classList.add('page-in');
+    }
     for (var j = 0; j < sections.length; j++) if (sections[j].afterRender) sections[j].afterRender(sections[j] === sec && view.after);
     renderModal();
   }
