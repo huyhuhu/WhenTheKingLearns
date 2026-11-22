@@ -156,21 +156,21 @@
     for (i = 0; i < M.regions.length; i++) {
       var g = M.regions[i], L = lands[i], n = i + 1, st = opts.locked ? 'wild' : L.st;
       var fill = F[st];
-      // Mau qua bien --f: style truc tiep se de len cac lop <use> ve chong
-      regions += '<path id="vr' + n + '" class="vr st-' + st + (fill ? ' tint' : '') + '" data-r="' + n + '" d="' + g.d + '"' + (fill ? ' style="--f:' + fill + '"' : '') + '/>';
-      clips += '<use xlink:href="#vr' + n + '"/>';
-      if (st === 'wild') fog += '<use xlink:href="#vr' + n + '" class="vfog"/>';
+      regions += '<path class="vr st-' + st + (fill ? ' tint' : '') + '" data-r="' + n + '" d="' + g.d + '"' + (fill ? ' style="--f:' + fill + '"' : '') + '/>';
+      // Ghi thang d, khong dung <use>: Chrome 140 Android ve sai lop dia hinh
+      clips += '<path d="' + g.d + '"/>';
+      if (st === 'wild') fog += '<path class="vfog" d="' + g.d + '"/>';
       // Lop mau mong tren anh dia hinh, de cac muc van tach ro khi dia hinh lam toi mau
       else if (fill) tints += '<path class="vtint" d="' + g.d + '" style="fill:' + (st === 'peace' ? GOLD : seal) + ';fill-opacity:' + (TINT[st] * 0.6).toFixed(2) + '"/>';
-      if (st === 'peace') peace += '<use xlink:href="#vr' + n + '" class="vpeace"/>';
+      if (st === 'peace') peace += '<path class="vpeace" d="' + g.d + '"/>';
       if (opts.locked) continue;
-      if (L.due) siege += '<use xlink:href="#vr' + n + '" class="vsiegefill"/>';
+      if (L.due) siege += '<path class="vsiegefill" d="' + g.d + '"/>';
       var chars = L.kanji.split(''), fs = chars.length > 2 ? 44 : 52, y0 = g.y - (chars.length - 1) * fs / 2;
       labels += '<g class="vlab' + (opts.sel === n ? ' on' : '') + '" data-r="' + n + '" data-x="' + g.x + '" data-y="' + g.y + '">';
       for (var c = 0; c < chars.length; c++) labels += '<text class="vk" x="' + g.x + '" y="' + (y0 + c * fs + fs * 0.36) + '" style="font-size:' + fs + 'px">' + chars[c] + '</text>';
       labels += '<text class="vn" x="' + g.x + '" y="' + (y0 + chars.length * fs + 8) + '">' + h(L.name) + '</text></g>';
     }
-    var sel = opts.sel && !opts.locked ? '<use xlink:href="#vr' + opts.sel + '" class="vsel"/>' : '';
+    var sel = opts.sel && !opts.locked ? '<path class="vsel" d="' + M.regions[opts.sel - 1].d + '"/>' : '';
     var ins = M.inset;
     var tx = 520, ty = 470;
     var title = '<g class="vtitle"><rect x="' + (tx - 46) + '" y="' + (ty - 50) + '" width="92" height="420" rx="4"/><rect class="in" x="' + (tx - 38) + '" y="' + (ty - 42) + '" width="76" height="404" rx="2"/>';
