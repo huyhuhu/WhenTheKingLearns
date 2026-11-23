@@ -111,7 +111,7 @@ Nguồn soạn là `tools/n5_words/01.txt` … `16.txt`, mỗi file một buổi
 - **Đúng** (cả nghĩa lẫn cách đọc trong cùng lượt): lên một bậc.
 - **Sai:** xuống một bậc; nếu đang từ Binh sĩ trở lên thì xuống hai bậc. Không bao giờ dưới Lưu dân I.
 - **Một lượt Triều kiến** hỏi mỗi từ hai câu theo thứ tự ngẫu nhiên: nghĩa và cách đọc. Sai câu nào thì câu đó quay lại cuối lượt, nhưng kết quả của từ đã tính là sai.
-- **Từ mới mỗi ngày:** mặc định 10, chỉnh được 5 / 10 / 15 / 20 trong Cài đặt.
+- **Từ mới mỗi ngày:** cố định 10. Nếu tỉ lệ trả lời đúng trong ngày (mọi bài kiểm tra/ôn) ≥ 80% thì sau mỗi đợt mở thêm 5 từ, tối đa 20 từ/ngày; Thái phó báo khi được mở thêm.
 - **Học từ mới (Tiếp kiến):** xem hồ sơ 5 từ một lần, rồi làm một bài kiểm tra ngắn trên chính 5 từ đó. Đúng hết thì cả 5 vào bậc Lưu dân I.
 - Từ Trung thần vẫn xuất hiện trong trò chơi và Ngự yến, chỉ không vào hàng ôn.
 
@@ -375,7 +375,7 @@ Thêm khóa `vocab` vào đối tượng `progress` đang đồng bộ qua Fireb
 ```text
 vocab: {
   w: { "<mã từ>": [bậc, hạn ôn, số lần sai, chuỗi đúng, lần ôn cuối] },
-  daily: 10,                      // hạn mức từ mới, kèm thời điểm chọn
+  today: [đầu ngày, số câu đúng, tổng số câu],  // thống kê trả lời trong ngày
   wanted: { "<mã từ>": [lúc dán, số lần đúng, ngày đúng cuối, lúc bắt được] },
   wave: { d, t, k: [...] },       // đợt Vong quân hiện tại: ngày, lúc đến, mã từ
   truce: [hết hạn, lúc đặt],      // hưu chiến
