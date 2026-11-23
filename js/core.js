@@ -253,7 +253,9 @@
       var merged = JSON.stringify(progress);
       writeJson(STORE_KEY, progress);
       // Khong ve lai khi dang o man hinh hoc de khong lam mat the dang lat hay cau dang lam.
-      if (merged !== before && parseRoute().length <= 2) render();
+      if (merged !== before) {
+        if (parseRoute().length <= 2 && !window.App.isBusy()) render(); else refreshChrome();
+      }
       if (status === 200 && merged === JSON.stringify(merge(remote, {}))) return finish();
       // Dieu kien updateTime chan ghi de neu may khac vua ghi chen vao giua.
       var cond = status === 200 ? '?currentDocument.updateTime=' + encodeURIComponent(doc.updateTime) : '?currentDocument.exists=false';
