@@ -3,7 +3,7 @@
   'use strict';
   var App = window.App, M = window.MAP_JAPAN;
   if (!M) return;
-  var view = null, onTap = null, frame = 0;
+  var view = null, onTap = null, frame = 0, lastSvg = null, lastK = 0;
   var LABEL_MAX = 22, LABEL_FS = 52, GOLD = '#d4a017';
   var TINT = { war: 0.3, held: 0.55, annex: 0.85, peace: 0.85 };
 
@@ -17,10 +17,14 @@
     var svg = document.getElementById('vMap');
     if (!svg) return;
     svg.setAttribute('viewBox', view.join(' '));
-    svg.setAttribute('class', 'vmap' + (view[2] < M.w / 1.7 ? ' z2' : ''));
-    svg.style.touchAction = zoomed() ? 'none' : 'pan-y';
     // Chu lon dan theo do phong to den LABEL_MAX px tren man hinh roi giu nguyen
     var ppu = svg.getBoundingClientRect().width / view[2], k = Math.min(1, LABEL_MAX / (LABEL_FS * ppu));
+    var cls = 'vmap' + (view[2] < M.w / 1.7 ? ' z2' : ''), ta = zoomed() ? 'none' : 'pan-y';
+    if (svg.getAttribute('class') !== cls) svg.setAttribute('class', cls);
+    if (svg.style.touchAction !== ta) svg.style.touchAction = ta;
+    // Keo ngang khong doi ti le thi khong can dat lai nhan, tranh ve lai thua
+    if (svg === lastSvg && k === lastK) return;
+    lastSvg = svg; lastK = k;
     var labs = svg.querySelectorAll('.vlab');
     for (var i = 0; i < labs.length; i++) {
       var x = labs[i].getAttribute('data-x'), y = labs[i].getAttribute('data-y');
@@ -158,7 +162,7 @@
       var fill = F[st];
       regions += '<path class="vr st-' + st + (fill ? ' tint' : '') + '" data-r="' + n + '" d="' + g.d + '"' + (fill ? ' style="--f:' + fill + '"' : '') + '/>';
       // Ghi thang d, khong dung <use>: Chrome 140 Android ve sai lop dia hinh
-      clips += '<path d="' + g.d + '"/>';
+      clips += g.d;
       if (st === 'wild') fog += '<path class="vfog" d="' + g.d + '"/>';
       // Lop mau mong tren anh dia hinh, de cac muc van tach ro khi dia hinh lam toi mau
       else if (fill) tints += '<path class="vtint" d="' + g.d + '" style="fill:' + (st === 'peace' ? GOLD : seal) + ';fill-opacity:' + (TINT[st] * 0.6).toFixed(2) + '"/>';
