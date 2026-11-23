@@ -90,6 +90,7 @@
   function logoSvg(cls) {
     var c = hankoFn ? hankoFn() : { bg: '#c2452d', fg: '#fffdf8' };
     return '<svg class="' + cls + '" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="' + c.bg + '"/>' +
+      (c.ring ? '<rect x="3" y="3" width="58" height="58" rx="11" fill="none" stroke="' + c.fg + '" stroke-width="3"/>' : '') +
       '<g fill="none" stroke="' + c.fg + '" stroke-width="6" stroke-linecap="round"><path d="M17 18H47M20 32H44M14 46H50M32 18V46"/></g></svg>';
   }
 

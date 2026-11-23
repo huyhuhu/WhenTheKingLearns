@@ -196,7 +196,7 @@
       '<text x="' + (cx + cr + 32) + '" y="' + (cy + 14) + '">東</text><text x="' + (cx - cr - 32) + '" y="' + (cy + 14) + '">西</text></g>';
 
     s += '<svg id="vMap" class="vmap" viewBox="0 0 ' + M.w + ' ' + M.h + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
-      '<defs>' + sea + '<clipPath id="vLand">' + clips + '<path d="' + M.wild + '"/></clipPath></defs>' +
+      '<defs>' + sea + '<clipPath id="vLand"><path d="' + clips + M.wild + '"/></clipPath></defs>' +
       '<rect class="vsea" width="' + M.w + '" height="' + M.h + '"/><rect width="' + M.w + '" height="' + M.h + '" fill="url(#vSea)"/>' +
       '<rect class="vinset" x="' + ins[0] + '" y="' + ins[1] + '" width="' + ins[2] + '" height="' + ins[3] + '"/>' +
       '<path class="vother" d="' + M.others + '"/>' + regions + '<path class="vwild" d="' + M.wild + '"/>' +

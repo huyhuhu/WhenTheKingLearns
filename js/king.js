@@ -7,6 +7,7 @@
   var DEVICE_KEY = 'wtkl.device';
   var SOUND_KEY = 'wtkl.kingsound';
   var RANK_SEEN_KEY = 'wtkl.rankseen';
+  var QUEST_NAG_KEY = 'wtkl.questnag';
   var KEEP_DAYS = 60;
   var RARITY_XP = [20, 50, 150, 500];
   var RARITY = [['Thường', 'Common'], ['Hiếm', 'Rare'], ['Sử thi', 'Epic'], ['Huyền thoại', 'Legendary']];
@@ -221,7 +222,7 @@
     { id: 'kim', rank: 4, bg: '#b8860b', fg: '#fffdf8', name: ['Vàng kim', 'Gold'] },
     { id: 'luc', rank: 6, bg: '#2f7d55', fg: '#fffdf8', name: ['Lục bảo', 'Emerald'] },
     { id: 'tim', rank: 8, bg: '#6b3fa0', fg: '#fffdf8', name: ['Tím hoàng bào', 'Royal purple'] },
-    { id: 'den', rank: 9, bg: '#1b1b1f', fg: '#e6c35c', name: ['Mực đen viền vàng', 'Ink and gold'] }
+    { id: 'den', rank: 9, bg: '#1b1b1f', fg: '#e6c35c', ring: true, name: ['Mực đen viền vàng', 'Ink and gold'] }
   ];
   var CAP = { flip: 100, right: 300, quiz: 100, perfect: 150, listen: 30, vright: 200, game: 50 };
 
@@ -801,8 +802,17 @@
     var c = COL[r], st = ' stroke="' + (r >= 9 ? GOLD : 'rgba(0,0,0,.3)') + '" stroke-width="1.5" stroke-linejoin="round"';
     var lac = ' class="lac" fill="' + LAC + '"' + st, s = '', i;
     var anim = sway && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-    function swing(inner, cy) {
-      return '<g>' + inner + (anim ? '<animateTransform attributeName="transform" type="rotate" values="-2.5 32 ' + cy + ';2.5 32 ' + cy + ';-2.5 32 ' + cy + '" dur="2.6s" repeatCount="indefinite"/>' : '') + '</g>';
+    function swing(inner, cy, cx, amp) {
+      cx = cx === undefined ? 32 : cx; amp = amp || 2.5;
+      var a = -amp + ' ' + cx + ' ' + cy, b = amp + ' ' + cx + ' ' + cy;
+      return '<g>' + inner + (anim ? '<animateTransform attributeName="transform" type="rotate" values="' + a + ';' + b + ';' + a + '" dur="2.6s" repeatCount="indefinite"/>' : '') + '</g>';
+    }
+    function twinkle(dur) {
+      return anim ? '<animate attributeName="opacity" values="1;.35;1" dur="' + dur + 's" repeatCount="indefinite"/>' : '';
+    }
+    function glint(x, y) {
+      return anim ? '<path d="M' + x + ' ' + (y - 4) + 'L' + (x + 1) + ' ' + (y - 1) + 'L' + (x + 4) + ' ' + y + 'L' + (x + 1) + ' ' + (y + 1) + 'L' + x + ' ' + (y + 4) + 'L' + (x - 1) + ' ' + (y + 1) +
+        'L' + (x - 4) + ' ' + y + 'L' + (x - 1) + ' ' + (y - 1) + 'Z" fill="#fffbe6" opacity="0"><animate attributeName="opacity" values="0;0;1;0" keyTimes="0;.7;.85;1" dur="3.2s" repeatCount="indefinite"/></path>' : '';
     }
     function P(d, fill, extra) { return '<path d="' + d + '"' + (fill ? ' fill="' + fill + '"' : '') + (extra === undefined ? st : extra) + '/>'; }
     function dot(x, y, rad, fill, extra) { return '<circle cx="' + x + '" cy="' + y + '" r="' + rad + '" fill="' + fill + '"' + (extra || '') + '/>'; }
@@ -815,28 +825,29 @@
       s += P('M12 58C12 41 20 35 32 35S52 41 52 58Z', '', lac) + swing(tails, 34) + '<ellipse cx="32" cy="27" rx="9" ry="8"' + lac + '/>';
       if (r === 0) s += P('M23 30.5h18v4.5H23Z', RED) + line(15, 25, 49, 25, c, 2.6) + dot(15, 25, 2.4, c) + dot(49, 25, 2.4, c);
       else s += P('M21 37L23.5 19Q32 13.5 40.5 19L43 37Z', c) + P('M22.5 31.5h19', 'none', ' stroke="rgba(0,0,0,.25)" stroke-width="1.5"') +
-        dot(32, 25, 2.6, RED) + line(12, 24, 52, 24, GOLD, 2.4) + dot(12, 24, 2.3, GOLD) + dot(52, 24, 2.3, GOLD);
+        dot(32, 25, 2.6, RED) + line(12, 24, 52, 24, GOLD, 2.4) + dot(12, 24, 2.3, GOLD) + dot(52, 24, 2.3, GOLD) + glint(32, 25);
     } else if (r === 2) {
       s += P('M22 34Q22 11 32 11Q42 11 42 34Z', '', lac) +
-        '<rect x="1.5" y="27" width="21" height="4.5" rx="2.2"' + lac + '/><rect x="41.5" y="27" width="21" height="4.5" rx="2.2"' + lac + '/>' +
-        dot(4, 29.2, 2.6, c) + dot(60, 29.2, 2.6, c) +
-        P('M14 56V38Q14 24 32 24Q50 24 50 38V56Z', '', lac) + '<rect x="14" y="46" width="36" height="8" fill="' + c + '"' + st + '/>' + dot(32, 50, 2.4, RED);
+        swing('<rect x="1.5" y="27" width="21" height="4.5" rx="2.2"' + lac + '/>' + dot(4, 29.2, 2.6, c), 29.2, 22, 4) +
+        swing('<rect x="41.5" y="27" width="21" height="4.5" rx="2.2"' + lac + '/>' + dot(60, 29.2, 2.6, c), 29.2, 42, -4) +
+        P('M14 56V38Q14 24 32 24Q50 24 50 38V56Z', '', lac) + '<rect x="14" y="46" width="36" height="8" fill="' + c + '"' + st + '/>' + dot(32, 50, 2.4, RED) + glint(32, 50);
     } else if (r <= 5) {
       var body = r === 3 ? lac : ' class="lacg" fill="' + LAC + '" stroke="' + c + '" stroke-width="1.5" stroke-linejoin="round"';
       var trim = c, vein = ' stroke="' + c + '" stroke-width="1" fill="none"';
-      s += P('M24 21C18 16 11.5 10 11.5 5.5C11.5 2 16 1 18.5 3.5C22 7 26 12 28.5 17Z', '', body) + P('M40 21C46 16 52.5 10 52.5 5.5C52.5 2 48 1 45.5 3.5C42 7 38 12 35.5 17Z', '', body) +
-        P('M25.5 18.5Q17 11 15 5M38.5 18.5Q47 11 49 5', '', vein) +
+      var tip = r === 5 ? [dot(14.5, 4, 2, RED), dot(49.5, 4, 2, RED)] : ['', ''];
+      s += swing(P('M24 21C18 16 11.5 10 11.5 5.5C11.5 2 16 1 18.5 3.5C22 7 26 12 28.5 17Z', '', body) + P('M25.5 18.5Q17 11 15 5', '', vein) + tip[0], 19, 27, 5) +
+        swing(P('M40 21C46 16 52.5 10 52.5 5.5C52.5 2 48 1 45.5 3.5C42 7 38 12 35.5 17Z', '', body) + P('M38.5 18.5Q47 11 49 5', '', vein) + tip[1], 19, 37, -5) +
         P('M20 25Q20 9 32 9Q44 9 44 25Z', '', body) + P('M13 56V31Q13 22 22 21.5H42Q51 22 51 31V56Z', '', body) +
         '<rect x="13" y="45" width="38" height="9" fill="' + trim + '"' + st + '/>';
-      if (r >= 4) s += dot(32, 33, 4, GOLD) + dot(32, 33, 1.8, RED) +
+      if (r >= 4) s += dot(32, 33, 4, GOLD) + '<circle cx="32" cy="33" r="1.8" fill="' + RED + '">' + twinkle(1.8) + '</circle>' + glint(32, 33) +
         P('M15 34q2.5-4 5 0t5 0M49 34q-2.5-4-5 0t-5 0', 'none', ' stroke="' + GOLD + '" stroke-width="2" stroke-linecap="round"') +
         dot(26, 33, 1.6, GOLD) + dot(38, 33, 1.6, GOLD);
       if (r === 5) s += P('M16 50.5q2-3 4 0q2-3 4 0M40 50.5q2-3 4 0q2-3 4 0', 'none', ' stroke="' + DGOLD + '" stroke-width="1.4" stroke-linecap="round"') +
-        dot(32, 49.5, 3, '#3d7fd6', ' stroke="#fffdf8" stroke-width="1"') + dot(14.5, 4, 2, RED) + dot(49.5, 4, 2, RED);
+        dot(32, 49.5, 3, '#3d7fd6', ' stroke="#fffdf8" stroke-width="1"') + glint(32, 49.5);
     } else {
       var n = r === 6 ? 5 : r === 7 ? 9 : 12, trim2 = r >= 9 ? GOLD : c, strings = '';
       var BEAD = ['#f4f1ea', '#e05a5a', '#e6c35c', '#3d7fd6', '#2f9e6e'];
-      if (r >= 9) s += dot(32, 30, 29, GOLD, ' opacity=".14"') + dot(32, 30, 22, GOLD, ' opacity=".16"');
+      if (r >= 9) s += '<g>' + dot(32, 30, 29, GOLD, ' opacity=".14"') + dot(32, 30, 22, GOLD, ' opacity=".16"') + twinkle(2.4) + '</g>';
       if (r >= 7) s += swing(line(7, 16, 7, 33, RED, 1.2) + dot(7, 35, 2.8, GOLD) + line(57, 16, 57, 33, RED, 1.2) + dot(57, 35, 2.8, GOLD), 16);
       s += P('M20 16H44L46.5 53H17.5Z', '', lac) + '<rect x="17.5" y="45" width="29" height="8" fill="' + trim2 + '"' + st + '/>' +
         line(11, 28, 53, 28, GOLD, 2.2) + dot(11, 28, 2, GOLD) + dot(53, 28, 2, GOLD) +
@@ -846,7 +857,7 @@
         strings += line(x, 17, x, 38, 'rgba(0,0,0,.4)', 0.7);
         for (var b = 0; b < 5; b++) strings += dot(x, (20 + b * 4.5).toFixed(1), 1.45, col, ' stroke="rgba(0,0,0,.45)" stroke-width=".5"');
       }
-      s += swing(strings, 16);
+      s += swing(strings, 16) + glint(15, 11);
     }
     return '<svg class="' + cls + '" viewBox="0 0 64 60" aria-hidden="true">' + s + '</svg>';
   }
@@ -1148,7 +1159,7 @@
   }
   function kingCard() {
     var xp = totalXp(), r = rankOf(xp), title = titleText();
-    return '<a class="card kcard" href="#/king">' + crownSvg(r, 'kcrown') + '<span class="body"><small>' + T('Bậc ', 'Rank ') + (r + 1) + ' · ' + jp(RANKS[r][3]) + '</small>' +
+    return '<a class="card kcard" href="#/king">' + crownSvg(r, 'kcrown', true) + '<span class="body"><small>' + T('Bậc ', 'Rank ') + (r + 1) + ' · ' + jp(RANKS[r][3]) + '</small>' +
       '<b>' + h(rankName(r)) + '</b>' + (title ? '<em>「' + h(title) + '」</em>' : '') + xpBar(xp, r) + '</span>' +
       '<span class="kseals"><b>' + size(S().unlocked) + '</b><small>/' + ACH.length + '</small><small>' + T('ấn tín', 'seals') + '</small></span></a>';
   }
@@ -1238,7 +1249,8 @@
     return n;
   }
   function questsLeftTonight() {
-    return new Date().getHours() >= 20 ? Math.max(0, 3 - (S().quests[today()] || []).length) : 0;
+    if (new Date().getHours() < 20 || readLocal(QUEST_NAG_KEY) === today()) return 0;
+    return Math.max(0, 3 - (S().quests[today()] || []).length);
   }
   function ledgerCard() {
     var k = S(), recent = [], fresh = freshAch(), seals = '', id, i;
@@ -1261,7 +1273,7 @@
     var cur = k.hanko ? k.hanko[0] : 'son', sw = '';
     for (i = 0; i < HANKO.length; i++) {
       var c = HANKO[i], open = r >= c.rank;
-      sw += '<button class="swatch' + (cur === c.id ? ' on' : '') + (open ? '' : ' locked') + '" style="background:' + c.bg + ';color:' + c.fg + '"' +
+      sw += '<button class="swatch' + (cur === c.id ? ' on' : '') + (open ? '' : ' locked') + '" style="background:' + c.bg + ';color:' + c.fg + (c.ring ? ';box-shadow:inset 0 0 0 2px ' + c.fg : '') + '"' +
         (open ? ' data-act="kHanko" data-id="' + c.id + '"' : ' disabled') + ' title="' + h(L(c.name)) + (open ? '' : ' · ' + T('Bậc ', 'Rank ') + (c.rank + 1)) + '">' + (open ? '王' : '🔒') + '</button>';
     }
     var stats = [
@@ -1270,7 +1282,7 @@
       [ctx.v.learned, T('thần dân', 'subjects')], [ctx.v.burned, T('trung thần', 'loyal subjects')], [ctx.c.vright || 0, T('câu Triều kiến đúng', 'audience answers')]
     ], st = '';
     for (i = 0; i < stats.length; i++) st += '<div class="kstat"><b>' + fmt(stats[i][0]) + '</b><small>' + stats[i][1] + '</small></div>';
-    return '<div class="card kprofile">' + crownSvg(r, 'big-crown') +
+    return '<div class="card kprofile">' + crownSvg(r, 'big-crown', true) +
       '<div class="body"><small>' + T('Bậc ', 'Rank ') + (r + 1) + '/10 · ' + jp(RANKS[r][3]) + '</small><h1>' + h(rankName(r)) + '</h1>' +
       (ctx.mapOpen ? '<small class="krealm">' + T('Quốc thế: ', 'Realm: ') + jp(realm().kanji) + ' ' + h(realm().name) + ' · ' + ctx.v.annexN + '/' + ctx.v.regions + T(' vùng sáp nhập', ' lands annexed') + '</small>' : '') +
       '<label class="ktitle">' + T('Danh hiệu', 'Title') + ' <select class="field" data-change="kTitle">' + titles + '</select></label>' + xpBar(xp, r) + '</div></div>' +
@@ -1343,7 +1355,9 @@
     route: function (parts) {
       if (parts.length === 1 && parts[0] === 'seals') return { html: viewSeals(), title: T('Sổ ấn tín', 'Seal ledger'), back: 'king', backLabel: T('Hồ sơ', 'Profile') };
       if (parts.length) return null;
-      return { html: viewProfile(), title: T('Hồ sơ nhà vua', "The King's Profile"), back: '', backLabel: T('Trang chủ', 'Home') };
+      var html = viewProfile();
+      if (questsLeftTonight()) writeLocal(QUEST_NAG_KEY, today());
+      return { html: html, title: T('Hồ sơ nhà vua', "The King's Profile"), back: '', backLabel: T('Trang chủ', 'Home') };
     },
     badge: function () { return freshAch() + questsLeftTonight(); },
     afterRender: function () { setTimeout(flush, 300); }
