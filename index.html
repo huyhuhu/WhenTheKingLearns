@@ -15,10 +15,16 @@
   try { theme = localStorage.getItem('wtkl.theme'); } catch (e) {}
   if (!theme) theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   document.documentElement.setAttribute('data-theme', theme);
+  try {
+    var court = /[?&]court=([01])/.exec(location.search);
+    if (court) localStorage.setItem('wtkl.court', court[1]);
+    if (localStorage.getItem('wtkl.court') !== '0') document.documentElement.setAttribute('data-court', '');
+  } catch (e) {}
   if (theme === 'dark') document.querySelector('meta[name=theme-color]').setAttribute('content', '#16171b');
 })();
 </script>
 <link rel="stylesheet" href="css/style.css?v=26">
+<link rel="stylesheet" href="css/court.css?v=4">
 </head>
 <body>
 <header id="header"></header>
@@ -26,7 +32,7 @@
 <nav id="tabbar"></nav>
 <noscript>Trang này cần bật JavaScript.</noscript>
 <script src="data/n5.js?v=22"></script>
-<script src="js/core.js?v=28"></script>
+<script src="js/core.js?v=30"></script>
 <script src="data/audio.js?v=22"></script>
 <script src="js/bgm.js?v=22"></script>
 <script src="js/speech.js?v=22"></script>
@@ -36,10 +42,11 @@
 <script src="data/vocab-n5.js?v=22"></script>
 <script src="data/audio-ex.js?v=22"></script>
 <script src="data/map-japan.js?v=22"></script>
-<script src="js/vmap.js?v=24"></script>
-<script src="js/vocab.js?v=27"></script>
+<script src="js/vmap.js?v=26"></script>
+<script src="js/vocab.js?v=28"></script>
 <script src="js/sections.js?v=22"></script>
-<script src="js/king.js?v=27"></script>
+<script src="js/king.js?v=30"></script>
+<script src="js/court.js?v=4"></script>
 <script>App.start();</script>
 </body>
 </html>

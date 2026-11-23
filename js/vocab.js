@@ -10,7 +10,7 @@
   var BURNED = 9;
   var RANKS = [null, ['Lưu dân I', 'Wanderer I'], ['Lưu dân II', 'Wanderer II'], ['Thứ dân I', 'Commoner I'], ['Thứ dân II', 'Commoner II'],
     ['Binh sĩ', 'Soldier'], ['Võ tướng', 'General'], ['Đại thần', 'Minister'], ['Trung thần', 'Loyal Minister'], ['Trung thần điện', 'Hall of Loyalty']];
-  var BATCH = 5, ROUND = 20;
+  var BATCH = 5, ROUND = 20, BASE_DAILY = 10, MAX_DAILY = 20, GOOD_RATE = 0.8;
   var POS = {
     n: ['danh từ', 'noun'], pron: ['đại từ', 'pronoun'], v1: ['động từ nhóm 1', 'godan verb'], v2: ['động từ nhóm 2', 'ichidan verb'],
     v3: ['động từ nhóm 3', 'irregular verb'], 'adj-i': ['tính từ い', 'i-adjective'], 'adj-na': ['tính từ な', 'na-adjective'],
@@ -118,7 +118,14 @@
   function stage(w) { var r = rec(w); return r ? r[0] : 0; }
   function isDue(r, now) { return r && r[0] < BURNED && r[1] <= now; }
   function dayStart() { var d = new Date(); d.setHours(0, 0, 0, 0); return d.getTime(); }
-  function dailyLimit() { var d = V().daily; return d ? d[0] : 10; }
+  function todayStat() {
+    var t = V().today, d = dayStart();
+    if (!t || t[0] !== d) t = V().today = [d, 0, 0];
+    return t;
+  }
+  function goodDay() { var t = todayStat(); return t[2] > 0 && t[1] / t[2] >= GOOD_RATE; }
+  function dailyLimit() { return goodDay() ? Math.min(MAX_DAILY, Math.max(BASE_DAILY, learnedToday() + BATCH)) : BASE_DAILY; }
+  function bonusOpen() { return learnedToday() >= BASE_DAILY && newLeft() > 0; }
   function learnedToday() {
     var t = dayStart(), n = 0, all = V().w;
     for (var k in all) if (all[k][5] >= t) n++;
@@ -255,14 +262,14 @@
     App.emit('word:learn', { key: wkey(w) });
   }
 
-  // Moi tu giu ban ghi co lan on cuoi moi hon; han muc tu moi lay lua chon moi hon.
+  // Moi tu giu ban ghi co lan on cuoi moi hon; thong ke hom nay lay ngay moi hon.
   App.addMerger('vocab', function (a, b) {
     a = a || {}; b = b || {};
     var out = { w: {} }, k, aw = a.w || {}, bw = b.w || {};
     for (k in aw) out.w[k] = aw[k];
     for (k in bw) if (!out.w[k] || bw[k][4] > out.w[k][4]) out.w[k] = bw[k];
-    var ad = a.daily, bd = b.daily;
-    if (ad || bd) out.daily = !ad ? bd : !bd ? ad : (bd[1] > ad[1] ? bd : ad);
+    var ad = a.today, bd = b.today;
+    if (ad || bd) out.today = !ad ? bd : !bd ? ad : (bd[0] !== ad[0] ? (bd[0] > ad[0] ? bd : ad) : (bd[2] > ad[2] ? bd : ad));
     var at = a.truce, bt = b.truce;
     if (at || bt) out.truce = !at ? bt : !bt ? at : (bt[1] > at[1] ? bt : at);
     var aw2 = a.wave, bw2 = b.wave;
@@ -767,6 +774,7 @@
     if (learn.phase === 'quiz') return head + viewQuestion(learn.quiz);
     return head + '<div class="hero"><h1>' + T('Đã thu nhận ', 'Enlisted ') + learn.list.length + T(' thần dân', ' subjects') + '</h1><p class="sub">' +
       T('Họ sẽ vào chầu lần đầu sau 4 giờ nữa.', 'Their first audience is in 4 hours.') + '</p></div>' +
+      (bonusOpen() ? '<p class="center muted">' + T('Thái phó: "Hôm nay Bệ hạ học rất tốt, thần xin tiến cử thêm ' + newLeft() + ' thần dân."', 'Tutor: "You have studied well today, Your Majesty. May I present ' + newLeft() + ' more subjects."') + '</p>' : '') +
       '<div class="row">' + (newLeft() && unlearned(D().sessions[n - 1]).length ? '<button class="btn primary" data-act="vLearnMore">' + T('Tiếp kiến thêm', 'Meet more') + '</button>' : '') +
       '<a class="btn" href="' + link('n5/' + n) + '">' + T('Về vùng đất', 'Back to the land') + '</a></div>';
   }
@@ -915,6 +923,7 @@
     var q = activeQuiz(), item = q.qs[q.i], k = wkey(item.w);
     if (!ok) q.failed[k] = 1;
     q.total++; if (ok) q.right++;
+    var t = todayStat(); t[2]++; if (ok) t[1]++;
     App.emit('word:answer', { key: k, ok: ok, type: item.type, mode: curMode, retry: !!item.retry, spy: curMode === 'review' && isWanted(k) });
     if (!ok) q.qs.push({ w: item.w, type: item.type, opts: item.opts ? shuffle(item.opts) : null, retry: true });
     App.render();
@@ -1040,10 +1049,6 @@
     for (var i = 0; i < all.length; i++) if (wkey(all[i]) === k) w = all[i];
     if (w) window.Speech.sayEx(k, plainEx(w[6]), el);
   };
-  [5, 10, 15, 20].forEach(function (n) {
-    A['vDaily' + n] = function () { V().daily = [n, Date.now()]; App.saveProgress(); App.refreshChrome(); };
-  });
-
   document.addEventListener('keydown', function (e) {
     if ((e.key === 'Enter' || e.keyCode === 13) && e.target && e.target.id === 'vInput') { e.preventDefault(); A.vSubmit(); }
   });
@@ -1053,12 +1058,6 @@
     checkLands(true);
     var all = V().w;
     for (var k in all) if (all[k][2] >= 4 && !board()[k]) post(k, true);
-  });
-
-  App.addSettingsRow(function (setRow, seg) {
-    var cur = dailyLimit(), items = [];
-    [5, 10, 15, 20].forEach(function (n) { items.push([String(n), 'vDaily' + n, cur === n]); });
-    return setRow(T('Từ mới mỗi ngày', 'New words per day'), seg(items));
   });
 
   App.section({

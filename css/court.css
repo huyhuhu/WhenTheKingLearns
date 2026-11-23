@@ -1,0 +1,576 @@
+html[data-court] {
+  --bg: #f6eedc;
+  --surface: #fffaf0;
+  --raised: #f2e5c8;
+  --ink: #2a1a14;
+  --muted: #7d6650;
+  --line: #e2cc9c;
+  --accent: #b8232c;
+  --accent-ink: #fff8e6;
+  --accent-soft: #f7ded3;
+  --gold: #c99a1e;
+  --gold-hi: #f5d77a;
+  --gold-deep: #8a6410;
+  --lacquer: #2c1433;
+  --lacquer-2: #170a1c;
+  --shadow: 0 2px 6px rgba(90, 50, 10, 0.12);
+  --glow: 0 0 0 1px rgba(201, 154, 30, 0.55), 0 10px 26px rgba(150, 90, 10, 0.25);
+  --seigaiha: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cg fill='%23f6eedc' stroke='%23c99a1e' stroke-opacity='.16' stroke-width='1.2'%3E%3Cg id='c'%3E%3Ccircle r='24'/%3E%3Ccircle r='17'/%3E%3Ccircle r='10'/%3E%3Ccircle r='3'/%3E%3C/g%3E%3Cuse href='%23c' x='48'/%3E%3Cuse href='%23c' x='24' y='12'/%3E%3Cuse href='%23c' y='24'/%3E%3Cuse href='%23c' x='48' y='24'/%3E%3Cuse href='%23c' x='24' y='36'/%3E%3C/g%3E%3C/svg%3E");
+}
+html[data-court][data-theme="dark"] {
+  --bg: #130c17;
+  --surface: #1e1522;
+  --raised: #2b1f30;
+  --ink: #f4e9d0;
+  --muted: #b5a184;
+  --line: #3f2f42;
+  --accent: #f0654c;
+  --accent-ink: #1c0f0c;
+  --accent-soft: #3d1d22;
+  --gold: #e2bb4f;
+  --gold-hi: #ffe08a;
+  --gold-deep: #b48a22;
+  --lacquer: #241029;
+  --lacquer-2: #0c0610;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --glow: 0 0 0 1px rgba(226, 187, 79, 0.6), 0 10px 30px rgba(226, 150, 40, 0.22);
+  --seigaiha: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cg fill='%23130c17' stroke='%23e2bb4f' stroke-opacity='.09' stroke-width='1.2'%3E%3Cg id='c'%3E%3Ccircle r='24'/%3E%3Ccircle r='17'/%3E%3Ccircle r='10'/%3E%3Ccircle r='3'/%3E%3C/g%3E%3Cuse href='%23c' x='48'/%3E%3Cuse href='%23c' x='24' y='12'/%3E%3Cuse href='%23c' y='24'/%3E%3Cuse href='%23c' x='48' y='24'/%3E%3Cuse href='%23c' x='24' y='36'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html[data-court] body { background: var(--bg) var(--seigaiha); }
+html[data-court] .hero h1,
+html[data-court] .body b,
+html[data-court] .dialog-head b,
+html[data-court] .brand-name,
+html[data-court] .kprofile h1,
+html[data-court] .coronation h2 {
+  font-family: "Noto Serif", "Shippori Mincho", "Noto Serif JP", "Yu Mincho", serif;
+}
+html[data-court] .glyph, html[data-court] .eyebrow .jp, html[data-court] #tabbar .jp {
+  font-family: "Shippori Mincho", "Noto Serif JP", "Yu Mincho", serif;
+}
+
+/* ---------- dau trang son mai ---------- */
+html[data-court] #header {
+  background: linear-gradient(180deg, var(--lacquer), var(--lacquer-2));
+  border-bottom: 0;
+  box-shadow: 0 6px 18px rgba(20, 5, 25, 0.35);
+}
+html[data-court] #header::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -5px; height: 5px;
+  background:
+    linear-gradient(90deg, transparent, var(--gold-hi) 50%, transparent) 0 0 / 40% 1px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) 0 0 / 100% 1px no-repeat,
+    repeating-linear-gradient(135deg, var(--accent) 0 4px, var(--gold-deep) 4px 8px) 0 1px / 100% 3px no-repeat,
+    linear-gradient(var(--gold), var(--gold)) 0 4px / 100% 1px no-repeat;
+  -webkit-animation: courtSheen 6s linear infinite; animation: courtSheen 6s linear infinite;
+}
+@keyframes courtSheen { from { background-position: -60% 0, 0 0, 0 1px, 0 4px; } to { background-position: 160% 0, 0 0, 0 1px, 0 4px; } }
+@-webkit-keyframes courtSheen { from { background-position: -60% 0, 0 0, 0 1px, 0 4px; } to { background-position: 160% 0, 0 0, 0 1px, 0 4px; } }
+html[data-court] .brand-name {
+  background: linear-gradient(100deg, var(--gold-deep), var(--gold-hi) 45%, #fff6d6 50%, var(--gold-hi) 55%, var(--gold));
+  background-size: 250% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-animation: courtGildText 5s ease-in-out infinite; animation: courtGildText 5s ease-in-out infinite;
+}
+@keyframes courtGildText { 0%, 60% { background-position: 100% 0; } 100% { background-position: -50% 0; } }
+@-webkit-keyframes courtGildText { 0%, 60% { background-position: 100% 0; } 100% { background-position: -50% 0; } }
+html[data-court] .hanko { border-radius: 9px; box-shadow: 0 0 0 2px var(--gold), 0 0 12px rgba(245, 215, 122, 0.45); transition: transform 0.4s cubic-bezier(.3, 1.6, .5, 1); }
+html[data-court] .brand:hover .hanko { transform: rotate(-12deg) scale(1.12); }
+
+html[data-court] .topnav a { position: relative; color: rgba(245, 215, 122, 0.72); transition: color 0.25s, background 0.25s, transform 0.2s; }
+html[data-court] .topnav a::after {
+  content: ""; position: absolute; left: 14%; right: 14%; bottom: 1px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-hi), transparent);
+  transform: scaleX(0); transition: transform 0.35s cubic-bezier(.3, 1.4, .5, 1);
+}
+html[data-court] .topnav a:hover { color: var(--gold-hi); }
+html[data-court] .topnav a:hover::after { transform: scaleX(0.6); }
+html[data-court] .topnav a.on { color: #fff3c4; background: rgba(245, 215, 122, 0.12); text-shadow: 0 0 10px rgba(245, 215, 122, 0.6); }
+html[data-court] .topnav a.on::after { transform: scaleX(1); }
+html[data-court] .icon-btn {
+  border-color: rgba(201, 154, 30, 0.6); background: rgba(255, 255, 255, 0.04); color: var(--gold-hi);
+  transition: transform 0.25s cubic-bezier(.3, 1.6, .5, 1), box-shadow 0.25s, background 0.25s;
+}
+html[data-court] #app .icon-btn, html[data-court] .dialog .icon-btn { background: var(--surface); color: var(--gold-deep); }
+html[data-court] .icon-btn:hover { transform: translateY(-2px) rotate(-8deg); box-shadow: 0 0 0 2px rgba(245, 215, 122, 0.35), 0 0 14px rgba(245, 215, 122, 0.45); }
+html[data-court] .icon-btn:active { transform: scale(0.88); }
+html[data-court] .icon-btn.on { background: linear-gradient(160deg, #d8343a, var(--accent) 55%, #7d1219); border-color: var(--gold); color: #fff3c4; }
+
+/* ---------- thanh tab duoi (dien thoai) ---------- */
+@media (max-width: 960px) {
+  html[data-court] #tabbar { background: linear-gradient(0deg, var(--lacquer-2), var(--lacquer)); border-top: 1px solid var(--gold); box-shadow: 0 -6px 18px rgba(20, 5, 25, 0.3); }
+  html[data-court] #tabbar a { color: rgba(245, 215, 122, 0.6); transition: color 0.25s; }
+  html[data-court] #tabbar a .jp { transition: transform 0.35s cubic-bezier(.3, 1.8, .5, 1); }
+  html[data-court] #tabbar a.on { color: #fff3c4; }
+  html[data-court] #tabbar a.on .jp { transform: translateY(-1px) scale(1.12); text-shadow: 0 0 12px rgba(245, 215, 122, 0.8); -webkit-animation: courtBob 2.4s ease-in-out infinite; animation: courtBob 2.4s ease-in-out infinite; }
+  html[data-court] #tabbar a.on::before {
+    content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 3px; border-radius: 0 0 3px 3px;
+    background: linear-gradient(90deg, var(--gold-deep), var(--gold-hi), var(--gold-deep)); -webkit-animation: courtGrow 0.4s ease-out; animation: courtGrow 0.4s ease-out;
+  }
+}
+@keyframes courtBob { 50% { transform: translateY(-3px) scale(1.12); } }
+@-webkit-keyframes courtBob { 50% { -webkit-transform: translateY(-3px) scale(1.12); } }
+@keyframes courtGrow { from { transform: scaleX(0); } }
+@-webkit-keyframes courtGrow { from { -webkit-transform: scaleX(0); } }
+
+/* ---------- tieu de trang chu ---------- */
+html[data-court] .hero { position: relative; }
+html[data-court] .hero::before, html[data-court] .hero::after {
+  content: ""; position: absolute; top: 18px; width: 120px; height: 56px; pointer-events: none; opacity: 0.85;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 56'%3E%3Cg fill='none' stroke='%23c99a1e' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 44h100M18 44c-8 0-10-12 0-13 0-10 14-12 18-4 4-12 22-12 24 0 10-6 22 2 18 12h18M40 30c2-6 10-7 13-2M64 28c4-4 11-2 12 3'/%3E%3Cpath d='M30 52h70' opacity='.5'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+  -webkit-animation: courtCloud 7s ease-in-out infinite alternate; animation: courtCloud 7s ease-in-out infinite alternate;
+}
+html[data-court] .hero::before { left: 2%; }
+html[data-court] .hero::after { right: 2%; transform: scaleX(-1); -webkit-animation-delay: -3.5s; animation-delay: -3.5s; }
+html[data-court] .hero.slim::before, html[data-court] .hero.slim::after { display: none; }
+@keyframes courtCloud { from { translate: -14px 0; } to { translate: 14px -6px; } }
+@media (max-width: 760px) { html[data-court] .hero::before, html[data-court] .hero::after { width: 70px; top: 4px; opacity: 0.5; } }
+html[data-court] .eyebrow { color: var(--gold-deep); letter-spacing: 4px; }
+html[data-court] .eyebrow::before, html[data-court] .eyebrow::after {
+  content: ""; display: inline-block; width: 38px; height: 1px; margin: 0 10px; vertical-align: middle;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+html[data-court] .eyebrow::after { background: linear-gradient(-90deg, transparent, var(--gold)); }
+html[data-court][data-theme="dark"] .eyebrow { color: var(--gold); }
+html[data-court] .hero h1 {
+  font-weight: 800; letter-spacing: 0;
+  background: linear-gradient(100deg, var(--accent) 0%, #d8462f 35%, var(--gold) 50%, #d8462f 65%, var(--accent) 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-animation: courtTitleIn 0.9s cubic-bezier(.2, .9, .3, 1) both, courtGildText 6s 1s ease-in-out infinite;
+  animation: courtTitleIn 0.9s cubic-bezier(.2, .9, .3, 1) both, courtGildText 6s 1s ease-in-out infinite;
+}
+@keyframes courtTitleIn { from { opacity: 0; letter-spacing: 8px; filter: blur(6px); } to { opacity: 1; letter-spacing: 0; filter: none; } }
+@-webkit-keyframes courtTitleIn { from { opacity: 0; letter-spacing: 8px; -webkit-filter: blur(6px); } to { opacity: 1; letter-spacing: 0; -webkit-filter: none; } }
+
+/* ---------- the ---------- */
+html[data-court] .card {
+  position: relative; border-color: var(--line);
+  background-image: linear-gradient(110deg, transparent 35%, rgba(245, 215, 122, 0.35) 48%, rgba(255, 255, 255, 0.5) 50%, rgba(245, 215, 122, 0.35) 52%, transparent 65%);
+  background-size: 300% 100%; background-position: 120% 0; background-repeat: no-repeat;
+  transition: transform 0.35s cubic-bezier(.25, 1.4, .5, 1), box-shadow 0.35s, border-color 0.35s, background-position 0.9s ease;
+}
+html[data-court][data-theme="dark"] .card { background-image: linear-gradient(110deg, transparent 35%, rgba(226, 187, 79, 0.16) 48%, rgba(255, 240, 200, 0.22) 50%, rgba(226, 187, 79, 0.16) 52%, transparent 65%); }
+html[data-court] .section-card, html[data-court] .kcard, html[data-court] .resume { overflow: visible; }
+html[data-court] .section-card { border: 1px solid var(--gold); box-shadow: inset 0 0 0 3px var(--surface), inset 0 0 0 4px rgba(201, 154, 30, 0.45), var(--shadow); }
+@media (hover: hover) {
+  html[data-court] a.card:hover, html[data-court] .card.word:hover, html[data-court] .tile:hover {
+    transform: translateY(-4px); border-color: var(--gold); background-position: -30% 0;
+    box-shadow: var(--glow);
+  }
+  html[data-court] .section-card:hover { box-shadow: inset 0 0 0 3px var(--surface), inset 0 0 0 4px rgba(201, 154, 30, 0.8), var(--glow); }
+}
+html[data-court] a.card:active, html[data-court] .tile:active { transform: translateY(0) scale(0.98); transition-duration: 0.1s; }
+
+html[data-court] .section-card .glyph, html[data-court] .mode .glyph, html[data-court] .vhome .glyph {
+  position: relative;
+  background: radial-gradient(circle at 30% 25%, #e0453f, var(--accent) 55%, #6e0f17);
+  color: #fff3c4; border-radius: 14px;
+  box-shadow: inset 0 0 0 2px rgba(245, 215, 122, 0.85), inset 0 0 0 4px rgba(110, 15, 23, 0.6), 0 4px 10px rgba(110, 15, 23, 0.35);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35), 0 0 10px rgba(255, 220, 140, 0.45);
+  transition: transform 0.45s cubic-bezier(.3, 1.8, .5, 1);
+}
+html[data-court] .section-card.soon .glyph { background: linear-gradient(160deg, #6a5a70, #3d2f45); color: rgba(245, 215, 122, 0.75); box-shadow: inset 0 0 0 2px rgba(201, 154, 30, 0.5); }
+html[data-court] a.card:hover .glyph { transform: rotate(-8deg) scale(1.1); }
+html[data-court] .section-card.soon { opacity: 0.85; }
+html[data-court] .body em { color: var(--gold-deep); }
+html[data-court][data-theme="dark"] .body em { color: var(--gold); }
+
+html[data-court] .resume {
+  position: relative; border: 1px solid var(--gold);
+  background: linear-gradient(110deg, var(--lacquer), #4a1d3d 60%, var(--lacquer));
+  color: var(--gold-hi); box-shadow: var(--shadow);
+  transition: transform 0.3s cubic-bezier(.3, 1.5, .5, 1), box-shadow 0.3s;
+}
+html[data-court] .resume b { color: #fff3c4; }
+html[data-court] .resume i { -webkit-animation: courtNudge 1.4s ease-in-out infinite; animation: courtNudge 1.4s ease-in-out infinite; }
+html[data-court] .resume:hover { transform: translateY(-2px); box-shadow: var(--glow); }
+@keyframes courtNudge { 50% { transform: translateX(6px); } }
+@-webkit-keyframes courtNudge { 50% { -webkit-transform: translateX(6px); } }
+
+html[data-court] #app.court-enter .grid.sections > .card,
+html[data-court] #app.court-enter > .kcard,
+html[data-court] #app.court-enter > .card:not(.vmapcard),
+html[data-court] #app.court-enter > .resume {
+  -webkit-animation: courtRise 0.6s cubic-bezier(.2, .9, .3, 1.15) both; animation: courtRise 0.6s cubic-bezier(.2, .9, .3, 1.15) both;
+}
+html[data-court] #app.court-enter .grid.sections > .card:nth-child(2) { -webkit-animation-delay: 0.07s; animation-delay: 0.07s; }
+html[data-court] #app.court-enter .grid.sections > .card:nth-child(3) { -webkit-animation-delay: 0.14s; animation-delay: 0.14s; }
+html[data-court] #app.court-enter .grid.sections > .card:nth-child(4) { -webkit-animation-delay: 0.21s; animation-delay: 0.21s; }
+html[data-court] #app.court-enter .grid.sections > .card:nth-child(5) { -webkit-animation-delay: 0.28s; animation-delay: 0.28s; }
+html[data-court] #app.court-enter .grid.sections > .card:nth-child(n+6) { -webkit-animation-delay: 0.35s; animation-delay: 0.35s; }
+@keyframes courtRise { from { opacity: 0; transform: translateY(22px) scale(0.96); } }
+@-webkit-keyframes courtRise { from { opacity: 0; -webkit-transform: translateY(22px) scale(0.96); } }
+html[data-court] #app.page-in { -webkit-animation: courtPage 0.45s ease-out; animation: courtPage 0.45s ease-out; }
+@keyframes courtPage { from { opacity: 0; transform: translateY(10px); } }
+
+/* ---------- nut bam ---------- */
+html[data-court] .btn, html[data-court] .seg button, html[data-court] .chip, html[data-court] .opt, html[data-court] .ktabs button, html[data-court] .pod-chaps button, html[data-court] .vcard {
+  background-image: linear-gradient(110deg, transparent 35%, rgba(255, 240, 190, 0.55) 50%, transparent 65%);
+  background-size: 300% 100%; background-position: 130% 0; background-repeat: no-repeat;
+  transition: transform 0.22s cubic-bezier(.3, 1.6, .5, 1), box-shadow 0.25s, background-position 0.7s ease, border-color 0.25s;
+}
+html[data-court] .btn { border-color: var(--gold); border-radius: 8px; }
+html[data-court] .btn.primary, html[data-court] .seg button.on, html[data-court] .pod-play, html[data-court] .pod-start, html[data-court] .pod-rates button.on {
+  background-color: var(--accent);
+  background-image: linear-gradient(110deg, transparent 35%, rgba(255, 240, 190, 0.55) 50%, transparent 65%), linear-gradient(170deg, #d9383d, var(--accent) 55%, #7d1219);
+  background-size: 300% 100%, 100% 100%; background-position: 130% 0, 0 0;
+  border-color: var(--gold); color: #fff3c4; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 220, 160, 0.4), 0 3px 8px rgba(125, 18, 25, 0.35);
+}
+html[data-court][data-theme="dark"] .btn.primary, html[data-court][data-theme="dark"] .seg button.on { color: #fff3c4; }
+@media (hover: hover) {
+  html[data-court] .btn:hover, html[data-court] .seg button:hover, html[data-court] .chip:hover, html[data-court] .opt:hover, html[data-court] .ktabs button:hover, html[data-court] .vcard:hover {
+    transform: translateY(-2px); background-position: -30% 0; box-shadow: 0 0 0 1px var(--gold), 0 6px 14px rgba(150, 90, 10, 0.25);
+  }
+  html[data-court] .btn.primary:hover, html[data-court] .seg button.on:hover { background-position: -30% 0, 0 0; box-shadow: 0 0 0 2px var(--gold-hi), 0 6px 16px rgba(125, 18, 25, 0.45); }
+}
+html[data-court] .btn:active, html[data-court] .seg button:active, html[data-court] .chip:active, html[data-court] .opt:active, html[data-court] .ktabs button:active, html[data-court] .vcard:active, html[data-court] .pod-play:active {
+  transform: scale(0.94); transition-duration: 0.08s;
+}
+html[data-court] .seg { border-color: var(--gold); border-radius: 8px; }
+html[data-court] .chip.on, html[data-court] .ktabs button.on {
+  background-color: var(--lacquer); border-color: var(--gold); color: var(--gold-hi); box-shadow: 0 0 10px rgba(201, 154, 30, 0.35);
+}
+html[data-court] .opt.right { -webkit-animation: courtRight 0.55s cubic-bezier(.3, 1.6, .5, 1); animation: courtRight 0.55s cubic-bezier(.3, 1.6, .5, 1); box-shadow: 0 0 0 3px rgba(47, 125, 85, 0.25), 0 0 18px rgba(201, 154, 30, 0.5); }
+html[data-court] .opt.wrong { -webkit-animation: courtShake 0.45s; animation: courtShake 0.45s; }
+@keyframes courtRight { 40% { transform: scale(1.07); } }
+@-webkit-keyframes courtRight { 40% { -webkit-transform: scale(1.07); } }
+@keyframes courtShake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+@-webkit-keyframes courtShake { 20%, 60% { -webkit-transform: translateX(-6px); } 40%, 80% { -webkit-transform: translateX(6px); } }
+
+/* ---------- popup cuon thu ---------- */
+html[data-court] #modal .backdrop {
+  background: radial-gradient(ellipse at center, rgba(44, 20, 51, 0.55), rgba(10, 4, 14, 0.75));
+  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+}
+html[data-court] .dialog {
+  border: 2px solid var(--gold); border-radius: 6px; overflow: hidden;
+  box-shadow: 0 0 0 4px var(--surface), 0 0 0 5px rgba(201, 154, 30, 0.6), 0 24px 60px rgba(10, 4, 14, 0.55);
+}
+html[data-court] .dialog::before, html[data-court] .dialog::after {
+  content: ""; position: absolute; left: -2px; right: -2px; height: 10px; z-index: 2; pointer-events: none;
+  background: linear-gradient(180deg, #5c3a14, var(--gold) 40%, #5c3a14);
+}
+html[data-court] .dialog::before { top: -2px; }
+html[data-court] .dialog::after { bottom: -2px; }
+html[data-court] .dialog-head {
+  padding-top: 18px; color: var(--gold-hi);
+  background: linear-gradient(180deg, var(--lacquer), var(--lacquer-2));
+}
+html[data-court] .dialog-head .icon-btn { background: transparent; color: var(--gold-hi); }
+html[data-court] .dialog-head .icon-btn:hover { transform: rotate(90deg) scale(1.1); }
+html[data-court] .tabs { background: var(--lacquer-2); border-bottom: 1px solid var(--gold); }
+html[data-court] .tabs button { position: relative; border-bottom: 0; color: rgba(245, 215, 122, 0.6); transition: color 0.25s; }
+html[data-court] .tabs button:hover { color: var(--gold-hi); }
+html[data-court] .tabs button.on { color: #fff3c4; text-shadow: 0 0 10px rgba(245, 215, 122, 0.7); }
+html[data-court] .tabs button.on::after {
+  content: ""; position: absolute; left: 12%; right: 12%; bottom: 0; height: 3px; border-radius: 3px 3px 0 0;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-hi), var(--gold-deep));
+  -webkit-animation: courtGrow 0.35s cubic-bezier(.3, 1.6, .5, 1); animation: courtGrow 0.35s cubic-bezier(.3, 1.6, .5, 1);
+}
+html[data-court] .dialog-body { padding-bottom: 24px; }
+html[data-court] .dialog-body > * { -webkit-animation: courtFade 0.35s ease-out both; animation: courtFade 0.35s ease-out both; }
+html[data-court] .dialog-body h3 { color: var(--gold-deep); }
+html[data-court][data-theme="dark"] .dialog-body h3 { color: var(--gold); }
+@keyframes courtFade { from { opacity: 0; transform: translateY(6px); } }
+@-webkit-keyframes courtFade { from { opacity: 0; -webkit-transform: translateY(6px); } }
+
+html[data-court] #modal.enter .backdrop { -webkit-animation: courtFadeIn 0.3s ease-out; animation: courtFadeIn 0.3s ease-out; }
+html[data-court] #modal.enter .dialog { -webkit-animation: courtUnroll 0.6s cubic-bezier(.2, .9, .25, 1.05) both; animation: courtUnroll 0.6s cubic-bezier(.2, .9, .25, 1.05) both; }
+html[data-court] #modal.leave .backdrop { -webkit-animation: courtFadeIn 0.28s ease-in reverse both; animation: courtFadeIn 0.28s ease-in reverse both; }
+html[data-court] #modal.leave .dialog { -webkit-animation: courtRollUp 0.3s ease-in both; animation: courtRollUp 0.3s ease-in both; }
+@keyframes courtFadeIn { from { opacity: 0; } }
+@-webkit-keyframes courtFadeIn { from { opacity: 0; } }
+@keyframes courtUnroll {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.6, 0.04); }
+  35% { opacity: 1; transform: translate(-50%, -50%) scale(1, 0.04); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1, 1); }
+}
+@-webkit-keyframes courtUnroll {
+  0% { opacity: 0; -webkit-transform: translate(-50%, -50%) scale(0.6, 0.04); }
+  35% { opacity: 1; -webkit-transform: translate(-50%, -50%) scale(1, 0.04); }
+  100% { opacity: 1; -webkit-transform: translate(-50%, -50%) scale(1, 1); }
+}
+@keyframes courtRollUp { to { opacity: 0; transform: translate(-50%, -50%) scale(0.9, 0.04); } }
+@-webkit-keyframes courtRollUp { to { opacity: 0; -webkit-transform: translate(-50%, -50%) scale(0.9, 0.04); } }
+
+html[data-court] .range, html[data-court] .pod-seek { accent-color: var(--accent); }
+html[data-court] #toast { background: var(--lacquer); color: var(--gold-hi); border: 1px solid var(--gold); }
+html[data-court] #ktoast { border-color: var(--gold); box-shadow: var(--glow); }
+
+/* ---------- chung cho moi trang ---------- */
+html[data-court][data-theme="dark"] .hero h1 {
+  background-image: linear-gradient(100deg, var(--gold) 0%, var(--gold-hi) 35%, #fff4cf 50%, var(--gold-hi) 65%, var(--gold) 100%);
+}
+html[data-court] .backlink { transition: color 0.2s, transform 0.25s cubic-bezier(.3, 1.6, .5, 1); }
+html[data-court] .backlink:hover { color: var(--accent); transform: translateX(-4px); }
+html[data-court] .card h3, html[data-court] .heading { color: var(--gold-deep); }
+html[data-court][data-theme="dark"] .card h3, html[data-court][data-theme="dark"] .heading { color: var(--gold); }
+html[data-court] .bar, html[data-court] .kbar { background: var(--raised); box-shadow: inset 0 0 0 1px rgba(201, 154, 30, 0.25); }
+html[data-court] .bar i, html[data-court] .kbar i {
+  position: relative; overflow: hidden;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold) 60%, var(--gold-hi));
+  transition: width 0.6s cubic-bezier(.2, .9, .3, 1);
+}
+html[data-court] .bar i::after, html[data-court] .kbar i::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255, 250, 220, 0.75), transparent);
+  -webkit-animation: courtBarShine 2.6s ease-in-out infinite; animation: courtBarShine 2.6s ease-in-out infinite;
+}
+@keyframes courtBarShine { from { transform: translateX(-120%); } 60%, to { transform: translateX(300%); } }
+@-webkit-keyframes courtBarShine { from { -webkit-transform: translateX(-120%); } 60%, to { -webkit-transform: translateX(300%); } }
+html[data-court] .vboss .vhp i { background: linear-gradient(90deg, #7d1219, #c2452d 60%, #f0654c); }
+html[data-court] .field { border-color: var(--line); transition: border-color 0.2s, box-shadow 0.25s; }
+html[data-court] .field:focus { outline: 0; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201, 154, 30, 0.25), 0 0 14px rgba(201, 154, 30, 0.25); }
+html[data-court] .card.prompt, html[data-court] .flash, html[data-court] .kprofile, html[data-court] .vmapcard, html[data-court] .vsum {
+  border: 1px solid var(--gold);
+  box-shadow: inset 0 0 0 3px var(--surface), inset 0 0 0 4px rgba(201, 154, 30, 0.4), var(--shadow);
+}
+html[data-court] .card.prompt::before, html[data-court] .card.prompt::after,
+html[data-court] .flash::before, html[data-court] .flash::after,
+html[data-court] .kprofile::before, html[data-court] .kprofile::after {
+  content: ""; position: absolute; width: 18px; height: 18px; pointer-events: none;
+  border: 2px solid var(--gold); opacity: 0.85;
+}
+html[data-court] .card.prompt::before, html[data-court] .flash::before, html[data-court] .kprofile::before { top: 7px; left: 7px; border-right: 0; border-bottom: 0; border-radius: 6px 0 0 0; }
+html[data-court] .card.prompt::after, html[data-court] .flash::after, html[data-court] .kprofile::after { bottom: 7px; right: 7px; border-left: 0; border-top: 0; border-radius: 0 0 6px 0; }
+html[data-court] .mid, html[data-court] .detail-info h2, html[data-court] .vsum-stats b, html[data-court] .kstat b, html[data-court] .kseals b {
+  font-family: "Noto Serif", "Shippori Mincho", "Noto Serif JP", serif;
+}
+
+/* ---------- Kanji ---------- */
+html[data-court] .rowcard .no {
+  font-family: "Noto Serif", serif;
+  background: linear-gradient(180deg, var(--gold), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+html[data-court] .tile { transition: transform 0.3s cubic-bezier(.3, 1.6, .5, 1), box-shadow 0.3s, border-color 0.3s; }
+html[data-court] .tile .k { transition: transform 0.35s cubic-bezier(.3, 1.8, .5, 1); }
+html[data-court] .tile:hover .k { transform: scale(1.15); }
+html[data-court] .tile.known { border-color: var(--gold); background-color: var(--ok-soft); box-shadow: inset 0 0 0 1px rgba(201, 154, 30, 0.35); }
+html[data-court] .tile.known::after { content: "\2713"; position: absolute; top: 3px; right: 6px; font-size: 10px; font-weight: 800; color: var(--gold-deep); }
+html[data-court][data-theme="dark"] .tile.known::after { color: var(--gold); }
+html[data-court] #app.court-enter .grid.kanji > .tile { -webkit-animation: courtPop 0.45s cubic-bezier(.3, 1.6, .5, 1) both; animation: courtPop 0.45s cubic-bezier(.3, 1.6, .5, 1) both; }
+html[data-court] #app.court-enter .grid.kanji > .tile:nth-child(3n+2) { -webkit-animation-delay: 0.06s; animation-delay: 0.06s; }
+html[data-court] #app.court-enter .grid.kanji > .tile:nth-child(3n) { -webkit-animation-delay: 0.12s; animation-delay: 0.12s; }
+@keyframes courtPop { from { opacity: 0; transform: scale(0.6); } }
+@-webkit-keyframes courtPop { from { opacity: 0; -webkit-transform: scale(0.6); } }
+html[data-court] #app.court-enter .rows > .card, html[data-court] #app.court-enter .grid > .card:not(.tile) { -webkit-animation: courtRise 0.55s cubic-bezier(.2, .9, .3, 1.15) both; animation: courtRise 0.55s cubic-bezier(.2, .9, .3, 1.15) both; }
+html[data-court] #app.court-enter .rows > .card:nth-child(2), html[data-court] #app.court-enter .grid > .card:not(.tile):nth-child(2) { -webkit-animation-delay: 0.06s; animation-delay: 0.06s; }
+html[data-court] #app.court-enter .rows > .card:nth-child(3), html[data-court] #app.court-enter .grid > .card:not(.tile):nth-child(3) { -webkit-animation-delay: 0.12s; animation-delay: 0.12s; }
+html[data-court] #app.court-enter .rows > .card:nth-child(4), html[data-court] #app.court-enter .grid > .card:not(.tile):nth-child(4) { -webkit-animation-delay: 0.18s; animation-delay: 0.18s; }
+html[data-court] #app.court-enter .rows > .card:nth-child(n+5), html[data-court] #app.court-enter .grid > .card:not(.tile):nth-child(n+5) { -webkit-animation-delay: 0.24s; animation-delay: 0.24s; }
+
+html[data-court] .strokebox {
+  position: relative; border: 2px solid var(--gold);
+  background:
+    linear-gradient(var(--line), var(--line)) center / 1px 100% no-repeat,
+    linear-gradient(var(--line), var(--line)) center / 100% 1px no-repeat,
+    radial-gradient(circle at 50% 40%, var(--surface), var(--raised));
+  box-shadow: inset 0 0 0 4px var(--surface), inset 0 0 0 5px rgba(201, 154, 30, 0.4), var(--shadow);
+  transition: transform 0.3s cubic-bezier(.3, 1.6, .5, 1), box-shadow 0.3s;
+}
+html[data-court] .strokebox:hover { transform: scale(1.02); box-shadow: inset 0 0 0 4px var(--surface), inset 0 0 0 5px rgba(201, 154, 30, 0.6), var(--glow); }
+html[data-court] .strokes .ink path { stroke: var(--accent); }
+html[data-court] .detail-info h2 { color: var(--accent); }
+html[data-court] .reading { border-left: 3px solid var(--gold); transition: transform 0.25s; }
+html[data-court] .reading:hover { transform: translateX(3px); }
+html[data-court] .story { border-left: 4px solid var(--gold); }
+
+html[data-court] .flash { -webkit-perspective: 900px; perspective: 900px; }
+html[data-court] .flash .big { color: var(--ink); text-shadow: 0 2px 0 rgba(201, 154, 30, 0.35); }
+html[data-court] .flash.court-flip { -webkit-animation: courtFlip 0.55s cubic-bezier(.3, 1.3, .5, 1); animation: courtFlip 0.55s cubic-bezier(.3, 1.3, .5, 1); }
+html[data-court] .flash.court-deal { -webkit-animation: courtDeal 0.5s cubic-bezier(.2, .9, .3, 1.1); animation: courtDeal 0.5s cubic-bezier(.2, .9, .3, 1.1); }
+@keyframes courtFlip { from { transform: rotateY(90deg); } }
+@-webkit-keyframes courtFlip { from { -webkit-transform: rotateY(90deg); } }
+@keyframes courtDeal { from { opacity: 0; transform: translateX(60px) rotate(6deg); } }
+@-webkit-keyframes courtDeal { from { opacity: 0; -webkit-transform: translateX(60px) rotate(6deg); } }
+html[data-court] .quiz.court-new .card.prompt { -webkit-animation: courtDeal 0.45s cubic-bezier(.2, .9, .3, 1.1); animation: courtDeal 0.45s cubic-bezier(.2, .9, .3, 1.1); }
+html[data-court] .quiz.court-new .opt { -webkit-animation: courtRise 0.45s cubic-bezier(.2, .9, .3, 1.15) both; animation: courtRise 0.45s cubic-bezier(.2, .9, .3, 1.15) both; }
+html[data-court] .quiz.court-new .opt:nth-child(2) { -webkit-animation-delay: 0.05s; animation-delay: 0.05s; }
+html[data-court] .quiz.court-new .opt:nth-child(3) { -webkit-animation-delay: 0.1s; animation-delay: 0.1s; }
+html[data-court] .quiz.court-new .opt:nth-child(4) { -webkit-animation-delay: 0.15s; animation-delay: 0.15s; }
+html[data-court] .opt[disabled] { cursor: default; }
+html[data-court] .vres.good { -webkit-animation: courtRight 0.55s cubic-bezier(.3, 1.6, .5, 1); animation: courtRight 0.55s cubic-bezier(.3, 1.6, .5, 1); }
+html[data-court] .vres.bad { -webkit-animation: courtShake 0.45s; animation: courtShake 0.45s; }
+
+/* ---------- Tu vung ---------- */
+html[data-court] .vposter { transition: transform 0.35s cubic-bezier(.3, 1.6, .5, 1), box-shadow 0.35s; }
+html[data-court] .vposter:hover { transform: rotate(0) translateY(-5px) scale(1.03); box-shadow: 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 18px rgba(201, 154, 30, 0.45); }
+html[data-court] .vt-k { transition: transform 0.4s cubic-bezier(.3, 1.8, .5, 1); }
+html[data-court] a.vtile:hover .vt-k { transform: rotate(-6deg) scale(1.08); }
+html[data-court] .st-peace .vt-k { background: linear-gradient(160deg, #d9a92a, #b8860b 60%, #7a5806); box-shadow: inset 0 0 0 2px var(--gold-hi), 0 3px 10px rgba(184, 134, 11, 0.45); }
+html[data-court] .st-annex .vt-k { background: linear-gradient(160deg, #d9383d, var(--accent) 60%, #7d1219); box-shadow: inset 0 0 0 2px rgba(245, 215, 122, 0.8); }
+html[data-court] .vstrip .vstate { transition: transform 0.25s cubic-bezier(.3, 1.6, .5, 1); }
+html[data-court] .vstrip .vstate:hover { transform: translateY(-2px); }
+html[data-court] .vex-box, html[data-court] .vtip { border-left: 4px solid var(--gold); }
+html[data-court] .vboss-k { -webkit-animation: courtMenace 2.2s ease-in-out infinite; animation: courtMenace 2.2s ease-in-out infinite; }
+html[data-court] .vboss.down .vboss-k { -webkit-animation: none; animation: none; }
+@keyframes courtMenace { 50% { box-shadow: 0 0 0 4px rgba(194, 69, 45, 0.25), 0 0 18px rgba(194, 69, 45, 0.55); } }
+@-webkit-keyframes courtMenace { 50% { box-shadow: 0 0 0 4px rgba(194, 69, 45, 0.25), 0 0 18px rgba(194, 69, 45, 0.55); } }
+html[data-court] .vcard.sel { box-shadow: 0 0 0 2px var(--gold), 0 0 14px rgba(201, 154, 30, 0.45); transform: scale(1.03); }
+html[data-court] .big-say { border-color: var(--gold); -webkit-animation: courtCall 2s ease-in-out infinite; animation: courtCall 2s ease-in-out infinite; }
+@keyframes courtCall { 50% { box-shadow: 0 0 0 6px rgba(201, 154, 30, 0.18), 0 0 16px rgba(201, 154, 30, 0.4); } }
+@-webkit-keyframes courtCall { 50% { box-shadow: 0 0 0 6px rgba(201, 154, 30, 0.18), 0 0 16px rgba(201, 154, 30, 0.4); } }
+
+/* ---------- Ho so nha vua ---------- */
+html[data-court] .kcrown, html[data-court] .big-crown { transition: transform 0.45s cubic-bezier(.3, 1.8, .5, 1); filter: drop-shadow(0 4px 8px rgba(201, 154, 30, 0.45)); }
+html[data-court] .kcard:hover .kcrown, html[data-court] .kprofile:hover .big-crown { transform: translateY(-4px) rotate(-5deg); }
+html[data-court] .kcrown, html[data-court] .kprofile .big-crown { -webkit-animation: courtFloat 3.2s ease-in-out infinite; animation: courtFloat 3.2s ease-in-out infinite; }
+@keyframes courtFloat {
+  0%, 100% { translate: 0 0; filter: drop-shadow(0 4px 6px rgba(201, 154, 30, 0.35)); }
+  50% { translate: 0 -4px; filter: drop-shadow(0 9px 12px rgba(245, 215, 122, 0.8)); }
+}
+html[data-court] .kprofile h1, html[data-court] .kstat b { color: var(--accent); }
+html[data-court][data-theme="dark"] .kprofile h1, html[data-court][data-theme="dark"] .kstat b { color: var(--gold-hi); }
+html[data-court] .kstat { border-color: var(--line); transition: transform 0.3s cubic-bezier(.3, 1.6, .5, 1), box-shadow 0.3s, border-color 0.3s; }
+html[data-court] .kstat:hover { transform: translateY(-3px); border-color: var(--gold); box-shadow: var(--glow); }
+html[data-court] .seal { transition: transform 0.4s cubic-bezier(.3, 1.8, .5, 1); }
+html[data-court] .ach:hover .seal, html[data-court] .kledger:hover .seal:not(.locked) { transform: rotate(-10deg) scale(1.1); }
+html[data-court] .seal.r2 { background: linear-gradient(160deg, #e2bb4f, #c9a227 55%, #8a6410); }
+html[data-court] .seal.r3 { -webkit-animation: courtJade 2.6s ease-in-out infinite; animation: courtJade 2.6s ease-in-out infinite; }
+@keyframes courtJade { 50% { box-shadow: 0 0 20px rgba(31, 158, 143, 0.9); } }
+@-webkit-keyframes courtJade { 50% { box-shadow: 0 0 20px rgba(31, 158, 143, 0.9); } }
+html[data-court] .ach.done { border-color: var(--gold); }
+html[data-court] .swatch { transition: transform 0.3s cubic-bezier(.3, 1.8, .5, 1); }
+html[data-court] .swatch:not(.locked):hover { transform: translateY(-3px) rotate(-8deg); }
+html[data-court] .swatch.on { border-color: var(--gold-hi); -webkit-animation: courtChosen 2s ease-in-out infinite; animation: courtChosen 2s ease-in-out infinite; }
+@keyframes courtChosen { 50% { filter: drop-shadow(0 0 6px rgba(245, 215, 122, 0.85)); } }
+html[data-court] .qrow { transition: background 0.25s; }
+html[data-court] .qrow:hover { background: linear-gradient(90deg, transparent, rgba(201, 154, 30, 0.08), transparent); }
+html[data-court] .cal { transition: transform 0.2s; }
+html[data-court] .cal:hover { transform: scale(1.2); }
+html[data-court] .cal.l3 { background: linear-gradient(135deg, #e2bb4f, #c9a227 60%, #8a6410); }
+html[data-court] .cal.today { -webkit-animation: courtToday 1.8s ease-in-out infinite; animation: courtToday 1.8s ease-in-out infinite; }
+@keyframes courtToday { 50% { box-shadow: 0 0 0 2px var(--accent), 0 0 12px var(--accent); } }
+@-webkit-keyframes courtToday { 50% { box-shadow: 0 0 0 2px var(--accent), 0 0 12px var(--accent); } }
+
+html[data-court] #kcrown .backdrop {
+  background: radial-gradient(circle at 50% 45%, rgba(201, 154, 30, 0.35), rgba(44, 20, 51, 0.7) 45%, rgba(10, 4, 14, 0.85));
+  -webkit-animation: courtFadeIn 0.4s ease-out; animation: courtFadeIn 0.4s ease-out;
+}
+html[data-court] #kcrown .dialog { -webkit-animation: courtUnroll 0.7s cubic-bezier(.2, .9, .25, 1.05) both; animation: courtUnroll 0.7s cubic-bezier(.2, .9, .25, 1.05) both; }
+html[data-court] .coronation .big-crown {
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 215, 122, 0.55), transparent 65%);
+  -webkit-animation: courtCrown 0.9s 0.4s cubic-bezier(.3, 1.6, .5, 1) both, courtHalo 2.4s 1.3s ease-in-out infinite;
+  animation: courtCrown 0.9s 0.4s cubic-bezier(.3, 1.6, .5, 1) both, courtHalo 2.4s 1.3s ease-in-out infinite;
+}
+@keyframes courtCrown { from { opacity: 0; transform: translateY(-60px) scale(0.4) rotate(-20deg); } }
+@-webkit-keyframes courtCrown { from { opacity: 0; -webkit-transform: translateY(-60px) scale(0.4) rotate(-20deg); } }
+@keyframes courtHalo { 50% { filter: drop-shadow(0 0 16px rgba(245, 215, 122, 0.95)); transform: scale(1.05); } }
+@-webkit-keyframes courtHalo { 50% { -webkit-filter: drop-shadow(0 0 16px rgba(245, 215, 122, 0.95)); -webkit-transform: scale(1.05); } }
+html[data-court] .coronation h2 { color: var(--gold-hi); text-shadow: 0 0 14px rgba(245, 215, 122, 0.6); -webkit-animation: courtTitleIn 0.8s 0.8s both; animation: courtTitleIn 0.8s 0.8s both; }
+html[data-court]:not([data-theme="dark"]) .coronation h2 { color: var(--accent); text-shadow: 0 0 12px rgba(201, 154, 30, 0.5); }
+
+/* ---------- Podcast ---------- */
+html[data-court] .ps-top { background: linear-gradient(180deg, var(--lacquer), var(--lacquer-2)); border-bottom: 1px solid var(--gold); color: var(--gold-hi); }
+html[data-court] .ps-title, html[data-court] .pod-title { font-family: "Noto Serif", "Shippori Mincho", "Noto Serif JP", serif; }
+html[data-court] .ps-top .icon-btn, html[data-court] .ps-top .pod-b { background: transparent; color: var(--gold-hi); }
+html[data-court] .ps-top .pod-b:hover { background: rgba(245, 215, 122, 0.15); }
+html[data-court] .pline { transition: opacity 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s; }
+html[data-court] .pline.cur { border-left: 3px solid var(--gold); box-shadow: 0 0 0 1px rgba(201, 154, 30, 0.35), var(--shadow); }
+html[data-court] .pod-dock { border-top: 1px solid var(--gold); box-shadow: 0 -6px 16px rgba(20, 5, 25, 0.12); }
+html[data-court] .pod-b { transition: transform 0.22s cubic-bezier(.3, 1.6, .5, 1), background 0.2s; }
+html[data-court] .pod-b:hover { transform: scale(1.12); background: var(--accent-soft); }
+html[data-court] .pod-b:active, html[data-court] .pod-play:active { transform: scale(0.88); }
+html[data-court] .pod-play, html[data-court] .pod-start { transition: transform 0.2s; }
+html[data-court] .pod-start { -webkit-animation: courtCall 2.2s ease-in-out infinite; animation: courtCall 2.2s ease-in-out infinite; }
+html[data-court] .pod-row.playing { border-color: var(--gold); box-shadow: var(--glow); }
+html[data-court] .pod-lv { background: var(--lacquer); color: var(--gold-hi); }
+html[data-court] #podMini { background: linear-gradient(180deg, var(--lacquer), var(--lacquer-2)); border-top: 1px solid var(--gold); color: var(--gold-hi); }
+html[data-court] #podMini b { color: #fff3c4; }
+html[data-court] #podMini small, html[data-court] #podMini .pm-x { color: rgba(245, 215, 122, 0.7); }
+html[data-court] #podMini .pod-b { color: var(--gold-hi); }
+html[data-court] #podMini .pod-b:hover { background: rgba(245, 215, 122, 0.15); }
+
+/* ---------- tia vang khi bam & hoa anh dao ---------- */
+.court-burst { position: fixed; z-index: 100; width: 0; height: 0; pointer-events: none; }
+.court-burst::before {
+  content: ""; position: absolute; left: -30px; top: -30px; width: 60px; height: 60px; border-radius: 50%;
+  border: 2px solid var(--gold-hi); box-shadow: 0 0 12px var(--gold);
+  -webkit-animation: courtRing 0.55s ease-out forwards; animation: courtRing 0.55s ease-out forwards;
+}
+.court-burst i {
+  position: absolute; left: -3px; top: -3px; width: 6px; height: 6px; border-radius: 1px;
+  background: var(--gold-hi); box-shadow: 0 0 6px var(--gold);
+  -webkit-animation: courtSpark 0.6s cubic-bezier(.2, .8, .3, 1) forwards; animation: courtSpark 0.6s cubic-bezier(.2, .8, .3, 1) forwards;
+}
+.court-burst i:nth-child(even) { background: var(--accent); }
+@keyframes courtRing { from { transform: scale(0.1); opacity: 1; } to { transform: scale(1.4); opacity: 0; } }
+@-webkit-keyframes courtRing { from { -webkit-transform: scale(0.1); opacity: 1; } to { -webkit-transform: scale(1.4); opacity: 0; } }
+@keyframes courtSpark { from { transform: rotate(var(--a)) translateX(4px) rotate(45deg) scale(1); opacity: 1; } to { transform: rotate(var(--a)) translateX(var(--d)) rotate(45deg) scale(0.2); opacity: 0; } }
+@-webkit-keyframes courtSpark { from { -webkit-transform: rotate(var(--a)) translateX(4px) rotate(45deg) scale(1); opacity: 1; } to { -webkit-transform: rotate(var(--a)) translateX(var(--d)) rotate(45deg) scale(0.2); opacity: 0; } }
+
+#court-petals { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 3; overflow: hidden; pointer-events: none; }
+#court-petals i {
+  position: absolute; top: -30px; width: 14px; height: 11px; border-radius: 12px 1px 12px 1px;
+  background: linear-gradient(135deg, #ffd9e2, #f39bb1); opacity: 0.85;
+  -webkit-animation: courtFall linear infinite; animation: courtFall linear infinite;
+}
+html[data-theme="dark"] #court-petals i { background: linear-gradient(135deg, #ffe7a6, #d9a22c); opacity: 0.6; }
+@keyframes courtFall {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(40px, 25vh) rotate(120deg); }
+  50% { transform: translate(-10px, 50vh) rotate(220deg); }
+  75% { transform: translate(50px, 75vh) rotate(320deg); }
+  100% { transform: translate(10px, 108vh) rotate(420deg); }
+}
+@-webkit-keyframes courtFall {
+  0% { -webkit-transform: translate(0, 0) rotate(0deg); }
+  50% { -webkit-transform: translate(-10px, 50vh) rotate(220deg); }
+  100% { -webkit-transform: translate(10px, 108vh) rotate(420deg); }
+}
+
+/* ---------- man hinh hoc bai: giu hieu ung nhe, bo cai gay phan tam ---------- */
+html[data-court][data-focus] #header::after,
+html[data-court][data-focus] .brand-name,
+html[data-court][data-focus] .hero h1,
+html[data-court][data-focus] .bar i::after,
+html[data-court][data-focus] .big-say,
+html[data-court][data-focus] .vboss-k,
+html[data-court][data-focus] #tabbar a.on .jp {
+  -webkit-animation: none; animation: none;
+}
+html[data-court][data-focus] .brand-name, html[data-court][data-focus] .hero h1 { background-position: 50% 0; }
+html[data-court][data-focus] #tabbar a.on .jp { transform: none; text-shadow: none; }
+html[data-court][data-focus] .hero::before, html[data-court][data-focus] .hero::after { display: none; }
+html[data-court][data-focus] .eyebrow::before, html[data-court][data-focus] .eyebrow::after { width: 24px; }
+
+html[data-court][data-focus] .card,
+html[data-court][data-focus] .btn, html[data-court][data-focus] .seg button, html[data-court][data-focus] .opt, html[data-court][data-focus] .vcard {
+  background-image: none;
+}
+html[data-court][data-focus] .btn.primary, html[data-court][data-focus] .seg button.on {
+  background-image: linear-gradient(170deg, #d9383d, var(--accent) 55%, #7d1219); background-size: 100% 100%; background-position: 0 0;
+}
+@media (hover: hover) {
+  html[data-court][data-focus] a.card:hover, html[data-court][data-focus] .card.word:hover, html[data-court][data-focus] .tile:hover {
+    transform: translateY(-1px); box-shadow: 0 0 0 1px var(--gold), var(--shadow);
+  }
+  html[data-court][data-focus] .btn:hover, html[data-court][data-focus] .opt:hover, html[data-court][data-focus] .vcard:hover, html[data-court][data-focus] .seg button:hover {
+    transform: none; box-shadow: 0 0 0 1px var(--gold);
+  }
+  html[data-court][data-focus] .btn.primary:hover, html[data-court][data-focus] .seg button.on:hover { box-shadow: 0 0 0 1px var(--gold-hi), 0 2px 6px rgba(125, 18, 25, 0.3); }
+  html[data-court][data-focus] .tile:hover .k { transform: none; }
+  html[data-court][data-focus] .strokebox:hover { transform: none; }
+}
+html[data-court][data-focus] .opt.right { -webkit-animation: none; animation: none; box-shadow: 0 0 0 2px rgba(47, 125, 85, 0.25); }
+html[data-court][data-focus] .opt.wrong, html[data-court][data-focus] .vres.bad { -webkit-animation: courtNudgeX 0.3s; animation: courtNudgeX 0.3s; }
+html[data-court][data-focus] .vres.good { -webkit-animation: none; animation: none; }
+@keyframes courtNudgeX { 33% { transform: translateX(-3px); } 66% { transform: translateX(3px); } }
+@-webkit-keyframes courtNudgeX { 33% { -webkit-transform: translateX(-3px); } 66% { -webkit-transform: translateX(3px); } }
+html[data-court][data-focus] .flash.court-flip { -webkit-animation-duration: 0.35s; animation-duration: 0.35s; -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; }
+html[data-court][data-focus] .flash.court-deal, html[data-court][data-focus] .quiz.court-new .card.prompt { -webkit-animation: courtFade 0.3s ease-out; animation: courtFade 0.3s ease-out; }
+html[data-court][data-focus] .quiz.court-new .opt { -webkit-animation: courtFade 0.3s ease-out both; animation: courtFade 0.3s ease-out both; }
+html[data-court][data-focus] .court-burst i { display: none; }
+html[data-court][data-focus] .court-burst::before { border-width: 1px; box-shadow: none; opacity: 0.7; }
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-court] *, html[data-court] *::before, html[data-court] *::after {
+    -webkit-animation: none !important; animation: none !important; transition-duration: 0.01s !important;
+  }
+  #court-petals, .court-burst { display: none; }
+}

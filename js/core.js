@@ -90,6 +90,7 @@
   function logoSvg(cls) {
     var c = hankoFn ? hankoFn() : { bg: '#c2452d', fg: '#fffdf8' };
     return '<svg class="' + cls + '" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="' + c.bg + '"/>' +
+      (c.ring ? '<rect x="3" y="3" width="58" height="58" rx="11" fill="none" stroke="' + c.fg + '" stroke-width="3"/>' : '') +
       '<g fill="none" stroke="' + c.fg + '" stroke-width="6" stroke-linecap="round"><path d="M17 18H47M20 32H44M14 46H50M32 18V46"/></g></svg>';
   }
 
@@ -253,7 +254,9 @@
       var merged = JSON.stringify(progress);
       writeJson(STORE_KEY, progress);
       // Khong ve lai khi dang o man hinh hoc de khong lam mat the dang lat hay cau dang lam.
-      if (merged !== before && parseRoute().length <= 2) render();
+      if (merged !== before) {
+        if (parseRoute().length <= 2 && !window.App.isBusy()) render(); else refreshChrome();
+      }
       if (status === 200 && merged === JSON.stringify(merge(remote, {}))) return finish();
       // Dieu kien updateTime chan ghi de neu may khac vua ghi chen vao giua.
       var cond = status === 200 ? '?currentDocument.updateTime=' + encodeURIComponent(doc.updateTime) : '?currentDocument.exists=false';
