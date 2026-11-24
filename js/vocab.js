@@ -322,7 +322,7 @@
         if (!nx2 && !final) { out += s.substr(i); break; }
         out += 'ん'; i += /[aiueoy]/.test(nx2) ? 1 : 2; continue;
       }
-      if (c === 't' && nx === 'c' && nx2 === 'h') { out += 'っ'; i++; continue; }
+      if (c === 't' && (nx === 'c' || nx === 's') && nx2 === 'h') { out += 'っ'; i++; continue; }
       for (var len = 4; len >= 1 && !hit; len--) if (ROMA.hasOwnProperty(s.substr(i, len))) hit = s.substr(i, len);
       if (hit) { out += ROMA[hit]; i += hit.length; continue; }
       if (c === 'n' && nx && !/[aiueoyn']/.test(nx)) { out += 'ん'; i++; continue; }
