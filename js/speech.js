@@ -98,5 +98,19 @@
     if (started && started['catch']) started['catch'](function () { if (current === el) finish(); });
   }
 
-  window.Speech = { say: say, sayEx: sayEx, norm: norm };
+  // Cau ngu phap: file audio/gr/<ma>.mp3; thieu thi doc bang giong trinh duyet.
+  function sayGr(id, text, el) {
+    if (window.App) window.App.emit('audio:play', { key: 'gr:' + id });
+    if (player) { player.onended = player.onerror = null; player.pause(); }
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    if (!(window.AUDIO_GR && window.AUDIO_GR[id])) return speakWithBrowser(text, el);
+    begin(el);
+    player = new Audio('audio/gr/' + id + '.mp3?v=' + window.AUDIO_GR[id]);
+    player.onended = function () { if (current === el) finish(); };
+    player.onerror = function () { speakWithBrowser(text, el); };
+    var started = player.play();
+    if (started && started['catch']) started['catch'](function () { if (current === el) finish(); });
+  }
+
+  window.Speech = { say: say, sayEx: sayEx, sayGr: sayGr, norm: norm };
 })();

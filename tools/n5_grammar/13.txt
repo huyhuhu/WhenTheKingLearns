@@ -1,0 +1,93 @@
+# Bài 13: 寺 Chùa. Mẫu: Cách chia thể ない · V ないでください · V なければなりません · V なくても いいです
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: Vない
+kind: conj
+name: Cách chia thể ない | How to make the ない-form
+explain: Thể ない là dạng phủ định thân mật, nền của ないでください, なければなりません, なくてもいいです. Nhóm 1: đổi âm cuối sang hàng あ rồi thêm ない (書く→書かない), riêng う thành わ (買う→買わない). Nhóm 2: bỏ る thêm ない (食べる→食べない). Nhóm 3: する→しない, 来る→来ない (こない). | The ない-form is the casual negative and the base of ないでください, なければなりません and なくてもいいです. Group 1: change the last sound to the あ-row and add ない (書く→書かない); う becomes わ (買う→買わない). Group 2: drop る and add ない (食べる→食べない). Group 3: する→しない, 来る→来ない (こない).
+note: ある là ngoại lệ: phủ định là ない (không phải あらない). 来る đọc là こ trong 来ない. | ある is an exception: its negative is ない (not あらない). 来る is read こ in 来ない.
+tip: Nhóm 1 nhớ "あ": かく→かか, のむ→のま, あそぶ→あそば, かう→かわ (う thì thành わ).
+search: ない[でか]
+ex: {書|か}かないでください。 | Xin đừng viết. | Please do not write.
+ex: {食|た}べないでください。 | Xin đừng ăn. | Please do not eat.
+ex: {買|か}わないでください。 | Xin đừng mua. | Please do not buy.
+ex: {明日|あした}は{来|こ}ないでください。 | Ngày mai xin đừng đến. | Please do not come tomorrow.
+q: ここ[に]{名前|なまえ}を<{書|か}かない>でください。 | Xin đừng viết tên vào đây. | Please do not write your name here. | o: で/を/が | t: ここに/{名前|なまえ}を/{書|か}かない/でください *3 | e: 3 > {書|か}いない | ev: Nhóm 1: く đổi sang hàng あ thành か: 書かない. | ee: Group 1: く changes to the あ-row sound か: 書かない. | c: {書|か}く
+q: {水|みず}[を]<{飲|の}まない>でください。 | Xin đừng uống nước. | Please do not drink the water. | o: が/に/へ | t: {水|みず}を/{飲|の}まない/で/ください *2 | e: 2 > {飲|の}みない | ev: む đổi sang hàng あ thành ま: 飲まない. | ee: む changes to the あ-row sound ま: 飲まない. | c: {飲|の}む
+q: {先生|せんせい}の{話|はなし}[を]<{忘|わす}れない>でください。 | Xin đừng quên lời thầy giáo. | Please do not forget the teacher's words. | o: が/に/で | t: {先生|せんせい}の/{話|はなし}を/{忘|わす}れない/でください *3 | e: 3 > {忘|わす}らない | ev: 忘れる là nhóm 2: chỉ bỏ る thêm ない. | ee: 忘れる is group 2: just drop る and add ない. | c: {忘|わす}れる
+q: ここ[で]<{泳|およ}がない>でください。 | Xin đừng bơi ở đây. | Please do not swim here. | o: に/を/が | t: ここで/{泳|およ}がない/で/ください *2 | c: {泳|およ}ぐ
+q: ユキさん、そこで<{遊|あそ}ばない>でください。 | Yuki, xin đừng chơi ở đó. | Yuki, please do not play there. | t: ユキさん、/そこで/{遊|あそ}ばない/でください *3 | e: 3 > {遊|あそ}ぶない | ev: ぶ đổi sang hàng あ thành ば: 遊ばない. | ee: ぶ changes to the あ-row sound ば: 遊ばない. | c: {遊|あそ}ぶ
+q: それ[を]<{買|か}わない>でください。 | Xin đừng mua cái đó. | Please do not buy that. | o: が/に/で | t: それ/を/{買|か}わない/でください *3 | e: 3 > {買|か}あない | ev: Đuôi う đổi thành わ: 買わない. | ee: The ending う becomes わ: 買わない. | c: {買|か}う
+q: {肉|にく}[を]<{食|た}べない>でください。 | Xin đừng ăn thịt. | Please do not eat meat. | o: が/に/へ | t: {肉|にく}/を/{食|た}べない/でください *3 | e: 3 > {食|た}べらない | ev: 食べる là nhóm 2: bỏ る thêm ない thành 食べない. | ee: 食べる is group 2: drop る and add ない to get 食べない. | c: {食|た}べる
+q: {夜|よる}は{電話|でんわ}[を]<しない>でください。 | Buổi tối xin đừng gọi điện. | Please do not make phone calls at night. | o: が/に/で | t: {夜|よる}は/{電話|でんわ}を/しない/でください *3 | c: する
+q: {明日|あした}は{会社|かいしゃ}に<{来|こ}ない>でください。 | Ngày mai xin đừng đến công ty. | Please do not come to the company tomorrow. | t: {明日|あした}は/{会社|かいしゃ}に/{来|こ}ない/でください *3 | e: 3 > きない | ev: 来る thành 来ない và đọc là こない. | ee: 来る becomes 来ない, read こない. | c: {来|く}る
+q: {教室|きょうしつ}に<{入|はい}らない>でください。 | Xin đừng vào lớp học. | Please do not enter the classroom. | t: {教室|きょうしつ}に/{入|はい}らない/で/ください *2 | c: {入|はい}る
+
+@p
+form: Vない で ください
+kind: conj
+name: Vないでください: "xin đừng ..." | Vないでください: "please don't ..."
+explain: Thể ない + でください dùng để nhờ ai đừng làm gì, nhẹ nhàng hơn Vてはいけません. | The ない-form + でください asks someone not to do something. It is softer than Vてはいけません.
+note: Không bỏ で: ないください là sai. Muốn nói "không cần làm" thì dùng Vなくてもいいです. | Do not drop で: ないください is wrong. To say "you need not", use Vなくてもいいです.
+compare: Vてください: "hãy làm"; Vないでください: "đừng làm". Cùng khung câu, chỉ khác thể て và thể ない + で. | Vてください: "please do"; Vないでください: "please don't". Same frame, only て versus ない + で.
+tip: Chỉ cần nhớ "ない + で" ghép lại thành "đừng": ないで là て-form của ない.
+search: ないでください
+ex: ここを{走|はし}らないでください。 | Xin đừng chạy ở chỗ này. | Please do not run here.
+ex: {夜|よる}は{大|おお}きい{声|こえ}で{話|はな}さないでください。 | Buổi tối xin đừng nói to. | Please do not talk loudly at night.
+ex: タマにお{菓子|かし}をあげないでください。 | Xin đừng cho Tama bánh kẹo. | Please do not give Tama sweets.
+q: ここ[を]<{走|はし}らない>でください。 | Xin đừng chạy ở chỗ này. | Please do not run here. | o: が/と/の | t: ここ/を/{走|はし}らない/でください *3 | e: 4 > ください | ev: Thiếu で: phải là ないでください. | ee: The で is missing: it must be ないでください. | c: {走|はし}る
+q: {夜|よる}は{大|おお}きい{声|こえ}[で]<{話|はな}さない>でください。 | Buổi tối xin đừng nói to. | Please do not talk loudly at night. | o: を/に/が | t: {大|おお}きい/{声|こえ}で/{話|はな}さない/でください *3 | e: 3 > {話|はな}しない | ev: す đổi sang hàng あ thành さ: 話さない. | ee: す changes to the あ-row sound さ: 話さない. | c: {話|はな}す
+q: {窓|まど}[を]<{開|あ}けない>でください。 | Xin đừng mở cửa sổ. | Please do not open the window. | o: が/に/で | t: {窓|まど}/を/{開|あ}けない/でください *3 | e: 3 > {開|あ}かない | ev: 開ける là nhóm 2: bỏ る thêm ない: 開けない. | ee: 開ける is group 2: drop る and add ない: 開けない. | c: {開|あ}ける
+q: {私|わたし}の{手紙|てがみ}[を]<{読|よ}まない>でください。 | Xin đừng đọc thư của tôi. | Please do not read my letter. | o: が/に/で | t: {私|わたし}の/{手紙|てがみ}を/{読|よ}まない/でください *3 | c: {読|よ}む
+q: {電気|でんき}[を]<{消|け}さない>でください。 | Xin đừng tắt đèn. | Please do not turn off the light. | o: が/に/へ | t: {電気|でんき}/を/{消|け}さない/でください *3 | e: 4 > ないください | ev: Phải có で: 消さないでください. | ee: The で is required: 消さないでください. | c: {消|け}す
+q: タマ[に]お{菓子|かし}を<あげない>でください。 | Xin đừng cho Tama bánh kẹo. | Please do not give Tama sweets. | o: を/が/で | t: タマに/お{菓子|かし}を/あげない/でください *3 | c: あげる
+q: ここで{煙草|たばこ}[を]<{吸|す}わない>でください。 | Xin đừng hút thuốc ở đây. | Please do not smoke here. | o: が/に/へ | t: ここで/{煙草|たばこ}を/{吸|す}わない/でください *3 | c: {吸|す}う
+q: {今日|きょう}は<{行|い}かない>[で]ください。 | Hôm nay xin đừng đi. | Please do not go today. | o: に/を/と | t: {今日|きょう}は/{行|い}かない/で/ください *3 | c: {行|い}く
+q: {心配|しんぱい}<しない>でください。 | Xin đừng lo lắng. | Please do not worry. | t: {心配|しんぱい}/しない/で/ください *2 | c: する
+q: {友達|ともだち}に<{言|い}わない>でください。 | Xin đừng nói với bạn bè. | Please do not tell your friends. | t: {友達|ともだち}に/{言|い}わない/で/ください *2 | e: 2 > {言|い}あない | ev: Đuôi う đổi thành わ: 言わない. | ee: The ending う becomes わ: 言わない. | c: {言|い}う
+
+@p
+form: Vない → なければ なりません
+kind: conj
+name: Vなければなりません: phải ... | Vなければなりません: "must, have to"
+explain: Bỏ い của ない rồi thêm ければ: Vない → Vなければ, sau đó thêm なりません. Nghĩa "phải làm ...", nói về nghĩa vụ. | Drop the い of ない and add ければ: Vない → Vなければ, then add なりません. It means "have to do ...", an obligation.
+note: Nghĩa đen là "nếu không làm thì không xong". Trong hội thoại hay nói gọn thành Vなきゃ, hoặc dùng なければいけません cùng nghĩa. | Literally "if I don't, it won't do". In conversation it is often shortened to Vなきゃ, and なければいけません means the same.
+compare: Vなければなりません là "phải làm"; Vなくてもいいです là "không cần làm". | Vなければなりません is "must do"; Vなくてもいいです is "need not do".
+tip: Nhớ cặp: không (ない) + nếu (ければ) + không xong (なりません) = "không làm thì không được" = "phải làm".
+search: なければ
+ex: {毎日|まいにち}{薬|くすり}を{飲|の}まなければなりません。 | Tôi phải uống thuốc mỗi ngày. | I have to take medicine every day.
+ex: {明日|あした}は{早|はや}く{起|お}きなければなりません。 | Ngày mai tôi phải dậy sớm. | I have to get up early tomorrow.
+ex: {宿題|しゅくだい}をしなければなりません。 | Tôi phải làm bài tập. | I have to do my homework.
+q: {毎日|まいにち}{薬|くすり}[を]<{飲|の}まなければ>なりません。 | Tôi phải uống thuốc mỗi ngày. | I have to take medicine every day. | o: が/に/へ | t: {毎日|まいにち}/{薬|くすり}を/{飲|の}まなければ/なりません *3 | e: 3 > {飲|の}まなくて | ev: "Phải làm" là なければなりません, không phải なくて. | ee: "Have to" is なければなりません, not なくて. | c: {飲|の}む
+q: {明日|あした}は{早|はや}く<{起|お}きなければ>なりません。 | Ngày mai tôi phải dậy sớm. | I have to get up early tomorrow. | t: {明日|あした}は/{早|はや}く/{起|お}きなければ/なりません *3 | c: {起|お}きる
+q: {今日|きょう}は{会社|かいしゃ}[へ]<{行|い}かなければ>なりません。 | Hôm nay tôi phải đến công ty. | I have to go to the office today. | o: を/が/と | t: {今日|きょう}は/{会社|かいしゃ}へ/{行|い}かなければ/なりません *3 | e: 3 > {行|い}きなければ | ev: Nhóm 1 đổi sang hàng あ: 行かない→行かなければ. | ee: Group 1 uses the あ-row: 行かない→行かなければ. | c: {行|い}く
+q: {宿題|しゅくだい}[を]<しなければ>なりません。 | Tôi phải làm bài tập. | I have to do my homework. | o: が/に/で | t: {宿題|しゅくだい}を/しなければ/なりません/。 *2 | c: する
+q: {田中|たなか}さん[に]<{会|あ}わなければ>なりません。 | Tôi phải gặp ông Tanaka. | I have to meet Mr. Tanaka. | o: を/が/で | t: {田中|たなか}さんに/{会|あ}わなければ/なりません/。 *2 | e: 2 > {会|あ}あなければ | ev: Đuôi う đổi thành わ: 会わない→会わなければ. | ee: The ending う becomes わ: 会わない→会わなければ. | c: {会|あ}う
+q: {駅|えき}で{友達|ともだち}[を]<{待|ま}たなければ>なりません。 | Tôi phải đợi bạn ở nhà ga. | I have to wait for my friend at the station. | o: が/に/と | t: {駅|えき}で/{友達|ともだち}を/{待|ま}たなければ/なりません *3 | c: {待|ま}つ
+q: {日本語|にほんご}[を]<{話|はな}さなければ>なりません。 | Tôi phải nói tiếng Nhật. | I have to speak Japanese. | o: が/に/で | c: {話|はな}す
+q: {六時|ろくじ}[に]<{帰|かえ}らなければ>なりません。 | Tôi phải về lúc sáu giờ. | I have to go home at six. | o: が/を/へ | t: {六時|ろくじ}に/{帰|かえ}らなければ/なりません/。 *2 | c: {帰|かえ}る
+q: {明日|あした}ここへ<{来|こ}なければ>[なりません]。 | Ngày mai tôi phải đến đây. | I have to come here tomorrow. | o: ありません/いません/ません | t: {明日|あした}/ここへ/{来|こ}なければ/なりません *3 | e: 3 > きなければ | ev: 来る thành 来ない, 来なければ, đọc là こ. | ee: 来る becomes 来ない / 来なければ, read こ. | c: {来|く}る
+q: ご{飯|はん}[を]<{作|つく}らなければ>なりません。 | Tôi phải nấu cơm. | I have to cook a meal. | o: が/に/で | t: ご{飯|はん}を/{作|つく}らなければ/なりません/。 *2 | c: {作|つく}る
+
+@p
+form: Vなくて も いいです
+kind: conj
+name: Vなくてもいいです: không cần ... | Vなくてもいいです: "need not"
+explain: Bỏ い của ない rồi thêm くて: Vない → Vなくて, rồi thêm もいいです. Nghĩa "không làm ... cũng được, không cần làm". | Drop the い of ない and add くて: Vない → Vなくて, then add もいいです. It means "you don't have to ...".
+note: Là phủ định của việc phải làm: Vなければなりません ↔ Vなくてもいいです. Dạng này khác ないでください (đừng làm). | It is the opposite of an obligation: Vなければなりません ↔ Vなくてもいいです. It differs from ないでください (don't do it).
+tip: "không (なくて) cũng (も) được (いいです)": ghép đúng như câu tiếng Việt "không cũng được".
+search: なくてもいい
+ex: {明日|あした}は{来|こ}なくてもいいです。 | Ngày mai không cần đến cũng được. | You don't have to come tomorrow.
+ex: {名前|なまえ}を{書|か}かなくてもいいです。 | Không cần viết tên cũng được. | You don't have to write your name.
+ex: {全部|ぜんぶ}{読|よ}まなくてもいいです。 | Không cần đọc hết cũng được. | You don't have to read it all.
+q: {明日|あした}[は]<{来|こ}なくて>もいいです。 | Ngày mai không cần đến cũng được. | You don't have to come tomorrow. | o: を/が/へ | t: {明日|あした}は/{来|こ}なくて/も/いいです *2 | e: 2 > {来|こ}ないで | ev: "Không cần" dùng なくてもいいです; ないで là "đừng". | ee: "Need not" uses なくてもいいです; ないで means "don't". | c: {来|く}る
+q: {今日|きょう}は{傘|かさ}[を]<{持|も}たなくて>もいいです。 | Hôm nay không cần mang ô cũng được. | You don't need to carry an umbrella today. | o: が/に/で | t: {今日|きょう}は/{傘|かさ}を/{持|も}たなくて/もいいです *3 | c: {持|も}つ
+q: {名前|なまえ}[を]<{書|か}かなくて>もいいです。 | Không cần viết tên cũng được. | You don't have to write your name. | o: が/に/で | t: {名前|なまえ}を/{書|か}かなくて/も/いいです *3 | e: 3 > {書|か}きなくて | ev: Nhóm 1 đổi sang hàng あ: 書かなくて. | ee: Group 1 uses the あ-row: 書かなくて. | c: {書|か}く
+q: {靴|くつ}を<{脱|ぬ}がなくて>[も]いいです。 | Không cần cởi giày cũng được. | You don't have to take off your shoes. | o: は/が/を | t: {靴|くつ}を/{脱|ぬ}がなくて/も/いいです *3 | c: {脱|ぬ}ぐ
+q: {宿題|しゅくだい}は<しなくて>もいいです。 | Bài tập không cần làm cũng được. | You don't have to do the homework. | t: {宿題|しゅくだい}は/しなくて/も/いいです *2 | e: 2 > すなくて | ev: する→しない→しなくて. | ee: する→しない→しなくて. | c: する
+q: {朝|あさ}ご{飯|はん}[を]<{食|た}べなくて>もいいです。 | Không cần ăn sáng cũng được. | You don't have to eat breakfast. | o: が/に/で | t: {朝|あさ}ご{飯|はん}を/{食|た}べなくて/も/いいです *3 | c: {食|た}べる
+q: {全部|ぜんぶ}<{読|よ}まなくて>[も]いいです。 | Không cần đọc hết cũng được. | You don't have to read it all. | o: は/が/を | t: {全部|ぜんぶ}/{読|よ}まなくて/も/いいです *3 | c: {読|よ}む
+q: {私|わたし}を<{待|ま}たなくて>[も]いいです。 | Không cần đợi tôi cũng được. | You don't have to wait for me. | o: は/が/を | c: {待|ま}つ
+q: お{金|かね}[を]<{払|はら}わなくて>もいいです。 | Không cần trả tiền cũng được. | You don't have to pay. | o: が/に/で | t: お{金|かね}を/{払|はら}わなくて/も/いいです *3 | c: {払|はら}う
+q: {土曜日|どようび}は{会社|かいしゃ}[へ]<{行|い}かなくて>もいいです。 | Thứ bảy không cần đến công ty cũng được. | On Saturday you don't have to go to the office. | o: を/が/と | t: {土曜日|どようび}は/{会社|かいしゃ}へ/{行|い}かなくて/もいいです *3 | c: {行|い}く

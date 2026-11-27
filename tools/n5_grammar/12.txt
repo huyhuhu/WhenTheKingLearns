@@ -1,0 +1,93 @@
+# Bài 12: 工房 Xưởng thủ công. Mẫu: V て、V て (chuỗi hành động) · V てから · adj くて / adj で · V ています (trạng thái, thói quen)
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: Vて、Vて、Vます
+kind: conj
+name: Vて、Vて、〜: làm A rồi làm B | Vて、Vて、〜: doing A, then B
+explain: Nối nhiều hành động theo thứ tự thời gian bằng thể て: "làm A, rồi B, rồi C". Chỉ động từ cuối cùng mới chia ます; các động từ trước đều ở thể て. | Links several actions in time order with the て-form: "do A, then B, then C". Only the last verb takes ます; the earlier ones stay in the て-form.
+note: Thời của cả chuỗi do động từ cuối quyết định. Không dùng ます ở giữa câu. | The tense of the whole chain is set by the last verb. Do not use ます in the middle.
+tip: Như tiếng Việt "dậy, rửa mặt, ăn cơm, đi làm": thể て là dấu phẩy nối các việc.
+search: て、.+ます
+ex: {朝|あさ}{起|お}きて、ご{飯|はん}を{食|た}べて、{会社|かいしゃ}へ{行|い}きます。 | Sáng dậy, ăn cơm, rồi đi làm. | I get up in the morning, eat, and go to work.
+ex: {駅|えき}まで{歩|ある}いて、{電車|でんしゃ}に{乗|の}ります。 | Đi bộ đến nhà ga rồi lên tàu điện. | I walk to the station and take the train.
+ex: {店|みせ}へ{行|い}って、パンを{買|か}います。 | Đi đến cửa hàng rồi mua bánh mì. | I go to the shop and buy bread.
+q: {朝|あさ}<{起|お}きて>、{顔|かお}を{洗|あら}います。 | Sáng dậy rồi rửa mặt. | I get up in the morning and wash my face. | t: {朝|あさ}/{起|お}きて、/{顔|かお}を/{洗|あら}います *2 | e: 2 > {起|お}きます、 | ev: Giữa chuỗi động từ phải ở thể て, chỉ cuối câu mới ます. | ee: Mid-chain verbs must be in the て-form; only the last takes ます. | c: {起|お}きる
+q: {駅|えき}まで<{歩|ある}いて>、{電車|でんしゃ}[に]{乗|の}ります。 | Đi bộ đến nhà ga rồi lên tàu điện. | I walk to the station and take the train. | o: を/が/で | t: {駅|えき}まで/{歩|ある}いて、/{電車|でんしゃ}に/{乗|の}ります *2 | e: 2 > {歩|ある}きて、 | ev: Đuôi く đổi thành いて: 歩いて. | ee: The ending く becomes いて: 歩いて. | c: {歩|ある}く
+q: {店|みせ}[へ]<{行|い}って>、パンを{買|か}います。 | Đi đến cửa hàng rồi mua bánh mì. | I go to the shop and buy bread. | o: を/が/と | t: {店|みせ}へ/{行|い}って、/パンを/{買|か}います *2 | e: 2 > {行|い}いて、 | ev: 行く là ngoại lệ: 行って. | ee: 行く is the exception: 行って. | c: {行|い}く
+q: ユキさんは{手紙|てがみ}[を]<{書|か}いて>、{出|だ}します。 | Yuki viết thư rồi gửi đi. | Yuki writes a letter and mails it. | o: が/に/で | t: ユキさんは/{手紙|てがみ}を/{書|か}いて、/{出|だ}します *3 | c: {書|か}く
+q: ケンタさんは{友達|ともだち}[に]<{会|あ}って>、ゲームをします。 | Kenta gặp bạn rồi chơi game. | Kenta meets his friend and plays games. | o: を/が/へ | t: ケンタさんは/{友達|ともだち}に/{会|あ}って、/ゲームを *3 | e: 3 > {会|あ}いて、 | ev: Đuôi う đổi thành って: 会って. | ee: The ending う becomes って: 会って. | c: {会|あ}う
+q: {家|いえ}[で]ご{飯|はん}を<{食|た}べて>、{寝|ね}ます。 | Ăn cơm ở nhà rồi đi ngủ. | I eat at home and go to bed. | o: を/に/が | t: {家|いえ}で/ご{飯|はん}を/{食|た}べて、/{寝|ね}ます *3 | c: {食|た}べる
+q: {毎晩|まいばん}、シャワーを<{浴|あ}びて>、{寝|ね}ます。 | Mỗi tối tôi tắm vòi sen rồi đi ngủ. | Every night I take a shower and go to bed. | t: {毎晩|まいばん}、/シャワーを/{浴|あ}びて、/{寝|ね}ます *3 | c: {浴|あ}びる
+q: ユキさんは{本|ほん}を<{読|よ}んで>、{日本語|にほんご}を{勉強|べんきょう}します。 | Yuki đọc sách rồi học tiếng Nhật. | Yuki reads a book and studies Japanese. | t: ユキさんは/{本|ほん}を/{読|よ}んで、/{日本語|にほんご}を *3 | c: {読|よ}む
+q: {土曜日|どようび}は{友達|ともだち}[と]<{遊|あそ}んで>、{映画|えいが}を{見|み}ます。 | Thứ bảy tôi chơi với bạn rồi xem phim. | On Saturday I play with friends and watch a movie. | o: を/が/へ | t: {土曜日|どようび}は/{友達|ともだち}と/{遊|あそ}んで、/{映画|えいが}を *3 | c: {遊|あそ}ぶ
+q: {日曜日|にちようび}は{川|かわ}[で]<{泳|およ}いで>、うちへ{帰|かえ}ります。 | Chủ nhật tôi bơi ở sông rồi về nhà. | On Sunday I swim in the river and go home. | o: を/が/に | t: {日曜日|にちようび}は/{川|かわ}で/{泳|およ}いで、/うちへ *3 | e: 3 > {泳|およ}いて、 | ev: Đuôi ぐ đổi thành いで: 泳いで. | ee: The ending ぐ becomes いで: 泳いで. | c: {泳|およ}ぐ
+
+@p
+form: Vて から、Vます
+kind: conj
+name: Vてから: sau khi ... thì ... | Vてから: "after doing ..."
+explain: Thể て + から nhấn mạnh thứ tự: xong việc A rồi mới làm việc B. Việc B ở cuối câu. | The て-form + から stresses the order: only after A is done, do B. B comes at the end of the sentence.
+note: Đây là から "sau khi", khác から "vì" đã học (普通形 + から). Gắn trực tiếp vào thể て. | This is から meaning "after", not the "because" から learned earlier. It attaches straight to the て-form.
+compare: Vて、Vます chỉ nối việc nối tiếp; Vてから nhấn mạnh "xong A rồi mới B". | Vて、Vます just chains actions; Vてから stresses "only after A comes B".
+tip: Như "ăn xong rồi mới đi": から là điểm xuất phát của việc thứ hai.
+search: てから
+ex: {手|て}を{洗|あら}ってから、ご{飯|はん}を{食|た}べます。 | Rửa tay xong rồi mới ăn cơm. | I wash my hands before I eat.
+ex: {薬|くすり}を{飲|の}んでから、{寝|ね}ます。 | Uống thuốc xong rồi mới đi ngủ. | I take medicine and then go to bed.
+ex: ケンタさんは{宿題|しゅくだい}をしてから、ゲームをします。 | Kenta làm bài tập xong rồi mới chơi game. | Kenta does his homework before playing games.
+q: {手|て}を<{洗|あら}って>[から]、ご{飯|はん}を{食|た}べます。 | Rửa tay xong rồi mới ăn cơm. | I wash my hands before I eat. | o: まで/ので/あとで | t: {手|て}を/{洗|あら}って/から、/ご{飯|はん}を *3 | e: 3 > ので | ev: "Sau khi" là てから; ので là "vì". | ee: "After" is てから; ので means "because". | c: {洗|あら}う
+q: シャワーを<{浴|あ}びて>から、{寝|ね}ます。 | Tắm vòi sen xong rồi mới đi ngủ. | I take a shower and then go to bed. | t: シャワーを/{浴|あ}びて/から、/{寝|ね}ます *2 | c: {浴|あ}びる
+q: {薬|くすり}を<{飲|の}んで>[から]、{寝|ね}ます。 | Uống thuốc xong rồi mới đi ngủ. | I take medicine and then go to bed. | o: まで/ので/あとで | t: {薬|くすり}を/{飲|の}んで/から、/{寝|ね}ます *2 | e: 2 > {飲|の}みて | ev: Đuôi む đổi thành んで: 飲んで. | ee: The ending む becomes んで: 飲んで. | c: {飲|の}む
+q: {友達|ともだち}[に]{電話|でんわ}<して>から、{出|で}かけます。 | Gọi điện cho bạn xong rồi mới ra ngoài. | I call my friend and then go out. | o: を/が/で | t: {友達|ともだち}に/{電話|でんわ}/して/から *3 | c: する
+q: ケンタさんは{宿題|しゅくだい}を<して>から、ゲームをします。 | Kenta làm bài tập xong rồi mới chơi game. | Kenta does his homework before playing games. | t: ケンタさんは/{宿題|しゅくだい}を/して/から *3 | e: 3 > すて | ev: する thành して, rồi mới thêm から. | ee: する becomes して, then add から. | c: する
+q: {先生|せんせい}の{話|はなし}[を]<{聞|き}いて>から、{書|か}きます。 | Nghe thầy giáo nói xong rồi mới viết. | I listen to the teacher and then write. | o: が/に/で | t: {先生|せんせい}の/{話|はなし}を/{聞|き}いて/から *3 | c: {聞|き}く
+q: {駅|えき}で{友達|ともだち}[を]<{待|ま}って>から、{映画|えいが}を{見|み}ます。 | Đợi bạn ở nhà ga xong rồi mới xem phim. | I wait for my friend at the station and then watch a movie. | o: が/に/と | t: {駅|えき}で/{友達|ともだち}を/{待|ま}って/から *3 | c: {待|ま}つ
+q: {朝|あさ}<{起|お}きて>から、{水|みず}[を]{飲|の}みます。 | Sáng dậy xong tôi mới uống nước. | After I get up in the morning, I drink water. | o: が/に/で | c: {起|お}きる
+q: {家|いえ}へ<{帰|かえ}って>から、{勉強|べんきょう}します。 | Về nhà xong rồi mới học bài. | I go home and then study. | t: {家|いえ}へ/{帰|かえ}って/から、/{勉強|べんきょう}します *2 | e: 2 > {帰|かえ}いて | ev: 帰る là nhóm 1: 帰って. | ee: 帰る is group 1: 帰って. | c: {帰|かえ}る
+q: ご{飯|はん}を<{食|た}べて>から{出|で}かけます。 | Ăn cơm xong rồi mới ra ngoài. | I eat and then go out. | t: ご{飯|はん}を/{食|た}べて/から/{出|で}かけます *2 | c: {食|た}べる
+
+@p
+form: い-adj くて / な-adj で / N で
+kind: conj
+name: Adj くて / Adj で: nối tính từ | Adj くて / Adj で: linking adjectives
+explain: Nối hai tính từ hay hai câu: い-adj bỏ い thêm くて (安い→安くて), な-adj thêm で (静か→静かで). Danh từ cũng thêm で (会社員で). Dịch là "... và ...". | Joins two adjectives or clauses: い-adj drops い and adds くて (安い→安くて); な-adj adds で (静か→静かで). Nouns also take で (会社員で). Meaning "... and ...".
+note: いい là ngoại lệ: いい→よくて. Hai tính từ nối nhau thường cùng nghĩa tốt hoặc cùng nghĩa xấu. | いい is irregular: いい→よくて. The two adjectives usually share a positive or a negative tone.
+tip: い → くて, な → で: tiếng Việt chỉ cần chữ "và" hay dấu phẩy, tiếng Nhật phải đổi đuôi.
+search: (くて|で)、
+ex: この{店|みせ}は{安|やす}くて、おいしいです。 | Quán này rẻ và ngon. | This restaurant is cheap and delicious.
+ex: この{町|まち}は{静|しず}かで、きれいです。 | Thị trấn này yên tĩnh và sạch đẹp. | This town is quiet and pretty.
+ex: ユキさんは{会社員|かいしゃいん}で、ケンタさんも{会社員|かいしゃいん}です。 | Yuki là nhân viên công ty, Kenta cũng vậy. | Yuki is an office worker, and so is Kenta.
+q: この{部屋|へや}は<{広|ひろ}くて>、{明|あか}るいです。 | Phòng này rộng và sáng. | This room is spacious and bright. | t: この/{部屋|へや}は/{広|ひろ}くて、/{明|あか}るいです *3 | e: 3 > {広|ひろ}いで、 | ev: い-adj nối câu bằng cách bỏ い thêm くて. | ee: An い-adj links by dropping い and adding くて. | c: {広|ひろ}い
+q: この{店|みせ}は<{安|やす}くて>、[おいしい]です。 | Quán này rẻ và ngon. | This restaurant is cheap and delicious. | o: おいしくて/おいしで/おいしな | t: この/{店|みせ}は/{安|やす}くて、/おいしいです *3 | c: {安|やす}い
+q: ユキさんの{家|いえ}は<{新|あたら}しくて>、[{大|おお}きい]です。 | Nhà của Yuki mới và to. | Yuki's house is new and big. | o: {大|おお}きくて/{大|おお}きで/{大|おお}きな | t: ユキさんの/{家|いえ}は/{新|あたら}しくて、/{大|おお}きいです *3 | c: {新|あたら}しい
+q: タマは<{小|ちい}さくて>、[かわいい]です。 | Tama nhỏ và dễ thương. | Tama is small and cute. | o: かわいくて/かわいで/かわいな | t: タマは/{小|ちい}さくて、/かわいい/です *3 | c: {小|ちい}さい
+q: この{本|ほん}は<{面白|おもしろ}くて>、{安|やす}いです。 | Quyển sách này hay và rẻ. | This book is interesting and cheap. | t: この/{本|ほん}は/{面白|おもしろ}くて、/{安|やす}いです *3 | e: 3 > {面白|おもしろ}で、 | ev: い-adj không dùng で để nối; phải là くて. | ee: An い-adj does not link with で; it must be くて. | c: {面白|おもしろ}い
+q: {田中|たなか}さんの{車|くるま}は<{大|おお}きくて>、{高|たか}いです。 | Xe của ông Tanaka to và đắt. | Mr. Tanaka's car is big and expensive. | t: {田中|たなか}さんの/{車|くるま}は/{大|おお}きくて、/{高|たか}いです *3 | c: {大|おお}きい
+q: この{町|まち}は<{静|しず}かで>、[きれい]です。 | Thị trấn này yên tĩnh và sạch đẹp. | This town is quiet and pretty. | o: きれいで/きれいい/きれいな | t: この/{町|まち}は/{静|しず}かで、/きれいです *3 | e: 3 > {静|しず}かくて、 | ev: な-adj nối bằng で, không dùng くて. | ee: A な-adj links with で, not くて. | c: {静|しず}か
+q: ケンタさんは<{元気|げんき}で>、[{親切|しんせつ}]です。 | Kenta khỏe khoắn và tốt bụng. | Kenta is energetic and kind. | o: {親切|しんせつ}な/{親切|しんせつ}い/{親切|しんせつ}く | t: ケンタさんは/{元気|げんき}で、/{親切|しんせつ}/です *2 | c: {元気|げんき}
+q: この{駅|えき}は<{便利|べんり}で>、{人|ひと}が[{多|おお}い]です。 | Ga này tiện lợi và có nhiều người. | This station is convenient and has many people. | o: {多|おお}くて/{多|おお}な/{多|おお}で | t: この/{駅|えき}は/{便利|べんり}で、/{人|ひと}が *3 | c: {便利|べんり}
+q: ここは{天気|てんき}が<よくて>、{暖|あたた}かいです。 | Ở đây thời tiết tốt và ấm áp. | The weather is good and warm here. | t: ここは/{天気|てんき}が/よくて、/{暖|あたた}かいです *3 | e: 3 > いくて、 | ev: いい là ngoại lệ: いい→よくて. | ee: いい is irregular: いい→よくて. | c: いい
+
+@p
+form: Vて います
+kind: conj
+name: Vています: trạng thái, thói quen | Vています: states and habits
+explain: Ngoài "đang làm", Vています còn diễn tả trạng thái kéo dài (住んでいます: đang sống ở, 結婚しています: đã kết hôn, 持っています: có) và việc làm đều đặn (毎朝走っています). | Besides "is doing", Vています also expresses a continuing state (住んでいます: live in, 結婚しています: be married, 持っています: have) and regular habits (毎朝走っています).
+note: Các động từ 住む, 知る, 持つ, 結婚する, 着る, かける... dùng ています cho trạng thái. Phủ định của 知っています là 知りません (không phải 知っていません). | Verbs like 住む, 知る, 持つ, 結婚する, 着る, かける use ています for states. The negative of 知っています is 知りません (not 知っていません).
+compare: Vています (đang): việc đang diễn ra ngay lúc này; Vています (trạng thái): kết quả hay thói quen kéo dài, thường có 毎日, いつも hay nơi sống. | Vています (progressive): happening right now; Vています (state): a lasting result or habit, often with 毎日, いつも, or a place of residence.
+tip: Thấy 住んでいます, 結婚しています, 知っています, 持っています: dịch là "đang ở trạng thái đó", đừng dịch "đang làm".
+search: ています
+ex: ユキさんは{東京|とうきょう}に{住|す}んでいます。 | Yuki sống ở Tokyo. | Yuki lives in Tokyo.
+ex: {田中|たなか}さんは{結婚|けっこん}しています。 | Ông Tanaka đã kết hôn. | Mr. Tanaka is married.
+ex: ケンタさんは{眼鏡|めがね}をかけています。 | Kenta đang đeo kính. | Kenta is wearing glasses.
+ex: {毎朝|まいあさ}、{川|かわ}の{近|ちか}くを{走|はし}っています。 | Mỗi sáng tôi chạy bộ gần sông. | Every morning I run near the river.
+q: ユキさんは{東京|とうきょう}[に]<{住|す}んで>います。 | Yuki sống ở Tokyo. | Yuki lives in Tokyo. | o: を/が/と | t: ユキさんは/{東京|とうきょう}に/{住|す}んで/います *3 | e: 2 > {東京|とうきょう}で | ev: Nơi sống dùng に: 東京に住んでいます. | ee: A place of residence takes に: 東京に住んでいます. | c: {住|す}む
+q: ケンタさんは{会社|かいしゃ}[で]<{働|はたら}いて>います。 | Kenta làm việc ở công ty. | Kenta works at a company. | o: を/が/の | t: ケンタさんは/{会社|かいしゃ}で/{働|はたら}いて/います *3 | e: 3 > {働|はたら}きて | ev: Đuôi く đổi thành いて: 働いて. | ee: The ending く becomes いて: 働いて. | c: {働|はたら}く
+q: {田中|たなか}さんは{結婚|けっこん}<して>います。 | Ông Tanaka đã kết hôn. | Mr. Tanaka is married. | t: {田中|たなか}さんは/{結婚|けっこん}/して/います *3 | e: 4 > ました | ev: Đã kết hôn (trạng thái hiện tại) dùng 結婚しています. | ee: "Is married" (a current state) uses 結婚しています. | c: する
+q: ユキさんは{田中|たなか}さんの{電話|でんわ}{番号|ばんごう}[を]<{知|し}って>います。 | Yuki biết số điện thoại của ông Tanaka. | Yuki knows Mr. Tanaka's phone number. | o: が/に/で | t: ユキさんは/{田中|たなか}さんの/{電話|でんわ}{番号|ばんごう}を/{知|し}っています *4 | c: {知|し}る
+q: {田中|たなか}さんは{車|くるま}[を]<{持|も}って>います。 | Ông Tanaka có xe ô tô. | Mr. Tanaka has a car. | o: が/に/で | t: {田中|たなか}さんは/{車|くるま}を/{持|も}って/います *3 | e: 3 > {持|も}ちて | ev: Đuôi つ đổi thành って: 持って. | ee: The ending つ becomes って: 持って. | c: {持|も}つ
+q: {佐藤|さとう}さんは{赤|あか}いセーター[を]<{着|き}て>います。 | Bà Sato đang mặc áo len đỏ. | Ms. Sato is wearing a red sweater. | o: が/に/で | t: {佐藤|さとう}さんは/{赤|あか}い/セーターを/{着|き}ています *4 | c: {着|き}る
+q: {毎朝|まいあさ}、{川|かわ}の{近|ちか}く[を]<{走|はし}って>います。 | Mỗi sáng tôi chạy bộ gần sông. | Every morning I run near the river. | o: が/に/と | t: {毎朝|まいあさ}、/{川|かわ}の/{近|ちか}くを/{走|はし}っています *4 | c: {走|はし}る
+q: {私|わたし}は{毎日|まいにち}、{日本語|にほんご}を{勉強|べんきょう}<して>います。 | Tôi học tiếng Nhật mỗi ngày. | I study Japanese every day. | t: {私|わたし}は/{毎日|まいにち}、/{日本語|にほんご}を/{勉強|べんきょう}して *4 | e: 3 > {日本語|にほんご}が | ev: Đối tượng học là tiếng Nhật, dùng を: 日本語を勉強する. | ee: The thing studied takes を: 日本語を勉強する. | c: する
+q: ケンタさんは{眼鏡|めがね}[を]<かけて>います。 | Kenta đang đeo kính. | Kenta is wearing glasses. | o: が/に/で | t: ケンタさんは/{眼鏡|めがね}を/かけて/います *3 | c: かける
+q: タマは{佐藤|さとう}さんの{家|いえ}に<{住|す}んで>います。 | Tama sống ở nhà bà Sato. | Tama lives at Ms. Sato's house. | t: タマは/{佐藤|さとう}さんの/{家|いえ}に/{住|す}んで *4 | e: 3 > {家|いえ}を | ev: Nơi sống dùng に, không dùng を. | ee: A place of residence takes に, not を. | c: {住|す}む

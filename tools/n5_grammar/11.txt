@@ -1,0 +1,116 @@
+# Bài 11: 奉行所 Phủ đường. Mẫu: Cách chia thể て · V てください · V ています (đang) · V ても いいです · V ては いけません
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: Vて
+kind: conj
+name: Cách chia thể て | How to make the て-form
+explain: Thể て là nền của rất nhiều mẫu câu. Nhóm 1 (đổi âm cuối): く→いて, ぐ→いで, す→して, う・つ・る→って, ぬ・ぶ・む→んで. Nhóm 2: bỏ る thêm て (食べる→食べて). Nhóm 3: する→して, 来る→来て (きて). | The て-form is the base of many patterns. Group 1 (change the ending): く→いて, ぐ→いで, す→して, う/つ/る→って, ぬ/ぶ/む→んで. Group 2: drop る and add て (食べる→食べて). Group 3: する→して, 来る→来て (きて).
+note: Ngoại lệ duy nhất của nhóm 1 là 行く→行って (không phải 行いて). 帰る, 入る, 走る tuy đuôi る nhưng là nhóm 1 nên thành 帰って, 入って, 走って. | The one exception in group 1 is 行く→行って (not 行いて). 帰る, 入る and 走る end in る but are group 1, so they become 帰って, 入って, 走って.
+tip: Nhớ vần: "ぬぶむ thì んで, うつる thì って, く thì いて, ぐ thì いで, す thì して".
+search: [いんし]て[、ください]
+ex: ここに{名前|なまえ}を{書|か}いてください。 | Xin hãy viết tên vào đây. | Please write your name here.
+ex: {水|みず}を{飲|の}んでください。 | Xin hãy uống nước. | Please drink some water.
+ex: {駅|えき}へ{行|い}ってください。 | Xin hãy đi đến nhà ga. | Please go to the station.
+ex: {教室|きょうしつ}で{勉強|べんきょう}してください。 | Xin hãy học ở lớp học. | Please study in the classroom.
+q: ここ[に]{名前|なまえ}を<{書|か}いて>ください。 | Xin hãy viết tên vào đây. | Please write your name here. | o: で/を/が | t: ここに/{名前|なまえ}を/{書|か}いて/ください *3 | e: 3 > {書|か}きて | ev: Nhóm 1, đuôi く đổi thành いて: 書いて, không phải 書きて. | ee: Group 1, ending く becomes いて: 書いて, not 書きて. | c: {書|か}く
+q: {水|みず}[を]<{飲|の}んで>ください。 | Xin hãy uống nước. | Please drink some water. | o: が/に/へ | t: {水|みず}/を/{飲|の}んで/ください *3 | e: 3 > {飲|の}みて | ev: Đuôi む đổi thành んで: 飲んで. | ee: The ending む becomes んで: 飲んで. | c: {飲|の}む
+q: ここ[で]{少|すこ}し<{待|ま}って>ください。 | Xin hãy đợi ở đây một chút. | Please wait here for a moment. | o: に/を/が | t: ここで/{少|すこ}し/{待|ま}って/ください *3 | e: 3 > {待|ま}ちて | ev: Đuôi つ đổi thành って: 待って. | ee: The ending つ becomes って: 待って. | c: {待|ま}つ
+q: もう{少|すこ}しゆっくり<{話|はな}して>ください。 | Xin hãy nói chậm hơn một chút. | Please speak a little more slowly. | t: もう{少|すこ}し/ゆっくり/{話|はな}して/ください *3 | c: {話|はな}す
+q: {駅|えき}[へ]<{行|い}って>ください。 | Xin hãy đi đến nhà ga. | Please go to the station. | o: が/も/の | t: {駅|えき}/へ/{行|い}って/ください *3 | e: 3 > {行|い}いて | ev: 行く là ngoại lệ: 行って, không phải 行いて. | ee: 行く is the exception: 行って, not 行いて. | c: {行|い}く
+q: プール[で]<{泳|およ}いで>ください。 | Xin hãy bơi ở bể bơi. | Please swim in the pool. | o: に/を/へ | t: プール/で/{泳|およ}いで/ください *3 | e: 3 > {泳|およ}いて | ev: Đuôi ぐ đổi thành いで (có dấu ゛): 泳いで. | ee: The ending ぐ becomes いで (with ゛): 泳いで. | c: {泳|およ}ぐ
+q: これ[を]<{見|み}て>ください。 | Xin hãy xem cái này. | Please look at this. | o: が/に/は | t: これ/を/{見|み}て/ください *3 | e: 3 > {見|み}って | ev: Nhóm 2 chỉ bỏ る rồi thêm て: 見て. | ee: Group 2 just drops る and adds て: 見て. | c: {見|み}る
+q: {教室|きょうしつ}で{勉強|べんきょう}<して>ください。 | Xin hãy học ở lớp học. | Please study in the classroom. | t: {教室|きょうしつ}で/{勉強|べんきょう}/して/ください *3 | e: 3 > すて | ev: する là động từ nhóm 3, thể て là して. | ee: する is group 3; its て-form is して. | c: する
+q: {明日|あした}ここへ<{来|き}て>ください。 | Xin hãy đến đây vào ngày mai. | Please come here tomorrow. | t: {明日|あした}/ここへ/{来|き}て/ください *3 | e: 3 > こて | ev: 来る thành 来て và đọc là きて. | ee: 来る becomes 来て, read きて. | c: {来|く}る
+q: {本|ほん}[を]<{買|か}って>ください。 | Xin hãy mua sách. | Please buy a book. | o: が/に/へ | t: {本|ほん}/を/{買|か}って/ください *3 | c: {買|か}う
+
+@p
+form: Vて ください
+kind: conj
+name: Vてください: "hãy ..." | Vてください: "please do ..."
+explain: Dùng để nhờ hay đề nghị ai làm gì: thể て + ください. Muốn nhờ lịch sự hơn, thêm すみません ở đầu câu. | Used to ask or tell someone to do something: て-form + ください. Add すみません at the start to be more polite.
+note: Nhờ đưa đồ vật thì dùng N をください ("cho tôi N"), không có thể て. | To ask for a thing, use N をください ("please give me N"), with no て-form.
+compare: Vませんか là lời mời nhẹ nhàng ("anh ... nhé?"); Vてください là lời nhờ vả trực tiếp. | Vませんか is a soft invitation ("won't you ...?"); Vてください is a direct request.
+tip: ください nghĩa là "xin hãy": giống "làm ơn" đặt ở cuối câu thay vì đầu câu.
+search: てください
+ex: ドアを{開|あ}けてください。 | Xin hãy mở cửa. | Please open the door.
+ex: すみません、{名前|なまえ}を{教|おし}えてください。 | Xin lỗi, xin hãy cho tôi biết tên. | Excuse me, please tell me your name.
+ex: ケンタさん、{電話|でんわ}を{貸|か}してください。 | Kenta, cho tôi mượn điện thoại nhé. | Kenta, please lend me your phone.
+ex: {水|みず}をください。 | Xin cho tôi nước. | Water, please.
+q: ドア[を]<{開|あ}けて>ください。 | Xin hãy mở cửa. | Please open the door. | o: が/に/で | t: ドア/を/{開|あ}けて/ください *3 | e: 4 > ませんか | ev: Nhờ vả trực tiếp dùng てください; ませんか là lời mời. | ee: A direct request uses てください; ませんか is an invitation. | c: {開|あ}ける
+q: {窓|まど}を<{閉|し}めて>ください。 | Xin hãy đóng cửa sổ. | Please close the window. | t: {窓|まど}/を/{閉|し}めて/ください *3 | e: 3 > {閉|し}めない | ev: Nhờ làm gì thì dùng thể て, không dùng thể ない. | ee: To ask someone to do something, use the て-form, not the ない-form. | c: {閉|し}める
+q: {電気|でんき}[を]<つけて>ください。 | Xin hãy bật đèn. | Please turn on the light. | o: が/に/へ | t: {電気|でんき}/を/つけて/ください *3 | c: つける
+q: もう{一度|いちど}<{言|い}って>ください。 | Xin hãy nói lại một lần nữa. | Please say it once more. | t: もう/{一度|いちど}/{言|い}って/ください *3 | e: 3 > {言|い}いて | ev: 言う đuôi う đổi thành って: 言って. | ee: 言う has the ending う, so it becomes 言って. | c: {言|い}う
+q: ケンタさん、{電話|でんわ}[を]<{貸|か}して>ください。 | Kenta, cho tôi mượn điện thoại nhé. | Kenta, please lend me your phone. | o: に/が/で | t: ケンタさん、/{電話|でんわ}/を/{貸|か}して *4 | c: {貸|か}す
+q: すみません、{名前|なまえ}を<{教|おし}えて>[ください]。 | Xin lỗi, xin hãy cho tôi biết tên. | Excuse me, please tell me your name. | o: ませんか/ましょう/たいです | t: すみません、/{名前|なまえ}を/{教|おし}えて/ください *3 | c: {教|おし}える
+q: ここで{少|すこ}し<{休|やす}んで>ください。 | Xin hãy nghỉ ở đây một chút. | Please rest here for a bit. | t: ここで/{少|すこ}し/{休|やす}んで/ください *3 | c: {休|やす}む
+q: この{本|ほん}を<{読|よ}んで>[ください]。 | Xin hãy đọc quyển sách này. | Please read this book. | o: ませんか/ましょう/ます | c: {読|よ}む
+q: {電車|でんしゃ}[に]<{乗|の}って>ください。 | Xin hãy lên tàu điện. | Please get on the train. | o: が/で/と | t: {電車|でんしゃ}/に/{乗|の}って/ください *3 | e: 2 > を | ev: Lên phương tiện dùng に: 電車に乗る. | ee: Getting on a vehicle takes に: 電車に乗る. | c: {乗|の}る
+q: {窓|まど}の{前|まえ}に<{立|た}って>ください。 | Xin hãy đứng trước cửa sổ. | Please stand in front of the window. | t: {窓|まど}の/{前|まえ}に/{立|た}って/ください *3 | c: {立|た}つ
+
+@p
+form: Vて います
+kind: conj
+name: Vています: đang làm | Vています: "is doing"
+explain: Thể て + います diễn tả hành động đang diễn ra ngay lúc nói, giống "đang" trong tiếng Việt. | The て-form + います describes an action in progress at the moment of speaking, like "-ing" in English.
+note: Phủ định là Vていません ("đang không làm / chưa làm"). Với người, động vật dùng います, không dùng あります. | The negative is Vていません. います is used for people and animals, never あります.
+compare: Vます nói chung chung hay tương lai ("tôi xem phim"); Vています nói việc đang diễn ra ("tôi đang xem phim"). | Vます is general or future ("I watch a movie"); Vています is happening now ("I am watching a movie").
+tip: "Đang" = て + います: て là "nối", います là "đang ở trong trạng thái ấy".
+search: ています
+ex: ケンタさんは{今|いま}ゲームをしています。 | Kenta bây giờ đang chơi game. | Kenta is playing a game now.
+ex: ユキさんは{部屋|へや}で{本|ほん}を{読|よ}んでいます。 | Yuki đang đọc sách trong phòng. | Yuki is reading a book in her room.
+ex: {田中|たなか}さんは{電話|でんわ}で{話|はな}しています。 | Ông Tanaka đang nói chuyện điện thoại. | Mr. Tanaka is talking on the phone.
+ex: タマは{寝|ね}ています。 | Tama đang ngủ. | Tama is sleeping.
+q: ケンタさんは{今|いま}ゲーム[を]<して>います。 | Kenta bây giờ đang chơi game. | Kenta is playing a game now. | o: が/に/で | t: ケンタさんは/{今|いま}/ゲームを/しています *4 | e: 4 > あります | ev: Đang làm gì thì dùng ています, không dùng あります. | ee: For an action in progress use ています, not あります. | c: する
+q: ユキさんは{部屋|へや}[で]{本|ほん}を<{読|よ}んで>います。 | Yuki đang đọc sách trong phòng. | Yuki is reading a book in her room. | o: に/を/へ | t: ユキさんは/{部屋|へや}で/{本|ほん}を/{読|よ}んでいます *4 | e: 4 > {読|よ}みています | ev: Trước います phải là thể て (読んで), không phải thể ます bỏ ます. | ee: います follows the て-form (読んで), not the ます-stem. | c: {読|よ}む
+q: {田中|たなか}さんは{電話|でんわ}[で]<{話|はな}して>います。 | Ông Tanaka đang nói chuyện điện thoại. | Mr. Tanaka is talking on the phone. | o: を/に/が | t: {田中|たなか}さんは/{電話|でんわ}で/{話|はな}して/います *3 | c: {話|はな}す
+q: タマは{今|いま}<{寝|ね}て>います。 | Tama bây giờ đang ngủ. | Tama is sleeping now. | t: タマは/{今|いま}/{寝|ね}て/います *3 | e: 3 > {寝|ね}って | ev: 寝る là nhóm 2: bỏ る thêm て thành 寝て. | ee: 寝る is group 2: drop る and add て to get 寝て. | c: {寝|ね}る
+q: {佐藤|さとう}さんは{家|いえ}で{音楽|おんがく}[を]<{聞|き}いて>います。 | Bà Sato đang nghe nhạc ở nhà. | Ms. Sato is listening to music at home. | o: が/に/で | t: {佐藤|さとう}さんは/{家|いえ}で/{音楽|おんがく}を/{聞|き}いています *4 | c: {聞|き}く
+q: {今|いま}、ユキさんは{友達|ともだち}[を]<{待|ま}って>います。 | Bây giờ Yuki đang đợi bạn. | Right now Yuki is waiting for a friend. | o: が/に/と | t: {今|いま}、/ユキさんは/{友達|ともだち}を/{待|ま}っています *4 | e: 3 > {友達|ともだち}に | ev: Đợi ai dùng を: 友達を待つ. | ee: Waiting for someone takes を: 友達を待つ. | c: {待|ま}つ
+q: {子供|こども}は{外|そと}[で]<{遊|あそ}んで>います。 | Bọn trẻ đang chơi ở bên ngoài. | The children are playing outside. | o: を/が/の | t: {子供|こども}は/{外|そと}で/{遊|あそ}んで/います *3 | c: {遊|あそ}ぶ
+q: ケンタさんは{手紙|てがみ}を<{書|か}いて>います。 | Kenta đang viết thư. | Kenta is writing a letter. | t: ケンタさんは/{手紙|てがみ}を/{書|か}いて/います *3 | c: {書|か}く
+q: {今|いま}、{雨|あめ}が<{降|ふ}って>います。 | Bây giờ trời đang mưa. | It is raining now. | t: {今|いま}、/{雨|あめ}が/{降|ふ}って/います *3 | e: 2 > {雨|あめ}を | ev: Mưa là chủ ngữ của 降る nên dùng が: 雨が降る. | ee: Rain is the subject of 降る, so it takes が: 雨が降る. | c: {降|ふ}る
+q: {私|わたし}は{今|いま}、お{茶|ちゃ}を<{飲|の}んで>います。 | Bây giờ tôi đang uống trà. | I am drinking tea now. | t: {私|わたし}は/{今|いま}、/お{茶|ちゃ}を/{飲|の}んでいます *4 | c: {飲|の}む
+
+@p
+form: Vて も いいです
+kind: conj
+name: Vてもいいです: được phép | Vてもいいです: "may, it's OK to"
+explain: Thể て + もいいです nghĩa là "làm ... cũng được". Hỏi xin phép dùng Vてもいいですか; trả lời はい、いいですよ (được) hoặc すみません、ちょっと… (xin lỗi, e là không). | The て-form + もいいです means "it is OK to ...". Ask permission with Vてもいいですか; answer はい、いいですよ (yes) or すみません、ちょっと… (sorry, not really).
+note: Từ chối thường tế nhị bằng ちょっと…; câu từ chối thẳng là Vてはいけません. | A refusal is usually softened with ちょっと…; the direct refusal is Vてはいけません.
+tip: "Làm ... cũng được": て + も = "cũng", いいです = "tốt/được".
+search: てもいい
+ex: {窓|まど}を{開|あ}けてもいいですか。 | Tôi mở cửa sổ được không? | May I open the window?
+ex: ここで{食|た}べてもいいですか。 | Tôi ăn ở đây được không? | May I eat here?
+ex: はい、{使|つか}ってもいいですよ。 | Vâng, anh dùng cũng được. | Yes, you may use it.
+q: {窓|まど}[を]<{開|あ}けて>もいいですか。 | Tôi mở cửa sổ được không? | May I open the window? | o: が/に/で | t: {窓|まど}を/{開|あ}けて/も/いいですか *2 | e: 3 > は | ev: Xin phép dùng てもいいですか; ては đi với いけません. | ee: Asking permission uses てもいいですか; ては goes with いけません. | c: {開|あ}ける
+q: ここ[で]<{食|た}べて>もいいですか。 | Tôi ăn ở đây được không? | May I eat here? | o: を/に/が | t: ここで/{食|た}べて/も/いいですか *2 | c: {食|た}べる
+q: {辞書|じしょ}[を]<{使|つか}って>もいいです。 | Anh dùng từ điển cũng được. | You may use a dictionary. | o: が/に/で | t: {辞書|じしょ}を/{使|つか}って/も/いいです *3 | e: 2 > {使|つか}いて | ev: Đuôi う đổi thành って: 使って. | ee: The ending う becomes って: 使って. | c: {使|つか}う
+q: {今|いま}、<{帰|かえ}って>もいいですか。 | Bây giờ tôi về được không? | May I go home now? | t: {今|いま}、/{帰|かえ}って/も/いいですか *2 | e: 2 > {帰|かえ}いて | ev: 帰る là nhóm 1: 帰って. | ee: 帰る is group 1: 帰って. | c: {帰|かえ}る
+q: {電気|でんき}[を]<{消|け}して>もいいですか。 | Tôi tắt đèn được không? | May I turn off the light? | o: が/に/で | t: {電気|でんき}を/{消|け}して/も/いいですか *3 | c: {消|け}す
+q: {私|わたし}も<{行|い}って>[も]いいですか。 | Tôi cũng đi được không? | May I go too? | o: は/が/を | t: {私|わたし}も/{行|い}って/も/いいですか *2 | e: 2 > {行|い}いて | ev: 行く là ngoại lệ: 行って. | ee: 行く is the exception: 行って. | c: {行|い}く
+q: ここ[で]{水|みず}を<{飲|の}んで>もいいですよ。 | Anh uống nước ở đây cũng được. | You may drink water here. | o: に/を/が | t: ここで/{水|みず}を/{飲|の}んで/もいいですよ *3 | c: {飲|の}む
+q: {佐藤|さとう}さん、{猫|ねこ}[を]<{見|み}て>もいいですか。 | Bà Sato, tôi xem con mèo được không? | Ms. Sato, may I look at your cat? | o: が/に/と | c: {見|み}る
+q: {明日|あした}は<{休|やす}んで>もいいです。 | Ngày mai nghỉ cũng được. | You may take tomorrow off. | t: {明日|あした}は/{休|やす}んで/も/いいです *3 | c: {休|やす}む
+q: ここで<{待|ま}って>[も]いいですか。 | Tôi đợi ở đây được không? | May I wait here? | o: は/が/を | t: ここで/{待|ま}って/も/いいですか *2 | c: {待|ま}つ
+
+@p
+form: Vて は いけません
+kind: conj
+name: Vてはいけません: cấm, không được | Vてはいけません: "must not"
+explain: Thể て + はいけません là lệnh cấm, nghĩa "không được làm ...". Hay gặp trên biển báo, nội quy, hoặc khi người trên nói với người dưới. | The て-form + はいけません is a prohibition: "you must not ...". Common on signs and rules, or from a superior to a subordinate.
+note: Trợ từ は ở đây đọc là "wa". Đây là lời cấm khá mạnh, nên đừng dùng với người lớn tuổi hơn; có thể nói nhẹ hơn bằng Vないでください. | The particle は is read "wa" here. It is a strong ban, so avoid it with people above you; Vないでください is softer.
+tip: Gốc là "làm ... thì (は) không được (いけません)": は nhấn mạnh việc bị cấm, trái với も (cũng được).
+search: てはいけません
+ex: ここで{遊|あそ}んではいけません。 | Không được chơi ở đây. | You must not play here.
+ex: {教室|きょうしつ}で{食|た}べてはいけません。 | Không được ăn trong lớp học. | You must not eat in the classroom.
+ex: ここに{入|はい}ってはいけません。 | Không được vào đây. | You must not enter here.
+q: ここで<{遊|あそ}んで>は[いけません]。 | Không được chơi ở đây. | You must not play here. | o: いいです/ありません/いません | t: ここで/{遊|あそ}んで/は/いけません *3 | e: 3 > も | ev: Cấm đoán dùng ては; ても là "cũng được". | ee: A ban uses ては; ても means "it's OK". | c: {遊|あそ}ぶ
+q: ここで<{泳|およ}いで>はいけません。 | Không được bơi ở đây. | You must not swim here. | t: ここで/{泳|およ}いで/は/いけません *2 | e: 2 > {泳|およ}いて | ev: Đuôi ぐ đổi thành いで: 泳いで. | ee: The ending ぐ becomes いで: 泳いで. | c: {泳|およ}ぐ
+q: {教室|きょうしつ}[で]<{食|た}べて>はいけません。 | Không được ăn trong lớp học. | You must not eat in the classroom. | o: に/を/が | t: {教室|きょうしつ}で/{食|た}べて/は/いけません *2 | c: {食|た}べる
+q: ここで{煙草|たばこ}[を]<{吸|す}って>はいけません。 | Không được hút thuốc ở đây. | You must not smoke here. | o: が/に/へ | t: ここで/{煙草|たばこ}を/{吸|す}って/はいけません *3 | e: 3 > {吸|す}いて | ev: Đuôi う đổi thành って: 吸って. | ee: The ending う becomes って: 吸って. | c: {吸|す}う
+q: {会社|かいしゃ}[で]<{寝|ね}て>はいけません。 | Không được ngủ ở công ty. | You must not sleep at the office. | o: に/を/が | t: {会社|かいしゃ}で/{寝|ね}て/は/いけません *2 | c: {寝|ね}る
+q: ここ[に]<{入|はい}って>はいけません。 | Không được vào đây. | You must not enter here. | o: が/で/と | t: ここ/に/{入|はい}って/はいけません *3 | c: {入|はい}る
+q: {夜|よる}は{外|そと}[へ]<{出|で}て>はいけません。 | Buổi tối không được ra ngoài. | You must not go outside at night. | o: が/の/と | t: {夜|よる}は/{外|そと}へ/{出|で}て/はいけません *3 | e: 3 > {出|で}いて | ev: 出る là nhóm 2: bỏ る thêm て thành 出て. | ee: 出る is group 2: drop る and add て to get 出て. | c: {出|で}る
+q: ここ[を]<{走|はし}って>はいけません。 | Không được chạy ở chỗ này. | You must not run here. | o: が/の/と | c: {走|はし}る
+q: {電車|でんしゃ}の{中|なか}で{電話|でんわ}を<して>はいけません。 | Không được gọi điện trong tàu điện. | You must not make phone calls on the train. | t: {電車|でんしゃ}の/{中|なか}で/{電話|でんわ}を/して *4 | c: する

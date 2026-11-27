@@ -1,0 +1,116 @@
+# Bài 15: 港 Bến cảng. Mẫu: Cách chia thể た · V たことが あります · V たり V たり します · V たあとで / N のあとで · もう/まだ
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: Vた
+name: Cách chia thể た (quá khứ thân mật) | Making the た-form (plain past)
+explain: Chia giống thể て, chỉ đổi て→た, で→だ. Nhóm 1: き→いた (かく→かいた), ぎ→いだ (およぐ→およいだ), み/び/に→んだ (よむ→よんだ), い/ち/り→った (かう→かった, まつ→まった, かえる→かえった), し→した (はなす→はなした). Nhóm 2: bỏ る thêm た (たべる→たべた). Nhóm 3: する→した, くる→きた. | Same as the て-form, just change て→た and で→だ. Group 1: 〜く→〜いた (かく→かいた), 〜ぐ→〜いだ (およぐ→およいだ), 〜む/ぶ/ぬ→〜んだ (よむ→よんだ), 〜う/つ/る→〜った (かう→かった, まつ→まった, かえる→かえった), 〜す→〜した (はなす→はなした). Group 2: drop る and add た (たべる→たべた). Group 3: する→した, くる→きた.
+note: Ngoại lệ: いく (行く) → いった (không phải いいた). Thể た là quá khứ của thể thường, tương đương 〜ました: たべた = たべました. | Exception: いく (行く) → いった (not いいた). The た-form is the plain past, equivalent to 〜ました: たべた = たべました.
+compare: Thể て dùng để nối câu, thể た dùng để kết thúc câu hoặc đứng trước あとで, ことがある, たり. | The て-form links clauses; the た-form ends sentences or comes before あとで, ことがある and たり.
+tip: Nhớ て→た, で→だ; ngoại lệ duy nhất là 行く→行った.
+ex: {昨日|きのう}、{友達|ともだち}に{会|あ}った。 | Hôm qua tôi đã gặp bạn. | I met a friend yesterday.
+ex: ケンタはゲームを{買|か}った。 | Kenta đã mua game. | Kenta bought a game.
+ex: {私|わたし}は{朝|あさ}ごはんを{食|た}べた。 | Tôi đã ăn sáng. | I ate breakfast.
+ex: {佐藤|さとう}さんは{手紙|てがみ}を{書|か}いた。 | Bà Sato đã viết thư. | Ms. Sato wrote a letter.
+kind: conj
+q: ユキさんは{昨日|きのう}{本|ほん}[を]<{読|よ}んだ>。 | Hôm qua Yuki đã đọc sách. | Yuki read a book yesterday. | o: が/に/へ | c: {読|よ}む | t: ユキさんは/{昨日|きのう}/{本|ほん}を/{読|よ}んだ *4 | e: 4 > {読|よ}いだ | ev: Nhóm 1 đuôi む → んだ; いだ chỉ dành cho đuôi ぐ. | ee: Group 1 verbs ending in む take んだ; いだ is only for ぐ.
+q: ケンタは{駅|えき}[で]{友達|ともだち}を<{待|ま}った>。 | Kenta đã đợi bạn ở nhà ga. | Kenta waited for a friend at the station. | o: を/へ/が | c: {待|ま}つ | t: ケンタは/{駅|えき}で/{友達|ともだち}を/{待|ま}った *4 | e: 4 > {待|ま}いた | ev: Đuôi つ → った; いた dành cho đuôi く. | ee: Verbs ending in つ take った; いた is for く.
+q: {私|わたし}は{先週|せんしゅう}{大阪|おおさか}へ<{行|い}った>。 | Tuần trước tôi đã đi Osaka. | I went to Osaka last week. | c: {行|い}く | t: {私|わたし}は/{先週|せんしゅう}/{大阪|おおさか}へ/{行|い}った *4 | e: 4 > {行|い}いた | ev: 行く là ngoại lệ: 行った, không phải 行いた. | ee: 行く is the exception: 行った, not 行いた.
+q: {田中|たなか}さんはさっきお{茶|ちゃ}[を]<{飲|の}んだ>。 | Ông Tanaka vừa uống trà. | Mr. Tanaka just drank tea. | o: が/に/へ | c: {飲|の}む
+q: {昨日|きのう}、プールで<{泳|およ}いだ>。 | Hôm qua tôi đã bơi ở hồ bơi. | I swam in the pool yesterday. | c: {泳|およ}ぐ
+q: {私|わたし}は{昨日|きのう}{映画|えいが}[を]<{見|み}た>。 | Hôm qua tôi đã xem phim. | I watched a movie yesterday. | o: に/へ/で | c: {見|み}る | t: {私|わたし}は/{昨日|きのう}/{映画|えいが}を/{見|み}た *4
+q: {佐藤|さとう}さんの{家|いえ}に{友達|ともだち}が<{来|き}た>。 | Bạn đến nhà bà Sato. | A friend came to Ms. Sato's house. | c: {来|く}る | t: {佐藤|さとう}さんの/{家|いえ}に/{友達|ともだち}が/{来|き}た *4
+q: {昨日|きのう}、{先生|せんせい}に{会|あ}[った]。 | Hôm qua tôi đã gặp thầy. | I met my teacher yesterday. | o: あいた/あんだ/あて
+q: {手紙|てがみ}を{書|か}[いた]。 | Tôi đã viết thư. | I wrote a letter. | o: きた/いだ/んだ
+
+@p
+form: Vた ことが あります
+name: Vたことが あります: "đã từng làm V" | Vたことが あります: "have done V before"
+explain: Nói về kinh nghiệm đã từng có trong đời. Động từ chia thể た, thêm ことが あります. Phủ định ことが ありません = chưa từng. Hỏi: Vたことが ありますか。 | Talks about an experience you have had at some point in life. Put the verb in た-form, then ことが あります. The negative ことが ありません means "have never". Ask with Vたことが ありますか。
+note: Khác với 〜ました (một việc cụ thể trong quá khứ), mẫu này chỉ nói đã có kinh nghiệm hay chưa. Trước こと là thể た (còn ことができます là thể từ điển). | Unlike 〜ました (a specific past event), this only says whether you have the experience. A た-form comes before こと (ことができます takes the dictionary form).
+tip: "Đã từng" = た + ことがある; "chưa từng" = た + ことがない. Hay thêm いちども (một lần cũng không).
+search: たことが(あります|ありません)
+ex: {私|わたし}は{北海道|ほっかいどう}へ{行|い}ったことがあります。 | Tôi đã từng đến Hokkaido. | I have been to Hokkaido.
+ex: ケンタさんは{外国|がいこく}へ{行|い}ったことがありません。 | Kenta chưa từng ra nước ngoài. | Kenta has never been abroad.
+ex: {佐藤|さとう}さんは{飛行機|ひこうき}に{乗|の}ったことがありません。 | Bà Sato chưa từng đi máy bay. | Ms. Sato has never ridden an airplane.
+ex: {京都|きょうと}へ{行|い}ったことがありますか。 | Bạn đã từng đến Kyoto chưa? | Have you ever been to Kyoto?
+kind: conj
+q: {私|わたし}は{京都|きょうと}へ<{行|い}った>ことがあります。 | Tôi đã từng đến Kyoto. | I have been to Kyoto. | c: {行|い}く
+q: ケンタさんは{馬|うま}[に]<{乗|の}った>ことがありません。 | Kenta chưa từng cưỡi ngựa. | Kenta has never ridden a horse. | o: を/が/へ | c: {乗|の}る
+q: {佐藤|さとう}さんは{寿司|すし}を<{食|た}べた>ことがあります。 | Bà Sato đã từng ăn sushi. | Ms. Sato has eaten sushi before. | c: {食|た}べる | t: {佐藤|さとう}さんは/{寿司|すし}を/{食|た}べた/ことがあります *3 | e: 3 > {食|た}べる | ev: Trước ことがあります dùng thể た, không dùng thể từ điển. | ee: Before ことがあります use the た-form, not the dictionary form.
+q: ユキさんは{日本|にほん}の{映画|えいが}[を]<{見|み}た>ことがあります。 | Yuki đã từng xem phim Nhật. | Yuki has seen Japanese movies. | o: が/に/へ | c: {見|み}る
+q: {私|わたし}は{先生|せんせい}に<{会|あ}った>ことがあります。 | Tôi đã từng gặp thầy giáo. | I have met the teacher before. | c: {会|あ}う
+q: {田中|たなか}さんは{日本語|にほんご}で{手紙|てがみ}を<{書|か}いた>ことがあります。 | Ông Tanaka đã từng viết thư bằng tiếng Nhật. | Mr. Tanaka has written a letter in Japanese. | c: {書|か}く
+q: {私|わたし}は{大阪|おおさか}へ{行|い}った[ことが]あります。 | Tôi đã từng đến Osaka. | I have been to Osaka. | o: ことを/ものが/のが | t: {私|わたし}は/{大阪|おおさか}へ/{行|い}った/ことがあります *3 | e: 4 > ことをあります | ev: あります đi với が: ことがあります. | ee: あります goes with が: ことがあります.
+q: ケンタさんは{寿司|すし}を{食|た}べた[ことが]ありません。 | Kenta chưa từng ăn sushi. | Kenta has never eaten sushi. | o: のが/ことを/ものが | t: ケンタさんは/{寿司|すし}を/{食|た}べた/ことがありません *3 | e: 3 > {食|た}べない | ev: Dùng thể た, không dùng thể ない trước ことが. | ee: Use the た-form, not the ない-form, before ことが.
+q: {日本|にほん}の{歌|うた}を{聞|き}いた[ことが]ありますか。 | Bạn đã từng nghe bài hát Nhật chưa? | Have you ever listened to a Japanese song? | o: ことを/のが/ものが | t: {日本|にほん}の/{歌|うた}を/{聞|き}いた/ことがありますか *4 | e: 3 > {聞|き}く | ev: Trước ことがあります phải là thể た. | ee: ことがあります needs the た-form before it.
+q: {私|わたし}は{一度|いちど}も{飛行機|ひこうき}に{乗|の}った[ことが]ありません。 | Tôi chưa từng đi máy bay lần nào. | I have never ridden an airplane even once. | o: ことを/のが/ものが | t: {私|わたし}は/{一度|いちど}も/{飛行機|ひこうき}に/{乗|の}った *4
+
+@p
+form: Vた り Vた り します
+name: Vたり Vたり します: "lúc thì ..., lúc thì ..." | Vたり Vたり します: "do things like ... and ..."
+explain: Liệt kê vài việc tiêu biểu, làm xen kẽ. Chia mỗi động từ thể た rồi thêm り, cuối cùng dùng します (hoặc しました) cho cả câu. | Lists a few representative actions among others. Put each verb in た-form and add り; finish the whole sentence with します (or しました).
+note: Dù chỉ có hai việc, vẫn phải có たり ở cả hai: 読んだり、見たりします. Chỉ nói たり một lần là sai. Thì của cả câu nằm ở します. | Even with two actions, both need たり: 読んだり、見たりします. Using たり only once is wrong. The tense of the whole sentence sits on します.
+compare: 〜て、〜て nối việc xảy ra lần lượt; 〜たり〜たり liệt kê vài việc ví dụ, không theo thứ tự. | 〜て、〜て links actions in order; 〜たり〜たり lists examples, with no fixed order.
+tip: Đuôi た + り, nhớ lặp lại ở cả hai vế và chốt bằng します.
+search: たり.+たり
+ex: {日曜日|にちようび}は{本|ほん}を{読|よ}んだり、{映画|えいが}を{見|み}たりします。 | Chủ nhật tôi lúc đọc sách, lúc xem phim. | On Sundays I read books, watch movies, and so on.
+ex: ケンタさんは{週末|しゅうまつ}、ゲームをしたり、{寝|ね}たりします。 | Cuối tuần Kenta lúc chơi game, lúc ngủ. | On weekends Kenta plays games, sleeps, and so on.
+ex: {昨日|きのう}は{買|か}い{物|もの}をしたり、{友達|ともだち}に{会|あ}ったりしました。 | Hôm qua tôi lúc đi mua sắm, lúc gặp bạn. | Yesterday I went shopping, met a friend, and so on.
+ex: {佐藤|さとう}さんは{庭|にわ}で{花|はな}を{見|み}たり、タマと{遊|あそ}んだりします。 | Bà Sato lúc ngắm hoa, lúc chơi với Tama ngoài vườn. | Ms. Sato looks at flowers, plays with Tama, and so on in the garden.
+kind: conj
+q: {日曜日|にちようび}は{本|ほん}[を]<{読|よ}んだり>、{映画|えいが}を{見|み}たりします。 | Chủ nhật tôi lúc đọc sách, lúc xem phim. | On Sundays I read books, watch movies, and so on. | o: が/に/へ | c: {読|よ}む | t: {日曜日|にちようび}は/{本|ほん}を/{読|よ}んだり、/{映画|えいが}を *3 | e: 3 > {読|よ}んで、 | ev: たり đi với thể た: 読んだり, không phải 読んで. | ee: たり attaches to the た-form: 読んだり, not 読んで.
+q: {週末|しゅうまつ}は{買|か}い{物|もの}を<したり>、{料理|りょうり}をしたりします。 | Cuối tuần tôi lúc đi mua sắm, lúc nấu ăn. | On weekends I go shopping, cook, and so on. | c: する
+q: ケンタさんは{休|やす}みの{日|ひ}、{友達|ともだち}[と]<{遊|あそ}んだり>、ゲームをしたりします。 | Ngày nghỉ Kenta lúc chơi với bạn, lúc chơi game. | On days off Kenta plays with friends, plays games, and so on. | o: を/が/に | c: {遊|あそ}ぶ
+q: ユキさんは{土曜日|どようび}、{友達|ともだち}[に]<{会|あ}ったり>、{映画|えいが}を{見|み}たりします。 | Thứ bảy Yuki lúc gặp bạn, lúc xem phim. | On Saturdays Yuki meets friends, watches movies, and so on. | o: を/が/へ | c: {会|あ}う
+q: {夏休み|なつやすみ}は{海|うみ}で<{泳|およ}いだり>、{山|やま}へ{行|い}ったりしました。 | Kỳ nghỉ hè tôi lúc bơi ở biển, lúc đi núi. | In the summer vacation I swam in the sea, went to the mountains, and so on. | c: {泳|およ}ぐ | t: {夏休み|なつやすみ}は/{海|うみ}で/{泳|およ}いだり、/{山|やま}へ *3 | e: 3 > {泳|およ}ぐり、 | ev: Thêm り vào thể た (泳いだり), không phải thể từ điển. | ee: Add り to the た-form (泳いだり), not the dictionary form.
+q: {私|わたし}は{昼|ひる}、{音楽|おんがく}を<{聞|き}いたり>、{本|ほん}を{読|よ}んだりします。 | Buổi trưa tôi lúc nghe nhạc, lúc đọc sách. | At noon I listen to music, read books, and so on. | c: {聞|き}く
+q: {日曜日|にちようび}は{洗濯|せんたく}を[したり]、{掃除|そうじ}をしたりします。 | Chủ nhật tôi lúc giặt giũ, lúc dọn dẹp. | On Sundays I do laundry, clean, and so on. | o: する/して/したて | t: {日曜日|にちようび}は/{洗濯|せんたく}を/したり、/{掃除|そうじ}を *3 | e: 3 > して、 | ev: Mẫu này cần たり ở mỗi vế, không dùng て. | ee: This pattern needs たり in each clause, not て.
+q: {週末|しゅうまつ}は{寝|ね}[たり]、テレビを{見|み}たりします。 | Cuối tuần tôi lúc ngủ, lúc xem ti vi. | On weekends I sleep, watch TV, and so on. | o: るり/ねり/て | t: {週末|しゅうまつ}は/{寝|ね}たり、/テレビを/{見|み}たり *2
+q: {佐藤|さとう}さんは{庭|にわ}[で]{花|はな}を{見|み}たり、タマと{遊|あそ}んだりします。 | Bà Sato lúc ngắm hoa, lúc chơi với Tama ngoài vườn. | Ms. Sato looks at flowers, plays with Tama, and so on in the garden. | o: に/を/へ | t: {佐藤|さとう}さんは/{庭|にわ}で/{花|はな}を/{見|み}たり、 *4
+
+@p
+form: Vた あとで / N の あとで
+name: あとで: "sau khi ..." | あとで: "after ..."
+explain: Nói việc B xảy ra sau việc A. Trước あとで dùng động từ thể た hoặc danh từ + の. | Says B happens after A. Use a た-form verb or a noun + の before あとで.
+note: Động từ trước あとで luôn ở thể た, kể cả khi cả câu nói về tương lai. Có thể bỏ で: あとに/あと cũng được. | The verb before あとで is always in the た-form, even if the whole sentence is about the future. で can be dropped.
+compare: まえに (thể từ điển / N の) = trước khi. あとで (thể た / N の) = sau khi. 〜てから nhấn mạnh việc nối tiếp. | まえに (dictionary form / N の) = before. あとで (た-form / N の) = after. 〜てから stresses sequence.
+tip: Cặp đối xứng: まえに + từ điển, あとで + た.
+search: あとで
+ex: {ご飯|はん}を{食|た}べたあとで、{薬|くすり}を{飲|の}みます。 | Sau khi ăn cơm, tôi uống thuốc. | After eating, I take medicine.
+ex: {仕事|しごと}のあとで、{友達|ともだち}と{晩|ばん}ご{飯|はん}を{食|た}べます。 | Sau giờ làm, tôi ăn tối với bạn. | After work, I eat dinner with friends.
+ex: {授業|じゅぎょう}のあとで、{図書館|としょかん}へ{行|い}きます。 | Sau giờ học, tôi đến thư viện. | After class, I go to the library.
+ex: {家|いえ}に{帰|かえ}ったあとで、シャワーを{浴|あ}びます。 | Sau khi về nhà, tôi tắm. | After going home, I take a shower.
+kind: conj
+q: {私|わたし}はお{風呂|ふろ}に<{入|はい}った>あとで、{寝|ね}ます。 | Sau khi tắm, tôi đi ngủ. | After taking a bath, I go to bed. | c: {入|はい}る
+q: {仕事|しごと}[が]<{終|お}わった>あとで、{飲|の}みに{行|い}きます。 | Sau khi xong việc, chúng tôi đi uống. | After work is over, we go out for a drink. | o: を/に/へ | c: {終|お}わる
+q: {映画|えいが}を<{見|み}た>あとで、{友達|ともだち}と{話|はな}しました。 | Sau khi xem phim, tôi đã nói chuyện với bạn. | After watching the movie, I talked with my friend. | c: {見|み}る | t: {映画|えいが}を/{見|み}た/あとで、/{友達|ともだち}と *3 | e: 2 > {見|み}る | ev: Trước あとで dùng thể た, không dùng thể từ điển. | ee: Use the た-form before あとで, not the dictionary form.
+q: ケンタさんは{家|いえ}に<{帰|かえ}った>あとで、ゲームをします。 | Sau khi về nhà, Kenta chơi game. | After getting home, Kenta plays games. | c: {帰|かえ}る
+q: {薬|くすり}[を]<{飲|の}んだ>あとで、{寝|ね}ました。 | Sau khi uống thuốc, tôi đã đi ngủ. | After taking the medicine, I went to bed. | o: が/に/へ | c: {飲|の}む
+q: {手紙|てがみ}を<{書|か}いた>あとで、{出|だ}しに{行|い}きます。 | Sau khi viết thư, tôi đi gửi. | After writing the letter, I go to mail it. | c: {書|か}く
+q: {授業|じゅぎょう}[の]あとで、{図書館|としょかん}へ{行|い}きます。 | Sau giờ học, tôi đến thư viện. | After class, I go to the library. | o: に/を/が | t: {授業|じゅぎょう}/の/あとで、/{図書館|としょかん}へ *2 | e: 2 > を | ev: Danh từ + の + あとで. | ee: Noun + の + あとで.
+q: {仕事|しごと}の[あとで]、{友達|ともだち}と{晩|ばん}ご{飯|はん}を{食|た}べます。 | Sau giờ làm, tôi ăn tối với bạn. | After work, I have dinner with a friend. | o: まえに/てから/とき | t: {仕事|しごと}の/あとで、/{友達|ともだち}と/{晩|ばん}ご{飯|はん}を *2 | e: 2 > まえに、 | ev: "Sau khi" là あとで; まえに nghĩa là "trước khi". | ee: "After" is あとで; まえに means "before".
+q: {朝|あさ}ごはんを{食|た}べた[あとで]、{新聞|しんぶん}を{読|よ}みます。 | Sau khi ăn sáng, tôi đọc báo. | After breakfast, I read the newspaper. | o: まえに/たから/あとが | t: {朝|あさ}ごはんを/{食|た}べた/あとで、/{新聞|しんぶん}を *3
+q: {試験|しけん}の[あとで]、ゆっくり{休|やす}みます。 | Sau kỳ thi, tôi nghỉ ngơi thong thả. | After the exam, I rest at leisure. | o: まえに/ごろ/あとを | t: {試験|しけん}の/あとで、/ゆっくり/{休|やす}みます *2
+
+@p
+form: もう Vました / まだ Vて いません
+name: もう・まだ: "đã ... rồi / chưa ..." | もう・まだ: "already / not yet"
+explain: もう + 〜ました = "đã ... rồi". まだ + 〜ていません = "chưa ...". Hỏi: もう〜ましたか。 Đáp: はい、もう〜ました。 / いいえ、まだです (hoặc まだ〜ていません)。 | もう + 〜ました = "already did". まだ + 〜ていません = "have not yet". Ask: もう〜ましたか。 Answer: はい、もう〜ました。 / いいえ、まだです (or まだ〜ていません)。
+note: Trả lời phủ định cho もう〜ましたか không dùng 〜ませんでした, mà dùng まだ〜ていません. もう còn có nghĩa "thêm nữa" (もう一つ), nhưng ở đây là "đã ... rồi". | The negative answer to もう〜ましたか is not 〜ませんでした but まだ〜ていません. もう can also mean "more" (もう一つ), but here it means "already".
+tip: もう = "rồi", まだ = "chưa". Cứ chọn cặp: もう〜ました / まだ〜ていません.
+search: (もう|まだ)
+ex: {昼|ひる}ご{飯|はん}をもう{食|た}べましたか。 | Bạn đã ăn trưa chưa? | Have you already eaten lunch?
+ex: はい、もう{食|た}べました。 | Rồi, tôi đã ăn rồi. | Yes, I have already eaten.
+ex: いいえ、まだ{食|た}べていません。 | Chưa, tôi chưa ăn. | No, I have not eaten yet.
+ex: ケンタさんはまだ{来|き}ていません。 | Kenta vẫn chưa đến. | Kenta has not come yet.
+q: {宿題|しゅくだい}は[もう]しましたか。 | Bạn đã làm bài tập chưa? | Have you done your homework yet? | o: まだ/よく/とても | t: {宿題|しゅくだい}は/もう/しました/か *2 | e: 2 > まだ | ev: Hỏi "đã ... chưa" dùng もう, không dùng まだ. | ee: To ask "already ...?" use もう, not まだ.
+q: はい、[もう]{食|た}べました。 | Vâng, tôi đã ăn rồi. | Yes, I have already eaten. | o: まだ/もっと/ちょっと | t: はい、/もう/{食|た}べ/ました *2
+q: いいえ、[まだ]{食|た}べていません。 | Không, tôi chưa ăn. | No, I have not eaten yet. | o: もう/ずっと/いつも | t: いいえ、/まだ/{食|た}べて/いません *2 | e: 2 > もう | ev: "Chưa" dùng まだ〜ていません, không dùng もう. | ee: "Not yet" is まだ〜ていません, not もう.
+q: ケンタさんはまだ{来|き}[ていません]。 | Kenta vẫn chưa đến. | Kenta has not come yet. | o: ました/ません/ています | t: ケンタさんは/まだ/{来|き}て/いません *4
+q: {田中|たなか}さんは[もう]{帰|かえ}りました。 | Ông Tanaka đã về rồi. | Mr. Tanaka has already gone home. | o: まだ/もっと/よく | t: {田中|たなか}さんは/もう/{帰|かえ}り/ました *2 | e: 2 > まだ | ev: Với 〜ました (đã xong) đi với もう; まだ đi với 〜ていません. | ee: 〜ました (done) pairs with もう; まだ pairs with 〜ていません.
+q: {佐藤|さとう}さんは[まだ]{晩|ばん}ご{飯|はん}を{食|た}べていません。 | Bà Sato vẫn chưa ăn tối. | Ms. Sato has not eaten dinner yet. | o: もう/よく/すぐ | t: {佐藤|さとう}さんは/まだ/{晩|ばん}ご{飯|はん}を/{食|た}べていません *2
+q: {手紙|てがみ}はもう[{書|か}き]ましたか。 | Bạn đã viết thư chưa? | Have you written the letter yet? | o: {書|か}く/{書|か}いて/{書|か}いた
+q: {薬|くすり}は[もう]{飲|の}みましたか。 | Bạn đã uống thuốc chưa? | Have you taken the medicine yet? | o: まだ/よく/あまり
+q: {映画|えいが}はまだ{見|み}て[いません]。 | Tôi vẫn chưa xem phim. | I have not seen the movie yet. | o: ません/いました/います
+q: {仕事|しごと}はもう{終|お}わり[ました]か。 | Công việc đã xong chưa? | Is the work already finished? | o: ます/ません/て

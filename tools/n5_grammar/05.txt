@@ -1,0 +1,110 @@
+# Bài 5: 茶屋 Quán trà. Mẫu: N と (cùng ai) · V ませんか · V ましょう · V ましょうか · なにも/どこも + phủ định
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: N と V
+name: N と: cùng với ai | N と: together with someone
+explain: Trợ từ と đứng sau người cùng làm một việc: 友達と映画を見ます (xem phim cùng bạn). Nếu làm một mình thì dùng 一人で. | The particle と follows the person you do something with: 友達と映画を見ます (watch a movie with a friend). Doing it alone is 一人で.
+note: と ở đây khác と nối danh từ ("và"): ở đây nghĩa là "cùng với", đi trước động từ. | This と differs from the noun-joining と ("and"): here it means "with" and comes before the verb.
+tip: と = "cùng". Chỉ cần thêm と sau tên người: ケンタさんと食べます = "ăn cùng Kenta".
+search: [^ぁ-ん]と.+(ます|ました|ません)
+ex: ユキさんは{友達|ともだち}と{映画|えいが}を{見|み}ます。 | Yuki xem phim cùng bạn. | Yuki watches a movie with a friend.
+ex: ケンタさんと{昼|ひる}ごはんを{食|た}べます。 | Tôi ăn cơm trưa cùng Kenta. | I eat lunch with Kenta.
+ex: {田中|たなか}さんは{先生|せんせい}と{話|はな}します。 | Ông Tanaka nói chuyện với giáo viên. | Mr. Tanaka talks with the teacher.
+ex: {日曜日|にちようび}、{家族|かぞく}と{買|か}い{物|もの}をします。 | Chủ nhật tôi đi mua sắm cùng gia đình. | On Sunday I go shopping with my family.
+q: ユキさんは{友達|ともだち}[と]{映画|えいが}を{見|み}ます。 | Yuki xem phim cùng bạn. | Yuki watches a movie with a friend. | o: に/を/で | t: ユキさんは/{友達|ともだち}/と/{映画|えいが}を *3 | e: 3 > で | ev: "Cùng với ai" dùng と; で chỉ phương tiện, nơi chốn. | ee: "With someone" is と; で marks means or place.
+q: ケンタさん[と]{昼|ひる}ごはんを{食|た}べます。 | Tôi ăn cơm trưa cùng Kenta. | I eat lunch with Kenta. | o: に/を/で | t: ケンタさん/と/{昼|ひる}ごはんを/{食|た}べます *2
+q: {田中|たなか}さんは{先生|せんせい}と{話|はな}します。 | Ông Tanaka nói chuyện với giáo viên. | Mr. Tanaka talks with the teacher. | t: {田中|たなか}さんは/{先生|せんせい}/と/{話|はな}します *3 | e: 3 > を | ev: Người cùng làm việc đi với と, không dùng を. | ee: The person you do something with takes と, not を.
+q: {日曜日|にちようび}、{家族|かぞく}[と]{買|か}い{物|もの}をします。 | Chủ nhật tôi đi mua sắm cùng gia đình. | On Sunday I go shopping with my family. | o: に/を/で
+q: {私|わたし}は{友達|ともだち}[と]{学校|がっこう}へ{行|い}きます。 | Tôi đi đến trường cùng bạn. | I go to school with a friend. | o: に/を/で | t: {私|わたし}は/{友達|ともだち}/と/{学校|がっこう}へ *3
+q: ユキさんはケンタさん[と]{会社|かいしゃ}へ{行|い}きました。 | Yuki đã đi đến công ty cùng Kenta. | Yuki went to the company with Kenta. | o: に/を/で | t: ユキさんは/ケンタさん/と/{会社|かいしゃ}へ *3 | e: 3 > で | ev: "Cùng Kenta" phải là と. | ee: "With Kenta" must be と.
+q: {私|わたし}は{母|はは}[と]{電話|でんわ}をします。 | Tôi gọi điện thoại cho mẹ. | I talk on the phone with my mother. | o: に/を/で
+q: {昨日|きのう}、{佐藤|さとう}さんとお{茶|ちゃ}を{飲|の}みました。 | Hôm qua tôi đã uống trà cùng bà Sato. | I had tea with Ms. Sato yesterday. | t: {佐藤|さとう}さん/と/お{茶|ちゃ}を/{飲|の}みました *2
+q: ケンタさんは{友達|ともだち}とゲームをします。 | Kenta chơi game cùng bạn. | Kenta plays games with a friend. | t: ケンタさんは/{友達|ともだち}/と/ゲームを *3 | e: 3 > で | ev: "Chơi cùng bạn" là と; で không có nghĩa "cùng". | ee: "Play with a friend" is と; で does not mean "with".
+
+@p
+form: V ませんか
+name: V ませんか: rủ rê lịch sự | V ませんか: polite invitation
+explain: Dạng phủ định của ます kèm か thành lời mời lịch sự: "Bạn có ... không?". Người nói không ép, để người nghe tự quyết. | The negative ます form plus か becomes a polite invitation: "Won't you ...?" The speaker leaves the choice to the listener.
+note: Hay đi với いっしょに ("cùng nhau"). Nhận lời bằng はい、〜ましょう; từ chối nhẹ nhàng bằng すみません、ちょっと…. | Often paired with いっしょに ("together"). Accept with はい、〜ましょう; decline softly with すみません、ちょっと….
+compare: 食べますか là hỏi "bạn có ăn không" (hỏi thông tin); 食べませんか là rủ "ăn cùng nhé?". | 食べますか asks "do you eat?" (information); 食べませんか invites "shall we eat?".
+tip: Như tiếng Việt "Bạn không ... cùng mình à?": hỏi dưới dạng phủ định cho lịch sự.
+search: ませんか
+ex: いっしょに{昼|ひる}ごはんを{食|た}べませんか。 | Cùng ăn cơm trưa nhé? | Won't you eat lunch with me?
+ex: {明日|あした}、{映画|えいが}を{見|み}ませんか。 | Ngày mai cùng xem phim nhé? | Would you like to watch a movie tomorrow?
+ex: ケンタさん、いっしょに{帰|かえ}りませんか。 | Kenta, cùng về nhé? | Kenta, shall we go home together?
+ex: {土曜日|どようび}、{図書館|としょかん}へ{行|い}きませんか。 | Thứ Bảy cùng đi thư viện nhé? | Would you like to go to the library on Saturday?
+q: いっしょに{昼|ひる}ごはんを{食|た}べ[ませんか]。 | Cùng ăn cơm trưa nhé? | Won't you eat lunch with me? | o: ますか/ましょう/ませんでした | t: いっしょに/{昼|ひる}ごはんを/{食|た}べ/ませんか *4 | e: 4 > ますか | ev: Rủ rê lịch sự dùng ませんか; ますか chỉ hỏi thông tin. | ee: A polite invitation uses ませんか; ますか just asks for information.
+q: {明日|あした}、{映画|えいが}を{見|み}[ませんか]。 | Ngày mai cùng xem phim nhé? | Would you like to watch a movie tomorrow? | o: ますか/ました/ましょう | t: {明日|あした}、/{映画|えいが}を/{見|み}/ませんか *4 | e: 4 > ました | ev: ませんか là lời mời; ました là quá khứ. | ee: ませんか is an invitation; ました is past tense.
+q: ケンタさん、いっしょに{帰|かえ}りませんか。 | Kenta, cùng về nhé? | Kenta, shall we go home together? | t: ケンタさん、/いっしょに/{帰|かえ}り/ませんか *4 | e: 4 > ません | ev: Lời mời cần か ở cuối: ませんか. | ee: An invitation needs か at the end: ませんか.
+q: いっしょにお{茶|ちゃ}を{飲|の}み[ませんか]。 | Cùng uống trà nhé? | Won't you have tea with me? | o: ますか/ました/ましょう | t: いっしょに/お{茶|ちゃ}を/{飲|の}み/ませんか *4
+q: いっしょにゲームをしませんか。 | Cùng chơi game nhé? | Would you like to play a game together? | t: いっしょに/ゲームを/し/ませんか *4
+q: {今晩|こんばん}、いっしょにご{飯|はん}を{食|た}べ[ませんか]。 | Tối nay cùng ăn cơm nhé? | Would you like to have dinner together tonight? | o: ますか/ました/ましょう
+q: {土曜日|どようび}、{図書館|としょかん}へ{行|い}き[ませんか]。 | Thứ Bảy cùng đi thư viện nhé? | Would you like to go to the library on Saturday? | o: ますか/ました/ましょう
+q: いっしょに{音楽|おんがく}を{聞|き}き[ませんか]。 | Cùng nghe nhạc nhé? | Would you like to listen to music together? | o: ますか/ません/ましょう
+q: {明日|あした}、{喫茶店|きっさてん}へ{行|い}きませんか。 | Ngày mai cùng đến quán cà phê nhé? | Would you like to go to a café tomorrow? | t: {明日|あした}、/{喫茶店|きっさてん}へ/{行|い}き/ませんか *4
+
+@p
+form: V ましょう
+name: V ましょう: "nào, cùng ... đi" | V ましょう: "let's ..."
+explain: Dạng ましょう dùng để rủ cùng làm hoặc nhận lời mời. Đổi ます thành ましょう: 行きます → 行きましょう. | The ましょう form proposes doing something together, or accepts an invitation. Replace ます with ましょう: 行きます → 行きましょう.
+note: Trả lời cho ませんか: ―いっしょに行きませんか。―はい、行きましょう。 Không dùng cho việc một mình. | It is the usual answer to ませんか: ―いっしょに行きませんか。―はい、行きましょう。 Not for things you do alone.
+tip: ましょう = "nào, ... đi!": 帰りましょう = "về thôi!", 休みましょう = "nghỉ thôi!".
+search: ましょう。
+ex: いっしょに{帰|かえ}りましょう。 | Cùng về thôi. | Let's go home together.
+ex: {少|すこ}し{休|やす}みましょう。 | Nghỉ một chút nào. | Let's take a short break.
+ex: はい、{行|い}きましょう。 | Vâng, cùng đi thôi. | Yes, let's go.
+ex: ご{飯|はん}を{食|た}べましょう。 | Ăn cơm nào. | Let's eat.
+q: {今日|きょう}はいっしょに{帰|かえ}り[ましょう]。 | Hôm nay cùng về thôi. | Let's go home together today. | o: ませんか/ましょうか/ました | t: {今日|きょう}は/いっしょに/{帰|かえ}り/ましょう *4 | e: 4 > ます | ev: Rủ nhau dùng ましょう, không dùng ます. | ee: Suggesting together uses ましょう, not ます.
+q: ここで{少|すこ}し{休|やす}み[ましょう]。 | Nghỉ một chút ở đây nào. | Let's take a short break here. | o: ませんか/ました/ましょうか | t: ここで/{少|すこ}し/{休|やす}み/ましょう *4
+q: ―いっしょに{行|い}きませんか。―はい、{行|い}き[ましょう]。 | ―Cùng đi nhé? ―Vâng, cùng đi thôi. | ―Shall we go together? ―Yes, let's go. | o: ません/ました/ますか
+q: いっしょにご{飯|はん}を{食|た}べ[ましょう]。 | Cùng ăn cơm nào. | Let's eat together. | o: ません/ました/ますか | t: いっしょに/ご{飯|はん}を/{食|た}べ/ましょう *4 | e: 4 > ました | ev: ました là quá khứ; rủ làm bây giờ dùng ましょう. | ee: ました is past; to propose now use ましょう.
+q: {日本語|にほんご}で{話|はな}しましょう。 | Cùng nói bằng tiếng Nhật nào. | Let's speak in Japanese. | t: {日本語|にほんご}/で/{話|はな}し/ましょう *4
+q: {一緒|いっしょ}に{勉強|べんきょう}[しましょう]。 | Cùng học nào. | Let's study together. | o: しません/しました/します
+q: {六時|ろくじ}に{会|あ}い[ましょう]。 | Hẹn gặp lúc 6 giờ nhé. | Let's meet at six. | o: ません/ました/ますか
+q: {駅|えき}で{会|あ}いましょう。 | Gặp nhau ở ga nhé. | Let's meet at the station. | t: {駅|えき}/で/{会|あ}い/ましょう *4 | e: 4 > ません | ev: Rủ rê dùng ましょう; ません là phủ định. | ee: To propose use ましょう; ません is negative.
+q: {今日|きょう}は{早|はや}く{寝|ね}ましょう。 | Hôm nay đi ngủ sớm nào. | Let's go to bed early today. | t: {今日|きょう}は/{早|はや}く/{寝|ね}/ましょう *4
+q: ケンタさん、{音楽|おんがく}を{聞|き}き[ましょう]。 | Kenta, cùng nghe nhạc nào. | Kenta, let's listen to music. | o: ません/ました/ますか
+
+@p
+form: V ましょうか
+name: V ましょうか: "để tôi ... nhé?" | V ましょうか: "shall I / shall we ...?"
+explain: ましょうか có hai nghĩa: đề nghị giúp ("Để tôi ... nhé?") và hỏi ý cùng làm ("Chúng ta ... nhé?"). Câu trả lời thường là はい、お願いします hoặc いいえ、けっこうです. | ましょうか has two uses: offering help ("Shall I ...?") and asking about doing something together ("Shall we ...?"). A typical answer is はい、お願いします or いいえ、けっこうです.
+note: Chủ ngữ ngầm hiểu là "tôi" khi đề nghị giúp. Ví dụ 持ちましょうか: "Để tôi cầm nhé?" | When offering help, the subject is understood to be "I". 持ちましょうか: "Shall I carry it?"
+compare: ましょう = rủ cùng làm ("Làm đi!"); ましょうか = hỏi ý ("Làm nhé?" / "Để tôi làm nhé?"). | ましょう = let's do it; ましょうか = asking ("Shall we?" / "Shall I?").
+tip: ましょう + か = "... nhé?": thêm か để hỏi ý, như tiếng Việt thêm "nhé?".
+search: ましょうか
+ex: {荷物|にもつ}を{持|も}ちましょうか。 | Để tôi cầm hành lý nhé? | Shall I carry your luggage?
+ex: {窓|まど}を{開|あ}けましょうか。 | Để tôi mở cửa sổ nhé? | Shall I open the window?
+ex: {何時|なんじ}に{会|あ}いましょうか。 | Mấy giờ chúng ta gặp nhau nhỉ? | What time shall we meet?
+ex: {昼|ひる}ごはんは{何|なに}を{食|た}べましょうか。 | Bữa trưa chúng ta ăn gì nhỉ? | What shall we eat for lunch?
+q: {荷物|にもつ}を{持|も}ち[ましょうか]。 | Để tôi cầm hành lý nhé? | Shall I carry your luggage? | o: ませんか/ましょう/ますか | t: {荷物|にもつ}を/{持|も}ち/ましょう/か *3 | e: 3 > ました | ev: Đề nghị giúp dùng ましょうか; ました là quá khứ. | ee: Offering help uses ましょうか; ました is past tense.
+q: {窓|まど}を{開|あ}け[ましょうか]。 | Để tôi mở cửa sổ nhé? | Shall I open the window? | o: ませんか/ましょう/ますか | t: {窓|まど}を/{開|あ}け/ましょう/か *3
+q: {何時|なんじ}に{会|あ}い[ましょうか]。 | Mấy giờ chúng ta gặp nhau nhỉ? | What time shall we meet? | o: ませんか/ましょう/ますか | t: {何時|なんじ}に/{会|あ}い/ましょう/か *3 | e: 4 > を | ev: Hỏi ý cuối câu dùng か: ましょうか. | ee: To ask opinion, end with か: ましょうか.
+q: {昼|ひる}ごはんは{何|なに}を{食|た}べましょうか。 | Bữa trưa chúng ta ăn gì nhỉ? | What shall we eat for lunch? | t: {昼|ひる}ごはんは/{何|なに}を/{食|た}べ/ましょうか *4 | e: 4 > ますか | ev: Hỏi ý cùng làm dùng ましょうか; ますか chỉ hỏi thói quen. | ee: To ask "shall we" use ましょうか; ますか asks about habits.
+q: {電気|でんき}を{消|け}し[ましょうか]。 | Để tôi tắt đèn nhé? | Shall I turn off the light? | o: ませんか/ましょう/ますか
+q: ドアを{閉|し}めましょうか。 | Để tôi đóng cửa nhé? | Shall I close the door? | t: ドアを/{閉|し}め/ましょう/か *3
+q: {田中|たなか}さん、{私|わたし}が{持|も}ち[ましょうか]。 | Ông Tanaka, để tôi cầm nhé? | Mr. Tanaka, shall I carry it? | o: ませんか/ましょう/ますか
+q: どこで{会|あ}いましょうか。 | Chúng ta gặp nhau ở đâu nhỉ? | Where shall we meet? | t: どこ/で/{会|あ}い/ましょうか *4
+q: ユキさん、{何|なに}を{飲|の}み[ましょうか]。 | Yuki, chúng ta uống gì nhỉ? | Yuki, what shall we drink? | o: ませんか/ましょう/ますか
+
+@p
+form: なにも / どこ(へ)も + V ません
+name: なにも・どこも + phủ định: "không ... gì cả, không ... đâu cả" | なにも・どこも + negative: "nothing, nowhere"
+explain: Từ để hỏi + も đi với động từ phủ định thì có nghĩa "hoàn toàn không": 何も食べません (không ăn gì cả), どこへも行きません (không đi đâu cả). | A question word + も with a negative verb means "not at all": 何も食べません (eat nothing), どこへも行きません (go nowhere).
+note: Động từ phải ở dạng phủ định (ません, ませんでした). Với どこ thì nói どこへも／どこにも行きません. 何 đọc なに trước も. | The verb must be negative (ません, ませんでした). With どこ, say どこへも／どこにも行きません. 何 is read なに before も.
+tip: Tiếng Việt cũng nói "chẳng ... gì cả": 何も食べません = "chẳng ăn gì cả". も là "cả".
+search: (何|なに|どこ).?も
+ex: {今朝|けさ}は{何|なに}も{食|た}べませんでした。 | Sáng nay tôi đã không ăn gì cả. | I ate nothing this morning.
+ex: {昨日|きのう}はどこへも{行|い}きませんでした。 | Hôm qua tôi đã không đi đâu cả. | I did not go anywhere yesterday.
+ex: {私|わたし}は{何|なに}も{知|し}りません。 | Tôi không biết gì cả. | I don't know anything.
+ex: {昨日|きのう}、{何|なに}も{買|か}いませんでした。 | Hôm qua tôi đã không mua gì cả. | I bought nothing yesterday.
+q: {今朝|けさ}は{何|なに}[も]{食|た}べませんでした。 | Sáng nay tôi đã không ăn gì cả. | I ate nothing this morning. | o: が/を/は | t: {今朝|けさ}は/{何|なに}/も/{食|た}べませんでした *3 | e: 4 > {食|た}べました | ev: 何も phải đi với động từ phủ định. | ee: 何も must go with a negative verb.
+q: {日曜日|にちようび}はどこへ[も]{行|い}きません。 | Chủ nhật tôi không đi đâu cả. | I don't go anywhere on Sundays. | o: を/が/で | t: {日曜日|にちようび}は/どこ/へ/も *4
+q: {昨日|きのう}は{何|なに}[も]{買|か}いませんでした。 | Hôm qua tôi đã không mua gì cả. | I bought nothing yesterday. | o: が/を/は | t: {昨日|きのう}は/{何|なに}/も/{買|か}いませんでした *3 | e: 3 > を | ev: "Không ... gì cả" dùng 何も, không dùng 何を. | ee: "Nothing" is 何も, not 何を.
+q: {私|わたし}は{何|なに}[も]{知|し}りません。 | Tôi không biết gì cả. | I don't know anything. | o: が/を/に | t: {私|わたし}は/{何|なに}/も/{知|し}りません *3 | e: 3 > は | ev: "Không biết gì cả" dùng 何も; は không tạo nghĩa phủ định toàn bộ. | ee: "Know nothing" is 何も; は does not give the "not at all" meaning.
+q: {今日|きょう}は{何|なに}[も]{飲|の}みません。 | Hôm nay tôi không uống gì cả. | I won't drink anything today. | o: が/を/は
+q: {土曜日|どようび}はどこへも{行|い}きませんでした。 | Thứ Bảy tôi đã không đi đâu cả. | I did not go anywhere on Saturday. | t: {土曜日|どようび}は/どこ/へも/{行|い}きませんでした *3
+q: {今朝|けさ}は{何|なに}[も]{見|み}ませんでした。 | Sáng nay tôi đã không thấy gì cả. | I saw nothing this morning. | o: が/を/は
+q: ケンタさんは{昨日|きのう}、{何|なに}もしませんでした。 | Hôm qua Kenta đã không làm gì cả. | Kenta did nothing yesterday. | t: ケンタさんは/{昨日|きのう}、/{何|なに}も/しませんでした *3
+q: {昨日|きのう}、{何|なに}[も]{書|か}きませんでした。 | Hôm qua tôi đã không viết gì cả. | I wrote nothing yesterday. | o: が/を/は

@@ -1,0 +1,110 @@
+# Bài 9: 市場 Chợ phiên. Mẫu: A は B より adj · A と B と どちらが · A のほうが · 〜の中で〜が いちばん · どれ/どちら
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: A は B より adj です
+name: A は B より adj: "A ... hơn B" | A は B より adj: "A is more ... than B"
+explain: So sánh hai thứ: A は B より + tính từ. より đặt sau thứ bị đem ra so, nghĩa là "hơn, so với". Tính từ giữ nguyên dạng, không có "hơn" riêng. | Compares two things: A は B より + adjective. より goes after the thing compared against and means "than". The adjective keeps its plain form; there is no separate "-er".
+note: Muốn nhấn mạnh thêm thì đặt もっと (hơn nữa) hoặc ずっと (hơn hẳn) trước tính từ. | For more emphasis put もっと (even more) or ずっと (far more) before the adjective.
+compare: Tiếng Việt: "A cao hơn B" (B ở cuối). Tiếng Nhật: "A は B より cao" (B ở trước tính từ). | Vietnamese: "A cao hơn B" (B last). Japanese: "A は B より tall" (B before the adjective).
+tip: より = "so với". Đọc là "A so với B thì ... hơn".
+search: より.+(い|です)
+ex: {電車|でんしゃ}はバスより{速|はや}いです。 | Tàu điện nhanh hơn xe buýt. | Trains are faster than buses.
+ex: {牛肉|ぎゅうにく}は{豚肉|ぶたにく}より{高|たか}いです。 | Thịt bò đắt hơn thịt heo. | Beef is more expensive than pork.
+ex: {今日|きょう}は{昨日|きのう}より{寒|さむ}いです。 | Hôm nay lạnh hơn hôm qua. | Today is colder than yesterday.
+ex: タマは{犬|いぬ}より{小|ちい}さいです。 | Tama nhỏ hơn con chó. | Tama is smaller than the dog.
+q: {電車|でんしゃ}はバス[より]{速|はや}いです。 | Tàu điện nhanh hơn xe buýt. | Trains are faster than buses. | o: から/まで/と | t: {電車|でんしゃ}は/バス/より/{速|はや}いです *3 | e: 3 > から | ev: "Hơn" trong so sánh dùng より, từ là から chỉ điểm xuất phát. | ee: "Than" is より; から means "from".
+q: {牛肉|ぎゅうにく}は{豚肉|ぶたにく}より[{高|たか}い]です。 | Thịt bò đắt hơn thịt heo. | Beef is more expensive than pork. | o: {安|やす}い/{低|ひく}い/{長|なが}い | t: {牛肉|ぎゅうにく}は/{豚肉|ぶたにく}/より/{高|たか}いです *4 | e: 3 > の | ev: So sánh "hơn" dùng より, の chỉ sở hữu. | ee: Use より for "than"; の shows possession.
+q: {今日|きょう}は{昨日|きのう}より[{寒|さむ}い]です。 | Hôm nay lạnh hơn hôm qua. | Today is colder than yesterday. | o: {暑|あつ}い/{暖|あたた}かい/{涼|すず}しい | t: {今日|きょう}は/{昨日|きのう}/より/{寒|さむ}いです *3
+q: タマは{犬|いぬ}[より]{小|ちい}さいです。 | Tama nhỏ hơn con chó. | Tama is smaller than the dog. | o: から/まで/へ | t: タマは/{犬|いぬ}/より/{小|ちい}さいです *3 | e: 4 > {小|ちい}さくです | ev: Tính từ giữ nguyên dạng ở cuối câu. | ee: The adjective keeps its plain form at the end.
+q: {私|わたし}の{部屋|へや}はユキさんの{部屋|へや}より{狭|せま}いです。 | Phòng tôi chật hơn phòng Yuki. | My room is smaller than Yuki's room. | t: {私|わたし}の{部屋|へや}は/ユキさんの{部屋|へや}/より/{狭|せま}いです *3 | e: 3 > から | ev: "Hơn" dùng より. | ee: "Than" is より.
+q: このカメラはあのカメラより[{新|あたら}しい]です。 | Máy ảnh này mới hơn máy kia. | This camera is newer than that one. | o: {古|ふる}い/{安|やす}い/{重|おも}い
+q: {日本語|にほんご}は{英語|えいご}より{難|むずか}しいです。 | Tiếng Nhật khó hơn tiếng Anh. | Japanese is harder than English. | t: {日本語|にほんご}は/{英語|えいご}/より/{難|むずか}しいです *2 | e: 3 > から | ev: "Hơn" dùng より. | ee: "Than" is より.
+q: {夏|なつ}は{冬|ふゆ}より[{暑|あつ}い]です。 | Mùa hè nóng hơn mùa đông. | Summer is hotter than winter. | o: {寒|さむ}い/{涼|すず}しい/{冷|つめ}たい
+q: この{道|みち}はあの{道|みち}[より]{長|なが}いです。 | Con đường này dài hơn con đường kia. | This road is longer than that road. | o: から/まで/へ
+
+@p
+form: A と B と どちらが adj ですか
+name: A と B と どちらが: "A hay B ... hơn?" | A と B と どちらが: "which is more ..., A or B?"
+explain: Hỏi chọn một trong hai: A と B と どちらが + tính từ + ですか. どちら nghĩa là "bên nào". | Asks which of two: A と B と どちらが + adjective + ですか. どちら means "which one (of two)".
+note: Chỉ dùng cho hai đối tượng. Từ ba đối tượng trở lên dùng どれ (xem mẫu sau). | Use it for two items only. For three or more use どれ (see the last pattern).
+tip: Tiếng Việt: "Cà phê và trà, bên nào bạn thích hơn?". Hai thứ nối bằng と rồi mới hỏi どちら.
+search: と.+と.?どちら
+ex: {犬|いぬ}と{猫|ねこ}とどちらが{好|す}きですか。 | Chó và mèo, bạn thích bên nào hơn? | Which do you like better, dogs or cats?
+ex: {電車|でんしゃ}とバスとどちらが{速|はや}いですか。 | Tàu điện và xe buýt, bên nào nhanh hơn? | Which is faster, the train or the bus?
+ex: コーヒーと{紅茶|こうちゃ}とどちらが{好|す}きですか。 | Cà phê và hồng trà, bạn thích bên nào hơn? | Which do you like better, coffee or black tea?
+ex: {肉|にく}と{魚|さかな}とどちらが{美味|おい}しいですか。 | Thịt và cá, bên nào ngon hơn? | Which is tastier, meat or fish?
+q: {犬|いぬ}と{猫|ねこ}[と]どちらが{好|す}きですか。 | Chó và mèo, bạn thích bên nào hơn? | Which do you like better, dogs or cats? | o: を/が/へ | t: {犬|いぬ}と/{猫|ねこ}と/どちらが/{好|す}きですか *3
+q: コーヒーと{紅茶|こうちゃ}とどちら[が]{好|す}きですか。 | Cà phê và hồng trà, bạn thích bên nào hơn? | Which do you like better, coffee or black tea? | o: を/に/で | t: コーヒーと/{紅茶|こうちゃ}と/どちらが/{好|す}きですか *3 | e: 3 > どちらを | ev: Chủ ngữ của câu so sánh đi với が. | ee: The subject of a comparison question takes が.
+q: {電車|でんしゃ}とバスとどちらが[{速|はや}い]ですか。 | Tàu điện và xe buýt, bên nào nhanh hơn? | Which is faster, the train or the bus? | o: {速|はや}く/{速|はや}かった/{速|はや}いの
+q: {肉|にく}と{魚|さかな}と[どちら]が{美味|おい}しいですか。 | Thịt và cá, bên nào ngon hơn? | Which is tastier, meat or fish? | o: どれ/どこ/だれ | t: {肉|にく}と/{魚|さかな}と/どちらが/{美味|おい}しいですか *3 | e: 3 > どれが | ev: Chọn một trong hai dùng どちら; どれ dành cho ba thứ trở lên. | ee: Choosing between two uses どちら; どれ is for three or more.
+q: {夏|なつ}と{冬|ふゆ}とどちらが[{好|す}き]ですか。 | Mùa hè và mùa đông, bạn thích mùa nào hơn? | Which do you like better, summer or winter? | o: {好|す}きの/{好|す}く/{好|す}しい
+q: ケンタさんとユキさんと[どちら]がゲームが{上手|じょうず}ですか。 | Kenta và Yuki, ai chơi game giỏi hơn? | Which of Kenta and Yuki is better at games? | o: どれ/どこ/いつ
+q: {東京|とうきょう}と{大阪|おおさか}とどちらが{大|おお}きいですか。 | Tokyo và Osaka, nơi nào lớn hơn? | Which is bigger, Tokyo or Osaka? | t: {東京|とうきょう}と/{大阪|おおさか}と/どちらが/{大|おお}きいですか *1 | e: 2 > {大阪|おおさか}の | ev: Hai thứ được so sánh nối với nhau bằng と. | ee: The two things compared are linked with と.
+q: {朝|あさ}と{夜|よる}と[どちら]が{好|す}きですか。 | Buổi sáng và buổi tối, bạn thích buổi nào hơn? | Which do you like better, morning or night? | o: どれ/どこ/{何|なに}
+q: お{茶|ちゃ}とお{酒|さけ}とどちらが{好|す}きですか。 | Trà và rượu, bạn thích bên nào hơn? | Which do you like better, tea or sake? | t: お{茶|ちゃ}と/お{酒|さけ}と/どちらが/{好|す}きですか *3 | e: 3 > どれが | ev: Chỉ có hai thứ thì dùng どちら. | ee: With only two items use どちら.
+
+@p
+form: A の ほうが adj です
+name: A のほうが: "bên A thì ... hơn" | A のほうが: "A is the more ... one"
+explain: Trả lời câu hỏi so sánh: chọn một bên rồi nói A のほうが + tính từ. ほう nghĩa là "phía, bên". Có thể thêm より để nói rõ so với cái nào. | Answers a comparison question: pick a side and say A のほうが + adjective. ほう means "side". You can add より to say what it is compared to.
+note: Câu trả lời tự nhiên: {犬|いぬ}のほうが{好|す}きです, không cần thêm より. | A natural answer: {犬|いぬ}のほうが{好|す}きです. より can be left out.
+compare: A は B より adj nói thẳng hai vật; A のほうが adj dùng để chọn, thường làm câu trả lời. | A は B より adj states two things directly; A のほうが adj picks one, often as an answer.
+tip: のほう = "bên ... thì". Câu hỏi どちら thì câu trả lời là のほう.
+search: のほうが
+ex: {犬|いぬ}のほうが{好|す}きです。 | Tôi thích chó hơn. | I like dogs better.
+ex: {電車|でんしゃ}のほうが{速|はや}いです。 | Tàu điện nhanh hơn. | The train is faster.
+ex: {魚|さかな}のほうが{肉|にく}より{美味|おい}しいです。 | Cá ngon hơn thịt. | Fish is tastier than meat.
+ex: {私|わたし}はコーヒーのほうが{好|す}きです。 | Tôi thích cà phê hơn. | I prefer coffee.
+q: コーヒー[の]ほうが{好|す}きです。 | Tôi thích cà phê hơn. | I like coffee better. | o: を/に/と | t: コーヒー/の/ほう/が{好|す}きです *2 | e: 2 > を | ev: Chọn bên nào dùng の ほう, không dùng を. | ee: Picking a side uses のほう, not を.
+q: {電車|でんしゃ}のほう[が]{速|はや}いです。 | Tàu điện nhanh hơn. | The train is faster. | o: を/に/で | t: {電車|でんしゃ}/の/ほう/が *4
+q: {犬|いぬ}[のほう]が{好|す}きです。 | Tôi thích chó hơn. | I like dogs better. | o: ほうの/より/のほか | t: {犬|いぬ}/のほう/が/{好|す}きです *2 | e: 2 > より | ev: Chọn "bên này" dùng のほうが; より đặt sau vật bị đem ra so. | ee: Picking a side uses のほうが; より follows the thing compared against.
+q: {魚|さかな}のほうが{肉|にく}[より]{美味|おい}しいです。 | Cá ngon hơn thịt. | Fish is tastier than meat. | o: から/まで/と | t: {魚|さかな}の/ほうが/{肉|にく}/より *4 | e: 4 > から | ev: "Hơn" dùng より. | ee: "Than" is より.
+q: {私|わたし}は{夏|なつ}のほうが{好|す}きです。 | Tôi thích mùa hè hơn. | I like summer better. | t: {私|わたし}は/{夏|なつ}の/ほうが/{好|す}きです *3 | e: 3 > ほうを | ev: のほう đi với が. | ee: のほう takes が.
+q: バスより{電車|でんしゃ}のほうが[{速|はや}い]です。 | Tàu điện nhanh hơn xe buýt. | The train is faster than the bus. | o: {遅|おそ}い/{安|やす}い/{高|たか}い
+q: {朝|あさ}より{夜|よる}のほうが{好|す}きです。 | Tôi thích buổi tối hơn buổi sáng. | I like night better than morning. | t: {朝|あさ}/より/{夜|よる}の/ほうが *3 | e: 2 > から | ev: "Hơn" dùng より. | ee: "Than" is より.
+q: この{店|みせ}のほうが{安|やす}いです。 | Cửa hàng này rẻ hơn. | This shop is cheaper. | t: この/{店|みせ}の/ほうが/{安|やす}いです *3
+q: {紅茶|こうちゃ}のほうが[{好|す}き]です。 | Tôi thích hồng trà hơn. | I like black tea better. | o: {好|す}きな/{好|す}く/{好|す}しい
+
+@p
+form: N の 中で N が いちばん adj
+name: 〜の中で〜が いちばん: "nhất trong ..." | 〜の中で〜が いちばん: "the most ... of ..."
+explain: Chọn nhất trong một nhóm từ ba thứ trở lên: nhóm + の{中|なか}で, người hay vật + が, rồi {一番|いちばん} + tính từ. {一番|いちばん} nghĩa là "nhất". | Picks the top one from a group of three or more: group + の{中|なか}で, thing + が, then {一番|いちばん} + adjective. {一番|いちばん} means "the most".
+note: Hỏi: {何|なに}／{誰|だれ}／いつ が{一番|いちばん}〜ですか. Phạm vi lớn như {日本|にほん}, {クラス} dùng で: {日本|にほん}で{一番|いちばん}{高|たか}い. | Ask with {何|なに}／{誰|だれ}／いつ が{一番|いちばん}〜ですか. A wide range like {日本|にほん} just takes で: {日本|にほん}で{一番|いちばん}{高|たか}い.
+compare: より so sánh hai thứ; {一番|いちばん} chọn nhất trong cả nhóm. | より compares two things; {一番|いちばん} picks the top of a whole group.
+tip: {一番|いちばん} = "số một". {果物|くだもの}の{中|なか}で… = "Trong các loại trái cây, ... là số một".
+search: (中|で).{0,8}一番
+ex: {果物|くだもの}の{中|なか}で{何|なに}が{一番|いちばん}{好|す}きですか。 | Trong các loại trái cây, bạn thích gì nhất? | Which fruit do you like the most?
+ex: {家族|かぞく}の{中|なか}で{私|わたし}が{一番|いちばん}{若|わか}いです。 | Trong gia đình, tôi trẻ nhất. | In my family, I am the youngest.
+ex: {一年|いちねん}の{中|なか}で{春|はる}が{一番|いちばん}{好|す}きです。 | Trong một năm, tôi thích mùa xuân nhất. | Of the whole year, I like spring the most.
+ex: {日本|にほん}で{富士山|ふじさん}が{一番|いちばん}{高|たか}いです。 | Ở Nhật, núi Phú Sĩ cao nhất. | In Japan, Mt. Fuji is the highest.
+q: {果物|くだもの}の{中|なか}[で]{何|なに}が{一番|いちばん}{好|す}きですか。 | Trong các loại trái cây, bạn thích gì nhất? | Which fruit do you like the most? | o: に/が/を | t: {果物|くだもの}の/{中|なか}で/{何|なに}が/{一番|いちばん} *2 | e: 2 > {中|なか}に | ev: Phạm vi của so sánh nhất dùng で. | ee: The range of a superlative takes で.
+q: {家族|かぞく}の{中|なか}で{私|わたし}が[{一番|いちばん}]{若|わか}いです。 | Trong gia đình, tôi trẻ nhất. | In my family, I am the youngest. | o: もっと/とても/ずっと | t: {家族|かぞく}の/{中|なか}で/{私|わたし}が/{一番|いちばん} *4 | e: 4 > もっと | ev: "Nhất" là {一番|いちばん}; もっと nghĩa là "hơn nữa". | ee: "Most" is {一番|いちばん}; もっと means "even more".
+q: クラスの{中|なか}で[{誰|だれ}]がゲームが{一番|いちばん}{上手|じょうず}ですか。 | Trong lớp, ai chơi game giỏi nhất? | Who in the class is the best at games? | o: {何|なに}/どこ/いつ
+q: {一年|いちねん}の{中|なか}で{春|はる}が[{一番|いちばん}]{好|す}きです。 | Trong một năm, tôi thích mùa xuân nhất. | Of the whole year, I like spring the most. | o: もっと/とても/ずっと
+q: {日本|にほん}[で]{富士山|ふじさん}が{一番|いちばん}{高|たか}いです。 | Ở Nhật, núi Phú Sĩ cao nhất. | In Japan, Mt. Fuji is the highest. | o: に/を/と | t: {日本|にほん}で/{富士山|ふじさん}が/{一番|いちばん}/{高|たか}いです *3 | e: 1 > {日本|にほん}より | ev: {一番|いちばん} dùng với で／の{中|なか}で, không dùng より. | ee: {一番|いちばん} goes with で／の{中|なか}で, not より.
+q: {飲|の}み{物|もの}の[{中|なか}]で{水|みず}が{一番|いちばん}{好|す}きです。 | Trong các loại đồ uống, tôi thích nước nhất. | Of all drinks, I like water the most. | o: {上|うえ}/{前|まえ}/{外|そと}
+q: {会社|かいしゃ}の{中|なか}で{田中|たなか}さんが{一番|いちばん}{忙|いそが}しいです。 | Trong công ty, ông Tanaka bận nhất. | In the company, Mr. Tanaka is the busiest. | t: {会社|かいしゃ}の/{中|なか}で/{田中|たなか}さんが/{一番|いちばん} *4 | e: 2 > {中|なか}に | ev: Phạm vi của so sánh nhất dùng で. | ee: The range of a superlative takes で.
+q: {動物|どうぶつ}の{中|なか}で{何|なに}が{一番|いちばん}{好|す}きですか。 | Trong các loài động vật, bạn thích con gì nhất? | Which animal do you like the most? | t: {動物|どうぶつ}の/{中|なか}で/{何|なに}が/{一番|いちばん} *3
+q: {一週間|いっしゅうかん}の{中|なか}で[{何曜日|なんようび}]が{一番|いちばん}{好|す}きですか。 | Trong một tuần, bạn thích thứ mấy nhất? | Which day of the week do you like the most? | o: {誰|だれ}/どこ/いくら
+
+@p
+form: どれ / どちら
+name: どれ・どちら: "cái nào" | どれ・どちら: "which one"
+explain: どれ hỏi chọn một trong ba thứ trở lên; どちら hỏi chọn một trong hai. Trước danh từ dùng どの + N hoặc どちらの + N. どちら còn là cách nói lịch sự của どこ ("ở đâu, phía nào"). | どれ asks "which one" among three or more; どちら among two. Before a noun use どの + N or どちらの + N. どちら is also the polite form of どこ ("where, which direction").
+note: どれ đứng một mình; どの luôn cần danh từ phía sau. Lịch sự: お{国|くに}はどちらですか (Bạn ở nước nào ạ?). | どれ stands alone; どの always needs a noun after it. Polite: お{国|くに}はどちらですか ("Which country are you from?").
+tip: Nhớ bộ こ・そ・あ・ど: これ → どれ, この → どの, こちら → どちら.
+search: (どれ|どちら|どの)
+ex: ここに{傘|かさ}が{五本|ごほん}あります。ユキさんの{傘|かさ}はどれですか。 | Ở đây có năm cái ô. Ô của Yuki là cái nào? | There are five umbrellas here. Which one is Yuki's?
+ex: この{三|みっ}つの{中|なか}で、どれが{一番|いちばん}{安|やす}いですか。 | Trong ba cái này, cái nào rẻ nhất? | Of these three, which is the cheapest?
+ex: {赤|あか}いのと{青|あお}いのと、どちらがいいですか。 | Cái đỏ và cái xanh, cái nào tốt hơn? | The red one or the blue one, which is better?
+ex: {駅|えき}はどちらですか。 | Nhà ga ở phía nào ạ? | Which way is the station?
+q: ここに{傘|かさ}が{五本|ごほん}あります。ユキさんの{傘|かさ}は[どれ]ですか。 | Ở đây có năm cái ô. Ô của Yuki là cái nào? | There are five umbrellas here. Which one is Yuki's? | o: どの/どこ/どちら
+q: この{三|みっ}つの{中|なか}で、[どれ]が{一番|いちばん}{安|やす}いですか。 | Trong ba cái này, cái nào rẻ nhất? | Of these three, which is the cheapest? | o: どちら/どこ/どの | t: この{三|みっ}つの{中|なか}で、/どれが/{一番|いちばん}/{安|やす}いですか *2 | e: 2 > どちらが | ev: Từ ba thứ trở lên dùng どれ, không dùng どちら. | ee: Three or more items use どれ, not どちら.
+q: {赤|あか}いのと{青|あお}いのと、[どちら]がいいですか。 | Cái đỏ và cái xanh, cái nào tốt hơn? | The red one or the blue one, which is better? | o: どれ/どこ/{誰|だれ}
+q: [どの]かばんがユキさんのですか。 | Cái cặp nào là của Yuki? | Which bag is Yuki's? | o: どれ/どこ/どう | t: どの/かばんが/ユキさんの/ですか *1 | e: 1 > どれ | ev: どれ đứng một mình, trước danh từ phải dùng どの. | ee: どれ stands alone; before a noun use どの.
+q: {駅|えき}は[どちら]ですか。 | Nhà ga ở phía nào ạ? | Which way is the station? | o: どれ/どの/{誰|だれ}
+q: お{国|くに}は[どちら]ですか。 | Bạn ở nước nào ạ? | Which country are you from? | o: どれ/どの/{誰|だれ}
+q: {五|いつ}つの{中|なか}で、どれが{好|す}きですか。 | Trong năm cái, bạn thích cái nào? | Of these five, which do you like? | t: {五|いつ}つの/{中|なか}で、/どれが/{好|す}きですか *3 | e: 3 > どちらが | ev: Từ ba thứ trở lên dùng どれ. | ee: Three or more items use どれ.
+q: {二|ふた}つの{中|なか}で、どちらが{高|たか}いですか。 | Trong hai cái, cái nào đắt hơn? | Of the two, which is more expensive? | t: {二|ふた}つの/{中|なか}で、/どちらが/{高|たか}いですか *3 | e: 3 > どれが | ev: Hai thứ thì dùng どちら. | ee: Two items call for どちら.
+q: どの{本|ほん}が{先生|せんせい}のですか。 | Quyển sách nào là của thầy giáo? | Which book is the teacher's? | t: どの/{本|ほん}が/{先生|せんせい}の/ですか *1 | e: 1 > どれ | ev: どれ đứng một mình, trước danh từ phải dùng どの. | ee: どれ stands alone; before a noun use どの.

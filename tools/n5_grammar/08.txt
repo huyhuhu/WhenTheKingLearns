@@ -1,0 +1,130 @@
+# Bài 8: 道場 Võ đường. Mẫu: N が すき/きらい · じょうず/へた · わかります · 〜が (nhưng) · 〜から (lý do) · どうして
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: N が すき / きらい です
+name: N が すき・きらい: "thích, ghét N" | N が すき・きらい: "like, dislike N"
+explain: Nói mình thích hay ghét cái gì. Cái được thích hay ghét đi với が, rồi {好|す}きです／{嫌|きら}いです. Rất thích là {大好|だいす}き. | Says what you like or dislike. The thing liked or disliked takes が, then {好|す}きです／{嫌|きら}いです. "Love" is {大好|だいす}き.
+note: {好|す}き và {嫌|きら}い là tính từ な, nên phủ định là {好|す}きじゃありません, không phải {好|す}くないです. Hỏi sở thích: {何|なに}が{好|す}きですか. | {好|す}き and {嫌|きら}い are な-adjectives, so the negative is {好|す}きじゃありません, not {好|す}くないです. Ask "what do you like?" with {何|なに}が{好|す}きですか.
+compare: Tiếng Việt nói "thích mèo" (không có trợ từ), tiếng Nhật phải là {猫|ねこ}が{好|す}き, không dùng を. | Vietnamese says "thích mèo" with no particle; Japanese needs {猫|ねこ}が{好|す}き, never を.
+tip: "Thích" trong tiếng Nhật là trạng thái, không phải hành động, nên đi với が chứ không phải を.
+search: が(好き|嫌い|大好き|大嫌い)
+ex: {私|わたし}は{猫|ねこ}が{好|す}きです。 | Tôi thích mèo. | I like cats.
+ex: ケンタさんはゲームが{大好|だいす}きです。 | Kenta rất thích trò chơi điện tử. | Kenta loves video games.
+ex: {田中|たなか}さんは{魚|さかな}が{嫌|きら}いです。 | Ông Tanaka ghét cá. | Mr. Tanaka dislikes fish.
+ex: {佐藤|さとう}さんは{犬|いぬ}が{好|す}きじゃありません。 | Bà Sato không thích chó. | Ms. Sato does not like dogs.
+q: {私|わたし}は{猫|ねこ}[が]{好|す}きです。 | Tôi thích mèo. | I like cats. | o: を/に/で | t: {私|わたし}は/{猫|ねこ}/が/{好|す}きです *3 | e: 3 > を | ev: Đối tượng của {好|す}き đi với が, không dùng を. | ee: The object of {好|す}き takes が, not を.
+q: ケンタさんはゲーム[が]{大好|だいす}きです。 | Kenta rất thích trò chơi điện tử. | Kenta loves video games. | o: を/で/に | t: ケンタさんは/ゲーム/が/{大好|だいす}きです *3 | e: 3 > を | ev: Dùng が trước {大好|だいす}き. | ee: Use が before {大好|だいす}き.
+q: {田中|たなか}さんは{魚|さかな}が[{嫌|きら}い]です。 | Ông Tanaka ghét cá. | Mr. Tanaka dislikes fish. | o: {好|す}き/{下手|へた}/{上手|じょうず} | t: {田中|たなか}さんは/{魚|さかな}が/{嫌|きら}い/です *3 | e: 4 > ます | ev: {嫌|きら}い là tính từ nên dùng です, không dùng ます. | ee: {嫌|きら}い is an adjective, so use です, not ます.
+q: {佐藤|さとう}さんは{犬|いぬ}が{好|す}き[じゃありません]。 | Bà Sato không thích chó. | Ms. Sato does not like dogs. | o: ありません/じゃです/ではません | t: {佐藤|さとう}さんは/{犬|いぬ}が/{好|す}き/じゃありません *4 | e: 4 > くないです | ev: {好|す}き là tính từ な, phủ định là じゃありません, không phải くない. | ee: {好|す}き is a な-adjective; its negative is じゃありません, not くない.
+q: ユキさんは[{何|なに}]が{好|す}きですか。 | Yuki thích gì? | What does Yuki like? | o: {誰|だれ}/どこ/いつ | t: ユキさんは/{何|なに}が/{好|す}き/ですか *2
+q: {私|わたし}は{甘|あま}い{物|もの}が[{大好|だいす}き]です。 | Tôi rất thích đồ ngọt. | I love sweet things. | o: {大嫌|だいきら}い/{上手|じょうず}/{下手|へた}
+q: タマは{牛乳|ぎゅうにゅう}が{好|す}きです。 | Tama thích sữa. | Tama likes milk. | t: タマは/{牛乳|ぎゅうにゅう}が/{好|す}き/です *2 | e: 2 > {牛乳|ぎゅうにゅう}を | ev: Đối tượng thích dùng が. | ee: The thing liked takes が.
+q: {私|わたし}は{野菜|やさい}[が]{嫌|きら}いです。 | Tôi ghét rau. | I dislike vegetables. | o: を/に/で
+q: ユキさんは{音楽|おんがく}が{好|す}きです[か]。 | Yuki có thích âm nhạc không? | Does Yuki like music? | o: の/よ/も
+
+@p
+form: N が じょうず / へた です
+name: N が じょうず・へた: "giỏi, kém N" | N が じょうず・へた: "good at, bad at N"
+explain: Nói giỏi hay kém một việc. Kỹ năng đi với が, rồi {上手|じょうず}です／{下手|へた}です. Giống {好|す}き, đây là tính từ な. | Says how good or bad someone is at something. The skill takes が, then {上手|じょうず}です／{下手|へた}です. Like {好|す}き, these are な-adjectives.
+note: Khi nói về chính mình, đừng nói 私は{上手|じょうず}です (nghe khoe khoang); khiêm tốn là {少|すこ}し{上手|じょうず}です hoặc {下手|へた}です. | Do not say 私は{上手|じょうず}です about yourself (it sounds boastful); be modest with a small {少|すこ}し or {下手|へた}です.
+tip: {上手|じょうず} = "thượng thủ" (tay cao), {下手|へた} = "hạ thủ" (tay thấp). Kanji nói giúp bạn rồi.
+search: が(上手|下手)
+ex: ケンタさんはゲームが{上手|じょうず}です。 | Kenta chơi game giỏi. | Kenta is good at video games.
+ex: {私|わたし}は{歌|うた}が{下手|へた}です。 | Tôi hát dở. | I am bad at singing.
+ex: {田中|たなか}さんは{英語|えいご}が{上手|じょうず}です。 | Ông Tanaka giỏi tiếng Anh. | Mr. Tanaka is good at English.
+ex: ユキさんは{料理|りょうり}が{上手|じょうず}です。 | Yuki nấu ăn giỏi. | Yuki is good at cooking.
+q: ケンタさんはゲームが[{上手|じょうず}]です。 | Kenta chơi game giỏi. | Kenta is good at video games. | o: {下手|へた}/{好|す}き/{嫌|きら}い | t: ケンタさんは/ゲームが/{上手|じょうず}/です *3 | e: 2 > ゲームを | ev: Kỹ năng đi với が, không dùng を. | ee: The skill takes が, not を.
+q: {私|わたし}は{歌|うた}が[{下手|へた}]です。 | Tôi hát dở. | I am bad at singing. | o: {上手|じょうず}/{好|す}き/{嫌|きら}い | t: {私|わたし}は/{歌|うた}が/{下手|へた}/です *3
+q: {田中|たなか}さんは{英語|えいご}[が]{上手|じょうず}です。 | Ông Tanaka giỏi tiếng Anh. | Mr. Tanaka is good at English. | o: を/に/で | t: {田中|たなか}さんは/{英語|えいご}/が/{上手|じょうず}です *3 | e: 3 > を | ev: Dùng が trước {上手|じょうず}／{下手|へた}. | ee: Use が before {上手|じょうず}／{下手|へた}.
+q: ユキさんは{料理|りょうり}が{上手|じょうず}です。 | Yuki nấu ăn giỏi. | Yuki is good at cooking. | t: ユキさんは/{料理|りょうり}が/{上手|じょうず}/です *2 | e: 4 > ます | ev: {上手|じょうず}là tính từ nên dùng です, không dùng ます. | ee: {上手|じょうず} is an adjective, so use です, not ます.
+q: {佐藤|さとう}さんは{字|じ}が{上手|じょうず}[じゃありません]。 | Bà Sato viết chữ không giỏi. | Ms. Sato is not good at writing characters. | o: ありません/じゃです/ではます
+q: ケンタさんは{絵|え}が[{下手|へた}]です。 | Kenta vẽ dở. | Kenta is bad at drawing. | o: {上手|じょうず}/{好|す}き/{大好|だいす}き
+q: {私|わたし}はスポーツが[{下手|へた}]です。 | Tôi chơi thể thao kém. | I am bad at sports. | o: {上手|じょうず}/{好|す}き/{嫌|きら}い
+q: ユキさんは{歌|うた}が{上手|じょうず}ですね。 | Yuki hát giỏi nhỉ. | Yuki is good at singing, isn't she. | t: ユキさんは/{歌|うた}が/{上手|じょうず}/ですね *3
+q: {田中|たなか}さんは{料理|りょうり}が{下手|へた}[です]。 | Ông Tanaka nấu ăn dở. | Mr. Tanaka is bad at cooking. | o: ます/ありません/いません
+
+@p
+form: N が わかります
+name: N が わかります: "hiểu N" | N が わかります: "understand N"
+explain: {分|わ}かります là "hiểu, biết". Thứ được hiểu đi với が, không dùng を. Phủ định là {分|わ}かりません. | {分|わ}かります means "understand, get it". The thing understood takes が, not を. The negative is {分|わ}かりません.
+note: Có thể thêm {少|すこ}し (một chút), よく (rõ) trước {分|わ}かります. {よく}{分|わ}かりません là "không hiểu rõ". Trả lời ngắn: はい、{分|わ}かります／いいえ、{分|わ}かりません. | Add {少|すこ}し (a little) or よく (well) before {分|わ}かります. よく{分|わ}かりません means "don't understand well". Short answers: はい、{分|わ}かります／いいえ、{分|わ}かりません.
+tip: Nghĩ "hiểu" là trạng thái trong đầu bạn, giống {好|す}き nên dùng が.
+search: が.{0,6}(分|わ)かり
+ex: {私|わたし}は{英語|えいご}が{分|わ}かります。 | Tôi hiểu tiếng Anh. | I understand English.
+ex: ケンタさんは{漢字|かんじ}が{分|わ}かりません。 | Kenta không hiểu chữ Hán. | Kenta does not understand kanji.
+ex: {先生|せんせい}の{話|はなし}が{分|わ}かりますか。 | Bạn có hiểu lời thầy nói không? | Do you understand what the teacher says?
+ex: {意味|いみ}が{分|わ}かりません。 | Tôi không hiểu nghĩa. | I don't understand the meaning.
+q: {私|わたし}は{英語|えいご}[が]{分|わ}かります。 | Tôi hiểu tiếng Anh. | I understand English. | o: を/に/で | t: {私|わたし}は/{英語|えいご}/が/{分|わ}かります *3 | e: 3 > を | ev: Thứ được hiểu đi với が, không dùng を. | ee: The thing understood takes が, not を.
+q: ケンタさんは{漢字|かんじ}が{分|わ}かり[ません]。 | Kenta không hiểu chữ Hán. | Kenta does not understand kanji. | o: ます/ないです/ありません | t: ケンタさんは/{漢字|かんじ}が/{分|わ}かり/ません *3 | e: 4 > じゃありません | ev: Động từ phủ định dùng ません, không dùng じゃありません. | ee: Verbs are negated with ません, not じゃありません.
+q: {先生|せんせい}の{話|はなし}[が]{分|わ}かりますか。 | Bạn có hiểu lời thầy nói không? | Do you understand what the teacher says? | o: を/に/で | t: {先生|せんせい}の/{話|はなし}が/{分|わ}かります/か *2 | e: 2 > {話|はなし}を | ev: Dùng が với {分|わ}かります. | ee: Use が with {分|わ}かります.
+q: {意味|いみ}が[{分|わ}かりません]。 | Tôi không hiểu nghĩa. | I don't understand the meaning. | o: {分|わ}かります/{分|わ}かりました/{分|わ}かるません | t: {意味|いみ}/が/{分|わ}かり/ません *3
+q: {田中|たなか}さんの{名前|なまえ}が{分|わ}かりますか。 | Bạn có biết tên ông Tanaka không? | Do you know Mr. Tanaka's name? | t: {田中|たなか}さんの/{名前|なまえ}が/{分|わ}かります/か *3
+q: {佐藤|さとう}さんは{英語|えいご}が{少|すこ}し[{分|わ}かります]。 | Bà Sato hiểu tiếng Anh một chút. | Ms. Sato understands a little English. | o: {分|わ}かりません/{分|わ}かりました/{分|わ}かるます
+q: {漢字|かんじ}の{意味|いみ}が[よく]{分|わ}かりません。 | Tôi không hiểu rõ nghĩa chữ Hán. | I don't understand the meaning of kanji well. | o: とても/たくさん/ずっと
+q: この{問題|もんだい}が{分|わ}かりますか。 | Bạn có hiểu bài tập này không? | Do you understand this problem? | t: この/{問題|もんだい}が/{分|わ}かります/か *3 | e: 2 > {問題|もんだい}を | ev: Dùng が với {分|わ}かります. | ee: Use が with {分|わ}かります.
+q: ユキさんは{日本語|にほんご}が{分|わ}かりますか。はい、[{分|わ}かります]。 | Yuki có hiểu tiếng Nhật không? Có, hiểu. | Does Yuki understand Japanese? Yes, she does. | o: {分|わ}かりません/{分|わ}かりました/{分|わ}かるます
+
+@p
+form: 〜です が、〜
+name: 〜が: "nhưng" | 〜が: "but"
+explain: Sau câu lịch sự, が (có dấu phẩy) nối hai vế trái nghĩa: "A nhưng B". | After a polite clause, が (with a comma) joins two contrasting clauses: "A, but B".
+note: Đây là が "nhưng", đứng giữa hai câu, khác が chủ ngữ đứng sau danh từ. Nói lý do thì dùng から, không dùng が. | This が means "but" and sits between two clauses, unlike the subject が after a noun. For a reason use から, not が.
+compare: 〜が = nhưng (đối lập). 〜から = nên, vì (nguyên nhân). | 〜が = but (contrast). 〜から = so, because (reason).
+tip: Như "mặc dù, nhưng": {安|やす}いですが、{美味|おい}しくないです → "rẻ nhưng không ngon".
+search: (です|ます|でした|ました)が、
+ex: {日本語|にほんご}は{難|むずか}しいですが、{面白|おもしろ}いです。 | Tiếng Nhật khó nhưng thú vị. | Japanese is difficult, but interesting.
+ex: この{店|みせ}は{安|やす}いですが、{美味|おい}しくないです。 | Cửa hàng này rẻ nhưng không ngon. | This shop is cheap, but the food is not tasty.
+ex: {私|わたし}は{猫|ねこ}が{好|す}きですが、{犬|いぬ}は{嫌|きら}いです。 | Tôi thích mèo nhưng ghét chó. | I like cats, but I dislike dogs.
+ex: ケンタさんはゲームが{上手|じょうず}ですが、{料理|りょうり}は{下手|へた}です。 | Kenta chơi game giỏi nhưng nấu ăn dở. | Kenta is good at games, but bad at cooking.
+q: {日本語|にほんご}は{難|むずか}しいです[が]、{面白|おもしろ}いです。 | Tiếng Nhật khó nhưng thú vị. | Japanese is difficult, but interesting. | o: から/と/も | t: {日本語|にほんご}は/{難|むずか}しいです/が、/{面白|おもしろ}いです *3 | e: 3 > から、 | ev: から là "nên" (lý do); "nhưng" dùng が. | ee: から means "so" (reason); "but" is が.
+q: この{店|みせ}は{安|やす}いです[が]、{美味|おい}しくないです。 | Cửa hàng này rẻ nhưng không ngon. | This shop is cheap, but the food is not tasty. | o: から/と/も | t: この{店|みせ}は/{安|やす}いです/が、/{美味|おい}しくないです *3
+q: {私|わたし}は{猫|ねこ}が{好|す}きです[が]、{犬|いぬ}は{嫌|きら}いです。 | Tôi thích mèo nhưng ghét chó. | I like cats, but I dislike dogs. | o: から/と/も | t: {好|す}きです/が、/{犬|いぬ}は/{嫌|きら}いです *2
+q: ケンタさんはゲームが{上手|じょうず}ですが、{料理|りょうり}は{下手|へた}です。 | Kenta chơi game giỏi nhưng nấu ăn dở. | Kenta is good at games, but bad at cooking. | t: ケンタさんは/ゲームが/{上手|じょうず}ですが、/{料理|りょうり}は *3
+q: この{部屋|へや}は{狭|せま}いです[が]、{綺麗|きれい}です。 | Căn phòng này chật nhưng sạch đẹp. | This room is small, but pretty. | o: から/と/も | t: この{部屋|へや}は/{狭|せま}いです/が、/{綺麗|きれい}です *3 | e: 3 > から、 | ev: Hai vế trái nghĩa nối bằng が, không phải から. | ee: Contrasting clauses are joined with が, not から.
+q: {昨日|きのう}は{忙|いそが}しかったです[が]、{今日|きょう}は{暇|ひま}です。 | Hôm qua bận nhưng hôm nay rảnh. | I was busy yesterday, but I'm free today. | o: から/と/も
+q: {佐藤|さとう}さんは{七十歳|ななじゅっさい}ですが、{元気|げんき}です。 | Bà Sato 70 tuổi nhưng vẫn khỏe. | Ms. Sato is 70, but she is healthy. | t: {佐藤|さとう}さんは/{七十歳|ななじゅっさい}ですが、/{元気|げんき}/です *2 | e: 2 > {七十歳|ななじゅっさい}ですから、 | ev: Vế sau trái nghĩa với vế trước nên phải dùng が. | ee: The second clause contrasts with the first, so you need が.
+q: このカレーは{辛|から}いですが、{美味|おい}しいです。 | Món cà ri này cay nhưng ngon. | This curry is spicy, but delicious. | t: この/カレーは/{辛|から}いですが、/{美味|おい}しいです *3
+q: {私|わたし}は{英語|えいご}は{分|わ}かります[が]、{漢字|かんじ}は{分|わ}かりません。 | Tôi hiểu tiếng Anh nhưng không hiểu chữ Hán. | I understand English, but not kanji. | o: から/と/も
+
+@p
+form: 〜です から、〜
+name: 〜から: "vì, nên" | 〜から: "because, so"
+explain: Đặt から sau vế nêu lý do, rồi nói kết quả: "Vì A nên B". Trước から dùng dạng lịch sự (〜です／〜ます). | Put から after the clause giving the reason, then state the result: "Because A, B". Use the polite form (〜です／〜ます) before から.
+note: Lý do đi trước から, kết quả đi sau, cùng thứ tự với "vì ... nên ...". から này khác から "từ" trong 〜から〜まで. | The reason comes before から and the result after, like "vì ... nên ...". This から differs from the "from" in 〜から〜まで.
+compare: 〜から (nguyên nhân) và 〜が (đối lập): {安|やす}いですから{買|か}います = rẻ nên mua; {安|やす}いですが{買|か}いません = rẻ nhưng không mua. | 〜から (cause) vs 〜が (contrast): {安|やす}いですから{買|か}います = cheap, so I buy; {安|やす}いですが{買|か}いません = cheap, but I don't buy.
+tip: から nhớ là "nên": đặt sau lý do rồi dừng, như "Tôi bận nên không đi".
+search: (です|ます)から、
+ex: {頭|あたま}が{痛|いた}いですから、{寝|ね}ます。 | Vì đau đầu nên tôi đi ngủ. | I have a headache, so I'm going to bed.
+ex: {忙|いそが}しいですから、{行|い}きません。 | Vì bận nên tôi không đi. | I'm busy, so I won't go.
+ex: {元気|げんき}じゃありませんから、{病院|びょういん}へ{行|い}きます。 | Vì không khỏe nên tôi đi bệnh viện. | I'm not well, so I'm going to the hospital.
+ex: {今日|きょう}は{寒|さむ}いですから、コートを{着|き}ます。 | Hôm nay lạnh nên tôi mặc áo khoác. | It's cold today, so I'll wear a coat.
+q: {頭|あたま}が{痛|いた}いです[から]、{寝|ね}ます。 | Vì đau đầu nên tôi đi ngủ. | I have a headache, so I'm going to bed. | o: が/まで/と | t: {頭|あたま}が/{痛|いた}いです/から、/{寝|ね}ます *3
+q: {安|やす}いです[から]、{買|か}います。 | Vì rẻ nên tôi mua. | It's cheap, so I'll buy it. | o: が/まで/と | t: {安|やす}いです/から、/{買|か}い/ます *2 | e: 2 > が、 | ev: から nối lý do với kết quả; が là "nhưng". | ee: から links a reason and result; が means "but".
+q: {忙|いそが}しいです[から]、{行|い}きません。 | Vì bận nên tôi không đi. | I'm busy, so I won't go. | o: が/まで/と | t: {忙|いそが}しいです/から、/{行|い}き/ません *2
+q: {雨|あめ}ですから、{家|いえ}にいます。 | Vì trời mưa nên tôi ở nhà. | It's raining, so I'll stay home. | t: {雨|あめ}です/から、/{家|いえ}に/います *2 | e: 2 > が、 | ev: Lý do → kết quả dùng から, không dùng が. | ee: Reason → result takes から, not が.
+q: お{金|かね}がありません[から]、{買|か}いません。 | Vì không có tiền nên tôi không mua. | I have no money, so I won't buy it. | o: が/まで/と
+q: {元気|げんき}じゃありません[から]、{病院|びょういん}へ{行|い}きます。 | Vì không khỏe nên tôi đi bệnh viện. | I'm not well, so I'm going to the hospital. | o: が/まで/と | t: {元気|げんき}じゃ/ありません/から、/{病院|びょういん}へ *3 | e: 3 > まで、 | ev: まで là "đến", không phải lý do. | ee: まで means "until", not a reason.
+q: {明日|あした}は{休|やす}みですから、{友達|ともだち}に{会|あ}います。 | Vì ngày mai nghỉ nên tôi gặp bạn. | Tomorrow is a day off, so I'll meet a friend. | t: {明日|あした}は/{休|やす}みです/から、/{友達|ともだち}に *3 | e: 3 > が、 | ev: Lý do → kết quả dùng から. | ee: Reason → result takes から.
+q: {今日|きょう}は{寒|さむ}いです[から]、コートを{着|き}ます。 | Hôm nay lạnh nên tôi mặc áo khoác. | It's cold today, so I'll wear a coat. | o: が/まで/と
+q: {風邪|かぜ}です[から]、{学校|がっこう}を{休|やす}みます。 | Vì bị cảm nên tôi nghỉ học. | I have a cold, so I'll skip school. | o: が/まで/と
+
+@p
+form: どうして 〜 か
+name: どうして: "tại sao" | どうして: "why"
+explain: Hỏi lý do: どうして + câu + か. Trả lời bằng 〜から hoặc 〜からです. | Asks for a reason: どうして + sentence + か. Answer with 〜から or 〜からです.
+note: Thường đứng đầu câu. なぜ có nghĩa tương tự (trang trọng hơn). Đừng nhầm với どう (thế nào). | It usually comes at the start of the sentence. なぜ means the same and is more formal. Do not confuse it with どう ("how").
+tip: どうして ≈ "sao lại": どうして{来|き}ませんでしたか → "Sao bạn không đến?"
+search: どうして
+ex: どうして{学校|がっこう}へ{行|い}きませんか。{病気|びょうき}ですから。 | Sao bạn không đi học? Vì bị ốm. | Why aren't you going to school? Because I'm sick.
+ex: どうして{来|き}ませんでしたか。{忙|いそが}しかったですから。 | Sao bạn đã không đến? Vì bận. | Why didn't you come? Because I was busy.
+ex: どうして{窓|まど}を{開|あ}けますか。{暑|あつ}いですから。 | Sao bạn mở cửa sổ? Vì nóng. | Why are you opening the window? Because it's hot.
+q: [どうして]{学校|がっこう}へ{行|い}きませんか。 | Tại sao bạn không đi học? | Why aren't you going to school? | o: どこ/いつ/だれ | t: どうして/{学校|がっこう}へ/{行|い}き/ませんか *1 | e: 1 > どこ | ev: Hỏi lý do dùng どうして; どこ hỏi nơi chốn. | ee: Ask for a reason with どうして; どこ asks about places.
+q: どうして{寝|ね}ませんか。{宿題|しゅくだい}があります[から]。 | Sao bạn không ngủ? Vì tôi có bài tập. | Why aren't you going to sleep? Because I have homework. | o: が/まで/と
+q: [どうして]ケンタさんは{来|き}ませんでしたか。 | Tại sao Kenta đã không đến? | Why didn't Kenta come? | o: どこ/いつ/だれ | t: どうして/ケンタさんは/{来|き}ませんでした/か *1
+q: どうして{買|か}いませんか。{高|たか}いですから。 | Sao bạn không mua? Vì đắt. | Why don't you buy it? Because it's expensive. | t: どうして/{買|か}い/ません/か *1 | e: 1 > どこ | ev: Hỏi lý do dùng どうして. | ee: Ask a reason with どうして.
+q: ケンタさんは[どうして]ゲームが{好|す}きですか。 | Tại sao Kenta thích trò chơi điện tử? | Why does Kenta like video games? | o: どこ/いつ/だれ | t: ケンタさんは/どうして/ゲームが/{好|す}きですか *2
+q: どうして{窓|まど}を{開|あ}けますか。{暑|あつ}いです[から]。 | Sao bạn mở cửa sổ? Vì nóng. | Why are you opening the window? Because it's hot. | o: が/まで/と
+q: どうして{自転車|じてんしゃ}で{行|い}きますか。{近|ちか}いですから。 | Sao bạn đi bằng xe đạp? Vì gần. | Why do you go by bicycle? Because it's close. | t: どうして/{自転車|じてんしゃ}で/{行|い}き/ますか *1 | e: 1 > どこ | ev: Hỏi lý do dùng どうして. | ee: Ask a reason with どうして.
+q: ユキさんは[どうして]{会社|かいしゃ}を{休|やす}みましたか。 | Tại sao Yuki nghỉ làm? | Why did Yuki take a day off from work? | o: どこ/いつ/だれ | t: ユキさんは/どうして/{会社|かいしゃ}を/{休|やす}みましたか *2
+q: どうして{肉|にく}を{食|た}べませんか。{嫌|きら}いです[から]。 | Sao bạn không ăn thịt? Vì tôi ghét. | Why don't you eat meat? Because I dislike it. | o: が/まで/と

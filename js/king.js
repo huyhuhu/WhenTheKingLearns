@@ -15,6 +15,14 @@
   var MAP_RANK = 3, BOSS_HP = 50;
   var BOSSES = [['迷霧', 'Mê Vụ', 'Mistbound'], ['黒風', 'Hắc Phong', 'Black Wind'], ['無明', 'Vô Minh', 'Unknowing'],
     ['幻影', 'Huyễn Ảnh', 'Phantom'], ['忘川', 'Vong Xuyên', 'River of Forgetting'], ['長夜', 'Trường Dạ', 'Long Night']];
+  var CIVIC = [[0, 'Sơ khai', 'First Settlement', '初開'], [2, 'Lập ấp', 'Villages', '立邑'], [5, 'Thị tứ', 'Market Towns', '市肆'],
+    [9, 'Phồn hoa', 'Flourishing', '繁華'], [13, 'Thịnh thế', 'Golden Age', '盛世'], [16, 'Văn trị thiên hạ', 'Realm of Letters', '文治天下']];
+  // [chu Han, ten VI, ten EN, kieu ve, x, y tren ban do, vung]
+  var WONDERS = [['金閣', 'Kim Các', 'Golden Pavilion', 'kinkaku', 823, 1517, 1], ['五重塔', 'Ngũ trùng tháp', 'Five-storey Pagoda', 'pagoda5', 824, 1577, 3],
+    ['姫路城', 'Thành Himeji', 'Himeji Castle', 'himeji', 707, 1545, 6], ['厳島の大鳥居', 'Cổng Itsukushima', 'Great Torii of Itsukushima', 'torii', 440, 1622, 4],
+    ['大仏', 'Đại Phật Nara', 'Great Buddha of Nara', 'daibutsu', 836, 1566, 3], ['清水の舞台', 'Vũ đài Thanh Thuỷ', 'Kiyomizu Stage', 'kiyomizu', 830, 1523, 1],
+    ['鳳凰堂', 'Phượng Hoàng đường', 'Phoenix Hall', 'phoenix', 832, 1538, 1], ['首里城', 'Thành Shuri', 'Shuri Castle', 'shuri', 1769, 2031, 16]];
+  var WONDER_GOAL = 50;
   var REALM = [[0, 'Kinh kỳ', 'Capital Domain', '京畿'], [3, 'Tiểu quốc', 'Small Kingdom', '小国'], [6, 'Vương quốc', 'Kingdom', '王国'],
     [10, 'Đại quốc', 'Great Nation', '大国'], [16, 'Thiên hạ thống nhất', 'All Under Heaven United', '天下統一']];
 
@@ -224,7 +232,7 @@
     { id: 'tim', rank: 8, bg: '#6b3fa0', fg: '#fffdf8', name: ['Tím hoàng bào', 'Royal purple'] },
     { id: 'den', rank: 9, bg: '#1b1b1f', fg: '#e6c35c', ring: true, name: ['Mực đen viền vàng', 'Ink and gold'] }
   ];
-  var CAP = { flip: 100, right: 300, quiz: 100, perfect: 150, listen: 30, vright: 200, game: 50 };
+  var CAP = { flip: 100, right: 300, quiz: 100, perfect: 150, listen: 30, vright: 200, game: 50, gright: 150, ggame: 50 };
 
   function questXp() {
     var k = S(), xp = 0, d, i;
@@ -247,6 +255,9 @@
     var vs = vocabStats(), sn = k.seen;
     xp += 5 * vs.learned + 5 * vs.burned + 50 * vs.held + 100 * vs.annexN + (vs.regions && vs.annexN >= vs.regions ? 500 : 0);
     xp += 20 * size(sn.repel) + 30 * size(sn.restore) + 100 * size(sn.boss);
+    var gs = grammarStats();
+    xp += 10 * gs.learned + 40 * gs.lessons + 10 * gs.landmark + 100 * gs.fin + (gs.fin >= gs.lessonTotal ? 500 : 0);
+    xp += 15 * size(sn.repair) + 100 * size(sn.wonder);
     return xp + achXp() + questXp();
   }
   function rankOf(xp) {
@@ -354,6 +365,20 @@
     return out;
   }
 
+  function grammarStats() {
+    var out = App.grammar ? App.grammar.stats() : { learned: 0, landmark: 0, lessons: 0, placed: 0, fin: 0, total: 0, lessonTotal: 16, due: 0 };
+    var G = window.GRAMMAR_DATA && window.GRAMMAR_DATA.n5, heard = S().seen.gex || {}, rest = S().seen.grestore || {}, gp = (App.progress().grammar || {}).p || {};
+    out.exFull = 0; out.restored = 0;
+    if (G) for (var i = 0; i < G.patterns.length; i++) {
+      var ex = G.patterns[i].ex, all = ex.length > 0;
+      for (var j = 0; j < ex.length; j++) if (!heard[ex[j]]) { all = false; break; }
+      if (all) out.exFull++;
+    }
+    for (var k in rest) if (gp[k] && gp[k][0] >= 5) out.restored = 1;
+    out.keep = !!((App.progress().grammar || {}).fin || {})[16];
+    return out;
+  }
+
   // ---------- ngu canh danh gia ----------
   function context() {
     var k = S(), days = studyDays(), c = sumCounters(), sess = allSessions(), i;
@@ -395,6 +420,7 @@
     ctx.unlockedCount = size(k.unlocked);
     ctx.remainingKanji = allKanji().length - ctx.known;
     ctx.v = vocabStats();
+    ctx.g = grammarStats();
     ctx.mapOpen = rankOf(totalXp()) >= MAP_RANK;
     return ctx;
   }
@@ -405,7 +431,7 @@
     ['闘', 'Đấu trường', 'Arena'], ['札', 'Thư khố', 'Archive'], ['筆', 'Thư pháp', 'Calligraphy'],
     ['音', 'Âm luật', 'Sound'], ['律', 'Kỷ luật', 'Discipline'], ['時', 'Thời khắc', 'Moments'],
     ['交', 'Ngoại giao', 'Diplomacy'], ['宮', 'Cung điện', 'Palace'], ['令', 'Chiếu chỉ', 'Decrees'],
-    ['民', 'Thần dân', 'Subjects'], ['疆', 'Bờ cõi', 'Frontier'], ['秘', 'Bí mật', 'Secrets']
+    ['民', 'Thần dân', 'Subjects'], ['疆', 'Bờ cõi', 'Frontier'], ['築', 'Kiến thiết', 'Building'], ['秘', 'Bí mật', 'Secrets']
   ];
   var ACH = [];
   var ACH_BY_ID = {};
@@ -582,14 +608,14 @@
   def('V20', 12, null, 2, ['Lãng tử hồi đầu', 'The Prodigal Returns'], ['Một thần dân từng bị truy nã lên bậc Trung thần', 'A once-wanted subject becomes a Loyal Minister'],
     function (x) { return x.v.prodigal; }, 1, ['Lạc lối rồi quay về', 'Lost, then found']);
 
-  def('H1', 14, null, 1, ['Ấn tín nhà vua', "The King's Seal"], ['Bấm logo 10 lần trong 5 giây', 'Tap the logo 10 times in 5 seconds'], fl('H1'), 1, ['Con dấu có điều muốn nói', 'The seal has something to say']);
-  def('H2', 14, null, 0, ['Nhà vua do dự', 'The Indecisive King'], ['Đổi sáng/tối 10 lần trong 1 phút', 'Switch light/dark 10 times in a minute'], fl('H2'), 1, ['Ngày hay đêm?', 'Day or night?']);
-  def('H3', 14, null, 0, ['Lòng vua khó đoán', 'Fickle Heart'], ['Bật tắt "Đã thuộc" cùng một chữ 5 lần', 'Toggle "Learned" on the same kanji 5 times'], fl('H3'), 1, ['Thuộc hay chưa thuộc?', 'Learned or not?']);
-  def('H4', 14, null, 0, ['Ngư phủ', 'The Fisherman'], ['Nghe âm うお 10 lần', 'Hear うお 10 times'], cnt('uo'), 10, ['Có tiếng cá dưới sông', 'Something splashes in the river']);
-  def('H5', 14, null, 0, ['Vẹt hoàng gia', 'Royal Parrot'], ['Nghe cùng một âm 20 lần liên tiếp', 'Play the same sound 20 times in a row'], fl('H5'), 1, ['Nói lại đi, nói lại đi', 'Say it again, say it again']);
-  def('H6', 14, null, 2, ['Thất bại là mẹ thành công', 'Fall Seven, Rise Eight'], ['Sai từ 10 câu trong một bài, rồi làm lại buổi đó đạt 100%', 'Miss 10+ in a quiz, then score 100% on that session'], fl('H6'), 1, ['Ngã ở đâu, đứng dậy ở đó', 'Rise where you fell']);
-  def('H7', 14, null, 2, ['Vua không ngủ', 'The Sleepless King'], ['Học cả khung 0:00–3:00 và 4:00–6:00 của cùng một đêm', 'Study at 0:00–3:00 and 4:00–6:00 of the same night'], fl('H7'), 1, ['Mặt trời đã lặn rồi mọc', 'The sun set and rose again']);
-  def('H8', 14, null, 3, ['Vạn thế chi vương', 'King for Ten Thousand Ages'], ['Mở khoá mọi thành tựu khác', 'Unlock every other achievement'],
+  def('H1', 15, null, 1, ['Ấn tín nhà vua', "The King's Seal"], ['Bấm logo 10 lần trong 5 giây', 'Tap the logo 10 times in 5 seconds'], fl('H1'), 1, ['Con dấu có điều muốn nói', 'The seal has something to say']);
+  def('H2', 15, null, 0, ['Nhà vua do dự', 'The Indecisive King'], ['Đổi sáng/tối 10 lần trong 1 phút', 'Switch light/dark 10 times in a minute'], fl('H2'), 1, ['Ngày hay đêm?', 'Day or night?']);
+  def('H3', 15, null, 0, ['Lòng vua khó đoán', 'Fickle Heart'], ['Bật tắt "Đã thuộc" cùng một chữ 5 lần', 'Toggle "Learned" on the same kanji 5 times'], fl('H3'), 1, ['Thuộc hay chưa thuộc?', 'Learned or not?']);
+  def('H4', 15, null, 0, ['Ngư phủ', 'The Fisherman'], ['Nghe âm うお 10 lần', 'Hear うお 10 times'], cnt('uo'), 10, ['Có tiếng cá dưới sông', 'Something splashes in the river']);
+  def('H5', 15, null, 0, ['Vẹt hoàng gia', 'Royal Parrot'], ['Nghe cùng một âm 20 lần liên tiếp', 'Play the same sound 20 times in a row'], fl('H5'), 1, ['Nói lại đi, nói lại đi', 'Say it again, say it again']);
+  def('H6', 15, null, 2, ['Thất bại là mẹ thành công', 'Fall Seven, Rise Eight'], ['Sai từ 10 câu trong một bài, rồi làm lại buổi đó đạt 100%', 'Miss 10+ in a quiz, then score 100% on that session'], fl('H6'), 1, ['Ngã ở đâu, đứng dậy ở đó', 'Rise where you fell']);
+  def('H7', 15, null, 2, ['Vua không ngủ', 'The Sleepless King'], ['Học cả khung 0:00–3:00 và 4:00–6:00 của cùng một đêm', 'Study at 0:00–3:00 and 4:00–6:00 of the same night'], fl('H7'), 1, ['Mặt trời đã lặn rồi mọc', 'The sun set and rose again']);
+  def('H8', 15, null, 3, ['Vạn thế chi vương', 'King for Ten Thousand Ages'], ['Mở khoá mọi thành tựu khác', 'Unlock every other achievement'],
     function (x) { var n = 0; for (var id in x.k.unlocked) if (id !== 'H8' && ACH_BY_ID[id]) n++; return n; }, function () { return ACH.length - 1; }, ['Khi mọi ấn tín đã đóng', 'When every seal is stamped']);
 
   def('B1', 13, null, 0, ['Đặt chân đất mới', 'New Ground'], ['Chiếm đóng một vùng ngoài Kinh Đô', 'Occupy a land beyond Kyōto'],
@@ -611,7 +637,33 @@
   def('B16', 13, null, 1, ['Theo chân Bashō', "In Bashō's Footsteps"], ['Sáp nhập Đông Bắc trong 30 ngày kể từ khi đặt chân tới', 'Annex Tōhoku within 30 days of first setting foot there'],
     function (x) { var a = x.v.annex[13], f = x.v.first[12]; return a && f && a - f <= 30 * 864e5 ? 1 : 0; }, 1, ['Ngàn dặm đường thơ', 'A thousand miles of poetry']);
 
-  var HIDDEN = { V19: 1, V20: 1, B15: 1, B16: 1, T1: 1, T2: 1, T4: 1, T5: 1, H1: 1, H2: 1, H3: 1, H4: 1, H5: 1, H6: 1, H7: 1, H8: 1 };
+  function gTotal() { return grammarStats().total || 78; }
+  tier('N', 1, 14, 'N', [0, 0, 1, 2, 2], [1, 10, 30, 50, gTotal], ['Đặt viên đá đầu', 'Laying the First Stone'],
+    function (n) { return typeof n === 'number' ? ['Học ' + n + ' mẫu ngữ pháp', 'Learn ' + n + ' grammar patterns'] : ['Học mọi mẫu ngữ pháp N5', 'Learn every N5 grammar pattern']; },
+    function (x) { return x.g.learned; });
+  ACH_BY_ID.N5.name = ['Văn phạm gia', 'Grammarian'];
+  tier('N', 6, 14, 'NL', [1, 2, 3], [10, 40, gTotal], ['Danh thắng', 'Landmarks'],
+    function (n) { return typeof n === 'number' ? [n + ' công trình thành Danh thắng', n + ' buildings become landmarks'] : ['Mọi công trình thành Danh thắng', 'Every building becomes a landmark']; },
+    function (x) { return x.g.landmark; });
+  ACH_BY_ID.N8.name = ['Tổng đốc kiến thiết', 'Master of Works'];
+  tier('N', 9, 14, 'NR', [0, 1, 2], [100, 1000, 3000], ['Thợ lành nghề', 'Skilled Builder'],
+    function (n) { return ['Tổng ' + n + ' câu ngữ pháp đúng', n + ' correct grammar answers']; }, cnt('gright'));
+  def('N12', 14, null, 0, ['Khởi công', 'Breaking Ground'], ['Đặt quần thể đầu tiên lên bản đồ', 'Place your first complex on the map'], function (x) { return x.g.placed; }, 1);
+  tier('N', 13, 14, 'NF', [0, 1, 3], [1, 8, 16], ['Hoàn công', 'Completion'],
+    function (n) { return ['Hoàn thiện ' + n + ' quần thể', 'Finish ' + n + (n > 1 ? ' complexes' : ' complex')]; }, function (x) { return x.g.fin; });
+  ACH_BY_ID.N15.name = ['Văn trị thiên hạ', 'Realm of Letters'];
+  def('N16', 14, null, 1, ['Thợ cả', 'Master Mason'], ['Một lượt Xếp gạch đạt từ 15 hàng', 'Lay 15 rows in one Master Mason round'], function (x) { return x.k.best.bricks || 0; }, 15);
+  def('N17', 14, null, 1, ['Mắt giám định', 'Inspector\'s Eye'], ['Tổng 50 câu Giám định đúng', '50 correct inspections'], cnt('ginspect'), 50);
+  def('N18', 14, null, 0, ['Kiến trúc sư', 'Architect'], ['Tổng 50 câu sắp xếp đúng', '50 sentences ordered correctly'], cnt('gorder'), 50);
+  def('N19', 14, null, 2, ['Ngự bút chia động từ', 'Brush of Conjugation'], ['30 câu gõ chia đúng liên tiếp', '30 conjugations typed right in a row'], function (x) { return x.k.best.gconj || 0; }, 30);
+  tier('N', 20, 14, 'NW', [0, 2], [1, 8], ['Kỳ quan', 'Wonders'],
+    function (n) { return ['Xây xong ' + n + ' kỳ quan tuần', 'Complete ' + n + (n > 1 ? ' weekly wonders' : ' weekly wonder')]; }, seenSize('wonder'));
+  def('N22', 14, null, 0, ['Chăm nghe giảng', 'Attentive Student'], ['Nghe hết câu ví dụ của 30 mẫu', 'Play every example of 30 patterns'], function (x) { return x.g.exFull; }, 30);
+  def('N23', 14, null, 1, ['Dựng lại từ đổ nát', 'Rebuilt from Ruins'], ['Tu bổ công trình phong hoá từ 30 ngày, rồi đưa nó lên Hoàn thiện', 'Repair a building weathered for 30 days, then finish it'],
+    function (x) { return x.g.restored; }, 1, ['Đổ nát rồi lại dựng xây', 'From ruin, rise again']);
+  def('N24', 14, null, 1, ['Đỉnh thiên thủ', 'Top of the Keep'], ['Hoàn thiện quần thể Thiên thủ các', 'Finish the Castle Keep complex'], function (x) { return x.g.keep ? 1 : 0; }, 1, ['Nơi cao nhất của toà thành', 'The highest point of the castle']);
+
+  var HIDDEN = { N23: 1, N24: 1, V19: 1, V20: 1, B15: 1, B16: 1, T1: 1, T2: 1, T4: 1, T5: 1, H1: 1, H2: 1, H3: 1, H4: 1, H5: 1, H6: 1, H7: 1, H8: 1 };
 
   // ---------- Chieu chi va Nghi su ----------
   var QUESTS = [
@@ -641,6 +693,12 @@
     ['QM8', 1, 'word', 'Giải vây hôm nay: đẩy lui một đợt Vong quân', "Lift today's siege: repel an Oblivion wave", 1, function (d) { return d.repel || 0; },
       function (x) { return x.mapOpen && x.v.due > 0; }],
     ['QE8', 0, 'game', 'Chơi 1 lượt trò chơi nhỏ', 'Play 1 mini game round', 1, function (d) { return d.game || 0; }, function (x) { return x.v.gameOpen; }],
+    ['QE9', 0, 'gram', 'Trả lời đúng 15 câu ngữ pháp', 'Answer 15 grammar questions correctly', 15, function (d) { return d.gright || 0; }, function (x) { return x.g.lessons >= 1; }],
+    ['QE10', 0, 'game', 'Chơi 1 lượt trò chơi nhỏ ngữ pháp', 'Play 1 grammar mini game', 1, function (d) { return d.ggame || 0; }, function (x) { return x.g.lessons >= 2; }],
+    ['QM9', 1, 'gram', 'Khởi công một bài ngữ pháp mới', 'Break ground on a new grammar lesson', 1, function (d) { return d.glesson || 0; }, function () { return !!(App.grammar && App.grammar.canLearn()); }],
+    ['QM10', 1, 'gram', 'Tu bổ hết công trình đến hạn', 'Repair every building that is due', 1, function (d) { return d.grepair || 0; }, function (x) { return x.g.due > 0; }],
+    ['QH9', 2, 'gram', 'Một lượt Xếp gạch đạt từ 10 hàng', 'Lay 10 rows in one Master Mason round', 10, function (d) { return d.mxBricks || 0; }, function (x) { return x.g.lessons >= 2; }],
+    ['QH10', 2, 'gram', 'Gõ chia đúng 20 câu ngữ pháp', 'Type 20 conjugations correctly', 20, function (d) { return d.gconj || 0; }, function (x) { return x.g.lessons >= 4; }],
     ['QH8', 2, 'word', 'Bắt 3 tội phạm trên Bảng truy nã', 'Catch 3 subjects on the wanted board', 3, function (d) { return d.caught || 0; }, function (x) { return x.v.wanted >= 3; }]
   ];
   var WEEKLY = [
@@ -661,6 +719,10 @@
     ['W14', 'word', 'Chiếm đóng một vùng mới', 'Occupy a new land', 1,
       function (w) { var a = vocabStats().heldAt, n = 0; for (var i = 0; i < a.length; i++) if (a[i] >= w.start && a[i] < w.end) n++; return n; },
       function (x) { return x.v.war > 0; }],
+    ['W16', 'gram', 'Xây xong Kỳ quan tuần này', "Complete this week's wonder", WONDER_GOAL, function (w) { return w.d.gright || 0; }, function (x) { return x.g.lessons >= 1; }],
+    ['W17', 'gram', 'Khởi công 3 bài ngữ pháp mới', 'Break ground on 3 new grammar lessons', 3, function (w) { return w.d.glesson || 0; },
+      function (x) { return x.g.lessonTotal - x.g.lessons >= 3 && !!(App.grammar && App.grammar.canLearn()); }],
+    ['W18', 'gram', 'Trả lời đúng 200 câu ngữ pháp', 'Answer 200 grammar questions correctly', 200, function (w) { return w.d.gright || 0; }, function (x) { return x.g.lessons >= 2; }],
     ['W15', 'word', 'Trả lời đúng 300 câu Triều kiến', 'Answer 300 audience questions correctly', 300, function (w) { return w.d.vright || 0; }, function (x) { return x.v.learned >= 60; }]
   ];
   var QUEST_BY_ID = {};
@@ -871,6 +933,7 @@
     if (hk) reward += '<p>' + T('Mở khoá màu ấn tín: ', 'New seal color: ') + '<b>' + h(L(hk.name)) + '</b></p>';
     reward += '<p>' + T('Danh hiệu mới: ', 'New title: ') + '<b>' + h(rankName(r)) + '</b></p>';
     if (r === 3) reward += '<p>' + T('Bản đồ vương quốc đã mở trong mục Từ vựng', 'The map of your realm is now open in Vocabulary') + '</p>';
+    if (r === 3 && grammarStats().lessons > grammarStats().placed) reward += '<p>' + T('Các quần thể đang chờ đất xây trong mục Ngữ pháp', 'Your complexes are waiting for land in Grammar') + '</p>';
     crownEl.innerHTML = '<div class="backdrop" data-act="kCrownClose"></div><div class="dialog coronation">' +
       '<p class="eyebrow">' + T('Lễ đăng quang', 'Coronation') + '</p>' + crownSvg(r, 'big-crown', true) +
       '<h2>' + jp(RANKS[r][3]) + '</h2><h3>' + h(rankName(r)) + '</h3><div class="reward">' + reward + '</div>' +
@@ -898,6 +961,29 @@
     for (var i = 0; i < REALM.length; i++) if (n >= REALM[i][0]) r = i;
     return { n: n, kanji: REALM[r][3], name: L([REALM[r][1], REALM[r][2]]), next: REALM[r + 1] ? REALM[r + 1][0] - n : 0 };
   }
+  function wonderIndex(wk) { return Math.round(parseKey(wk).getTime() / (7 * 864e5)) % WONDERS.length; }
+  function wonder() {
+    var wk = wkey(new Date()), w = weekStats(wk), x = WONDERS[wonderIndex(wk)];
+    return { wk: wk, kanji: x[0], name: [x[1], x[2]], type: x[3], n: w.d.gright || 0, done: !!(S().seen.wonder || {})[wk], daysLeft: 8 - w.elapsed };
+  }
+  function wonders() {
+    var built = {}, seen = S().seen.wonder || {}, out = [];
+    for (var wk in seen) built[wonderIndex(wk)] = (built[wonderIndex(wk)] || 0) + 1;
+    for (var i = 0; i < WONDERS.length; i++) out.push({ kanji: WONDERS[i][0], name: [WONDERS[i][1], WONDERS[i][2]], type: WONDERS[i][3], x: WONDERS[i][4], y: WONDERS[i][5], r: WONDERS[i][6], built: built[i] || 0 });
+    return out;
+  }
+  function civic() {
+    var n = grammarStats().fin, r = 0;
+    for (var i = 0; i < CIVIC.length; i++) if (n >= CIVIC[i][0]) r = i;
+    return { n: n, kanji: CIVIC[r][3], name: L([CIVIC[r][1], CIVIC[r][2]]), next: CIVIC[r + 1] ? CIVIC[r + 1][0] - n : 0 };
+  }
+  function checkWonder() {
+    var w = wonder();
+    if (w.done || w.n < WONDER_GOAL || !grammarStats().lessons) return;
+    seenSet('wonder')[w.wk] = Date.now();
+    dayXp(100);
+    queue.push({ kind: 'bonus', glyph: '奇', r: 2, label: T('Kỳ quan tuần', 'Weekly wonder'), title: T('Xây xong ', 'Completed ') + w.kanji + ' ' + L(w.name), xp: 100 });
+  }
   function checkBoss() {
     var b = boss();
     if (b.down || b.dmg < b.hp || rankOf(totalXp()) < MAP_RANK) return;
@@ -907,6 +993,7 @@
   }
   function evaluate() {
     checkBoss();
+    checkWonder();
     var k = S(), ctx = context(), now = Date.now(), fresh = [], i;
     for (var pass = 0; pass < 2; pass++) {
       for (i = 0; i < ACH.length; i++) {
@@ -1107,7 +1194,59 @@
         dayInc('caught');
         if (!e.size && k.flags.V12b) flag('V12');
         break;
+      case 'grammar:answer':
+        if (e.mode === 'practice') break;
+        learn();
+        if (e.retry) break;
+        if (e.ok) { inc('gright'); dayInc('gright'); if (e.mode === 'review' || e.mode === 'game') addXp('gright', 2); }
+        if (e.ok && e.type === 'order') inc('gorder');
+        if (e.ok && e.type === 'inspect') inc('ginspect');
+        if (e.type === 'conj') {
+          if (e.ok) { dayInc('gconj'); dev.run.gconj = (dev.run.gconj || 0) + 1; k.best.gconj = Math.max(k.best.gconj || 0, dev.run.gconj); }
+          else dev.run.gconj = 0;
+        }
+        break;
+      case 'grammar:learn':
+        learn(); dayInc('gnew'); dayXp(10);
+        break;
+      case 'grammar:lesson':
+        learn(); dayInc('glesson'); dayXp(40);
+        queue.push({ kind: 'bonus', glyph: '築', r: 1, label: T('Kiến thiết', 'Building'), title: T('Khởi công ', 'Ground broken: ') + e.name, xp: 40 });
+        break;
+      case 'grammar:level':
+        if (e.to >= 6) dayXp(10);
+        break;
+      case 'grammar:reviewEnd':
+        learn();
+        for (var gi = 0; gi < (e.restored || []).length; gi++) seenSet('grestore')[e.restored[gi]] = 1;
+        if (e.cleared) {
+          dayInc('grepair');
+          if (!seenSet('repair')[today()]) {
+            seenSet('repair')[today()] = 1; dayXp(15);
+            queue.push({ kind: 'bonus', glyph: '修', r: 1, label: T('Tu bổ', 'Repairs'), title: T('Đã tu bổ xong mọi công trình hôm nay', 'Every building is repaired for today'), xp: 15 });
+          }
+        }
+        break;
+      case 'grammar:complex':
+        dayXp(100);
+        queue.push({ kind: 'bonus', glyph: '成', r: 2, label: T('Kiến thiết', 'Building'), title: T('Hoàn thiện ', 'Finished ') + e.name, xp: 100 });
+        if (e.all) { dayXp(500); queue.push({ kind: 'bonus', glyph: '文', r: 3, label: T('Văn trị', 'Civic glory'), title: T('Văn trị thiên hạ', 'Realm of Letters'), xp: 500 }); }
+        break;
+      case 'grammar:place':
+        learn();
+        break;
+      case 'grammar:view':
+        learn();
+        break;
+      case 'grammar:example':
+        seenSet('gex')[e.sid] = 1;
+        break;
       case 'game:end':
+        if (e.g === 'bricks' || e.g === 'inspect') {
+          learn(); inc('ggame'); dayInc('ggame'); addXp('ggame', 5);
+          if (e.g === 'bricks') { k.best.bricks = Math.max(k.best.bricks || 0, e.right); dayMax('mxBricks', e.right); }
+          break;
+        }
         learn(); inc('game'); dayInc('game'); addXp('game', 5);
         if (e.g === 'treasury' && e.total && e.right === e.total) flag('V15');
         if (e.g === 'feast' && !e.miss && e.ms < 60000) flag('V18');
@@ -1262,6 +1401,17 @@
       recent.length + '/' + ACH.length + T(' ấn tín · ', ' seals · ') + Math.round(recent.length * 100 / ACH.length) + '%</small>' +
       (seals ? '<span class="kl-seals">' + seals + '</span>' : '') + '</span><i>→</i></a>';
   }
+  function wonderHall() {
+    var list = wonders(), items = '', any = 0;
+    for (var i = 0; i < list.length; i++) {
+      var w = list[i];
+      if (w.built) any++;
+      items += '<span class="kwonder' + (w.built ? '' : ' off') + '">' + (window.GScene ? window.GScene.wonder(w.type, w.built ? 5 : 0) : '') +
+        '<small>' + jp(w.kanji) + '</small><small>' + h(L(w.name)) + (w.built > 1 ? ' ★' + (w.built - 1) : '') + '</small></span>';
+    }
+    if (!any && !grammarStats().lessons) return '';
+    return '<div class="card"><h3>' + T('SẢNH KỲ QUAN', 'HALL OF WONDERS') + ' <small class="muted">' + any + '/' + list.length + '</small></h3><div class="kwonders">' + items + '</div></div>';
+  }
   function viewProfile() {
     var k = S(), ctx = context(), xp = totalXp(), r = rankOf(xp), i;
     var titles = '<option value="">' + T('— Không đeo danh hiệu —', '— No title —') + '</option>';
@@ -1279,15 +1429,17 @@
     var stats = [
       [ctx.known, T('chữ đã thuộc', 'kanji learned')], [ctx.streak, T('ngày liên tiếp', 'day streak')], [ctx.days.length, T('ngày đã học', 'study days')],
       [ctx.c.right || 0, T('câu đúng', 'correct answers')], [ctx.c.flip || 0, T('thẻ đã chấm', 'cards graded')], [ctx.c.listen || 0, T('lượt nghe', 'listens')],
-      [ctx.v.learned, T('thần dân', 'subjects')], [ctx.v.burned, T('trung thần', 'loyal subjects')], [ctx.c.vright || 0, T('câu Triều kiến đúng', 'audience answers')]
+      [ctx.v.learned, T('thần dân', 'subjects')], [ctx.v.burned, T('trung thần', 'loyal subjects')], [ctx.c.vright || 0, T('câu Triều kiến đúng', 'audience answers')],
+      [ctx.g.learned, T('công trình', 'buildings')], [ctx.g.landmark, T('danh thắng', 'landmarks')], [ctx.c.gright || 0, T('câu ngữ pháp đúng', 'grammar answers')]
     ], st = '';
     for (i = 0; i < stats.length; i++) st += '<div class="kstat"><b>' + fmt(stats[i][0]) + '</b><small>' + stats[i][1] + '</small></div>';
     return '<div class="card kprofile">' + crownSvg(r, 'big-crown', true) +
       '<div class="body"><small>' + T('Bậc ', 'Rank ') + (r + 1) + '/10 · ' + jp(RANKS[r][3]) + '</small><h1>' + h(rankName(r)) + '</h1>' +
       (ctx.mapOpen ? '<small class="krealm">' + T('Quốc thế: ', 'Realm: ') + jp(realm().kanji) + ' ' + h(realm().name) + ' · ' + ctx.v.annexN + '/' + ctx.v.regions + T(' vùng sáp nhập', ' lands annexed') + '</small>' : '') +
+      (ctx.g.lessons ? '<small class="krealm">' + T('Văn trị: ', 'Civic glory: ') + jp(civic().kanji) + ' ' + h(civic().name) + ' · ' + ctx.g.fin + '/' + ctx.g.lessonTotal + T(' quần thể hoàn thiện', ' complexes finished') + '</small>' : '') +
       '<label class="ktitle">' + T('Danh hiệu', 'Title') + ' <select class="field" data-change="kTitle">' + titles + '</select></label>' + xpBar(xp, r) + '</div></div>' +
       '<div class="card"><h3>' + T('MÀU ẤN TÍN', 'SEAL COLOR') + '</h3><div class="swatches">' + sw + '</div></div>' +
-      '<div class="kstats">' + st + '</div>' + ledgerCard() + questCard() + calendar();
+      '<div class="kstats">' + st + '</div>' + wonderHall() + ledgerCard() + questCard() + calendar();
   }
   function viewSeals() {
     var k = S(), ctx = context(), i, j;
@@ -1364,5 +1516,5 @@
   });
 
   // Phuc vu kiem thu tu dong.
-  App.king = { boss: boss, realm: realm, context: context, totalXp: totalXp, rankOf: rankOf, evaluate: evaluate, ACH: ACH, QUESTS: QUEST_BY_ID, WEEKLY: WEEK_BY_ID, merge: mergeKing, dailyIds: dailyIds, weekStats: weekStats, dayStats: dayStats, deviceId: function () { return deviceId; } };
+  App.king = { wonder: wonder, wonders: wonders, civic: civic, best: function (name) { return S().best[name] || 0; }, boss: boss, realm: realm, context: context, totalXp: totalXp, rankOf: rankOf, evaluate: evaluate, ACH: ACH, QUESTS: QUEST_BY_ID, WEEKLY: WEEK_BY_ID, merge: mergeKing, dailyIds: dailyIds, weekStats: weekStats, dayStats: dayStats, deviceId: function () { return deviceId; } };
 })();

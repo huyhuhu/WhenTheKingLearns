@@ -451,8 +451,14 @@
   }
   function mapOpen() { return !App.king || App.king.rankOf(App.king.totalXp()) >= MAP_RANK; }
   function stateChip(st) { return '<span class="vstate st-' + st + '">' + h(App.L(STATES[st])) + '</span>'; }
-  function mapCard(lands) {
+  function mapCard(lands, entry) {
+    entry = entry || 'vocab';
+    if (window.VocabMap && window.VocabMap.mode(entry) === 'build' && App.grammar) return App.grammar.mapCard(entry);
+    return landCard(lands, entry);
+  }
+  function landCard(lands, entry) {
     if (!window.VocabMap) return '';
+    var toggle = App.grammar ? window.VocabMap.toggle(entry) : '';
     var open = mapOpen(), list = [];
     for (var i = 0; i < lands.length; i++) list.push({ st: lands[i].st, due: lands[i].due, kanji: region(i + 1)[0], name: App.isEn() ? region(i + 1)[7] : region(i + 1)[2] });
     if (mapSel && !open) mapSel = 0;
@@ -474,11 +480,11 @@
       '<button class="icon-btn" data-act="vZoom" data-z="0.625" title="' + T('Thu nhỏ', 'Zoom out') + '">−</button>' +
       '<button class="icon-btn" data-act="vZoomReset" title="' + T('Toàn cảnh', 'Whole map') + '">⤢</button></div>';
     if (!open) {
-      return '<div class="card vmapcard locked"><div class="vmap-box">' + window.VocabMap.svg(list, { locked: true }) +
+      return '<div class="card vmapcard locked">' + toggle + '<div class="vmap-box">' + window.VocabMap.svg(list, { locked: true }) +
         '<div class="vmap-lock">' + jp('🔒') + '<b>' + T('Đăng quang Tân vương để mở bản đồ vương quốc', 'Be crowned New King to open the map of your realm') + '</b></div></div></div>';
     }
     var rl = App.king && App.king.realm ? App.king.realm() : null;
-    return '<div class="card vmapcard"><h3>' + T('BẢN ĐỒ VƯƠNG QUỐC', 'MAP OF THE REALM') + '</h3>' +
+    return '<div class="card vmapcard">' + (toggle || '<h3>' + T('BẢN ĐỒ VƯƠNG QUỐC', 'MAP OF THE REALM') + '</h3>') +
       (rl ? '<p class="vrealm">' + jp(rl.kanji) + ' <b>' + h(rl.name) + '</b> <small class="muted">' + rl.n + '/' + lands.length + T(' vùng sáp nhập', ' lands annexed') +
         (rl.next ? T(' · ' + rl.next + ' vùng để lên bậc', ' · ' + rl.next + ' for the next title') : '') + '</small></p>' : '') + '<div class="vmap-box">' +
       window.VocabMap.svg(list, { sel: mapSel }) + ctl + '</div>' + info + '</div>';
@@ -1053,6 +1059,16 @@
     if ((e.key === 'Enter' || e.keyCode === 13) && e.target && e.target.id === 'vInput') { e.preventDefault(); A.vSubmit(); }
   });
 
+  if (window.VocabMap) window.VocabMap.onTap('land', function (n) { mapSel = mapSel === n ? 0 : n; App.render(); });
+  App.romaji = { toKana: toKana, same: function (a, b) { return strictKey(a) === strictKey(b); }, loose: looseKey };
+  App.vocabApi = {
+    mapOpen: mapOpen,
+    landState: function (n) { return landState(n); },
+    regionName: regionName,
+    region: region,
+    mapCard: function (entry) { return landCard(allLands(), entry); }
+  };
+
   App.on(function (type) {
     if (type !== 'start' || !D()) return;
     checkLands(true);
@@ -1075,7 +1091,7 @@
     },
     afterRender: function (mine) {
       if (!mine) return;
-      if (window.VocabMap) window.VocabMap.bind(function (n) { mapSel = mapSel === n ? 0 : n; App.render(); });
+      if (window.VocabMap) window.VocabMap.bind('vocab');
       var el = document.getElementById('vInput');
       if (el) el.focus();
     },

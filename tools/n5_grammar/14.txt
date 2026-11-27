@@ -1,0 +1,118 @@
+# Bài 14: 学問所 Học đường. Mẫu: Thể từ điển · V ことが できます · 趣味は V ことです · V まえに · Thể thường (だ)
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: V (thể từ điển)
+name: Thể từ điển (辞書形) | Dictionary form (辞書形)
+explain: Dạng gốc của động từ, có trong từ điển, cũng là thể thường hiện tại. Nhóm 1: đổi âm cuối của ます-form từ hàng い sang hàng う (かいます→かう, のみます→のむ, いきます→いく, はなします→はなす). Nhóm 2: bỏ ます, thêm る (たべます→たべる). Nhóm 3: します→する, きます→くる. | The base form of a verb as listed in the dictionary, also the plain present tense. Group 1: change the final い-row sound of the ます-form to the う-row (かいます→かう, のみます→のむ, いきます→いく, はなします→はなす). Group 2: drop ます and add る (たべます→たべる). Group 3: します→する, きます→くる.
+note: Nhóm 1 có vài động từ trông giống nhóm 2 nhưng chia như nhóm 1: かえる (帰る), はいる (入る), はしる (走る), しる (知る). Cứ thấy ます-form có 〜り thì suy ra 〜る: かえります→かえる. | A few group 1 verbs look like group 2 but conjugate as group 1: かえる (帰る), はいる (入る), はしる (走る), しる (知る). If the ます-form ends in 〜り, the dictionary form is 〜る: かえります→かえる.
+compare: Dạng từ điển là dạng thân mật của 〜ます: たべます (lịch sự) và たべる (thân mật). | The dictionary form is the casual counterpart of 〜ます: たべます (polite) and たべる (casual).
+tip: Nhóm 1 "đổi đuôi i thành u"; nhóm 2 "bỏ ます thêm る"; nhóm 3 thuộc lòng する・くる.
+ex: {私|わたし}は{毎日|まいにち}{朝|あさ}ごはんを{食|た}べる。 | Mỗi ngày tôi ăn sáng. | I eat breakfast every day.
+ex: ケンタは{夜|よる}ゲームをする。 | Kenta chơi game vào buổi tối. | Kenta plays games at night.
+ex: {佐藤|さとう}さんは{毎朝|まいあさ}{新聞|しんぶん}を{読|よ}む。 | Bà Sato đọc báo mỗi sáng. | Ms. Sato reads the newspaper every morning.
+ex: ユキさんは{七時|しちじ}に{会社|かいしゃ}へ{行|い}く。 | Yuki đến công ty lúc 7 giờ. | Yuki goes to the office at seven.
+kind: conj
+q: ユキさんは{毎朝|まいあさ}{六時|ろくじ}に<{起|お}きる>。 | Mỗi sáng Yuki dậy lúc 6 giờ. | Yuki gets up at six every morning. | c: {起|お}きます
+q: ケンタは{毎日|まいにち}{家|いえ}でゲームを<する>。 | Mỗi ngày Kenta chơi game ở nhà. | Kenta plays games at home every day. | c: します | t: ケンタは/{毎日|まいにち}/{家|いえ}で/ゲームをする *4 | e: 4 > ゲームをしる | ev: Nhóm 3: します→する (bất quy tắc), không có しる. | ee: Group 3: します→する (irregular); しる does not exist here.
+q: {田中|たなか}さんは{毎晩|まいばん}お{酒|さけ}を<{飲|の}む>。 | Tối nào ông Tanaka cũng uống rượu. | Mr. Tanaka drinks sake every night. | c: {飲|の}みます
+q: {私|わたし}は{明日|あした}{家|うち}に<{帰|かえ}る>。 | Ngày mai tôi về nhà. | I will go home tomorrow. | c: {帰|かえ}ります
+q: {私|わたし}は{毎日|まいにち}{水|みず}を{飲|の}[む]。 | Mỗi ngày tôi uống nước. | I drink water every day. | o: ます/みる/んる | t: {私|わたし}は/{毎日|まいにち}/{水|みず}を/{飲|の}む *4 | e: 4 > {飲|の}みる | ev: Nhóm 1 đổi い→う (のみ→のむ), không thêm る. | ee: Group 1 changes い to う (のみ→のむ); do not add る.
+q: ケンタは{夜|よる}ゲームを[する]。 | Kenta chơi game vào buổi tối. | Kenta plays games at night. | o: します/すむ/しる | t: ケンタは/{夜|よる}/ゲームを/する *4
+q: {田中|たなか}さんは{毎朝|まいあさ}{新聞|しんぶん}を{読|よ}[む]。 | Ông Tanaka đọc báo mỗi sáng. | Mr. Tanaka reads the newspaper every morning. | o: ます/みる/ぶ | t: {田中|たなか}さんは/{毎朝|まいあさ}/{新聞|しんぶん}を/{読|よ}む *4
+q: {佐藤|さとう}さんは{毎日|まいにち}{魚|さかな}を{食|た}[べる]。 | Hằng ngày bà Sato ăn cá. | Ms. Sato eats fish every day. | o: べます/べう/べ | t: {佐藤|さとう}さんは/{毎日|まいにち}/{魚|さかな}を/{食|た}べる *4 | e: 4 > {食|た}べう | ev: Nhóm 2: bỏ ます rồi thêm る (たべ+る), không đổi sang う. | ee: Group 2: drop ます and add る (たべ+る), not う.
+q: ユキさんは{毎晩|まいばん}テレビを{見|み}[る]。 | Tối nào Yuki cũng xem ti vi. | Yuki watches TV every night. | o: う/ます/く | t: ユキさんは/{毎晩|まいばん}/テレビを/{見|み}る *3
+q: タマは{夜|よる}{外|そと}へ{行|い}[く]。 | Ban đêm Tama đi ra ngoài. | Tama goes outside at night. | o: き/ます/った
+
+@p
+form: V (từ điển) こと が できます
+name: Vことが できます: "có thể làm V" | Vことが できます: "can do V"
+explain: Đặt động từ ở thể từ điển trước こと (việc), rồi が できます. Nghĩa là có năng lực hoặc được phép làm việc đó. Phủ định là できません. | Put the verb in dictionary form before こと (the act of), then が できます. It means you have the ability or the chance to do it. The negative is できません.
+note: Với danh từ chỉ hoạt động dùng N が できます: 日本語ができます, テニスができます. | With a noun for an activity, use N が できます: 日本語ができます, テニスができます.
+compare: 〜が じょうずです nói giỏi hay không; 〜ことができます chỉ nói làm được hay không. | 〜が じょうずです says how good you are; 〜ことができます only says whether you are able to.
+tip: "Làm được việc V" = V + こと + が + できます. Nhớ こと = "việc".
+search: ことが(できます|できません)
+ex: {私|わたし}は{日本語|にほんご}を{話|はな}すことができます。 | Tôi có thể nói tiếng Nhật. | I can speak Japanese.
+ex: ケンタさんは{速|はや}く{走|はし}ることができます。 | Kenta có thể chạy nhanh. | Kenta can run fast.
+ex: ここで{電話|でんわ}をかけることができません。 | Ở đây không thể gọi điện thoại. | You cannot make phone calls here.
+ex: ユキさんは{自転車|じてんしゃ}に{乗|の}ることができます。 | Yuki biết đi xe đạp. | Yuki can ride a bicycle.
+kind: conj
+q: ユキさんは{英語|えいご}[を]<{話|はな}す>ことができます。 | Yuki có thể nói tiếng Anh. | Yuki can speak English. | o: が/に/へ | c: {話|はな}します
+q: ケンタさんは{名前|なまえ}を<{書|か}く>ことができます。 | Kenta có thể viết tên mình. | Kenta can write his name. | c: {書|か}きます
+q: {田中|たなか}さんは{一人|ひとり}で{料理|りょうり}を<する>ことができます。 | Ông Tanaka có thể tự nấu ăn. | Mr. Tanaka can cook by himself. | c: します
+q: {私|わたし}は{日本|にほん}の{歌|うた}を<{聞|き}く>ことができます。 | Tôi có thể nghe bài hát Nhật. | I can listen to Japanese songs. | c: {聞|き}きます
+q: {私|わたし}は{漢字|かんじ}を{読|よ}む[こと]ができます。 | Tôi có thể đọc chữ Hán. | I can read kanji. | o: もの/ところ/ため | t: {私|わたし}は/{漢字|かんじ}を/{読|よ}む/ことができます *3 | e: 4 > ものができます | ev: Sau động từ thể từ điển dùng こと, không dùng もの. | ee: After a dictionary-form verb use こと, not もの.
+q: {私|わたし}は{泳|およ}ぐことが[できます]。 | Tôi có thể bơi. | I can swim. | o: します/あります/わかります | t: {私|わたし}は/{泳|およ}ぐ/ことが/できます *4 | e: 3 > ことを | ev: できます đi với が, không dùng を. | ee: できます takes が, not を.
+q: ここで{電話|でんわ}をかけることが[できません]。 | Ở đây không thể gọi điện thoại. | You cannot make phone calls here. | o: ありません/しません/わかりません | t: ここで/{電話|でんわ}を/かける/ことができません *3 | e: 3 > かけた | ev: Trước ことができます dùng thể từ điển (かける), không dùng 〜た. | ee: Use the dictionary form (かける) before ことができます, never 〜た.
+q: ユキさんは{車|くるま}に{乗|の}る[ことが]できます。 | Yuki có thể đi ô tô. | Yuki can ride in a car. | o: ことを/のを/ものが | t: ユキさんは/{車|くるま}に/{乗|の}る/ことができます *3 | e: 4 > ことをできます | ev: できます đi với が: ことができます. | ee: できます goes with が: ことができます.
+q: ここで{本|ほん}を{借|か}りる[ことが]できます。 | Ở đây có thể mượn sách. | You can borrow books here. | o: ことを/ものを/ことに | t: ここで/{本|ほん}を/{借|か}りる/ことができます *4 | e: 3 > {借|か}ります | ev: Trước こと dùng thể từ điển, không dùng ます. | ee: Use the dictionary form before こと, not ます.
+
+@p
+form: N は V (từ điển) こと です
+name: 趣味は V ことです: "sở thích là V" | 趣味は V ことです: "my hobby is V-ing"
+explain: Nói sở thích (hay mục tiêu) bằng cách đặt động từ thể từ điển + こと trước です. こと biến động từ thành danh từ: 本を読むこと = "việc đọc sách". | State a hobby (or goal) by putting a dictionary-form verb + こと before です. こと turns the verb into a noun: 本を読むこと = "reading books".
+note: Nếu sở thích là danh từ thì chỉ cần N です: 趣味は音楽です. Hỏi: ご趣味は何ですか。 | If the hobby is already a noun, just use N です: 趣味は音楽です. Ask: ご趣味は何ですか。
+tip: "Sở thích của tôi là việc ..." → 私の趣味は + V + ことです, cứ chèn こと như chèn chữ "việc".
+search: 趣味は.+ことです
+ex: {私|わたし}の{趣味|しゅみ}は{映画|えいが}を{見|み}ることです。 | Sở thích của tôi là xem phim. | My hobby is watching movies.
+ex: ケンタさんの{趣味|しゅみ}はゲームをすることです。 | Sở thích của Kenta là chơi game. | Kenta's hobby is playing games.
+ex: {佐藤|さとう}さんの{趣味|しゅみ}は{音楽|おんがく}を{聞|き}くことです。 | Sở thích của bà Sato là nghe nhạc. | Ms. Sato's hobby is listening to music.
+ex: {田中|たなか}さんの{趣味|しゅみ}は{旅行|りょこう}することです。 | Sở thích của ông Tanaka là đi du lịch. | Mr. Tanaka's hobby is traveling.
+kind: conj
+q: {私|わたし}の{趣味|しゅみ}は{音楽|おんがく}を<{聞|き}く>ことです。 | Sở thích của tôi là nghe nhạc. | My hobby is listening to music. | c: {聞|き}きます
+q: {田中|たなか}さんの{趣味|しゅみ}は{本|ほん}を<{読|よ}む>ことです。 | Sở thích của ông Tanaka là đọc sách. | Mr. Tanaka's hobby is reading books. | c: {読|よ}みます
+q: {佐藤|さとう}さんの{趣味|しゅみ}は{散歩|さんぽ}を<する>ことです。 | Sở thích của bà Sato là đi dạo. | Ms. Sato's hobby is taking walks. | c: します
+q: {私|わたし}の{趣味|しゅみ}は{安|やす}い{服|ふく}を<{買|か}う>ことです。 | Sở thích của tôi là mua quần áo rẻ. | My hobby is buying cheap clothes. | c: {買|か}います
+q: ケンタさんの[{趣味|しゅみ}]はゲームをすることです。 | Sở thích của Kenta là chơi game. | Kenta's hobby is playing games. | o: {好|す}き/{仕事|しごと}/{勉強|べんきょう} | t: ケンタさんの/{趣味|しゅみ}は/ゲームを/することです *2 | e: 2 > {趣味|しゅみ}を | ev: Chủ đề dùng は: 趣味は〜ことです. | ee: The topic takes は: 趣味は〜ことです.
+q: ユキさんの{趣味|しゅみ}は{料理|りょうり}をする[ことです]。 | Sở thích của Yuki là nấu ăn. | Yuki's hobby is cooking. | o: ですこと/ことが/ことを | t: ユキさんの/{趣味|しゅみ}は/{料理|りょうり}を/することです *4 | e: 4 > するです | ev: Phải có こと để biến động từ thành danh từ: することです. | ee: You need こと to nominalize the verb: することです.
+q: {私|わたし}の{趣味|しゅみ}は{映画|えいが}を{見|み}[る]ことです。 | Sở thích của tôi là xem phim. | My hobby is watching movies. | o: ます/み/て | t: {私|わたし}の/{趣味|しゅみ}は/{映画|えいが}を/{見|み}ることです *4 | e: 4 > {見|み}ますことです | ev: Trước こと dùng thể từ điển, không dùng ます. | ee: Use the dictionary form before こと, not ます.
+q: {私|わたし}の{趣味|しゅみ}は{手紙|てがみ}を{書|か}く[こと]です。 | Sở thích của tôi là viết thư. | My hobby is writing letters. | o: の/もの/ところ | t: {私|わたし}の/{趣味|しゅみ}は/{手紙|てがみ}を/{書|か}くことです *3 | e: 4 > {書|か}くのです | ev: Nói sở thích dùng ことです. | ee: A hobby is stated with ことです.
+q: {佐藤|さとう}さん[の]{趣味|しゅみ}は{お茶|ちゃ}を{飲|の}むことです。 | Sở thích của bà Sato là uống trà. | Ms. Sato's hobby is drinking tea. | o: は/が/を | t: {佐藤|さとう}さん/の/{趣味|しゅみ}は/{お茶|ちゃ}を{飲|の}むことです *2
+q: ケンタさんの{趣味|しゅみ}は{電車|でんしゃ}に{乗|の}る[こと]です。 | Sở thích của Kenta là đi tàu điện. | Kenta's hobby is riding trains. | o: の/もの/ところ | t: ケンタさんの/{趣味|しゅみ}は/{電車|でんしゃ}に/{乗|の}ることです *1
+
+@p
+form: V (từ điển) まえに / N の まえに
+name: まえに: "trước khi ..." | まえに: "before ..."
+explain: Nói việc A xảy ra trước việc B. Trước まえに dùng động từ thể từ điển (dù câu cuối ở quá khứ), hoặc danh từ + の. | Says that A happens before B. Use a dictionary-form verb before まえに (even if the final verb is past), or a noun + の.
+note: Động từ trước まえに luôn ở thể từ điển, không bao giờ là 〜た. Thứ tự việc làm là: việc trước まえに xảy ra sau. | The verb before まえに is always in dictionary form, never 〜た. The action before まえに happens second.
+compare: まえに: việc ở sau mới làm trước. 〜てから: việc ở trước làm trước. | まえに: the action NOT marked comes first. 〜てから: the marked action comes first.
+tip: まえに = "trước khi": ăn cơm まえに rửa tay, cứ dùng thể từ điển, không bận tâm quá khứ.
+search: まえに
+ex: {寝|ね}るまえに、{本|ほん}を{読|よ}みます。 | Trước khi ngủ, tôi đọc sách. | Before going to bed, I read a book.
+ex: {食事|しょくじ}のまえに、{手|て}を{洗|あら}います。 | Trước bữa ăn, tôi rửa tay. | Before a meal, I wash my hands.
+ex: {会社|かいしゃ}へ{行|い}くまえに、{朝|あさ}ごはんを{食|た}べます。 | Trước khi đến công ty, tôi ăn sáng. | Before going to the office, I eat breakfast.
+ex: {日本|にほん}へ{来|く}るまえに、{日本語|にほんご}を{勉強|べんきょう}しました。 | Trước khi đến Nhật, tôi đã học tiếng Nhật. | Before coming to Japan, I studied Japanese.
+kind: conj
+q: {私|わたし}は<{寝|ね}る>まえに、お{風呂|ふろ}に{入|はい}ります。 | Trước khi ngủ, tôi tắm. | Before going to bed, I take a bath. | c: {寝|ね}ます
+q: {会社|かいしゃ}へ<{行|い}く>まえに、コーヒーを{飲|の}みます。 | Trước khi đến công ty, tôi uống cà phê. | Before going to work, I drink coffee. | c: {行|い}きます
+q: ケンタさんは<{出|で}かける>まえに、{天気|てんき}を{見|み}ました。 | Trước khi ra ngoài, Kenta đã xem thời tiết. | Kenta checked the weather before going out. | c: {出|で}かけます
+q: {家|いえ}に<{帰|かえ}る>まえに、{買|か}い{物|もの}をします。 | Trước khi về nhà, tôi đi mua sắm. | Before going home, I do some shopping. | c: {帰|かえ}ります
+q: {ご飯|はん}を{食|た}べる[まえに]、「いただきます」と{言|い}います。 | Trước khi ăn cơm, tôi nói "itadakimasu". | Before eating, I say "itadakimasu". | o: あとで/てから/ときに | t: {ご飯|はん}を/{食|た}べる/まえに、/「いただきます」と *3 | e: 3 > あとに | ev: "Trước khi" là まえに, あとに là "sau khi". | ee: "Before" is まえに; あとに means "after".
+q: {勉強|べんきょう}する[まえに]、{少|すこ}し{休|やす}みます。 | Trước khi học, tôi nghỉ một chút. | Before studying, I rest a little. | o: あとで/てから/とき | t: {勉強|べんきょう}する/まえに、/{少|すこ}し/{休|やす}みます *2
+q: {食事|しょくじ}[の]まえに、お{茶|ちゃ}を{飲|の}みます。 | Trước bữa ăn, tôi uống trà. | Before the meal, I drink tea. | o: が/を/に | t: {食事|しょくじ}/の/まえに、/お{茶|ちゃ}を *2 | e: 2 > を | ev: Danh từ + の + まえに. | ee: Noun + の + まえに.
+q: {友達|ともだち}に{会|あ}う[まえに]、{電話|でんわ}をします。 | Trước khi gặp bạn, tôi gọi điện. | Before meeting a friend, I make a call. | o: あとで/てから/ないで | t: {友達|ともだち}に/{会|あ}う/まえに、/{電話|でんわ}を *3 | e: 2 > {会|あ}った | ev: Trước まえに luôn là thể từ điển, không dùng 〜た. | ee: Before まえに always use the dictionary form, never 〜た.
+q: {本|ほん}を{借|か}りる[まえに]、{名前|なまえ}を{書|か}きます。 | Trước khi mượn sách, tôi viết tên. | Before borrowing a book, I write my name. | o: あとで/てから/ない | t: {本|ほん}を/{借|か}りる/まえに、/{名前|なまえ}を *3
+q: {試験|しけん}の[まえに]、よく{勉強|べんきょう}します。 | Trước kỳ thi, tôi học kỹ. | Before the exam, I study hard. | o: が/を/に | t: {試験|しけん}の/まえに、/よく/{勉強|べんきょう}します *2
+
+@p
+form: Thể thường (V / A / N だ)
+name: Thể thường (普通形) | Plain form (普通形)
+explain: Dạng ngắn không có ます/です, dùng với bạn bè, người thân và là nền của nhiều mẫu sau. Động từ: thể từ điển (たべる) và thể ない (たべない). Tính từ い: giữ nguyên (たかい, たかくない). Tính từ な và danh từ: です→だ, じゃありません→じゃない (しずかだ, しずかじゃない, がくせいだ, がくせいじゃない). | The short form without ます/です, used with friends and family and underlying many later patterns. Verbs: dictionary form (たべる) and ない-form (たべない). い-adjectives: unchanged (たかい, たかくない). な-adjectives and nouns: です→だ, じゃありません→じゃない (しずかだ, しずかじゃない, がくせいだ, がくせいじゃない).
+note: Thể thường quá khứ dùng thể た (bài sau). Đây là phần hay thi dù gần mức N4: dùng nhiều trong hội thoại và trước とき, でしょう. | The plain past uses the た-form (next lesson). Often tested even if borderline N4; it appears constantly in conversation and before とき and でしょう.
+compare: です/ます lịch sự, dùng với người lạ, cấp trên. Thể thường thân mật, dùng với bạn bè, gia đình; không dùng với thầy cô hay sếp. | です/ます is polite, for strangers and superiors. Plain form is casual, for friends and family; not for teachers or bosses.
+tip: Tính từ い đã là thể thường rồi; chỉ có な-adj và danh từ mới đổi です thành だ.
+ex: ケンタは{朝|あさ}ごはんを{食|た}べない。 | Kenta không ăn sáng. | Kenta doesn't eat breakfast.
+ex: この{町|まち}は{静|しず}かだ。 | Thị trấn này yên tĩnh. | This town is quiet.
+ex: この{本|ほん}は{高|たか}くない。 | Quyển sách này không đắt. | This book isn't expensive.
+ex: ユキは{会社員|かいしゃいん}だ。 | Yuki là nhân viên công ty. | Yuki is an office worker.
+kind: conj
+q: この{本|ほん}は<{高|たか}くない>よ。 | Quyển sách này không đắt đâu. | This book isn't expensive. | c: {高|たか}い
+q: ケンタは{朝|あさ}ごはんを<{食|た}べない>。 | Kenta không ăn sáng. | Kenta doesn't eat breakfast. | c: {食|た}べる
+q: この{町|まち}は<{静|しず}かだ>。 | Thị trấn này yên tĩnh. | This town is quiet. | c: {静|しず}か
+q: {田中|たなか}さんは{今日|きょう}{会社|かいしゃ}に<{来|こ}ない>。 | Hôm nay ông Tanaka không đến công ty. | Mr. Tanaka isn't coming to the office today. | c: {来|く}る
+q: ユキは{学生|がくせい}[じゃない]。 | Yuki không phải sinh viên. | Yuki isn't a student. | o: だじゃない/じゃだ/くない | t: ユキは/{学生|がくせい}/じゃ/ない *3 | e: 3 > だ | ev: Phủ định của danh từ là じゃない, không phải だない. | ee: A noun is negated with じゃない, not だない.
+q: この{部屋|へや}は{静|しず}か[だ]。 | Căn phòng này yên tĩnh. | This room is quiet. | o: い/な/くない | t: この/{部屋|へや}は/{静|しず}か/だ *4 | e: 4 > い | ev: Tính từ な dùng だ, không thêm い. | ee: な-adjectives take だ, not い.
+q: {今日|きょう}は{天気|てんき}が{悪|わる}[い]。 | Hôm nay thời tiết xấu. | The weather is bad today. | o: だ/くない/な | t: {今日|きょう}は/{天気|てんき}が/{悪|わる}い/。 *3 | e: 3 > {悪|わる}いだ | ev: Tính từ い không thêm だ ở thể thường. | ee: い-adjectives take no だ in the plain form.
+q: {私|わたし}は{毎日|まいにち}{漢字|かんじ}を{勉強|べんきょう}[する]。 | Mỗi ngày tôi học chữ Hán. | I study kanji every day. | o: します/すます/だ | t: {私|わたし}は/{毎日|まいにち}/{漢字|かんじ}を/{勉強|べんきょう}する *4 | e: 4 > {勉強|べんきょう}します | ev: Thể thường dùng する, không dùng します (lịch sự). | ee: The plain form uses する, not the polite します.
+q: ケンタはゲームが{好|す}き[だ]。 | Kenta thích game. | Kenta likes games. | o: い/な/です | t: ケンタは/ゲームが/{好|す}き/だ *4
+q: {明日|あした}は{休|やす}み[だ]。 | Ngày mai là ngày nghỉ. | Tomorrow is a day off. | o: です/い/する | t: {明日|あした}は/{休|やす}み/だ/。 *3

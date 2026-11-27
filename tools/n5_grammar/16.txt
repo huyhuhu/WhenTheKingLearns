@@ -1,0 +1,118 @@
+# Bài 16: 天守閣 Thiên thủ các. Mẫu: Mệnh đề bổ nghĩa danh từ · adj く/に なります · N に なります · 〜でしょう · 〜とき
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: Thể thường N
+name: Mệnh đề bổ nghĩa danh từ | Noun-modifying clauses
+explain: Đặt cả một mệnh đề ở thể thường ngay trước danh từ để mô tả danh từ đó. Khác tiếng Việt (danh từ đứng trước), tiếng Nhật để mệnh đề đứng trước: 私が書いた手紙 = "lá thư mà tôi đã viết". Tính từ な + な, danh từ + の. | Put a whole plain-form clause right before the noun to describe it. Unlike Vietnamese (noun first), Japanese puts the clause first: 私が書いた手紙 = "the letter I wrote". な-adjectives take な, nouns take の.
+note: Chủ ngữ trong mệnh đề dùng が (hoặc の), không dùng は: 私が書いた手紙. Trong mệnh đề không dùng ます, dùng thể thường. Phần này gần mức N4 nhưng hay xuất hiện. | The subject inside the clause takes が (or の), not は: 私が書いた手紙. Do not use ます inside the clause; use the plain form. Borderline N4 but common.
+compare: Tính từ bổ nghĩa đơn giản: 高い本 (sách đắt). Mệnh đề: 昨日買った本 (quyển sách đã mua hôm qua). | A simple adjective: 高い本 (expensive book). A clause: 昨日買った本 (the book I bought yesterday).
+tip: Đọc từ cuối ngược lên: 私が書いた手紙 → "thư" ← "tôi đã viết" → "lá thư mà tôi đã viết".
+search: (た|る|い|ない|ている)(人|物|本|店|映画|手紙|料理|とき)
+ex: これは{私|わたし}が{書|か}いた{手紙|てがみ}です。 | Đây là lá thư tôi đã viết. | This is the letter I wrote.
+ex: {昨日|きのう}{見|み}た{映画|えいが}は{面白|おもしろ}かったです。 | Bộ phim tôi xem hôm qua rất hay. | The movie I saw yesterday was interesting.
+ex: ケンタさんが{好|す}きな{食|た}べ{物|もの}はカレーです。 | Món Kenta thích là cà ri. | The food Kenta likes is curry.
+ex: あそこで{本|ほん}を{読|よ}んでいる{人|ひと}はユキさんです。 | Người đang đọc sách ở đằng kia là Yuki. | The person reading a book over there is Yuki.
+kind: conj
+q: これは{私|わたし}[が]<{書|か}いた>{手紙|てがみ}です。 | Đây là lá thư tôi đã viết. | This is the letter I wrote. | o: は/を/に | c: {書|か}く | t: これは/{私|わたし}が/{書|か}いた/{手紙|てがみ}です *3 | e: 3 > {書|か}きます | ev: Trước danh từ dùng thể thường, không dùng ます. | ee: Before a noun use the plain form, not ます.
+q: ケンタさんが<{買|か}った>ゲームは{面白|おもしろ}いです。 | Trò chơi Kenta đã mua rất hay. | The game Kenta bought is fun. | c: {買|か}う
+q: あそこで{本|ほん}を<{読|よ}んでいる>{人|ひと}はユキさんです。 | Người đang đọc sách ở đằng kia là Yuki. | The person reading a book over there is Yuki. | c: {読|よ}む
+q: {昨日|きのう}<{見|み}た>{映画|えいが}は{面白|おもしろ}かったです。 | Bộ phim tôi xem hôm qua rất hay. | The movie I saw yesterday was interesting. | c: {見|み}る
+q: {田中|たなか}さん[が]<{行|い}った>{店|みせ}は{安|やす}いです。 | Cửa hàng ông Tanaka đã đến thì rẻ. | The shop Mr. Tanaka went to is cheap. | o: を/に/へ | c: {行|い}く | t: {田中|たなか}さんが/{行|い}った/{店|みせ}は/{安|やす}いです *2
+q: {私|わたし}が<{食|た}べない>{物|もの}はあまりありません。 | Món tôi không ăn thì không nhiều. | There are few things that I don't eat. | c: {食|た}べる
+q: ケンタさんが[{好|す}き]な{食|た}べ{物|もの}はカレーです。 | Món Kenta thích là cà ri. | The food Kenta likes is curry. | o: {好|す}きだ/{好|す}きの/{好|す}きい | t: ケンタさんが/{好|す}きな/{食|た}べ{物|もの}は/カレーです *2 | e: 2 > {好|す}きの | ev: Tính từ な + danh từ dùng な, không dùng の. | ee: な-adjective + noun takes な, not の.
+q: {佐藤|さとう}さん[が]{作|つく}った{料理|りょうり}はおいしいです。 | Món bà Sato nấu rất ngon. | The dish Ms. Sato made is delicious. | o: を/に/へ | t: {佐藤|さとう}さんが/{作|つく}った/{料理|りょうり}は/おいしいです *2 | e: 2 > {作|つく}ります | ev: Trong mệnh đề bổ nghĩa không dùng ます. | ee: Do not use ます inside a modifying clause.
+q: これは{昨日|きのう}{買|か}った[{本|ほん}]です。 | Đây là quyển sách tôi mua hôm qua. | This is the book I bought yesterday. | o: こと/ところ/ため | t: これは/{昨日|きのう}/{買|か}った/{本|ほん}です *3
+q: {毎朝|まいあさ}{走|はし}っている[{人|ひと}]はケンタさんです。 | Người chạy bộ mỗi sáng là Kenta. | The person who runs every morning is Kenta. | o: こと/ところ/ため | t: {毎朝|まいあさ}/{走|はし}っている/{人|ひと}は/ケンタさんです *3
+
+@p
+form: い-adj → く / な-adj → に + なります
+name: 〜くなります・〜になります: "trở nên ..." | 〜くなります・〜になります: "become ..."
+explain: Diễn tả sự thay đổi trạng thái. Tính từ い: bỏ い thêm く (さむい→さむくなります). Tính từ な: thêm に (しずか→しずかになります). Quá khứ: なりました. | Describes a change of state. い-adjective: drop い and add く (さむい→さむくなります). な-adjective: add に (しずか→しずかになります). Past: なりました.
+note: いい → よくなります (bất quy tắc). きれい, ゆうめい... là tính từ な nên dùng に. | いい → よくなります (irregular). きれい, ゆうめい etc. are な-adjectives, so they take に.
+compare: 〜くなります dùng cho tính từ, 〜になります dùng cho danh từ (bài này) và tính từ な. | 〜くなります is for adjectives; 〜になります is for nouns (next pattern) and な-adjectives.
+tip: い → く, な → に, rồi thêm なります. Như tiếng Việt "trở nên".
+search: (く|に)なり(ます|ました)
+ex: {冬|ふゆ}は{寒|さむ}くなります。 | Mùa đông trời trở lạnh. | It gets cold in winter.
+ex: {天気|てんき}が{良|よ}くなりました。 | Thời tiết đã tốt lên. | The weather has improved.
+ex: この{町|まち}は{静|しず}かになりました。 | Thị trấn này đã trở nên yên tĩnh. | This town has become quiet.
+ex: ユキさんは{日本語|にほんご}が{上手|じょうず}になりました。 | Yuki đã giỏi tiếng Nhật hơn. | Yuki has become good at Japanese.
+kind: conj
+q: {冬|ふゆ}は<{寒|さむ}く>なります。 | Mùa đông trời trở lạnh. | It gets cold in winter. | c: {寒|さむ}い | t: {冬|ふゆ}は/{寒|さむ}く/なり/ます *2 | e: 2 > {寒|さむ}い | ev: Trước なります, tính từ い đổi い→く: 寒くなります. | ee: Before なります, い-adjectives change い→く: 寒くなります.
+q: {明日|あした}は{天気|てんき}[が]<{良|よ}く>なります。 | Ngày mai thời tiết sẽ tốt lên. | The weather will get better tomorrow. | o: を/に/も | c: いい
+q: この{町|まち}は<{静|しず}かに>なりました。 | Thị trấn này đã trở nên yên tĩnh. | This town has become quiet. | c: {静|しず}か
+q: ユキさん[は]{日本語|にほんご}が<{上手|じょうず}に>なりました。 | Yuki đã giỏi tiếng Nhật hơn. | Yuki has become good at Japanese. | o: を/に/へ | c: {上手|じょうず}
+q: {夏|なつ}[は]<{暑|あつ}く>なります。 | Mùa hè trời trở nóng. | It gets hot in summer. | o: を/に/へ | c: {暑|あつ}い | t: {夏|なつ}は/{暑|あつ}く/なり/ます *2 | e: 2 > {暑|あつ}い | ev: い-adj phải đổi い→く trước なります. | ee: An い-adjective must change い→く before なります.
+q: {部屋|へや}が<きれいに>なりました。 | Căn phòng đã trở nên sạch đẹp. | The room has become clean. | c: きれい
+q: {朝|あさ}は{寒|さむ}[く]なりました。 | Buổi sáng trời đã trở lạnh. | The mornings have gotten cold. | o: に/い/くて | t: {朝|あさ}は/{寒|さむ}く/なり/ました *2 | e: 2 > {寒|さむ}に | ev: い-adj dùng く, không dùng に. | ee: い-adjectives take く, not に.
+q: {町|まち}が{静|しず}か[に]なりました。 | Thị trấn đã trở nên yên tĩnh. | The town has become quiet. | o: く/な/で | t: {町|まち}が/{静|しず}かに/なり/ました *2 | e: 2 > {静|しず}かく | ev: Tính từ な dùng に, không dùng く. | ee: な-adjectives take に, not く.
+q: {子|こ}どもが{大|おお}き[く]なりました。 | Đứa trẻ đã lớn lên. | The child has grown big. | o: に/い/な | t: {子|こ}どもが/{大|おお}きく/なり/ました *2 | e: 2 > {大|おお}きに | ev: 大きい là tính từ い, dùng く. | ee: 大きい is an い-adjective, so it takes く.
+
+@p
+form: N に なります
+name: N になります: "trở thành N" | N になります: "become N"
+explain: Nói ai hoặc cái gì trở thành N (nghề, tuổi, mùa, giờ...). Dùng trợ từ に trước なります. | Says someone or something becomes N (job, age, season, time...). Use the particle に before なります.
+note: Dùng に, không dùng を hay が: 春になります (không phải 春がなります). Dùng cho tuổi và giờ rất tự nhiên: 十二時になりました. | Use に, not を or が: 春になります. Very natural for ages and times: 十二時になりました.
+tip: Danh từ + に + なる = "trở thành": 先生になる = trở thành giáo viên.
+search: になり(ます|ました)
+ex: {私|わたし}は{来年|らいねん}、{二十六歳|にじゅうろくさい}になります。 | Sang năm tôi sẽ 26 tuổi. | I will be 26 next year.
+ex: {弟|おとうと}は{医者|いしゃ}になりました。 | Em trai tôi đã trở thành bác sĩ. | My younger brother became a doctor.
+ex: もうすぐ{春|はる}になります。 | Sắp sang xuân rồi. | Spring is coming soon.
+ex: ケンタさんは{先生|せんせい}になりました。 | Kenta đã trở thành giáo viên. | Kenta has become a teacher.
+q: {春|はる}[に]なりました。 | Xuân đã đến. | Spring has come. | o: が/を/で | t: {春|はる}/に/なり/ました *2 | e: 2 > を | ev: Dùng に trước なります, không dùng を. | ee: Use に before なります, not を.
+q: {私|わたし}は{来年|らいねん}、{二十六歳|にじゅうろくさい}[に]なります。 | Sang năm tôi sẽ 26 tuổi. | I will be 26 next year. | o: を/が/で | t: {私|わたし}は/{来年|らいねん}、/{二十六歳|にじゅうろくさい}/になります *4 | e: 4 > がなります | ev: Danh từ đi với に: 〜になります. | ee: A noun takes に: 〜になります.
+q: {弟|おとうと}は[{医者|いしゃ}]になりました。 | Em trai tôi đã trở thành bác sĩ. | My younger brother became a doctor. | o: {病院|びょういん}/{薬|くすり}/{会社|かいしゃ}
+q: もうすぐ{夏|なつ}[に]なります。 | Sắp sang hè rồi. | Summer is coming soon. | o: が/を/へ
+q: {昨日|きのう}から{雨|あめ}[に]なりました。 | Từ hôm qua trời đã chuyển sang mưa. | It has turned rainy since yesterday. | o: を/が/で
+q: ユキさんは{去年|きょねん}{会社員|かいしゃいん}[に]なりました。 | Năm ngoái Yuki đã trở thành nhân viên công ty. | Yuki became an office worker last year. | o: が/を/へ | t: ユキさんは/{去年|きょねん}/{会社員|かいしゃいん}/になりました *4 | e: 4 > がなりました | ev: Dùng に: 会社員になりました. | ee: Use に: 会社員になりました.
+q: {十二時|じゅうにじ}[に]なりました。 | Đã đến 12 giờ. | It has become twelve o'clock. | o: が/を/へ | t: {十二時|じゅうにじ}/に/なり/ました *2 | e: 2 > が | ev: Giờ giấc: 〜時になりました (dùng に). | ee: For time: 〜時になりました (with に).
+q: ケンタさんは{先生|せんせい}[に]なりました。 | Kenta đã trở thành giáo viên. | Kenta has become a teacher. | o: を/が/へ | t: ケンタさんは/{先生|せんせい}/に/なりました *3
+q: ユキさんは{二十五歳|にじゅうごさい}[に]なりました。 | Yuki đã tròn 25 tuổi. | Yuki has turned 25. | o: を/が/で
+q: {五月|ごがつ}[に]なりました。 | Đã sang tháng Năm. | It has become May. | o: が/を/で
+
+@p
+form: Thể thường でしょう
+name: 〜でしょう: "chắc là ..." | 〜でしょう: "probably ..."
+explain: Phỏng đoán của người nói (khoảng 70%): "chắc là ...". Gắn sau thể thường của động từ và tính từ い; tính từ な và danh từ bỏ だ: 雨でしょう. Nếu lên giọng thì là hỏi xác nhận "... đúng không?". | The speaker's guess (about 70% sure): "probably ...". Attach to the plain form of verbs and い-adjectives; な-adjectives and nouns drop だ: 雨でしょう. With rising intonation it asks for confirmation: "... right?"
+note: Không nói 雨だでしょう hay 静かだでしょう. Dự báo thời tiết hay dùng: 明日は雨でしょう。Phần này hay thi dù gần mức N4. | Do not say 雨だでしょう or 静かだでしょう. Weather forecasts use it a lot: 明日は雨でしょう。Often tested even if borderline N4.
+compare: 〜です: khẳng định chắc chắn. 〜でしょう: phỏng đoán, không chắc chắn. | 〜です: a firm statement. 〜でしょう: a guess, not certain.
+tip: でしょう = "chắc là", nghe như dự báo thời tiết: あしたは雨でしょう。
+search: でしょう
+ex: {明日|あした}は{雨|あめ}でしょう。 | Ngày mai chắc là mưa. | Tomorrow will probably be rainy.
+ex: {田中|たなか}さんは{今日|きょう}{来|こ}ないでしょう。 | Hôm nay chắc ông Tanaka không đến. | Mr. Tanaka probably won't come today.
+ex: この{店|みせ}は{高|たか}いでしょう。 | Cửa hàng này chắc là đắt. | This shop is probably expensive.
+ex: ユキさんは{忙|いそが}しいでしょう。 | Yuki chắc là bận. | Yuki is probably busy.
+q: {明日|あした}は{雨|あめ}[でしょう]。 | Ngày mai chắc là mưa. | Tomorrow will probably be rainy. | o: だでしょう/ですでしょう/でしょうです | t: {明日|あした}/は/{雨|あめ}/でしょう *4 | e: 4 > だでしょう | ev: Danh từ + でしょう, không thêm だ. | ee: Noun + でしょう, with no だ.
+q: {田中|たなか}さんは{今日|きょう}{来|こ}ない[でしょう]。 | Hôm nay chắc ông Tanaka không đến. | Mr. Tanaka probably won't come today. | o: ませんでしょう/ですでしょう/だでしょう | t: {田中|たなか}さんは/{今日|きょう}/{来|こ}ない/でしょう *4
+q: この{店|みせ}は{高|たか}い[でしょう]。 | Cửa hàng này chắc là đắt. | This shop is probably expensive. | o: だでしょう/ですでしょう/くでしょう | t: この/{店|みせ}は/{高|たか}い/でしょう *4 | e: 3 > {高|たか}いだ | ev: Tính từ い + でしょう, không thêm だ. | ee: い-adjective + でしょう, with no だ.
+q: ケンタさんは{家|いえ}でゲームをしている[でしょう]。 | Kenta chắc là đang chơi game ở nhà. | Kenta is probably playing games at home. | o: ませんでしょう/ですでしょう/だでしょう | t: ケンタさんは/{家|いえ}で/ゲームを/しているでしょう *4
+q: ユキさんは{忙|いそが}しい[でしょう]。 | Yuki chắc là bận. | Yuki is probably busy. | o: だでしょう/ですでしょう/くでしょう
+q: あの{人|ひと}は{先生|せんせい}[でしょう]。 | Người kia chắc là giáo viên. | That person is probably a teacher. | o: だでしょう/ですでしょう/でしょうです
+q: {今日|きょう}は{寒|さむ}い[でしょう]。 | Hôm nay chắc là lạnh. | It is probably cold today. | o: だでしょう/ですでしょう/くでしょう
+q: {佐藤|さとう}さんは{元気|げんき}[でしょう]。 | Bà Sato chắc là khỏe. | Ms. Sato is probably well. | o: だでしょう/なでしょう/ですでしょう | t: {佐藤|さとう}さん/は/{元気|げんき}/でしょう *3 | e: 3 > {元気|げんき}な | ev: Tính từ な + でしょう, không thêm な hay だ. | ee: な-adjective + でしょう, with no な or だ.
+q: タマは{家|いえ}に{帰|かえ}らない[でしょう]。 | Tama chắc là không về nhà. | Tama probably won't come home. | o: ませんでしょう/ですでしょう/だでしょう
+q: {明日|あした}は{天気|てんき}が{良|よ}い[でしょう]。 | Ngày mai thời tiết chắc là tốt. | The weather will probably be good tomorrow. | o: だでしょう/ですでしょう/くでしょう | t: {明日|あした}は/{天気|てんき}が/{良|よ}い/でしょう *4
+
+@p
+form: V / A / N とき
+name: 〜とき: "khi ..., lúc ..." | 〜とき: "when ..."
+explain: Nói thời điểm hay tình huống: "khi ...". Trước とき dùng thể thường của động từ và tính từ い; tính từ な + な; danh từ + の. | Gives a time or situation: "when ...". Before とき use the plain form of verbs and い-adjectives; な-adjectives + な; nouns + の.
+note: Hay thi dù gần mức N4. Động từ thể từ điển + とき: việc đang/chưa xảy ra (来るとき = lúc đang đến, trên đường đến); thể た + とき: việc đã xong (来たとき = lúc vừa đến nơi). | Often tested even if borderline N4. Dictionary form + とき: action not yet finished (来るとき = on the way here); た-form + とき: action completed (来たとき = when I arrived).
+compare: まえに / あとで chỉ thứ tự trước sau; とき chỉ chung "lúc, khi". | まえに / あとで give strict order; とき just means "at the time of".
+tip: とき đi sau thể thường, nhớ cặp "な + とき" cho tính từ な và "の + とき" cho danh từ.
+search: とき
+ex: {暇|ひま}なとき、{映画|えいが}を{見|み}ます。 | Khi rảnh, tôi xem phim. | When I'm free, I watch movies.
+ex: {日本|にほん}へ{来|く}るとき、{飛行機|ひこうき}に{乗|の}りました。 | Lúc đến Nhật, tôi đã đi máy bay. | When I came to Japan, I took a plane.
+ex: {寒|さむ}いとき、お{茶|ちゃ}を{飲|の}みます。 | Khi trời lạnh, tôi uống trà. | When it's cold, I drink tea.
+ex: {子供|こども}のとき、{大阪|おおさか}に{住|す}んでいました。 | Hồi nhỏ, tôi sống ở Osaka. | When I was a child, I lived in Osaka.
+kind: conj
+q: <{暇|ひま}な>とき、{映画|えいが}を{見|み}ます。 | Khi rảnh, tôi xem phim. | When I'm free, I watch movies. | c: {暇|ひま}
+q: <{分|わ}からない>とき、{先生|せんせい}[に]{聞|き}きます。 | Khi không hiểu, tôi hỏi thầy. | When I don't understand, I ask the teacher. | o: を/が/で | c: {分|わ}かる
+q: {日本|にほん}[へ]<{来|き}た>とき、{一人|ひとり}でした。 | Lúc đến Nhật, tôi chỉ có một mình. | When I came to Japan, I was alone. | o: を/が/で | c: {来|く}る
+q: <{寒|さむ}くない>とき、{散歩|さんぽ}をします。 | Khi trời không lạnh, tôi đi dạo. | When it isn't cold, I take a walk. | c: {寒|さむ}い | t: {寒|さむ}くない/とき、/{散歩|さんぽ}を/します *1
+q: <{学生|がくせい}の>とき、[よく]{泳|およ}ぎました。 | Hồi còn là sinh viên, tôi hay bơi. | When I was a student, I often swam. | o: とても/あまり/まだ | c: {学生|がくせい}
+q: <{忙|いそが}しかった>とき、{食事|しょくじ}をしませんでした。 | Lúc bận, tôi đã không ăn. | When I was busy, I did not eat. | c: {忙|いそが}しい
+q: {暇|ひま}[な]とき、{友達|ともだち}と{遊|あそ}びます。 | Khi rảnh, tôi chơi với bạn. | When I'm free, I play with friends. | o: の/だ/で | t: {暇|ひま}な/とき、/{友達|ともだち}と/{遊|あそ}びます *1 | e: 1 > {暇|ひま}の | ev: Tính từ な + な + とき, không dùng の. | ee: な-adjective + な + とき, not の.
+q: {子供|こども}[の]とき、{大阪|おおさか}に{住|す}んでいました。 | Hồi nhỏ, tôi sống ở Osaka. | When I was a child, I lived in Osaka. | o: な/だ/に | t: {子供|こども}の/とき、/{大阪|おおさか}に/{住|す}んでいました *1 | e: 1 > {子供|こども}な | ev: Danh từ + の + とき. | ee: Noun + の + とき.
+q: {寒|さむ}い[とき]、お{茶|ちゃ}を{飲|の}みます。 | Khi trời lạnh, tôi uống trà. | When it's cold, I drink tea. | o: あとで/まえに/から | t: {寒|さむ}い/とき、/お{茶|ちゃ}を/{飲|の}みます *2 | e: 1 > {寒|さむ}いな | ev: Tính từ い đi thẳng với とき, không thêm な. | ee: い-adjectives go straight before とき, with no な.
+q: {日本|にほん}へ{来|く}る[とき]、{飛行機|ひこうき}に{乗|の}りました。 | Lúc đến Nhật, tôi đã đi máy bay. | When I came to Japan, I took a plane. | o: あとで/から/まで | t: {日本|にほん}へ/{来|く}る/とき、/{飛行機|ひこうき}に *3

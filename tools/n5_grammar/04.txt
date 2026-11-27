@@ -1,0 +1,114 @@
+# Bài 4: 宿場 Trạm dịch. Mẫu: V ます/ません/ました/ませんでした · N を V · (thời điểm) に V · N へ 行きます/来ます/帰ります · N で (phương tiện, nơi chốn)
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: V ます / ません / ました / ませんでした
+name: V ます: động từ lịch sự | V ます: polite verbs
+explain: Dạng lịch sự của động từ có bốn dạng: ます (hiện tại, tương lai), ません (phủ định), ました (quá khứ), ませんでした (quá khứ phủ định). Cả bốn đều không đổi theo ngôi, số. | The polite verb has four forms: ます (present, future), ません (negative), ました (past), ませんでした (past negative). None change with person or number.
+note: Nhóm 1 đổi âm cuối sang cột い rồi thêm ます (飲む → 飲みます); nhóm 2 bỏ る (食べる → 食べます); する → します, 来る → 来ます (きます). | Group 1 changes the last sound to the い-row then adds ます (飲む → 飲みます); group 2 drops る (食べる → 食べます); する → します, 来る → 来ます (きます).
+tip: Tiếng Việt thêm "đã", "không", "đã không" trước động từ; tiếng Nhật đổi đuôi: ます / ません / ました / ませんでした.
+kind: conj
+search: (ます|ません|ました|ませんでした)。
+ex: {毎朝|まいあさ}コーヒーを{飲|の}みます。 | Mỗi sáng tôi uống cà phê. | I drink coffee every morning.
+ex: ケンタさんは{朝|あさ}ごはんを{食|た}べません。 | Kenta không ăn sáng. | Kenta does not eat breakfast.
+ex: {昨日|きのう}、テレビを{見|み}ました。 | Hôm qua tôi đã xem ti vi. | I watched TV yesterday.
+ex: {昨日|きのう}は{会社|かいしゃ}へ{行|い}きませんでした。 | Hôm qua tôi đã không đi đến công ty. | I did not go to the company yesterday.
+q: ユキさんは{毎朝|まいあさ}コーヒーを<{飲|の}みます>。 | Mỗi sáng Yuki uống cà phê. | Yuki drinks coffee every morning. | c: {飲|の}む | t: ユキさんは/{毎朝|まいあさ}/コーヒーを/{飲|の}みます *4 | e: 4 > {飲|の}むます | ev: Với ます phải đổi đuôi む → み: 飲みます, không phải 飲むます. | ee: Before ます, む becomes み: 飲みます, not 飲むます.
+q: ケンタさんは{朝|あさ}ごはんを<{食|た}べません>。 | Kenta không ăn sáng. | Kenta does not eat breakfast. | c: {食|た}べる | t: ケンタさんは/{朝|あさ}ごはんを/{食|た}べ/ません *4
+q: {昨日|きのう}、テレビを<{見|み}ました>。 | Hôm qua tôi đã xem ti vi. | I watched TV yesterday. | c: {見|み}る | t: {昨日|きのう}、/テレビを/{見|み}/ました *4 | e: 4 > ません | ev: "Hôm qua" là quá khứ, dùng ました; ません là phủ định hiện tại. | ee: "Yesterday" needs the past ました; ません is the present negative.
+q: {昨日|きのう}は{会社|かいしゃ}へ<{行|い}きませんでした>。 | Hôm qua tôi đã không đi đến công ty. | I did not go to the company yesterday. | c: {行|い}く | t: {昨日|きのう}は/{会社|かいしゃ}へ/{行|い}き/ませんでした *4 | e: 4 > ません | ev: Quá khứ phủ định là ませんでした; ません chỉ là phủ định hiện tại. | ee: The past negative is ませんでした; ません is only present negative.
+q: {今朝|けさ}は{六時|ろくじ}に<{起|お}きました>。 | Sáng nay tôi đã dậy lúc 6 giờ. | I got up at 6 this morning. | c: {起|お}きる
+q: ユキさんは{昨日|きのう}{本|ほん}を{読|よ}[みました]。 | Hôm qua Yuki đã đọc sách. | Yuki read a book yesterday. | o: んました/みます/みません
+q: {田中|たなか}さんは{毎日|まいにち}{新聞|しんぶん}を{読|よ}[みます]。 | Ông Tanaka đọc báo mỗi ngày. | Mr. Tanaka reads the newspaper every day. | o: むます/んます/みました | t: {田中|たなか}さんは/{毎日|まいにち}/{新聞|しんぶん}を/{読|よ}みます *4
+q: {私|わたし}は{毎晩|まいばん}{十一時|じゅういちじ}に{寝|ね}[ます]。 | Mỗi tối tôi đi ngủ lúc 11 giờ. | I go to bed at eleven every night. | o: るます/ません/ました | t: {毎晩|まいばん}/{十一時|じゅういちじ}/に/{寝|ね}ます *4
+q: {昨日|きのう}は{勉強|べんきょう}[しませんでした]。 | Hôm qua tôi đã không học. | I did not study yesterday. | o: しません/しました/しないでした | t: {昨日|きのう}は/{勉強|べんきょう}/しません/でした *3
+q: ケンタさんは{昨日|きのう}ゲームを[しました]。 | Hôm qua Kenta đã chơi game. | Kenta played games yesterday. | o: します/しません/するました | t: ケンタさんは/{昨日|きのう}/ゲームを/しました *4
+q: {佐藤|さとう}さんの{猫|ねこ}は{何|なに}も{食|た}べ[ませんでした]。 | Con mèo của bà Sato đã không ăn gì cả. | Ms. Sato's cat did not eat anything. | o: ません/ました/ないでした
+
+@p
+form: N を V
+name: N を V: tân ngữ | N を V: the object
+explain: Trợ từ を đánh dấu đối tượng chịu tác động của động từ, như "ăn cơm", "đọc sách". Thứ tự: N を V, động từ đứng cuối câu. | The particle を marks the object of the verb, as in "eat rice" or "read a book". The order is N を V, with the verb at the end.
+note: を viết là を nhưng đọc là "o". Tiếng Việt để tân ngữ sau động từ, tiếng Nhật để trước. | を is written を but read "o". Vietnamese puts the object after the verb; Japanese puts it before.
+tip: Tiếng Nhật xếp "ăn cơm" thành "cơm を ăn": 食べ物を食べます. Động từ luôn là từ cuối.
+search: を.+(ます|ました|ません)
+ex: ユキさんは{本|ほん}を{読|よ}みます。 | Yuki đọc sách. | Yuki reads a book.
+ex: ケンタさんはゲームをします。 | Kenta chơi game. | Kenta plays games.
+ex: {私|わたし}は{水|みず}を{飲|の}みます。 | Tôi uống nước. | I drink water.
+ex: {田中|たなか}さんは{新聞|しんぶん}を{読|よ}みます。 | Ông Tanaka đọc báo. | Mr. Tanaka reads the newspaper.
+q: {毎朝|まいあさ}パン[を]{食|た}べます。 | Mỗi sáng tôi ăn bánh mì. | I eat bread every morning. | o: が/に/で | t: {毎朝|まいあさ}/パン/を/{食|た}べます *3 | e: 3 > に | ev: Tân ngữ của động từ đi với を, không dùng に. | ee: The object of a verb takes を, not に.
+q: ユキさんは{本|ほん}[を]{読|よ}みます。 | Yuki đọc sách. | Yuki reads a book. | o: が/に/へ | t: ユキさんは/{本|ほん}/を/{読|よ}みます *3
+q: ケンタさんはゲーム[を]します。 | Kenta chơi game. | Kenta plays games. | o: が/に/で | t: ケンタさんは/ゲーム/を/します *3 | e: 3 > が | ev: Đối tượng của động từ dùng を; が không thay を ở đây. | ee: The object of the verb takes を; が cannot replace it here.
+q: {私|わたし}は{水|みず}を{飲|の}みます。 | Tôi uống nước. | I drink water. | t: {私|わたし}は/{水|みず}/を/{飲|の}みます *3 | e: 3 > は | ev: は là trợ từ chủ đề; tân ngữ cần を. | ee: は marks the topic; the object needs を.
+q: {田中|たなか}さんは{新聞|しんぶん}[を]{読|よ}みます。 | Ông Tanaka đọc báo. | Mr. Tanaka reads the newspaper. | o: が/に/と | t: {田中|たなか}さんは/{新聞|しんぶん}/を/{読|よ}みます *3
+q: {毎晩|まいばん}{日本語|にほんご}を{勉強|べんきょう}します。 | Mỗi tối tôi học tiếng Nhật. | I study Japanese every night. | t: {毎晩|まいばん}/{日本語|にほんご}/を/{勉強|べんきょう}します *3
+q: {佐藤|さとう}さんは{手紙|てがみ}[を]{書|か}きます。 | Bà Sato viết thư. | Ms. Sato writes a letter. | o: が/に/で
+q: ユキさんはお{茶|ちゃ}[を]{飲|の}みます。 | Yuki uống trà. | Yuki drinks tea. | o: が/に/へ
+q: {音楽|おんがく}を{聞|き}きます。 | Tôi nghe nhạc. | I listen to music. | t: {音楽|おんがく}/を/{聞|き}き/ます *2
+q: {昼|ひる}ごはん[を]{食|た}べました。 | Tôi đã ăn cơm trưa. | I ate lunch. | o: が/に/で
+
+@p
+form: (thời điểm) に V
+name: 〜に: thời điểm | 〜に: at a point in time
+explain: Trợ từ に đứng sau thời điểm cụ thể (giờ, thứ, ngày) để nói động tác xảy ra lúc đó: 七時に起きます. | The particle に follows a specific time (hour, day of the week, date) to say when an action happens: 七時に起きます.
+note: Không dùng に sau từ chung chung: 今日, 昨日, 明日, 毎朝, 毎日, 今朝, 今. Giờ và thứ thì dùng に. | Do not use に after general time words: 今日, 昨日, 明日, 毎朝, 毎日, 今朝, 今. Clock times and weekdays take に.
+tip: Có con số hay tên thứ → thêm に (七時に, 日曜日に). Không có → bỏ (昨日, 毎朝).
+search: [時日曜火水木金土]に
+ex: {七時|しちじ}に{起|お}きます。 | Tôi dậy lúc 7 giờ. | I get up at seven.
+ex: {日曜日|にちようび}に{買|か}い{物|もの}をします。 | Chủ nhật tôi đi mua sắm. | I go shopping on Sunday.
+ex: {九時|くじ}に{会社|かいしゃ}へ{行|い}きます。 | Tôi đi đến công ty lúc 9 giờ. | I go to the company at nine.
+ex: ユキさんは{十一時|じゅういちじ}に{寝|ね}ます。 | Yuki đi ngủ lúc 11 giờ. | Yuki goes to bed at eleven.
+q: {私|わたし}は{六時|ろくじ}[に]{起|お}きます。 | Tôi dậy lúc 6 giờ. | I get up at six. | o: を/で/へ | t: {私|わたし}は/{六時|ろくじ}/に/{起|お}きます *3 | e: 3 > を | ev: Thời điểm cụ thể đi với に, không dùng を. | ee: A specific time takes に, not を.
+q: ユキさんは{十一時|じゅういちじ}[に]{寝|ね}ます。 | Yuki đi ngủ lúc 11 giờ. | Yuki goes to bed at eleven. | o: を/で/が | t: ユキさんは/{十一時|じゅういちじ}/に/{寝|ね}ます *3
+q: {日曜日|にちようび}[に]{買|か}い{物|もの}をします。 | Chủ nhật tôi đi mua sắm. | I go shopping on Sunday. | o: を/で/は | t: {日曜日|にちようび}/に/{買|か}い{物|もの}を/します *2 | e: 2 > を | ev: Thứ trong tuần đi với に. | ee: A day of the week takes に.
+q: {田中|たなか}さんは{八時|はちじ}{半|はん}に{会社|かいしゃ}へ{来|き}ます。 | Ông Tanaka đến công ty lúc 8 giờ rưỡi. | Mr. Tanaka comes to the company at 8:30. | t: {八時|はちじ}{半|はん}/に/{会社|かいしゃ}へ/{来|き}ます *2 | e: 2 > で | ev: Giờ giấc đi với に; で chỉ phương tiện, nơi chốn. | ee: Clock times take に; で marks means or place.
+q: ケンタさんは{土曜日|どようび}[に]ゲームをします。 | Thứ Bảy Kenta chơi game. | Kenta plays games on Saturday. | o: を/で/が
+q: {私|わたし}は{昨日|きのう}{七時|しちじ}に{起|お}きました。 | Hôm qua tôi đã dậy lúc 7 giờ. | I got up at seven yesterday. | t: {昨日|きのう}/{七時|しちじ}/に/{起|お}きました *3 | e: 1 > {昨日|きのう}に | ev: 昨日 là từ thời gian chung chung nên không đi với に; chỉ sau 七時. | ee: 昨日 is a general time word and takes no に; only 七時 does.
+q: {火曜日|かようび}に{病院|びょういん}へ{行|い}きます。 | Thứ Ba tôi đi bệnh viện. | I go to the hospital on Tuesday. | t: {火曜日|かようび}/に/{病院|びょういん}へ/{行|い}きます *2
+q: {毎朝|まいあさ}{七時|しちじ}[に]{朝|あさ}ごはんを{食|た}べます。 | Mỗi sáng tôi ăn sáng lúc 7 giờ. | I eat breakfast at seven every morning. | o: を/で/が
+q: {昨日|きのう}は{十二時|じゅうにじ}[に]{寝|ね}ました。 | Hôm qua tôi đã đi ngủ lúc 12 giờ. | I went to bed at twelve yesterday. | o: を/で/へ
+
+@p
+form: N へ 行きます / 来ます / 帰ります
+name: N へ 行きます・来ます・帰ります: di chuyển | N へ 行きます・来ます・帰ります: going, coming, returning
+explain: Trợ từ へ (đọc "e") chỉ hướng, đích đến của các động từ di chuyển: 行きます (đi), 来ます (đến), 帰ります (về). に cũng dùng được ở đây. | The particle へ (read "e") marks the direction or destination of motion verbs: 行きます (go), 来ます (come), 帰ります (return). に also works here.
+note: Địa điểm của động từ di chuyển KHÔNG dùng を ở N5: 会社を行きます là sai. | At N5, the destination of a motion verb never takes を: 会社を行きます is wrong.
+tip: へ như mũi tên chỉ hướng "→": 会社へ行きます = "đi → công ty".
+search: へ(行|来|帰)
+ex: {私|わたし}は{毎日|まいにち}{会社|かいしゃ}へ{行|い}きます。 | Mỗi ngày tôi đi đến công ty. | I go to the company every day.
+ex: {友達|ともだち}は{日本|にほん}へ{来|き}ました。 | Bạn tôi đã đến Nhật Bản. | My friend came to Japan.
+ex: {田中|たなか}さんは{六時|ろくじ}に{家|うち}へ{帰|かえ}ります。 | Ông Tanaka về nhà lúc 6 giờ. | Mr. Tanaka goes home at six.
+ex: ユキさんは{図書館|としょかん}へ{行|い}きます。 | Yuki đi đến thư viện. | Yuki goes to the library.
+q: {私|わたし}は{会社|かいしゃ}[へ]{行|い}きます。 | Tôi đi đến công ty. | I go to the company. | o: を/が/で | t: {私|わたし}は/{会社|かいしゃ}/へ/{行|い}きます *3 | e: 3 > を | ev: Đích đến của động từ di chuyển dùng へ (hoặc に), không dùng を. | ee: The destination of a motion verb takes へ (or に), not を.
+q: ユキさんは{図書館|としょかん}[へ]{行|い}きます。 | Yuki đi đến thư viện. | Yuki goes to the library. | o: を/が/で | t: ユキさんは/{図書館|としょかん}/へ/{行|い}きます *3
+q: {田中|たなか}さんは{六時|ろくじ}に{家|うち}へ{帰|かえ}ります。 | Ông Tanaka về nhà lúc 6 giờ. | Mr. Tanaka goes home at six. | t: {六時|ろくじ}に/{家|うち}/へ/{帰|かえ}ります *3 | e: 3 > で | ev: Hướng về nhà dùng へ; で chỉ nơi diễn ra hành động. | ee: Direction home uses へ; で marks where an action happens.
+q: {友達|ともだち}は{日本|にほん}[へ]{来|き}ました。 | Bạn tôi đã đến Nhật Bản. | My friend came to Japan. | o: を/が/で | t: {友達|ともだち}は/{日本|にほん}/へ/{来|き}ました *3
+q: {明日|あした}、{学校|がっこう}[へ]{行|い}きます。 | Ngày mai tôi đi đến trường. | I go to school tomorrow. | o: を/が/で
+q: {毎日|まいにち}{駅|えき}[へ]{行|い}きます。 | Mỗi ngày tôi đi đến ga. | I go to the station every day. | o: を/が/で | t: {毎日|まいにち}/{駅|えき}/へ/{行|い}きます *3 | e: 3 > を | ev: Không dùng を cho nơi đến của 行きます. | ee: Do not use を for the destination of 行きます.
+q: {今日|きょう}は{五時|ごじ}に{家|うち}[へ]{帰|かえ}ります。 | Hôm nay tôi về nhà lúc 5 giờ. | I go home at five today. | o: を/が/で
+q: {佐藤|さとう}さんの{家|いえ}へ{行|い}きます。 | Tôi đi đến nhà bà Sato. | I go to Ms. Sato's house. | t: {佐藤|さとう}さんの/{家|いえ}/へ/{行|い}きます *3
+q: {昨日|きのう}、{銀行|ぎんこう}へ{行|い}きました。 | Hôm qua tôi đã đi ngân hàng. | I went to the bank yesterday. | t: {昨日|きのう}、/{銀行|ぎんこう}/へ/{行|い}きました *3
+q: {先生|せんせい}は{教室|きょうしつ}へ{来|き}ました。 | Giáo viên đã đến lớp học. | The teacher came to the classroom. | t: {先生|せんせい}は/{教室|きょうしつ}/へ/{来|き}ました *3
+
+@p
+form: N で V (phương tiện, nơi chốn)
+name: N で: bằng, tại | N で: by means of, at
+explain: Trợ từ で đứng sau phương tiện (電車で: bằng tàu điện) hoặc sau nơi diễn ra hành động (図書館で: ở thư viện). | The particle で follows a means (電車で: by train) or the place where an action happens (図書館で: at the library).
+note: で chỉ nơi hành động diễn ra; へ・に chỉ nơi đến. 図書館で本を読みます (đọc ở thư viện) khác 図書館へ行きます (đi tới thư viện). | で marks where an action takes place; へ・に mark the destination. 図書館で本を読みます (read at the library) differs from 図書館へ行きます (go to the library).
+compare: 駅へ行きます: đích đến. 駅で会います: nơi gặp nhau, hành động xảy ra ở đó. | 駅へ行きます: destination. 駅で会います: the place where the meeting happens.
+tip: で = "bằng" hoặc "ở (chỗ làm việc)": 電車で行きます = "đi bằng tàu", 家で食べます = "ăn ở nhà".
+search: で.+(ます|ました|ません)
+ex: {電車|でんしゃ}で{会社|かいしゃ}へ{行|い}きます。 | Tôi đi đến công ty bằng tàu điện. | I go to the company by train.
+ex: {図書館|としょかん}で{本|ほん}を{読|よ}みます。 | Tôi đọc sách ở thư viện. | I read books at the library.
+ex: {田中|たなか}さんはタクシーで{家|うち}へ{帰|かえ}ります。 | Ông Tanaka về nhà bằng taxi. | Mr. Tanaka goes home by taxi.
+ex: ケンタさんは{食堂|しょくどう}で{昼|ひる}ごはんを{食|た}べます。 | Kenta ăn cơm trưa ở nhà ăn. | Kenta eats lunch at the cafeteria.
+q: {電車|でんしゃ}[で]{会社|かいしゃ}へ{行|い}きます。 | Tôi đi đến công ty bằng tàu điện. | I go to the company by train. | o: に/を/へ | t: {電車|でんしゃ}/で/{会社|かいしゃ}へ/{行|い}きます *2 | e: 2 > を | ev: Phương tiện đi với で, không dùng を. | ee: A means of transport takes で, not を.
+q: {図書館|としょかん}[で]{本|ほん}を{読|よ}みます。 | Tôi đọc sách ở thư viện. | I read books at the library. | o: に/を/へ | t: {図書館|としょかん}/で/{本|ほん}を/{読|よ}みます *2 | e: 2 > へ | ev: Nơi diễn ra hành động dùng で; へ chỉ hướng di chuyển. | ee: The place of an action takes で; へ marks a direction of motion.
+q: ユキさんはバス[で]{駅|えき}へ{来|き}ました。 | Yuki đã đến ga bằng xe buýt. | Yuki came to the station by bus. | o: に/を/が | t: ユキさんは/バス/で/{駅|えき}へ *3
+q: {家|うち}でテレビを{見|み}ます。 | Tôi xem ti vi ở nhà. | I watch TV at home. | t: {家|うち}/で/テレビを/{見|み}ます *2 | e: 2 > に | ev: Nơi diễn ra hành động (xem ti vi) dùng で. | ee: The place where an action happens (watching TV) takes で.
+q: {田中|たなか}さんはタクシーで{家|うち}へ{帰|かえ}ります。 | Ông Tanaka về nhà bằng taxi. | Mr. Tanaka goes home by taxi. | t: タクシー/で/{家|うち}へ/{帰|かえ}ります *2
+q: {会社|かいしゃ}[で]{仕事|しごと}をします。 | Tôi làm việc ở công ty. | I work at the company. | o: に/を/へ
+q: {車|くるま}[で]{学校|がっこう}へ{行|い}きます。 | Tôi đi đến trường bằng ô tô. | I go to school by car. | o: に/を/が
+q: ケンタさんは{食堂|しょくどう}で{昼|ひる}ごはんを{食|た}べます。 | Kenta ăn cơm trưa ở nhà ăn. | Kenta eats lunch at the cafeteria. | t: ケンタさんは/{食堂|しょくどう}/で/{昼|ひる}ごはんを *3
+q: {飛行機|ひこうき}[で]{日本|にほん}へ{来|き}ました。 | Tôi đã đến Nhật Bản bằng máy bay. | I came to Japan by plane. | o: に/を/が
+q: {自転車|じてんしゃ}で{銀行|ぎんこう}へ{行|い}きます。 | Tôi đi đến ngân hàng bằng xe đạp. | I go to the bank by bicycle. | t: {自転車|じてんしゃ}/で/{銀行|ぎんこう}へ/{行|い}きます *2

@@ -1,0 +1,121 @@
+# Bài 1: 関所 Trạm gác. Mẫu: N は N です · じゃありません · 〜か · N の N · も
+#
+# ĐỊNH DẠNG (mọi file 01.txt … 16.txt dùng chung)
+# Mỗi mẫu bắt đầu bằng dòng "@p", sau đó là các dòng "khoá: giá trị":
+#   form:    công thức, các phần cách nhau bằng dấu cách. N, V, A, Vます, Vて, い-adj, な-adj... hiện thành khối màu.
+#   name:    tên VI | tên EN
+#   explain: giải thích VI | EN (1–3 câu ngắn)
+#   note:    lưu ý dễ sai VI | EN (có thể bỏ)
+#   compare: so sánh với mẫu dễ nhầm VI | EN (có thể bỏ)
+#   tip:     mẹo của Thái phó, chỉ tiếng Việt (có thể bỏ)
+#   search:  biểu thức chính quy để dò câu trong podcast (có thể bỏ)
+#   pod:     n5-0012 3 = tập và số thứ tự dòng tiếng Nhật đã chọn (có thể bỏ; build_grammar.py --pod liệt kê ứng viên)
+#   kind:    conj nếu mẫu có chia động/tính từ (cần ít nhất 3 câu có c:)
+#   ex:      câu ví dụ: tiếng Nhật | dịch VI | dịch EN  (3–4 câu)
+#   q:       câu bài tập: tiếng Nhật | dịch VI | dịch EN | rồi các trường "khoá: giá trị" (8–12 câu)
+#
+# Trong câu tiếng Nhật: mọi chữ Hán có furigana {漢字|かんじ}. Nhân vật: ユキさん, ケンタ, 田中さん, 佐藤さん, 猫のタマ.
+# Các trường của q:
+#   [..] trong câu = chỗ đục lỗ, đi cùng   o: 3 phương án sai, cách nhau "/"
+#   t: 4 mảnh để sắp xếp, đúng thứ tự, cách nhau "/", rồi "*số" = vị trí ★ (1–4). Ghép 4 mảnh phải ra một đoạn liền của câu.
+#   e: số > sai  = câu cho trò Giám định: mảnh thứ "số" của t bị thay bằng "sai"; kèm ev: lý do VI và ee: lý do EN
+#   <..> trong câu = chỗ cần chia, đi cùng   c: dạng gốc (vd. c: {食|た}べる). Người học gõ đúng đoạn trong <..>.
+# Mỗi mẫu cần: ít nhất 6 câu có o, 5 câu có t, 3 câu có e.
+
+@p
+form: N は N です
+name: N は N です: "N là N" | N は N です: "N is N"
+explain: Câu cơ bản nhất để nói ai, cái gì là gì. は đánh dấu chủ đề (điều đang được nói tới), です đứng cuối câu làm câu lịch sự. | The most basic sentence: who or what something is. は marks the topic (what you are talking about), and です ends the sentence politely.
+note: Trợ từ は viết là は nhưng đọc là "wa". Danh từ không đổi theo số ít, số nhiều. | The particle は is written は but read "wa". Nouns do not change for singular or plural.
+tip: Như tiếng Việt "Tôi thì là sinh viên ạ": は ≈ "thì", です ≈ "là ... ạ" nhưng đứng cuối câu.
+search: は.+です。
+ex: {私|わたし}は{学生|がくせい}です。 | Tôi là sinh viên. | I am a student.
+ex: ケンタさんは{友達|ともだち}です。 | Kenta là bạn tôi. | Kenta is my friend.
+ex: タマは{猫|ねこ}です。 | Tama là con mèo. | Tama is a cat.
+ex: {田中|たなか}さんは{先生|せんせい}です。 | Ông Tanaka là giáo viên. | Mr. Tanaka is a teacher.
+q: {私|わたし}[は]{学生|がくせい}です。 | Tôi là sinh viên. | I am a student. | o: を/に/へ | t: {私|わたし}/は/{学生|がくせい}/です *2 | e: 2 > を | ev: Chủ đề của câu đi với は, không dùng を. | ee: The topic takes は, not を.
+q: ケンタさん[は]{留学生|りゅうがくせい}です。 | Kenta là du học sinh. | Kenta is an international student. | o: を/で/へ | t: ケンタさん/は/{留学生|りゅうがくせい}/です *3 | e: 2 > で | ev: "A là B" dùng A は B です. で là trợ từ chỉ nơi chốn, phương tiện. | ee: "A is B" is A は B です. で marks place or means.
+q: タマは{猫|ねこ}[です]。 | Tama là con mèo. | Tama is a cat. | o: ます/を/に | t: タマ/は/{猫|ねこ}/です *4 | e: 4 > ます | ev: Sau danh từ dùng です, không dùng ます (ます đi với động từ). | ee: Nouns take です, not ます (ます goes with verbs).
+q: {田中|たなか}さん[は]{先生|せんせい}です。 | Ông Tanaka là giáo viên. | Mr. Tanaka is a teacher. | o: を/に/と | t: {田中|たなか}さん/は/{先生|せんせい}/です *1
+q: ユキさんは{会社員|かいしゃいん}[です]。 | Yuki là nhân viên công ty. | Yuki is an office worker. | o: ます/を/が | t: ユキさん/は/{会社員|かいしゃいん}/です *2 | e: 4 > ます | ev: Danh từ + です. ます chỉ đi với động từ. | ee: Noun + です. ます only goes with verbs.
+q: {佐藤|さとう}さんは{医者|いしゃ}です。 | Bà Sato là bác sĩ. | Ms. Sato is a doctor. | t: {佐藤|さとう}さん/は/{医者|いしゃ}/です *3
+q: これは{本|ほん}[です]。 | Đây là quyển sách. | This is a book. | o: ます/に/を | t: これ/は/{本|ほん}/です *2
+q: {私|わたし}[は]ユキです。 | Tôi là Yuki. | I am Yuki. | o: を/へ/に | t: {私|わたし}/は/ユキ/です *3 | e: 2 > へ | ev: へ chỉ hướng đi. Giới thiệu bản thân dùng 私は〜です. | ee: へ marks direction. Introducing yourself uses 私は〜です.
+q: ケンタさんは{二十七歳|にじゅうななさい}です。 | Kenta 27 tuổi. | Kenta is 27 years old. | t: ケンタさん/は/{二十七歳|にじゅうななさい}/です *4
+
+@p
+form: N は N じゃありません
+name: N じゃありません: "không phải là N" | N じゃありません: "is not N"
+explain: Thể phủ định của です. Lịch sự hơn và hay gặp trong văn viết là ではありません; khi nói thường dùng じゃありません. | The negative of です. ではありません is more formal and common in writing; じゃありません is usual in speech.
+note: Thể thân mật hơn nữa là じゃないです. Ba cách đều đúng ở N5. | An even more casual form is じゃないです. All three are fine at N5.
+tip: じゃ chính là では nói nhanh, giống "không phải là" nói tắt thành "hổng phải".
+search: (じゃ|では)ありません
+ex: {私|わたし}は{先生|せんせい}じゃありません。 | Tôi không phải là giáo viên. | I am not a teacher.
+ex: タマは{犬|いぬ}じゃありません。{猫|ねこ}です。 | Tama không phải là chó. Là mèo. | Tama is not a dog. It's a cat.
+ex: ケンタさんは{医者|いしゃ}ではありません。 | Kenta không phải là bác sĩ. | Kenta is not a doctor.
+q: {私|わたし}は{先生|せんせい}[じゃありません]。 | Tôi không phải là giáo viên. | I am not a teacher. | o: じゃです/ありません/じゃます | t: {私|わたし}は/{先生|せんせい}/じゃ/ありません *3 | e: 4 > です | ev: Phủ định của です là じゃありません; じゃです không có. | ee: The negative of です is じゃありません; じゃです does not exist.
+q: タマは{犬|いぬ}[じゃ]ありません。 | Tama không phải là chó. | Tama is not a dog. | o: が/を/に | t: タマは/{犬|いぬ}/じゃ/ありません *2
+q: ユキさんは{学生|がくせい}[では]ありません。 | Yuki không phải là sinh viên. | Yuki is not a student. | o: には/を/がは | t: ユキさんは/{学生|がくせい}/では/ありません *3 | e: 3 > を | ev: Phủ định của danh từ là では／じゃありません. | ee: Nouns are negated with では／じゃありません.
+q: これは{傘|かさ}じゃ[ありません]。 | Đây không phải là cái ô. | This is not an umbrella. | o: ないです/ません/あります | t: これは/{傘|かさ}/じゃ/ありません *4
+q: {田中|たなか}さんは{学生|がくせい}じゃありません。{先生|せんせい}です。 | Ông Tanaka không phải là sinh viên. Là giáo viên. | Mr. Tanaka is not a student. He's a teacher. | t: {田中|たなか}さんは/{学生|がくせい}/じゃ/ありません *2 | e: 4 > ます | ev: Thiếu あり: phải là じゃありません. | ee: Missing あり: it must be じゃありません.
+q: ケンタさんは{医者|いしゃ}[じゃないです]。 | Kenta không phải là bác sĩ. | Kenta is not a doctor. | o: じゃです/ないです/じゃありです | t: ケンタさんは/{医者|いしゃ}/じゃ/ないです *4
+q: それは{私|わたし}の{本|ほん}[じゃありません]。 | Đó không phải là sách của tôi. | That is not my book. | o: ありません/じゃます/です
+q: {佐藤|さとう}さんは{先生|せんせい}ではありません。 | Bà Sato không phải là giáo viên. | Ms. Sato is not a teacher. | t: {佐藤|さとう}さんは/{先生|せんせい}/では/ありません *1
+
+@p
+form: 〜 か
+name: 〜か: câu hỏi | 〜か: questions
+explain: Thêm か vào cuối câu là thành câu hỏi, không cần đổi trật tự từ. Trả lời bằng はい (vâng) hoặc いいえ (không). | Add か to the end of a sentence to make a question; the word order stays the same. Answer with はい (yes) or いいえ (no).
+note: Câu hỏi lịch sự thường kết thúc bằng 。 chứ không cần dấu ？. Đọc lên giọng ở か. | Polite questions usually end with 。, not a question mark. Raise your voice on か.
+tip: か giống "không?" của tiếng Việt: "Anh là sinh viên à?" → 学生ですか.
+search: ですか
+ex: ケンタさんは{学生|がくせい}ですか。 | Kenta là sinh viên à? | Is Kenta a student?
+ex: はい、{学生|がくせい}です。 | Vâng, là sinh viên. | Yes, he is a student.
+ex: タマは{犬|いぬ}ですか。いいえ、{猫|ねこ}です。 | Tama là chó à? Không, là mèo. | Is Tama a dog? No, it's a cat.
+q: ユキさんは{会社員|かいしゃいん}です[か]。 | Yuki là nhân viên công ty à? | Is Yuki an office worker? | o: の/も/は | t: ユキさんは/{会社員|かいしゃいん}/です/か *4 | e: 4 > の | ev: Câu hỏi kết thúc bằng か. | ee: Questions end with か.
+q: これは{本|ほん}ですか。[はい]、{本|ほん}です。 | Đây là sách à? Vâng, là sách. | Is this a book? Yes, it is. | o: いいえ/か/も | t: これは/{本|ほん}/です/か *3
+q: {田中|たなか}さんは{先生|せんせい}ですか。[いいえ]、{先生|せんせい}じゃありません。 | Ông Tanaka là giáo viên à? Không, không phải giáo viên. | Is Mr. Tanaka a teacher? No, he isn't. | o: はい/か/ええ | t: {田中|たなか}さんは/{先生|せんせい}/です/か *2
+q: タマは{猫|ねこ}です[か]。 | Tama là mèo à? | Is Tama a cat? | o: よ/ね/も | t: タマは/{猫|ねこ}/です/か *1 | e: 4 > も | ev: Câu hỏi dùng か ở cuối câu. | ee: A question uses か at the end.
+q: ケンタさんは{留学生|りゅうがくせい}ですか。 | Kenta là du học sinh à? | Is Kenta an international student? | t: ケンタさんは/{留学生|りゅうがくせい}/です/か *4 | e: 3 > ます | ev: Danh từ đi với です; ますか dùng cho động từ. | ee: Nouns take です; ますか is for verbs.
+q: {佐藤|さとう}さんは{医者|いしゃ}です[か]。はい、そうです。 | Bà Sato là bác sĩ à? Vâng, đúng vậy. | Is Ms. Sato a doctor? Yes, that's right. | o: は/を/の | t: {佐藤|さとう}さんは/{医者|いしゃ}/です/か *3
+q: それは{傘|かさ}ですか。 | Đó là cái ô à? | Is that an umbrella? | t: それは/{傘|かさ}/です/か *2
+q: あなたは{学生|がくせい}です[か]。 | Bạn là sinh viên à? | Are you a student? | o: は/が/に
+
+@p
+form: N の N
+name: N の N: "N của N" | N の N: "N's N"
+explain: の nối hai danh từ, danh từ trước bổ nghĩa cho danh từ sau: sở hữu (sách của tôi), nơi chốn (giáo viên của trường), loại (sách tiếng Nhật). | の links two nouns; the first describes the second: ownership (my book), belonging (the school's teacher), or kind (a Japanese book).
+note: Thứ tự ngược với tiếng Việt: 私の本 là "sách của tôi", không phải "tôi của sách". | The order is the reverse of Vietnamese: 私の本 is "my book".
+tip: Đọc từ phải sang trái rồi thêm chữ "của": 私の本 → "sách của tôi".
+search: の[^ぁ-ん]
+ex: これは{私|わたし}の{本|ほん}です。 | Đây là sách của tôi. | This is my book.
+ex: {田中|たなか}さんは{日本語|にほんご}の{先生|せんせい}です。 | Ông Tanaka là giáo viên tiếng Nhật. | Mr. Tanaka is a Japanese teacher.
+ex: タマは{佐藤|さとう}さんの{猫|ねこ}です。 | Tama là mèo của bà Sato. | Tama is Ms. Sato's cat.
+q: これは{私|わたし}[の]{本|ほん}です。 | Đây là sách của tôi. | This is my book. | o: は/を/に | t: これは/{私|わたし}/の/{本|ほん}です *3 | e: 3 > が | ev: Nối hai danh từ để chỉ sở hữu dùng の. | ee: Use の to link two nouns for ownership.
+q: タマは{佐藤|さとう}さん[の]{猫|ねこ}です。 | Tama là mèo của bà Sato. | Tama is Ms. Sato's cat. | o: が/は/と | t: タマは/{佐藤|さとう}さん/の/{猫|ねこ}です *2
+q: {田中|たなか}さんは{英語|えいご}[の]{先生|せんせい}です。 | Ông Tanaka là giáo viên tiếng Anh. | Mr. Tanaka is an English teacher. | o: を/に/が | t: {田中|たなか}さんは/{英語|えいご}/の/{先生|せんせい}です *4 | e: 3 > を | ev: "Giáo viên tiếng Anh" là 英語の先生. | ee: "English teacher" is 英語の先生.
+q: それはケンタさん[の]かばんです。 | Đó là cặp của Kenta. | That is Kenta's bag. | o: は/も/か | t: それは/ケンタさん/の/かばんです *1
+q: ユキさんは{会社|かいしゃ}の{人|ひと}です。 | Yuki là người của công ty. | Yuki is from the company. | t: ユキさんは/{会社|かいしゃ}/の/{人|ひと}です *3 | e: 1 > ユキさんを | ev: Chủ đề câu dùng は, không dùng を. | ee: The topic takes は, not を.
+q: これは{日本|にほん}[の]{車|くるま}です。 | Đây là xe ô tô của Nhật. | This is a Japanese car. | o: は/を/で | t: これは/{日本|にほん}/の/{車|くるま}です *4
+q: {私|わたし}の{名前|なまえ}はユキです。 | Tên tôi là Yuki. | My name is Yuki. | t: {私|わたし}/の/{名前|なまえ}は/ユキです *2
+q: あれは{学校|がっこう}[の]{先生|せんせい}です。 | Kia là giáo viên của trường. | That is a teacher at the school. | o: が/を/へ
+
+@p
+form: N も N です
+name: も: "cũng" | も: "also, too"
+explain: も thay cho は khi điều nói về người hay vật này giống với điều vừa nói trước đó: "A cũng là ...". | も replaces は when the same thing is true of this person or thing too: "A is also ...".
+note: も đứng đúng chỗ của は, không đi cùng nhau: không nói はも. | も takes the place of は; never say はも.
+compare: は giới thiệu chủ đề mới; も nói chủ đề này giống cái trước. | は introduces a topic; も says this topic is the same as the last one.
+tip: も là "cũng": ユキさんも学生です → "Yuki cũng là sinh viên".
+search: も.+です
+ex: {私|わたし}は{学生|がくせい}です。ケンタさんも{学生|がくせい}です。 | Tôi là sinh viên. Kenta cũng là sinh viên. | I am a student. Kenta is a student too.
+ex: タマは{猫|ねこ}です。あれも{猫|ねこ}です。 | Tama là mèo. Kia cũng là mèo. | Tama is a cat. That one is a cat too.
+ex: {田中|たなか}さんも{先生|せんせい}ですか。 | Ông Tanaka cũng là giáo viên à? | Is Mr. Tanaka a teacher too?
+q: ユキさんは{会社員|かいしゃいん}です。ケンタさん[も]{会社員|かいしゃいん}です。 | Yuki là nhân viên công ty. Kenta cũng là nhân viên công ty. | Yuki is an office worker. Kenta is also an office worker. | o: の/を/か | t: ケンタさん/も/{会社員|かいしゃいん}/です *2 | e: 2 > はも | ev: も thay hẳn cho は, không dùng はも. | ee: も replaces は completely; はも is wrong.
+q: これは{私|わたし}の{本|ほん}です。それ[も]{私|わたし}の{本|ほん}です。 | Đây là sách của tôi. Đó cũng là sách của tôi. | This is my book. That is my book too. | o: を/の/に | t: それ/も/{私|わたし}の/{本|ほん}です *2
+q: {田中|たなか}さん[も]{先生|せんせい}ですか。 | Ông Tanaka cũng là giáo viên à? | Is Mr. Tanaka a teacher too? | o: の/を/に | t: {田中|たなか}さん/も/{先生|せんせい}/ですか *1 | e: 2 > を | ev: "Cũng" dùng も đứng sau chủ đề. | ee: "Too" is も after the topic.
+q: タマは{猫|ねこ}です。あれ[も]{猫|ねこ}です。 | Tama là mèo. Kia cũng là mèo. | Tama is a cat. That one is a cat too. | o: か/の/を | t: あれ/も/{猫|ねこ}/です *3
+q: {私|わたし}は{学生|がくせい}です。ケンタさんも{学生|がくせい}です。 | Tôi là sinh viên. Kenta cũng là sinh viên. | I am a student. Kenta is a student too. | t: ケンタさん/も/{学生|がくせい}/です *4 | e: 2 > が | ev: Nói "cũng" thì dùng も. | ee: To say "too", use も.
+q: {佐藤|さとう}さん[も]{日本|にほん}の{人|ひと}です。 | Bà Sato cũng là người Nhật. | Ms. Sato is Japanese too. | o: を/の/で | t: {佐藤|さとう}さん/も/{日本|にほん}の/{人|ひと}です *2
+q: ユキさんは{学生|がくせい}じゃありません。ケンタさん[も]{学生|がくせい}じゃありません。 | Yuki không phải là sinh viên. Kenta cũng không phải là sinh viên. | Yuki is not a student. Kenta is not a student either. | o: の/を/が | t: ケンタさん/も/{学生|がくせい}/じゃありません *3
+q: それ[も]ケンタさんのかばんですか。 | Đó cũng là cặp của Kenta à? | Is that Kenta's bag too? | o: を/に/の

@@ -1,0 +1,100 @@
+# Bài 2: 物見櫓 Vọng lâu. Mẫu: これ/それ/あれ · この/その/あの N · ここ/そこ/あそこ/どこ · だれ/なん · 〜ね/〜よ
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: これ / それ / あれ は N です
+name: これ・それ・あれ: "cái này, cái đó, cái kia" | これ・それ・あれ: "this, that, that over there"
+explain: Ba đại từ chỉ đồ vật, đứng một mình thay cho danh từ. これ: vật gần người nói. それ: vật gần người nghe. あれ: vật xa cả hai. | Three pronouns for things, used on their own instead of a noun. これ: near the speaker. それ: near the listener. あれ: far from both.
+note: Hỏi "cái nào?" dùng どれ. Khi người kia hỏi bằng それ (vật gần bạn), bạn trả lời bằng これ. | "Which one?" is どれ. When someone asks with それ (the thing near you), answer with これ.
+tip: Nhớ theo chữ đầu: こ = "gần tôi", そ = "gần bạn", あ = "ở đằng kia", ど = "đâu, nào". Cả bài này đều theo bộ こ・そ・あ・ど.
+search: (これ|それ|あれ)は
+ex: これは{本|ほん}です。 | Đây là quyển sách. | This is a book.
+ex: それは{何|なん}ですか。 | Đó là cái gì? | What is that?
+ex: あれは{駅|えき}です。 | Kia là nhà ga. | That over there is the station.
+ex: ユキさんの{傘|かさ}はどれですか。 | Ô của Yuki là cái nào? | Which one is Yuki's umbrella?
+q: [これ]は{私|わたし}の{辞書|じしょ}です。 | Đây là từ điển của tôi. | This is my dictionary. | o: この/ここ/こちら | t: これ/は/{私|わたし}の/{辞書|じしょ}です *1 | e: 1 > この | ev: この phải đi kèm danh từ phía sau. Đứng một mình dùng これ. | ee: この needs a noun after it. On its own, use これ.
+q: [それ]はケンタさんのかばんですか。 | Đó là cặp của Kenta à? | Is that Kenta's bag? | o: その/そこ/そう | t: それ/は/ケンタさんの/かばんですか *2 | e: 1 > その | ev: その + danh từ; đứng một mình là それ. | ee: その + noun; on its own it is それ.
+q: [あれ]は{駅|えき}です。 | Kia là nhà ga. | That over there is the station. | o: あの/あそこ/ああ | t: あれ/は/{駅|えき}/です *3
+q: {田中|たなか}さんの{傘|かさ}は[どれ]ですか。 | Ô của ông Tanaka là cái nào? | Which one is Mr. Tanaka's umbrella? | o: どの/どこ/なに | t: {田中|たなか}さんの/{傘|かさ}は/どれ/ですか *3 | e: 3 > どの | ev: どの phải có danh từ đi sau. Hỏi "cái nào" đứng một mình là どれ. | ee: どの needs a noun after it. "Which one" on its own is どれ.
+q: それは{何|なん}ですか。[これ]は{辞書|じしょ}です。 | Đó là cái gì? Đây là từ điển. | What is that? This is a dictionary. | o: それ/あれ/この | t: これ/は/{辞書|じしょ}/です *1
+q: これは{時計|とけい}です。 | Đây là đồng hồ. | This is a clock. | t: これ/は/{時計|とけい}/です *4 | e: 1 > ここ | ev: ここ chỉ nơi chốn. Chỉ đồ vật dùng これ. | ee: ここ is a place. For a thing, use これ.
+q: あれは{佐藤|さとう}さんの{家|いえ}です。 | Kia là nhà của bà Sato. | That is Ms. Sato's house.
+q: [どれ]がユキさんのかばんですか。 | Cái nào là cặp của Yuki? | Which one is Yuki's bag? | o: どの/どこ/だれ | t: どれ/が/ユキさんの/かばんですか *2
+q: それは{私|わたし}の{傘|かさ}じゃありません。 | Đó không phải ô của tôi. | That is not my umbrella. | t: それ/は/{私|わたし}の/{傘|かさ}じゃありません *1
+
+@p
+form: この / その / あの N
+name: この・その・あの + N: "N này, N đó, N kia" | この・その・あの + N: "this N, that N"
+explain: Giống これ・それ・あれ nhưng luôn đứng trước một danh từ để chỉ rõ vật hay người đó. Hỏi "N nào?" dùng どの + N. | Like これ・それ・あれ but always placed before a noun. "Which N?" is どの + N.
+note: Không nói この は; phải có danh từ: この本は. | Never say この は; it needs a noun: この本は.
+compare: これは本です (Đây là sách) và この本は私のです (Quyển sách này là của tôi). | これは本です (This is a book) vs この本は私のです (This book is mine).
+tip: Tiếng Việt đặt "này" sau danh từ: "sách này". Tiếng Nhật đặt trước: この本.
+search: (この|その|あの|どの)
+ex: この{本|ほん}は{私|わたし}のです。 | Quyển sách này là của tôi. | This book is mine.
+ex: その{傘|かさ}はユキさんのです。 | Cái ô đó là của Yuki. | That umbrella is Yuki's.
+ex: あの{人|ひと}は{誰|だれ}ですか。 | Người kia là ai? | Who is that person?
+q: [この]{本|ほん}は{私|わたし}のです。 | Quyển sách này là của tôi. | This book is mine. | o: これ/ここ/こう | t: この/{本|ほん}は/{私|わたし}の/です *1 | e: 1 > これ | ev: Đứng trước danh từ phải dùng この, không dùng これ. | ee: Before a noun, use この, not これ.
+q: [その]{傘|かさ}はユキさんのです。 | Cái ô đó là của Yuki. | That umbrella is Yuki's. | o: それ/そこ/そう | t: その/{傘|かさ}は/ユキさんの/です *2
+q: [あの]{人|ひと}は{誰|だれ}ですか。 | Người kia là ai? | Who is that person? | o: あれ/あそこ/ああ | t: あの/{人|ひと}は/{誰|だれ}/ですか *3 | e: 1 > あれ | ev: あれ đứng một mình; trước danh từ 人 phải là あの. | ee: あれ stands alone; before the noun 人 use あの.
+q: [どの]{傘|かさ}が{田中|たなか}さんのですか。 | Cái ô nào là của ông Tanaka? | Which umbrella is Mr. Tanaka's? | o: どれ/どこ/なん | t: どの/{傘|かさ}が/{田中|たなか}さんの/ですか *1
+q: [この]{猫|ねこ}はタマです。 | Con mèo này là Tama. | This cat is Tama. | o: これ/ここ/こちら | t: この/{猫|ねこ}は/タマ/です *2 | e: 1 > これ | ev: これ không đứng trước danh từ. Dùng この猫. | ee: これ cannot come before a noun. Use この猫.
+q: [その]かばんはケンタさんのですか。 | Cái cặp đó là của Kenta à? | Is that bag Kenta's? | o: それ/そこ/そちら | t: その/かばんは/ケンタさんの/ですか *4
+q: あの{店|みせ}は{本屋|ほんや}です。 | Cửa hàng kia là hiệu sách. | That shop is a bookstore. | t: あの/{店|みせ}は/{本屋|ほんや}/です *1
+q: この{時計|とけい}は{日本|にほん}のです。 | Cái đồng hồ này là của Nhật. | This watch is Japanese.
+
+@p
+form: ここ / そこ / あそこ は N です
+name: ここ・そこ・あそこ・どこ: nơi chốn | ここ・そこ・あそこ・どこ: places
+explain: Bộ こ・そ・あ・ど cho nơi chốn. ここ: chỗ này. そこ: chỗ đó. あそこ: chỗ kia. どこ: ở đâu. Nói "N ở đây" là N は ここです. | The ko-so-a-do set for places. ここ: here. そこ: there (near you). あそこ: over there. どこ: where. "N is here" is N は ここです.
+note: Lịch sự hơn: こちら・そちら・あちら・どちら (thường dùng ở cửa hàng, khách sạn). | More polite: こちら・そちら・あちら・どちら (used in shops and hotels).
+tip: Hỏi đường cứ nhớ câu: すみません、〜はどこですか。 "Xin lỗi, ... ở đâu ạ?"
+search: (ここ|そこ|あそこ|どこ)
+ex: トイレはあそこです。 | Nhà vệ sinh ở đằng kia. | The toilet is over there.
+ex: すみません、{駅|えき}はどこですか。 | Xin lỗi, nhà ga ở đâu ạ? | Excuse me, where is the station?
+ex: ここは{教室|きょうしつ}です。 | Đây là lớp học. | This is the classroom.
+q: すみません、トイレは[どこ]ですか。 | Xin lỗi, nhà vệ sinh ở đâu ạ? | Excuse me, where is the toilet? | o: どれ/どの/だれ | t: トイレ/は/どこ/ですか *3 | e: 3 > どれ | ev: Hỏi nơi chốn dùng どこ; どれ hỏi "cái nào". | ee: Ask about places with どこ; どれ asks "which one".
+q: [ここ]は{教室|きょうしつ}です。 | Đây là lớp học. | This is the classroom. | o: これ/この/こう | t: ここ/は/{教室|きょうしつ}/です *1 | e: 1 > この | ev: この cần danh từ đi sau; nói "chỗ này" dùng ここ. | ee: この needs a noun; "this place" is ここ.
+q: {食堂|しょくどう}は[あそこ]です。 | Nhà ăn ở đằng kia. | The cafeteria is over there. | o: あれ/あの/ああ | t: {食堂|しょくどう}/は/あそこ/です *3
+q: {田中|たなか}さんの{部屋|へや}は[そこ]です。 | Phòng của ông Tanaka ở chỗ đó. | Mr. Tanaka's room is there. | o: それ/その/そう | t: {田中|たなか}さんの/{部屋|へや}は/そこ/です *3
+q: エレベーターは[あそこ]です。 | Thang máy ở đằng kia. | The elevator is over there. | o: あれ/あちらの/あの | t: エレベーター/は/あそこ/です *4
+q: {駅|えき}はどこですか。 | Nhà ga ở đâu? | Where is the station? | t: {駅|えき}/は/どこ/ですか *2 | e: 3 > なに | ev: Hỏi "ở đâu" dùng どこ. | ee: "Where" is どこ.
+q: ここは{私|わたし}の{会社|かいしゃ}です。 | Đây là công ty của tôi. | This is my company. | t: ここ/は/{私|わたし}の/{会社|かいしゃ}です *2 | e: 1 > これ | ev: Nói về nơi chốn dùng ここ. | ee: For a place, use ここ.
+q: すみません、{図書館|としょかん}は[どこ]ですか。 | Xin lỗi, thư viện ở đâu ạ? | Excuse me, where is the library? | o: だれ/なん/どれ
+
+@p
+form: だれ / なん は N です か
+name: だれ・なん: "ai, cái gì" | だれ・なん: "who, what"
+explain: だれ (誰) hỏi người, なん/なに (何) hỏi vật. Từ để hỏi đứng đúng chỗ của câu trả lời, cuối câu vẫn có か. | だれ (誰) asks about people, なん/なに (何) about things. The question word sits where the answer would go, and the sentence still ends with か.
+note: 何 đọc なん trước です, の và các âm t, d, n; đọc なに ở các chỗ khác (なにを). Lịch sự hơn だれ là どなた. | 何 is read なん before です, の and t/d/n sounds, and なに elsewhere (なにを). A politer だれ is どなた.
+tip: Đổi câu trả lời thành từ để hỏi là ra câu hỏi: あれは本です → あれは何ですか.
+search: (誰|何|だれ|なん|なに)
+ex: あの{女|おんな}の{人|ひと}は{誰|だれ}ですか。 | Người phụ nữ kia là ai? | Who is that woman?
+ex: これは{何|なん}ですか。 | Đây là cái gì? | What is this?
+ex: これは{何|なん}の{本|ほん}ですか。{日本語|にほんご}の{本|ほん}です。 | Đây là sách gì? Sách tiếng Nhật. | What book is this? A Japanese book.
+q: あの{男|おとこ}の{人|ひと}は[{誰|だれ}]ですか。 | Người đàn ông kia là ai? | Who is that man? | o: 何/どこ/どれ | t: あの{男|おとこ}の{人|ひと}/は/{誰|だれ}/ですか *3 | e: 3 > {何|なん} | ev: Hỏi về người dùng 誰, không dùng 何. | ee: Ask about people with 誰, not 何.
+q: これは[{何|なん}]ですか。 | Đây là cái gì? | What is this? | o: 誰/どこ/どなた | t: これ/は/{何|なん}/ですか *1
+q: それは[{何|なん}]の{本|ほん}ですか。 | Đó là sách gì? | What book is that? | o: 誰/どこ/どれ | t: それは/{何|なん}/の/{本|ほん}ですか *2 | e: 2 > {誰|だれ} | ev: Hỏi loại sách dùng 何の本. 誰の本 nghĩa là "sách của ai". | ee: For the kind of book, use 何の本. 誰の本 means "whose book".
+q: このかばんは[{誰|だれ}]のですか。 | Cái cặp này là của ai? | Whose bag is this? | o: 何/どこ/どれ | t: このかばん/は/{誰|だれ}の/ですか *3
+q: あの{方|かた}は[どなた]ですか。 | Vị kia là ai ạ? | Who is that gentleman? | o: なん/どこ/どれ | t: あの/{方|かた}は/どなた/ですか *4
+q: タマの{好|す}きな{食|た}べ{物|もの}は{何|なん}ですか。 | Món Tama thích là gì? | What is Tama's favorite food? | t: タマの/{好|す}きな/{食|た}べ{物|もの}は/{何|なん}ですか *4 | e: 4 > {誰|だれ}ですか | ev: Hỏi về đồ ăn (vật) dùng 何. | ee: Food is a thing, so ask with 何.
+q: それは{誰|だれ}の{傘|かさ}ですか。 | Đó là ô của ai? | Whose umbrella is that? | t: それは/{誰|だれ}/の/{傘|かさ}ですか *1
+q: お{名前|なまえ}は[{何|なん}]ですか。 | Tên bạn là gì? | What is your name? | o: 誰/どこ/どれ
+
+@p
+form: 〜 ね / 〜 よ
+name: 〜ね・〜よ: "nhỉ" và "đấy" | 〜ね・〜よ: "isn't it" and "you know"
+explain: Hai trợ từ cuối câu. ね: mong người nghe đồng ý, như "nhỉ, nhé". よ: báo cho người nghe điều họ chưa biết, như "đấy, cơ". | Two sentence-ending particles. ね seeks agreement, like "isn't it". よ tells the listener something new, like "you know".
+note: Dùng よ quá nhiều với người trên có thể nghe như dạy đời. Câu hỏi か không đi với ね・よ ở N5. | Overusing よ with superiors can sound pushy. At N5, か questions do not take ね or よ.
+tip: ね = "nhỉ" (cùng nhìn thấy), よ = "đấy" (tôi biết, bạn chưa biết). 今日は寒いですね: "Hôm nay lạnh nhỉ."
+search: (ね|よ)。
+ex: {今日|きょう}は{寒|さむ}いですね。 | Hôm nay lạnh nhỉ. | It's cold today, isn't it?
+ex: この{店|みせ}のパンはおいしいですよ。 | Bánh mì cửa hàng này ngon lắm đấy. | The bread at this shop is good, you know.
+ex: タマはかわいいですね。 | Tama dễ thương nhỉ. | Tama is cute, isn't she?
+q: {今日|きょう}は{寒|さむ}いです[ね]。 | Hôm nay lạnh nhỉ. | It's cold today, isn't it? | o: か/の/を | t: {今日|きょう}は/{寒|さむ}い/です/ね *4 | e: 4 > を | ev: Cuối câu mong người nghe đồng ý dùng ね. | ee: To seek agreement at the end, use ね.
+q: あのレストランはおいしいです[よ]。 | Nhà hàng kia ngon đấy. | That restaurant is good, you know. | o: か/は/を | t: あの/レストランは/おいしい/ですよ *2
+q: タマはかわいいです[ね]。 | Tama dễ thương nhỉ. | Tama is cute, isn't she? | o: を/が/の | t: タマは/かわいい/です/ね *1
+q: {駅|えき}はあそこです[よ]。 | Nhà ga ở đằng kia đấy. | The station is over there, you know. | o: か/を/に | t: {駅|えき}は/あそこ/です/よ *4 | e: 4 > を | ev: Báo cho người khác biết dùng よ ở cuối câu. | ee: To inform someone, end with よ.
+q: いい{天気|てんき}です[ね]。 | Trời đẹp nhỉ. | Nice weather, isn't it? | o: か/へ/を | t: いい/{天気|てんき}/です/ね *2
+q: この{本|ほん}はおもしろいですよ。 | Quyển sách này hay lắm đấy. | This book is interesting, you know. | t: この/{本|ほん}は/おもしろい/ですよ *3 | e: 4 > ですを | ev: Cuối câu không dùng を; báo tin dùng よ. | ee: を never ends a sentence; to inform, use よ.
+q: ケンタさん、{明日|あした}は{休|やす}みです[よ]。 | Kenta ơi, mai được nghỉ đấy. | Kenta, tomorrow is a day off, you know. | o: か/を/に | t: {明日|あした}は/{休|やす}み/です/よ *3
+q: {田中|たなか}さんの{話|はなし}は{長|なが}いですね。 | Chuyện của ông Tanaka dài nhỉ. | Mr. Tanaka's stories are long, aren't they? | t: {田中|たなか}さんの/{話|はなし}は/{長|なが}い/ですね *1
