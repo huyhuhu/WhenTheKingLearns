@@ -11,8 +11,9 @@ A Japanese self-study website with a playful royal-court theme. Study kanji, lis
 - Podcast player with karaoke-style lyrics, furigana, romaji, Vietnamese translations, chapters, playback-speed controls, background media controls, and episode downloads for offline listening.
 - Achievements and royal-court progression, with progress backup and restore.
 - Vietnamese and English interface, light and dark themes, and an installable web-app experience.
+- N5 grammar: 78 patterns in 16 lessons that unlock with vocabulary progress, built as complexes on the map, with spaced repairs, four exercise types and two mini games.
 
-**Vocabulary**, **Grammar**, and **Mock Exams** are planned sections and are not yet available.
+**Mock Exams** is a planned section and is not yet available.
 
 ## Run locally
 

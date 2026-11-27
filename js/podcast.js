@@ -901,6 +901,14 @@
     if (type === 'audio:play' && !audio.paused) audio.pause();
   });
 
+  window.Podcast = {
+    playAt: function (id, t) {
+      if (!byId[id]) return;
+      if (cur && cur.id === id) { seek(t); play(); } else load(id, true, t);
+      openSheet('player');
+    }
+  };
+
   App.section({
     id: 'podcast',
     name: ['Podcast', 'Podcast'],

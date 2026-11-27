@@ -1,0 +1,111 @@
+# Bài 7: 蔵 Kho lẫm. Mẫu: あります/います · N に N が あります · N は N に あります · 上/下/中/前/後ろ/となり · 〜や〜など
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: N が あります / います
+name: あります・います: "có, ở" | あります・います: "there is, to exist"
+explain: Nói có vật hay có người, con vật. Đồ vật, cây cối dùng あります; người và động vật dùng います. Danh từ đứng trước đi với が. | Says that something exists. Things and plants use あります; people and animals use います. The noun takes が.
+note: Phủ định là ありません／いません. Hỏi "có không?" thêm か. | The negatives are ありません／いません. Add か to ask "is there...?".
+compare: Tiếng Việt chỉ cần "có", tiếng Nhật chia hai động từ theo vật sống hay không. | Vietnamese just says "có"; Japanese picks one of two verbs depending on whether it is alive.
+tip: Có "mạng sống" thì います, vô tri thì あります. Cây cối cũng là あります nhé.
+search: (が|は)(あり|い)(ます|ません)
+ex: {猫|ねこ}がいます。 | Có một con mèo. | There is a cat.
+ex: {鍵|かぎ}があります。 | Có chìa khóa. | There is a key.
+ex: {私|わたし}は{妹|いもうと}がいます。 | Tôi có em gái. | I have a younger sister.
+ex: {教室|きょうしつ}に{学生|がくせい}がいません。 | Trong lớp không có học sinh. | There are no students in the classroom.
+q: {庭|にわ}に{鳥|とり}が[います]。 | Trong vườn có con chim. | There is a bird in the garden. | o: あります/いります/ありません | t: {庭|にわ}/に/{鳥|とり}が/います *4 | e: 4 > あります | ev: Chim là sinh vật sống nên dùng います. | ee: A bird is alive, so use います.
+q: {机|つくえ}の{上|うえ}に{本|ほん}が[あります]。 | Trên bàn có quyển sách. | There is a book on the desk. | o: います/ありました/ありません | t: {机|つくえ}の/{上|うえ}に/{本|ほん}が/あります *4 | e: 4 > います | ev: Sách là đồ vật nên dùng あります. | ee: A book is a thing, so use あります.
+q: {冷蔵庫|れいぞうこ}に{牛乳|ぎゅうにゅう}が[あります]。 | Trong tủ lạnh có sữa. | There is milk in the fridge. | o: います/いません/いました | t: {冷蔵庫|れいぞうこ}/に/{牛乳|ぎゅうにゅう}が/あります *4
+q: {教室|きょうしつ}に{先生|せんせい}が[います]。 | Trong lớp có thầy giáo. | There is a teacher in the classroom. | o: あります/ありません/いりません | t: {教室|きょうしつ}/に/{先生|せんせい}が/います *4 | e: 3 > あります | ev: Người dùng います, không dùng あります. | ee: People take います, not あります.
+q: {私|わたし}は{妹|いもうと}が[います]。 | Tôi có em gái. | I have a younger sister. | o: あります/ありません/いりません | t: {私|わたし}は/{妹|いもうと}が/い/ます *3
+q: {部屋|へや}に{電話|でんわ}が[ありません]。 | Trong phòng không có điện thoại. | There is no phone in the room. | o: いません/ありました/あります | t: {部屋|へや}/に/{電話|でんわ}が/ありません *4 | e: 4 > いません | ev: Điện thoại là đồ vật nên phủ định là ありません. | ee: A phone is a thing, so the negative is ありません.
+q: {公園|こうえん}に{人|ひと}が[いません]。 | Trong công viên không có ai. | There is nobody in the park. | o: ありません/いりません/いました | t: {公園|こうえん}/に/{人|ひと}が/いません *4 | e: 4 > ありません | ev: Người dùng います／いません. | ee: People take います／いません.
+q: {家|いえ}に{庭|にわ}が[あります]か。 | Nhà bạn có vườn không? | Does your house have a garden? | o: います/ありました/あるです | t: {家|いえ}に/{庭|にわ}が/あります/か *3
+q: ここに{椅子|いす}が{二|ふた}つあります。 | Ở đây có hai cái ghế. | There are two chairs here. | t: ここに/{椅子|いす}が/{二|ふた}つ/あります *4
+
+@p
+form: N に N が あります / います
+name: N に N が あります: "ở N có N" | N に N が あります: "there is N at N"
+explain: Nói nơi chốn có cái gì. Nơi chốn + に, vật hay người + が, rồi あります／います. Thông tin mới là cái "có", nên dùng が. | Says what is at a place: place + に, thing or person + が, then あります／います. The thing that "is there" is new information, so it takes が.
+note: に chỉ nơi tồn tại. で là nơi diễn ra hành động, đừng nhầm. Hỏi "có gì?" là {何|なに}がありますか, hỏi "ai ở đó?" là {誰|だれ}がいますか. | に marks where something exists; で marks where an action happens. Ask "what is there?" with {何|なに}がありますか and "who is there?" with {誰|だれ}がいますか.
+compare: N に N が あります giới thiệu cái mới có ở đó; N は N に あります (mẫu sau) nói cái đã biết đang ở đâu. | N に N が あります introduces something new at a place; N は N に あります (next pattern) says where a known thing is.
+tip: Như tiếng Việt "Ở vườn có con mèo": nơi chốn đứng đầu, vật đứng sau.
+search: に.+が(あり|い)ます
+ex: {町|まち}に{公園|こうえん}があります。 | Trong thị trấn có công viên. | There is a park in the town.
+ex: {庭|にわ}に{猫|ねこ}がいます。 | Trong vườn có con mèo. | There is a cat in the garden.
+ex: {机|つくえ}の{上|うえ}に{何|なに}がありますか。 | Trên bàn có gì? | What is on the desk?
+ex: {部屋|へや}に{誰|だれ}がいますか。 | Trong phòng có ai? | Who is in the room?
+q: {町|まち}[に]{公園|こうえん}があります。 | Trong thị trấn có công viên. | There is a park in the town. | o: で/は/を | t: {町|まち}/に/{公園|こうえん}が/あります *2 | e: 2 > で | ev: Nói nơi có vật gì dùng に; で là nơi diễn ra hành động. | ee: "There is X at Y" uses に; で marks where an action happens.
+q: {部屋|へや}に{机|つくえ}[が]あります。 | Trong phòng có cái bàn. | There is a desk in the room. | o: を/で/と | t: {部屋|へや}に/{机|つくえ}/が/あります *3 | e: 3 > を | ev: Vật tồn tại là chủ ngữ của あります nên dùng が, không dùng を. | ee: The thing that exists is the subject of あります, so use が, not を.
+q: {教室|きょうしつ}に[{誰|だれ}]がいますか。 | Trong lớp có ai? | Who is in the classroom? | o: {何|なに}/どこ/どれ | t: {教室|きょうしつ}に/{誰|だれ}が/います/か *2
+q: {机|つくえ}の{上|うえ}に{何|なに}が[あります]か。 | Trên bàn có gì? | What is on the desk? | o: います/ありません/いました | t: {机|つくえ}の/{上|うえ}に/{何|なに}が/ありますか *4 | e: 3 > {何|なに}を | ev: Hỏi "có gì" dùng {何|なに}が. | ee: "What is there" is {何|なに}が.
+q: {冷蔵庫|れいぞうこ}に{卵|たまご}[が]あります。 | Trong tủ lạnh có trứng. | There are eggs in the fridge. | o: を/で/へ | t: {冷蔵庫|れいぞうこ}に/{卵|たまご}/が/あります *3
+q: {公園|こうえん}[に]{犬|いぬ}がいます。 | Trong công viên có con chó. | There is a dog in the park. | o: で/を/が | t: {公園|こうえん}/に/{犬|いぬ}が/います *2 | e: 2 > で | ev: Với います／あります, nơi chốn đi với に. | ee: With います／あります the place takes に.
+q: {台所|だいどころ}にお{皿|さら}がありません。 | Trong bếp không có đĩa. | There are no plates in the kitchen. | t: {台所|だいどころ}に/お{皿|さら}が/あり/ません *2 | e: 2 > お{皿|さら}を | ev: Vật không tồn tại vẫn đi với が. | ee: A thing that does not exist still takes が.
+q: {家|いえ}に{庭|にわ}が[ありません]。 | Nhà không có vườn. | The house has no garden. | o: いません/ありました/あります
+q: {町|まち}に{大学|だいがく}[が]あります。 | Trong thị trấn có trường đại học. | There is a university in the town. | o: を/で/へ | t: {町|まち}に/{大学|だいがく}/が/あります *3
+
+@p
+form: N は N に あります / います
+name: N は N に あります: "N ở N" | N は N に あります: "N is at N"
+explain: Nói cái đã biết (làm chủ đề với は) đang ở đâu. Chủ đề + は, nơi chốn + に, rồi あります／います. Hỏi vị trí dùng どこに. | Says where a known thing (the topic, with は) is: topic + は, place + に, then あります／います. Ask location with どこに.
+note: Với あります／います, nơi chốn dùng に. Với ここ・そこ・あそこ thì N は ここです cũng đúng. | The place takes に with あります／います. For ここ・そこ・あそこ, N は ここです is also fine.
+compare: {鍵|かぎ}が{机|つくえ}の{上|うえ}にあります là "có chìa khóa trên bàn" (tin mới), {鍵|かぎ}は{机|つくえ}の{上|うえ}にあります là "chìa khóa thì ở trên bàn" (trả lời câu hỏi ở đâu). | {鍵|かぎ}が{机|つくえ}の{上|うえ}にあります gives new information ("there's a key on the desk"); {鍵|かぎ}は{机|つくえ}の{上|うえ}にあります answers "where is it?".
+tip: は = "thì": "Chìa khóa thì ở trên bàn". Chủ đề đã biết thì dùng は.
+search: は.+に(あり|い)ます
+ex: タマは{庭|にわ}にいます。 | Tama ở trong vườn. | Tama is in the garden.
+ex: {鍵|かぎ}は{机|つくえ}の{上|うえ}にあります。 | Chìa khóa ở trên bàn. | The key is on the desk.
+ex: {田中|たなか}さんは{会社|かいしゃ}にいます。 | Ông Tanaka ở công ty. | Mr. Tanaka is at the office.
+ex: {佐藤|さとう}さんはどこにいますか。 | Bà Sato ở đâu? | Where is Ms. Sato?
+q: タマは{庭|にわ}[に]います。 | Tama ở trong vườn. | Tama is in the garden. | o: で/を/が | t: タマは/{庭|にわ}/に/います *3 | e: 3 > で | ev: Nói ai ở đâu dùng に, không dùng で. | ee: Say where someone is with に, not で.
+q: {鍵|かぎ}は{机|つくえ}の{上|うえ}に[あります]。 | Chìa khóa ở trên bàn. | The key is on the desk. | o: います/ありました/いません | t: {鍵|かぎ}は/{机|つくえ}の/{上|うえ}に/あります *4 | e: 4 > います | ev: Chìa khóa là đồ vật nên dùng あります. | ee: A key is a thing, so use あります.
+q: {田中|たなか}さんは{会社|かいしゃ}に[います]。 | Ông Tanaka ở công ty. | Mr. Tanaka is at the office. | o: あります/ありません/いりません | t: {田中|たなか}さんは/{会社|かいしゃ}/に/います *2 | e: 4 > あります | ev: Người dùng います, không dùng あります. | ee: People take います, not あります.
+q: {郵便局|ゆうびんきょく}は{駅|えき}の{近|ちか}くに[あります]。 | Bưu điện ở gần nhà ga. | The post office is near the station. | o: います/いません/ありました | t: {郵便局|ゆうびんきょく}は/{駅|えき}の/{近|ちか}くに/あります *1
+q: ユキさんの{傘|かさ}[は]{玄関|げんかん}にあります。 | Ô của Yuki thì ở cửa ra vào. | Yuki's umbrella is at the entrance. | o: を/で/と | t: ユキさんの/{傘|かさ}は/{玄関|げんかん}に/あります *3
+q: {佐藤|さとう}さんはどこに[います]か。 | Bà Sato ở đâu? | Where is Ms. Sato? | o: あります/ありません/いました | t: {佐藤|さとう}さんは/どこに/います/か *2 | e: 2 > どこを | ev: Hỏi nơi ai đó ở dùng どこに. | ee: Ask where someone is with どこに.
+q: {私|わたし}の{鍵|かぎ}は[どこ]にありますか。 | Chìa khóa của tôi ở đâu? | Where is my key? | o: {誰|だれ}/{何|なに}/いつ | t: {私|わたし}の/{鍵|かぎ}は/どこに/ありますか *3
+q: ケンタさんは{今|いま}{家|いえ}に[いません]。 | Bây giờ Kenta không ở nhà. | Kenta is not at home now. | o: ありません/あります/いりません | t: ケンタさんは/{今|いま}/{家|いえ}に/いません *3 | e: 4 > ありません | ev: Người dùng いません. | ee: People take いません.
+q: {図書館|としょかん}は{大学|だいがく}の{中|なか}にあります。 | Thư viện ở trong trường đại học. | The library is inside the university. | t: {図書館|としょかん}は/{大学|だいがく}の/{中|なか}に/あります *3
+
+@p
+form: N の 上 / 下 / 中 / 前 / 後ろ / となり
+name: 上・下・中・前・後ろ・となり: từ chỉ vị trí | 上・下・中・前・後ろ・となり: position words
+explain: Nói vị trí so với một vật: N の{上|うえ} (trên), {下|した} (dưới), {中|なか} (trong), {前|まえ} (trước), {後|うし}ろ (sau), {隣|となり} (bên cạnh). Từ vị trí đi sau の, rồi mới tới に. | Say position relative to something: N の{上|うえ} (on), {下|した} (under), {中|なか} (in), {前|まえ} (in front), {後|うし}ろ (behind), {隣|となり} (next to). The position word follows の, then comes に.
+note: Thứ tự ngược tiếng Việt: {机|つくえ}の{上|うえ} là "trên bàn", nghĩa đen "bàn-の-trên". Cũng dùng {横|よこ} (cạnh, bên hông), {外|そと} (ngoài). | The order is the reverse of Vietnamese: {机|つくえ}の{上|うえ} is literally "desk-の-top". {横|よこ} (beside) and {外|そと} (outside) work the same way.
+tip: Đọc ngược rồi thêm giới từ: {箱|はこ}の{中|なか} → "trong hộp"; {駅|えき}の{前|まえ} → "trước ga".
+search: の(上|下|中|前|後ろ|隣|横|外)
+ex: {本|ほん}は{机|つくえ}の{上|うえ}にあります。 | Sách ở trên bàn. | The book is on the desk.
+ex: {猫|ねこ}は{椅子|いす}の{下|した}にいます。 | Con mèo ở dưới ghế. | The cat is under the chair.
+ex: {駅|えき}の{前|まえ}に{銀行|ぎんこう}があります。 | Trước nhà ga có ngân hàng. | There is a bank in front of the station.
+ex: {郵便局|ゆうびんきょく}は{銀行|ぎんこう}の{隣|となり}にあります。 | Bưu điện ở bên cạnh ngân hàng. | The post office is next to the bank.
+q: {猫|ねこ}は{椅子|いす}の[{下|した}]にいます。 | Con mèo ở dưới ghế. | The cat is under the chair. | o: {上|うえ}/{中|なか}/{前|まえ} | t: {猫|ねこ}は/{椅子|いす}の/{下|した}に/います *3 | e: 2 > {椅子|いす}に | ev: Giữa danh từ và từ vị trí dùng の, không dùng に. | ee: Between the noun and the position word use の, not に.
+q: {本|ほん}は{机|つくえ}の[{上|うえ}]にあります。 | Sách ở trên bàn. | The book is on the desk. | o: {下|した}/{中|なか}/{横|よこ} | t: {本|ほん}は/{机|つくえ}の/{上|うえ}に/あります *3
+q: {箱|はこ}の[{中|なか}]に{時計|とけい}があります。 | Trong hộp có cái đồng hồ. | There is a clock in the box. | o: {上|うえ}/{前|まえ}/{後|うし}ろ | t: {箱|はこ}の/{中|なか}に/{時計|とけい}が/あります *2 | e: 1 > {箱|はこ}が | ev: Trước từ vị trí phải dùng の. | ee: Before a position word you need の.
+q: {駅|えき}の[{前|まえ}]に{銀行|ぎんこう}があります。 | Trước nhà ga có ngân hàng. | There is a bank in front of the station. | o: {後|うし}ろ/{中|なか}/{下|した} | t: {駅|えき}の/{前|まえ}に/{銀行|ぎんこう}が/あります *2
+q: {学校|がっこう}の[{後|うし}ろ]に{公園|こうえん}があります。 | Phía sau trường có công viên. | There is a park behind the school. | o: {前|まえ}/{隣|となり}/{上|うえ} | t: {学校|がっこう}の/{後|うし}ろに/{公園|こうえん}が/あります *2
+q: {郵便局|ゆうびんきょく}は{銀行|ぎんこう}の[{隣|となり}]にあります。 | Bưu điện ở bên cạnh ngân hàng. | The post office is next to the bank. | o: {上|うえ}/{下|した}/{中|なか} | t: {郵便局|ゆうびんきょく}は/{銀行|ぎんこう}の/{隣|となり}に/あります *3 | e: 3 > {隣|となり}を | ev: Sau từ vị trí vẫn dùng に khi nói nơi có vật. | ee: After the position word you still use に for where it is.
+q: {椅子|いす}の{上|うえ}に{猫|ねこ}がいます。 | Trên ghế có con mèo. | There is a cat on the chair. | t: {椅子|いす}/の/{上|うえ}に/{猫|ねこ}が *2 | e: 2 > に | ev: Dùng の nối danh từ với từ vị trí. | ee: Use の to link the noun and the position word.
+q: {窓|まど}の[{外|そと}]に{鳥|とり}がいます。 | Ngoài cửa sổ có con chim. | There is a bird outside the window. | o: {中|なか}/{上|うえ}/{隣|となり} | t: {窓|まど}の/{外|そと}に/{鳥|とり}が/います *2
+q: {冷蔵庫|れいぞうこ}の{横|よこ}に{椅子|いす}があります。 | Bên cạnh tủ lạnh có cái ghế. | There is a chair beside the fridge. | t: {冷蔵庫|れいぞうこ}の/{横|よこ}に/{椅子|いす}が/あります *2
+
+@p
+form: N や N など
+name: 〜や〜など: "N, N... v.v." | 〜や〜など: "N, N, and so on"
+explain: や nối các danh từ để kể ví dụ, và còn nhiều thứ khác nữa; など ở cuối nghĩa là "vân vân". | や joins nouns as examples, implying there are more; など at the end means "and so on".
+note: と liệt kê đủ, chỉ có những thứ đó. や liệt kê ví dụ, còn nữa. Trợ từ が／を đi sau など. | と lists everything, nothing more. や lists examples, with more left out. Particles like が／を come after など.
+compare: {本|ほん}とノートがあります (chỉ có sách và vở) khác {本|ほん}やノートなどがあります (có sách, vở và cả thứ khác). | {本|ほん}とノートがあります (only a book and a notebook) vs {本|ほん}やノートなどがあります (a book, a notebook, and more).
+tip: や + など giống "nào là A, nào là B, vân vân".
+search: や.+など
+ex: {机|つくえ}の{上|うえ}に{本|ほん}やノートなどがあります。 | Trên bàn có sách, vở, v.v. | On the desk there are books, notebooks and so on.
+ex: {冷蔵庫|れいぞうこ}に{牛乳|ぎゅうにゅう}や{卵|たまご}などがあります。 | Trong tủ lạnh có sữa, trứng, v.v. | There are milk, eggs and so on in the fridge.
+ex: {公園|こうえん}に{犬|いぬ}や{猫|ねこ}などがいます。 | Trong công viên có chó, mèo, v.v. | There are dogs, cats and so on in the park.
+ex: {店|みせ}でパンや{果物|くだもの}などを{買|か}います。 | Tôi mua bánh mì, trái cây, v.v. ở cửa hàng. | I buy bread, fruit and so on at the shop.
+q: {机|つくえ}の{上|うえ}に{本|ほん}[や]ノートなどがあります。 | Trên bàn có sách, vở, v.v. | There are books, notebooks and so on on the desk. | o: と/も/の | t: {本|ほん}/や/ノート/など *2 | e: 2 > と | ev: Khi có など (vân vân) thì liệt kê bằng や, không dùng と. | ee: With など ("and so on") list with や, not と.
+q: {冷蔵庫|れいぞうこ}に{牛乳|ぎゅうにゅう}や{卵|たまご}[など]があります。 | Trong tủ lạnh có sữa, trứng, v.v. | There are milk, eggs and so on in the fridge. | o: だけ/ぐらい/から | t: {牛乳|ぎゅうにゅう}/や/{卵|たまご}/など *4
+q: {公園|こうえん}に{犬|いぬ}[や]{猫|ねこ}などがいます。 | Trong công viên có chó, mèo, v.v. | There are dogs, cats and so on in the park. | o: と/も/が | t: {公園|こうえん}に/{犬|いぬ}/や/{猫|ねこ} *3 | e: 3 > が | ev: Liệt kê ví dụ giữa hai danh từ dùng や, không dùng が. | ee: Link example nouns with や, not が.
+q: {店|みせ}でパンや{果物|くだもの}などを[{買|か}います]。 | Tôi mua bánh mì, trái cây, v.v. ở cửa hàng. | I buy bread, fruit and so on at the shop. | o: {売|う}ります/{見|み}ます/{洗|あら}います | t: {店|みせ}で/パンや/{果物|くだもの}など/を *3
+q: {部屋|へや}に{椅子|いす}や{机|つくえ}[など]があります。 | Trong phòng có ghế, bàn, v.v. | There are chairs, desks and so on in the room. | o: だけ/ぐらい/ずつ | t: {部屋|へや}に/{椅子|いす}や/{机|つくえ}/など *4
+q: かばんの{中|なか}に{財布|さいふ}[や]{鍵|かぎ}などがあります。 | Trong cặp có ví, chìa khóa, v.v. | There are a wallet, a key and so on in the bag. | o: と/も/の | t: かばんの/{中|なか}に/{財布|さいふ}/や *4 | e: 4 > を | ev: や nối các danh từ ví dụ; を không nối danh từ. | ee: や links example nouns; を does not.
+q: {庭|にわ}に{花|はな}や{木|き}などがあります。 | Trong vườn có hoa, cây, v.v. | There are flowers, trees and so on in the garden. | t: {庭|にわ}に/{花|はな}/や/{木|き} *3
+q: {私|わたし}は{肉|にく}や{魚|さかな}[など]を{食|た}べます。 | Tôi ăn thịt, cá, v.v. | I eat meat, fish and so on. | o: だけ/から/まで
+q: {図書館|としょかん}に{辞書|じしょ}や{雑誌|ざっし}[など]があります。 | Trong thư viện có từ điển, tạp chí, v.v. | There are dictionaries, magazines and so on in the library. | o: だけ/から/まで | t: {図書館|としょかん}に/{辞書|じしょ}や/{雑誌|ざっし}/など *3

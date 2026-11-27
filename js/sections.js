@@ -4,15 +4,6 @@
   'use strict';
 
   window.App.section({
-    id: 'grammar',
-    name: ['Ngữ pháp', 'Grammar'],
-    glyph: '文',
-    desc: ['Mẫu câu kèm giải thích, ví dụ và bài tập', 'Patterns with explanations, examples and exercises'],
-    ready: false,
-    planned: [['Danh sách mẫu ngữ pháp theo cấp độ', 'Grammar patterns by level'], ['Giải thích và ví dụ', 'Explanations and examples'], ['Bài tập điền và sắp xếp câu', 'Fill-in and sentence-ordering exercises']]
-  });
-
-  window.App.section({
     id: 'exam',
     name: ['Luyện đề', 'Mock exams'],
     glyph: '試',

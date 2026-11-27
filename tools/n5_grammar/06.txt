@@ -1,0 +1,116 @@
+# Bài 6: 庭園 Ngự uyển. Mẫu: い-adj です · な-adj です · くないです/じゃありません · かったです/でした · adj + N
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: い-adj です
+name: い-adj です: tính từ đuôi い | い-adj です: い-adjectives
+explain: Tính từ đuôi い (高い, 暑い, おいしい...) đứng thẳng trước です, giữ nguyên い: この本は高いです. です chỉ làm câu lịch sự. | い-adjectives (高い, 暑い, おいしい...) go directly before です and keep their い: この本は高いです. です only makes the sentence polite.
+note: Không thêm な hay だ giữa tính từ い và です. Tính từ い luôn kết thúc bằng い (nhưng きれい, ゆうめい lại là tính từ な). | Never add な or だ between an い-adjective and です. They always end in い (but きれい and ゆうめい are な-adjectives).
+tip: Tiếng Việt nói "Cái này đắt" không cần "là"; tiếng Nhật thêm です cho lịch sự: 高いです.
+search: い です。
+ex: この{本|ほん}は{高|たか}いです。 | Quyển sách này đắt. | This book is expensive.
+ex: {今日|きょう}は{暑|あつ}いです。 | Hôm nay nóng. | It is hot today.
+ex: ラーメンはおいしいです。 | Mì ramen ngon. | Ramen is delicious.
+ex: {日本語|にほんご}は{難|むずか}しいです。 | Tiếng Nhật khó. | Japanese is difficult.
+q: この{本|ほん}は[{高|たか}い]です。 | Quyển sách này đắt. | This book is expensive. | o: {高|たか}/{高|たか}な/{高|たか}く | t: この/{本|ほん}は/{高|たか}い/です *3 | e: 3 > {高|たか} | ev: Tính từ い phải giữ い: 高いです, không bỏ い. | ee: An い-adjective keeps its い: 高いです, not 高です.
+q: {今日|きょう}は[{暑|あつ}い]です。 | Hôm nay nóng. | It is hot today. | o: {暑|あつ}/{暑|あつ}な/{暑|あつ}く | t: {今日|きょう}/は/{暑|あつ}い/です *3
+q: ラーメンは[おいしい]です。 | Mì ramen ngon. | Ramen is delicious. | o: おいし/おいしな/おいしく | t: ラーメン/は/おいしい/です *3
+q: {日本語|にほんご}は{難|むずか}しいです。 | Tiếng Nhật khó. | Japanese is difficult. | t: {日本語|にほんご}/は/{難|むずか}しい/です *3 | e: 3 > {難|むずか}しな | ev: Tính từ い không đi với な trước です. | ee: An い-adjective does not take な before です.
+q: この{部屋|へや}は[{広|ひろ}い]です。 | Căn phòng này rộng. | This room is spacious. | o: {広|ひろ}/{広|ひろ}な/{広|ひろ}く
+q: {駅|えき}は{近|ちか}いです。 | Nhà ga gần. | The station is close. | t: {駅|えき}/は/{近|ちか}い/です *3
+q: {私|わたし}の{会社|かいしゃ}は[{忙|いそが}しい]です。 | Công ty của tôi bận rộn. | My company is busy. | o: {忙|いそが}し/{忙|いそが}しな/{忙|いそが}しく
+q: {冬|ふゆ}は[{寒|さむ}い]です。 | Mùa đông lạnh. | Winter is cold. | o: {寒|さむ}/{寒|さむ}な/{寒|さむ}く
+q: この{傘|かさ}は{新|あたら}しいです。 | Cái ô này mới. | This umbrella is new. | t: この/{傘|かさ}は/{新|あたら}しい/です *3 | e: 3 > {新|あたら}しです | ev: Không được bỏ い cuối tính từ: 新しい. | ee: Do not drop the final い: 新しい.
+q: タマは{小|ちい}さいです。 | Tama nhỏ. | Tama is small. | t: タマ/は/{小|ちい}さい/です *3
+
+@p
+form: な-adj です
+name: な-adj です: tính từ đuôi な | な-adj です: な-adjectives
+explain: Tính từ な (静か, 元気, きれい...) đứng thẳng trước です, không có な: この町は静かです. Chữ な chỉ hiện ra khi đứng trước danh từ. | な-adjectives (静か, 元気, きれい...) go directly before です with no な: この町は静かです. The な appears only before a noun.
+note: きれい, ゆうめい, きらい trông như tính từ い nhưng là tính từ な. | きれい, ゆうめい, きらい look like い-adjectives but are な-adjectives.
+tip: Tính từ な giống danh từ: "N です" và "静かです". Phần な chỉ để nối với danh từ sau.
+search: [かいんう]です。
+ex: この{町|まち}は{静|しず}かです。 | Thị trấn này yên tĩnh. | This town is quiet.
+ex: ユキさんは{元気|げんき}です。 | Yuki khỏe mạnh. | Yuki is well.
+ex: {先生|せんせい}は{親切|しんせつ}です。 | Cô giáo tốt bụng. | The teacher is kind.
+ex: この{部屋|へや}はきれいです。 | Căn phòng này sạch đẹp. | This room is clean and pretty.
+q: この{町|まち}は[{静|しず}か]です。 | Thị trấn này yên tĩnh. | This town is quiet. | o: {静|しず}かな/{静|しず}かい/{静|しず}かだ | t: この/{町|まち}は/{静|しず}か/です *3 | e: 3 > {静|しず}かな | ev: Trước です, tính từ な không có な. | ee: Before です, a な-adjective takes no な.
+q: ユキさんは[{元気|げんき}]です。 | Yuki khỏe mạnh. | Yuki is well. | o: {元気|げんき}な/{元気|げんき}い/{元気|げんき}だ | t: ユキさん/は/{元気|げんき}/です *3
+q: この{店|みせ}は{有名|ゆうめい}です。 | Cửa hàng này nổi tiếng. | This shop is famous. | t: この/{店|みせ}は/{有名|ゆうめい}/です *3 | e: 3 > {有名|ゆうめい}い | ev: 有名 là tính từ な, không thêm い. | ee: 有名 is a な-adjective; do not add い.
+q: {先生|せんせい}は{親切|しんせつ}です。 | Cô giáo tốt bụng. | The teacher is kind. | t: {先生|せんせい}/は/{親切|しんせつ}/です *3
+q: この{部屋|へや}は[きれい]です。 | Căn phòng này sạch đẹp. | This room is clean and pretty. | o: きれいい/きれいな/きれ
+q: {駅|えき}の{近|ちか}くは{便利|べんり}です。 | Gần nhà ga thì tiện lợi. | Near the station is convenient. | t: {駅|えき}の/{近|ちか}くは/{便利|べんり}/です *3
+q: タマは[{元気|げんき}]です。 | Tama khỏe mạnh. | Tama is well. | o: {元気|げんき}な/{元気|げんき}い/{元気|げんき}だ
+q: {日曜日|にちようび}は[{暇|ひま}]です。 | Chủ nhật tôi rảnh. | I am free on Sundays. | o: {暇|ひま}な/{暇|ひま}い/{暇|ひま}だ
+q: {日本語|にほんご}は{簡単|かんたん}です。 | Tiếng Nhật đơn giản. | Japanese is simple. | t: {日本語|にほんご}/は/{簡単|かんたん}/です *3 | e: 3 > {簡単|かんたん}な | ev: Không có な giữa tính từ な và です. | ee: No な between a な-adjective and です.
+q: {図書館|としょかん}は[{静|しず}か]です。 | Thư viện yên tĩnh. | The library is quiet. | o: {静|しず}かな/{静|しず}かい/{静|しず}かだ
+
+@p
+form: くないです / じゃありません
+name: くないです・じゃありません: phủ định của tính từ | くないです・じゃありません: negative adjectives
+explain: Tính từ い: bỏ い, thêm くないです (高い → 高くないです) hoặc くありません. Tính từ な: thêm じゃありません hoặc じゃないです (静か → 静かじゃありません). | い-adjectives: drop い and add くないです (高い → 高くないです) or くありません. な-adjectives: add じゃありません or じゃないです (静か → 静かじゃありません).
+note: いい là ngoại lệ: よくないです (không dùng いくないです). | いい is irregular: よくないです (never いくないです).
+tip: い-adj "đổi い thành く"; な-adj "thêm じゃありません" như danh từ.
+kind: conj
+search: (くないです|くありません|じゃありません|じゃないです)
+ex: この{本|ほん}は{高|たか}くないです。 | Quyển sách này không đắt. | This book is not expensive.
+ex: {今日|きょう}は{暑|あつ}くありません。 | Hôm nay không nóng. | It is not hot today.
+ex: この{町|まち}は{静|しず}かじゃありません。 | Thị trấn này không yên tĩnh. | This town is not quiet.
+ex: {天気|てんき}はよくないです。 | Thời tiết không tốt. | The weather is not good.
+q: この{本|ほん}は<{高|たか}くないです>。 | Quyển sách này không đắt. | This book is not expensive. | c: {高|たか}い | t: この/{本|ほん}は/{高|たか}く/ないです *3 | e: 3 > {高|たか}じゃ | ev: Tính từ い phủ định bằng く + ないです, không dùng じゃ. | ee: い-adjectives are negated with く + ないです, not じゃ.
+q: {今日|きょう}は<{暑|あつ}くありません>。 | Hôm nay không nóng. | It is not hot today. | c: {暑|あつ}い | t: {今日|きょう}は/{暑|あつ}く/あり/ません *2
+q: この{町|まち}は<{静|しず}かじゃありません>。 | Thị trấn này không yên tĩnh. | This town is not quiet. | c: {静|しず}か | t: この/{町|まち}は/{静|しず}か/じゃありません *3 | e: 3 > {静|しず}くない | ev: Tính từ な phủ định bằng じゃありません, không đổi sang く. | ee: な-adjectives are negated with じゃありません, not く.
+q: {天気|てんき}は<よくないです>。 | Thời tiết không tốt. | The weather is not good. | c: いい | t: {天気|てんき}/は/よく/ないです *3
+q: ケンタさんは<{元気|げんき}じゃないです>。 | Kenta không khỏe. | Kenta is not well. | c: {元気|げんき} | t: ケンタさん/は/{元気|げんき}/じゃないです *3
+q: {今日|きょう}は{寒|さむ}[くないです]。 | Hôm nay không lạnh. | It is not cold today. | o: ないです/じゃないです/くです
+q: {先生|せんせい}は{親切|しんせつ}[じゃないです]。 | Cô giáo không tốt bụng. | The teacher is not kind. | o: くないです/くありません/ないです
+q: {日本語|にほんご}は{難|むずか}し[くないです]。 | Tiếng Nhật không khó. | Japanese is not difficult. | o: ないです/じゃないです/くじゃないです | t: {日本語|にほんご}は/{難|むずか}し/くない/です *3
+q: この{部屋|へや}は{広|ひろ}[くありません]。 | Căn phòng này không rộng. | This room is not spacious. | o: いじゃありません/くじゃありません/じゃありません
+q: この{店|みせ}は{有名|ゆうめい}[じゃありません]。 | Cửa hàng này không nổi tiếng. | This shop is not famous. | o: くありません/くないです/ないです
+q: {駅|えき}は{近|ちか}[くないです]。 | Nhà ga không gần. | The station is not close. | o: いじゃないです/じゃないです/くです
+q: {私|わたし}の{会社|かいしゃ}は{忙|いそが}しくないです。 | Công ty của tôi không bận. | My company is not busy. | t: {私|わたし}の/{会社|かいしゃ}は/{忙|いそが}しく/ないです *3 | e: 3 > {忙|いそが}しじゃ | ev: い-adj phủ định bằng くない, không dùng じゃ. | ee: An い-adjective is negated with くない, not じゃ.
+
+@p
+form: かったです / でした
+name: かったです・でした: quá khứ của tính từ | かったです・でした: past adjectives
+explain: Tính từ い: bỏ い, thêm かったです (暑い → 暑かったです). Tính từ な: thêm でした (暇 → 暇でした). Dùng khi nói về chuyện đã qua. | い-adjectives: drop い and add かったです (暑い → 暑かったです). な-adjectives: add でした (暇 → 暇でした). Used for things in the past.
+note: Phủ định quá khứ: 暑くなかったです / 暇じゃありませんでした. いい → よかったです. Không nói 暇かったです. | Past negative: 暑くなかったです / 暇じゃありませんでした. いい → よかったです. Never say 暇かったです.
+tip: い-adj đổi い thành かった (như "đã ..."); な-adj thêm でした, giống danh từ.
+kind: conj
+search: (かったです|でした)。
+ex: {昨日|きのう}は{暑|あつ}かったです。 | Hôm qua nóng. | It was hot yesterday.
+ex: {映画|えいが}は{面白|おもしろ}かったです。 | Bộ phim đã rất hay. | The movie was interesting.
+ex: {昨日|きのう}は{暇|ひま}でした。 | Hôm qua tôi rảnh. | I was free yesterday.
+ex: {天気|てんき}はよかったです。 | Thời tiết đã đẹp. | The weather was good.
+q: {昨日|きのう}は<{暑|あつ}かったです>。 | Hôm qua nóng. | It was hot yesterday. | c: {暑|あつ}い | t: {昨日|きのう}は/{暑|あつ}/かった/です *3 | e: 3 > いかった | ev: Phải đổi い thành かった: 暑かった, không giữ い. | ee: Replace い with かった: 暑かった, not 暑いかった.
+q: {映画|えいが}は<{面白|おもしろ}かったです>。 | Bộ phim đã rất hay. | The movie was interesting. | c: {面白|おもしろ}い | t: {映画|えいが}/は/{面白|おもしろ}/かったです *4 | e: 4 > いです | ev: Quá khứ cần かったです; 面白いです là hiện tại. | ee: The past needs かったです; 面白いです is present.
+q: {昨日|きのう}は<{暇|ひま}でした>。 | Hôm qua tôi rảnh. | I was free yesterday. | c: {暇|ひま} | t: {昨日|きのう}/は/{暇|ひま}/でした *4 | e: 4 > かったです | ev: Tính từ な không đổi sang かったです; quá khứ là 暇でした. | ee: A な-adjective does not take かったです; the past is 暇でした.
+q: {先週|せんしゅう}の{天気|てんき}は<よかったです>。 | Thời tiết tuần trước đã đẹp. | The weather last week was good. | c: いい | t: {先週|せんしゅう}の/{天気|てんき}は/よか/ったです *3 | e: 3 > いか | ev: いい là bất quy tắc: quá khứ よかったです, không phải いかったです. | ee: いい is irregular: past よかったです, not いかったです.
+q: {旅行|りょこう}は{楽|たの}し[かったです]。 | Chuyến du lịch đã vui. | The trip was fun. | o: いでした/くでした/かったでした | t: {旅行|りょこう}は/{楽|たの}し/かった/です *3
+q: {昨日|きのう}の{試験|しけん}は{難|むずか}し[くなかったです]。 | Bài thi hôm qua đã không khó. | Yesterday's exam was not difficult. | o: くないでした/くありませんです/じゃなかったです | t: {昨日|きのう}の/{試験|しけん}は/{難|むずか}し/くなかったです *4
+q: {昨日|きのう}のラーメンはおいし[かったです]。 | Mì ramen hôm qua đã ngon. | Yesterday's ramen was delicious. | o: いでした/くでした/かったでした
+q: {先週|せんしゅう}は{忙|いそが}し[かったです]。 | Tuần trước đã bận. | Last week was busy. | o: いでした/くでした/かったでした
+q: {町|まち}は{静|しず}か[でした]。 | Thị trấn đã yên tĩnh. | The town was quiet. | o: だったです/かったです/いでした
+q: {昨日|きのう}の{夜|よる}は{寒|さむ}[かったです]。 | Tối hôm qua đã lạnh. | It was cold last night. | o: いでした/くでした/かったでした
+
+@p
+form: い-adj / な-adj な + N
+name: Tính từ + N: bổ nghĩa danh từ | Adjective + N: modifying nouns
+explain: Tính từ đứng ngay trước danh từ. Tính từ い giữ nguyên い: 高い本. Tính từ な thêm な: 静かな町. Không có です giữa tính từ và danh từ. | The adjective sits directly before the noun. い-adjectives keep い: 高い本. な-adjectives add な: 静かな町. There is no です between the adjective and the noun.
+note: Thứ tự ngược tiếng Việt: "sách đắt" là 高い本 ("đắt sách"). Danh từ + な không đi cùng nhau như vậy. | The order is reverse of Vietnamese: "an expensive book" is 高い本. Don't mix up: な only appears before nouns after な-adjectives.
+tip: い-adj gặp danh từ thì giữ nguyên, な-adj gặp danh từ thì thêm な: "tính từ な" gọi tên vì thế.
+search: (い|な)[{ぁ-ん]
+ex: {高|たか}い{本|ほん}です。 | Là quyển sách đắt. | It is an expensive book.
+ex: ここは{静|しず}かな{町|まち}です。 | Đây là một thị trấn yên tĩnh. | This is a quiet town.
+ex: これはおいしいパンです。 | Đây là bánh mì ngon. | This is delicious bread.
+ex: ユキさんは{親切|しんせつ}な{人|ひと}です。 | Yuki là người tốt bụng. | Yuki is a kind person.
+q: ここは[{静|しず}かな]{町|まち}です。 | Đây là một thị trấn yên tĩnh. | This is a quiet town. | o: {静|しず}か/{静|しず}かい/{静|しず}かの | t: ここは/{静|しず}かな/{町|まち}/です *2 | e: 2 > {静|しず}かの | ev: Tính từ な + な + danh từ: 静かな町. | ee: な-adjective + な + noun: 静かな町.
+q: これは[おいしい]パンです。 | Đây là bánh mì ngon. | This is delicious bread. | o: おいしいな/おいしく/おいし | t: これは/おいしい/パン/です *2
+q: {田中|たなか}さんは[{親切|しんせつ}な]{人|ひと}です。 | Ông Tanaka là người tốt bụng. | Mr. Tanaka is a kind person. | o: {親切|しんせつ}/{親切|しんせつ}い/{親切|しんせつ}の | t: {田中|たなか}さんは/{親切|しんせつ}な/{人|ひと}/です *2
+q: ユキさんは{新|あたら}しいかばんを{買|か}いました。 | Yuki đã mua một cái cặp mới. | Yuki bought a new bag. | t: ユキさんは/{新|あたら}しい/かばんを/{買|か}いました *2 | e: 2 > {新|あたら}しいな | ev: Tính từ い đứng trước danh từ giữ nguyên, không thêm な. | ee: An い-adjective before a noun stays as is, with no な.
+q: これは[{古|ふる}い]{家|いえ}です。 | Đây là ngôi nhà cũ. | This is an old house. | o: {古|ふる}いな/{古|ふる}く/{古|ふる}
+q: {佐藤|さとう}さんは[{元気|げんき}な]{人|ひと}です。 | Bà Sato là người khỏe mạnh. | Ms. Sato is a healthy person. | o: {元気|げんき}/{元気|げんき}い/{元気|げんき}の
+q: これは{有名|ゆうめい}な{店|みせ}です。 | Đây là cửa hàng nổi tiếng. | This is a famous shop. | t: これは/{有名|ゆうめい}/な/{店|みせ}です *3 | e: 3 > の | ev: Tính từ な nối với danh từ bằng な, không phải の. | ee: A な-adjective joins a noun with な, not の.
+q: {高|たか}い{時計|とけい}ですね。 | Cái đồng hồ đắt nhỉ. | That's an expensive watch, isn't it? | t: {高|たか}い/{時計|とけい}/です/ね *1
+q: タマは{小|ちい}さい{猫|ねこ}です。 | Tama là một con mèo nhỏ. | Tama is a small cat. | t: タマは/{小|ちい}さい/{猫|ねこ}/です *2
+q: これは[{便利|べんり}な]{辞書|じしょ}です。 | Đây là cuốn từ điển tiện lợi. | This is a convenient dictionary. | o: {便利|べんり}/{便利|べんり}い/{便利|べんり}の

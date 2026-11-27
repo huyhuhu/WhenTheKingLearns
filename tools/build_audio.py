@@ -3,6 +3,7 @@
 Cach dung: python tools/build_audio.py [kana can tao lai ...]
 Chi tao cac file con thieu (va cac kana truyen vao), roi ghi lai data/audio.js.
 Cau vi du cua tu vung o audio/ex, tao lai khi cau doi, ghi data/audio-ex.js.
+Cau ngu phap o audio/gr, ghi data/audio-gr.js.
 """
 import asyncio, glob, json, os, re, sys
 
@@ -128,6 +129,21 @@ async def main():
         json.dump({k: v[1] for k, v in index.items()}, f, ensure_ascii=False, separators=(",", ":"))
         f.write(";\n")
     print("cau vi du: %d/%d file" % (len(index), len(items)))
+
+    # Cau ngu phap: ten file la ma bam cua cau nen doi cau thi tu ra file moi
+    gr_dir = os.path.join(root, "audio", "gr")
+    os.makedirs(gr_dir, exist_ok=True)
+    gr = {}
+    for path in glob.glob(os.path.join(root, "data", "grammar-*.js")):
+        for st in load(path)["s"]:
+            gr[st[8]] = re.sub(r"\{([^|}]+)\|[^}]+\}", r"\1", re.sub(r"[\[\]<>]", "", st[0]))
+    await asyncio.gather(*(make(k, sem, failed, False, os.path.join(gr_dir, k + ".mp3"), t) for k, t in gr.items()))
+    have = sorted(k for k in gr if os.path.exists(os.path.join(gr_dir, k + ".mp3")))
+    with open(os.path.join(root, "data", "audio-gr.js"), "w", encoding="utf-8") as f:
+        f.write("window.AUDIO_GR = ")
+        json.dump({k: 1 for k in have}, f, separators=(",", ":"))
+        f.write(";\n")
+    print("cau ngu phap: %d/%d file" % (len(have), len(gr)))
     if failed:
         sys.stdout.buffer.write(("\n".join(failed) + "\n").encode("utf-8"))
 

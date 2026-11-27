@@ -1,0 +1,94 @@
+# Bài 10: 神社 Đền thần. Mẫu: N が ほしい · V たい · V(ます) に 行きます · どこか/なにか
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: N が ほしい です
+name: N が ほしい: "muốn có N" | N が ほしい: "want N"
+explain: Nói muốn có một vật. Vật mình muốn đi với が, rồi {欲|ほ}しいです. {欲|ほ}しい là tính từ い nên chia như tính từ い: {欲|ほ}しくないです, {欲|ほ}しかったです. | Says you want a thing. The thing wanted takes が, then {欲|ほ}しいです. {欲|ほ}しい is an い-adjective, so it conjugates like one: {欲|ほ}しくないです, {欲|ほ}しかったです.
+note: Dùng cho người nói (私) hoặc khi hỏi người nghe. Nói về người khác chắc chắn thì không dùng thẳng {欲|ほ}しいです. Muốn làm gì thì dùng V たい (mẫu sau). | Use it for yourself (私) or when asking the listener. Do not state what a third person wants with plain {欲|ほ}しいです. To want to do something, use V たい (next pattern).
+tip: ほしい = "thèm có". Vật thèm có đi với が như "thích" (が{好|す}き).
+search: が.{0,6}(欲|ほ)しい
+ex: {私|わたし}は{新|あたら}しい{車|くるま}が{欲|ほ}しいです。 | Tôi muốn có một chiếc xe mới. | I want a new car.
+ex: ケンタさんは{新|あたら}しいゲームが{欲|ほ}しいです。 | Kenta muốn có trò chơi mới. | Kenta wants a new game.
+ex: ユキさんは{傘|かさ}が{欲|ほ}しいです。 | Yuki muốn có một cái ô. | Yuki wants an umbrella.
+ex: {今|いま}、{何|なに}が{欲|ほ}しいですか。 | Bây giờ bạn muốn có gì? | What do you want now?
+q: {私|わたし}は{新|あたら}しい{車|くるま}[が]{欲|ほ}しいです。 | Tôi muốn có một chiếc xe mới. | I want a new car. | o: を/に/で | t: {私|わたし}は/{新|あたら}しい/{車|くるま}が/{欲|ほ}しいです *3 | e: 3 > {車|くるま}を | ev: Vật muốn có đi với が, không dùng を. | ee: The thing wanted takes が, not を.
+q: ケンタさんは{新|あたら}しいゲーム[が]{欲|ほ}しいです。 | Kenta muốn có trò chơi mới. | Kenta wants a new game. | o: を/に/へ
+q: ユキさんは{傘|かさ}が[{欲|ほ}しい]です。 | Yuki muốn có một cái ô. | Yuki wants an umbrella. | o: {欲|ほ}しく/{欲|ほ}しな/{欲|ほ}します | t: ユキさんは/{傘|かさ}が/{欲|ほ}しい/です *3 | e: 4 > ます | ev: {欲|ほ}しい là tính từ nên đi với です, không dùng ます. | ee: {欲|ほ}しい is an adjective, so it takes です, not ます.
+q: {今|いま}、[{何|なに}]が{欲|ほ}しいですか。 | Bây giờ bạn muốn có gì? | What do you want now? | o: どこ/いつ/{誰|だれ}
+q: {私|わたし}は{時間|じかん}が{欲|ほ}しいです。 | Tôi muốn có thời gian. | I want time. | t: {私|わたし}は/{時間|じかん}が/{欲|ほ}しい/です *3
+q: {私|わたし}は{猫|ねこ}が{欲|ほ}し[くないです]。 | Tôi không muốn có mèo. | I don't want a cat. | o: じゃありません/ません/ないです | t: {私|わたし}は/{猫|ねこ}が/{欲|ほ}し/くないです *4 | e: 4 > じゃありません | ev: {欲|ほ}しい là tính từ い, phủ định là くないです. | ee: {欲|ほ}しい is an い-adjective; its negative is くないです.
+q: {私|わたし}は{今|いま}、{何|なに}も{欲|ほ}しくないです。 | Bây giờ tôi không muốn có gì cả. | I don't want anything now. | t: {私|わたし}は/{今|いま}、/{何|なに}も/{欲|ほ}しくないです *3 | e: 3 > {何|なに}が | ev: "Không ... gì cả" dùng {何|なに}も + phủ định. | ee: "Not ... anything" is {何|なに}も + negative.
+q: {冷|つめ}たい{水|みず}が{欲|ほ}しいです。 | Tôi muốn có nước lạnh. | I want cold water. | t: {冷|つめ}たい/{水|みず}が/{欲|ほ}しい/です *3 | e: 2 > {水|みず}を | ev: Vật muốn có đi với が. | ee: The thing wanted takes が.
+q: {私|わたし}は{大|おお}きい{家|いえ}が[{欲|ほ}しかった]です。 | Tôi đã muốn có một ngôi nhà lớn. | I wanted a big house. | o: {欲|ほ}しいた/{欲|ほ}しくた/{欲|ほ}しだった
+
+@p
+form: V(ます) たい です
+kind: conj
+name: V たい: "muốn làm V" | V たい: "want to V"
+explain: Bỏ ます khỏi động từ rồi thêm たい: {飲|の}みます → {飲|の}みたい. Thêm です cho lịch sự. たい chia như tính từ い: たくないです, たかったです. | Drop ます from the verb and add たい: {飲|の}みます → {飲|の}みたい. Add です to be polite. たい conjugates like an い-adjective: たくないです, たかったです.
+note: Đối tượng dùng を hoặc が đều được: {水|みず}を／が{飲|の}みたいです. Phủ định: {食|た}べたくないです. Quá khứ: {見|み}たかったです. | The object can take を or が: {水|みず}を／が{飲|の}みたいです. Negative: {食|た}べたくないです. Past: {見|み}たかったです.
+compare: N が ほしい là muốn có vật; V たい là muốn làm việc. | N が ほしい is wanting a thing; V たい is wanting to do something.
+tip: たい = "muốn". Ghép sau thân động từ như "ăn-muốn", rồi chia như tính từ い.
+search: たい(です|ない|か)
+ex: {水|みず}が{飲|の}みたいです。 | Tôi muốn uống nước. | I want to drink water.
+ex: {日本|にほん}へ{行|い}きたいです。 | Tôi muốn đi Nhật. | I want to go to Japan.
+ex: {映画|えいが}を{見|み}たいです。 | Tôi muốn xem phim. | I want to watch a movie.
+ex: {今日|きょう}は{何|なに}も{食|た}べたくないです。 | Hôm nay tôi không muốn ăn gì cả. | I don't want to eat anything today.
+q: {冷|つめ}たい{水|みず}が<{飲|の}みたい>です。 | Tôi muốn uống nước lạnh. | I want to drink cold water. | c: {飲|の}む
+q: {京都|きょうと}へ<{行|い}きたい>です。 | Tôi muốn đi Kyoto. | I want to go to Kyoto. | c: {行|い}く
+q: {今日|きょう}は{何|なに}も<{食|た}べたくない>です。 | Hôm nay tôi không muốn ăn gì cả. | I don't want to eat anything today. | c: {食|た}べる
+q: {昨日|きのう}は{映画|えいが}を<{見|み}たかった>ですが、{忙|いそが}しかったです。 | Hôm qua tôi đã muốn xem phim nhưng bận. | I wanted to watch a movie yesterday, but I was busy. | c: {見|み}る
+q: {私|わたし}は{先生|せんせい}に<{会|あ}いたい>です。 | Tôi muốn gặp thầy giáo. | I want to meet my teacher. | c: {会|あ}う
+q: ケンタさんは{勉強|べんきょう}を<したくない>です。 | Kenta không muốn học bài. | Kenta doesn't want to study. | c: する
+q: {家|いえ}へ<{帰|かえ}りたい>です。 | Tôi muốn về nhà. | I want to go home. | c: {帰|かえ}る
+q: {友達|ともだち}に{手紙|てがみ}を<{書|か}きたい>です。 | Tôi muốn viết thư cho bạn. | I want to write a letter to my friend. | c: {書|か}く
+q: {映画|えいが}[を]{見|み}たいです。 | Tôi muốn xem phim. | I want to watch a movie. | o: に/で/へ | t: {映画|えいが}/を/{見|み}たい/です *2 | e: 3 > {見|み}ます | ev: Muốn làm gì thì dùng 〜たい, không dùng ます. | ee: To say "want to", use 〜たい, not ます.
+q: {私|わたし}は{旅行|りょこう}に{行|い}き[たい]です。 | Tôi muốn đi du lịch. | I want to go on a trip. | o: ます/たく/ほしい | t: {私|わたし}は/{旅行|りょこう}に/{行|い}き/たいです *4 | e: 4 > ほしいです | ev: ほしい đi với danh từ; muốn làm gì thì dùng 〜たい. | ee: ほしい goes with nouns; to want to do something use 〜たい.
+q: {私|わたし}は{水|みず}[が]{飲|の}みたいです。 | Tôi muốn uống nước. | I want to drink water. | o: に/で/へ | t: {私|わたし}は/{水|みず}が/{飲|の}み/たいです *3 | e: 4 > ほしいです | ev: Muốn làm gì thì dùng 〜たい; ほしい đi với danh từ. | ee: To want to do something use 〜たい; ほしい goes with nouns.
+q: ケンタさんはゲームを[したい]です。 | Kenta muốn chơi game. | Kenta wants to play video games. | o: します/しますたい/したいます | t: ケンタさんは/ゲームを/したい/です *3 | e: 3 > しますたい | ev: Bỏ ます rồi thêm たい: し + たい. | ee: Drop ます and add たい: し + たい.
+q: {明日|あした}は{家|いえ}で{寝|ね}[たい]です。 | Ngày mai tôi muốn ngủ ở nhà. | I want to sleep at home tomorrow. | o: ます/たく/ほしい | t: {明日|あした}は/{家|いえ}で/{寝|ね}/たいです *4 | e: 4 > ほしいです | ev: Muốn làm gì thì dùng 〜たい. | ee: To want to do something use 〜たい.
+q: ユキさんは{何|なに}を[{食|た}べたい]ですか。 | Yuki muốn ăn gì? | What does Yuki want to eat? | o: {食|た}べます/{食|た}べる/{食|た}べない | t: ユキさんは/{何|なに}を/{食|た}べたい/ですか *3
+
+@p
+form: V(ます) に 行きます
+name: V に 行きます: "đi để làm V" | V に 行きます: "go to do V"
+explain: Nói đi, đến, về để làm gì. Bỏ ます của động từ rồi thêm に, sau đó là {行|い}きます／{来|き}ます／{帰|かえ}ります. Danh từ như {買|か}い{物|もの}, {散歩|さんぽ}, {旅行|りょこう} cũng đi với に. | Says you go, come or return in order to do something. Drop ます from the verb, add に, then {行|い}きます／{来|き}ます／{帰|かえ}ります. Nouns like {買|か}い{物|もの}, {散歩|さんぽ} and {旅行|りょこう} also take に.
+note: Dùng gốc ます (không dùng ます, không dùng dạng từ điển): {食|た}べに, không phải {食|た}べますに. Nơi đến thêm へ／に ở đầu câu. | Use the ます-stem (not ます, not the dictionary form): {食|た}べに, not {食|た}べますに. Add へ／に for the destination at the start.
+tip: Ghép "đi + để": {本|ほん}を{借|か}りに{行|い}きます → "đi để mượn sách".
+search: に(行|来|帰)り?(ます|ました)
+ex: {図書館|としょかん}へ{本|ほん}を{借|か}りに{行|い}きます。 | Tôi đi thư viện để mượn sách. | I go to the library to borrow books.
+ex: {駅|えき}へ{友達|ともだち}に{会|あ}いに{行|い}きます。 | Tôi đi ra ga để gặp bạn. | I go to the station to meet a friend.
+ex: {店|みせ}へ{買|か}い{物|もの}に{行|い}きます。 | Tôi đi cửa hàng để mua sắm. | I go to the shop to do some shopping.
+ex: レストランへ{昼御飯|ひるごはん}を{食|た}べに{行|い}きます。 | Tôi đến nhà hàng để ăn trưa. | I go to a restaurant to eat lunch.
+q: {図書館|としょかん}へ{本|ほん}を{借|か}り[に]{行|い}きます。 | Tôi đi thư viện để mượn sách. | I go to the library to borrow books. | o: で/を/が | t: {図書館|としょかん}へ/{本|ほん}を/{借|か}りに/{行|い}きます *3 | e: 3 > {借|か}りで | ev: Mục đích dùng に, không dùng で. | ee: Purpose takes に, not で.
+q: {駅|えき}へ{友達|ともだち}に{会|あ}い[に]{行|い}きます。 | Tôi đi ra ga để gặp bạn. | I go to the station to meet a friend. | o: で/を/が | t: {駅|えき}へ/{友達|ともだち}に/{会|あ}いに/{行|い}きます *3
+q: {店|みせ}へ{買|か}い{物|もの}[に]{行|い}きます。 | Tôi đi cửa hàng để mua sắm. | I go to the shop to do some shopping. | o: で/を/が | t: {店|みせ}へ/{買|か}い{物|もの}/に/{行|い}きます *3 | e: 3 > を | ev: Mục đích dùng に. | ee: Purpose takes に.
+q: レストランへ{昼御飯|ひるごはん}を[{食|た}べ]に{行|い}きます。 | Tôi đến nhà hàng để ăn trưa. | I go to a restaurant to eat lunch. | o: {食|た}べる/{食|た}べます/{食|た}べた | t: レストランへ/{昼御飯|ひるごはん}を/{食|た}べに/{行|い}きます *3 | e: 3 > {食|た}べますに | ev: Trước に dùng gốc ます (bỏ ます). | ee: Before に use the ます-stem (drop ます).
+q: ケンタさんは{郵便局|ゆうびんきょく}へ{切手|きって}を{買|か}いに[{行|い}きました]。 | Kenta đã đi bưu điện để mua tem. | Kenta went to the post office to buy stamps. | o: {食|た}べました/{見|み}ました/{書|か}きました
+q: {公園|こうえん}へ{散歩|さんぽ}[に]{行|い}きます。 | Tôi đi công viên để đi dạo. | I go to the park for a walk. | o: を/で/が | t: {公園|こうえん}へ/{散歩|さんぽ}/に/{行|い}きます *3 | e: 3 > を | ev: Mục đích dùng に. | ee: Purpose takes に.
+q: {京都|きょうと}へ{旅行|りょこう}に{行|い}きます。 | Tôi đi Kyoto để du lịch. | I go to Kyoto for a trip. | t: {京都|きょうと}へ/{旅行|りょこう}に/{行|い}き/ます *2
+q: {日本|にほん}へ{日本語|にほんご}の{勉強|べんきょう}[に]{来|き}ました。 | Tôi đã đến Nhật để học tiếng Nhật. | I came to Japan to study Japanese. | o: を/で/が | t: {日本|にほん}へ/{日本語|にほんご}の/{勉強|べんきょう}に/{来|き}ました *3 | e: 3 > {勉強|べんきょう}を | ev: Mục đích dùng に. | ee: Purpose takes に.
+q: ユキさんは{家|いえ}へ{財布|さいふ}を{取|と}りに{帰|かえ}りました。 | Yuki đã về nhà để lấy ví. | Yuki went home to get her wallet. | t: ユキさんは/{家|いえ}へ/{財布|さいふ}を/{取|と}りに *4
+
+@p
+form: どこか / なにか
+name: どこか・なにか: "đâu đó, cái gì đó" | どこか・なにか: "somewhere, something"
+explain: Thêm か sau từ nghi vấn để nói điều không xác định: どこか (đâu đó), {何|なに}か (cái gì đó), {誰|だれ}か (ai đó). Dùng trong câu hỏi, câu rủ và câu khẳng định. | Add か after a question word for something unspecified: どこか (somewhere), {何|なに}か (something), {誰|だれ}か (someone). It works in questions, invitations and statements.
+note: Trợ từ を／が thường bị bỏ sau {何|なに}か／{誰|だれ}か; へ／に có thể giữ: どこかへ{行|い}きます. Đừng nhầm với どこも／{何|なに}も + phủ định ("không ... đâu cả"). | を／が are usually dropped after {何|なに}か／{誰|だれ}か; へ／に can stay: どこかへ{行|い}きます. Do not confuse with どこも／{何|なに}も + negative ("nowhere, nothing").
+compare: {何|なに}か{飲|の}みませんか = "Uống gì đó không?"; {何|なに}も{飲|の}みません = "Tôi không uống gì cả". | {何|なに}か{飲|の}みませんか = "Shall we drink something?"; {何|なに}も{飲|の}みません = "I drink nothing".
+tip: か = "nào đó": どこか → "chỗ nào đó", {誰|だれ}か → "ai đó".
+search: (どこ|何|なに|誰|だれ)か
+ex: {日曜日|にちようび}に、どこかへ{行|い}きませんか。 | Chủ nhật mình đi đâu đó không? | Shall we go somewhere on Sunday?
+ex: {何|なに}か{飲|の}みませんか。 | Bạn uống gì đó không? | Would you like something to drink?
+ex: {冷蔵庫|れいぞうこ}に{何|なに}かありますか。 | Trong tủ lạnh có gì không? | Is there anything in the fridge?
+ex: {部屋|へや}に{誰|だれ}かいますか。 | Có ai trong phòng không? | Is anyone in the room?
+q: {日曜日|にちようび}に、どこ[か]へ{行|い}きませんか。 | Chủ nhật mình đi đâu đó không? | Shall we go somewhere on Sunday? | o: も/が/は | t: {日曜日|にちようび}に、/どこかへ/{行|い}き/ませんか *2 | e: 2 > どこもへ | ev: どこも đi với phủ định ("không đâu cả"); "đâu đó" là どこか. | ee: どこも goes with negatives ("nowhere"); "somewhere" is どこか.
+q: [{何|なに}]か{飲|の}みませんか。 | Bạn uống gì đó không? | Would you like something to drink? | o: どこ/{誰|だれ}/いつ
+q: {冷蔵庫|れいぞうこ}に{何|なに}[か]ありますか。 | Trong tủ lạnh có gì không? | Is there anything in the fridge? | o: も/を/が | t: {冷蔵庫|れいぞうこ}に/{何|なに}か/あります/か *2 | e: 2 > {何|なに}も | ev: Câu hỏi "có gì đó không" dùng {何|なに}か; {何|なに}も đi với phủ định. | ee: "Is there anything" uses {何|なに}か; {何|なに}も goes with negatives.
+q: {部屋|へや}に{誰|だれ}[か]いますか。 | Có ai trong phòng không? | Is anyone in the room? | o: も/を/が | t: {部屋|へや}に/{誰|だれ}か/います/か *2
+q: {京都|きょうと}で[{何|なに}]か{買|か}いました。 | Tôi đã mua cái gì đó ở Kyoto. | I bought something in Kyoto. | o: どこ/{誰|だれ}/いつ
+q: {私|わたし}はどこか[へ]{行|い}きたいです。 | Tôi muốn đi đâu đó. | I want to go somewhere. | o: を/で/が
+q: {誰|だれ}かが{来|き}ました。 | Có ai đó đã đến. | Someone came. | t: {誰|だれ}か/が/{来|き}/ました *1 | e: 1 > {誰|だれ}も | ev: {誰|だれ}も đi với phủ định; "ai đó" là {誰|だれ}か. | ee: {誰|だれ}も goes with negatives; "someone" is {誰|だれ}か.
+q: ユキさんは{何|なに}か{食|た}べましたか。 | Yuki đã ăn gì chưa? | Did Yuki eat something? | t: ユキさんは/{何|なに}か/{食|た}べ/ましたか *2
+q: [どこか]でお{茶|ちゃ}を{飲|の}みませんか。 | Mình uống trà ở đâu đó nhé? | Shall we have tea somewhere? | o: どこも/どこへ/どれか

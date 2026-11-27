@@ -1,0 +1,110 @@
+# Bài 3: 鐘楼 Lầu chuông. Mẫu: いくら · なんじ/なんぷん · 〜から〜まで · 〜ごろ/〜ぐらい · N と N
+# Định dạng: xem đầu file 01.txt.
+
+@p
+form: N は いくら です か
+name: いくら: "bao nhiêu tiền" | いくら: "how much"
+explain: いくら dùng để hỏi giá tiền. Từ để hỏi đứng đúng chỗ của con số, câu trả lời là số + 円 (えん). | いくら asks for a price. The question word sits where the number would go, and the answer is a number + 円 (yen).
+note: Hỏi số lượng đếm được dùng いくつ, không dùng いくら. Hỏi tổng cộng: 全部でいくらですか. | For countable amounts use いくつ, not いくら. For the total: 全部でいくらですか.
+tip: Đi chợ chỉ cần nhớ một câu: これはいくらですか, "Cái này bao nhiêu ạ?"
+search: いくら
+ex: これはいくらですか。 | Cái này bao nhiêu tiền? | How much is this?
+ex: その{傘|かさ}は{三千円|さんぜんえん}です。 | Cái ô đó giá ba nghìn yên. | That umbrella is 3,000 yen.
+ex: {全部|ぜんぶ}でいくらですか。 | Tất cả hết bao nhiêu tiền? | How much is it altogether?
+ex: すみません、このパンはいくらですか。 | Xin lỗi, bánh mì này bao nhiêu ạ? | Excuse me, how much is this bread?
+q: これは[いくら]ですか。 | Cái này bao nhiêu tiền? | How much is this? | o: いくつ/{何|なん}/どこ | t: これ/は/いくら/ですか *3 | e: 3 > いくつ | ev: Hỏi giá tiền dùng いくら; いくつ hỏi số lượng đếm. | ee: Ask a price with いくら; いくつ asks a counted number.
+q: この{本|ほん}は[いくら]ですか。 | Quyển sách này bao nhiêu tiền? | How much is this book? | o: いくつ/どれ/だれ | t: この/{本|ほん}は/いくら/ですか *3
+q: {全部|ぜんぶ}で[いくら]ですか。 | Tất cả hết bao nhiêu tiền? | How much is it altogether? | o: いくつ/{何|なん}/どこ | t: {全部|ぜんぶ}/で/いくら/ですか *3 | e: 3 > どこ | ev: Hỏi tổng tiền dùng いくら, không dùng どこ (ở đâu). | ee: Ask the total price with いくら, not どこ (where).
+q: すみません、このパンは[いくら]ですか。 | Xin lỗi, bánh mì này bao nhiêu ạ? | Excuse me, how much is this bread? | o: いくつ/どれ/{何|なに} | t: すみません、/この/パンは/いくらですか *4
+q: その{傘|かさ}は{三千円|さんぜんえん}です。 | Cái ô đó giá ba nghìn yên. | That umbrella is 3,000 yen. | t: その/{傘|かさ}は/{三千円|さんぜんえん}/です *3 | e: 4 > ます | ev: Sau giá tiền (danh từ) dùng です, không dùng ます. | ee: After a price (a noun) use です, not ます.
+q: この{時計|とけい}は{一万円|いちまんえん}です。 | Cái đồng hồ này giá mười nghìn yên. | This watch is 10,000 yen. | t: この/{時計|とけい}は/{一万円|いちまんえん}/です *3
+q: {田中|たなか}さんのかばんは[いくら]ですか。 | Cái cặp của ông Tanaka giá bao nhiêu? | How much is Mr. Tanaka's bag? | o: いくつ/だれ/どこ | t: {田中|たなか}さんの/かばんは/いくら/ですか *3
+q: そのりんごは[いくら]ですか。 | Quả táo đó bao nhiêu tiền? | How much is that apple? | o: いくつ/{何|なん}/どれ | t: その/りんごは/いくら/ですか *3 | e: 3 > どれ | ev: どれ hỏi "cái nào", không hỏi giá. | ee: どれ asks "which one", not a price.
+q: この{傘|かさ}は{八百円|はっぴゃくえん}です。 | Cái ô này giá tám trăm yên. | This umbrella is 800 yen. | t: この/{傘|かさ}は/{八百円|はっぴゃくえん}/です *3
+q: {佐藤|さとう}さんの{猫|ねこ}の{本|ほん}は[いくら]ですか。 | Sách về mèo của bà Sato bao nhiêu tiền? | How much is Ms. Sato's cat book? | o: いくつ/だれ/どこ
+
+@p
+form: なんじ / なんぷん
+name: なんじ・なんぷん: giờ và phút | なんじ・なんぷん: hours and minutes
+explain: 何時 (なんじ) hỏi mấy giờ, 何分 (なんぷん) hỏi mấy phút. Giờ = số + 時, phút = số + 分, rưỡi = 半 (はん). | 何時 (なんじ) asks the hour, 何分 (なんぷん) asks the minutes. Hour = number + 時, minute = number + 分, half past = 半 (はん).
+note: Giờ đọc bất quy tắc: 四時 よじ, 七時 しちじ, 九時 くじ. Phút đổi âm: 一分 いっぷん, 三分 さんぷん, 六分 ろっぷん, 八分 はっぷん, 十分 じゅっぷん. | Irregular hours: 四時 よじ, 七時 しちじ, 九時 くじ. Minutes change sound: 一分 いっぷん, 三分 さんぷん, 六分 ろっぷん, 八分 はっぷん, 十分 じゅっぷん.
+tip: Nhớ ba giờ "khó": 4 giờ よじ, 7 giờ しちじ, 9 giờ くじ. Không đọc là よんじ, ななじ, きゅうじ.
+search: (何時|なんじ|何分|なんぷん)
+ex: {今|いま}{何時|なんじ}ですか。 | Bây giờ là mấy giờ? | What time is it now?
+ex: {今|いま}は{三時|さんじ}{十五分|じゅうごふん}です。 | Bây giờ là 3 giờ 15 phút. | It is 3:15 now.
+ex: {会議|かいぎ}は{九時|くじ}です。 | Cuộc họp lúc 9 giờ. | The meeting is at 9 o'clock.
+ex: {今|いま}は{八時|はちじ}{半|はん}です。 | Bây giờ là 8 giờ rưỡi. | It is 8:30 now.
+q: {今|いま}は[{何時|なんじ}]ですか。 | Bây giờ là mấy giờ? | What time is it now? | o: {何分|なんぷん}/いくら/いつ | t: {今|いま}は/{何時|なんじ}/です/か *2 | e: 2 > いくら | ev: Hỏi giờ dùng 何時; いくら hỏi giá tiền. | ee: Ask the hour with 何時; いくら asks a price.
+q: {会議|かいぎ}は[{九時|くじ}]です。 | Cuộc họp lúc 9 giờ. | The meeting is at 9 o'clock. | o: きゅうじ/ここのじ/くうじ | t: {会議|かいぎ}/は/{九時|くじ}/です *3 | e: 3 > {九分|きゅうふん} | ev: 9 giờ là 九時 (くじ); 九分 là 9 phút. | ee: 9 o'clock is 九時 (くじ); 九分 means 9 minutes.
+q: {今|いま}は[{四時|よじ}]です。 | Bây giờ là 4 giờ. | It is 4 o'clock now. | o: よんじ/しじ/ようじ | t: {今|いま}/は/{四時|よじ}/です *3
+q: {電車|でんしゃ}は[{七時|しちじ}]です。 | Tàu điện lúc 7 giờ. | The train is at 7 o'clock. | o: ななじ/なのじ/しっじ | t: {電車|でんしゃ}/は/{七時|しちじ}/です *3
+q: {映画|えいが}は{何時|なんじ}ですか。 | Phim chiếu lúc mấy giờ? | What time is the movie? | t: {映画|えいが}/は/{何時|なんじ}/ですか *3 | e: 3 > {何分|なんぷん} | ev: Hỏi "mấy giờ" dùng 何時; 何分 chỉ hỏi số phút. | ee: "What time" is 何時; 何分 only asks for minutes.
+q: {今|いま}は{一時|いちじ}[{三分|さんぷん}]です。 | Bây giờ là 1 giờ 3 phút. | It is 1:03 now. | o: さんふん/さんぶん/みっぷん
+q: {今|いま}は{十時|じゅうじ}{六分|ろっぷん}です。 | Bây giờ là 10 giờ 6 phút. | It is 10:06 now. | t: {今|いま}は/{十時|じゅうじ}/{六分|ろっぷん}/です *3 | e: 3 > ろくふん | ev: 6 phút đọc ろっぷん, không phải ろくふん. | ee: 6 minutes is read ろっぷん, not ろくふん.
+q: {学校|がっこう}は{八時|はちじ}{半|はん}です。 | Trường học lúc 8 giờ rưỡi. | School is at 8:30. | t: {学校|がっこう}は/{八時|はちじ}/{半|はん}/です *3
+q: {今|いま}は{二時|にじ}[{十分|じゅっぷん}]です。 | Bây giờ là 2 giờ 10 phút. | It is 2:10 now. | o: じゅうふん/じゅうぷん/じゅふん
+
+@p
+form: N から N まで
+name: 〜から〜まで: "từ ... đến ..." | 〜から〜まで: "from ... to ..."
+explain: から đánh dấu điểm bắt đầu (từ), まで đánh dấu điểm kết thúc (đến), dùng cho thời gian và nơi chốn. | から marks the starting point (from) and まで the end point (to), for both time and place.
+note: Có thể dùng riêng từng cái: 九時からです ("từ 9 giờ"), 五時までです ("đến 5 giờ"). | Each can be used alone: 九時からです ("from 9"), 五時までです ("until 5").
+tip: から = "từ", まで = "mãi tới": đúng thứ tự tiếng Việt, "từ 9 giờ đến 6 giờ".
+search: から.+まで
+ex: {会社|かいしゃ}は{九時|くじ}から{六時|ろくじ}までです。 | Công ty làm từ 9 giờ đến 6 giờ. | The company is open from 9 to 6.
+ex: {東京|とうきょう}から{大阪|おおさか}まで{三時間|さんじかん}です。 | Từ Tokyo đến Osaka mất 3 tiếng. | It takes three hours from Tokyo to Osaka.
+ex: {銀行|ぎんこう}は{九時|くじ}から{三時|さんじ}までです。 | Ngân hàng mở từ 9 giờ đến 3 giờ. | The bank is open from 9 to 3.
+ex: {休|やす}みは{土曜日|どようび}から{日曜日|にちようび}までです。 | Ngày nghỉ là từ thứ Bảy đến Chủ nhật. | The days off are Saturday to Sunday.
+q: {会社|かいしゃ}は{九時|くじ}[から]{六時|ろくじ}までです。 | Công ty làm từ 9 giờ đến 6 giờ. | The company is open from 9 to 6. | o: まで/に/で | t: {会社|かいしゃ}は/{九時|くじ}/から/{六時|ろくじ}まで *3 | e: 3 > まで | ev: Điểm bắt đầu dùng から; まで là điểm kết thúc. | ee: The start uses から; まで is the end.
+q: {銀行|ぎんこう}は{九時|くじ}から{三時|さんじ}[まで]です。 | Ngân hàng mở từ 9 giờ đến 3 giờ. | The bank is open from 9 to 3. | o: から/に/で | t: {銀行|ぎんこう}は/{九時|くじ}から/{三時|さんじ}/までです *3
+q: {東京|とうきょう}[から]{大阪|おおさか}まで{三時間|さんじかん}です。 | Từ Tokyo đến Osaka mất 3 tiếng. | It takes three hours from Tokyo to Osaka. | o: まで/を/に | t: {東京|とうきょう}/から/{大阪|おおさか}/まで *2
+q: {休|やす}みは{土曜日|どようび}から{日曜日|にちようび}までです。 | Ngày nghỉ là từ thứ Bảy đến Chủ nhật. | The days off are Saturday to Sunday. | t: {休|やす}みは/{土曜日|どようび}/から/{日曜日|にちようび}まで *3 | e: 3 > を | ev: "Từ" trong "từ A đến B" là から, không dùng を. | ee: "From" in "from A to B" is から, not を.
+q: {授業|じゅぎょう}は{十時|じゅうじ}から{十二時|じゅうにじ}までです。 | Giờ học từ 10 giờ đến 12 giờ. | Class is from 10 to 12. | t: {授業|じゅぎょう}は/{十時|じゅうじ}/から/{十二時|じゅうにじ}まで *3
+q: {家|いえ}から{駅|えき}[まで]{十分|じゅっぷん}です。 | Từ nhà đến ga mất 10 phút. | It takes 10 minutes from home to the station. | o: から/へ/に
+q: {仕事|しごと}は{月曜日|げつようび}[から]{金曜日|きんようび}までです。 | Công việc từ thứ Hai đến thứ Sáu. | Work is from Monday to Friday. | o: まで/に/で | t: {仕事|しごと}は/{月曜日|げつようび}/から/{金曜日|きんようび}まで *3 | e: 3 > まで | ev: Điểm kết thúc "đến thứ Sáu" cần まで. | ee: The end point "until Friday" needs まで.
+q: {駅|えき}から{会社|かいしゃ}まで{五分|ごふん}です。 | Từ ga đến công ty mất 5 phút. | It takes 5 minutes from the station to the company. | t: {駅|えき}から/{会社|かいしゃ}/まで/{五分|ごふん} *3
+q: {店|みせ}は{十時|じゅうじ}[から]{八時|はちじ}までです。 | Cửa hàng mở từ 10 giờ đến 8 giờ. | The shop is open from 10 to 8. | o: まで/で/に
+
+@p
+form: 時刻 ごろ / 時間 ぐらい
+name: 〜ごろ・〜ぐらい: "khoảng" | 〜ごろ・〜ぐらい: "about, around"
+explain: ごろ đi sau mốc thời gian (khoảng 3 giờ). ぐらい đi sau lượng, khoảng thời gian (khoảng 10 phút, khoảng 1 tiếng). | ごろ follows a point in time (around 3 o'clock). ぐらい follows an amount or duration (about 10 minutes, about an hour).
+note: Mốc giờ giấc → ごろ, độ dài thời gian → ぐらい. Cũng nói ぐらい thành くらい. | Clock time → ごろ, length of time → ぐらい. ぐらい can also be said くらい.
+compare: 三時ごろ = khoảng 3 giờ (mốc); 三時間ぐらい = khoảng 3 tiếng (độ dài). | 三時ごろ = around 3 o'clock (point); 三時間ぐらい = about 3 hours (length).
+tip: ごろ = "tầm giờ đó", ぐらい = "cỡ chừng đó lâu". Có chữ 間 (khoảng) thì dùng ぐらい.
+search: (ごろ|ぐらい|くらい)
+ex: {会議|かいぎ}は{三時|さんじ}ごろです。 | Cuộc họp khoảng 3 giờ. | The meeting is around 3 o'clock.
+ex: {家|いえ}から{駅|えき}まで{十分|じゅっぷん}ぐらいです。 | Từ nhà đến ga khoảng 10 phút. | It is about 10 minutes from home to the station.
+ex: {昼|ひる}ごはんは{十二時|じゅうにじ}ごろです。 | Bữa trưa khoảng 12 giờ. | Lunch is around 12.
+ex: {映画|えいが}は{二時間|にじかん}ぐらいです。 | Bộ phim dài khoảng 2 tiếng. | The movie is about two hours.
+q: {会議|かいぎ}は{三時|さんじ}[ごろ]です。 | Cuộc họp khoảng 3 giờ. | The meeting is around 3 o'clock. | o: ぐらい/まで/から | t: {会議|かいぎ}は/{三時|さんじ}/ごろ/です *3 | e: 3 > ぐらい | ev: Mốc giờ (3 giờ) đi với ごろ; ぐらい dùng cho độ dài thời gian. | ee: A clock time (3 o'clock) takes ごろ; ぐらい is for durations.
+q: {家|いえ}から{駅|えき}まで{十分|じゅっぷん}[ぐらい]です。 | Từ nhà đến ga khoảng 10 phút. | It is about 10 minutes from home to the station. | o: ごろ/まで/から | t: {家|いえ}から/{駅|えき}まで/{十分|じゅっぷん}/ぐらい *4 | e: 4 > ごろ | ev: Độ dài thời gian (10 phút) đi với ぐらい. | ee: A duration (10 minutes) takes ぐらい.
+q: {昼|ひる}ごはんは{十二時|じゅうにじ}ごろです。 | Bữa trưa khoảng 12 giờ. | Lunch is around 12. | t: {昼|ひる}ごはんは/{十二時|じゅうにじ}/ごろ/です *3
+q: {日本語|にほんご}の{授業|じゅぎょう}は{一時間|いちじかん}[ぐらい]です。 | Giờ tiếng Nhật khoảng 1 tiếng. | The Japanese class is about an hour. | o: ごろ/から/も | t: {日本語|にほんご}の/{授業|じゅぎょう}は/{一時間|いちじかん}/ぐらい *4
+q: {東京|とうきょう}から{大阪|おおさか}まで{三時間|さんじかん}ぐらいです。 | Từ Tokyo đến Osaka khoảng 3 tiếng. | It is about three hours from Tokyo to Osaka. | t: {東京|とうきょう}から/{大阪|おおさか}まで/{三時間|さんじかん}/ぐらい *4 | e: 4 > ごろ | ev: 三時間 là độ dài thời gian nên dùng ぐらい. | ee: 三時間 is a duration, so use ぐらい.
+q: {今|いま}は{九時|くじ}[ごろ]です。 | Bây giờ khoảng 9 giờ. | It is around 9 o'clock now. | o: ぐらい/まで/から
+q: {私|わたし}の{家|いえ}は{駅|えき}から{五分|ごふん}[ぐらい]です。 | Nhà tôi cách ga khoảng 5 phút. | My house is about 5 minutes from the station. | o: ごろ/まで/へ
+q: {田中|たなか}さんの{話|はなし}は{三十分|さんじゅっぷん}ぐらいです。 | Bài nói của ông Tanaka khoảng 30 phút. | Mr. Tanaka's talk is about 30 minutes. | t: {田中|たなか}さんの/{話|はなし}は/{三十分|さんじゅっぷん}/ぐらい *4
+q: {店|みせ}は{十時|じゅうじ}[ごろ]です。 | Cửa hàng khoảng 10 giờ. | The shop is around 10 o'clock. | o: ぐらい/から/まで
+
+@p
+form: N と N
+name: N と N: "N và N" | N と N: "N and N"
+explain: Trợ từ と nối hai danh từ, nghĩa là "và". Dùng để liệt kê đầy đủ những thứ đang nói tới. | The particle と joins two nouns and means "and". It lists the items being talked about.
+note: と chỉ nối danh từ, không nối câu hay tính từ. Nối ba danh từ trở lên: A と B と C. | と only joins nouns, not sentences or adjectives. For three or more: A と B と C.
+compare: も là "cũng" (thêm điều giống nhau); と là "và" (gộp hai danh từ trong một câu). | も means "also" (same fact for another subject); と means "and" (two nouns in one sentence).
+tip: と trong "A と B" giống chữ "và" của tiếng Việt, nằm giữa hai danh từ.
+search: [^ぁ-ん]と[^ぁ-ん]
+ex: ユキさんとケンタさんは{会社員|かいしゃいん}です。 | Yuki và Kenta là nhân viên công ty. | Yuki and Kenta are office workers.
+ex: これはパンと{牛乳|ぎゅうにゅう}です。 | Đây là bánh mì và sữa. | This is bread and milk.
+ex: {田中|たなか}さんと{佐藤|さとう}さんは{日本人|にほんじん}です。 | Ông Tanaka và bà Sato là người Nhật. | Mr. Tanaka and Ms. Sato are Japanese.
+ex: {月曜日|げつようび}と{金曜日|きんようび}は{休|やす}みです。 | Thứ Hai và thứ Sáu là ngày nghỉ. | Monday and Friday are days off.
+q: ユキさん[と]ケンタさんは{会社員|かいしゃいん}です。 | Yuki và Kenta là nhân viên công ty. | Yuki and Kenta are office workers. | o: の/も/を | t: ユキさん/と/ケンタさん/は *2 | e: 2 > も | ev: "A và B" nối bằng と; も nghĩa là "cũng". | ee: "A and B" is joined with と; も means "also".
+q: これはパン[と]{牛乳|ぎゅうにゅう}です。 | Đây là bánh mì và sữa. | This is bread and milk. | o: の/も/を | t: これは/パン/と/{牛乳|ぎゅうにゅう}です *3
+q: {田中|たなか}さん[と]{佐藤|さとう}さんは{日本人|にほんじん}です。 | Ông Tanaka và bà Sato là người Nhật. | Mr. Tanaka and Ms. Sato are Japanese. | o: の/も/を | t: {田中|たなか}さん/と/{佐藤|さとう}さん/は *2 | e: 2 > の | ev: Nối hai danh từ nghĩa là "và" dùng と; の nghĩa là "của". | ee: "And" between two nouns is と; の means "of".
+q: これは{私|わたし}の{本|ほん}と{傘|かさ}です。 | Đây là sách và ô của tôi. | These are my book and umbrella. | t: これは/{私|わたし}の/{本|ほん}と/{傘|かさ}です *3
+q: タマ[と]{犬|いぬ}は{友達|ともだち}です。 | Tama và con chó là bạn. | Tama and the dog are friends. | o: の/も/を
+q: {月曜日|げつようび}と{金曜日|きんようび}は{休|やす}みです。 | Thứ Hai và thứ Sáu là ngày nghỉ. | Monday and Friday are days off. | t: {月曜日|げつようび}/と/{金曜日|きんようび}/は *2 | e: 2 > を | ev: Nối danh từ bằng と, không dùng を. | ee: Join nouns with と, not を.
+q: {果物|くだもの}はりんご[と]バナナです。 | Trái cây là táo và chuối. | The fruits are apples and bananas. | o: の/も/を
+q: {私|わたし}と{田中|たなか}さんは{会社|かいしゃ}の{人|ひと}です。 | Tôi và ông Tanaka là người của công ty. | Mr. Tanaka and I are from the company. | t: {私|わたし}/と/{田中|たなか}さん/は *2
+q: {日本語|にほんご}[と]{英語|えいご}の{本|ほん}です。 | Là sách tiếng Nhật và tiếng Anh. | They are Japanese and English books. | o: の/も/を
