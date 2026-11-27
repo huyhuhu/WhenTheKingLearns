@@ -69,8 +69,10 @@ def pieces_of(item, spk, rates, warn):
         if vi:
             if KANA.search(vi) or KANJI.search(vi):
                 warn("chu Nhat nam ngoai 「」 trong cau tieng Viet: %s" % text)
+            # Giong tieng Anh (loa tren tau) doc duoc ten ga bang chu Latin
+            english = spk["vi"].startswith("en-")
             for w in re.findall(r"[^\W\d_]{3,}", vi):
-                if ROMAJI.match(w) and w.lower() not in VI_PLAIN:
+                if not english and ROMAJI.match(w) and w.lower() not in VI_PLAIN:
                     warn("tu tieng Nhat viet bang chu Latin (doi sang chu Nhat trong 「」): %s" % w)
             speak = bool(re.search(r"\w", vi))
             v, r, p = voice_of(spk, "vi", rates)

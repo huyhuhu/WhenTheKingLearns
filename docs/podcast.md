@@ -90,6 +90,8 @@
 
 **Nhân vật:** `spk` lấy từ `podcast/cast.json`. Nhân vật riêng của tập khai báo trong `"speakers"` của kịch bản, ví dụ `{"tenin": {"name": "Nhân viên", "ja": "ja-JP-KeitaNeural", "pitch": "+4Hz"}}`. Giọng có sẵn trong edge-tts: Nhật chỉ có Nanami (nữ) và Keita (nam), Việt có NamMinh (nam) và HoaiMy (nữ). Muốn có nhiều nhân vật thì đổi `pitch` và `rate` cho mỗi người.
 
+**Câu tiếng Anh:** khai báo nhân vật có `"vi"` là giọng tiếng Anh, rồi viết dòng `text` bằng tiếng Anh; builder không cảnh báo romaji với giọng `en-`. Loạt "Loa trên tàu" (n5-0051 – n5-0056) dùng `{"loaen": {"name": "Loa tiếng Anh", "vi": "en-US-JennyNeural", "ja": "ja-JP-NanamiNeural", "rate": "-8%"}}`.
+
 ## 5. Quy tắc phát âm (quan trọng)
 
 - **Tên và từ tiếng Nhật trong lời tiếng Việt phải viết bằng chữ Nhật trong 「」,** không viết romaji.
