@@ -35,7 +35,7 @@
 遠い|とおい|adj-i|xa|far; distant|{学校|がっこう}は{遠|とお}いですか。|Trường có xa không?|Is the school far?|am=近い|
 所|ところ|n|nơi, chỗ|place|ここは{静|しず}かな{所|ところ}ですね。|Đây là chỗ yên tĩnh nhỉ.|This is a quiet place, isn't it?||Hán Việt "sở" như "trụ sở"; trong từ ghép đọc どころ, như 台所.
 隣|となり|n|bên cạnh, sát vách|next to; next door|{佐藤|さとう}さんは{隣|となり}に{住|す}んでいます。|Bà Sato sống ở nhà bên cạnh.|Mrs. Sato lives next door.||隣 là sát bên và cùng loại (nhà bên, ghế bên); 横 chỉ là phía bên cạnh.
-中|なか|n|bên trong, giữa|inside; middle|{箱|はこ}の{中|なか}にタマがいます。|Tama ở trong hộp.|Tama is in the box.|am=外|
+中|なか|n|bên trong, giữa|inside; middle|{箱|はこ}の{中|なか}にタマがいます。|Tama ở trong hộp.|Tama is in the box.|am=外|Còn đọc ちゅう, nghĩa "đang ~": 営業中 là "đang mở cửa", 使用中 là "đang dùng".
 西|にし|n|phía tây|west|{大阪|おおさか}は{東京|とうきょう}の{西|にし}にあります。|Osaka nằm ở phía tây Tokyo.|Osaka is west of Tokyo.|song am=東|
 橋|はし|n|cầu|bridge|この{橋|はし}を{渡|わた}ってください。|Hãy đi qua cây cầu này.|Please cross this bridge.|trung=箸|Đồng âm với 箸 (đũa): cầu 橋 có bộ mộc 木 vì xưa làm bằng gỗ.
 東|ひがし|n|phía đông|east|{駅|えき}の{東|ひがし}に{公園|こうえん}があります。|Phía đông nhà ga có công viên.|There's a park east of the station.|song am=西|

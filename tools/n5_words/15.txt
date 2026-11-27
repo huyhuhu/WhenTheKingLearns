@@ -5,7 +5,7 @@
 熱い|あつい|adj-i|nóng (đồ vật)|hot (to the touch)|このお{茶|ちゃ}はとても{熱|あつ}いです。|Trà này nóng lắm.|This tea is very hot.|am=冷たい trung=暑い trung=厚い|Ba chữ あつい: 暑い trời nóng, 熱い đồ nóng (có bộ hoả 灬), 厚い dày.
 厚い|あつい|adj-i|dày|thick|{冬|ふゆ}は{厚|あつ}いコートを{着|き}ます。|Mùa đông tôi mặc áo khoác dày.|I wear a thick coat in winter.|am=薄い trung=暑い trung=熱い|厚 = hậu như "hậu hĩnh": dày dặn.
 危ない|あぶない|adj-i|nguy hiểm|dangerous|{道|みち}で{遊|あそ}ぶのは{危|あぶ}ないです。|Chơi ngoài đường thì nguy hiểm.|Playing in the street is dangerous.||Hét lên あぶない! nghĩa là "Coi chừng!".
-いい|いい|adj-i|tốt, được|good|{今日|きょう}はいい{天気|てんき}ですね。|Hôm nay trời đẹp nhỉ.|Nice weather today, isn't it?|am=悪い|Chia theo よい: quá khứ là よかった, phủ định là よくない.
+いい|いい|adj-i|tốt, được|good|{今日|きょう}はいい{天気|てんき}ですね。|Hôm nay trời đẹp nhỉ.|Nice weather today, isn't it?|am=悪い|Chia theo よい: quá khứ là よかった, phủ định là よくない. Còn dùng: いいです = "thôi, không cần": コーヒーはいいです, "cà phê thì thôi ạ".
 忙しい|いそがしい|adj-i|bận rộn|busy|{田中|たなか}さんは{毎日|まいにち}{忙|いそが}しいです。|Ông Tanaka ngày nào cũng bận.|Mr. Tanaka is busy every day.|am=暇|忙 = mang: tâm 忄 + vong 亡, bận đến mất cả tâm trí.
 嫌|いや|adj-na|ghét, không muốn|unpleasant; no way|{雨|あめ}の{日|ひ}は{嫌|いや}です。|Tôi ghét ngày mưa.|I hate rainy days.||Kêu いやだ! là "Không chịu đâu!", từ chối ngay tức thì.
 色々|いろいろ|adj-na|nhiều loại, đủ thứ|various|{店|みせ}に{色々|いろいろ}な{果物|くだもの}があります。|Cửa hàng có đủ loại trái cây.|The shop has all kinds of fruit.||色 = sắc, màu: "đủ màu đủ sắc" nên là đủ thứ.
@@ -55,4 +55,4 @@
 有名|ゆうめい|adj-na|nổi tiếng|famous|{富士山|ふじさん}は{有名|ゆうめい}な{山|やま}です。|Phú Sĩ là ngọn núi nổi tiếng.|Mount Fuji is a famous mountain.||Hữu danh: "có danh tiếng", tức là nổi tiếng.
 弱い|よわい|adj-i|yếu|weak|ケンタはお{酒|さけ}に{弱|よわ}いです。|Kenta uống rượu kém.|Kenta can't hold his liquor.|am=強い|
 りっぱ|りっぱ|adj-na|đáng nể, bề thế, tuyệt vời|splendid, fine|りっぱな{家|いえ}ですね。|Ngôi nhà bề thế nhỉ.|What a splendid house!||Chữ Hán là 立派; khen người đàng hoàng, nhà cửa bề thế đều dùng りっぱ.
-悪い|わるい|adj-i|xấu, tệ|bad|{今日|きょう}は{天気|てんき}が{悪|わる}いです。|Hôm nay thời tiết xấu.|The weather is bad today.|am=いい|悪 = ác như "độc ác".
+悪い|わるい|adj-i|xấu, tệ|bad|{今日|きょう}は{天気|てんき}が{悪|わる}いです。|Hôm nay thời tiết xấu.|The weather is bad today.|am=いい|悪 = ác như "độc ác". Còn nghĩa "xin lỗi" (suồng sã): 悪い、遅れた, "xin lỗi, tớ đến trễ".

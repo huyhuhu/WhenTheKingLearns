@@ -22,10 +22,10 @@
 お願いします|おねがいします|exp|làm ơn, nhờ anh/chị|please (when asking)|コーヒーを{一|ひと}つお{願|ねが}いします。|Cho tôi một ly cà phê.|One coffee, please.||願 = nguyện: "xin nguyện cầu" một điều.
 いってきます|いってきます|exp|con đi đây (khi ra khỏi nhà)|I'm off (said when leaving home)|「いってきます」「いってらっしゃい」|"Con đi đây." "Đi nhé."|"I'm off." "See you."|am=いってらっしゃい|Vốn là 行って来ます: đi rồi sẽ về.
 いってらっしゃい|いってらっしゃい|exp|đi nhé (tiễn người ra khỏi nhà)|take care (said to someone leaving)|ユキさん、いってらっしゃい。|Yuki đi nhé.|Take care, Yuki.|am=いってきます|
-ただいま|ただいま|exp|con về rồi đây|I'm home|「ただいま」「おかえりなさい」|"Con về rồi." "Mừng con về."|"I'm home." "Welcome back."|am=おかえりなさい|
+ただいま|ただいま|exp|con về rồi đây|I'm home|「ただいま」「おかえりなさい」|"Con về rồi." "Mừng con về."|"I'm home." "Welcome back."|am=おかえりなさい|Còn nghĩa "hiện giờ, ngay lúc này" (lịch sự): loa tàu nói ただいま電車が遅れております, "hiện giờ tàu đang trễ".
 おかえりなさい|おかえりなさい|exp|mừng (bạn) về nhà|welcome back|おかえりなさい。{今日|きょう}はどうでしたか。|Mừng con về. Hôm nay thế nào?|Welcome back. How was today?|am=ただいま|Từ 帰る (về nhà): "chào mừng bạn đã về".
 ああ|ああ|int|à, ồ|ah; oh|ああ、そうですか。|À, ra vậy.|Oh, I see.||
-はい|はい|int|vâng, có|yes|はい、{学生|がくせい}です。|Vâng, tôi là sinh viên.|Yes, I'm a student.|am=いいえ|
+はい|はい|int|vâng, có|yes|はい、{学生|がくせい}です。|Vâng, tôi là sinh viên.|Yes, I'm a student.|am=いいえ|Còn dùng khi đưa đồ cho ai: はい、どうぞ, "đây, của bạn đây"; còn là tiếng đáp "có" khi bị gọi tên.
 いいえ|いいえ|int|không|no|いいえ、{日本人|にほんじん}じゃありません。|Không, tôi không phải người Nhật.|No, I'm not Japanese.|am=はい|
 ええ|ええ|int|vâng, ừ (thân mật)|yes (casual)|ええ、いいですよ。|Ừ, được thôi.|Yeah, sure.||
 そう|そう|adv|vậy, như thế|so; like that|そうですか。わかりました。|Thế à. Tôi hiểu rồi.|Is that so? I understand.||

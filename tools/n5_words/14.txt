@@ -15,7 +15,7 @@
 頼む|たのむ|v1|nhờ; gọi (món)|to ask (a favor); to order|ユキさんはケンタに{仕事|しごと}を{頼|たの}みました。|Yuki nhờ Kenta làm giúp việc.|Yuki asked Kenta to help with some work.|gia na|Tanomu như "ta nhờ mụ". 頼 = LẠI là "ỷ lại", không phải "lại" (nữa).
 着く|つく|v1|đến nơi|to arrive|{電車|でんしゃ}は{十時|じゅうじ}に{東京|とうきょう}に{着|つ}きます。|Tàu đến Tokyo lúc 10 giờ.|The train arrives in Tokyo at ten.||Đến nơi nào dùng に: 駅に着く. Chữ 着 còn là "mặc" trong 着る.
 出かける|でかける|v2|ra ngoài, đi đâu đó|to go out|{日曜日|にちようび}は{家族|かぞく}と{出|で}かけます。|Chủ nhật tôi đi chơi với gia đình.|On Sundays I go out with my family.||
-出る|でる|v2|ra, rời khỏi; xuất hiện|to go out; to leave; to appear|{毎朝|まいあさ}{八時|はちじ}に{家|いえ}を{出|で}ます。|Sáng nào tôi cũng ra khỏi nhà lúc 8 giờ.|I leave home at eight every morning.|am=入る|Rời khỏi đâu dùng を: 家を出る. 出 = xuất (xuất phát).
+出る|でる|v2|ra, rời khỏi; xuất hiện|to go out; to leave; to appear|{毎朝|まいあさ}{八時|はちじ}に{家|いえ}を{出|で}ます。|Sáng nào tôi cũng ra khỏi nhà lúc 8 giờ.|I leave home at eight every morning.|am=入る|Rời khỏi đâu dùng を: 家を出る. 出 = xuất (xuất phát). Còn dùng: 電話に出る, "nghe máy, trả lời điện thoại".
 飛ぶ|とぶ|v1|bay; nhảy|to fly; to jump|{空|そら}を{鳥|とり}が{飛|と}んでいます。|Chim đang bay trên trời.|Birds are flying in the sky.||飛 = phi (phi cơ, phi hành).
 止まる|とまる|v1|(tự) dừng lại|to stop (intransitive)|バスが{駅|えき}の{前|まえ}に{止|と}まりました。|Xe buýt dừng trước ga.|The bus stopped in front of the station.||止 = chỉ (đình chỉ). Tự động từ: xe tự dừng (が止まる).
 取る|とる|v1|lấy, cầm; đạt được|to take; to get|すみません、その{塩|しお}を{取|と}ってください。|Xin lỗi, lấy giúp tôi lọ muối.|Excuse me, could you pass the salt?|trung=撮る|取 = tai (耳) + tay (又): tay nắm lấy. Nhờ đưa đồ: 取ってください.

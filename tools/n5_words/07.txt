@@ -2,7 +2,7 @@
 @hv 家=GIA 椅=Ỷ 洗=TẨY 風=PHONG 呂=LỮ 階=GIAI 段=ĐOẠN 鍵=KIỆN 庭=ĐÌNH 瓶=BÌNH 玄=HUYỀN 住=TRÚ 石=THẠCH 鹸=KIỀM 濯=TRẠC 掃=TẢO 除=TRỪ 台=ĐÀI 所=SỞ 机=KỶ 戸=HỘ 灰=HÔI 皿=MÃNH 箱=TƯƠNG 棚=BẰNG 門=MÔN 冷=LÃNH 蔵=TÀNG 庫=KHỐ 廊=LANG
 家|いえ|n|nhà|house; home|{私|わたし}の{家|いえ}は{駅|えき}から{遠|とお}いです。|Nhà tôi xa ga.|My house is far from the station.||家 là ngôi nhà nói chung; nói "nhà mình" thân mật thì dùng うち.
 椅子|いす|n|ghế|chair|この{椅子|いす}に{座|すわ}ってください。|Mời ngồi ghế này.|Please sit on this chair.||
-うち|うち|n|nhà (mình)|home; my place|うちに{猫|ねこ}がいます。|Nhà tôi có con mèo.|We have a cat at home.||Mang sắc thái "nhà mình": うちの猫 = mèo nhà tôi.
+うち|うち|n|nhà (mình)|home; my place|うちに{猫|ねこ}がいます。|Nhà tôi có con mèo.|We have a cat at home.||Mang sắc thái "nhà mình": うちの猫 = mèo nhà tôi. Còn nghĩa "công ty, nhóm mình": うちの会社 là "công ty chúng tôi".
 お手洗い|おてあらい|n|nhà vệ sinh|restroom; toilet|すみません、お{手洗|てあら}いはどこですか。|Xin lỗi, nhà vệ sinh ở đâu ạ?|Excuse me, where's the restroom?||Nghĩa đen là "chỗ rửa tay" (手 tay + 洗う rửa); lịch sự hơn トイレ.
 お風呂|おふろ|n|bồn tắm; việc tắm bồn|bath|{毎晩|まいばん}お{風呂|ふろ}に{入|はい}ります。|Tối nào tôi cũng tắm bồn.|I take a bath every night.||Tắm bồn là お風呂に入る (vào bồn), không dùng 浴びる.
 階段|かいだん|n|cầu thang|stairs|{階段|かいだん}で{三階|さんがい}まで{行|い}きます。|Tôi đi cầu thang lên tầng ba.|I take the stairs to the third floor.|gia|Hán Việt là "giai đoạn" nhưng nghĩa là cầu thang: leo từng bậc như qua từng giai đoạn.

@@ -5,16 +5,16 @@
 遊ぶ|あそぶ|v1|chơi, đi chơi|to play; to hang out|{日曜日|にちようび}に{友|とも}だちと{遊|あそ}びます。|Chủ nhật tôi đi chơi với bạn.|I hang out with friends on Sunday.||遊 = du (du ngoạn). Chơi thể thao hay chơi đàn thì không dùng 遊ぶ.
 在る|ある|v1|có, ở (đồ vật)|to be; to exist (inanimate)|{机|つくえ}の{上|うえ}に{本|ほん}があります。|Trên bàn có quyển sách.|There's a book on the desk.|am=ない trung=有る|Dùng cho đồ vật, cây cối; người và con vật thì dùng いる. Thường viết bằng kana.
 有る|ある|v1|có (sở hữu)|to have|{今日|きょう}は{時間|じかん}が{有|あ}ります。|Hôm nay tôi có thời gian.|I have time today.|am=ない trung=在る|有 = hữu (sở hữu): có trong tay; 在 = tại: có mặt ở đâu đó.
-言う|いう|v1|nói|to say|{田中|たなか}さんはまた{冗談|じょうだん}を{言|い}いました。|Ông Tanaka lại nói đùa.|Mr. Tanaka told a joke again.||Viết いう nhưng đọc gần như "yuu"; thể ます là いいます.
+言う|いう|v1|nói|to say|{田中|たなか}さんはまた{冗談|じょうだん}を{言|い}いました。|Ông Tanaka lại nói đùa.|Mr. Tanaka told a joke again.||Viết いう nhưng đọc gần như "yuu"; thể ます là いいます. Còn dùng: ～と言います = tên là, gọi là: 田中と言います, "tôi tên là Tanaka".
 居る|いる|v2|có, ở (người, con vật)|to be; to exist (animate)|{部屋|へや}に{猫|ねこ}のタマがいます。|Trong phòng có mèo Tama.|Tama the cat is in the room.|trung=要る|Dùng cho người và con vật; đồ vật thì dùng ある. Thường viết bằng kana.
 要る|いる|v1|cần|to need|{傘|かさ}は{要|い}りますか。|Có cần ô không?|Do you need an umbrella?|gia trung=居る|要 đọc YẾU nhưng không phải "yếu đuối" mà là "thiết yếu", cần. Nhóm 1: いります.
-入れる|いれる|v2|cho vào, bỏ vào|to put in|コーヒーに{砂糖|さとう}を{入|い}れます。|Tôi cho đường vào cà phê.|I put sugar in my coffee.|am=出す|
+入れる|いれる|v2|cho vào, bỏ vào|to put in|コーヒーに{砂糖|さとう}を{入|い}れます。|Tôi cho đường vào cà phê.|I put sugar in my coffee.|am=出す|Còn nghĩa "pha" trà, cà phê: お茶を入れる, "pha trà".
 歌う|うたう|v1|hát|to sing|ケンタはカラオケで{歌|うた}いません。|Kenta không hát ở quán karaoke.|Kenta doesn't sing at karaoke.||
 置く|おく|v1|đặt, để|to put; to place|{鍵|かぎ}をどこに{置|お}きましたか。|Chị để chìa khoá ở đâu rồi?|Where did you put the key?||置 = trí (bố trí, vị trí): đặt vào một chỗ.
 押す|おす|v1|đẩy; ấn, bấm|to push; to press|このボタンを{押|お}してください。|Hãy bấm nút này.|Please press this button.|am=引く|Trên cửa ở Nhật: 押 là đẩy, 引 là kéo.
 泳ぐ|およぐ|v1|bơi|to swim|{海|うみ}で{泳|およ}ぎたいです。|Tôi muốn bơi ở biển.|I want to swim in the sea.||
 終る|おわる|v1|kết thúc, xong|to end; to finish|{仕事|しごと}は{六時|ろくじ}に{終|お}わります。|Công việc kết thúc lúc 6 giờ.|Work ends at six.|am=始まる|Thường viết 終わる. 終 = chung (chung cuộc): đến hồi kết.
-かかる|かかる|v1|mất, tốn (thời gian, tiền)|to take (time); to cost (money)|{会社|かいしゃ}まで{三十分|さんじゅっぷん}かかります。|Đến công ty mất 30 phút.|It takes thirty minutes to get to the office.||Hỏi mất bao lâu: どのくらいかかりますか.
+かかる|かかる|v1|mất, tốn (thời gian, tiền)|to take (time); to cost (money)|{会社|かいしゃ}まで{三十分|さんじゅっぷん}かかります。|Đến công ty mất 30 phút.|It takes thirty minutes to get to the office.||Hỏi mất bao lâu: どのくらいかかりますか. Còn dùng: 鍵がかかっている, "cửa đang khóa"; 電話がかかってくる, "có điện thoại gọi đến".
 書く|かく|v1|viết|to write|{母|はは}に{手紙|てがみ}を{書|か}きます。|Tôi viết thư cho mẹ.|I write a letter to my mother.||
 掛ける|かける|v2|treo; đeo (kính)|to hang; to put on (glasses)|{壁|かべ}にカレンダーを{掛|か}けます。|Tôi treo lịch lên tường.|I hang a calendar on the wall.|trung=かける|Đeo kính cũng dùng động từ này: めがねをかける.
 かける|かける|v2|gọi (điện thoại); ngồi|to make (a phone call); to sit down|{夜|よる}、{母|はは}に{電話|でんわ}をかけます。|Buổi tối tôi gọi điện cho mẹ.|I call my mother in the evening.|trung=掛ける|Gọi điện: 電話をかける. Mời ngồi lịch sự: おかけください.

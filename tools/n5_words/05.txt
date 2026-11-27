@@ -19,7 +19,7 @@
 死ぬ|しぬ|v1|chết|to die|{金魚|きんぎょ}が{死|し}にました。|Con cá vàng chết rồi.|The goldfish died.|am=生まれる|Động từ duy nhất tận cùng ぬ: 死ぬ → 死にます, 死んで.
 吸う|すう|v1|hút, hít|to breathe in; to smoke; to suck|ここでたばこを{吸|す}わないでください。|Xin đừng hút thuốc ở đây.|Please don't smoke here.||Hút thuốc là たばこを吸う, không dùng 飲む.
 背|せい|n|chiều cao, vóc người|height; stature|ケンタは{背|せい}が{高|たか}いです。|Kenta cao.|Kenta is tall.||Người cao là 背が高い; đọc せ thì 背 còn nghĩa là cái lưng.
-大丈夫|だいじょうぶ|adj-na|không sao, ổn|all right; OK|「{大丈夫|だいじょうぶ}ですか。」「はい、{大丈夫|だいじょうぶ}です。」|"Anh có sao không?" "Vâng, tôi không sao."|"Are you OK?" "Yes, I'm fine."|gia|Hán Việt là "đại trượng phu" nhưng nghĩa là "không sao": bậc trượng phu thì gì cũng ổn.
+大丈夫|だいじょうぶ|adj-na|không sao, ổn|all right; OK|「{大丈夫|だいじょうぶ}ですか。」「はい、{大丈夫|だいじょうぶ}です。」|"Anh có sao không?" "Vâng, tôi không sao."|"Are you OK?" "Yes, I'm fine."|gia|Hán Việt là "đại trượng phu" nhưng nghĩa là "không sao": bậc trượng phu thì gì cũng ổn. Còn dùng để từ chối lịch sự: 袋は大丈夫です là "không cần túi ạ".
 疲れる|つかれる|v2|mệt|to get tired|{仕事|しごと}で{疲|つか}れました。|Tôi mệt vì công việc.|I'm tired from work.||Đang mệt thì nói 疲れました (thể quá khứ), không nói 疲れます.
 手|て|n|tay|hand|{手|て}を{上|あ}げてください。|Hãy giơ tay lên.|Please raise your hand.||
 寝る|ねる|v2|ngủ, đi ngủ|to sleep; to go to bed|タマはいつも{寝|ね}ています。|Tama lúc nào cũng ngủ.|Tama is always sleeping.|am=起きる|
